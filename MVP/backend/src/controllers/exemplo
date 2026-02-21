@@ -1,0 +1,2 @@
+recebem request e responses
+Processam a requisição, validam dados, chamam os services e devolvem a resposta.

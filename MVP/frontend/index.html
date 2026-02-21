@@ -1,0 +1,22 @@
+<!--
+ponto de partida para navegador
+
+arquivo html principal que navegador carrega, contem uma div app onde a aplicacao vue será montada
+template usado para  o build, fica fora do src pq nao é procesado pelo webpack como o .vue e .js
+ 
+ src: tem todo codigo fonte da aplicacao-->
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <!-- Vue vai controlar esse elemento-->
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

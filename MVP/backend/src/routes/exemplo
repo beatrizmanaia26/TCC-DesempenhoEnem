@@ -1,0 +1,3 @@
+endpoinys /login /passagens /carrinho
+
+Recebem a requisição e encaminham para o controller

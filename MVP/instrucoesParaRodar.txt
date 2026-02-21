@@ -1,0 +1,41 @@
+
+instale node js: https://nodejs.org/en/download
+no cmd rode node -v e npm -v para ver se está tudo certo
+clone o repositorio na sua máquina (abre o cmd e digite: git clone https://github.com/beatrizmanaia26/projeto-gestao-software-passagens.git)
+abra a pasta no vscode
+
+obs: para criar esses pakcge.json eu rodei dentro de frontend: rode npm create vue@latest . (cria um package.json padrao), nao precisam rodar pois ja estao criados e pasta precisa ta vazia para isso 
+-deuerro:
+-renomeie os .ts para .js
+-apague todos os tsconfig
+-atualize o repositorio com os codigos templates
+para frontend:
+cd frontend
+npm install
+npm install axios
+npm run dev (determinado no packge.json) -->(vue geralmente inicial em http://localhost:8080 (se 8080 não estiver ocupada))
+
+para backend:
+
+abra outro terminal 
+cd backend 
+rode npm install
+npm install --save-dev nodemon
+npm run dev(por default roda na porta http://localhost:3000)
+
+
+FAZER: No frontend, você fará requisições para o backend usando a URL base (ex.: http://localhost:3000/api). Configure isso no arquivo services/http.js (axios, por exemplo).
+
+no server.js require('dotenv').config()
+const port = process.env.PORT || 3000
+
+No package.json gerado, há um script chamado "serve" que inicia o servidor de desenvolvimento. Por convenção, o Vue CLI usa serve.
+
+PARA COLABORADORES QUE JA TEM O PROJETO CORRETO:
+-frontend: 
+cd frontend 
+npm run dev 
+
+
+-backend:
+cd backendnpm run dev

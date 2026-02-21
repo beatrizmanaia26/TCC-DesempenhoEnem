@@ -1,0 +1,15 @@
+definir estrutura de dados do mongo
+ex:
+
+const mongoose = require('mongoose');
+
+const passagemSchema = new mongoose.Schema({
+  tipo: { type: String,
+  origem: String,
+  destino: String,
+  preco: Number,
+  data: Date
+});
+
+module.exports = mongoose.model('Passagem', passagemSchema);
+

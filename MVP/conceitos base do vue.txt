@@ -1,0 +1,37 @@
+mounted()
+
+- precisa executar algo assim que o componente aparece na tela.
+- executa uma única vez (quando componente é inserido no DOM)
+
+watch()
+
+- nao executa na inicalizacao
+- executado toda vez que o valor observado mudar
+- observar uma variável específica e reagir quando ela mudar.
+
+computed()
+
+- quando um valor depende de outros dados e precisa ser recalculado automaticamente
+- não deve ser recalculado toda hora
+
+methods()
+
+- usado para ações disparadas pelo usuário ou lógica (clique de botão, enviar formulari..)
+
+actions, getters, mapGetters, mapActions: usados quando vários componentes precisam dos mesmos dados.
+
+actions()
+
+- chamadas de API
+- lógica assíncrona
+
+getters()
+
+- calcular ou transformar dados a partir do estado global, sem modificar esse estado.(state), funciona como um computed, só que compartilhado por toda a aplicação.
+
+mapGetters()
+- importar getters do Vuex direto no computed do componente.
+
+mapActions()
+
+- chamar actions do Vuex como se fossem methods locais.
