@@ -1,0 +1,242 @@
+\documentclass[a4paper,10pt, twocolumn]{article}
+\usepackage[a4paper,top=2cm,bottom=3cm,left=2cm,right=2cm,footskip=0.8cm]{geometry}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}    % Para personalizar legendas, opcional
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{helvet}
+\usepackage{}
+\usepackage{multicol}
+\usepackage{titlesec}     % Para personalizar \section
+\usepackage[style=ieee, sorting=nty, language=portuguese]{biblatex}
+\definecolor{grayFEI}{HTML}{7F7F7F}
+\usepackage{paracol} % no preâmbulo
+\usepackage{titlesec}
+\usepackage{indentfirst}  % Indenta o primeiro parágrafo
+\setlength{\parindent}{2em}  % Aumenta a indentação para 2em (pode ser ajustado
+\titlespacing*{\section}{0pt}{*0}{0pt}
+\usepackage{ragged2e}
+
+
+%-------------------------- ESTILOS NÃO ALTERAR ------------------------------------------------%
+% Estilo para legendas de figura e tabela
+\captionsetup[figure]{
+  labelfont={color=azulFEI, bf, small, sf}, % "Figura" azul, negrito, Arial-like
+  textfont={small, sf},                    % Texto da legenda em Arial-like
+  font=footnotesize,                       % Tamanho aproximado de 9pt
+  labelsep=period,                         % "Figura 1." e não "Figura 1:"
+  name=Figura,                             % Tradução para "Figura"
+  justification=raggedright,              % Alinhado à esquerda
+  singlelinecheck=false                   % Garante alinhamento mesmo em uma linha
+}
+
+\captionsetup[table]{
+  labelfont={color=azulFEI, bf, small, sf},
+  textfont={small, sf},
+  font=footnotesize,
+  labelsep=period,
+  name=Tabela,
+  justification=raggedright,
+  singlelinecheck=false
+}
+
+% Formatação section e subsection
+\titleformat{\subsection}
+  {\color{grayFEI}\normalfont\fontfamily{phv}\selectfont\itshape\fontsize{10}{12}\selectfont}
+  {\thesubsection.}{0.2em}{}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+
+\titleformat{\section}
+  {\color{azulFEI}\normalfont\fontfamily{phv}\selectfont\bfseries\fontsize{11}{13}\selectfont} % Fonte Helvetica, tamanho 11pt, negrito
+  {\thesection.}{0.2em}{}
+\renewcommand{\thesection}{\Roman{section}} 
+\titlespacing*{\section}
+{0pt}{10pt}{0pt}
+
+%Formatação Título
+\newcommand{\inovatitle}[1]{%
+  \noindent{\fontsize{18}{20}{\helvet{\textbf{\textcolor{azulFEI}{#1}}}}}\vspace{25pt}
+}
+
+%Formatação Autores
+\newcommand{\autores}[1]{
+  \helvet{\fontsize{11}{20}\selectfont\textbf{\textit{#1}}}
+}
+\newcommand{\orientador}[1]{
+  \helvet{\fontsize{11}{20}\selectfont\textbf{\textit{#1}}}
+}
+\newcommand{\filiacao}[1]{
+  \helvet{\fontsize{10}{20}\selectfont{\textit{#1}}}
+}
+\newcommand{\email}[1]{
+  \helvet{\fontsize{10}{20}\selectfont{\textit{#1}}\newline}
+}
+\newcommand{\resumo}[1]{%
+\vspace{15pt}
+  \noindent
+  {\helvet{\fontsize{12}{20}\selectfont\textbf{\textcolor{azulFEI}{Resumo:}}}} %
+  \justifying #1 %
+  \newline
+}
+
+\newcommand{\keyword}[1]{
+  \noindent\helvet{\fontsize{12}{20}\selectfont\textbf{\textcolor{azulFEI}{Palavras-chaves:}}} #1  \vspace{25pt}
+}
+
+\renewcommand{\thetable}{\Roman{table}}
+
+
+% Define a cor azul específica (exemplo: azul FEI)
+\definecolor{azulFEI}{HTML}{0070C0} % substitua pelo código que quiser
+
+%Formatação Cabeçalho e rodapé
+\setlength{\headsep}{1cm}
+\newcommand{\helvet}[1]{{\fontfamily{phv}\selectfont #1}}
+\pagestyle{fancy}
+\fancyhead{} % limpa cabeçalho
+\renewcommand{\headrulewidth}{0.3pt} % ← ATIVA a linha (espessura ajustável)
+\setlength\headheight{1.2cm}
+\lhead{\includegraphics[width=4.97cm, height=1cm]{logoinova.png}}
+\rhead{\helvet{1º semestre/2025}}
+
+\fancyfoot{} % limpa rodapé
+\lfoot{
+  \fontfamily{phv}\fontsize{8}{10}\selectfont
+  Anais dos Trabalhos de Conclusão de Curso do Centro Universitário FEI, São Bernardo do Campo – SP\\
+  \vspace{-4pt}\rule{\textwidth}{1pt} % ← linha abaixo do texto do rodapé
+}
+\rfoot{\fontfamily{phv}\fontsize{8}{10}\selectfont \thepage}
+
+%-------------------------------- FIM ESTILOS ---------------------------------------------------%
+
+
+
+%Adicionar a bibliografia
+\addbibresource{referencias.bib}
+
+
+\begin{document}
+
+\setlength{\columnsep}{20pt}
+\twocolumn[%
+\begin{@twocolumnfalse}
+
+\raggedright{
+
+
+
+\inovatitle{Correlação entre formatação da prova do Exame Nacional do Ensino Médio e o desempenho geral dos candidatos}
+
+
+\autores{Beatriz Manaia Lourenço Berto$^1$, Luana Bortko Rodrigues$^1$, Nuno Martins Guilhermino da Silva$^1$}
+
+\filiacao{$^1$ Ciência da Computação - campus São Bernardo do Campo}
+
+
+
+\email{unifbberto@fei.edu.br, uniflurodrigues@fei.edu.br, unifnsilva@fei.edu.br}
+
+\orientador{Orientador: Charles Henrique Porto Ferreira}
+
+\filiacao{Departamento de Ciência da Computação, Centro Universitário FEI}
+
+\email{cferreira@fei.edu.br}
+
+}
+
+\end{@twocolumnfalse}
+]
+\section{Introdução}
+
+
+Exames padronizados são amplamente utilizados para avaliar habilidades e conhecimentos em diferentes contextos, especialmente em processos educacionais e seletivos. Sua aplicação em larga escala permite comparar candidatos de maneira uniforme, tornando-os instrumentos centrais na tomada de decisão em cenários de alto impacto.
+
+No contexto brasileiro, o Exame Nacional do Ensino Médio(ENEM) se destaca como um dos principais mecanismos de avaliação educacional. A pontuação obtida pelos candidatos é utilizada para o ingresso em instituições de ensino superior, tanto públicas quanto privadas, além de servir como critério para a concessão de programas de acesso e permanência estudantil, como o ProUni e o FIES. Adicionalmente, o exame também desempenha um papel na avaliação da qualidade do ensino médio no país.
+
+A nota do ENEM é definida por um sistema distinto da Teoria Clássica dos Testes (TCT), no qual a pontuação é baseada apenas no número de acertos do candidato. No exame, utiliza-se a Teoria de Resposta ao Item (TRI), que considera parâmetros como a dificuldade, a discriminação e a probabilidade de acerto ao acaso para determinar a contribuição de cada questão na nota final \cite{inep2021enem}. Nesse modelo, diferentes itens possuem pesos distintos, tornando a pontuação do candidato sensível às características das questões que compõem a prova.
+
+Diante da amplitude de suas aplicações,do número expressivo de participantes e dado que a pontuação depende de características dos itens, torna-se fundamental que o exame seja capaz de medir com precisão e acurácia as habilidades dos candidatos, minimizando a influência de fatores que não estejam diretamente relacionados ao conhecimento avaliado.
+
+Porém, nem sempre é garantida a avaliação precisa das competências e habilidades de cada candidato. A forma como a informação é apresentada ao candidato é um fator influente do seu resultado. De acordo com estudos, o uso de textos longos aumenta o grau de dificuldade da questão \cite{Pullishery2020,2018,silva2019desempenho}. Além disso, a linguagem que é utilizada dentro do enunciado, como voz passiva ou ativa, também demonstrou impacto na performance geral \cite{correia2004complexidade,Marcom2016}. Entre outros aspectos, foram feitos estudos que demonstram a importância de características como a ordem na qual as questões são exibidas para os candidatos \cite{Barichello2022,Anaya2023} e o formato que os distratores são apresentados aos candidatos \cite{Marcom2016,lopes2015estudo,Caldwell2013}. Isso demonstra que a maneira como as informações são apresentadas ao candidato é essencial para medir adequadamente suas competências. Portanto, mostra-se a importância de análises dos itens que são inseridos nas provas. 
+
+
+Historicamente, estudos sobre a formatação da prova do ENEM são escassos, não recebendo a mesma atenção que outros fatores influentes, como o perfil socioeconômico dos candidatos. Ademais, as pesquisas relacionadas frequentemente possuem abordagens e motivações diferentes, analisando itens de provas específicas prioritariamente para revelar limitações do ensino básico nas escolas brasileiras \cite{Cestaro2020, lopes2015estudo}. Soma-se a isso o fato de que grande parte da literatura se baseia em edições antigas do exame, anteriores à reformulação do formato de aplicação ocorrida em 2017. Consequentemente, há uma carência de investigações atualizadas que isolem o impacto das características estruturais dos itens no desempenho dos alunos.
+
+Diante dessa lacuna, o objetivo geral deste trabalho é identificar quais aspectos estruturais das questões do ENEM exercem maior impacto no desempenho dos candidatos. Para garantir o aprofundamento e a precisão da análise, será estabelecida a correlação entre a pontuação do aluno e as seguintes variáveis: tamanho do texto, presença de imagens ou tabelas, nível de formalidade e rebuscamento do enunciado, construção de distratores e a ordem de apresentação das questões. 
+ %------------------------------------------------------------------------------------------------------%
+%Perguntar se a citação é apenas [1](\cite) ou pode colocar os autores (\textcite)
+\section{Trabalhos Relacionados}
+
+A literatura em avaliação educacional tem investigado diferentes fatores associados ao desempenho de estudantes em exames padronizados de larga escala. No contexto brasileiro, estudos relacionados ao Exame Nacional do Ensino Médio (ENEM) concentram-se predominantemente em análises de desempenho geral, indicadores socioeconômicos e resultados educacionais. Entretanto, observa-se que ainda são relativamente limitadas as investigações que abordam de forma sistemática características estruturais do formato da prova, tais como a ordem das questões, a construção linguística dos enunciados, o uso de elementos visuais e a elaboração de distratores, e seus possíveis impactos no desempenho dos participantes. Essa lacuna evidencia a necessidade de ampliar a análise do exame para além do conteúdo avaliado, incorporando também aspectos relacionados ao formato das avaliações. Assim, esta seção apresenta os principais trabalhos relacionados identificados na literatura, organizados conforme diferentes dimensões do formato das provas analisadas.
+
+\subsection{Ordem das questões e desempenho}
+
+A ordem de apresentação das questões em avaliações educacionais tem sido apontada como um possível fator capaz de influenciar o desempenho dos estudantes ao longo da realização da prova. Em exames extensos, o tempo de exposição à avaliação pode impactar processos cognitivos dos participantes, fazendo com que o momento em que um item é respondido passe a exercer influência sobre a probabilidade de acerto. Nesse sentido, investigar a existência desse fenômeno torna-se relevante para compreender até que ponto o desempenho observado reflete exclusivamente o conhecimento do participante.
+
+Um dos principais estudos que investigam a influência da formatação da prova no desempenho dos estudantes é apresentado por \textcite{Barichello2022}, que analisaram evidências do efeito da ordem das questões no ENEM. Os autores utilizaram microdados disponibilizados pelo INEP, considerando uma amostra de mais de 4,4 milhões de participantes, e desenvolveram um indicador denominado Efeito Fadiga (EF) para mensurar a variação do índice de acertos de uma mesma questão em diferentes posições ao longo da prova. Os resultados obtidos confirmaram a presença do efeito fadiga no ENEM 2016, evidenciando que a probabilidade de acerto diminui significativamente quando uma questão é apresentada em posições mais avançadas do exame, com reduções que chegaram a aproximadamente 18 pontos percentuais. O impacto foi observado em todos os níveis de desempenho, sendo mais evidente entre estudantes de desempenho intermediário e em questões de dificuldade média, nas quais a demanda cognitiva é suficiente para sofrer influência do cansaço acumulado. 
+
+Resultados semelhantes também foram observados em \textcite{Anaya2023}, em que analisaram como diferentes sequências de apresentação, variando entre questões mais fáceis e mais difíceis, afetam o comportamento e o desempenho dos participantes em avaliações. Utilizando dados provenientes de experimentos controlados em plataforma online, com aproximadamente 19 mil participantes, os autores compararam diferentes configurações de prova, incluindo ordens crescente (fácil–difícil) e decrescente (difícil–fácil) de dificuldade. Os resultados indicaram que avaliações iniciadas com questões mais fáceis apresentaram menores taxas de desistência, maior confiança percebida pelos participantes e maior número de respostas corretas.
+
+Além do experimento controlado, os autores também analisaram dados de larga escala provenientes das edições de 2009, 2012 e 2015 do Programme for International Student Assessment (PISA), totalizando cerca de 600 mil avaliações. A análise evidenciou que o desempenho em uma seção da prova tende a ser influenciado pela dificuldade da seção imediatamente anterior, indicando a existência de efeitos de sequência capazes de alterar o engajamento cognitivo dos estudantes. Embora os experimentos tenham sido conduzidos em ambientes de menor pressão avaliativa, os autores argumentam que tais efeitos podem ser ainda mais evidenciados em exames de alto impacto, nos quais fatores psicológicos e emocionais desempenham papel relevante.
+
+Em conjunto, esses resultados reforçam a hipótese de que o desempenho em avaliações não depende exclusivamente do conhecimento do participante, mas também da organização estrutural da prova, sugerindo que tanto a posição temporal quanto a progressão de dificuldade das questões podem influenciar os resultados observados.
+
+\subsection{Construção linguística das questões}
+
+A construção linguística dos enunciados constitui um fator relevante na compreensão das questões e, consequentemente, no desempenho dos estudantes em avaliações educacionais. Diferentes escolhas sintáticas podem alterar a carga cognitiva necessária para interpretar o problema proposto, influenciando não apenas a leitura do enunciado, mas também a execução da tarefa avaliativa.
+
+Nesse contexto, o estudo de \textcite{correia2004complexidade} investigou o impacto da estrutura sintática na compreensão de exercícios matemáticos, comparando enunciados formulados em voz ativa, voz passiva perifrástica verbal e voz passiva de clítico. A pesquisa foi conduzida com estudantes do quarto, sexto e nono anos do ensino fundamental, além de professores, permitindo observar o efeito da maturidade linguística sobre o desempenho. Os resultados indicaram que enunciados redigidos em voz ativa apresentaram maiores índices de acerto tanto em questões matemáticas quanto em testes de interpretação textual, além de menor tempo médio de resolução. Os autores argumentam que dificuldades de interpretação linguística podem atuar como barreiras adicionais à resolução matemática, evidenciando que parte do insucesso escolar pode estar associada à forma como os problemas são apresentados.
+
+Evidências adicionais são observadas em estudos que investigam diretrizes de elaboração de itens de múltipla escolha. \textcite{Caldwell2013} analisaram o impacto de diferentes formatos de questões, incluindo o uso de construções negativas nos enunciados, no desempenho de estudantes de um curso de Farmácia. A comparação entre versões equivalentes de uma mesma avaliação indicou que itens formulados sem estruturas negativas apresentaram desempenho numericamente superior; entretanto, essa diferença não foi estatisticamente significativa. Os dados sugerem que determinadas escolhas linguísticas podem influenciar a interpretação das questões, embora nem sempre produzam efeitos mensuráveis de forma consistente no desempenho dos participantes.
+
+Tais estudos sugerem que o desempenho em avaliações pode ser influenciado não apenas pelo domínio conceitual do estudante, mas também por características linguísticas dos enunciados, indicando a importância de considerar aspectos sintáticos e semânticos no formato de provas educacionais.
+
+\subsection{Estrutura textual e visual dos itens avaliativos}
+
+A estrutura de apresentação dos itens avaliativos constitui um elemento central no formato de exames educacionais, uma vez que o desempenho dos participantes pode ser influenciado não apenas pelo domínio conceitual do conteúdo, mas também pela forma como a informação é organizada e apresentada. Em avaliações de larga escala, características como extensão textual, complexidade linguística e uso de recursos visuais podem modificar a carga cognitiva exigida do estudante, afetando processos de leitura, interpretação e tomada de decisão durante a resolução das questões.
+
+Análises empíricas sobre a extensão textual dos enunciados são apresentadas por \textcite{Pullishery2020}, que investigaram 624 questões de múltipla escolha aplicadas em avaliações de Odontologia. Os autores classificaram os itens conforme o número de palavras e observaram associação estatisticamente significativa entre maior volume textual e aumento da dificuldade das questões ($p = 0{,}039$). Os resultados indicaram menor proporção de itens considerados fáceis entre aqueles com enunciados mais longos, sugerindo que a demanda adicional de leitura pode impactar o desempenho independentemente do conhecimento específico avaliado. Contudo, os autores ressaltam possíveis fatores de confusão, como níveis de ansiedade dos participantes e a aplicação da avaliação em língua não nativa.
+
+Uma perspectiva distinta é apresentada por \textcite{2018}, ao analisarem o impacto do tamanho textual em itens do exame coreano CSAT. O estudo identificou que textos mais extensos favoreceram o desempenho apenas em questões dissertativas e entre estudantes com níveis intermediário e avançado de proficiência em língua inglesa, enquanto não foram observadas diferenças relevantes em itens de múltipla escolha. Esses achados indicam que o efeito da extensão dos enunciados não é uniforme, podendo variar conforme o formato da avaliação e as características linguísticas dos participantes.
+
+No contexto brasileiro, \textcite{silva2019desempenho} observaram, na prova de Linguagens do ENEM, que questões com maior demanda de leitura apresentaram índices mais elevados de erro, enquanto itens com suporte visual ou menor quantidade de texto obtiveram desempenho superior. Os autores associam esse resultado a limitações na automaticidade da leitura e na velocidade de processamento textual, fatores que podem restringir a capacidade dos estudantes de mobilizar conhecimentos mesmo quando dominam o conteúdo conceitual.
+
+A influência do formato visual dos itens também é evidenciada por \textcite{Cestaro2020}, que analisaram questões da área de Ciências da Natureza do ENEM aplicadas entre 2012 e 2016. Os resultados indicaram que itens que incorporavam gráficos, imagens ou tabelas apresentaram médias de acerto superiores às observadas em questões predominantemente textuais. Paralelamente, enunciados extensos e o uso de linguagem científica mais complexa estiveram associados a maiores índices de erro, sugerindo que tanto a carga textual quanto o grau de familiaridade dos estudantes com a linguagem científica desempenham papel relevante no desempenho. O estudo ainda aponta que dificuldades na compreensão conceitual básica e na interpretação das informações apresentadas constituem fatores centrais para o baixo rendimento em tópicos considerados mais complexos.
+
+Evidencias semelhantes são observadas em análises de questões de Física do ENEM realizadas por \textcite{goncalves2014questoes}, que identificaram elevada contextualização e extensos textos-base nos itens avaliativos. Segundo os autores, a combinação entre enunciados longos e tempo limitado de prova pode contribuir para a redução das taxas de acerto, especialmente em questões que demandam raciocínio quantitativo ou integração de múltiplos conceitos.
+
+Complementando essa discussão, \textcite{lopes2015estudo} analisaram questões de Física da prova de Ciências da Natureza do ENEM por meio de análises estatísticas baseadas na Teoria da Resposta ao Item e na Teoria Clássica dos Testes. Os autores observaram desempenho geral reduzido dos participantes, especialmente em itens que exigiam maior nível de raciocínio cognitivo e integração conceitual. Os resultados indicam que dificuldades de desempenho não decorrem exclusivamente do formato textual ou visual das questões, mas também do grau de complexidade conceitual exigido e do alinhamento entre os conteúdos avaliados e o currículo escolar.
+
+De modo geral, a literatura indica que o desempenho em avaliações educacionais é influenciado não apenas pelo domínio do conteúdo disciplinar, mas também pelo design multimodal dos itens, envolvendo simultaneamente aspectos textuais, linguísticos e visuais. Parte dos estudos aponta que enunciados extensos e linguisticamente complexos tendem a aumentar a carga cognitiva e dificultar a interpretação, enquanto o uso adequado de recursos visuais pode favorecer a organização da informação e apoiar a compreensão dos participantes. Contudo, resultados divergentes também são observados, sugerindo que o impacto desses elementos não é uniforme, podendo variar conforme o formato da questão, o nível de proficiência dos estudantes e as demandas cognitivas envolvidas. Assim, a eficácia avaliativa parece depender do equilíbrio entre texto, linguagem, recursos gráficos e complexidade cognitiva, evidenciando que o formato de apresentação das questões constitui um fator relevante, porém contextual, para a interpretação dos resultados em exames de larga escala.
+
+\subsection{Distratores e alternativas}
+
+A análise dos distratores em itens de múltipla escolha constitui uma estratégia relevante para compreender não apenas o desempenho dos estudantes, mas também os processos cognitivos subjacentes às respostas incorretas. Diferentemente da simples avaliação das taxas de acerto, o estudo das alternativas erradas permite identificar concepções alternativas, dificuldades conceituais persistentes e estratégias intuitivas de resolução utilizadas pelos participantes.
+
+Sob esse olhar, \textcite{Marcom2016} investigaram os distratores de questões de Física do Exame Nacional do Ensino Médio (ENEM) aplicadas entre 2009 e 2012, utilizando microdados do INEP referentes a mais de três milhões de concluintes do ensino médio da rede pública. A análise das frequências de escolha das alternativas evidenciou que os erros dos estudantes não ocorreram de maneira aleatória, mas seguiram padrões recorrentes associados a dificuldades conceituais específicas. Entre os principais fatores identificados destacam-se o uso incorreto de unidades de medida, a aplicação inadequada de fórmulas físicas, raciocínios intuitivos baseados em experiências cotidianas e concepções não científicas sobre fenômenos físicos. Os autores também observaram dificuldades relevantes na interpretação de gráficos e representações visuais, indicando que determinados distratores funcionam como indicadores diagnósticos das formas de pensamento mobilizadas pelos estudantes.
+
+No mesmo conjunto de investigações, \textcite{lopes2015estudo} evidenciaram, a partir da análise das alternativas incorretas, padrões recorrentes de erro entre os participantes do ENEM. Os distratores mais selecionados estiveram associados a interpretações simplificadas dos fenômenos físicos, como o tratamento de sistemas extensos como partículas pontuais, o uso inadequado de relações matemáticas e dificuldades na articulação entre conceitos físicos distintos. Esses resultados reforçam que as respostas incorretas não ocorrem de forma aleatória, mas refletem limitações conceituais estruturais e modos específicos de raciocínio mobilizados pelos estudantes.
+
+Complementarmente,\textcite{Caldwell2013}  observaram que a presença da opção “Nenhuma das anteriores” produziu diferenças estatisticamente significativas na dificuldade dos itens, favorecendo versões que não incluíam essa alternativa. Adicionalmente, os autores compararam questões com três e quatro distratores, bem como diferentes configurações estruturais das respostas, verificando apenas variações não conclusivas nesses casos. Esses resultados reforçam a interpretação de que os distratores não atuam apenas como respostas incorretas, mas como componentes ativos do processo avaliativo, capazes de influenciar o comportamento de escolha dos respondentes.
+
+Em síntese, a literatura aponta que a análise dos distratores constitui uma ferramenta essencial para a compreensão do desempenho em exames de larga escala, uma vez que evidencia padrões sistemáticos de erro, concepções alternativas persistentes e efeitos decorrentes do próprio formato das questões. Assim, os resultados reforçam que avaliações educacionais eficazes dependem não apenas da seleção adequada dos conteúdos, mas também da elaboração criteriosa das alternativas de resposta, capazes de discriminar níveis de compreensão sem introduzir vieses interpretativos indevidos.
+
+
+\subsection{Síntese e lacunas da literatura}
+
+A literatura analisada evidencia que o desempenho dos estudantes em exames de larga escala, particularmente no Exame Nacional do Ensino Médio (ENEM), não depende exclusivamente do domínio conceitual dos conteúdos avaliados, mas também das características estruturais dos próprios itens. Estudos apontam que fatores como extensão dos enunciados, complexidade linguística e uso de recursos visuais influenciam significativamente a interpretação das questões e os índices de acerto, indicando que aspectos relacionados ao formato e à linguagem das avaliações exercem papel relevante no desempenho dos participantes.
+
+Adicionalmente, investigações baseadas na análise psicométrica e na análise de distratores demonstram que os padrões de resposta dos estudantes refletem não apenas lacunas conceituais, mas também efeitos decorrentes do design avaliativo, incluindo a organização das alternativas, a forma de apresentação das informações e as demandas cognitivas impostas pela leitura e interpretação dos itens. Nesse sentido, os erros observados frequentemente estão associados a estratégias intuitivas de resolução, dificuldades de interpretação e interações entre texto, representação visual e estrutura das alternativas.
+
+Apesar desses avanços, observa-se que muitos estudos concentram-se predominantemente na análise do conteúdo disciplinar cobrado ou no desempenho global por área do conhecimento, enquanto ainda são relativamente escassas investigações que examinem de forma integrada o papel da linguagem e do formato dos itens como elementos centrais do processo avaliativo. Em particular, permanece limitada a compreensão de como características estruturais, como extensão textual, multimodalidade e construção dos distratores atuam conjuntamente na configuração da dificuldade das questões.
+
+Dessa forma, identifica-se como lacuna na literatura a necessidade de abordagens que priorizem a análise do formato dos itens avaliativos, considerando o desempenho dos estudantes a partir das condições de apresentação das questões e não apenas do conteúdo avaliado. Nesse contexto, o presente estudo busca investigar como elementos de formato, linguagem e estrutura das questões contribuem para a interpretação e o desempenho em itens do ENEM.
+
+
+\section{Referências}
+\printbibliography[heading=none]
+
+
+\end{document}
