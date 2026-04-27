@@ -6,6 +6,9 @@
 #2-se seria mlhr a gnt ver a poiscao das questoes de msneira mais generica 
 #3- fazer os 2, filtras pra se for enem extrair com base nas areas e pro upload da pessoa fazer generico (pq p mjim o nosso tcc tem 2 partes: o estudo q eh com base no enem e o mvp q eh geral 
 
+#TODO 
+#extrair todos os dados de todos os enems (regular ppl todas as cores) e salvar infos em algum lugar
+
 
 #deteccao de questoes no enem: ler pdf e achar onde ta escrito "QUESTAO 0....""
 
