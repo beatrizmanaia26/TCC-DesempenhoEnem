@@ -1,3 +1,12 @@
+#programa tera 2 “partes”
+#1-analise do formato com base no enem 
+#2-com base na anaise  do enem, fzerem upload de provas para analisarmos elas, para isso 
+#TODO
+#1-extrair a ordem das questoes com base nas areas (lingugens, matematica…) mas considerando que futuramente as pessoas podem fazer upload de qqr prov n sei…
+#2-se seria mlhr a gnt ver a poiscao das questoes de msneira mais generica 
+#3- fazer os 2, filtras pra se for enem extrair com base nas areas e pro upload da pessoa fazer generico (pq p mjim o nosso tcc tem 2 partes: o estudo q eh com base no enem e o mvp q eh geral 
+
+
 #deteccao de questoes no enem: ler pdf e achar onde ta escrito "QUESTAO 0....""
 
 #pip install pdfplumber#extrai texto de forma estruturada 
