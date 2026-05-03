@@ -20,7 +20,7 @@ import re #permite usar padroes de texto (regex)
 pasta = "../enems"
 
 #modo especifico (um arquivo)
-arquivo = "enem2025Dia1Regular.pdf"
+arquivo = "enem2025Dia1RegularAzul.pdf"
 caminhoCompleto = os.path.join(pasta, arquivo)
 
 print(f"\n Lendo: {arquivo}")
