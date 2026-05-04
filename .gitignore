@@ -1,0 +1,6 @@
+dataset/
+venv/
+*.pt
+
+split.py
+dataset.py
