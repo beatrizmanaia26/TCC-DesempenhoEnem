@@ -1,8 +1,10 @@
 dataset/
 venv/
+arquivos/
 
 yolov8s-cls.pt
 yolov8s.pt
+yolo26n.pt
 
 split.py
 dataset.py

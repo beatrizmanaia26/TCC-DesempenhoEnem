@@ -1,22 +1,54 @@
-import pymupdf  # Previously known as fitz
+import fitz  # pymupdf
+from pathlib import Path
 
-doc = pymupdf.open("fuvest2025_primeira_fase_prova_V1.pdf")
+# =========================
+# PASTAS
+# =========================
+pdf_dir = Path("arquivos")
+output_dir = Path("imagens_extraidas")
 
-for i, page in enumerate(doc):
-    # Get a list of images on the current page
-    image_list = page.get_images(full=True)
+output_dir.mkdir(exist_ok=True)
 
-    for img_index, img in enumerate(image_list):
-        xref = img[0]  # Get the image XREF
+# =========================
+# EXTRAÇÃO
+# =========================
+img_count = 0
 
-        # Extract image dictionary containing binary data and metadata
-        base_image = doc.extract_image(xref)
-        image_bytes = base_image["image"]
-        image_ext = base_image["ext"]  # e.g., 'png', 'jpeg'
+for pdf_file in pdf_dir.glob("*.pdf"):
+    print(f"Processando: {pdf_file.name}")
 
-        # Save image to disk
-        image_name = f"page{i+1}_img{img_index+1}.{image_ext}"
-        with open(image_name, "wb") as f:
-            f.write(image_bytes)
+    doc = fitz.open(pdf_file)
 
-doc.close()
+    for page_index, page in enumerate(doc):
+
+        image_list = page.get_images(full=True)
+
+        for img_index, img in enumerate(image_list):
+
+            xref = img[0]
+            base_image = doc.extract_image(xref)
+
+            image_bytes = base_image["image"]
+            image_ext = base_image["ext"]
+
+            width = base_image["width"]
+            height = base_image["height"]
+
+            #ignora imagens pequenas (muito importante)
+            if width < 100 or height < 100:
+                continue
+
+            img_count += 1
+
+            image_name = (
+                f"{pdf_file.stem}_p{page_index+1}_img{img_index+1}.{image_ext}"
+            )
+
+            image_path = output_dir / image_name
+
+            with open(image_path, "wb") as f:
+                f.write(image_bytes)
+
+    doc.close()
+
+print(f"\nTotal de imagens salvas: {img_count}")
