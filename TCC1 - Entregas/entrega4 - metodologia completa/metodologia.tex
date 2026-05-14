@@ -299,18 +299,19 @@ A estatística inferencial permite analisar se diferenças observadas entre grup
     \item \textbf{Tamanho de efeito}: medida complementar aos testes de significância, utilizada para avaliar a magnitude prática das diferenças observadas. Dentre essas medidas, destaca-se o \textit{Cohen’s d}, frequentemente utilizado para classificar o efeito como pequeno, médio ou grande.
 \end{itemize}
 
-\subsection{Análise das variações estruturais entre provas} FAZERRRRRRRRRRR!!!!!!!
+\subsection{Análise das variações estruturais entre provas} 
 \subsubsection{Modelo da Teoria de Resposta ao Item (TRI)}
 \label{sec:tri}
-ex como eh calculo do tri…
 
-explicar a organização da dificuldade das questões ao longo da prova, considerando classificações fundamentadas no modelo da Teoria de Resposta ao Item (TRI).
+O Exame Nacional do Ensino Médio (ENEM) utiliza a Teoria de Resposta ao Item (TRI) como modelo estatístico para estimar a proficiência dos participantes a partir do padrão de respostas apresentado nas provas objetivas \cite{inep2021enem}. Diferentemente de métodos baseados apenas na quantidade total de acertos, a TRI considera características individuais de cada questão, permitindo uma avaliação mais precisa do desempenho dos candidatos e maior comparabilidade entre diferentes versões de prova.
 
-ver em q sessoes aparece: se coloco aqui tb 
+No modelo adotado pelo ENEM, a estimativa de proficiência é calculada com base na probabilidade de acerto de cada item, considerando tanto o desempenho do participante quanto parâmetros associados às questões. Entre esses parâmetros, destacam-se a dificuldade do item, relacionada ao nível de habilidade necessário para responder corretamente à questão, e o poder de discriminação, associado à capacidade da questão em diferenciar candidatos com diferentes níveis de proficiência \cite{inep2021enem}.
 
-COMO FUNCIONA A classificações fundamentadas no modelo da Teoria de Resposta ao Item (TRI)
+Dessa forma, candidatos com a mesma quantidade de acertos podem obter notas distintas, uma vez que a TRI considera a coerência pedagógica do padrão de respostas. Espera-se, por exemplo, que participantes com maior proficiência apresentem maior probabilidade de acerto em questões classificadas como difíceis e menor probabilidade de erro em questões consideradas fáceis.
 
-As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na Teoria de Resposta ao Item (TRI), permitindo uma análise complementar entre o desempenho observado dos candidatos (como a taxa de acerto) e a proficiência estimada dos participantes.
+Além disso, a TRI permite estabelecer classificações fundamentadas no nível de dificuldade das questões, possibilitando a análise da distribuição desses itens ao longo das provas. Nesse contexto, cada questão pode ser associada a um nível estimado de proficiência necessário para que um participante apresente alta probabilidade de acerto. Dessa forma, a dificuldade dos itens deixa de ser interpretada apenas pela proporção de acertos observada, passando a considerar também o comportamento esperado de candidatos com diferentes níveis de habilidade. Essa abordagem possibilita compreender como questões consideradas fáceis, intermediárias ou difíceis podem estar organizadas ao longo do exame.
+
+Adicionalmente, a utilização da TRI permite analisar a relação entre a taxa de acerto das questões e a proficiência estimada dos participantes. Enquanto a taxa de acerto representa empiricamente a proporção de candidatos que responderam corretamente a determinado item, a TRI interpreta esse desempenho considerando o nível de habilidade necessário para o acerto da questão. Assim, itens com menores taxas de acerto tendem a estar associados a níveis mais elevados de dificuldade, embora essa relação também dependa da coerência do padrão de respostas apresentado pelos candidatos. Dessa maneira, a análise conjunta entre taxa de acerto e parâmetros estimados pela TRI possibilita uma compreensão mais precisa do comportamento das questões e do desempenho dos participantes no ENEM.
 
 \subsection{Comparação entre alternativas}
 \subsubsection{\textif{Word Embedding}}
@@ -501,7 +502,7 @@ Além disso, serão empregadas variáveis de filtragem, como \texttt{NU\_ANO} e 
 
 A partir dessa estimativa, os resultados obtidos serão comparados com as variáveis estruturais descritas anteriormente nesta seção. O objetivo dessa análise é investigar a existência de associações entre tais fatores e o desempenho dos candidatos.
 
-As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na Teoria de Resposta ao Item (TRI), permitindo uma análise complementar entre o desempenho observado dos candidatos e a proficiência estimada dos participantes.
+As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na Teoria de Resposta ao Item (TRI) (~\ref{sec:tri}), permitindo uma análise complementar entre o desempenho observado dos candidatos e a proficiência estimada dos participantes.
 
 Ressalta-se que as variáveis estruturais não serão interpretadas como determinantes diretas da dificuldade, mas como fatores potencialmente associados ao desempenho. Nesse sentido, serão aplicadas métricas estatísticas de correlação para avaliar a intensidade dessas associações, sendo a escolha do coeficiente mais adequado (como Pearson ou Spearman) definida com base nas características dos dados analisados, considerando aspectos como distribuição, presença de outliers e natureza das variáveis.
 
