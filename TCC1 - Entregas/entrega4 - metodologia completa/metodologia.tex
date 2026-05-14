@@ -312,6 +312,22 @@ COMO FUNCIONA A classificações fundamentadas no modelo da Teoria de Resposta a
 
 As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na Teoria de Resposta ao Item (TRI), permitindo uma análise complementar entre o desempenho observado dos candidatos (como a taxa de acerto) e a proficiência estimada dos participantes.
 
+\subsection{Comparação entre alternativas}
+\subsubsection{\textif{Word Embedding}}
+Modelos de aprendizado de máquina não processam texto em linguagem natural diretamente, sendo necessária a conversão das palavras e sentenças em representações numéricas. Uma das abordagens mais utilizadas para essa finalidade é o uso de \textit{word embeddings}, técnica que representa palavras ou trechos de texto como vetores em um espaço multidimensional.
+
+Nessa representação vetorial, palavras ou sentenças semanticamente semelhantes tendem a ocupar posições próximas no espaço vetorial, enquanto elementos semanticamente distintos tendem a apresentar maior distância entre si. Dessa forma, os embeddings permitem que modelos computacionais capturem relações semânticas presentes no texto, indo além da simples comparação lexical.
+
+No presente trabalho, os embeddings das alternativas das questões serão gerados utilizando o modelo BERTimbau \cite{souza2019portuguese}. A partir dessas representações vetoriais, será calculada a similaridade entre as alternativas por meio da distância de cosseno, possibilitando analisar o grau de proximidade semântica entre distratores e alternativas corretas.
+
+\subsubsection{\textit{Linear Logistic Test Model(LLTM)}}
+A dificuldade de um item pode ser analisada por diferentes modelos psicométricos. Entre eles, destaca-se o \textit{Linear Logistic Test Model} (LLTM), uma extensão do modelo de Rasch que permite representar a dificuldade de uma questão como resultado de características estruturais previamente definidas.
+
+Diferentemente do modelo de Rasch tradicional, no qual cada item possui um parâmetro de dificuldade estimado individualmente, o LLTM modela essa dificuldade a partir da combinação linear de fatores associados ao item. Dessa forma, características específicas da questão podem ser utilizadas para investigar sua influência sobre o nível de dificuldade observado.
+
+Neste trabalho, o LLTM será utilizado para analisar a influência da ordem das alternativas sobre a dificuldade das questões. Para isso, serão comparadas diferentes versões da prova, considerando a distribuição das respostas dos participantes em cada configuração de alternativas.
+
+
   %------------------------------------------------------------------------------------------------------%
 \section{Metodologia}
 
@@ -457,6 +473,11 @@ A imagem ~\ref{fig:fluxograma-llm} apresenta o fluxograma das etapas utilizadas 
 \subsubsection{Avaliação da eficácia das alternativas como distratores}
 
 %comparar na analise o chance de ser distraor com Acerto ao acaso (c): chance de acertar chutando (do tri0) fazer fluxograma detalhando passo a passo se achar necessario  DISTRATORES: análise de ordem e conteúdo  Distratores eh alternativa errada mas q eh prox o bastante da alternativa certa, ou: parte do texto da prova n serve para nada (podemos pegar llm e pedi p ela resp a prova, deve acertar ai o experimento eh tirando parte dos textos até ela começar a errar, oq tirei e ela n errou a questão seria distratores no enunciado. Distratores da p analisa no enunciado e na alternativa (pq analisar um ou outro????explicar isso na metodologia) Na alternativa: quanto alternativa são similares, existe correlação entre similaridade das questões e os acertos? Tipo se as alternativas são mais similares com a correta as pessoas tentem a marcar as mais próx da correta? Ou se tem mais similaridade entre as erradas a pessoa marca a errada (foto enem) Ex alunos erra mais se tem mais similares entre as alternativa errada e a correta. Ou quanto alternativas n tem similaridade? 3 casos: 1 n são similares,2 erradas são similares entre si aí vai na errada? Erradas são mais similares concorrerá e marcam mais errada?) Como determino se 2 textos são parecidos? Quebrapalavra em tokens transforma em vetor numérico e determina distrabcia entre 2 vetores (distância entre cossenos) USAR BERT (entrada eh texto e da vetor como saída ai eh só pega vetores da alternativa soma dividir e ver distancia p ver similaridade. Ent em distratores temos q falar as opções q temos, qual usaremos se vai ser ditrator no enunciado u nas alternativas é como faze isso….. Ex distratores: analisa se alternativa e/ou enunciado são distratores, na alternativa vou analisar similaridade usar word bed com distância entre cossenos PQ Escolhiisso PQ farei isso… distratores sera analisado ordem das alterantivas e seus conteudos? como (ORDEM E CONTEUDO)%
+Nesta etapa, serão analisados diferentes aspectos relacionados aos distratores das questões. Neste trabalho, consideram-se como distratores todas as alternativas incorretas de cada item. O objetivo dessa análise é investigar a eficácia dos distratores e o papel desempenhado por eles na estrutura do exame. Para isso, serão avaliadas: (i) a similaridade entre cada distrator e a alternativa correta; (ii) a similaridade entre os próprios distratores de uma mesma questão; e (iii) a influência dessas relações de similaridade no desempenho dos participantes, especialmente em cenários nos quais distratores semanticamente próximos entre si, mas distintos da alternativa correta, possam induzir o candidato ao erro.
+
+Para realizar essa análise, será utilizado o modelo \textit{Bidirectional Encoder Representations from Transformers} (BERT), mais especificamente o BERTimbau, versão do modelo treinada para a língua portuguesa \cite{souza2019portuguese}. Inicialmente, o texto de cada alternativa será convertido em representações vetoriais (\textit{embeddings}) por meio do modelo. Em seguida, será calculada a similaridade entre os vetores utilizando a distância de cosseno, permitindo mensurar o grau de proximidade semântica entre as alternativas de cada questão. Para identificar a correlação entre a similaridade e os erros, será feita uma comparação da taxa de marcação entre as respostas corretas e os distratores.
+
+Além disso, será analisada a correlação entre a ordem das alternativas e a dificuldade das questões. Para isso, serão comparadas diferentes versões da prova e a distribuição das respostas em cada uma delas. A análise será conduzida utilizando o \textit{Linear Logistic Test Model} (LLTM), com auxílio do pacote eRm para a linguagem R, replicando parcialmente a metodologia empregada por \textcite{hohensinn_does_nodate}.
 
 \subsubsection{Análise da relação entre tempo médio de leitura das questões e tempo de resolução da prova}
 
