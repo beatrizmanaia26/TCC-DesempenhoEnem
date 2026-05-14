@@ -23,6 +23,7 @@
 \titlespacing*{\section}{0pt}{*0}{0pt}
 \usepackage{ragged2e}
 
+\usepackage{subcaption}
 %-------------------------- ESTILOS NÃO ALTERAR ------------------------------------------------%
 % Estilo para legendas de figura e tabela
 \captionsetup[figure]{
@@ -245,6 +246,25 @@ Dessa forma, identifica-se como lacuna na literatura a necessidade de abordagens
 
 \subsection{Presença de gráficos}
 
+\subsubsection{Visão Computacional e Classificação de Imagens}
+
+A visão computacional consiste em uma área da Inteligência Artificial
+voltada ao desenvolvimento de métodos capazes de extrair informações a
+partir de imagens digitais, permitindo a realização de tarefas como
+reconhecimento de padrões, detecção de objetos e classificação visual.
+
+Entre essas tarefas destaca-se a classificação de imagens, cujo objetivo é atribuir categorias com base em características visuais. Quando apenas duas classes são consideradas, define-se o problema como classificação binária.
+
+\subsubsection{Arquitetura YOLO}
+
+A família YOLO (\textit{You Only Look Once}) consiste em modelos de
+detecção de objetos que tratam o problema como uma única tarefa de
+regressão, permitindo a predição simultânea das classes e localizações
+dos objetos em uma única passagem pela rede neural convolucional
+\cite{redmon2016yolo}. Essa abordagem possibilita inferência em tempo
+real com bom equilíbrio entre precisão e eficiência computacional.
+
+
 \subsection{Análise comparativa do desempenho entre provas}
 
 \subsubsection{Metricas estatisticas descritivas e inferenciais}
@@ -381,8 +401,38 @@ Para a extração e análise textual das provas do ENEM, será utilizada a bibli
 Como complemento, será utilizada a biblioteca \textit{PyMuPDF} para a detecção de imagens, uma vez que ela oferece acesso direto aos objetos gráficos presentes no documento. A partir das regiões previamente delimitadas para cada questão com o uso do \textit{pdfplumber}, buscamos verificar a presença de elementos visuais dentro desses limites, estabelecendo a associação entre questões e a ocorrência de imagens.
 
 \subsubsection{Detecção de gráfico nas questões}
-%fazer fluxograma explicando passo a passo se achar necessario o que usou pra treinar modelo etcetc, COLOCAR IMAGENS DO DATASET!!!!!DETECCAO DE GRAFICOS COM YOLO (em conceitos colocar pq escolheu YOLO)
-%
+
+Esta etapa tem como objetivo identificar automaticamente a presença de
+gráficos nas questões do ENEM, permitindo posteriormente analisar a
+relação entre elementos visuais e o desempenho dos participantes.
+Para isso, foi desenvolvido um modelo de visão computacional capaz de
+classificar imagens como gráfico ou não gráfico.
+
+Devido à inexistência de um conjunto de dados específico para o contexto
+educacional analisado, foi construído um textit{dataset} próprio. O conjunto de treinamento foi composto por aproximadamente 2.000 imagens, sendo cerca
+de 1.000 imagens de gráficos provenientes do dataset \textit{ChartGalaxy} \cite{li2025chartgalaxy} e 1.000 imagens da classe não gráfico obtidas do conjunto COCO 2017 \cite{coco_dataset}, utilizado sem filtragem temática a fim de representar a diversidade de imagens presentes em avaliações educacionais. Para validação, foram utilizadas imagens extraídas das provas do ENEM entre 2020 e 2024, totalizando 323 imagens, das quais 49 foram classificadas como gráficos e 274 como não gráficos. Após o treinamento, o modelo foi aplicado a imagens provenientes de diferentes exames educacionais, permitindo a identificação automática da presença de gráficos, variável posteriormente utilizada nas análises estatísticas do estudo.
+
+\begin{figure}[htbp]
+    \centering
+    
+    \begin{subfigure}{0.2\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/ex_graf.png}
+        \caption{Exemplos da classe \textit{gráfico} (ChartGalaxy).}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.2\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/ex_ngraf.png}
+        \caption{Exemplos da classe \textit{não gráfico} (COCO 2017).}
+    \end{subfigure}
+
+    \caption{Exemplos representativos das classes utilizadas no treinamento do modelo de detecção de gráficos.}
+    \label{fig:dataset_graficos}
+\end{figure}
+
+A detecção foi realizada utilizando o modelo YOLOv8s (\textit{You Only Look Once}), configurado para classificação binária. O treinamento foi conduzido por 30 épocas, com tamanho de entrada das imagens de 224 pixels, lote (\textit{batch size}) de 64 imagens e execução em GPU.  O desempenho do modelo será avaliado por meio da métrica de acurácia, definida como a proporção de classificações corretas em relação ao total de imagens analisadas, indicando o percentual de imagens corretamente classificadas como gráfico ou não gráfico.
+
 \subsubsection{Identificação de formalismo nas questões}
 
 Devido à diversidade de gêneros textuais presentes no ENEM, não há um padrão único e rígido de formalidade textual \cite{Ciapuscio2005,INEP_ENEM_Matriz}. Dessa forma, optou-se pela utilização de modelos de linguagem (LLMs) para estimar o grau de formalidade das questões, permitindo uma análise contextual mais ampla em comparação a abordagens baseadas exclusivamente em regras fixas ou métricas estatísticas isoladas.
@@ -475,6 +525,96 @@ Dessa forma, o MVP poderá fornecer subsídios para que professores e elaborador
 Atualmente, encontra-se em desenvolvimento a implementação de um código responsável pela leitura de provas do ENEM, as quais apresentam delimitações estruturais bem definidas para identificação das questões, geralmente indicadas pela expressão “QUESTÃO (número)”. A partir dessa estrutura, utiliza-se a biblioteca \textit{pdfplumber} para identificar a quantidade de questões e calcular métricas como o número de palavras por item.
 
 Entretanto, o código ainda se encontra em fase de consolidação e aprimoramento, uma vez que, nos testes realizados até o momento, nem todos os casos retornam resultados precisos, especialmente em situações que envolvem variações de formatação nos documentos analisados.
+
+\subsection{Resultados da detecção automática de gráficos}
+
+Paralelamente, foi conduzido o treinamento do modelo YOLOv8s com o
+conjunto de dados previamente descrito. Ao término das 30 épocas, o
+modelo obteve acurácia final de 62,7\%, indicando desempenho ainda
+limitado e evidenciando a necessidade de aprimoramentos no conjunto de
+dados. A fim de compreender melhor os padrões de erro do modelo, foram
+realizados testes adicionais utilizando imagens extraídas de questões de
+provas.
+
+A Figura~\ref{fig:accuracy} apresenta a evolução da acurácia ao longo do
+processo de treinamento. Observa-se elevada variabilidade nas primeiras
+épocas, caracterizada por oscilações significativas no desempenho do
+modelo, indicando uma fase inicial de adaptação aos dados. A partir das
+épocas intermediárias, a acurácia passa a apresentar comportamento mais
+estável, convergindo para valores próximos de 0,63, o que sugere a
+estabilização do aprendizado diante das características do conjunto de
+dados utilizado.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/acuracia.png}
+    \caption{Evolução da acurácia do modelo YOLOv8s ao longo das épocas de treinamento.}
+    \label{fig:accuracy}
+\end{figure}
+
+Para análise mais detalhada dos erros de classificação, foi construída a
+matriz de confusão apresentada na Figura~\ref{fig:confusion}. A matriz
+permite observar a distribuição das predições corretas e incorretas,
+evidenciando confusões recorrentes entre as classes analisadas.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/matriz_confusao.png}
+    \caption{Matriz de confusão obtida nos testes do modelo, indicando a
+    relação entre classes reais e preditas.}
+    \label{fig:confusion}
+\end{figure}
+
+Os resultados obtidos indicam que o modelo apresenta desempenho
+satisfatório na detecção de gráficos mais estruturados e visualmente
+evidentes. Entretanto, observaram-se dificuldades na classificação de
+gráficos mais simples, com baixo nível de detalhamento visual, bem como
+em imagens compostas, nas quais o gráfico não constitui o elemento
+central da figura, aparecendo ao lado de outros componentes visuais.
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{0.2\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/correto1.jpg}
+    \small (a) Classificação correta — não gráfico
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/correto2.jpg}
+    \small (b) Classificação correta — gráfico
+\end{minipage}
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.2\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/erro2.jpg}
+    \small (c) Erro — gráfico classificado como não gráfico
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/erro1.jpg}
+    \small (d) Erro — não gráfico classificado como gráfico
+\end{minipage}
+
+\caption{Exemplos de classificações realizadas pelo modelo YOLOv8s.}
+\label{fig:resultados_yolo}
+\end{figure}
+
+Essas limitações sugerem que o conjunto de dados utilizado ainda pode
+ser aprimorado. Em especial, identificou-se a necessidade de ampliar a
+quantidade e a diversidade de imagens contendo gráficos, incluindo
+exemplos mais próximos de situações reais encontradas em provas
+educacionais.
+
+Como etapa futura, pretende-se expandir o \textit{dataset}, adicionando
+novas imagens ao conjunto de treinamento, visando melhorar a capacidade
+de generalização do modelo, bem como enriquecer o conjunto de validação
+com casos mais representativos das condições reais de aplicação.
 
 %falar/mostrar oq fizemos, o q ja ta implementado!!!!!!!!!!!%
 
