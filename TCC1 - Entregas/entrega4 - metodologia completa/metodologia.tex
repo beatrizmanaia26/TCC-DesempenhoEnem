@@ -22,7 +22,7 @@
 \setlength{\parindent}{2em}  % Aumenta a indentação para 2em (pode ser ajustado
 \titlespacing*{\section}{0pt}{*0}{0pt}
 \usepackage{ragged2e}
-
+\usepackage[table]{xcolor}
 \usepackage{subcaption}
 %-------------------------- ESTILOS NÃO ALTERAR ------------------------------------------------%
 % Estilo para legendas de figura e tabela
@@ -148,13 +148,12 @@
 
 }
 
-\resumo{escrever resumo (intro e metodologia e dps no tcc2 adsd resultados)}
+\resumo{O Exame Nacional do Ensino Médio (ENEM) destaca-se entre os exames de larga escala no Brasil por ser uma das principais portas de entrada para o ensino superior dessa forma, compreender como a estrutura da prova influencia o desempenho dos candidatos é fundamental tanto para orientar os estudos dos participantes quanto para fornecer subsídios a docentes na elaboração de avaliações mais equilibradas. Este trabalho investiga a correlação entre características estruturais das questões, ordem de apresentação das questões na prova, nível de formalismo, quantidade de palavras por enunciado, presença de imagens e gráficos, e construção dos distratores, e o desempenho dos candidatos nas edições do ENEM de 2020 a 2025, considerando o recorte geográfico do estado de São Paulo. Utilizaremos técnicas de estatística descritiva e inferencial, análise baseada na Teoria de Resposta ao Item (TRI), processamento de linguagem natural (LLMs) para estimativa de formalismo, e extração automatizada de elementos textuais e visuais. Com base nos padrões identificados, será desenvolvida uma interface que, a partir do upload de uma prova, analisa suas características estruturais e, utilizando as correlações observadas no ENEM, estima seu nível potencial de dificuldade. O sistema permite ao professor verificar, por exemplo, se o excesso de texto ou o baixo formalismo tende a tornar a prova mais difícil, auxiliando na decisão de ajustar ou não o formato da avaliação. Dessa forma, o estudo contribui com evidências sobre o impacto do formato na performance e oferece uma ferramenta prática para a melhoria de processos avaliativos.}
 
-\keyword{ENEM, formato, correlação, desempenho.}
+\keyword{ENEM, formato da prova, correlação formato e desempnho, desempenho dos candidatos }
 
 \end{@twocolumnfalse}
 ]
-
 
 \section{Introdução}
 
@@ -434,13 +433,13 @@ de 1.000 imagens de gráficos provenientes do dataset \textit{ChartGalaxy} \cite
     
     \begin{subfigure}{0.2\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{images/ex_graf.png}
+        \includegraphics[width=\linewidth]{ex_graf.png}
         \caption{Exemplos da classe \textit{gráfico} (ChartGalaxy).}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.2\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{images/ex_ngraf.png}
+        \includegraphics[width=\linewidth]{ex_ngraf.png}
         \caption{Exemplos da classe \textit{não gráfico} (COCO 2017).}
     \end{subfigure}
 
@@ -569,7 +568,7 @@ dados utilizado.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\linewidth]{images/acuracia.png}
+    \includegraphics[width=0.5\linewidth]{acuracia.png}
     \caption{Evolução da acurácia do modelo YOLOv8s ao longo das épocas de treinamento.}
     \label{fig:accuracy}
 \end{figure}
@@ -581,7 +580,7 @@ evidenciando confusões recorrentes entre as classes analisadas.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\linewidth]{images/matriz_confusao.png}
+    \includegraphics[width=0.8\linewidth]{matriz_confusao.png}
     \caption{Matriz de confusão obtida nos testes do modelo, indicando a
     relação entre classes reais e preditas.}
     \label{fig:confusion}
@@ -599,13 +598,13 @@ central da figura, aparecendo ao lado de outros componentes visuais.
 
 \begin{minipage}{0.2\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/correto1.jpg}
+    \includegraphics[width=\linewidth]{correto1.jpg}
     \small (a) Classificação correta — não gráfico
 \end{minipage}
 \hfill
 \begin{minipage}{0.2\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/correto2.jpg}
+    \includegraphics[width=\linewidth]{correto2.jpg}
     \small (b) Classificação correta — gráfico
 \end{minipage}
 
@@ -613,13 +612,13 @@ central da figura, aparecendo ao lado de outros componentes visuais.
 
 \begin{minipage}{0.2\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/erro2.jpg}
+    \includegraphics[width=\linewidth]{erro2.jpg}
     \small (c) Erro — gráfico classificado como não gráfico
 \end{minipage}
 \hfill
 \begin{minipage}{0.2\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/erro1.jpg}
+    \includegraphics[width=\linewidth]{erro1.jpg}
     \small (d) Erro — não gráfico classificado como gráfico
 \end{minipage}
 
@@ -643,30 +642,37 @@ com casos mais representativos das condições reais de aplicação.
 %DPS Q LU TERMINA PARTE DELA FAZE PRINT DE COMO TA SAÍDA DO MVP %
 
 \section{Cronograma}
-%\begin{table}[htb]
-%\centering
-%\caption{Cronograma de execução do TCC (visão por mês)}
-%\label{tab:cronograma-transposto}
-%\begin{tabular}{|c|c|c|c|c|c|}
-%\hline
-%\textbf{Mês/Atividade} & \textbf{Coleta} & \textbf{Estruturação} & %\textbf{Pesquisa} & \textbf{Escrita} & \textbf{Desenv. MVP} \\
-%\hline
-%Março   &   & X & X &   &   \\
-%\hline
-%Abril   &   &   &   & X &   \\
-%\hline
-%Maio    &   &   &   & X & X \\
-%\hline
-%Junho   &   &   &   & X & X \\
-%\hline
-%Julho   &   &   &   & X & X \\
-%\hline
-%Agosto  &   &   &   & X & X \\
-%\hline
-%Setembro&   &   &   & X & X \\
-%\hline
-%\end{tabular}
-%\end{table}
+
+\begin{table*}[htb]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\definecolor{cinzaTitulo}{gray}{0.85}
+
+\begin{tabular}{|>{\columncolor{cinzaTitulo}}l|*{9}{c|}}
+\hline
+\rowcolor{cinzaTitulo}
+\textbf{Atividade} & \textbf{jan} & \textbf{fev} & \textbf{mar} & \textbf{abr} & \textbf{mai} & \textbf{jun} & \textbf{jul} & \textbf{ago} & \textbf{set} \\
+\hline
+Coleta de dados dos ENEMs para MVP  & X &   &   &   &   &   &   &   &   \\
+\hline
+Estruturação do projeto             &   & X &   &   &   &   &   &   &   \\
+\hline
+Pesquisa bibliográfica              &   & X & X &   &   &   &   &   &   \\
+\hline
+Escrita do TCC                      &   &   & X & X & X & X & X & X & X \\
+\hline
+Desenvolvimento análise ENEM e MVP                 &   &   &   & X & X & X & X & X & X \\
+\hline
+\end{tabular}
+\caption{Cronograma de atividades do projeto}
+\label{tab:cronograma}
+\end{table*}
+\section{Referências}
+\printbibliography[heading=none]
+
+\end{document}
 
 \section{Referências}
 \printbibliography[heading=none]
