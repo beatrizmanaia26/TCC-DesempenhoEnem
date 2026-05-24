@@ -14,7 +14,6 @@
 \usepackage[style=ieee, sorting=nty, language=portuguese]{biblatex}
 \definecolor{grayFEI}{HTML}{7F7F7F}
 \usepackage{paracol} % no preâmbulo
-\usepackage{titlesec}
 \usepackage{indentfirst}  % Indenta o primeiro parágrafo
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
@@ -103,7 +102,7 @@
 \renewcommand{\headrulewidth}{0.3pt} % ← ATIVA a linha (espessura ajustável)
 \setlength\headheight{1.2cm}
 \lhead{\includegraphics[width=4.97cm, height=1cm]{logoinova.png}}
-\rhead{\helvet{1º semestre/2025}}
+\rhead{\helvet{1º semestre/2026}}
 
 \fancyfoot{} % limpa rodapé
 \lfoot{
@@ -148,7 +147,7 @@
 
 }
 
-\resumo{O Exame Nacional do Ensino Médio (ENEM) destaca-se entre os exames de larga escala no Brasil por ser uma das principais portas de entrada para o ensino superior dessa forma, compreender como a estrutura da prova influencia o desempenho dos candidatos é fundamental tanto para orientar os estudos dos participantes quanto para fornecer subsídios a docentes na elaboração de avaliações mais equilibradas. Este trabalho investiga a correlação entre características estruturais das questões, ordem de apresentação das questões na prova, nível de formalismo, quantidade de palavras por enunciado, presença de imagens e gráficos, e construção dos distratores, e o desempenho dos candidatos nas edições do ENEM de 2020 a 2025, considerando o recorte geográfico do estado de São Paulo. Utilizaremos técnicas de estatística descritiva e inferencial, análise baseada na Teoria de Resposta ao Item (TRI), processamento de linguagem natural (LLMs) para estimativa de formalismo, e extração automatizada de elementos textuais e visuais. Com base nos padrões identificados, será desenvolvida uma interface que, a partir do upload de uma prova, analisa suas características estruturais e, utilizando as correlações observadas no ENEM, estima seu nível potencial de dificuldade. O sistema permite ao professor verificar, por exemplo, se o excesso de texto ou o baixo formalismo tende a tornar a prova mais difícil, auxiliando na decisão de ajustar ou não o formato da avaliação. Dessa forma, o estudo contribui com evidências sobre o impacto do formato na performance e oferece uma ferramenta prática para a melhoria de processos avaliativos.}
+\resumo{O Exame Nacional do Ensino Médio (ENEM) destaca-se entre os exames de larga escala no Brasil por ser uma das principais portas de entrada para o ensino superior dessa forma, compreender como a estrutura da prova influencia o desempenho dos candidatos é fundamental tanto para orientar os estudos dos participantes quanto para fornecer subsídios a docentes na elaboração de avaliações mais equilibradas. Este trabalho investiga a correlação entre características estruturais das questões como: ordem de apresentação das questões na prova; nível de formalismo; quantidade de palavras por enunciado; presença de imagens e gráficos; e construção dos distratores, e o desempenho dos candidatos nas edições do ENEM de 2020 a 2025, considerando o recorte geográfico do estado de São Paulo. Utilizaremos técnicas de estatística descritiva e inferencial, análise baseada na Teoria de Resposta ao Item (TRI), processamento de linguagem natural (PLN) para estimativa de formalismo, e extração automatizada de elementos textuais e visuais. Com base nos padrões identificados, será desenvolvida uma aplicação, a partir do upload de uma prova, analisa suas características estruturais e, utilizando as correlações observadas no ENEM, estima seu nível potencial de dificuldade. O sistema permite ao professor verificar, por exemplo, se o excesso de texto ou o baixo formalismo tende a tornar a prova mais difícil, auxiliando na decisão de ajustar ou não o formato da avaliação. Dessa forma, o estudo contribui com evidências sobre o impacto do formato na performance e oferece uma ferramenta prática para a melhoria de processos avaliativos.}
 
 \keyword{ENEM, formato da prova, correlação formato e desempnho, desempenho dos candidatos }
 
@@ -161,15 +160,17 @@ Exames padronizados são amplamente utilizados para avaliar habilidades e conhec
 
 No contexto brasileiro, o Exame Nacional do Ensino Médio (ENEM)\footnote{O ENEM é aplicada ao longo de 2 domingos. Ela contém 180 questões separadas em 4 categorias: Ciências Humanas e suas Tecnologias, Linguagens e suas Tecnologias, Matemática e suas Tecnologias e Ciência da Natureza e suas Tecnologias, além de uma redação.} se destaca como um dos principais mecanismos de avaliação educacional. A partir do ano de 2009, o exame se tornou um meio de ingresso ao ensino superior, por meio do Sistema de Seleção Unificada (Sisu), a prova foi alterada para conter 180 questões objetivas e uma redação \cite{Inep_2020}. Ademais, a pontuação obtida pelos candidatos também é utilizada como critério para a concessão de programas de acesso e permanência estudantil, como o ProUni e o FIES. Além disso, o exame também desempenha um papel na avaliação da qualidade do ensino médio no país.
 
-A nota do ENEM é definida por um sistema distinto da Teoria Clássica dos Testes (TCT), no qual a pontuação é baseada apenas no número de acertos do candidato \cite{sousa_teoria_2020}. No exame, utiliza-se a Teoria de Resposta ao Item (TRI), que considera parâmetros como a dificuldade, a discriminação e a probabilidade de acerto ao acaso para determinar a contribuição de cada questão na nota final \cite{inep2021enem}. Nesse modelo, diferentes itens possuem pesos distintos, tornando a pontuação do candidato sensível às características das questões que compõem a prova.
+A nota do ENEM é definida por um sistema distinto da Teoria Clássica dos Testes (TCT), no qual a pontuação é baseada apenas no número de acertos do candidato \cite{sousa_teoria_2020}. No exame, utiliza-se a Teoria de Resposta ao Item (TRI), que considera parâmetros como a dificuldade, a discriminação e a probabilidade de acerto ao acaso para determinar a contribuição de cada questão na nota final \cite{inep2021enem}. Nesse modelo, diferentes itens possuem pesos distintos, tornando a pontuação do candidato sensível às características das questões que compõem a prova. Uma descrição mais detalhada da TRI é apresentada na Seção \ref{sec:tri}.
+
+(LU E NUNO acham q fico bom a citacao  Uma descrição mais detalhada da tri é apresentada na Seção \ref{sec:tri}. ou acham mlhr nao ter? podem tira qqr coisa e dps apaguem esse comentario pf)
 
 Diante da amplitude de suas aplicações e do número expressivo de participantes, torna-se fundamental que o exame seja capaz de medir as habilidades dos candidatos, minimizando a influência de fatores que não estejam diretamente relacionados ao conhecimento avaliado.
 
 Porém, nem sempre é garantida a avaliação precisa das competências e habilidades de cada candidato. A forma como a informação é apresentada ao candidato é um fator influente do seu resultado. De acordo com estudos como \textcite{Pullishery2020,2018,silva2019desempenho}, o uso de textos longos aumenta o grau de dificuldade da questão. Além disso, a linguagem que é utilizada dentro do enunciado, como voz passiva ou ativa, também demonstrou impacto na performance geral \cite{correia2004complexidade,Marcom2016}. Entre outros aspectos, foram feitos estudos que demonstram a importância de características como a ordem na qual as questões são exibidas para os candidatos \cite{Barichello2022,Anaya2023} e o formato que os distratores são apresentados aos candidatos \cite{Marcom2016,lopes2015estudo,Caldwell2013}. Isso demonstra que a maneira como as informações são apresentadas ao candidato pode influenciar a avaliação de suas competências. Portanto, mostra-se a importância de análises dos itens que são inseridos nas provas. 
 
-Historicamente, estudos sobre a formatação da prova do ENEM são escassos, não recebendo a mesma atenção que outros fatores influentes, como o perfil socioeconômico dos candidatos, como revisado por \textcite{Dutra2023}. Ademais, as pesquisas relacionadas frequentemente possuem abordagens e motivações diferentes, analisando itens de provas específicas prioritariamente para revelar limitações do ensino básico nas escolas brasileiras \cite{Cestaro2020, lopes2015estudo}. Soma-se a isso o fato de que grande parte da literatura se baseia em edições antigas do exame, anteriores à reformulação do formato de aplicação ocorrida em 2017. Consequentemente, há uma carência de investigações atualizadas que isolem o impacto das características estruturais dos itens no desempenho dos alunos.
+Historicamente, estudos sobre a formatação da prova do ENEM são escassos, não recebendo a mesma atenção que outros fatores influentes, como o perfil socioeconômico dos candidatos, como revisado por \textcite{Dutra2023}. Ademais, as pesquisas relacionadas frequentemente possuem abordagens e motivações diferentes, analisando itens de provas específicas prioritariamente para revelar limitações do ensino básico nas escolas brasileiras \cite{Cestaro2020, lopes2015estudo}. Soma-se a isso o fato de que grande parte da literatura se baseia em edições antigas do exame, anteriores à reformulação do formato de aplicação ocorrida em 2017 NUNO ACHO QUE PRA ISSO SERIA BOM TER UMA REFERENCIA DE TIPO UNS 2 ARTIGO PELO MENOS ANTIGOS, PQ OS Q EU VI ERAM ATUAIS (gritando p fica mais visivel no texto, mas eh so minha opiniao). Consequentemente, há uma carência de investigações atualizadas que isolem o impacto das características estruturais dos itens no desempenho dos alunos.
 
-Diante dessa lacuna, este trabalho tem como objetivo analisar como características estruturais dos itens do ENEM,como extensão do enunciado, uso de elementos visuais, nível de formalidade, construção de distratores e ordem de apresentação das questões,influenciam o desempenho dos participantes, a fim de identificar padrões que contribuam para a compreensão do impacto do formato do exame na avaliação das competências dos candidatos.
+Diante dessa lacuna, este trabalho tem como objetivo analisar como características estruturais dos itens do ENEM, como extensão do enunciado, uso de elementos visuais, nível de formalidade, construção de distratores e ordem de apresentação das questões,influenciam o desempenho dos participantes, a fim de identificar padrões que contribuam para a compreensão do impacto do formato do exame na avaliação das competências dos candidatos.
  
   %------------------------------------------------------------------------------------------------------%
 \section{Trabalhos Relacionados}
@@ -241,6 +242,9 @@ Dessa forma, identifica-se como lacuna na literatura a necessidade de abordagens
 
 %-----------------------------------------------------------------------------------------------------%
 \section{Conceitos}
+Nesta seção serão apresentados os conceitos fundamentais utilizados no desenvolvimento deste trabalho, incluindo definições, princípios de funcionamento e aplicações das técnicas adotadas. Também serão discutidos os motivos que justificam a escolha dos métodos empregados, bem como suas contribuições para a análise proposta, permitindo estabelecer a base teórica necessária para a compreensão das etapas metodológicas descritas posteriormente.
+
+LU E NUNO: VER SE TA BOM COM BASE NOQ TA ESCRITO !!!!!!!!!!! E SE TIVER APAGAR ESSA LINHA 
 % CONCEITOS: como funcionama as coisas, pq escolhi, pq vou fazer de um jeito e nao de outro, conceitos ex oq eh wordbed, como funciona, o q eh berrt (modelo pronto de encoder) referencias.... -pq escolhemos esses -conceitos que nao explicamos (DEFINICAO EXPLICACAO DE CONCEITOS QUE UTILZIZAREMOS)%
 
 \subsection{Presença de gráficos}
@@ -263,57 +267,154 @@ dos objetos em uma única passagem pela rede neural convolucional
 \cite{redmon2016yolo}. Essa abordagem possibilita inferência em tempo
 real com bom equilíbrio entre precisão e eficiência computacional.
 
-
 \subsection{Análise comparativa do desempenho entre provas}
 
-\subsubsection{Metricas estatisticas descritivas e inferenciais}
+\subsubsection{Métricas estatísticas descritivas e inferenciais}
+
 \label{sec:metricas-descritivas-inferenciais}
-Para fundamentar a análise dos dados do ENEM, é necessário distinguir dois ramos complementares da estatística aplicada à pesquisa educacional: a estatística descritiva e a estatística inferencial. Conforme destacam \textcite{estatistica_descritiva_inferencial}, a estatística descritiva ocupa-se da organização, sumarização e descrição das principais características de um conjunto de dados observados, enquanto a estatística inferencial fornece procedimentos para a realização de generalizações sobre uma população com base em dados amostrais, reconhecendo que essas conclusões possuem um grau de incerteza.
+LU E NUNO: LER VERIFICANDO SE ALGO TA REPETITIVO / SE TUDO DAS FORMULAS FOI EXPLICADO (n consegui ver direito pq n consigo compilar o tcc)
+
+A seleção das métricas estatísticas adotadas neste trabalho foi definida a partir dos objetivos da pesquisa e com base em métodos amplamente empregados em estudos de análise de desempenho educacional e estatística aplicada \cite{estatistica_descritiva_inferencial,field2018discovering,cohen1988statistical}. A escolha das métricas considerou três necessidades principais do estudo: (i) descrever o comportamento dos dados analisados; (ii) comparar diferentes grupos de candidatos, considerando anos, áreas do conhecimento e versões de prova; e (iii) verificar se as diferenças observadas apresentam relevância estatística.
+
+Para atender a essas necessidades, foram adotadas métricas de estatística descritiva para caracterizar a distribuição das notas e identificar padrões nos dados, bem como métricas de estatística inferencial para avaliar diferenças estatísticas entre grupos analisados. Adicionalmente, foi incluída a medida de tamanho de efeito \textit{Cohen's d}, permitindo complementar a interpretação dos resultados por meio da análise da magnitude prática das diferenças observadas \cite{cohen1988statistical}.
 
 \paragraph{Estatística Descritiva}
 \mbox{}\\
-A estatística descritiva reúne técnicas utilizadas para organizar, resumir e representar as principais características de um conjunto de dados analisados. Entre as principais métricas descritivas, destacam-se:
+Considerando a necessidade de caracterizar diferentes aspectos das notas dos candidatos, incluindo tendência central, dispersão e distribuição do desempenho, foram consideradas as seguintes métricas:
 
 \begin{itemize}
-    \item \textbf{Medidas de posição (tendência central)}: incluem média aritmética, mediana, moda, quartis e percentis. A média representa o valor médio do conjunto de dados, sendo sensível a valores extremos, enquanto a mediana corresponde ao valor central da distribuição, apresentando maior robustez em distribuições assimétricas. Quartis e percentis permitem analisar a distribuição dos dados em diferentes faixas de desempenho.
 
-    \item \textbf{Medidas de dispersão}: incluem desvio padrão, variância e coeficiente de variação. O desvio padrão quantifica o grau de dispersão dos dados em relação à média, enquanto o coeficiente de variação expressa a variabilidade relativa dos dados, permitindo comparações entre grupos com médias distintas.
+\item \textbf{Média aritmética}: corresponde ao valor médio do conjunto de dados, sendo utilizada para representar o desempenho geral dos grupos analisados. Entretanto, por ser sensível à presença de valores extremos, sua utilização foi realizada em conjunto com a mediana, permitindo verificar se o valor médio representa adequadamente o comportamento das notas \cite{labone_estatistica}.
 
-    \item \textbf{Medidas de forma}: incluem assimetria (\textit{skewness}) e curtose (\textit{kurtosis}), utilizadas para caracterizar o comportamento da distribuição dos dados quanto ao grau de simetria e concentração.
+\begin{equation}
+\bar{x}=
+\frac{\sum_{i=1}^{n}x_i}{n}
+\end{equation}
+
+em que $\bar{x}$ representa a média aritmética, $x_i$ corresponde a cada observação do conjunto de dados e $n$ representa o número total de observações \cite{labone_estatistica}.
+
+\item \textbf{Mediana}: corresponde ao valor central dos dados ordenados, dividindo a distribuição em duas partes iguais. Sua utilização ocorreu como medida complementar à média, reduzindo possíveis distorções associadas à presença de valores extremos \cite{labone_estatistica}.
+
+\begin{equation}
+Md=
+\begin{cases}
+x_{\left(\frac{n+1}{2}\right)},
+& \text{se } n \text{ for ímpar}
+\\
+\\
+\frac{x_{\left(\frac{n}{2}\right)}
++x_{\left(\frac{n}{2}+1\right)}}{2},
+& \text{se } n \text{ for par}
+\end{cases}
+\end{equation}
+
+em que $n$ representa o número total de observações e $x$ corresponde aos valores ordenados do conjunto de dados \cite{labone_estatistica}.
+
+\item \textbf{Desvio padrão}: representa o grau de dispersão das observações em relação à média, indicando o quanto os valores tendem a se afastar do desempenho médio do grupo. Sua utilização ocorreu devido à necessidade de identificar diferenças na variabilidade das notas entre os grupos analisados \cite{labone_estatistica}.
+
+\begin{equation}
+s=
+\sqrt{
+\frac{
+\sum_{i=1}^{n}
+(x_i-\bar{x})^2
+}
+{n-1}
+}
+\end{equation}
+
+em que $s$ representa o desvio padrão, $x_i$ corresponde a cada observação, $\bar{x}$ representa a média do conjunto de dados e $n$ corresponde ao número total de observações \cite{labone_estatistica}.
+
+\item \textbf{Quartis e percentis}: correspondem a medidas que dividem a distribuição dos dados em partes ordenadas, permitindo identificar a posição relativa dos candidatos dentro do conjunto analisado. Sua utilização ocorreu devido à limitação das medidas centrais em representar toda a distribuição dos dados, permitindo analisar o comportamento de candidatos com diferentes níveis de desempenho \cite{labone_estatistica}.
+
+\begin{equation}
+P_k=
+\frac{k(n+1)}{100}
+\end{equation}
+
+em que $k$ representa o percentil desejado e $n$ corresponde ao número total de observações. A expressão determina a posição do percentil no conjunto ordenado de dados \cite{labone_estatistica}.
+
+\item \textbf{Coeficiente de variação}: corresponde a uma medida de dispersão relativa obtida pela relação entre o desvio padrão e a média. Sua utilização complementa a interpretação do desvio padrão, permitindo comparar a variabilidade entre grupos com médias distintas \cite{labone_estatistica}.
+
+\begin{equation}
+CV=
+\frac{s}{\bar{x}}
+\times100
+\end{equation}
+
+em que $s$ corresponde ao desvio padrão e $\bar{x}$ representa a média do conjunto analisado \cite{labone_estatistica}.
+
 \end{itemize}
-
-Essas métricas são amplamente empregadas em pesquisas educacionais para descrever o desempenho de participantes, avaliar a variabilidade dos resultados e identificar padrões de distribuição entre diferentes grupos analisados.
 
 \paragraph{Estatística Inferencial}
 \mbox{}\\
-A estatística inferencial permite analisar se diferenças observadas entre grupos apresentam significância estatística, possibilitando a realização de generalizações sobre a população analisada a partir de dados amostrais. Nesse contexto, destacam-se métodos e métricas como:
+
+A estatística inferencial permite avaliar se diferenças observadas entre grupos apresentam significância estatística. Considerando a necessidade de comparação entre múltiplos grupos e de avaliação da magnitude prática das diferenças observadas, foram consideradas as seguintes métricas \cite{field2018discovering,cohen1988statistical}:
 
 \begin{itemize}
-    \item \textbf{Testes de hipóteses}: procedimentos utilizados para verificar se diferenças observadas entre grupos podem ser atribuídas ao acaso amostral ou se apresentam significância estatística.
 
-    \item \textbf{Análise de Variância (ANOVA)}: técnica estatística utilizada para comparar médias entre três ou mais grupos, permitindo identificar diferenças estatisticamente significativas entre os conjuntos analisados.
+\item \textbf{Análise de Variância (ANOVA)}: utilizada para comparar simultaneamente médias entre múltiplos grupos, sendo adequada ao contexto deste estudo devido à necessidade de comparação entre diferentes anos, áreas do conhecimento e versões de prova. Sua utilização evita a realização de múltiplos testes independentes, reduzindo a probabilidade de erros estatísticos \cite{field2018discovering}.
 
-    \item \textbf{Intervalos de confiança}: faixas de valores dentro das quais se espera que um parâmetro populacional esteja contido com determinado nível de confiança, geralmente de 95\%.
+\begin{equation}
+F=
+\frac{MQ_{entre}}
+{MQ_{dentro}}
+\end{equation}
 
-    \item \textbf{Tamanho de efeito}: medida complementar aos testes de significância, utilizada para avaliar a magnitude prática das diferenças observadas. Dentre essas medidas, destaca-se o \textit{Cohen’s d}, frequentemente utilizado para classificar o efeito como pequeno, médio ou grande.
+em que $MQ_{entre}$ representa a média quadrática entre grupos e $MQ_{dentro}$ representa a média quadrática dentro dos grupos \cite{libretexts_anova}.
+
+\item \textbf{Tamanho de efeito (\textit{Cohen's d})}: corresponde a uma medida padronizada utilizada para avaliar a magnitude das diferenças observadas entre grupos comparados, complementando a análise de significância estatística. Sua escolha ocorreu devido à adequação ao contexto deste estudo, que utiliza grandes volumes de dados provenientes dos microdados do ENEM e realiza comparações entre diferentes grupos. Além disso, permite interpretar a magnitude das diferenças observadas de forma padronizada \cite{cohen1988statistical}.
+
+\begin{equation}
+d=
+\frac{\bar{x}_1-\bar{x}_2}
+{s_p}
+\end{equation}
+
+em que $\bar{x}_1$ e $\bar{x}_2$ representam as médias dos grupos comparados e $s_p$ corresponde ao desvio padrão combinado dos grupos analisados \cite{jim_cohensd}.
+
 \end{itemize}
+
+LU E NUNO: QUANDO TIVEREM LENDO, VERIFICAR SE FICA CLARO: 
+1-citacoes de referencias expicando as metricas bem como formulas (fico bom?acham q tem o bastante)
+
+2-fico claro pq usamos essas métricas e não outras? como chegamos ate elas exatamente ??? (apaguem isso dps q lerem)
 
 \subsection{Análise das variações estruturais entre provas} 
 \subsubsection{Modelo da Teoria de Resposta ao Item (TRI)}
 \label{sec:tri}
 
-O Exame Nacional do Ensino Médio (ENEM) utiliza a Teoria de Resposta ao Item (TRI) como modelo estatístico para estimar a proficiência dos participantes a partir do padrão de respostas apresentado nas provas objetivas \cite{inep2021enem}. Diferentemente de métodos baseados apenas na quantidade total de acertos, a TRI considera características individuais de cada questão, permitindo uma avaliação mais precisa do desempenho dos candidatos e maior comparabilidade entre diferentes versões de prova.
+O Exame Nacional do Ensino Médio (ENEM) utiliza a Teoria de Resposta ao Item (TRI) como modelo estatístico para estimar a proficiência dos participantes a partir das respostas apresentadas nas provas objetivas \cite{inep2021enem}. Diferentemente de métodos baseados apenas na quantidade total de acertos, a TRI considera características individuais de cada questão, permitindo uma avaliação mais precisa do desempenho dos candidatos e maior comparabilidade entre diferentes versões de prova.
 
-No modelo adotado pelo ENEM, a estimativa de proficiência é calculada com base na probabilidade de acerto de cada item, considerando tanto o desempenho do participante quanto parâmetros associados às questões. Entre esses parâmetros, destacam-se a dificuldade do item, relacionada ao nível de habilidade necessário para responder corretamente à questão, e o poder de discriminação, associado à capacidade da questão em diferenciar candidatos com diferentes níveis de proficiência \cite{inep2021enem}.
+No ENEM, a TRI é operacionalizada por meio do modelo logístico de três parâmetros (Three Parameter Logistic Model -- 3PL), no qual a probabilidade de acerto de um item é estimada em função da proficiência do participante e das características associadas à questão \cite{sousa_teoria_2020,inep2021enem}. Entre esses parâmetros destacam-se a discriminação do item, relacionada à capacidade da questão em diferenciar participantes com diferentes níveis de habilidade; a dificuldade, associada ao nível de proficiência necessário para responder corretamente à questão; e o parâmetro de acerto ao acaso, relacionado à probabilidade de o participante acertar uma questão por tentativa ou chute.
 
-Dessa forma, candidatos com a mesma quantidade de acertos podem obter notas distintas, uma vez que a TRI considera a coerência pedagógica do padrão de respostas. Espera-se, por exemplo, que participantes com maior proficiência apresentem maior probabilidade de acerto em questões classificadas como difíceis e menor probabilidade de erro em questões consideradas fáceis.
+Esse modelo é representado pela Equação \ref{eq:tri}:
 
-Além disso, a TRI permite estabelecer classificações fundamentadas no nível de dificuldade das questões, possibilitando a análise da distribuição desses itens ao longo das provas. Nesse contexto, cada questão pode ser associada a um nível estimado de proficiência necessário para que um participante apresente alta probabilidade de acerto. Dessa forma, a dificuldade dos itens deixa de ser interpretada apenas pela proporção de acertos observada, passando a considerar também o comportamento esperado de candidatos com diferentes níveis de habilidade. Essa abordagem possibilita compreender como questões consideradas fáceis, intermediárias ou difíceis podem estar organizadas ao longo do exame.
+\begin{equation}
+P(\theta)=c+(1-c)\frac{1}{1+e^{-a(\theta-b)}}
+\label{eq:tri}
+\end{equation}
 
-Adicionalmente, a utilização da TRI permite analisar a relação entre a taxa de acerto das questões e a proficiência estimada dos participantes. Enquanto a taxa de acerto representa empiricamente a proporção de candidatos que responderam corretamente a determinado item, a TRI interpreta esse desempenho considerando o nível de habilidade necessário para o acerto da questão. Assim, itens com menores taxas de acerto tendem a estar associados a níveis mais elevados de dificuldade, embora essa relação também dependa da coerência do padrão de respostas apresentado pelos candidatos. Dessa maneira, a análise conjunta entre taxa de acerto e parâmetros estimados pela TRI possibilita uma compreensão mais precisa do comportamento das questões e do desempenho dos participantes no ENEM.
+em que:
+
+\begin{itemize}
+\item $\theta$ representa a proficiência ou habilidade estimada do participante;
+\item $a$ corresponde ao parâmetro de discriminação do item;
+\item $b$ representa o parâmetro de dificuldade da questão;
+\item $c$ corresponde ao parâmetro de acerto ao acaso;
+\item $e$ representa a constante matemática associada à função exponencial.
+\end{itemize}
+
+A partir dessa formulação, a nota do participante não é calculada apenas pelo número total de acertos, mas pela combinação entre as respostas apresentadas e a probabilidade esperada de acerto para cada item. O processo consiste em estimar iterativamente o valor de proficiência ($\theta$) que melhor explica o conjunto de respostas do participante. Assim, padrões considerados mais coerentes, como o acerto de itens fáceis e intermediários acompanhado de maior frequência de acertos em itens difíceis, tendem a resultar em estimativas mais elevadas de proficiência. Em contrapartida, padrões inconsistentes, como o erro em itens considerados fáceis combinado ao acerto de itens difíceis, podem indicar respostas ao acaso, produzindo estimativas menores \cite{inep2021enem}.
+
+Como consequência, participantes com a mesma quantidade de acertos podem obter notas distintas. Espera-se, por exemplo, que candidatos com maior proficiência apresentem maior probabilidade de acerto em questões difíceis e menor probabilidade de erro em questões fáceis.
+
+Além disso, a TRI permite estabelecer classificações fundamentadas no nível de dificuldade das questões, possibilitando a análise da distribuição desses itens ao longo das provas. Nesse contexto, cada questão pode ser associada a uma faixa estimada de habilidade necessária para que um participante apresente alta probabilidade de acerto. Consequentemente, a dificuldade dos itens deixa de ser interpretada apenas pela frequência observada de respostas corretas, passando a considerar também o comportamento esperado de candidatos com diferentes níveis de habilidade. Essa abordagem possibilita compreender como questões consideradas fáceis, intermediárias ou difíceis podem estar organizadas ao longo do exame.
+
+Adicionalmente, a TRI permite analisar a relação entre a taxa de acerto das questões e a proficiência estimada dos participantes. Enquanto a taxa de acerto representa empiricamente a proporção de candidatos que responderam corretamente a determinado item, a TRI interpreta esse desempenho considerando as características da questão e o nível de habilidade requerido para seu acerto. Assim, itens com menores taxas de acerto tendem a estar associados a maiores níveis de dificuldade, embora essa relação também dependa da coerência das respostas apresentadas pelos participantes. A análise conjunta entre taxa de acerto e parâmetros estimados pela TRI possibilita uma compreensão mais precisa do comportamento das questões e do desempenho dos participantes no ENEM.
 
 \subsection{Comparação entre alternativas}
-\subsubsection{\textif{Word Embedding}}
+\subsubsection{\textit{Word Embedding}}
 Modelos de aprendizado de máquina não processam texto em linguagem natural diretamente, sendo necessária a conversão das palavras e sentenças em representações numéricas. Uma das abordagens mais utilizadas para essa finalidade é o uso de \textit{word embeddings}, técnica que representa palavras ou trechos de texto como vetores em um espaço multidimensional.
 
 Nessa representação vetorial, palavras ou sentenças semanticamente semelhantes tendem a ocupar posições próximas no espaço vetorial, enquanto elementos semanticamente distintos tendem a apresentar maior distância entre si. Dessa forma, os embeddings permitem que modelos computacionais capturem relações semânticas presentes no texto, indo além da simples comparação lexical.
@@ -339,23 +440,21 @@ Para cada prova, serão analisadas variáveis relacionadas à ordem das questõe
 
 Com base nas variáveis analisadas, busca-se determinar quais elementos estruturais da prova exercem impacto significativo no desempenho dos candidatos. Adicionalmente, a partir dos resultados obtidos na análise do ENEM, na parte de visualizacao analítica dos resultados obtidos, pretende-se ampliar a compreensão sobre como o formato de outras avaliações pode influenciar o desempenho de estudantes em diferentes contextos.
 
-Para a operacionalização dessa análise, a metodologia foi estruturada em quatro etapas principais, conforme ilustrado no fluxograma ~\ref{fig:fluxograma-estrutura-tcc}
+Para a operacionalização dessa análise, a metodologia foi estruturada em quatro etapas principais, conforme ilustrado na figura ~\ref{fig:fluxograma-estrutura-tcc}
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[scale=0.46]{fluxograma.png}
+    \includegraphics[scale=0.26]{fluxograma.jpeg}
     \caption{Fluxograma de desenvolvimento do Trabalho de Conclusão de Curso}
-    \label{fig:fluxograma-estrutura-tcc}%LUUUU QUANDO FIZER FLUXOGRAMA EM LATEX MANTER ESSAS TAGS dos fluxogramas
+    \label{fig:fluxograma-estrutura-tcc}
 \end{figure}
-
-
 \subsection{Procedimentos de extração e análise dos dados}
 \label{procedimento-extracao-analise-dados}
 Nesta etapa, são descritos os procedimentos de extração dos dados das provas do ENEM, os quais serão utilizados na análise de correlação entre o formato das questões e o desempenho dos candidatos.
 
 \subsubsection{Análise da posição das questões nas provas} 
 
-Será conduzida uma análise sobre o impacto da ordem das questões no desempenho dos candidatos, utilizando o fluxograma ~\ref{fig:fluxograma-posicao-questoes} para estruturar as fases necessárias da análise.
+Será conduzida uma análise sobre o impacto da ordem das questões no desempenho dos candidatos, utilizando os passos descritos na figura ~\ref{fig:fluxograma-posicao-questoes} para estruturar as fases necessárias da análise.
 
 \begin{figure}[htb]
     \centering
@@ -380,18 +479,19 @@ Adicionalmente, aplicaremos a variável \texttt{TP\_COR\_PROVA\_*}, que permite 
 
 \paragraph{Análise comparativa do desempenho entre provas}
 \mbox{}\\
-Inicialmente, serão utilizadas métricas descritivas
-~\ref{sec:metricas-descritivas-inferenciais}, como média, mediana, desvio padrão, quartis, percentis e coeficiente de variação, permitindo a avaliação das variações de desempenho entre diferentes versões de prova, anos e áreas de conhecimento.
+Inicialmente, serão utilizadas métricas descritivas, conforme são descritas na seção de conceitos, no tópico ~\ref{sec:metricas-descritivas-inferenciais}, como média, mediana, desvio padrão, quartis, percentis e coeficiente de variação, permitindo a avaliação das variações de desempenho entre diferentes versões de prova, anos e áreas de conhecimento.
 
-A média será empregada para realizar comparações iniciais de desempenho entre os diferentes grupos analisados, enquanto o desvio padrão permitirá avaliar o grau de dispersão das notas, possibilitando identificar situações em que versões de prova apresentem médias semelhantes, mas níveis distintos de variabilidade no desempenho dos candidatos.
+A média será empregada para realizar comparações iniciais de desempenho entre os diferentes grupos analisados, enquanto o desvio padrão, empregado devido à necessidade de avaliar a variabilidade das notas em relação ao desempenho médio, permitirá identificar situações em que versões de prova apresentem médias semelhantes, mas níveis distintos de dispersão no desempenho dos candidatos.
 
-Adicionalmente, será utilizada a mediana, considerando que as distribuições de notas do ENEM podem apresentar valores extremos, permitindo uma representação mais robusta do desempenho central dos participantes e possibilitando verificar se a média representa adequadamente os dados analisados.
+Adicionalmente, será utilizada a mediana, considerando que as distribuições de notas do ENEM podem apresentar valores extremos, permitindo uma representação mais robusta do desempenho central dos participantes e possibilitando verificar se a média representa adequadamente os dados analisados. A utilização conjunta dessas métricas busca evitar interpretações baseadas exclusivamente na média, a qual pode ser influenciada pela presença de valores extremos.
 
-Os quartis e percentis serão utilizados para analisar a distribuição do desempenho entre diferentes grupos de candidatos, permitindo observar o comportamento de participantes com baixa, média e alta proficiência em diferentes versões de prova e áreas do conhecimento.
+Os quartis e percentis serão utilizados para analisar a distribuição do desempenho entre diferentes grupos de candidatos, considerando que medidas centrais isoladas não permitem representar adequadamente a distribuição completa dos dados. Dessa forma, será possível observar o comportamento de participantes com baixa, média e alta proficiência em diferentes versões de prova e áreas do conhecimento.
 
-Além disso, será empregado o coeficiente de variação, o qual possibilita comparar a dispersão relativa das notas entre grupos com médias distintas, permitindo identificar versões de prova ou áreas de conhecimento com maior inconsistência ou variabilidade proporcional no desempenho dos candidatos.
+Além disso, será empregado o coeficiente de variação, uma vez que o desvio padrão representa uma medida absoluta de dispersão e pode dificultar comparações entre grupos com médias distintas. Assim, o coeficiente de variação permitirá comparar a dispersão relativa das notas entre grupos, possibilitando identificar versões de prova ou áreas de conhecimento com maior inconsistência ou variabilidade proporcional no desempenho dos candidatos.
 
-No âmbito inferencial ~\ref{sec:metricas-descritivas-inferenciais}, será aplicada a Análise de Variância (ANOVA), com o objetivo de verificar se as diferenças observadas entre as médias dos grupos analisados apresentam significância estatística. Adicionalmente, será utilizada a medida de tamanho de efeito de Cohen (\textit{Cohen’s d}), permitindo avaliar a magnitude das diferenças identificadas entre os grupos comparados.
+Por sua vez, as métricas inferenciais aplicadas, conforme descritas na Seção~\ref{sec:metricas-descritivas-inferenciais}, serão a Análise de Variância (ANOVA) e a medida de tamanho de efeito \textit{Cohen's d}. A ANOVA foi selecionada devido à necessidade de comparação simultânea entre múltiplos grupos, incluindo diferentes anos, áreas do conhecimento e versões de prova. Sua utilização evita a realização de diversos testes independentes, o que poderia aumentar a probabilidade de erros estatísticos.
+
+Adicionalmente, será utilizada a medida de tamanho de efeito \textit{Cohen's d}, devido à sua adequação ao contexto deste estudo, que utiliza grandes volumes de dados provenientes dos microdados do ENEM e realiza comparações entre diferentes grupos. Sua utilização permitirá avaliar a magnitude das diferenças observadas de forma padronizada, complementando a interpretação da significância estatística dos resultados.
 
 Essas comparações serão realizadas entre diferentes versões de prova dentro do mesmo ano, bem como entre áreas de conhecimento pertencentes ao mesmo ano e versão de prova.
 
@@ -425,7 +525,7 @@ Para isso, foi desenvolvido um modelo de visão computacional capaz de
 classificar imagens como gráfico ou não gráfico.
 
 Devido à inexistência de um conjunto de dados específico para o contexto
-educacional analisado, foi construído um textit{dataset} próprio. O conjunto de treinamento foi composto por aproximadamente 2.000 imagens, sendo cerca
+educacional analisado, foi construído um \textit{dataset}próprio. O conjunto de treinamento foi composto por aproximadamente 2.000 imagens, sendo cerca
 de 1.000 imagens de gráficos provenientes do dataset \textit{ChartGalaxy} \cite{li2025chartgalaxy} e 1.000 imagens da classe não gráfico obtidas do conjunto COCO 2017 \cite{coco_dataset}, utilizado sem filtragem temática a fim de representar a diversidade de imagens presentes em avaliações educacionais. Para validação, foram utilizadas imagens extraídas das provas do ENEM entre 2020 e 2024, totalizando 323 imagens, das quais 49 foram classificadas como gráficos e 274 como não gráficos. Após o treinamento, o modelo foi aplicado a imagens provenientes de diferentes exames educacionais, permitindo a identificação automática da presença de gráficos, variável posteriormente utilizada nas análises estatísticas do estudo.
 
 \begin{figure}[htbp]
@@ -491,8 +591,6 @@ A partir desses parâmetros, o programa previamente desenvolvido será adaptado 
 \label{avaliacao-impacto-variaveis}
 Esta subseção corresponde à etapa final da pesquisa, na qual são consolidadas as análises das variáveis estruturais previamente investigadas.
 
-\subsubsection{Análise do impacto de variáveis estruturais das questões no desempenho dos candidatos no ENEM}
-\label{analise-impacto-variaveis}
 Para analisar o impacto das variáveis estruturais será calculado a taxa de acerto de cada questão com base na proporção de candidatos que responderam corretamente a cada item em relação ao total de participantes considerados, sendo utilizada como uma medida empírica de dificuldade das questões.
 
 Para isso, serão utilizadas variáveis provenientes dos microdados do ENEM, incluindo as respostas dos candidatos (\texttt{TX\_RESPOSTAS\_*}) e os respectivos gabaritos oficiais (\texttt{TX\_GABARITO\_*}), possibilitando a identificação de acertos por questão. As respostas serão previamente submetidas a um processo de limpeza, no qual serão desconsideradas aquelas em branco, anuladas ou com marcações inválidas, de forma que apenas respostas válidas (alternativas A a E) sejam utilizadas na análise.
@@ -501,7 +599,7 @@ Além disso, serão empregadas variáveis de filtragem, como \texttt{NU\_ANO} e 
 
 A partir dessa estimativa, os resultados obtidos serão comparados com as variáveis estruturais descritas anteriormente nesta seção. O objetivo dessa análise é investigar a existência de associações entre tais fatores e o desempenho dos candidatos.
 
-As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na Teoria de Resposta ao Item (TRI) (~\ref{sec:tri}), permitindo uma análise complementar entre o desempenho observado dos candidatos e a proficiência estimada dos participantes.
+As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na Teoria de Resposta ao Item (TRI), conforme descrito na seção de conceitos no tópico (~\ref{sec:tri}), permitindo uma análise complementar entre o desempenho observado dos candidatos e a proficiência estimada dos participantes.
 
 Ressalta-se que as variáveis estruturais não serão interpretadas como determinantes diretas da dificuldade, mas como fatores potencialmente associados ao desempenho. Nesse sentido, serão aplicadas métricas estatísticas de correlação para avaliar a intensidade dessas associações, sendo a escolha do coeficiente mais adequado (como Pearson ou Spearman) definida com base nas características dos dados analisados, considerando aspectos como distribuição, presença de outliers e natureza das variáveis.
 
@@ -513,7 +611,7 @@ A etapa de visualização dos dados corresponde ao desenvolvimento de um Minimum
 
 Para seu desenvolvimento, serão utilizados os programas criados para a análise do formato do ENEM, discutidos nas seções ~\ref{procedimento-extracao-analise-dados} e ~\ref{avaliacao-impacto-variaveis}. Esses programas poderão sofrer adaptações conforme a identificação de novas necessidades ao longo do processo, como a melhoria dos métodos de detecção de questões, de modo a permitir o reconhecimento de diferentes representações e padrões estruturais.
 
-O fluxograma ~\ref{fig:fluxograma-mvp} apresenta o funcionamento do MVP, destacando a relação entre as entradas, as etapas de processamento e a geração dos resultados.
+A figura ~\ref{fig:fluxograma-mvp} mostra um fluxograma que apresenta o funcionamento do MVP, destacando a relação entre as entradas, as etapas de processamento e a geração dos resultados.
 
 \begin{figure}[htb]
     \centering
@@ -523,8 +621,10 @@ O fluxograma ~\ref{fig:fluxograma-mvp} apresenta o funcionamento do MVP, destaca
 \end{figure}
 Para a obtenção desses resultados, serão utilizadas as mesmas variáveis estruturais empregadas na análise do ENEM, agora aplicadas à prova fornecida como entrada no sistema.
 
-\paragraph{Resultados gerados}
+\paragraph{Resultados esperados}
 \mbox{}\\ 
+Nesta seção são apresentados os resultados esperados a partir do desenvolvimento e da aplicação do MVP proposto. Busca-se demonstrar as informações e análises que serão geradas pelo sistema, evidenciando como os dados extraídos e processados poderão contribuir para a interpretação de características estruturais das avaliações e sua possível relação com o desempenho dos participantes.
+
 \subparagraph{Visualizações gráficas}
 \mbox{}\\
 A saída gráfica do MVP será composta pela visualização de métricas relacionadas à prova analisada. Serão utilizados gráficos de pizza para representar a proporção de questões com imagens e gráficos, bem como a distribuição estimada entre o tempo de leitura e resolução da prova. O nível de formalismo das questões será apresentado por meio de gráfico de colunas. Além disso, serão exibidos indicadores relacionados aos padrões de distratores presentes nas alternativas.
@@ -532,7 +632,7 @@ A saída gráfica do MVP será composta pela visualização de métricas relacio
 
 \subparagraph{Análise de correlação entre variáveis estruturais e desempenho}
 \mbox{}\\
-Com base na análise realizada na seção  ~\ref{analise-impacto-variaveis}, serão identificadas associações estatísticas entre características estruturais da prova e o desempenho dos candidatos no ENEM.
+Com base na análise realizada na seção  ~\ref{avaliacao-impacto-variaveis}, serão identificadas associações estatísticas entre características estruturais da prova e o desempenho dos candidatos no ENEM.
 
 A partir desses resultados, o MVP utilizará as mesmas variáveis estruturais extraídas de uma prova fornecida como entrada, para estimar o nível potencial de dificuldade da avaliação.
 
@@ -636,11 +736,6 @@ Como etapa futura, pretende-se expandir o \textit{dataset}, adicionando
 novas imagens ao conjunto de treinamento, visando melhorar a capacidade
 de generalização do modelo, bem como enriquecer o conjunto de validação
 com casos mais representativos das condições reais de aplicação.
-
-%falar/mostrar oq fizemos, o q ja ta implementado!!!!!!!!!!!%
-
-%DPS Q LU TERMINA PARTE DELA FAZE PRINT DE COMO TA SAÍDA DO MVP %
-
 \section{Cronograma}
 O cronograma deste trabalho está representado na tabela ~\ref{tab:cronograma}
 \begin{table*}[htb]
@@ -669,7 +764,7 @@ Desenvolvimento análise ENEM e MVP                 &   &   &   & X & X & X & X 
 \caption{Cronograma de atividades do projeto}
 \label{tab:cronograma}
 \end{table*}
+
 \section{Referências}
 \printbibliography[heading=none]
-
 \end{document}
