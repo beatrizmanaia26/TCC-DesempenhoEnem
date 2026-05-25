@@ -23,6 +23,8 @@
 \usepackage{ragged2e}
 \usepackage[table]{xcolor}
 \usepackage{subcaption}
+
+\usepackage{amsmath}
 %-------------------------- ESTILOS NÃO ALTERAR ------------------------------------------------%
 % Estilo para legendas de figura e tabela
 \captionsetup[figure]{
@@ -162,7 +164,7 @@ No contexto brasileiro, o Exame Nacional do Ensino Médio (ENEM)\footnote{O ENEM
 
 A nota do ENEM é definida por um sistema distinto da Teoria Clássica dos Testes (TCT), no qual a pontuação é baseada apenas no número de acertos do candidato \cite{sousa_teoria_2020}. No exame, utiliza-se a Teoria de Resposta ao Item (TRI), que considera parâmetros como a dificuldade, a discriminação e a probabilidade de acerto ao acaso para determinar a contribuição de cada questão na nota final \cite{inep2021enem}. Nesse modelo, diferentes itens possuem pesos distintos, tornando a pontuação do candidato sensível às características das questões que compõem a prova. Uma descrição mais detalhada da TRI é apresentada na Seção \ref{sec:tri}.
 
-(LU E NUNO acham q fico bom a citacao  Uma descrição mais detalhada da tri é apresentada na Seção \ref{sec:tri}. ou acham mlhr nao ter? podem tira qqr coisa e dps apaguem esse comentario pf)
+(LU E NUNO acham q fico bom a citacao  Uma descrição mais detalhada da tri é apresentada na Seção \ref{sec:tri}. ou acham mlhr nao ter? podem tira qqr coisa e dps apaguem esse comentario pf, Lu: eu acho melhor tirar, mas num sei)
 
 Diante da amplitude de suas aplicações e do número expressivo de participantes, torna-se fundamental que o exame seja capaz de medir as habilidades dos candidatos, minimizando a influência de fatores que não estejam diretamente relacionados ao conhecimento avaliado.
 
@@ -244,7 +246,8 @@ Dessa forma, identifica-se como lacuna na literatura a necessidade de abordagens
 \section{Conceitos}
 Nesta seção serão apresentados os conceitos fundamentais utilizados no desenvolvimento deste trabalho, incluindo definições, princípios de funcionamento e aplicações das técnicas adotadas. Também serão discutidos os motivos que justificam a escolha dos métodos empregados, bem como suas contribuições para a análise proposta, permitindo estabelecer a base teórica necessária para a compreensão das etapas metodológicas descritas posteriormente.
 
-LU E NUNO: VER SE TA BOM COM BASE NOQ TA ESCRITO !!!!!!!!!!! E SE TIVER APAGAR ESSA LINHA 
+LU E NUNO: VER SE TA BOM COM BASE NOQ TA ESCRITO !!!!!!!!!!! E SE TIVER APAGAR ESSA LINHA
+LU: achei top
 % CONCEITOS: como funcionama as coisas, pq escolhi, pq vou fazer de um jeito e nao de outro, conceitos ex oq eh wordbed, como funciona, o q eh berrt (modelo pronto de encoder) referencias.... -pq escolhemos esses -conceitos que nao explicamos (DEFINICAO EXPLICACAO DE CONCEITOS QUE UTILZIZAREMOS)%
 
 \subsection{Presença de gráficos}
@@ -272,7 +275,7 @@ real com bom equilíbrio entre precisão e eficiência computacional.
 \subsubsection{Métricas estatísticas descritivas e inferenciais}
 
 \label{sec:metricas-descritivas-inferenciais}
-LU E NUNO: LER VERIFICANDO SE ALGO TA REPETITIVO / SE TUDO DAS FORMULAS FOI EXPLICADO (n consegui ver direito pq n consigo compilar o tcc)
+LU E NUNO: LER VERIFICANDO SE ALGO TA REPETITIVO / SE TUDO DAS FORMULAS FOI EXPLICADO (n consegui ver direito pq n consigo compilar o tcc) LU: achei do bom
 
 A seleção das métricas estatísticas adotadas neste trabalho foi definida a partir dos objetivos da pesquisa e com base em métodos amplamente empregados em estudos de análise de desempenho educacional e estatística aplicada \cite{estatistica_descritiva_inferencial,field2018discovering,cohen1988statistical}. A escolha das métricas considerou três necessidades principais do estudo: (i) descrever o comportamento dos dados analisados; (ii) comparar diferentes grupos de candidatos, considerando anos, áreas do conhecimento e versões de prova; e (iii) verificar se as diferenças observadas apresentam relevância estatística.
 
@@ -379,6 +382,7 @@ LU E NUNO: QUANDO TIVEREM LENDO, VERIFICAR SE FICA CLARO:
 1-citacoes de referencias expicando as metricas bem como formulas (fico bom?acham q tem o bastante)
 
 2-fico claro pq usamos essas métricas e não outras? como chegamos ate elas exatamente ??? (apaguem isso dps q lerem)
+LU: achei top
 
 \subsection{Análise das variações estruturais entre provas} 
 \subsubsection{Modelo da Teoria de Resposta ao Item (TRI)}
@@ -442,12 +446,13 @@ Com base nas variáveis analisadas, busca-se determinar quais elementos estrutur
 
 Para a operacionalização dessa análise, a metodologia foi estruturada em quatro etapas principais, conforme ilustrado na figura ~\ref{fig:fluxograma-estrutura-tcc}
 
-\begin{figure}[htb]
+\begin{figure*}[h]
     \centering
-    \includegraphics[scale=0.26]{fluxograma.jpeg}
+    \includegraphics[scale=0.3]{fluxograma.jpeg}
     \caption{Fluxograma de desenvolvimento do Trabalho de Conclusão de Curso}
     \label{fig:fluxograma-estrutura-tcc}
-\end{figure}
+\end{figure*}
+
 \subsection{Procedimentos de extração e análise dos dados}
 \label{procedimento-extracao-analise-dados}
 Nesta etapa, são descritos os procedimentos de extração dos dados das provas do ENEM, os quais serão utilizados na análise de correlação entre o formato das questões e o desempenho dos candidatos.
@@ -456,14 +461,16 @@ Nesta etapa, são descritos os procedimentos de extração dos dados das provas 
 
 Será conduzida uma análise sobre o impacto da ordem das questões no desempenho dos candidatos, utilizando os passos descritos na figura ~\ref{fig:fluxograma-posicao-questoes} para estruturar as fases necessárias da análise.
 
-\begin{figure}[htb]
+\begin{figure*}[htb]
     \centering
-    \includegraphics[width=0.90\linewidth]{fluxogramaPosicao.jpeg}
+    \includegraphics[width=0.6\linewidth]{fluxogramaPosicao.jpeg}
     \caption{Fluxograma de Análise da posição das questões nas provas}
     \label{fig:fluxograma-posicao-questoes}
-\end{figure}
+\end{figure*}
+
 \paragraph{Obtenção da base de dados}
 \mbox{}\\
+
 As provas do ENEM referentes ao período de determinado, juntamente com seus respectivos gabaritos, foram obtidas por meio de download a partir da fonte oficial \cite{inep_provas_gabaritos}, contemplando todas as versões disponíveis.
 
 Adicionalmente, serão coletados os microdados do ENEM para o mesmo período \cite{inep_microdados_enem}.
@@ -479,6 +486,7 @@ Adicionalmente, aplicaremos a variável \texttt{TP\_COR\_PROVA\_*}, que permite 
 
 \paragraph{Análise comparativa do desempenho entre provas}
 \mbox{}\\
+
 Inicialmente, serão utilizadas métricas descritivas, conforme são descritas na seção de conceitos, no tópico ~\ref{sec:metricas-descritivas-inferenciais}, como média, mediana, desvio padrão, quartis, percentis e coeficiente de variação, permitindo a avaliação das variações de desempenho entre diferentes versões de prova, anos e áreas de conhecimento.
 
 A média será empregada para realizar comparações iniciais de desempenho entre os diferentes grupos analisados, enquanto o desvio padrão, empregado devido à necessidade de avaliar a variabilidade das notas em relação ao desempenho médio, permitirá identificar situações em que versões de prova apresentem médias semelhantes, mas níveis distintos de dispersão no desempenho dos candidatos.
@@ -489,7 +497,8 @@ Os quartis e percentis serão utilizados para analisar a distribuição do desem
 
 Além disso, será empregado o coeficiente de variação, uma vez que o desvio padrão representa uma medida absoluta de dispersão e pode dificultar comparações entre grupos com médias distintas. Assim, o coeficiente de variação permitirá comparar a dispersão relativa das notas entre grupos, possibilitando identificar versões de prova ou áreas de conhecimento com maior inconsistência ou variabilidade proporcional no desempenho dos candidatos.
 
-Por sua vez, as métricas inferenciais aplicadas, conforme descritas na Seção~\ref{sec:metricas-descritivas-inferenciais}, serão a Análise de Variância (ANOVA) e a medida de tamanho de efeito \textit{Cohen's d}. A ANOVA foi selecionada devido à necessidade de comparação simultânea entre múltiplos grupos, incluindo diferentes anos, áreas do conhecimento e versões de prova. Sua utilização evita a realização de diversos testes independentes, o que poderia aumentar a probabilidade de erros estatísticos.
+Por sua vez, as métricas inferenciais aplicadas, conforme descritas na
+subseção~\ref{sec:metricas-descritivas-inferenciais} da seção de conceitos, serão a Análise de Variância (ANOVA) e a medida de tamanho de efeito \textit{Cohen's d}. A ANOVA foi selecionada devido à necessidade de comparação simultânea entre múltiplos grupos, incluindo diferentes anos, áreas do conhecimento e versões de prova. Sua utilização evita a realização de diversos testes independentes, o que poderia aumentar a probabilidade de erros estatísticos.
 
 Adicionalmente, será utilizada a medida de tamanho de efeito \textit{Cohen's d}, devido à sua adequação ao contexto deste estudo, que utiliza grandes volumes de dados provenientes dos microdados do ENEM e realiza comparações entre diferentes grupos. Sua utilização permitirá avaliar a magnitude das diferenças observadas de forma padronizada, complementando a interpretação da significância estatística dos resultados.
 
@@ -503,7 +512,7 @@ Para o processamento e análise dos microdados, serão utilizadas bibliotecas da
 \mbox{}\\
 Será realizada uma análise detalhada das variações estruturais entre as diferentes versões de prova, com o objetivo de investigar possíveis fatores associados às discrepâncias de desempenho identificadas nas etapas anteriores.
 
-Para a realização dessa análise, serão comparadas as estruturas das provas entre diferentes versões do ENEM, considerando tanto o conjunto completo das áreas de conhecimento quanto análises específicas por área. Essa etapa contemplará principalmente três aspectos estruturais: (i) a ordem de apresentação das questões, (ii) a disposição das alternativas de resposta e (iii) a organização da dificuldade das questões ao longo da prova, considerando classificações fundamentadas no modelo da Teoria de Resposta ao Item (TRI)~\ref{sec:tri}.
+Para a realização dessa análise, serão comparadas as estruturas das provas entre diferentes versões do ENEM, considerando tanto o conjunto completo das áreas de conhecimento quanto análises específicas por área. Essa etapa contemplará principalmente três aspectos estruturais: (i) a ordem de apresentação das questões, (ii) a disposição das alternativas de resposta e (iii) a organização da dificuldade das questões ao longo da prova, considerando classificações fundamentadas no modelo da Teoria de Resposta ao Item (TRI), apresentado na subseção~\ref{sec:tri}.
 
 As variações estruturais serão quantificadas por meio da comparação entre a posição original das questões em uma prova de referência e suas respectivas posições nas demais versões, permitindo avaliar o grau de reorganização entre os diferentes cadernos de prova.
 
@@ -525,7 +534,7 @@ Para isso, foi desenvolvido um modelo de visão computacional capaz de
 classificar imagens como gráfico ou não gráfico.
 
 Devido à inexistência de um conjunto de dados específico para o contexto
-educacional analisado, foi construído um \textit{dataset}próprio. O conjunto de treinamento foi composto por aproximadamente 2.000 imagens, sendo cerca
+educacional analisado, foi construído um \textit{dataset} próprio. O conjunto de treinamento foi composto por aproximadamente 2.000 imagens, sendo cerca
 de 1.000 imagens de gráficos provenientes do dataset \textit{ChartGalaxy} \cite{li2025chartgalaxy} e 1.000 imagens da classe não gráfico obtidas do conjunto COCO 2017 \cite{coco_dataset}, utilizado sem filtragem temática a fim de representar a diversidade de imagens presentes em avaliações educacionais. Para validação, foram utilizadas imagens extraídas das provas do ENEM entre 2020 e 2024, totalizando 323 imagens, das quais 49 foram classificadas como gráficos e 274 como não gráficos. Após o treinamento, o modelo foi aplicado a imagens provenientes de diferentes exames educacionais, permitindo a identificação automática da presença de gráficos, variável posteriormente utilizada nas análises estatísticas do estudo.
 
 \begin{figure}[htbp]
@@ -599,7 +608,7 @@ Além disso, serão empregadas variáveis de filtragem, como \texttt{NU\_ANO} e 
 
 A partir dessa estimativa, os resultados obtidos serão comparados com as variáveis estruturais descritas anteriormente nesta seção. O objetivo dessa análise é investigar a existência de associações entre tais fatores e o desempenho dos candidatos.
 
-As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na Teoria de Resposta ao Item (TRI), conforme descrito na seção de conceitos no tópico (~\ref{sec:tri}), permitindo uma análise complementar entre o desempenho observado dos candidatos e a proficiência estimada dos participantes.
+As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na TRI (subseção~\ref{sec:tri}), permitindo uma análise complementar entre o desempenho observado dos candidatos e a proficiência estimada dos participantes.
 
 Ressalta-se que as variáveis estruturais não serão interpretadas como determinantes diretas da dificuldade, mas como fatores potencialmente associados ao desempenho. Nesse sentido, serão aplicadas métricas estatísticas de correlação para avaliar a intensidade dessas associações, sendo a escolha do coeficiente mais adequado (como Pearson ou Spearman) definida com base nas características dos dados analisados, considerando aspectos como distribuição, presença de outliers e natureza das variáveis.
 
@@ -609,30 +618,32 @@ Por fim, também serão consideradas combinações entre variáveis estruturais,
 
 A etapa de visualização dos dados corresponde ao desenvolvimento de um Minimum Viable Product (MVP), que representa a interface visual dos resultados deste trabalho, permitindo a análise de provas de múltipla escolha. Nesse contexto, busca-se viabilizar a aplicação e a expansão dos conceitos analisados no ENEM para outras avaliações.
 
-Para seu desenvolvimento, serão utilizados os programas criados para a análise do formato do ENEM, discutidos nas seções ~\ref{procedimento-extracao-analise-dados} e ~\ref{avaliacao-impacto-variaveis}. Esses programas poderão sofrer adaptações conforme a identificação de novas necessidades ao longo do processo, como a melhoria dos métodos de detecção de questões, de modo a permitir o reconhecimento de diferentes representações e padrões estruturais.
+Para seu desenvolvimento, serão utilizados os programas criados para a análise do formato do ENEM, apresentados nas subseções~\ref{procedimento-extracao-analise-dados} e~\ref{avaliacao-impacto-variaveis}. Esses programas poderão sofrer adaptações conforme a identificação de novas necessidades ao longo do processo, como o aprimoramento dos métodos de detecção de questões, de modo a permitir o reconhecimento de diferentes representações e padrões estruturais.
 
 A figura ~\ref{fig:fluxograma-mvp} mostra um fluxograma que apresenta o funcionamento do MVP, destacando a relação entre as entradas, as etapas de processamento e a geração dos resultados.
 
-\begin{figure}[htb]
+\begin{figure*}[htb]
     \centering
      \includegraphics[scale=0.20]{fluxogramaMVP.jpeg}
     \caption{Fluxograma da prototipação do MVP}
     \label{fig:fluxograma-mvp}
-\end{figure}
+\end{figure*}
 Para a obtenção desses resultados, serão utilizadas as mesmas variáveis estruturais empregadas na análise do ENEM, agora aplicadas à prova fornecida como entrada no sistema.
 
-\paragraph{Resultados esperados}
+\subsubsection{Resultados esperados}
 \mbox{}\\ 
 Nesta seção são apresentados os resultados esperados a partir do desenvolvimento e da aplicação do MVP proposto. Busca-se demonstrar as informações e análises que serão geradas pelo sistema, evidenciando como os dados extraídos e processados poderão contribuir para a interpretação de características estruturais das avaliações e sua possível relação com o desempenho dos participantes.
 
-\subparagraph{Visualizações gráficas}
+\paragraph{Visualizações gráficas}
 \mbox{}\\
+
 A saída gráfica do MVP será composta pela visualização de métricas relacionadas à prova analisada. Serão utilizados gráficos de pizza para representar a proporção de questões com imagens e gráficos, bem como a distribuição estimada entre o tempo de leitura e resolução da prova. O nível de formalismo das questões será apresentado por meio de gráfico de colunas. Além disso, serão exibidos indicadores relacionados aos padrões de distratores presentes nas alternativas.
 %(DUVIDA NUNO: nao sei escrever com mais clareza que info será essa dos distratores, dps que nuno escrever a parte dele eu melhoro)%
 
-\subparagraph{Análise de correlação entre variáveis estruturais e desempenho}
+\paragraph{Análise de correlação entre variáveis estruturais e desempenho}
 \mbox{}\\
-Com base na análise realizada na seção  ~\ref{avaliacao-impacto-variaveis}, serão identificadas associações estatísticas entre características estruturais da prova e o desempenho dos candidatos no ENEM.
+
+Com base na análise realizada na subseção~\ref{avaliacao-impacto-variaveis}, serão identificadas associações estatísticas entre características estruturais da prova e o desempenho dos candidatos no ENEM.
 
 A partir desses resultados, o MVP utilizará as mesmas variáveis estruturais extraídas de uma prova fornecida como entrada, para estimar o nível potencial de dificuldade da avaliação.
 
@@ -736,34 +747,48 @@ Como etapa futura, pretende-se expandir o \textit{dataset}, adicionando
 novas imagens ao conjunto de treinamento, visando melhorar a capacidade
 de generalização do modelo, bem como enriquecer o conjunto de validação
 com casos mais representativos das condições reais de aplicação.
-\section{Cronograma}
-O cronograma deste trabalho está representado na tabela ~\ref{tab:cronograma}
-\begin{table*}[htb]
-\centering
-\small
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\definecolor{cinzaTitulo}{gray}{0.85}
 
-\begin{tabular}{|>{\columncolor{cinzaTitulo}}l|*{9}{c|}}
-\hline
-\rowcolor{cinzaTitulo}
-\textbf{Atividade} & \textbf{jan} & \textbf{fev} & \textbf{mar} & \textbf{abr} & \textbf{mai} & \textbf{jun} & \textbf{jul} & \textbf{ago} & \textbf{set} \\
-\hline
-Coleta de dados dos ENEMs para MVP  & X &   &   &   &   &   &   &   &   \\
-\hline
-Estruturação do projeto             &   & X &   &   &   &   &   &   &   \\
-\hline
-Pesquisa bibliográfica              &   & X & X &   &   &   &   &   &   \\
-\hline
-Escrita do TCC                      &   &   & X & X & X & X & X & X & X \\
-\hline
-Desenvolvimento análise ENEM e MVP                 &   &   &   & X & X & X & X & X & X \\
-\hline
-\end{tabular}
-\caption{Cronograma de atividades do projeto}
-\label{tab:cronograma}
-\end{table*}
+\section{Cronograma}
+
+O cronograma das atividades desenvolvidas neste trabalho encontra-se
+apresentado na Tabela~\ref{tab:cronograma}. Inicialmente, foram
+realizadas as etapas de coleta de dados das provas do ENEM e
+estruturação do projeto. Em seguida, ocorreu a pesquisa bibliográfica,
+responsável por fundamentar teoricamente o estudo.
+
+As etapas de desenvolvimento das análises e do MVP estão sendo conduzidas de
+forma paralela à escrita do TCC, permitindo a documentação contínua dos
+resultados obtidos ao longo do projeto.
+
+\begin{table}[htb]
+	\centering
+	\scriptsize
+	\setlength{\tabcolsep}{2pt}
+	\renewcommand{\arraystretch}{1.1}
+	\setlength{\arrayrulewidth}{0.6pt}
+	
+	\definecolor{cinzaTitulo}{gray}{0.85}
+	
+	\begin{tabular}{|>{\columncolor{cinzaTitulo}}l|*{9}{c|}}
+		\hline
+		\rowcolor{cinzaTitulo}
+		\textbf{Atividade} & \textbf{Jan} & \textbf{Fev} & \textbf{Mar} & \textbf{Abr} & \textbf{Mai} & \textbf{Jun} & \textbf{Jul} & \textbf{Ago} & \textbf{Set} \\
+		\hline
+		Coleta de dados & X & & & & & & & & \\
+		\hline
+		Estruturação & & X & & & & & & & \\
+		\hline
+		Pesquisa bib. & & X & X & & & & & & \\
+		\hline
+		Escrita do TCC & & & X & X & X & X & X & X & X \\
+		\hline
+		Desenv. do MVP & & & & X & X & X & X & X & X \\
+		\hline
+	\end{tabular}
+	
+	\caption{Cronograma de atividades do projeto}
+	\label{tab:cronograma}
+\end{table}
 
 \section{Referências}
 \printbibliography[heading=none]
