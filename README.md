@@ -4,6 +4,8 @@ Este repositório contém o código-fonte, a bibliografia em pdf, as provas do E
 
 O objetivo principal desta pesquisa é investigar como as características estruturais e de formatação das questões do ENEM influenciam o desempenho dos candidatos. Em vez de focar apenas no conteúdo (matemática, física, etc.), o estudo analisa como a forma como a pergunta é apresentada pode tornar uma questão mais fácil ou mais difícil, independentemente do conhecimento do aluno sobre o assunto.
 
+Também será desenvolvida uma interface que, a partir do upload de uma prova, analisa suas características estruturais e, utilizando as
+correlações observadas no ENEM, estima seu nível potencial de dificuldade.
 
 Organização interna (monday): https://rafaelaaltheman2005s-team.monday.com/boards/18399149251
 
