@@ -1,0 +1,833 @@
+{
+  "prova": "enem2025Dia2RegularAzul",
+  "dia": 2,
+  "parametros": {
+    "velocidade_leitura_cpm": 1100,
+    "tempo_prova_min": 300,
+    "tempo_redacao_min": 0,
+    "tempo_disponivel_min": 300
+  },
+  "resumo": {
+    "total_questoes": 90,
+    "total_caracteres": 45216,
+    "leitura_total_min": 41.11,
+    "resolucao_total_min": 258.89,
+    "leitura_media_min": 0.4567,
+    "resolucao_media_min": 2.8766,
+    "tempo_medio_total_min": 3.3333,
+    "pct_leitura": 13.7,
+    "pct_resolucao": 86.3
+  },
+  "questoes": [
+    {
+      "questao": 91,
+      "idioma": "geral",
+      "caracteres": 552,
+      "palavras": 97,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5018181818181818,
+      "tempo_leitura_seg": 30.10909090909091
+    },
+    {
+      "questao": 92,
+      "idioma": "geral",
+      "caracteres": 416,
+      "palavras": 73,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.3781818181818182,
+      "tempo_leitura_seg": 22.69090909090909
+    },
+    {
+      "questao": 93,
+      "idioma": "geral",
+      "caracteres": 311,
+      "palavras": 59,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.2827272727272727,
+      "tempo_leitura_seg": 16.96363636363636
+    },
+    {
+      "questao": 94,
+      "idioma": "geral",
+      "caracteres": 1025,
+      "palavras": 188,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.9318181818181818,
+      "tempo_leitura_seg": 55.90909090909091
+    },
+    {
+      "questao": 95,
+      "idioma": "geral",
+      "caracteres": 545,
+      "palavras": 104,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4954545454545455,
+      "tempo_leitura_seg": 29.72727272727273
+    },
+    {
+      "questao": 96,
+      "idioma": "geral",
+      "caracteres": 428,
+      "palavras": 81,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.3890909090909091,
+      "tempo_leitura_seg": 23.345454545454547
+    },
+    {
+      "questao": 97,
+      "idioma": "geral",
+      "caracteres": 300,
+      "palavras": 54,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.2727272727272727,
+      "tempo_leitura_seg": 16.363636363636363
+    },
+    {
+      "questao": 98,
+      "idioma": "geral",
+      "caracteres": 459,
+      "palavras": 84,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4172727272727273,
+      "tempo_leitura_seg": 25.03636363636364
+    },
+    {
+      "questao": 99,
+      "idioma": "geral",
+      "caracteres": 472,
+      "palavras": 80,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4290909090909091,
+      "tempo_leitura_seg": 25.745454545454546
+    },
+    {
+      "questao": 100,
+      "idioma": "geral",
+      "caracteres": 313,
+      "palavras": 63,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.28454545454545455,
+      "tempo_leitura_seg": 17.072727272727274
+    },
+    {
+      "questao": 101,
+      "idioma": "geral",
+      "caracteres": 323,
+      "palavras": 64,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.29363636363636364,
+      "tempo_leitura_seg": 17.618181818181817
+    },
+    {
+      "questao": 102,
+      "idioma": "geral",
+      "caracteres": 273,
+      "palavras": 50,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.24818181818181817,
+      "tempo_leitura_seg": 14.89090909090909
+    },
+    {
+      "questao": 103,
+      "idioma": "geral",
+      "caracteres": 268,
+      "palavras": 43,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.24363636363636362,
+      "tempo_leitura_seg": 14.618181818181817
+    },
+    {
+      "questao": 104,
+      "idioma": "geral",
+      "caracteres": 650,
+      "palavras": 131,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.5909090909090909,
+      "tempo_leitura_seg": 35.45454545454545
+    },
+    {
+      "questao": 105,
+      "idioma": "geral",
+      "caracteres": 639,
+      "palavras": 111,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5809090909090909,
+      "tempo_leitura_seg": 34.85454545454546
+    },
+    {
+      "questao": 106,
+      "idioma": "geral",
+      "caracteres": 640,
+      "palavras": 120,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5818181818181818,
+      "tempo_leitura_seg": 34.90909090909091
+    },
+    {
+      "questao": 107,
+      "idioma": "geral",
+      "caracteres": 209,
+      "palavras": 40,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.19,
+      "tempo_leitura_seg": 11.4
+    },
+    {
+      "questao": 108,
+      "idioma": "geral",
+      "caracteres": 582,
+      "palavras": 119,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5290909090909091,
+      "tempo_leitura_seg": 31.745454545454542
+    },
+    {
+      "questao": 109,
+      "idioma": "geral",
+      "caracteres": 388,
+      "palavras": 79,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3527272727272727,
+      "tempo_leitura_seg": 21.163636363636364
+    },
+    {
+      "questao": 110,
+      "idioma": "geral",
+      "caracteres": 455,
+      "palavras": 91,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.41363636363636364,
+      "tempo_leitura_seg": 24.818181818181817
+    },
+    {
+      "questao": 111,
+      "idioma": "geral",
+      "caracteres": 237,
+      "palavras": 47,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.21545454545454545,
+      "tempo_leitura_seg": 12.927272727272728
+    },
+    {
+      "questao": 112,
+      "idioma": "geral",
+      "caracteres": 312,
+      "palavras": 54,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.28363636363636363,
+      "tempo_leitura_seg": 17.01818181818182
+    },
+    {
+      "questao": 113,
+      "idioma": "geral",
+      "caracteres": 594,
+      "palavras": 125,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.54,
+      "tempo_leitura_seg": 32.400000000000006
+    },
+    {
+      "questao": 114,
+      "idioma": "geral",
+      "caracteres": 362,
+      "palavras": 70,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3290909090909091,
+      "tempo_leitura_seg": 19.745454545454546
+    },
+    {
+      "questao": 115,
+      "idioma": "geral",
+      "caracteres": 486,
+      "palavras": 83,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.44181818181818183,
+      "tempo_leitura_seg": 26.50909090909091
+    },
+    {
+      "questao": 116,
+      "idioma": "geral",
+      "caracteres": 448,
+      "palavras": 87,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4072727272727273,
+      "tempo_leitura_seg": 24.436363636363637
+    },
+    {
+      "questao": 117,
+      "idioma": "geral",
+      "caracteres": 443,
+      "palavras": 94,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4027272727272727,
+      "tempo_leitura_seg": 24.163636363636364
+    },
+    {
+      "questao": 118,
+      "idioma": "geral",
+      "caracteres": 300,
+      "palavras": 70,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.2727272727272727,
+      "tempo_leitura_seg": 16.363636363636363
+    },
+    {
+      "questao": 119,
+      "idioma": "geral",
+      "caracteres": 780,
+      "palavras": 148,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.7090909090909091,
+      "tempo_leitura_seg": 42.54545454545455
+    },
+    {
+      "questao": 120,
+      "idioma": "geral",
+      "caracteres": 606,
+      "palavras": 121,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5509090909090909,
+      "tempo_leitura_seg": 33.054545454545455
+    },
+    {
+      "questao": 121,
+      "idioma": "geral",
+      "caracteres": 498,
+      "palavras": 99,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4527272727272727,
+      "tempo_leitura_seg": 27.16363636363636
+    },
+    {
+      "questao": 122,
+      "idioma": "geral",
+      "caracteres": 330,
+      "palavras": 71,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3,
+      "tempo_leitura_seg": 18.0
+    },
+    {
+      "questao": 123,
+      "idioma": "geral",
+      "caracteres": 483,
+      "palavras": 79,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4390909090909091,
+      "tempo_leitura_seg": 26.345454545454544
+    },
+    {
+      "questao": 124,
+      "idioma": "geral",
+      "caracteres": 664,
+      "palavras": 142,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.6036363636363636,
+      "tempo_leitura_seg": 36.21818181818182
+    },
+    {
+      "questao": 125,
+      "idioma": "geral",
+      "caracteres": 779,
+      "palavras": 171,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.7081818181818181,
+      "tempo_leitura_seg": 42.490909090909085
+    },
+    {
+      "questao": 126,
+      "idioma": "geral",
+      "caracteres": 773,
+      "palavras": 165,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.7027272727272728,
+      "tempo_leitura_seg": 42.163636363636364
+    },
+    {
+      "questao": 127,
+      "idioma": "geral",
+      "caracteres": 425,
+      "palavras": 85,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.38636363636363635,
+      "tempo_leitura_seg": 23.18181818181818
+    },
+    {
+      "questao": 128,
+      "idioma": "geral",
+      "caracteres": 423,
+      "palavras": 91,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3845454545454545,
+      "tempo_leitura_seg": 23.07272727272727
+    },
+    {
+      "questao": 129,
+      "idioma": "geral",
+      "caracteres": 307,
+      "palavras": 50,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.2790909090909091,
+      "tempo_leitura_seg": 16.745454545454546
+    },
+    {
+      "questao": 130,
+      "idioma": "geral",
+      "caracteres": 754,
+      "palavras": 139,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.6854545454545454,
+      "tempo_leitura_seg": 41.127272727272725
+    },
+    {
+      "questao": 131,
+      "idioma": "geral",
+      "caracteres": 626,
+      "palavras": 135,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.5690909090909091,
+      "tempo_leitura_seg": 34.14545454545455
+    },
+    {
+      "questao": 132,
+      "idioma": "geral",
+      "caracteres": 659,
+      "palavras": 126,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.5990909090909091,
+      "tempo_leitura_seg": 35.945454545454545
+    },
+    {
+      "questao": 133,
+      "idioma": "geral",
+      "caracteres": 601,
+      "palavras": 113,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5463636363636364,
+      "tempo_leitura_seg": 32.78181818181818
+    },
+    {
+      "questao": 134,
+      "idioma": "geral",
+      "caracteres": 772,
+      "palavras": 136,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.7018181818181818,
+      "tempo_leitura_seg": 42.10909090909091
+    },
+    {
+      "questao": 135,
+      "idioma": "geral",
+      "caracteres": 884,
+      "palavras": 178,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.8036363636363636,
+      "tempo_leitura_seg": 48.21818181818182
+    },
+    {
+      "questao": 136,
+      "idioma": "geral",
+      "caracteres": 540,
+      "palavras": 114,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4909090909090909,
+      "tempo_leitura_seg": 29.454545454545453
+    },
+    {
+      "questao": 137,
+      "idioma": "geral",
+      "caracteres": 344,
+      "palavras": 63,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.31272727272727274,
+      "tempo_leitura_seg": 18.763636363636365
+    },
+    {
+      "questao": 138,
+      "idioma": "geral",
+      "caracteres": 438,
+      "palavras": 90,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3981818181818182,
+      "tempo_leitura_seg": 23.89090909090909
+    },
+    {
+      "questao": 139,
+      "idioma": "geral",
+      "caracteres": 645,
+      "palavras": 124,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5863636363636363,
+      "tempo_leitura_seg": 35.18181818181818
+    },
+    {
+      "questao": 140,
+      "idioma": "geral",
+      "caracteres": 273,
+      "palavras": 66,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.24818181818181817,
+      "tempo_leitura_seg": 14.89090909090909
+    },
+    {
+      "questao": 141,
+      "idioma": "geral",
+      "caracteres": 730,
+      "palavras": 128,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.6636363636363637,
+      "tempo_leitura_seg": 39.81818181818182
+    },
+    {
+      "questao": 142,
+      "idioma": "geral",
+      "caracteres": 460,
+      "palavras": 110,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.41818181818181815,
+      "tempo_leitura_seg": 25.09090909090909
+    },
+    {
+      "questao": 143,
+      "idioma": "geral",
+      "caracteres": 294,
+      "palavras": 52,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.2672727272727273,
+      "tempo_leitura_seg": 16.036363636363635
+    },
+    {
+      "questao": 144,
+      "idioma": "geral",
+      "caracteres": 618,
+      "palavras": 126,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.5618181818181818,
+      "tempo_leitura_seg": 33.709090909090904
+    },
+    {
+      "questao": 145,
+      "idioma": "geral",
+      "caracteres": 652,
+      "palavras": 123,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5927272727272728,
+      "tempo_leitura_seg": 35.56363636363636
+    },
+    {
+      "questao": 146,
+      "idioma": "geral",
+      "caracteres": 335,
+      "palavras": 70,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.30454545454545456,
+      "tempo_leitura_seg": 18.272727272727273
+    },
+    {
+      "questao": 147,
+      "idioma": "geral",
+      "caracteres": 437,
+      "palavras": 87,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3972727272727273,
+      "tempo_leitura_seg": 23.836363636363636
+    },
+    {
+      "questao": 148,
+      "idioma": "geral",
+      "caracteres": 459,
+      "palavras": 84,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.4172727272727273,
+      "tempo_leitura_seg": 25.03636363636364
+    },
+    {
+      "questao": 149,
+      "idioma": "geral",
+      "caracteres": 242,
+      "palavras": 45,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.22,
+      "tempo_leitura_seg": 13.2
+    },
+    {
+      "questao": 150,
+      "idioma": "geral",
+      "caracteres": 447,
+      "palavras": 83,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.40636363636363637,
+      "tempo_leitura_seg": 24.381818181818183
+    },
+    {
+      "questao": 151,
+      "idioma": "geral",
+      "caracteres": 819,
+      "palavras": 172,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.7445454545454545,
+      "tempo_leitura_seg": 44.67272727272727
+    },
+    {
+      "questao": 152,
+      "idioma": "geral",
+      "caracteres": 433,
+      "palavras": 82,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.3936363636363636,
+      "tempo_leitura_seg": 23.618181818181817
+    },
+    {
+      "questao": 153,
+      "idioma": "geral",
+      "caracteres": 590,
+      "palavras": 123,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5363636363636364,
+      "tempo_leitura_seg": 32.18181818181818
+    },
+    {
+      "questao": 154,
+      "idioma": "geral",
+      "caracteres": 516,
+      "palavras": 95,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.4690909090909091,
+      "tempo_leitura_seg": 28.145454545454548
+    },
+    {
+      "questao": 155,
+      "idioma": "geral",
+      "caracteres": 275,
+      "palavras": 46,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.25,
+      "tempo_leitura_seg": 15.0
+    },
+    {
+      "questao": 156,
+      "idioma": "geral",
+      "caracteres": 373,
+      "palavras": 79,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3390909090909091,
+      "tempo_leitura_seg": 20.345454545454547
+    },
+    {
+      "questao": 157,
+      "idioma": "geral",
+      "caracteres": 343,
+      "palavras": 69,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.3118181818181818,
+      "tempo_leitura_seg": 18.70909090909091
+    },
+    {
+      "questao": 158,
+      "idioma": "geral",
+      "caracteres": 688,
+      "palavras": 127,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.6254545454545455,
+      "tempo_leitura_seg": 37.52727272727273
+    },
+    {
+      "questao": 159,
+      "idioma": "geral",
+      "caracteres": 165,
+      "palavras": 42,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.15,
+      "tempo_leitura_seg": 9.0
+    },
+    {
+      "questao": 160,
+      "idioma": "geral",
+      "caracteres": 426,
+      "palavras": 99,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.38727272727272727,
+      "tempo_leitura_seg": 23.236363636363635
+    },
+    {
+      "questao": 161,
+      "idioma": "geral",
+      "caracteres": 553,
+      "palavras": 121,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5027272727272727,
+      "tempo_leitura_seg": 30.16363636363636
+    },
+    {
+      "questao": 162,
+      "idioma": "geral",
+      "caracteres": 538,
+      "palavras": 114,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4890909090909091,
+      "tempo_leitura_seg": 29.345454545454544
+    },
+    {
+      "questao": 163,
+      "idioma": "geral",
+      "caracteres": 372,
+      "palavras": 64,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3381818181818182,
+      "tempo_leitura_seg": 20.290909090909093
+    },
+    {
+      "questao": 164,
+      "idioma": "geral",
+      "caracteres": 1003,
+      "palavras": 228,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.9118181818181819,
+      "tempo_leitura_seg": 54.70909090909091
+    },
+    {
+      "questao": 165,
+      "idioma": "geral",
+      "caracteres": 580,
+      "palavras": 107,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5272727272727272,
+      "tempo_leitura_seg": 31.636363636363633
+    },
+    {
+      "questao": 166,
+      "idioma": "geral",
+      "caracteres": 524,
+      "palavras": 123,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.4763636363636364,
+      "tempo_leitura_seg": 28.581818181818182
+    },
+    {
+      "questao": 167,
+      "idioma": "geral",
+      "caracteres": 678,
+      "palavras": 147,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.6163636363636363,
+      "tempo_leitura_seg": 36.98181818181818
+    },
+    {
+      "questao": 168,
+      "idioma": "geral",
+      "caracteres": 586,
+      "palavras": 123,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5327272727272727,
+      "tempo_leitura_seg": 31.96363636363636
+    },
+    {
+      "questao": 169,
+      "idioma": "geral",
+      "caracteres": 427,
+      "palavras": 100,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3881818181818182,
+      "tempo_leitura_seg": 23.29090909090909
+    },
+    {
+      "questao": 170,
+      "idioma": "geral",
+      "caracteres": 674,
+      "palavras": 137,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.6127272727272727,
+      "tempo_leitura_seg": 36.76363636363636
+    },
+    {
+      "questao": 171,
+      "idioma": "geral",
+      "caracteres": 738,
+      "palavras": 158,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.6709090909090909,
+      "tempo_leitura_seg": 40.25454545454545
+    },
+    {
+      "questao": 172,
+      "idioma": "geral",
+      "caracteres": 599,
+      "palavras": 116,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.5445454545454546,
+      "tempo_leitura_seg": 32.67272727272727
+    },
+    {
+      "questao": 173,
+      "idioma": "geral",
+      "caracteres": 717,
+      "palavras": 142,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.6518181818181819,
+      "tempo_leitura_seg": 39.10909090909091
+    },
+    {
+      "questao": 174,
+      "idioma": "geral",
+      "caracteres": 395,
+      "palavras": 95,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.35909090909090907,
+      "tempo_leitura_seg": 21.545454545454543
+    },
+    {
+      "questao": 175,
+      "idioma": "geral",
+      "caracteres": 367,
+      "palavras": 77,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.3336363636363636,
+      "tempo_leitura_seg": 20.018181818181816
+    },
+    {
+      "questao": 176,
+      "idioma": "geral",
+      "caracteres": 494,
+      "palavras": 90,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.4490909090909091,
+      "tempo_leitura_seg": 26.945454545454545
+    },
+    {
+      "questao": 177,
+      "idioma": "geral",
+      "caracteres": 406,
+      "palavras": 88,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.3690909090909091,
+      "tempo_leitura_seg": 22.145454545454545
+    },
+    {
+      "questao": 178,
+      "idioma": "geral",
+      "caracteres": 363,
+      "palavras": 82,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.33,
+      "tempo_leitura_seg": 19.8
+    },
+    {
+      "questao": 179,
+      "idioma": "geral",
+      "caracteres": 265,
+      "palavras": 60,
+      "tem_imagem": false,
+      "tempo_leitura_min": 0.2409090909090909,
+      "tempo_leitura_seg": 14.454545454545455
+    },
+    {
+      "questao": 180,
+      "idioma": "geral",
+      "caracteres": 601,
+      "palavras": 137,
+      "tem_imagem": true,
+      "tempo_leitura_min": 0.5463636363636364,
+      "tempo_leitura_seg": 32.78181818181818
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "parametros_globais": {
+    "velocidade_leitura_cpm": 1100,
+    "tempo_dia1_min": 330,
+    "tempo_dia2_min": 300,
+    "tempo_redacao_min": 75,
+    "disponivel_dia1_min": 255,
+    "disponivel_dia2_min": 300
+  },
+  "provas": [
+    {
+      "nome": "enem2020Dia1RegularAzul",
+      "dia": 1,
+      "total_caracteres": 52638,
+      "leitura_total_min": 47.85,
+      "resolucao_total_min": 207.15,
+      "pct_leitura": 18.77
+    },
+    {
+      "nome": "enem2020Dia2RegularAzul",
+      "dia": 2,
+      "total_caracteres": 47657,
+      "leitura_total_min": 43.32,
+      "resolucao_total_min": 256.68,
+      "pct_leitura": 14.44
+    },
+    {
+      "nome": "enem2022Dia1RegularAzul",
+      "dia": 1,
+      "total_caracteres": 64433,
+      "leitura_total_min": 58.58,
+      "resolucao_total_min": 196.42,
+      "pct_leitura": 22.97
+    },
+    {
+      "nome": "enem2022Dia2RegularAzul",
+      "dia": 2,
+      "total_caracteres": 50837,
+      "leitura_total_min": 46.22,
+      "resolucao_total_min": 253.78,
+      "pct_leitura": 15.41
+    },
+    {
+      "nome": "enem2023Dia1RegularAzul",
+      "dia": 1,
+      "total_caracteres": 63616,
+      "leitura_total_min": 57.83,
+      "resolucao_total_min": 197.17,
+      "pct_leitura": 22.68
+    },
+    {
+      "nome": "enem2023Dia2RegularAzul",
+      "dia": 2,
+      "total_caracteres": 49991,
+      "leitura_total_min": 45.45,
+      "resolucao_total_min": 254.55,
+      "pct_leitura": 15.15
+    },
+    {
+      "nome": "enem2024Dia1RegularAzul",
+      "dia": 1,
+      "total_caracteres": 64798,
+      "leitura_total_min": 58.91,
+      "resolucao_total_min": 196.09,
+      "pct_leitura": 23.1
+    },
+    {
+      "nome": "enem2024Dia2RegularAzul",
+      "dia": 2,
+      "total_caracteres": 43945,
+      "leitura_total_min": 39.95,
+      "resolucao_total_min": 260.05,
+      "pct_leitura": 13.32
+    },
+    {
+      "nome": "enem2025Dia1RegularAzul",
+      "dia": 1,
+      "total_caracteres": 65370,
+      "leitura_total_min": 59.43,
+      "resolucao_total_min": 195.57,
+      "pct_leitura": 23.3
+    },
+    {
+      "nome": "enem2025Dia2RegularAzul",
+      "dia": 2,
+      "total_caracteres": 45216,
+      "leitura_total_min": 41.11,
+      "resolucao_total_min": 258.89,
+      "pct_leitura": 13.7
+    },
+    {
+      "nome": "enem2021Dia1RegularAzul",
+      "dia": 1,
+      "total_caracteres": 59317,
+      "leitura_total_min": 53.92,
+      "resolucao_total_min": 201.08,
+      "pct_leitura": 21.15
+    },
+    {
+      "nome": "enem2021Dia2RegularAzul",
+      "dia": 2,
+      "total_caracteres": 48291,
+      "leitura_total_min": 43.9,
+      "resolucao_total_min": 256.1,
+      "pct_leitura": 14.63
+    }
+  ]
+}
