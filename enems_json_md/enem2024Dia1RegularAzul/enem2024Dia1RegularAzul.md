@@ -3,7 +3,7 @@
 ## Questão 1
 
 - Idioma: inglês
-- Palavras: 24
+- Palavras: 57
 - Tem imagem: sim
 
 ### Texto extraído
@@ -24,11 +24,16 @@ E	contestar circunstâncias que parecem ser harmônicas.
 A relação entre as citações atribuídas ao físico Albert Einstein
 e ao cantor e compositor Bob Marley reside na crença de que
 é necessário
+dar oportunidade a pessoas que parecem necessitadas.
+identificar contextos que podem representar perigo.
+tirar proveito de situações que podem ser adversas.
+evitar dificuldades que parecem ser intransponíveis.
+contestar circunstâncias que parecem ser harmônicas.
 
 ## Questão 2
 
 - Idioma: inglês
-- Palavras: 84
+- Palavras: 97
 - Tem imagem: não
 
 ### Texto extraído
@@ -67,11 +72,16 @@ So maybe we should love somebody
 Instead of polishing the bombs of holy war
 Nessa letra de canção, que aborda um contexto de ódio
 e intolerância, o marcador “instead of ” introduz a ideia de
+mudança de comportamento.
+panorama de conflitos.
+rotina de isolamento.
+perspectiva bélica.
+cenário religioso.
 
 ## Questão 3
 
 - Idioma: inglês
-- Palavras: 17
+- Palavras: 66
 - Tem imagem: sim
 
 ### Texto extraído
@@ -94,11 +104,20 @@ de novas árvores.
 
 O texto estabelece uma relação entre elementos da
 natureza e comandos de um programa de computador para
+alertar as pessoas sobre a rápida destruição da natureza.
+conscientizar os indivíduos sobre a passagem acelerada
+do tempo.
+apresentar aos leitores os avanços tecnológicos na
+área da agricultura.
+orientar os usuários sobre o emprego sustentável das
+novas tecnologias.
+informar os interessados sobre o tempo de crescimento
+de novas árvores.
 
 ## Questão 4
 
 - Idioma: inglês
-- Palavras: 121
+- Palavras: 163
 - Tem imagem: não
 
 ### Texto extraído
@@ -142,11 +161,18 @@ required to take two speech classes. Their purpose: to get
 rid of our accents.
 O problema abordado nesse texto sobre imigrantes residentes
 nos Estados Unidos diz respeito aos prejuízos gerados pelo(a)
+repúdio ao sotaque espanhol no uso do inglês.
+resignação diante do apagamento da língua materna.
+escassez de oportunidades de aprendizado do espanhol.
+choque entre falantes de línguas distintas de diferentes
+gerações.
+concorrência entre as variações linguísticas do inglês
+e as do espanhol.
 
 ## Questão 5
 
 - Idioma: inglês
-- Palavras: 14
+- Palavras: 50
 - Tem imagem: sim
 
 ### Texto extraído
@@ -165,11 +191,16 @@ E	comunicar a recusa da publicação de seu romance.
 
 A carta da editora Stephanie Allen-Nichols à escritora
 Alice Walker tem o propósito de
+problematizar o enredo de sua obra.
+acusar o recebimento de seu manuscrito.
+solicitar a revisão ortográfica de seu texto.
+informar a transferência de seu livro a outra editora.
+comunicar a recusa da publicação de seu romance.
 
 ## Questão 1
 
 - Idioma: espanhol
-- Palavras: 218
+- Palavras: 264
 - Tem imagem: não
 
 ### Texto extraído
@@ -243,11 +274,20 @@ a trabajar ansiosamente por una vida sin desacuerdos, sin
 errores y sin dolor, a como dé lugar.
 Na argumentação apresentada sobre cultura do
 cancelamento, esse texto objetiva
+apresentar o conceito desse tipo de prática.
+mostrar a contrariedade das mídias com relação a
+essa atitude.
+criticar o impacto dessa cultura sobre a vida
+representada nas redes.
+evidenciar a democratização dessa prática na
+sociedade virtual.
+discorrer historicamente sobre a origem e as causas
+dessa cultura.
 
 ## Questão 2
 
 - Idioma: espanhol
-- Palavras: 134
+- Palavras: 163
 - Tem imagem: não
 
 ### Texto extraído
@@ -292,11 +332,16 @@ el confinamiento hace mucho.
 Los gallegos no dejamos de salir por la lluvia.
 O comportamento dos personagens narrado no texto
 destaca o(a)
+abandono da própria identidade.
+medo dos perigos durante a noite.
+influência do grupo na tomada de decisão.
+diferença cultural entre galegos e andaluzes.
+variação meteorológica entre Sevilha e Galiza.
 
 ## Questão 3
 
 - Idioma: espanhol
-- Palavras: 219
+- Palavras: 253
 - Tem imagem: não
 
 ### Texto extraído
@@ -357,11 +402,16 @@ que nos llevó a no reconocernos en un país multilingüe.
 ¿Si tenemos varias lenguas por qué no aprender?”.
 Em sua escrita poética, a poetisa mexicana Celerina
 Patricia Sánchez Santiago assume o desafio de
+destacar a importância da literatura na formação escolar.
+discutir a hegemonia da literatura escrita em espanhol.
+promover reflexões acerca de conceitos abstratos.
+representar a pluralidade linguística de seu país.
+narrar uma trajetória de autoconhecimento.
 
 ## Questão 4
 
 - Idioma: espanhol
-- Palavras: 175
+- Palavras: 210
 - Tem imagem: não
 
 ### Texto extraído
@@ -413,11 +463,16 @@ decirse: ¿y por qué no? Porque la vejez no está reñida con
 la audacia. Debemos aspirar a morir muy vivos.
 Nesse texto, ao utilizar a expressão “morir muy vivos”,
 a escritora Rosa Montero evidencia a importância de se
+acumular sabedoria com o passar do tempo.
+observar o impacto dos anos sobre o corpo.
+rever os erros e os acertos de sua trajetória.
+desfrutar de todas as fases da vida.
+libertar das amarras sociais.
 
 ## Questão 5
 
 - Idioma: espanhol
-- Palavras: 93
+- Palavras: 151
 - Tem imagem: não
 
 ### Texto extraído
@@ -472,11 +527,21 @@ y cuando la bebimos,
 es como si bebiéramos agua de salitre.
 Nesse poema, o eu lírico representa a voz de um
 sobrevivente asteca que testemunha a
+destruição da capital do Império Asteca pelos
+colonizadores espanhóis.
+degradação do meio ambiente no entorno da capital
+do Império Asteca.
+tristeza dos refugiados astecas ao deixarem a capital
+do Império rumo ao exílio.
+aflição dos astecas ao receberem os colonizadores
+espanhóis na capital do Império.
+resistência dos astecas às mudanças feitas pelos
+colonizadores espanhóis na capital do Império.
 
 ## Questão 6
 
 - Idioma: geral
-- Palavras: 224
+- Palavras: 265
 - Tem imagem: não
 
 ### Texto extraído
@@ -545,11 +610,18 @@ orgulho do povo manauara, do povo do Norte”.
 A reportagem apresenta duas iniciativas: o livro Amazonês
 e as camisetas do Caboquês Ilustrado. Com temática em
 comum, essas iniciativas
+recomendam produtos feitos por empreendedores da
+região Norte.
+ressaltam diferenças entre o falar manauara e outros
+falares.
+reverenciam o trabalho feito por pesquisadores brasileiros.
+destacam a descontração no jeito de ser do amazonense.
+valorizam o repertório linguístico do povo do Amazonas.
 
 ## Questão 7
 
 - Idioma: geral
-- Palavras: 229
+- Palavras: 268
 - Tem imagem: não
 
 ### Texto extraído
@@ -620,11 +692,19 @@ Norte-Nordeste, foi convidada para conhecer o paratae
 kwon do. No ano seguinte, migrou para a modalidade
 e já faturou o ouro na categoria até 58 kg nos Jogos
 Esse conjunto de minibiografias tem como propósito
+descrever as rotinas de treinamento das atletas.
+comparar os desempenhos de atletas de alto rendimento.
+destacar a trajetória profissional de atletas paralímpicas
+brasileiras.
+indicar as categorias mais adequadas a adaptações
+paralímpicas.
+estimular a participação de mulheres em campeonatos
+internacionais.
 
 ## Questão 8
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 185
 - Tem imagem: não
 
 ### Texto extraído
@@ -679,11 +759,21 @@ instrumentos levados pelos madeirenses quando eles
 emigraram para o Havaí.
 O conjunto dessas práticas musicais demonstra que os
 instrumentos mencionados no texto
+refletem a dependência da utilização de matéria-prima
+europeia.
+adaptam suas características a cada cultura, assumindo
+nova identidade.
+comprovam a hegemonia portuguesa na invenção de
+cordófonos dedilhados.
+ilustram processos de dominação cultural, evidenciando
+situações de choque cultural.
+mantêm nomenclatura própria para garantir a fidelidade
+às formas originais de confecção.
 
 ## Questão 9
 
 - Idioma: geral
-- Palavras: 170
+- Palavras: 191
 - Tem imagem: não
 
 ### Texto extraído
@@ -738,11 +828,16 @@ como se aquele corpo fosse indestrutível, mas a mente é
 o ponto fraco da história.
 As causas do desequilíbrio na saúde mental apontadas
 no texto estão relacionadas às
+nacionalidades diversificadas dos praticantes.
+modalidades esportivas distintas.
+faixas etárias aproximadas.
+representações heroicas dos atletas.
+pressões constantes dos eventos e da mídia.
 
 ## Questão 10
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 160
 - Tem imagem: não
 
 ### Texto extraído
@@ -788,11 +883,18 @@ programaço. Um pós-almoço de domingo e aprendo tudo
 sobre bonobos e gorilas. Um táxi pro aeroporto e chego
 ao embarque PhD em reforma tributária.
 Segundo a argumentação construída nesse texto, o podcast
+provoca dispersão da atenção em seu público.
+funciona por meio de uma frequência de ondas curtas.
+propicia divulgação de conhecimento para seus usuários.
+tem um formato de interação semelhante ao das redes
+sociais.
+constitui uma evolução na transmissão de informações
+via rádio.
 
 ## Questão 11
 
 - Idioma: geral
-- Palavras: 212
+- Palavras: 267
 - Tem imagem: não
 
 ### Texto extraído
@@ -863,11 +965,21 @@ Cavaliere. — “Esse ‘reportado’ é uma importação, né?”,
 notou Bechara.
 Nesse texto, as falas atribuídas a Evanildo Bechara são
 representativas da variedade linguística
+situacional, pois o contexto exige o uso da linguagem
+formal.
+regional, pois ele traz marcas do falar de seu local de
+nascimento.
+sociocultural, pois sua formação pressupõe o uso de
+linguagem rebuscada.
+geracional, pois ele emprega termos característicos de
+sua faixa etária.
+ocupacional, pois ele faz uso de termos específicos de
+sua área de atuação.
 
 ## Questão 12
 
 - Idioma: geral
-- Palavras: 223
+- Palavras: 264
 - Tem imagem: não
 
 ### Texto extraído
@@ -935,11 +1047,16 @@ e tem o cuidado de transmiti-la para outras gerações.
 A concentração de falantes dessa língua está na faixa
 entre 21 e 60 anos de idade.
 A Língua da Tabatinga tem sido preservada porque o(a)
+seu registro passou da forma oral para a escrita.
+classe social de seus usuários ganhou prestígio.
+sua função inicial se manteve ao longo dos anos.
+sentimento de identidade linguística tem se consolidado.
+perfil etário de seus falantes tem se tornado homogêneo.
 
 ## Questão 13
 
 - Idioma: geral
-- Palavras: 252
+- Palavras: 300
 - Tem imagem: não
 
 ### Texto extraído
@@ -1018,11 +1135,19 @@ por virar mais um fator de desigualdade de oportunidades
 entre os gêneros.
 Esse texto é marcado pela função referencial da linguagem,
 uma vez que cumpre o propósito de
+sugerir soluções para um problema de ordem social.
+estabelecer uma relação entre menstruação e gravidez.
+comparar o desempenho acadêmico de mulheres e
+homens.
+informar o leitor sobre o impacto da pobreza menstrual
+na vida das mulheres.
+orientar o público sobre a necessidade de rotinas de
+autocuidado na adolescência.
 
 ## Questão 14
 
 - Idioma: geral
-- Palavras: 202
+- Palavras: 229
 - Tem imagem: não
 
 ### Texto extraído
@@ -1084,11 +1209,16 @@ vez de explicar sobre os pães ‘massa grossa e massa
 fina’”, contou o fotógrafo, com humor.
 A vivência relatada no texto evidencia que as variedades
 linguísticas
+impedem o entendimento mútuo.
+enaltecem o português do Maranhão.
+são constitutivas do português brasileiro.
+exigem a dicionarização dos termos usados.
+são restritas a situações coloquiais de comunicação.
 
 ## Questão 15
 
 - Idioma: geral
-- Palavras: 286
+- Palavras: 332
 - Tem imagem: não
 
 ### Texto extraído
@@ -1179,11 +1309,21 @@ para o trabalho remoto nem com letramento digital para
 desenvolver as funções.
 Ao tratar da telemedicina, esse texto ressalta que um dos
 benefícios dessa tecnologia para a sociedade é o fato de ela
+disponibilizar prontuário único do cidadão tanto na rede
+pública quanto na privada.
+oportunizar o acesso a atendimento médico a pacientes
+de áreas periféricas.
+fornecer dispositivos tecnológicos para a realização
+de exames.
+promover a interação entre diferentes especialidades
+médicas.
+garantir infraestrutura para o trabalho remoto de
+médicos.
 
 ## Questão 16
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 198
 - Tem imagem: não
 
 ### Texto extraído
@@ -1236,11 +1376,21 @@ quais conhecemos a imagem visual são produções suas.
 Sob a perspectiva da multiculturalidade e de acordo com
 o texto, a produção artística afro-brasileira caracteriza-se
 pelo(a)
+estranhamento no modo de apropriação da cultura
+religiosa de matriz africana.
+distanciamento entre as raízes de matriz africana e
+a estética de outras culturas.
+visão uniformizadora das religiões de matriz africana
+expressada nas diferentes produções.
+relação complexa entre as vivências pessoais dos
+artistas e os referenciais estéticos de matriz africana.
+padronização da forma de produção e da temática da
+matriz africana presente nas obras dos artistas citados.
 
 ## Questão 17
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 165
 - Tem imagem: não
 
 ### Texto extraído
@@ -1289,11 +1439,19 @@ a ferramenta de estatísticas aferiu um aumento de 6 000%
 em seu alcance.
 A apresentação do dado estatístico ao final desse texto
 revela a intenção de
+demonstrar a repercussão de projetos como o Preta Pariu.
+informar o quantitativo de postagens da comunidade negra.
+potencializar o alcance de textos e imagens em sites
+como o Negrê.
+exaltar a qualidade das publicações sobre negritude
+em redes sociais.
+comprovar a relação entre o alcance de conteúdos
+digitais e o viés racial.
 
 ## Questão 18
 
 - Idioma: geral
-- Palavras: 186
+- Palavras: 236
 - Tem imagem: não
 
 ### Texto extraído
@@ -1357,11 +1515,20 @@ semelhantes aos de pessoas que vivem em zonas rurais,
 onde há mais oportunidades de sair para espaços abertos.
 O texto evidencia a perspectiva ampliada de saúde ao
 abordar criticamente a pandemia da covid-19 a partir do(a)
+busca por espaços para a prática de exercícios físicos.
+necessidade de se manter ativo para ter equilíbrio
+emocional.
+distanciamento social e sua vinculação com a prática
+de atividades físicas.
+relação entre os determinantes socioeconômicos e a
+prática de exercícios.
+benefício de morar em áreas rurais para preservar a
+estabilidade psicológica.
 
 ## Questão 19
 
 - Idioma: geral
-- Palavras: 206
+- Palavras: 245
 - Tem imagem: não
 
 ### Texto extraído
@@ -1423,11 +1590,16 @@ viam a felicidade?
 Nesse fragmento do romance de Júlia Lopes de Almeida,
 escrito no cenário brasileiro pós-abolição, a narradora
 exprime um olhar crítico sobre a
+desvalorização da arte produzida por mulheres.
+mudança das condições de moradia do povo negro.
+ruptura do projeto político de emancipação feminina.
+exploração da força de trabalho da população negra.
+disputa de poder entre brancos e negros no século XIX.
 
 ## Questão 20
 
 - Idioma: geral
-- Palavras: 197
+- Palavras: 257
 - Tem imagem: não
 
 ### Texto extraído
@@ -1492,11 +1664,21 @@ tal qual Caetano Veloso. Agora chega, porque “esse papo
 já tá qualquer coisa” e eu já tô “pra lá de Marrakech”.
 O recurso utilizado na progressão textual para garantir a
 unidade temática dessa crônica é a
+intertextualidade, marcada pela citação de versos de
+letras de canções.
+metalinguagem, marcada pela referência à escrita de
+crônicas pela autora.
+reiteração, marcada pela repetição de uma determinada
+palavra e de seus cognatos.
+conexão, marcada pela presença dos conectores lógicos
+“quando” e “porque” entre orações.
+pronominalização, marcada pela retomada de “minha filha”
+e “um namorado ruim” pelos pronomes “ela” e “lo”.
 
 ## Questão 21
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 130
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1542,11 +1724,21 @@ e dos componentes que o povoam.
 Diadema (etnia Kayapó). Estados do Mato Grosso e Pará.
 Pela leitura desses textos, infere-se que a compreensão
 da arte plumária indígena requer a consideração da
+indistinção hierárquica entre os membros de um mesmo
+grupo social.
+prevalência dos elementos do mundo natural sobre as
+relações humanas.
+reconfiguração constante das representações coletivas
+acerca do universo.
+indeterminação entre as noções de identidade individual
+e de identidade cultural.
+indissociabilidade entre objetos ritualísticos e os papéis
+dos indivíduos na comunidade.
 
 ## Questão 22
 
 - Idioma: geral
-- Palavras: 212
+- Palavras: 290
 - Tem imagem: não
 
 ### Texto extraído
@@ -1625,11 +1817,21 @@ policial, a justiça, o sistema penitenciário, o governo existem
 por meio da violência.
 Na letra da canção, a tematização da violência mencionada
 no Texto II manifesta-se
+como metáfora da desigualdade, que associa a ideia de
+justiça a valores históricos negativos.
+na referência a termos bélicos, que sinaliza uma crítica
+social à opressão da população das periferias.
+como procedimento metalinguístico, que concebe a
+palavra como uma forma de combate e insubordinação.
+nas definições ambíguas do enunciador, que inverte e
+relativiza as representações da maldade e da bondade.
+na menção à imortalidade, que sugere a possibilidade de
+resistência para além da dicotomia entre vida e morte.
 
 ## Questão 23
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 141
 - Tem imagem: não
 
 ### Texto extraído
@@ -1678,11 +1880,21 @@ no ar. Os dois roteiristas foram brilhantes em traduzir os
 personagens intrincados e conflituosos da obra de George
 Ainda que faça uma avaliação positiva da série, nessa
 resenha, o autor aponta aspectos negativos da obra ao utilizar
+marcas de impessoalidade que disfarçam a opinião do
+especialista.
+expressões adversativas para fazer ressalvas às
+afirmações elogiosas.
+interlocução com o leitor para corroborar opiniões
+contrárias à adaptação.
+eufemismos que minimizam as críticas feitas à
+construção das personagens.
+antíteses que opõem a fragilidade do roteiro à beleza
+da trilha sonora da série.
 
 ## Questão 24
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 168
 - Tem imagem: não
 
 ### Texto extraído
@@ -1729,11 +1941,18 @@ negócios naturalmente, mas arranjar palavras com tinta é
 outra coisa. Se eu fosse escrever como falo, ninguém me lia.
 Nesse fragmento, a discussão dos personagens traz à
 cena um debate acerca da escrita que
+diferencia a produção artística do registro padrão da língua.
+aproxima a literatura de dialetos sociais de pouco prestígio.
+defende a relação entre a fala e o estilo literário de um autor.
+contrapõe o preciosismo linguístico a situações de
+coloquialidade.
+associa o uso da norma culta à ocorrência de
+desentendimentos pessoais.
 
 ## Questão 25
 
 - Idioma: geral
-- Palavras: 25
+- Palavras: 80
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1762,11 +1981,21 @@ modelos de representação da arte realista.
 Eliseu D’Angelo Visconti (1866-1944) desenvolveu diversas
 obras no Brasil, com grande influência das escolas
 europeias. Em sua pintura Três meninas no jardim, há
+culto à fluidez e ao progresso, nos moldes do ideário
+futurista.
+valorização de formas decompostas, a exemplo do
+estilo cubista.
+efeitos fugazes de luz e movimento, que remetem à
+estética impressionista.
+expressão do sonho e do inconsciente, que dialoga
+com a proposta surrealista.
+tematização de elementos cotidianos, que resgata
+modelos de representação da arte realista.
 
 ## Questão 26
 
 - Idioma: geral
-- Palavras: 173
+- Palavras: 194
 - Tem imagem: não
 
 ### Texto extraído
@@ -1823,11 +2052,16 @@ próprio da disciplina.
 Segundo o texto, apesar do aumento da participação de
 mulheres em lutas, a realidade na escola ainda é diferente
 em razão do(a)
+esportivização desse conteúdo.
+masculinização dessa modalidade.
+enfoque desses eventos pela mídia.
+trato pedagógico dessa manifestação.
+marginalização desse tema pela Educação Física.
 
 ## Questão 27
 
 - Idioma: geral
-- Palavras: 199
+- Palavras: 248
 - Tem imagem: não
 
 ### Texto extraído
@@ -1886,11 +2120,18 @@ normal para uma aranha é o caos para uma mosca.
 Meninada, sintam-se beijados pela vovó Rita.
 Como estratégia para se aproximar de seu leitor, a autora
 usa uma postura de empatia explicitada em
+“Volta e meia recebo cartinhas de fãs, e alguns são
+bem jovens”.
+“Fico no céu lendo essas coisas”.
+“Sinto que é mais complicado ser jovem hoje”.
+“Queria dar beijinhos e carinhos sem ter fim nessa moçada”.
+“Diria que não é sinal de saúde estar bem-adaptado a
+uma sociedade doente”.
 
 ## Questão 28
 
 - Idioma: geral
-- Palavras: 293
+- Palavras: 365
 - Tem imagem: não
 
 ### Texto extraído
@@ -1979,11 +2220,21 @@ luz do mistério da arte literária e do próprio texto do
 Dr. Bento Santiago, seu discurso e sua verdade.
 Para apresentar a apropriação literária que faz da obra de
 Machado de Assis, o autor desse texto
+relaciona aspectos centrais da obra original e, então,
+reafirma o ponto de vista adotado.
+explica os pontos de vista de críticos da literatura e,
+por fim, os redimensiona na discussão.
+introduz elementos relevantes da história e, na sequência,
+apresenta motivos para refutá-los.
+justifica as razões pelas quais adotou certa abordagem
+e, em seguida, reconsidera tal escolha.
+contextualiza o enredo de forma subjetiva e, na conclusão,
+explicita o foco narrativo a ser assumido.
 
 ## Questão 29
 
 - Idioma: geral
-- Palavras: 158
+- Palavras: 197
 - Tem imagem: não
 
 ### Texto extraído
@@ -2032,11 +2283,16 @@ entoando que meu irmão é filho e uma interrogação sempre
 me salta aos lábios: filho de quem?
 Das reflexões do narrador, apreende-se uma perspectiva
 que associa a adoção
+a representações sociais estigmatizadas da parentalidade.
+à necessidade de aprovação por parte de desconhecidos.
+ao julgamento velado de membros do núcleo familiar.
+ao conflito entre o termo técnico e o vínculo afetivo.
+a inquietações próprias das relações entre irmãos.
 
 ## Questão 30
 
 - Idioma: geral
-- Palavras: 350
+- Palavras: 387
 - Tem imagem: não
 
 ### Texto extraído
@@ -2143,11 +2399,17 @@ com todos os nossos defeitos.
 No que diz respeito à arte, o posicionamento de Antônio
 Prata, no Texto II, aproxima-se da tese de Graciliano Ramos,
 no Texto I, uma vez que ambos
+defendem a dignidade do ofício dos artistas.
+concluem que a arte reforça crenças pessoais.
+apresentam a pobreza como inspiração para a arte.
+afirmam o necessário caráter desestabilizador da arte.
+atestam que há mudanças significativas na produção
+artística.
 
 ## Questão 31
 
 - Idioma: geral
-- Palavras: 208
+- Palavras: 246
 - Tem imagem: não
 
 ### Texto extraído
@@ -2206,11 +2468,16 @@ disse, como para lhe dar força: “Toda alma livre é imperatriz!”.
 Convidada para o último baile do Império, na Ilha Fiscal,
 localizada no Rio de Janeiro, Flora devaneia sobre
 aspectos daquele contexto, no qual o narrador ironiza a
+promessa de esperança com o futuro regime.
+alienação da elite em relação ao fim da monarquia.
+perspectiva da contemplação distanciada da capital.
+animosidade entre população e membros da nobreza.
+fantasia de amor e de casamento da mulher burguesa.
 
 ## Questão 32
 
 - Idioma: geral
-- Palavras: 192
+- Palavras: 224
 - Tem imagem: não
 
 ### Texto extraído
@@ -2267,11 +2534,16 @@ Eu gosto. Porque entendo que naquele ato, naquela força
 está o nosso carinho.
 Nesse trecho, o drama do declínio físico da narradora
 transmite uma sensibilidade lírica centrada na
+necessidade de fazer adaptações na casa.
+atmosfera de afeto fortalecido pelo convívio.
+condição de dependência de outras pessoas.
+determinação de manter a regularidade da rotina.
+aceitação das restrições de mobilidade da personagem.
 
 ## Questão 33
 
 - Idioma: geral
-- Palavras: 22
+- Palavras: 59
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2293,11 +2565,16 @@ E	comparar a peça de roupa ao sentimento de despedida.
 Nesse cartaz, a expressão “Vou deixar que você se vá”,
 em conjunto com os elementos não verbais utilizados,
 tem a finalidade de
+incentivar o descarte de itens defeituosos.
+promover a reciclagem de produtos usados.
+garantir a conservação de roupas de inverno.
+relacionar o gesto de doação à ideia de desapego.
+comparar a peça de roupa ao sentimento de despedida.
 
 ## Questão 34
 
 - Idioma: geral
-- Palavras: 231
+- Palavras: 274
 - Tem imagem: não
 
 ### Texto extraído
@@ -2374,11 +2651,19 @@ aplicativo. Ela defende que escrever na língua materna é
 uma das principais formas de preservá-la.
 De acordo com esse texto, o aplicativo Linklado contribuiu
 para a
+criação de fonemas representativos de línguas indígenas
+no meio digital.
+democratização do registro escrito de línguas dos povos
+originários.
+adaptação de regras de jogos de tabuleiro de origem
+indígena.
+divulgação das técnicas de tradução de línguas indígenas.
+aprendizagem da lingua portuguesa pelos indígenas.
 
 ## Questão 35
 
 - Idioma: geral
-- Palavras: 220
+- Palavras: 244
 - Tem imagem: não
 
 ### Texto extraído
@@ -2425,11 +2710,16 @@ e resigne-se cada um ao que é, eu, uma mulher traída; o senhor, um homem vendi
 às mulheres honestas. O senhor estava no mercado; comprei-o. Custou-me cem contos de réis, foi barato; não se
 fez valer. Eu daria o dobro, o triplo, toda a minha riqueza por este momento.
 Ao tematizar o casamento, esse fragmento reproduz uma concepção de literatura romântica evidenciada na
+defesa da igualdade de gêneros.
+importância atribuída à castidade.
+indignação com as injustiças sociais.
+interferência da riqueza sobre o amor.
+valorização das relações interpessoais.
 
 ## Questão 36
 
 - Idioma: geral
-- Palavras: 50
+- Palavras: 93
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2460,11 +2750,16 @@ Metropolitan Museum of Art, Nova Iorque.
 Escultura em calcário, 68,3 × 15,9 × 24,1 cm.
 National Gallery of Art, Washington.
 A leitura comparativa das duas esculturas, separadas por mais de 2 500 anos, indica a
+valorização da arte antiga por artistas contemporâneos.
+resistência da arte escultórica aos avanços tecnológicos.
+simplificação da forma em razão do tipo de material utilizado.
+persistência de padrões estéticos em diferentes épocas e culturas.
+ausência de detalhes como traço distintivo da arte tradicional popular.
 
 ## Questão 37
 
 - Idioma: geral
-- Palavras: 225
+- Palavras: 263
 - Tem imagem: não
 
 ### Texto extraído
@@ -2529,11 +2824,17 @@ a poeira, dá a volta por cima.
 Defendendo a importância da música para o bem-estar e
 o equilíbrio emocional das pessoas, a autora usa, como
 recurso persuasivo, a
+contradição, ao associar o coração despedaçado
+à alegria.
+metáfora, ao citar a imagem da metamorfose ambulante.
+intertextualidade, ao resgatar versos de letras de canções.
+enumeração, ao mencionar diferentes ritmos musicais.
+hipérbole, ao falar em “sofrência”, “tragédias” e “afogados”.
 
 ## Questão 38
 
 - Idioma: geral
-- Palavras: 46
+- Palavras: 65
 - Tem imagem: não
 
 ### Texto extraído
@@ -2575,11 +2876,16 @@ onde elas mesmas
 não estivessem
 Esse poema, por meio da ideia de deslocamento, metaforiza
 a tentativa de pessoas
+buscarem novos encontros.
+fugirem da própria identidade.
+procurarem lugares inexplorados.
+partirem em experiências inusitadas.
+desaparecerem da vida em sociedade.
 
 ## Questão 39
 
 - Idioma: geral
-- Palavras: 281
+- Palavras: 319
 - Tem imagem: não
 
 ### Texto extraído
@@ -2658,11 +2964,17 @@ resmungar, mas o povo se identificava.
 O “falar errado” a que o texto se refere constitui um
 preconceito em relação ao uso que Adoniran Barbosa
 fazia da língua em suas composições, pois esse uso
+marcava a linguagem dos comediantes no mesmo
+período.
+prejudicava a compreensão das canções pelo público.
+denunciava a ausência de estilo nas letras de canção.
+restringia a criação poética nas letras do compositor.
+transgredia a norma-padrão vigente à época.
 
 ## Questão 40
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -2708,11 +3020,16 @@ tentam fugir e dizem que são “garanchoso”, com os quais
 me identifiquei, mas esses são vistos com certo desdém.
 A apropriação de elementos como rivalidade, competitividade,
 torcida e gritos de guerra pelo festival de Parintins evidencia a
+escolha de um local específico para a festa.
+importância atribuída pelos turistas aos bois.
+interação social estabelecida após o evento.
+aproximação da manifestação folclórica com o esporte.
+composição de enredos musicais pelos “garanchosos”.
 
 ## Questão 41
 
 - Idioma: geral
-- Palavras: 183
+- Palavras: 208
 - Tem imagem: não
 
 ### Texto extraído
@@ -2776,11 +3093,16 @@ retração do mamilo.
 As informações dessa reportagem auxiliam no combate
 ao câncer de mama masculino por apresentarem um
 alerta sobre o(s)
+sinais indicadores da doença.
+índice de crescimento de casos.
+exames para diagnóstico do tumor.
+mitos a respeito da herança genética.
+período de campanhas de conscientização.
 
 ## Questão 42
 
 - Idioma: geral
-- Palavras: 172
+- Palavras: 191
 - Tem imagem: não
 
 ### Texto extraído
@@ -2874,11 +3196,16 @@ O seu Vinicius de Moraes.
 Apesar de haver marcas formais de carta e receita,
 a característica que define esse texto como poema
 é o(a)
+nomeação de um interlocutor.
+manifestação de intimidade.
+descrição de procedimentos.
+utilização de uma linguagem expressiva.
+apresentação de ingredientes culinários.
 
 ## Questão 43
 
 - Idioma: geral
-- Palavras: 120
+- Palavras: 155
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2925,11 +3252,16 @@ Representação de 2 953 arcos de luz cruzando o céu,
 registrando o nascer e o pôr do sol ao longo de oito anos
 O experimento realizado por Regina Valkenborgh resultou
 no entendimento de que a
+técnica fotográfica alternativa limita o registro de imagens.
+apreciação da natureza depende de registro fotográfico.
+criatividade artística decorre do conhecimento científico.
+câmera de criação caseira tem valor tecnológico.
+produção artística pode ser resultado do acaso.
 
 ## Questão 44
 
 - Idioma: geral
-- Palavras: 181
+- Palavras: 204
 - Tem imagem: não
 
 ### Texto extraído
@@ -2982,11 +3314,16 @@ se comunicar com jovens urbanos que se exercitam e se
 entretêm de uma maneira muito diferente da dos seus avós.
 A mudança no programa olímpico mencionada no texto
 mostra que o esporte está se
+aproximando da aventura.
+mantendo em sua forma padrão.
+tornando uma forma de dança.
+afastando de elementos culturais.
+adaptando às demandas do seu tempo.
 
 ## Questão 45
 
 - Idioma: geral
-- Palavras: 244
+- Palavras: 282
 - Tem imagem: não
 
 ### Texto extraído
@@ -3067,11 +3404,20 @@ da verdade de cada um, checagem de informação e
 interpretação de texto acabam se tornando moedas valiosas.
 Ao abordar a relação dos memes com a educação,
 a reportagem sustenta uma crítica à
+falta de fiscalização no uso de aplicativos de mensagens
+por crianças.
+divulgação de informação manipulada em postagens
+virtuais.
+utilização de ferramentas digitais no trabalho
+educacional.
+exploração de conteúdos humorísticos nas mídias
+sociais.
+propagação de mensagens com objetivos políticos.
 
 ## Questão 46
 
 - Idioma: geral
-- Palavras: 156
+- Palavras: 168
 - Tem imagem: não
 
 ### Texto extraído
@@ -3132,11 +3478,16 @@ Moradores do interior de SP relatam tremores de terra.
 As diferenças entre os eventos geológicos relatados
 decorrem de distintas posições geográficas das cidades
 em relação a:
+Planícies costeiras.
+Bacias continentais.
+Zonas de subducção.
+Áreas de denudação.
+Vertentes escarpadas.
 
 ## Questão 47
 
 - Idioma: geral
-- Palavras: 74
+- Palavras: 84
 - Tem imagem: não
 
 ### Texto extraído
@@ -3173,11 +3524,16 @@ laboratório, inspetores ou guardas etc., para não falarmos
 no pessoal burocrático, não especializado.
 O texto dos sanitaristas atuantes nas décadas de 1920 e
 1930 veicula uma mensagem caracterizada pela
+higienização moral.
+imposição eugênica.
+assimilação cultural.
+hegemonização identitária.
+hierarquização profissional.
 
 ## Questão 48
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 119
 - Tem imagem: não
 
 ### Texto extraído
@@ -3215,11 +3571,16 @@ deixaram para trás os resquícios da vida que tiveram até
 o 5 de novembro de 2015. Nada jamais seria igual.
 Conforme o texto, o evento gerou o seguinte impacto na
 relação entre as pessoas e o seu espaço vivido:
+Flexibilização de parâmetros ambientais.
+Consolidação de identidades regionais.
+Fragilização de vínculos afetivos.
+Supressão de práticas exploratórias.
+Recuperação de tradições ancestrais.
 
 ## Questão 49
 
 - Idioma: geral
-- Palavras: 111
+- Palavras: 129
 - Tem imagem: não
 
 ### Texto extraído
@@ -3261,11 +3622,16 @@ substituído pelo elétrico, que assiste à entrada do automóvel
 e até do aeroplano.
 No Brasil, os eventos descritos ganharam conotação
 política ao serem vinculados à
+expansão estratégica do imperialismo.
+ascensão gradual do mercantilismo.
+laicidade da educação.
+retomada do absolutismo.
+visão republicana de nação.
 
 ## Questão 50
 
 - Idioma: geral
-- Palavras: 125
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -3313,11 +3679,20 @@ Jesus Cristo no mais cruel dos deuses e o rei em lobo
 faminto de carne humana.
 Os diferentes pontos de vista presentes no texto expressam
 que o bispo era, ao mesmo tempo,
+execrado pelos reis e reverenciado pelos religiosos do local.
+detestado pelos colonizadores e respeitado pelos povos
+do lugar.
+menosprezado pela colônia e idolatrado pelos governantes
+da região.
+desrespeitado pela metrópole e adorado pelos invasores
+da Espanha.
+desacatado pelos excluídos e valorizado pelos negociantes
+de negros.
 
 ## Questão 51
 
 - Idioma: geral
-- Palavras: 100
+- Palavras: 125
 - Tem imagem: não
 
 ### Texto extraído
@@ -3357,11 +3732,16 @@ francesa abandonou a valsa por sua estreita relação com
 a cultura plebeia, retomando-a posteriormente.
 A expressão cultural descrita no texto foi rejeitada no início
 da Idade Moderna por congregar
+traços advindos da feitiçaria nórdica.
+práticas inspiradas em rituais pagãos.
+regras decorrentes do período renascentista.
+compassos produzidos em territórios colonizados.
+elementos provenientes de segmentos populares.
 
 ## Questão 52
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 125
 - Tem imagem: não
 
 ### Texto extraído
@@ -3402,11 +3782,16 @@ antecedentes criminais, mulheres e as vidas de todos os
 negros de todo o espectro de gêneros.
 A reivindicação do movimento norte-americano apresentada
 no texto consiste na necessidade de
+manter a conquista de direitos sociais.
+integrar a diversidade do grupo identitário.
+priorizar a preservação de culturas africanas.
+defender a adoção de valores supremacistas.
+permitir a permanência do modelo androcêntrico.
 
 ## Questão 53
 
 - Idioma: geral
-- Palavras: 22
+- Palavras: 39
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3428,11 +3813,16 @@ E	gradação da turbidez fluvial.
 Diferenças entre inundação gradual e brusca
 A desproporção de velocidade e tempo de duração nos
 tipos de inundação destacados é condicionada pela
+variabilidade solar anual.
+temperatura média mensal.
+declividade do relevo local.
+dinâmica tectônica regional.
+gradação da turbidez fluvial.
 
 ## Questão 54
 
 - Idioma: geral
-- Palavras: 83
+- Palavras: 113
 - Tem imagem: não
 
 ### Texto extraído
@@ -3470,11 +3860,16 @@ Assim, um falante recebe menos credibilidade devido ao
 preconceito do ouvinte.
 Com base na reflexão suscitada no texto, o preconceito
 de identidade é responsável por um tipo de injustiça
+estética, que normatiza os padrões corporais.
+sensorial, que privilegia as habilidades visuais.
+afetiva, que impede as expressões emocionais.
+epistêmica, que prejudica as trocas informacionais.
+econômica, que perpetua as desigualdades materiais.
 
 ## Questão 55
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 102
 - Tem imagem: não
 
 ### Texto extraído
@@ -3512,11 +3907,16 @@ virtuoso, ágil, móvel, tépido, viçoso; é meu corpo liso,
 castrado, arredondado como uma bolha de sabão.
 Esse texto reforça uma concepção metafísica clássica que
 remete a um(a)
+pressuposto lógico.
+pensamento dicotômico.
+contemplação da natureza.
+raciocínio argumentativo.
+crítica à individualidade.
 
 ## Questão 56
 
 - Idioma: geral
-- Palavras: 122
+- Palavras: 147
 - Tem imagem: não
 
 ### Texto extraído
@@ -3562,11 +3962,16 @@ era formado por folhas verdes de plantas, que foram
 derramadas sobre uma pessoa.
 O ritual brasileiro apresentado no texto representa, para
 seus adeptos, a
+manutenção de uma memória coletiva.
+contestação de uma identidade étnica.
+imolação de uma divindade africana.
+legitimação de uma prática pagã.
+promissão de uma revolta social.
 
 ## Questão 57
 
 - Idioma: geral
-- Palavras: 75
+- Palavras: 90
 - Tem imagem: não
 
 ### Texto extraído
@@ -3600,11 +4005,16 @@ Por isso, não anulam os conflitos, ao contrário, são canais
 de comunicação e de visibilidade de oposições.
 As características descritas no texto exibem a importância
 dos espaços públicos para a
+prática do lazer.
+vigilância da sociedade.
+erradicação da violência.
+construção da democracia.
+diversificação do trabalho.
 
 ## Questão 58
 
 - Idioma: geral
-- Palavras: 184
+- Palavras: 204
 - Tem imagem: não
 
 ### Texto extraído
@@ -3664,11 +4074,16 @@ elucidar conceitualmente em que consiste isto, agir bem, ou,
 na linguagem aristotélica, o que significa ser feliz.
 Os textos indicam que a prática de ações virtuosas,
 sempre efetivada na pólis, ocorre por meio do(a)
+teoria das formas essenciais.
+identificação dos princípios racionais.
+desenvolvimento das técnicas retóricas.
+aperfeiçoamento das condutas humanas.
+conhecimento das epistemes verdadeiras.
 
 ## Questão 59
 
 - Idioma: geral
-- Palavras: 78
+- Palavras: 103
 - Tem imagem: não
 
 ### Texto extraído
@@ -3702,11 +4117,16 @@ produtos imediatos das suas atividades constituem a grande
 realização da Idade Média na esfera intelectual.
 De acordo com o texto, o legado das universidades medievais
 torna-se um relevante patrimônio histórico-cultural por
+adotar currículo e método padronizado.
+rejeitar ideologias e costumes orientais.
+possuir organização e função mercantil.
+transmitir técnicas e valores ecumênicos.
+agregar tradição e conhecimento científico.
 
 ## Questão 60
 
 - Idioma: geral
-- Palavras: 115
+- Palavras: 150
 - Tem imagem: não
 
 ### Texto extraído
@@ -3751,11 +4171,18 @@ autossubsistência mas economias que potencializam
 a produtividade ecológica de seus territórios.
 O texto expõe a possibilidade de uma nova racionalidade
 produtiva por meio de uma gestão territorial que se baseia na
+integração de mercados regidos por pressões regionais.
+conexão de valores fundamentados por decisões locais.
+unificação de preços delimitados por demandas nacionais.
+normatização de regras construídas por instituições
+mundiais.
+valorização de tradições orientadas por determinações
+globais.
 
 ## Questão 61
 
 - Idioma: geral
-- Palavras: 136
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -3800,11 +4227,16 @@ poderia ter sido feito melhor e ser feito outra vez.
 O texto apresenta uma reflexão da personagem acerca de
 um problema característico da filosofia contemporânea,
 que trata da(s)
+implicações éticas.
+finitude humana.
+limitações da linguagem.
+pressuposição existencial.
+objetividade do conhecimento.
 
 ## Questão 62
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 147
 - Tem imagem: não
 
 ### Texto extraído
@@ -3857,11 +4289,16 @@ somente o conteúdo empírico da realidade. 3. A filosofia usa
 um conceito não empírico da realidade.
 Ao comparar os textos, conclui-se que eles apresentam
 posicionamentos filosóficos divergentes com relação ao
+estatuto epistemológico da linguagem.
+alicerce estruturante da moralidade.
+conteúdo essencial da metafísica.
+princípio constitutivo da ontologia.
+domínio reflexivo da estética.
 
 ## Questão 63
 
 - Idioma: geral
-- Palavras: 67
+- Palavras: 87
 - Tem imagem: não
 
 ### Texto extraído
@@ -3894,11 +4331,16 @@ especiais quando, na verdade, os trata como servos
 e partes de uma massa homogênea.
 Ao analisar as consequências da dinâmica apresentada no
 texto, as autoras destacam a importância do conceito como:
+Ferramenta de luta coletiva.
+Mecanismo de controle social.
+Instituição de interesse público.
+Organização da iniciativa privada.
+Instrumento de manipulação estatal.
 
 ## Questão 64
 
 - Idioma: geral
-- Palavras: 184
+- Palavras: 194
 - Tem imagem: não
 
 ### Texto extraído
@@ -3958,11 +4400,16 @@ Castro Alves, no que diz respeito à poesia antiescravista,
 um dos primeiros que o Brasil ouviu.
 Os textos indicam a participação de artistas e intelectuais
 brasileiros em defesa do(a)
+ação integralista.
+literatura realista.
+movimento abolicionista.
+política indigenista.
+nacionalismo desenvolvimentista.
 
 ## Questão 65
 
 - Idioma: geral
-- Palavras: 70
+- Palavras: 93
 - Tem imagem: não
 
 ### Texto extraído
@@ -3998,11 +4445,16 @@ mais políticas, mais plurais e diversas; menos fixas, unificadas
 ou trans-históricas.
 De acordo com o texto, o processo apresentado contribuiu
 para
+elevar a renda da população.
+abandonar os valores morais.
+estabelecer a igualdade racial.
+fortalecer as pautas das minorias.
+inverter os fluxos das migrações.
 
 ## Questão 66
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 116
 - Tem imagem: não
 
 ### Texto extraído
@@ -4041,11 +4493,21 @@ demográfica, à aceleração dos processos de modernização
 e ao boom da indústria farmacêutica multinacional.
 Qual foi o efeito social resultante do avanço tecnológico
 mencionado no texto?
+O afastamento da autoridade médica na regulação da
+fecundidade.
+A superação do discurso da moralidade pela ação da
+mídia estatal.
+A ampliação do debate público sobre o planejamento
+familiar.
+A centralização da pesquisa científica pelo sistema
+privado de saúde.
+O enrijecimento das doutrinas religiosas sobre a
+organização da vida doméstica.
 
 ## Questão 67
 
 - Idioma: geral
-- Palavras: 69
+- Palavras: 89
 - Tem imagem: não
 
 ### Texto extraído
@@ -4080,11 +4542,16 @@ pequenos agricultores e produtores da comunidade florestal
 a cadeias de abastecimento maiores.
 A adoção da tecnologia mencionada amplia a rentabilidade
 das comunidades citadas, ao possibilitar o(a):
+Valorização da economia local.
+Elaboração de projetos culturais.
+Estabelecimento de regras comerciais.
+Incremento da infraestrutura educacional.
+Homogeneização da qualificação profissional.
 
 ## Questão 68
 
 - Idioma: geral
-- Palavras: 143
+- Palavras: 163
 - Tem imagem: não
 
 ### Texto extraído
@@ -4136,11 +4603,16 @@ Instituto do Homem e Meio Ambiente da Amazônia (Imazon),
 que monitora a floresta por meio de imagens de satélites.
 Para a região amazônica, a relação entre as informações
 dos textos indica uma redução do(a)
+circulação de ventos alísios.
+aquecimento dos solos locais.
+média de temperatura oceânica.
+índice de refletividade superficial.
+intensidade de chuvas convectivas.
 
 ## Questão 69
 
 - Idioma: geral
-- Palavras: 104
+- Palavras: 126
 - Tem imagem: não
 
 ### Texto extraído
@@ -4182,11 +4654,16 @@ deveriam nutrir uma ambição mais nobre e exigir respeito
 por suas capacidades e virtudes.
 Nesse texto, escrito no século XVIII, a autora reivindica
 para as mulheres a
+recuperação de sua participação política.
+equiparação de ganhos salariais.
+valorização de seu papel social.
+distinção de padrões biológicos.
+ocupação de cargos públicos.
 
 ## Questão 70
 
 - Idioma: geral
-- Palavras: 103
+- Palavras: 118
 - Tem imagem: não
 
 ### Texto extraído
@@ -4226,11 +4703,16 @@ rodoviária de um país e, sobretudo, a rede ferroviária são
 exemplos de objetos complexos e sistêmicos.
 De acordo com o texto, o território torna-se cada vez mais
 dotado de objetos com a finalidade de intensificar a
+desindustrialização da economia.
+desregulamentação do mercado.
+concentração da produção.
+distribuição de renda.
+dinamização dos fluxos.
 
 ## Questão 71
 
 - Idioma: geral
-- Palavras: 177
+- Palavras: 202
 - Tem imagem: não
 
 ### Texto extraído
@@ -4289,11 +4771,16 @@ valer sua meta e reduzir 50% dos gases de efeito estufa até
 de redução era de 43%.
 Conforme o texto, o compromisso assumido pelo Brasil foi
 resultado dos tensionamentos promovidos por
+povos ribeirinhos e segmentos culturais.
+blocos econômicos e instituições militares.
+grupos científicos e universidades públicas.
+organismos supranacionais e sociedade civil.
+agentes governamentais e demanda turística.
 
 ## Questão 72
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 120
 - Tem imagem: não
 
 ### Texto extraído
@@ -4332,11 +4819,16 @@ pessoa com necessidades especiais pertencer a um outro
 grupo de risco, por exemplo, se for mulher ou criança.
 A realidade abordada no texto indica a necessidade de se
 promover uma ética interpessoal centrada no
+cuidado, proteção e valorização dos indivíduos.
+entendimento, perdão e tolerância dos responsáveis.
+cerceamento, arregimentação e controle de entidades.
+regramento, legislação e responsabilização de culpados.
+ensimesmamento, interiorização e indulgência dos agentes.
 
 ## Questão 73
 
 - Idioma: geral
-- Palavras: 79
+- Palavras: 89
 - Tem imagem: não
 
 ### Texto extraído
@@ -4373,11 +4865,16 @@ o taco xilográfico pela facilidade do talhe e abundância —
 princesas, dragões, cangaceiros.
 No início do século XX, a incorporação da técnica de
 produção descrita no texto promoveu uma renovação da
+manifestação jornalística.
+narrativa literária.
+indústria regional.
+estética editorial.
+cultura erudita.
 
 ## Questão 74
 
 - Idioma: geral
-- Palavras: 115
+- Palavras: 150
 - Tem imagem: não
 
 ### Texto extraído
@@ -4420,11 +4917,16 @@ extenso mosaico de elementos integrados em diferentes
 planos e graus de intensidade.
 O reconhecimento da festa descrita no texto, como
 patrimônio histórico, encontra sustentação no(a)
+instituição de políticas públicas de âmbito local.
+registro de bens culturais de natureza imaterial.
+tombamento de sítios arqueológicos de propriedade privada.
+salvaguarda de elementos sacros de expressão regional.
+categorização de manifestações cristãs de caráter oficial.
 
 ## Questão 75
 
 - Idioma: geral
-- Palavras: 133
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -4473,11 +4975,16 @@ das quais é possível vislumbrar as bases sociais nas quais
 se assentavam o Alto e o Baixo Iluminismo.
 No período iluminista, os espaços sociais mencionados
 contribuíram para
+segregar pensadores e aumentar a circulação de ideias.
+apoiar revolucionários e perseguir a nobreza local.
+rejeitar poetisas e proibir a entrada de mulheres.
+censurar cronistas e coibir o patrocínio editorial.
+integrar artistas e ampliar o comércio urbano.
 
 ## Questão 76
 
 - Idioma: geral
-- Palavras: 94
+- Palavras: 106
 - Tem imagem: não
 
 ### Texto extraído
@@ -4519,11 +5026,16 @@ uma circulação de estados.
 Qual elemento da cultura contemporânea se relaciona às
 características do conceito de rizoma, conforme descrito
 no texto?
+Estrutura fixa.
+Lógica binária.
+Controle homogêneo.
+Uniformidade de opiniões.
+Pluralidade de interações.
 
 ## Questão 77
 
 - Idioma: geral
-- Palavras: 22
+- Palavras: 42
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4543,11 +5055,16 @@ E	Projeto de país industrial.
 
 O que as capas da revista Travel in Brazil, publicadas entre 1941 e 1944 pelo Departamento de Imprensa e Propaganda (DIP),
 evidenciam?
+Estereótipos da cultura nacional.
+Exploração da população pobre.
+Preconceitos de ordem racial.
+Política de censura midiática.
+Projeto de país industrial.
 
 ## Questão 78
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 100
 - Tem imagem: não
 
 ### Texto extraído
@@ -4574,11 +5091,16 @@ uma forma ou de outra em praticamente todas as tradições religiosas, e poucos 
 a regra ou pelo menos de tecer comentários a respeito da relação com seus próprios princípios.
 O princípio ético apresentado no texto, como elemento estruturante da vida em sociedade, se traduz pela seguinte
 formulação teórica:
+Doutrina teleológica.
+Imperativo categórico.
+Pensamento utilitarista.
+Secularização inautêntica.
+Raciocínio consequencialista.
 
 ## Questão 79
 
 - Idioma: geral
-- Palavras: 56
+- Palavras: 66
 - Tem imagem: não
 
 ### Texto extraído
@@ -4601,11 +5123,16 @@ O que alicerça, portanto, o acolhimento de refugiados pelos Estados gira em tor
 e exclusão, admissão e rejeição, desejáveis e indesejáveis; ao mesmo tempo, enseja vulnerabilidade, indefinição e
 incerteza a esses migrantes internacionais forçados.
 A eliminação, para os refugiados, do tipo de fronteira descrita no texto necessita de políticas públicas de
+planejamento familiar.
+segregação territorial.
+homogeneização cultural.
+diferenciação étnico-racial.
+integração socioeconômica.
 
 ## Questão 80
 
 - Idioma: geral
-- Palavras: 175
+- Palavras: 210
 - Tem imagem: não
 
 ### Texto extraído
@@ -4665,11 +5192,17 @@ o comportamento.
 Embora situados em continentes diferentes com práticas
 sociais distintas, Rússia e Angola se aproximam, conforme
 os textos I e II, no aspecto
+cultural, ao subjetivarem costumes da teledramaturgia
+estrangeira.
+econômico, ao importarem confecções de estilistas famosos.
+geográfico, ao encurtarem distâncias de caráter ideológico.
+antropológico, ao adaptarem valores de povos tradicionais.
+político, ao adotarem sistemas de governos democráticos.
 
 ## Questão 81
 
 - Idioma: geral
-- Palavras: 64
+- Palavras: 84
 - Tem imagem: não
 
 ### Texto extraído
@@ -4703,11 +5236,16 @@ a ter atenção do Estado e ser do interesse de algumas
 autoridades e organismos oficiais.
 Na esfera de ação do Estado, com a Constituição de 1988,
 os espaços mencionados tornaram-se objeto de
+iniciativas de planejamento familiar.
+projetos de reorientação religiosa.
+programas de moradias sustentáveis.
+políticas de inserção social.
+medidas de homogeneização educacional.
 
 ## Questão 82
 
 - Idioma: geral
-- Palavras: 117
+- Palavras: 157
 - Tem imagem: não
 
 ### Texto extraído
@@ -4754,11 +5292,19 @@ ficou satisfeita e ele concluiu. “Eu sou alimentado sempre
 às 9 da manhã”.
 Qual tipo de raciocínio corresponde ao padrão de pensamento
 exibido pelo personagem do texto?
+Prático, porque recolhe evidências e recomenda ações.
+Absoluto, porque busca confirmações e bloqueia refutações.
+Indutivo, porque observa eventos particulares e infere
+leis universais.
+Demonstrativo, porque encadeia premissas e extrai
+conclusões indubitáveis.
+Analógico, porque compara diferentes situações e detecta
+elementos semelhantes.
 
 ## Questão 83
 
 - Idioma: geral
-- Palavras: 61
+- Palavras: 81
 - Tem imagem: não
 
 ### Texto extraído
@@ -4790,11 +5336,16 @@ minoria, fato este que acabou estimulando o incessante
 aperfeiçoamento deles.
 No texto, a cartografia é apresentada como um instrumento
 usado essencialmente para a
+preservação de espaços naturais.
+emancipação de sujeitos marginais.
+revalorização de culturas reprimidas.
+inversão de hierarquias estabelecidas.
+sustentação de hegemonias territoriais.
 
 ## Questão 84
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 171
 - Tem imagem: não
 
 ### Texto extraído
@@ -4845,11 +5396,16 @@ produtores, comerciantes locais e indígenas, constituindo
 relação comercial alternativa ao abastecimento da população.
 Como parte do patrimônio cultural da Amazônia, o regatão
 foi fundamental, no século XIX, para a
+organização de rotas de fuga na floresta tropical.
+criação de postos de trabalho nos seringais nortistas.
+divulgação de receitas de fármacos nas zonas ribeirinhas.
+construção de redes de sociabilidade no interior brasileiro.
+ampliação de ambientes de lazer nos territórios autóctones.
 
 ## Questão 85
 
 - Idioma: geral
-- Palavras: 122
+- Palavras: 142
 - Tem imagem: não
 
 ### Texto extraído
@@ -4893,11 +5449,16 @@ na América Latina e além-mar”. Era impossível ignorá-las,
 estavam lá, sempre em silêncio, mas estavam lá.
 Qual problema de âmbito nacional argentino o movimento
 social mencionado expôs ao mundo?
+Violação dos direitos humanos.
+Insegurança da juventude periférica.
+Naturalização da violência doméstica.
+Ampliação das desigualdades sociais.
+Relativização dos princípios democráticos.
 
 ## Questão 86
 
 - Idioma: geral
-- Palavras: 14
+- Palavras: 34
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4919,11 +5480,16 @@ E	mudança da dinâmica macroclimática.
 
 A comparação entre as imagens de satélite indica a
 ocorrência de um processo de
+conservação de lugares afetivos.
+aumento de áreas desertificadas.
+redefinição de fronteiras nacionais.
+artificialização do espaço geográfico.
+mudança da dinâmica macroclimática.
 
 ## Questão 87
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 95
 - Tem imagem: não
 
 ### Texto extraído
@@ -4961,11 +5527,16 @@ que mandemos todos; quer dizer, que todos intervenham
 nos fatos sociais.
 O que sustenta o exercício do poder, conforme a configuração
 apresentada no texto escrito na década de 1920?
+Soberania popular.
+Divisão de classes.
+Acúmulo de capital.
+Defesa da propriedade.
+Centralização administrativa.
 
 ## Questão 88
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 102
 - Tem imagem: não
 
 ### Texto extraído
@@ -5002,11 +5573,16 @@ para a redução de desastres relacionados às mudanças do
 clima e ainda gerar múltiplos benefícios para a economia,
 o ambiente e as pessoas.
 Qual medida atenua os problemas abordados no texto?
+Criação de faixas sinalizadoras.
+Incineração de resíduos sólidos.
+Implantação de parques públicos.
+Verticalização de espaços centrais.
+Construção de estacionamentos privados.
 
 ## Questão 89
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 100
 - Tem imagem: não
 
 ### Texto extraído
@@ -5047,11 +5623,16 @@ são permanentes e podem vetar resoluções, o que ocorreu
 A composição e o funcionamento do organismo internacional
 apresentados revelam a seguinte característica das relações
 internacionais entre os países-membros:
+Igualdade militar.
+Assimetria política.
+Consenso multipolar.
+Equilíbrio estratégico.
+Soberania compartilhada.
 
 ## Questão 90
 
 - Idioma: geral
-- Palavras: 61
+- Palavras: 91
 - Tem imagem: não
 
 ### Texto extraído
@@ -5083,3 +5664,8 @@ da atividade propriamente humana de seus subjugados que,
 ao mesmo tempo, tenta reduzir e desumanizar o mais possível.
 O texto apresenta uma contradição interna do capitalismo
 caracterizada pela
+obsolescência associada ao uso da tecnologia.
+orientação voltada à administração de conflitos.
+alienação decorrente da organização do trabalho.
+isonomia remanescente da geração de riquezas.
+produtividade vinculada ao fortalecimento da autonomia.

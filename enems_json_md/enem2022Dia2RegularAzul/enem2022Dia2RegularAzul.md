@@ -3,7 +3,7 @@
 ## Questão 91
 
 - Idioma: geral
-- Palavras: 151
+- Palavras: 156
 - Tem imagem: sim
 
 ### Texto extraído
@@ -130,11 +130,16 @@ S O
 )
 Esse procedimento de remediação de águas subterrâneas
 baseia-se em reações de
+oxirredução.
+substituição.
+precipitação.
+desidratação.
+neutralização.
 
 ## Questão 92
 
 - Idioma: geral
-- Palavras: 47
+- Palavras: 72
 - Tem imagem: não
 
 ### Texto extraído
@@ -165,11 +170,16 @@ tropicais infecciosas e constituem uma preocupação para
 a saúde pública por ser alto o índice de mortalidade a
 elas associado.
 Uma medida profilática comum a essas duas doenças é o(a)
+incineração do lixo orgânico.
+construção de rede de esgoto.
+uso de vermífugo pela população.
+controle das populações dos vetores.
+consumo de carnes vermelhas bem cozidas.
 
 ## Questão 93
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 116
 - Tem imagem: não
 
 ### Texto extraído
@@ -212,11 +222,16 @@ m2  e que a eficiência
 dos painéis é de 20%.
 Nessas condições, a área total dos painéis solares que
 compõem o Parque Solar Lapa é mais próxima de:
+1 000 000 m2
+500 000 m2
+250 000 m2
+100 000 m2
+20 000 m2
 
 ## Questão 94
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 179
 - Tem imagem: não
 
 ### Texto extraído
@@ -324,11 +339,16 @@ e
 (2)
 resultará,
 respectivamente, em
+liberação de gás tóxico e reação oxidativa forte.
+reação oxidativa forte e liberação de gás tóxico.
+formação de sais tóxicos e reação oxidativa forte.
+liberação de gás tóxico e liberação de gás oxidante.
+formação de sais tóxicos e liberação de gás oxidante.
 
 ## Questão 95
 
 - Idioma: geral
-- Palavras: 110
+- Palavras: 115
 - Tem imagem: sim
 
 ### Texto extraído
@@ -382,6 +402,11 @@ i
 E
 i
 C
+i
+i
+i
+i
+i
 i
 
 ## Questão 96
@@ -522,11 +547,16 @@ B
 +
 -
 +
+-
++
+-
++
++
 
 ## Questão 97
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 146
 - Tem imagem: não
 
 ### Texto extraído
@@ -581,11 +611,16 @@ procedimentos alternativos de enriquecimento.
 Considerando a diferença de massa mencionada entre os
 dois isótopos, que tipo de procedimento alternativo ao da
 efusão pode ser empregado para tal finalidade?
+Peneiração.
+Centrifugação.
+Extração por solvente.
+Destilação fracionada.
+Separação magnética.
 
 ## Questão 98
 
 - Idioma: geral
-- Palavras: 92
+- Palavras: 137
 - Tem imagem: não
 
 ### Texto extraído
@@ -632,11 +667,21 @@ foi inserida uma cópia do gene normal humano RPE65
 para corrigir o funcionamento das células da retina.
 O sucesso dessa terapia advém do fato de que o produto
 favorecerá a
+correção do código genético para a tradução da
+proteína.
+alteração do RNA ribossômico ligado à síntese da
+proteína.
+produção de mutações benéficas para a correção do
+problema.
+liberação imediata da proteína normal na região
+ocular humana.
+expressão do gene responsável pela produção da
+enzima normal.
 
 ## Questão 99
 
 - Idioma: geral
-- Palavras: 76
+- Palavras: 158
 - Tem imagem: não
 
 ### Texto extraído
@@ -683,11 +728,24 @@ era colonial e se aclimatou muito bem em praticamente
 todo o território nacional.
 Casos como o dessa árvore podem provocar a redução
 da biodiversidade, pois elas
+ocupam áreas de vegetação nativa e substituem
+parcialmente a flora original.
+estimulam a competição por seus frutos entre animais
+típicos da região e eliminam as espécies perdedoras.
+alteram os nichos e aumentam o número de
+possibilidades de relações entre os seres vivos
+daquele ambiente.
+apresentam alta taxa de reprodução e se mantêm
+com um número de indivíduos superior à capacidade
+suporte do ambiente.
+diminuem a relação de competição entre os
+polinizadores e facilitam a ação de dispersores de
+sementes de espécies nativas.
 
 ## Questão 100
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 137
 - Tem imagem: não
 
 ### Texto extraído
@@ -734,11 +792,16 @@ e a partir disso eles calcularam o alcance vertical do
 jato de água. Considere a aceleração da gravidade de
 10 m s-2.
 O resultado que eles obtiveram foi de
+1,50 m.
+2,25 m.
+4,00 m.
+4,50 m.
+5,00 m.
 
 ## Questão 101
 
 - Idioma: geral
-- Palavras: 181
+- Palavras: 191
 - Tem imagem: sim
 
 ### Texto extraído
@@ -826,11 +889,16 @@ redução de aproximadamente 50% da concentração
 de sacarose nesse tempo, para cada 1,0 mg L−1 de
 microrganismos presentes na cana-de-açúcar.
 Qual tipo de cana-de-açúcar deve ser escolhido?
+RB72
+RB84
+RB92
+SP79
+SP80
 
 ## Questão 102
 
 - Idioma: geral
-- Palavras: 89
+- Palavras: 132
 - Tem imagem: não
 
 ### Texto extraído
@@ -873,11 +941,18 @@ coletadas amostras de secreções do indivíduo. Uma etapa
 que antecede a reação de PCR precisa ser realizada para
 permitir a amplificação do material genético do vírus.
 Essa etapa deve ser realizada para
+concentrar o RNA viral para otimizar a técnica.
+identificar nas amostras anticorpos anti-SARS-CoV-2.
+proliferar o vírus em culturas, aumentando a carga viral.
+purificar ácidos nucleicos virais, facilitando a ação da
+enzima.
+obter moléculas de cDNA viral por meio da transcrição
+reversa.
 
 ## Questão 103
 
 - Idioma: geral
-- Palavras: 181
+- Palavras: 211
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1050,11 +1125,56 @@ P
 f e
 
 N
+CM
+
+F
+
+P
+
+f e
+
+N
+CM
+
+F
+
+N
+
+P
+
+f e
+CM
+
+F
+
+P
+
+f e
+
+N
+CM
+
+F
+
+P
+
+f e
+
+N
+CM
+
+F
+
+P
+
+f e
+
+N
 
 ## Questão 104
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 110
 - Tem imagem: não
 
 ### Texto extraído
@@ -1099,11 +1219,16 @@ indivíduo aumente a sua capacidade de realização de
 exercícios físicos.
 Esse tipo de doping está diretamente relacionado ao
 aumento da
+frequência cardíaca.
+capacidade pulmonar.
+massa muscular do indivíduo.
+atividade anaeróbica da musculatura.
+taxa de transporte de oxigênio pelo sangue.
 
 ## Questão 105
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 216
 - Tem imagem: não
 
 ### Texto extraído
@@ -1153,11 +1278,25 @@ quanto a colisão com os pneus, mas que não permite a
 volta do carro após a colisão.
 Comparando as duas situações, como ficam a força média
 exercida sobre o carro e a energia mecânica dissipada?
+A força é maior na colisão com a barreira de pneus, e
+a energia dissipada é maior na colisão com a barreira
+de blocos.
+A força é maior na colisão com a barreira de blocos, e
+a energia dissipada é maior na colisão com a barreira
+de pneus.
+A força é maior na colisão com a barreira de blocos, e
+a energia dissipada é a mesma nas duas situações.
+A força é maior na colisão com a barreira de pneus, e
+a energia dissipada é maior na colisão com a barreira
+de pneus.
+A força é maior na colisão com a barreira de blocos, e
+a energia dissipada é maior na colisão com a barreira
+de blocos.
 
 ## Questão 106
 
 - Idioma: geral
-- Palavras: 167
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -1322,11 +1461,18 @@ CH3 H
 NH3
 +
 COOH
+CH3
+CH3 H
+NH3
++
+COOH
+S
+H
 
 ## Questão 107
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 133
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1482,11 +1628,16 @@ H
 +
 +
 Nessa conversão de polissacarídeos, a função do íon H+ é
+dissolver os reagentes.
+deslocar o equilíbrio químico.
+aumentar a velocidade da reação.
+mudar a constante de equilíbrio da reação.
+formar ligações de hidrogênio com o polissacarídeo.
 
 ## Questão 108
 
 - Idioma: geral
-- Palavras: 101
+- Palavras: 121
 - Tem imagem: não
 
 ### Texto extraído
@@ -1551,11 +1702,16 @@ NaO
 (massa molar: 150 g mol
 1)
 A concentração de ácido tartárico no vinho analisado é mais próxima de:
+1,8 g L−1
+2,4 g L−1
+3,6 g L−1
+4,8 g L−1
+9,6 g L−1
 
 ## Questão 109
 
 - Idioma: geral
-- Palavras: 89
+- Palavras: 99
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1612,11 +1768,16 @@ Massa residual de 131I (µg)
 3,6
 Após o período de 40 dias, a massa residual desse
 isótopo é mais próxima de
+2,4 µg.
+1,5 µg.
+0,8 µg.
+0,4 µg.
+0,2 µg.
 
 ## Questão 110
 
 - Idioma: geral
-- Palavras: 182
+- Palavras: 225
 - Tem imagem: não
 
 ### Texto extraído
@@ -1688,11 +1849,19 @@ machos. Os embriões se desenvolvem no interior do
 saco vocal do macho até a metamorfose, quando saem
 através da boca do pai.
 Os padrões descritos evidenciam que
+as fêmeas influenciam o comportamento dos machos.
+o cuidado parental é necessário para o desenvolvimento.
+o grau de evolução determina o comportamento
+reprodutivo.
+o sucesso reprodutivo pode ser garantido por
+estratégias diferentes.
+o ambiente induz modificação na produção do número
+de gametas femininos.
 
 ## Questão 111
 
 - Idioma: geral
-- Palavras: 122
+- Palavras: 133
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1776,11 +1945,16 @@ Dia
 10/10
 Próximo a que região se situa a residência onde as placas
 foram instaladas?
+Trópico de Capricórnio.
+Trópico de Câncer.
+Polo Norte.
+Polo Sul.
+Equador.
 
 ## Questão 112
 
 - Idioma: geral
-- Palavras: 109
+- Palavras: 119
 - Tem imagem: não
 
 ### Texto extraído
@@ -1833,11 +2007,16 @@ s
 e despreza
 forças dissipativas.
 Qual é a tensão de ruptura da corda escolhida?
+120 N
+300 N
+360 N
+450 N
+900 N
 
 ## Questão 113
 
 - Idioma: geral
-- Palavras: 132
+- Palavras: 183
 - Tem imagem: não
 
 ### Texto extraído
@@ -1893,11 +2072,21 @@ zircônia (ZrO2) e alumina (Al2O3) sobre a superfície do
 objeto que se deseja proteger.
 Essa nanotecnologia aplicada na proteção contra a
 corrosão se baseia no(a)
+proteção catódica, que utiliza um metal fortemente
+redutor.
+uso de metais de sacrifício, que se oxidam no lugar
+do ferro.
+passivação do ferro, que fica revestido pelo seu
+próprio óxido.
+efeito de barreira, que impede o contato com o agente
+oxidante.
+galvanização, que usa outros metais de menor
+potencial de redução.
 
 ## Questão 114
 
 - Idioma: geral
-- Palavras: 73
+- Palavras: 115
 - Tem imagem: não
 
 ### Texto extraído
@@ -1938,11 +2127,20 @@ de uma folha da trapoeraba-roxa foi imerso em ambiente
 hipotônico e, logo em seguida, foi colocado em uma
 lâmina e observado em microscópio óptico.
 Durante a observação desse corte, foi possível identificar o(a)
+acúmulo do solvente com fragmentação da organela.
+rompimento da membrana celular com liberação do
+citosol.
+aumento do vacúolo com diluição do pigmento no seu
+interior.
+quebra da parede celular com extravasamento do
+pigmento.
+murchamento da célula com expulsão do pigmento
+do vacúolo.
 
 ## Questão 115
 
 - Idioma: geral
-- Palavras: 172
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -2023,11 +2221,16 @@ Concreto
 0,8
 A razão entre as variações de temperatura nas áreas
 concretada e alagada é mais próxima de
+1,0.
+2,1.
+2,5.
+5,3.
+13,1.
 
 ## Questão 116
 
 - Idioma: geral
-- Palavras: 135
+- Palavras: 145
 - Tem imagem: não
 
 ### Texto extraído
@@ -2104,11 +2307,16 @@ e densidade de 1 000 g
 L .
 O disjuntor adequado para a proteção dessa ducha é
 especificado por:
+60 A
+30 A
+20 A
+10 A
+5 A
 
 ## Questão 117
 
 - Idioma: geral
-- Palavras: 49
+- Palavras: 58
 - Tem imagem: não
 
 ### Texto extraído
@@ -2145,11 +2353,16 @@ Gás
 Ácido
 Mármore
 O gás obtido no experimento é o:
+H2
+O2
+CO2
+CO
+Cl2
 
 ## Questão 118
 
 - Idioma: geral
-- Palavras: 115
+- Palavras: 122
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2213,11 +2426,16 @@ Fêmeas
 controle
 Com base nas informações do texto, qual é o hormônio
 cujas concentrações estão representadas na figura?
+Estrogênio.
+Feromônio.
+Testosterona.
+Somatotrofina.
+Hormônio folículo estimulante.
 
 ## Questão 119
 
 - Idioma: geral
-- Palavras: 92
+- Palavras: 102
 - Tem imagem: não
 
 ### Texto extraído
@@ -2248,11 +2466,16 @@ posição correta gera uma f.e.m. (força eletromotriz) de 1,5 V. Uma pessoa, ao
 equívoco de inverter a posição de uma das pilhas. Considere que as pilhas mantêm contato independentemente da
 posição.
 Com esse equívoco, qual é a intensidade de corrente que passa pela lâmpada ao se ligar a lanterna?
+0,25 A
+0,33 A
+0,75 A
+1,00 A
+1,33 A
 
 ## Questão 120
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 104
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2305,11 +2528,16 @@ min
 3,6
 3,1
 Os diferentes resultados dos ensaios justificam-se pelo(a)
+variação do pH do meio.
+aumento da energia de ativação.
+consumo da enzima durante o ensaio.
+diminuição da concentração do substrato.
+modificação da estrutura tridimensional da enzima.
 
 ## Questão 121
 
 - Idioma: geral
-- Palavras: 108
+- Palavras: 113
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2362,11 +2590,16 @@ Interfere na síntese de uracila
 Impede a síntese de RNA
 Qual dos antimicrobianos deve ser utilizado para curar uma infecção causada por um fungo sem afetar as bactérias
 da microbiota normal do organismo?
+1
+2
+3
+4
+5
 
 ## Questão 122
 
 - Idioma: geral
-- Palavras: 92
+- Palavras: 152
 - Tem imagem: não
 
 ### Texto extraído
@@ -2415,11 +2648,21 @@ o método foi usado a partir de uma toxina animal na sua
 forma recombinante, ou seja, produzida em laboratório
 por um fungo geneticamente modificado.
 Esse novo medicamento apresenta potencial aplicação para
+impedir a formação de trombos, típicos em alguns
+casos de acidente vascular cerebral.
+tratar consequências da anemia profunda, em razão da
+perda de grande volume de sangue.
+evitar a manifestação de urticárias, comumente
+relacionadas a processos alérgicos.
+reduzir o inchaço dos linfonodos, parte da resposta
+imunitária de diferentes infecções.
+regular a oscilação da pressão arterial, característica
+dos quadros de hipertensão.
 
 ## Questão 123
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 141
 - Tem imagem: não
 
 ### Texto extraído
@@ -2467,11 +2710,19 @@ a mesma massa solar, de modo que o seu horizonte de
 eventos seja de aproximadamente 3,0 km.
 Após a substituição descrita, o que aconteceria aos
 planetas do Sistema Solar?
+Eles se moveriam em órbitas espirais, aproximando-se
+sucessivamente do Buraco Negro.
+Eles oscilariam aleatoriamente em torno de suas
+órbitas elípticas originais.
+Eles se moveriam em direção ao centro do Buraco
+Negro.
+Eles passariam a precessionar mais rapidamente.
+Eles manteriam suas órbitas inalteradas.
 
 ## Questão 124
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 118
 - Tem imagem: não
 
 ### Texto extraído
@@ -2520,11 +2771,16 @@ dada à toxicidade do ozônio, à formação de subprodutos, ao
 nível de concentração segura e às precauções necessárias.
 O grande risco envolvido no emprego indiscriminado
 dessa substância deve-se à sua ação química como
+catalisador.
+oxidante.
+redutor.
+ácido.
+base.
 
 ## Questão 125
 
 - Idioma: geral
-- Palavras: 75
+- Palavras: 84
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2577,11 +2833,16 @@ Amostras de células corporais
 Entre mulheres heterozigotas para doenças determinadas
 por genes recessivos ligados ao sexo, essa inativação
 tem como consequência a ocorrência de
+pleiotropia.
+mutação gênica.
+interação gênica.
+penetrância incompleta.
+expressividade variável.
 
 ## Questão 126
 
 - Idioma: geral
-- Palavras: 67
+- Palavras: 72
 - Tem imagem: não
 
 ### Texto extraído
@@ -2618,11 +2879,16 @@ as principais etapas são, nesta ordem: coagulação,
 decantação, filtração, desinfecção e fluoretação.
 Qual é a etapa de retirada de grande parte desses
 sólidos?
+Coagulação.
+Decantação.
+Filtração.
+Desinfecção.
+Fluoretação.
 
 ## Questão 127
 
 - Idioma: geral
-- Palavras: 51
+- Palavras: 63
 - Tem imagem: não
 
 ### Texto extraído
@@ -2658,11 +2924,16 @@ Esse calor é importante para aquecer o organismo,
 permitindo seu despertar.
 Em qual etapa do metabolismo energético celular a
 termogenina interfere?
+Glicólise.
+Fermentação lática.
+Ciclo do ácido cítrico.
+Oxidação do piruvato.
+Fosforilação oxidativa.
 
 ## Questão 128
 
 - Idioma: geral
-- Palavras: 157
+- Palavras: 172
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2733,11 +3004,16 @@ s
 575
 Nesse teste, a ordenação das rotas indicadas pelo
 aplicativo será:
+1, 2, 3.
+1, 3, 2.
+2, 1, 3.
+3, 1, 2.
+3, 2, 1.
 
 ## Questão 129
 
 - Idioma: geral
-- Palavras: 96
+- Palavras: 106
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2826,11 +3102,19 @@ principalmente, por proporcionar uma diminuição do pH
 do solo e da atmosfera, alterando a concentração dos
 compostos presentes nesse ciclo.
 Em um solo de menor pH, será favorecida a formação de:
+N2
+NH3
+NH4
++
+NO2
+−
+NO3
+−
 
 ## Questão 130
 
 - Idioma: geral
-- Palavras: 69
+- Palavras: 99
 - Tem imagem: não
 
 ### Texto extraído
@@ -2866,11 +3150,17 @@ fótons incidentes. A energia dos fótons que compõem
 os raios luminosos está associada à sua frequência, e a
 intensidade, ao número de fótons incidentes.
 Um animal que tem bastonetes mais sensíveis irá
+apresentar daltonismo.
+perceber cores fora do espectro do visível.
+enxergar bem em ambientes mal iluminados.
+necessitar de mais luminosidade para enxergar.
+fazer uma pequena distinção de cores em ambientes
+iluminados.
 
 ## Questão 131
 
 - Idioma: geral
-- Palavras: 174
+- Palavras: 183
 - Tem imagem: não
 
 ### Texto extraído
@@ -2974,11 +3264,16 @@ Eugenol
 Cinamaldeído
 (no óleo de canela)
 A característica estrutural dessa família de compostos é a presença de
+ramificações.
+insaturações.
+anel benzênico.
+átomos de oxigênio.
+carbonos assimétricos.
 
 ## Questão 132
 
 - Idioma: geral
-- Palavras: 109
+- Palavras: 141
 - Tem imagem: não
 
 ### Texto extraído
@@ -3012,11 +3307,16 @@ bactéria induz a redução da carga viral no mosquito e, consequentemente, o n�
 sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus
 também precisa entrar nas células para se reproduzir, ambos necessitarão de recursos comuns.
 Essa tecnologia utilizada no combate à dengue consiste na
+predação do vírus pela bactéria.
+esterilização de mosquitos infectados.
+alteração no genótipo do mosquito pela bactéria.
+competição do vírus e da bactéria no hospedeiro.
+inserção de material genético do vírus na bactéria.
 
 ## Questão 133
 
 - Idioma: geral
-- Palavras: 132
+- Palavras: 146
 - Tem imagem: não
 
 ### Texto extraído
@@ -3068,11 +3368,16 @@ estas passam a destruir todas as células com a molécula
 tumoral, como se lutassem apenas contra o protozoário.
 Qual o mecanismo utilizado no experimento para enganar
 as células de defesa, fazendo com que ataquem o tumor?
+Autoimunidade.
+Hipersensibilidade.
+Ativação da resposta inata.
+Apresentação de antígeno específico.
+Desencadeamento de processo anti-inflamatório.
 
 ## Questão 134
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 150
 - Tem imagem: não
 
 ### Texto extraído
@@ -3161,11 +3466,16 @@ Sinal
 B
 A distância L, em metro, entre o barco e a geleira é mais
 próxima de
+339 000.
+78 900.
+14 400.
+5 240.
+100.
 
 ## Questão 135
 
 - Idioma: geral
-- Palavras: 106
+- Palavras: 111
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3212,11 +3522,16 @@ e deve atingir a marca de 1 milhão de casas utilizando
 a “luz engarrafada”.
 Que fenômeno óptico explica o funcionamento da “luz
 engarrafada”?
+Difração.
+Absorção.
+Polarização.
+Reflexão.
+Refração.
 
 ## Questão 136
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 112
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3265,11 +3580,16 @@ T (ºC)
 t (h)
 Quantas vezes a velocidade do pistão se anulou durante
 as 10 horas de funcionamento?
+1
+2
+3
+4
+5
 
 ## Questão 137
 
 - Idioma: geral
-- Palavras: 73
+- Palavras: 78
 - Tem imagem: não
 
 ### Texto extraído
@@ -3308,11 +3628,16 @@ de qualquer um dos dois times vencer é sempre 1
 2 .
 Qual é a probabilidade de o time campeão ser aquele que
 venceu a primeira partida da World Series?
+35
+40
+42
+44
+52
 
 ## Questão 138
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 82
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3349,11 +3674,16 @@ Jan.  Fev.  Mar.  Abr.  Maio  Jun.  Jul.   Ago.  Set.  Out.  Nov.  Dez.
 Receitas             Despesas
 Qual é a mediana, em milhão de reais, dos valores dos
 lucros apurados pela empresa nesse ano?
+1,5
+2,0
+2,9
+3,0
+5,5
 
 ## Questão 139
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 136
 - Tem imagem: não
 
 ### Texto extraído
@@ -3402,11 +3732,16 @@ no local a ele destinado na nova cozinha, seguindo as
 instruções do fabricante.
 Esse refrigerador tem altura e largura máximas, em
 metro, respectivamente, iguais a
+1,80 e 0,60.
+1,80 e 0,70.
+1,90 e 0,80.
+2,00 e 0,90.
+2,00 e 1,00.
 
 ## Questão 140
 
 - Idioma: geral
-- Palavras: 167
+- Palavras: 172
 - Tem imagem: não
 
 ### Texto extraído
@@ -3465,11 +3800,16 @@ disputar a partida seguinte a partir da quinta-feira da
 mesma semana.
 O número mínimo de dias necessários para a realização
 desse torneio é
+22.
+25.
+28.
+48.
+64.
 
 ## Questão 141
 
 - Idioma: geral
-- Palavras: 207
+- Palavras: 215
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3574,11 +3914,16 @@ D
 E
 E
 46 45
++
+46 45
+46 45
+46 45
+46 45
 
 ## Questão 142
 
 - Idioma: geral
-- Palavras: 98
+- Palavras: 103
 - Tem imagem: não
 
 ### Texto extraído
@@ -3621,6 +3966,11 @@ opcionais disponíveis.
 Para ser fiel à divulgação feita, a quantidade mínima
 de cores que a montadora deverá disponibilizar a seus
 clientes é
+8.
+9.
+11.
+18.
+24.
 
 ## Questão 143
 
@@ -3678,7 +4028,7 @@ E
 ## Questão 144
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 147
 - Tem imagem: não
 
 ### Texto extraído
@@ -3741,11 +4091,16 @@ a diferença 11 − R.
 Considere o número de uma agência bancária cujos
 quatro primeiros dígitos são 0100.
 Qual é o dígito verificador N5 dessa agência bancária?
+0
+6
+7
+8
+9
 
 ## Questão 145
 
 - Idioma: geral
-- Palavras: 136
+- Palavras: 146
 - Tem imagem: não
 
 ### Texto extraído
@@ -3794,11 +4149,16 @@ A quantidade de moedas de ouro que a empresa deverá
 inserir ao pacote especial, para que seja mantida a mesma
 proporção existente entre as quantidades de gemas e de
 moedas de ouro contidas no pacote básico, é
+50 000.
+100 000.
+200 000.
+300 000.
+400 000.
 
 ## Questão 146
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 126
 - Tem imagem: não
 
 ### Texto extraído
@@ -3845,11 +4205,16 @@ em torno deles e de modo que o número de voltas seja o
 maior possível.
 A soma do número de voltas em torno dos dois circuitos,
 no segundo dia, será
+10.
+13.
+14.
+15.
+16.
 
 ## Questão 147
 
 - Idioma: geral
-- Palavras: 317
+- Palavras: 324
 - Tem imagem: não
 
 ### Texto extraído
@@ -3954,11 +4319,16 @@ O aumento na quantidade de compradores, em
 consequência dessa segunda divulgação, em relação
 ao que foi registrado com a primeira divulgação, foi
 classificado como
+não satisfatório.
+regular.
+bom.
+muito bom.
+excelente.
 
 ## Questão 148
 
 - Idioma: geral
-- Palavras: 65
+- Palavras: 77
 - Tem imagem: não
 
 ### Texto extraído
@@ -4004,11 +4374,18 @@ de F.
 Indique por LE e LF suas respectivas luminosidades.
 A relação entre as luminosidades dessas duas estrelas é
 dada por
+L
+L
+L
+L
+LE = LF
+LE = 4LF
+LE = 8LF
 
 ## Questão 149
 
 - Idioma: geral
-- Palavras: 87
+- Palavras: 92
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4063,11 +4440,16 @@ Frequência
 100
 O número que representa a mediana da quantidade de
 crianças por família nessa região é
+1,0.
+1,5.
+1,9.
+2,1.
+2,5.
 
 ## Questão 150
 
 - Idioma: geral
-- Palavras: 181
+- Palavras: 210
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4144,11 +4526,16 @@ ginásios, em relação aos pisos das quadras, são:
 •	 ginásio IV: 21 m;
 •	 ginásio V: 40 m.
 O saque desse atleta foi invalidado
+apenas no ginásio I.
+apenas nos ginásios I e II.
+apenas nos ginásios I, II e III.
+apenas nos ginásios I, II, III e IV.
+em todos os ginásios.
 
 ## Questão 151
 
 - Idioma: geral
-- Palavras: 123
+- Palavras: 155
 - Tem imagem: não
 
 ### Texto extraído
@@ -4183,11 +4570,16 @@ para evitar desidratação.
 Seguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após
 terminar seus exercícios físicos.
 Para que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou
+30 minutos ou menos.
+mais de 35 e menos de 45 minutos.
+mais de 45 e menos de 55 minutos.
+mais de 60 e menos de 70 minutos.
+70 minutos ou mais.
 
 ## Questão 152
 
 - Idioma: geral
-- Palavras: 248
+- Palavras: 253
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4277,11 +4669,16 @@ ampliando-se ao máximo a sala para os fundos (área de instalação de novas po
 aceitável da norma da ABNT. A intenção é aumentar, ao máximo, a quantidade de poltronas da sala, instalando-se
 novas unidades, iguais às já instaladas.
 Quantas fileiras de poltronas a sala comportará após essa ampliação?
+26
+27
+28
+29
+35
 
 ## Questão 153
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 104
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4326,11 +4723,16 @@ volume 19% menor, no mesmo formato de cone circular
 reto com altura de 10 cm.
 Para isso, a empresa produzirá esses novos chocolates
 com medida do raio da base, em centímetro, igual a
+1,52.
+3,24.
+3,60.
+6,48.
+7,20.
 
 ## Questão 154
 
 - Idioma: geral
-- Palavras: 67
+- Palavras: 77
 - Tem imagem: não
 
 ### Texto extraído
@@ -4368,11 +4770,16 @@ do Cadastro Geral de Empregados e Desempregados
 Emprego (MTE). Segundo o Caged, o número de vagas
 De acordo com as informações dadas, o número de
 vagas criadas em janeiro de 2012 foi
+16 514.
+86 700.
+115 600.
+441 343.
+448 568.
 
 ## Questão 155
 
 - Idioma: geral
-- Palavras: 175
+- Palavras: 180
 - Tem imagem: não
 
 ### Texto extraído
@@ -4459,6 +4866,25 @@ da manhã.
 De quantas maneiras diferentes essa pessoa poderá
 escolher 2 desses apartamentos para compra nas
 condições desejadas?
+9
+!
+!
+9
+!
+!
+!
+9
+!
+!
+!
+9
+!
+!
+!
+9
+!
+!
+!
 
 ## Questão 156
 
@@ -4527,7 +4953,7 @@ E
 ## Questão 157
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 142
 - Tem imagem: não
 
 ### Texto extraído
@@ -4584,11 +5010,38 @@ com estes critérios:
 Represente por q a quantidade de peças vendidas no mês por esse funcionário, e por S(q) o seu salário mensal,
 em real, nesse mês.
 A expressão algébrica que descreve S(q) em função de q é
+S(q) = 675 + 12q
+S(q) = 325 + 12q
+S(q) = 675 + 7q
+S q
+q
+q
+q
+q
+( )
+,
+,
+625
+925
+se
+se
+S q
+q
+q
+q
+q
+( )
+,
+,
+625
+575
+se
+se
 
 ## Questão 158
 
 - Idioma: geral
-- Palavras: 172
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -4635,11 +5088,16 @@ com diferentes períodos de intensificação das propagandas:
 A sugestão dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o
 mês em que, segundo o modelo, há a maior quantidade de infectados. A sugestão foi aceita.
 A proposta escolhida foi a
+I.
+II.
+III.
+IV.
+V.
 
 ## Questão 159
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 148
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4668,6 +5126,11 @@ diferentes de treinos: treino T1, treino T2, treino T3, treino T4 e treino T5. A
 A letra R significa repouso. Após completar a sequência de treinamentos, o atleta começa novamente a sequência a
 partir do treino T1 e segue a ordem descrita. Após 24 semanas completas de treinamento, se dará o início das competições.
 A sequência de treinamentos que o atleta realizará na 24ª semana de treinos é
+T3  R  T4  R  R  T5  R.
+R  T3  R  T4  R  R  T5.
+R  T4  R  R  T5  R  T1.
+R  R  T5  R  T1  R  R.
+R  T5  R  T1  R  R  T2.
 
 ## Questão 160
 
@@ -4727,7 +5190,7 @@ E
 ## Questão 161
 
 - Idioma: geral
-- Palavras: 93
+- Palavras: 98
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4792,11 +5255,16 @@ QUARTO
 18,4 cm
 5 cm
 A medida real da área da varanda, em metro quadrado, é
+33,40.
+66,80.
+89,24.
+133,60.
+534,40.
 
 ## Questão 162
 
 - Idioma: geral
-- Palavras: 125
+- Palavras: 135
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4851,11 +5319,16 @@ Dias
 Infantil
 Ao final do trigésimo dia, quanto faltará no volume de vendas,
 em real, para que a meta fixada para o mês seja alcançada?
+5 000
+7 000
+11 000
+18 000
+29 000
 
 ## Questão 163
 
 - Idioma: geral
-- Palavras: 123
+- Palavras: 128
 - Tem imagem: não
 
 ### Texto extraído
@@ -4906,11 +5379,16 @@ para os doutores.
 Mantido o número atual de professores com suas atuais
 titulações, o aumento salarial, em porcentagem, a ser
 concedido aos doutores deverá ser de, no máximo,
+14,4.
+20,7.
+22,0.
+30,0.
+37,5.
 
 ## Questão 164
 
 - Idioma: geral
-- Palavras: 57
+- Palavras: 62
 - Tem imagem: não
 
 ### Texto extraído
@@ -4943,11 +5421,16 @@ de inseticida, que duram 60 dias se o borrifador permanecer
 ligado ininterruptamente e for acionado a cada 48 minutos.
 A quantidade de inseticida que é liberada a cada
 acionamento do borrifador, em mililitro, é
+0,125.
+0,200.
+4,800.
+6,000.
+12,000.
 
 ## Questão 165
 
 - Idioma: geral
-- Palavras: 98
+- Palavras: 105
 - Tem imagem: não
 
 ### Texto extraído
@@ -4986,11 +5469,16 @@ que 2 de seus anos correspondam a 1 ano terrestre.
 Considere que 1 ano terrestre tem 365 de seus dias.
 No planeta Z, seu ano corresponderia a quantos de seus
 dias?
+2,5
+10,0
+730,0
+13 322,5
+53 290,0
 
 ## Questão 166
 
 - Idioma: geral
-- Palavras: 96
+- Palavras: 101
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5037,11 +5525,16 @@ Tempo (s)
 Qual o número de ultrapassagens, após o início da
 competição, efetuadas pelo veículo que chegou em
 último lugar?
+0
+1
+2
+3
+4
 
 ## Questão 167
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 131
 - Tem imagem: não
 
 ### Texto extraído
@@ -5086,11 +5579,16 @@ pagar, segundo sua opção, percebeu uma diferença entre
 seu cálculo e o valor que lhe foi apresentado.
 O valor apresentado pela loja, comparado ao valor
 calculado pela cliente, foi
+R$ 2,00 menor.
+R$ 100,00 menor.
+R$ 200,00 menor.
+R$ 42,00 maior.
+R$ 80,00 maior.
 
 ## Questão 168
 
 - Idioma: geral
-- Palavras: 109
+- Palavras: 114
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5141,11 +5639,16 @@ Para isso, empregam-se as letras E, F e D para indicar
 respectivamente.
 A sequência de letras que descreve o caminho poligonal
 destacado é
+DDEFDDEEFFD.
+DFEFDDDEFFD.
+DFEFDDEEFFD.
+EFDFEEDDFFE.
+EFDFEEEDFFE.
 
 ## Questão 169
 
 - Idioma: geral
-- Palavras: 143
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -5210,11 +5713,16 @@ Uma pessoa pretende comprar nessa loja o modelo
 de caixa-d’água que ofereça a maior capacidade
 volumétrica.
 O modelo escolhido deve ser o
+I.
+II.
+III.
+IV.
+V.
 
 ## Questão 170
 
 - Idioma: geral
-- Palavras: 115
+- Palavras: 120
 - Tem imagem: não
 
 ### Texto extraído
@@ -5301,11 +5809,16 @@ pela razão entre o valor mensal de aluguel e o valor de
 mercado desse imóvel.
 Com base nos dados fornecidos, em que ano a
 rentabilidade do aluguel foi maior?
+2005
+2007
+2009
+2011
+2013
 
 ## Questão 171
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 121
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5368,11 +5881,16 @@ equipe campeã e qual o melhor jogador da temporada.
 O jogador que precisa fazer a menor quantidade de
 pontos no quinto jogo, para igualar a média de pontos do
 melhor jogador da temporada passada, é o
+I.
+II.
+III.
+IV.
+V.
 
 ## Questão 172
 
 - Idioma: geral
-- Palavras: 147
+- Palavras: 152
 - Tem imagem: não
 
 ### Texto extraído
@@ -5429,11 +5947,16 @@ projetos, são:
 •	 projeto IV: 1,5 m, 15,0 m e 4,0 m;
 •	 projeto V: 2,5 m, 3,0 m e 12,0 m.
 O projeto que o casal deverá escolher será o
+I.
+II.
+III.
+IV.
+V.
 
 ## Questão 173
 
 - Idioma: geral
-- Palavras: 68
+- Palavras: 76
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5490,11 +6013,16 @@ Letras
 Pedagogia
 Qual foi o número total de candidatos inscritos nesse
 processo seletivo?
+200
+400
+1 200
+1 235
+7 200
 
 ## Questão 174
 
 - Idioma: geral
-- Palavras: 108
+- Palavras: 117
 - Tem imagem: não
 
 ### Texto extraído
@@ -5539,11 +6067,16 @@ admite-se que não ocorre perda de material durante o
 processo de derretimento.
 Quantas dessas esferas poderão ser obtidas a partir de
 cada peça cilíndrica?
+800
+1 200
+2 400
+4 800
+6 400
 
 ## Questão 175
 
 - Idioma: geral
-- Palavras: 41
+- Palavras: 56
 - Tem imagem: não
 
 ### Texto extraído
@@ -5574,11 +6107,16 @@ em bilheteria, um estudante escreveu corretamente o
 número que representa essa quantia, com todos os seus
 algarismos.
 O número escrito pelo estudante foi
+135 000,00.
+1 350 000,00.
+13 500 000,00.
+135 000 000,00.
+1 350 000 000,00.
 
 ## Questão 176
 
 - Idioma: geral
-- Palavras: 176
+- Palavras: 181
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5657,11 +6195,16 @@ cidades, pelas Rodovias 001 e 002, passando pelo ponto
 de conexão, seja a menor possível.
 Dadas as exigências do projeto, qual das localizações
 sugeridas deve ser a escolhida para o ponto de conexão?
+I
+II
+III
+IV
+V
 
 ## Questão 177
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 95
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5748,11 +6291,16 @@ V
 0,00
 Se a pessoa pretende gastar o mínimo possível com essa
 contratação, irá contratar o operário
+I.
+II.
+III.
+IV.
+V.
 
 ## Questão 178
 
 - Idioma: geral
-- Palavras: 83
+- Palavras: 88
 - Tem imagem: não
 
 ### Texto extraído
@@ -5793,11 +6341,16 @@ porções da receita-base de massa necessário para
 produzir os docinhos dessa encomenda.
 Quantas porções da receita-base de massa ela deve
 preparar para atender esse cliente?
+2
+3
+6
+12
+24
 
 ## Questão 179
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 132
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5867,6 +6420,11 @@ relação às esperanças de vida de 2012 e de 2014.
 Caso a suposição feita tenha sido confirmada, a
 esperança de vida ao nascer no Brasil no ano de 2014
 terá sido, em ano, igual a
+74,23.
+74,51.
+75,07.
+75,23.
+78,49.
 
 ## Questão 180
 

@@ -3,7 +3,7 @@
 ## Questão 1
 
 - Idioma: inglês
-- Palavras: 19
+- Palavras: 57
 - Tem imagem: sim
 
 ### Texto extraído
@@ -22,11 +22,16 @@ E 	 censurar a mulher pelo uso de determinadas palavras.
 
 Os recursos usados nesse pôster de divulgação de uma
 campanha levam o leitor a refletir sobre a necessidade de
+criticar o tipo de tratamento dado à mulher.
+rever o desempenho da mulher no trabalho.
+questionar a sobrecarga de atribuições da mulher.
+analisar as pesquisas acerca dos direitos da mulher.
+censurar a mulher pelo uso de determinadas palavras.
 
 ## Questão 2
 
 - Idioma: inglês
-- Palavras: 27
+- Palavras: 54
 - Tem imagem: sim
 
 ### Texto extraído
@@ -47,11 +52,16 @@ E 	 desvalorizar costumes de algumas sociedades.
 Nesse pôster de divulgação de uma campanha que
 aborda a diversidade e a inclusão, a interação dos
 elementos verbais e não verbais faz referência ao ato de
+estereotipar povos de certas culturas.
+discriminar hábitos de grupos minoritários.
+banir imigrantes de determinadas origens.
+julgar padrões de beleza de diversas etnias.
+desvalorizar costumes de algumas sociedades.
 
 ## Questão 3
 
 - Idioma: inglês
-- Palavras: 185
+- Palavras: 222
 - Tem imagem: não
 
 ### Texto extraído
@@ -121,11 +131,19 @@ O escritor nigeriano Chinua Achebe traz uma reflexão
 sobre a situação dos refugiados em um cenário pós-guerra
 civil em seu país. Essa reflexão é construída no poema
 por meio da representação de uma mãe, explorando a(s)
+demonstração de orgulho por não precisar pedir
+doações.
+descrições artísticas detalhadas de uma obra
+conhecida.
+aceitação de um diagnóstico de doença terminal do
+filho.
+consternação ao visitar o túmulo do filho recém-falecido.
+impressões sensoriais experimentadas no ambiente.
 
 ## Questão 4
 
 - Idioma: inglês
-- Palavras: 86
+- Palavras: 122
 - Tem imagem: não
 
 ### Texto extraído
@@ -162,11 +180,16 @@ And of course there must be something wrong
 In wanting to silence any song.
 No poema de Robert Frost, as palavras “fault” e “blame”
 revelam por parte do eu lírico uma
+culpa por não poder cuidar do pássaro.
+atitude errada por querer matar o pássaro.
+necessidade de entender o silêncio do pássaro.
+sensibilização com relação à natureza do pássaro.
+irritação quanto à persistência do canto do pássaro.
 
 ## Questão 5
 
 - Idioma: inglês
-- Palavras: 233
+- Palavras: 258
 - Tem imagem: não
 
 ### Texto extraído
@@ -239,11 +262,16 @@ A passagem do romance da escritora nigeriana traz
 um diálogo entre duas mulheres negras: a cabeleireira,
 Aisha, e a cliente, Ifemelu. O posicionamento da cliente é
 sustentado por argumentos que
+reforçam um padrão de beleza.
+retratam um conflito de gerações.
+revelam uma atitude de resistência.
+demonstram uma postura de imaturidade.
+evidenciam uma mudança de comportamento.
 
 ## Questão 1
 
 - Idioma: espanhol
-- Palavras: 105
+- Palavras: 179
 - Tem imagem: não
 
 ### Texto extraído
@@ -305,11 +333,23 @@ la decepción de la espera.
 Rubén Blades é um compositor panamenho de canções
 socialmente engajadas. O título Pablo Pueblo, associado ao
 conteúdo da letra da canção, revela uma crítica social ao
+contrapor a individualidade de um sujeito a uma
+estrutura social marcada pela decepção na atuação
+política.
+demonstrar que o problema sofrido pelo indivíduo
+atinge toda a comunidade.
+relativizar a importância que se dá ao sofrimento
+individual em uma estrutura social baseada na
+exploração.
+descrever a vida de um sujeito que nunca resolve
+suas inquietações e, por isso, mantém-se silencioso.
+usar um apelido jocoso para designar a atuação de
+um indivíduo em seu próprio bairro.
 
 ## Questão 2
 
 - Idioma: espanhol
-- Palavras: 252
+- Palavras: 302
 - Tem imagem: não
 
 ### Texto extraído
@@ -403,11 +443,24 @@ grandes dilemas dos intelectuais. Ao ponderar sobre
 essa temática, o autor, um  dos grandes críticos e literatos
 latino-americanos da atualidade, leva o leitor a perceber
 que
+o compromisso político afasta o artista da criação.
+os costumes sociais governam a linguagem e as
+atitudes das pessoas.
+o compromisso ideológico de alguns intelectuais está
+refletido em suas obras.
+a complexidade relacionada ao conceito de liberdade
+impede o compromisso.
+os
+intelectuais
+latino-americanos
+têm
+um
+posicionamento acrítico perante o poder.
 
 ## Questão 3
 
 - Idioma: espanhol
-- Palavras: 241
+- Palavras: 299
 - Tem imagem: não
 
 ### Texto extraído
@@ -485,11 +538,21 @@ queda otra cosa que romper a reír. Aunque sólo sea de
 simple desesperación. Brillante, magistral incluso.
 Nessa resenha crítica acerca do filme Relatos Salvajes,
 o autor evidencia o
+cômico como fuga da sociedade diante de situações
+violentas.
+estado de apatia da sociedade perante a violência
+rotineira do mundo atual.
+empecilho para o espectador vivenciar a violência
+bruta na realidade e na ficção.
+sotaque reforçado dos personagens a fim de marcar
+o espaço do cinema argentino.
+autorreconhecimento diante dos diversos tipos de
+comportamento humano frente à violência.
 
 ## Questão 4
 
 - Idioma: espanhol
-- Palavras: 119
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -560,11 +623,16 @@ y un esfuerzo
 hacia el futuro...
 Ao abordar a expropriação de territórios mexicanos pelos
 Estados Unidos, o eu lírico do poema revela um(a)
+rejeição da língua utilizada por seus antepassados.
+desejo de pertencimento ao espaço estadunidense.
+certeza de manutenção de suas tradições.
+reivindicação de um mundo unificado.
+sentimento de conflito de identidades.
 
 ## Questão 5
 
 - Idioma: espanhol
-- Palavras: 186
+- Palavras: 214
 - Tem imagem: não
 
 ### Texto extraído
@@ -619,11 +687,16 @@ espinoso terreno de las confidencias.
 No texto, no qual é narrada a visita à casa de uma
 personagem, a expressão “entrar con pies de plomo” é
 utilizada para se referir ao(à)
+determinação para conduzir discussões pessoais.
+insensibilidade para lidar com temas do passado.
+discrição para administrar questões financeiras.
+disposição para resolver problemas familiares.
+cuidado para tratar de assuntos íntimos.
 
 ## Questão 6
 
 - Idioma: geral
-- Palavras: 254
+- Palavras: 336
 - Tem imagem: não
 
 ### Texto extraído
@@ -702,11 +775,22 @@ Os processos de interação comunicativa preveem a
 presença ativa de múltiplos elementos da comunicação,
 entre os quais se destacam as funções da linguagem.
 Nesse fragmento, a função da linguagem predominante é a
+emotiva, porque o poeta expõe os sentimentos de
+angústia que o levaram à criação poética.
+referencial, porque o texto informa sobre a origem do
+nome empregado em um famoso poema de Bandeira.
+metalinguística, porque o poeta tece comentários
+sobre a gênese e o processo de escrita de um de
+seus poemas.
+poética, porque o texto aborda os elementos estéticos
+de um dos poemas mais conhecidos de Bandeira.
+apelativa, porque o poeta tenta convencer os leitores
+sobre sua dificuldade de compor um poema.
 
 ## Questão 7
 
 - Idioma: geral
-- Palavras: 20
+- Palavras: 44
 - Tem imagem: sim
 
 ### Texto extraído
@@ -727,11 +811,16 @@ E 	apagamento de uma preposição.
 A frase, título do filme, reproduz uma variedade
 linguística recorrente na fala de muitos brasileiros.
 Essa estrutura caracteriza-se pelo(a)
+uso de uma marcação temporal.
+imprecisão do referente de pessoa.
+organização interrogativa da frase.
+utilização de um verbo de ação.
+apagamento de uma preposição.
 
 ## Questão 8
 
 - Idioma: geral
-- Palavras: 180
+- Palavras: 216
 - Tem imagem: não
 
 ### Texto extraído
@@ -789,11 +878,17 @@ doçura e outras tantas sensações.
 Na prática artística mencionada no texto, o corpo assume
 papel de destaque ao articular diferentes linguagens com
 o intuito de
+imprimir ritmo e visibilidade à expressão poética.
+redefinir o espaço de circulação da poesia urbana.
+estimular produções autorais de usuários de Libras.
+traduzir expressões verbais para a língua de sinais.
+proporcionar performances estéticas de pessoas
+surdas.
 
 ## Questão 9
 
 - Idioma: geral
-- Palavras: 158
+- Palavras: 193
 - Tem imagem: não
 
 ### Texto extraído
@@ -848,11 +943,16 @@ normalmente tem significado de conversa interminável,
 monótona ou resmungo, tem origem no tupi-guarani e
 “nhém” significa “falar”.
 A leitura do texto permite ao leitor entrar em contato com
+registros do inventário do português brasileiro.
+justificativas da variedade linguística do país.
+influências da fala do nordestino no uso da língua.
+explorações do falar de um grupo social específico.
+representações da mudança linguística do português.
 
 ## Questão 10
 
 - Idioma: geral
-- Palavras: 149
+- Palavras: 185
 - Tem imagem: não
 
 ### Texto extraído
@@ -910,11 +1010,22 @@ parou de extraí-los e usá-los em 2002. Agora, volta a pensar
 em retomar sua exploração.
 As aspas sinalizam expressões metafóricas empregadas
 intencionalmente pelo autor do texto para
+imprimir um tom irônico à reportagem.
+incorporar citações de especialistas à reportagem.
+atribuir maior valor aos metais, objeto da reportagem.
+esclarecer
+termos
+científicos
+empregados
+na
+reportagem.
+marcar a apropriação de termos de outra ciência pela
+reportagem.
 
 ## Questão 11
 
 - Idioma: geral
-- Palavras: 114
+- Palavras: 166
 - Tem imagem: não
 
 ### Texto extraído
@@ -964,11 +1075,21 @@ membros cansados não acudiam aos ímpetos do medo
 e deixavam-na prostrada em uma angústia desesperada.
 No trecho, o narrador mobiliza recursos de linguagem que
 geram uma expressividade centrada na percepção da
+relação entre a natureza opressiva e o desejo de
+libertação da personagem.
+confluência entre o estado emocional da personagem
+e a configuração da paisagem.
+prevalência do mundo natural em relação à fragilidade
+humana.
+depreciação do sentido da vida diante da consciência
+da morte iminente.
+instabilidade psicológica da personagem face à
+realidade hostil.
 
 ## Questão 12
 
 - Idioma: geral
-- Palavras: 204
+- Palavras: 266
 - Tem imagem: não
 
 ### Texto extraído
@@ -1039,11 +1160,21 @@ transforma numa outra coisa e numa outra música, que
 recompõem o mundo para nós.
 Ao situar a composição no panorama cultural brasileiro, o
 Texto II destaca o(a)
+diálogo que a letra da canção estabelece com
+diferentes tradições da cultura nacional.
+singularidade com que o compositor converte
+referências eruditas em populares.
+caráter inovador com que o compositor concebe o
+processo de criação artística.
+relativização que a letra da canção promove na
+concepção tradicional de originalidade.
+resgate que a letra da canção promove de obras
+pouco conhecidas pelo público no país.
 
 ## Questão 13
 
 - Idioma: geral
-- Palavras: 135
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -1097,11 +1228,20 @@ que estão de passagem numa cidade.
 A inter-relação entre tecnologia e sociedade tem
 estimulado a criação de aplicativos. Nesse texto, isso é
 percebido pelo desenvolvimento de aplicativos para
+organização de eventos de competições esportivas.
+agendamento de viagens para eventos de esporte
+amador.
+mapeamento dos interesses dos praticantes acerca
+dos esportes.
+identificação da escassez de espaços para a vivência
+dos esportes.
+formação de grupos em comunidades virtuais para a
+prática esportiva.
 
 ## Questão 14
 
 - Idioma: geral
-- Palavras: 81
+- Palavras: 142
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1147,11 +1287,21 @@ e legumes, o que expressava os detritos da vida e uma
 atmosfera de niilismo, temperada por um humor mordaz.
 A provocação desse grupo gera um debate em torno da
 obra de arte pelo(a)
+recusa a crenças, convicções, valores morais,
+estéticos e políticos na história moderna.
+frutífero arsenal de materiais e formas que se
+relacionam com os objetos construídos.
+economia e problemas financeiros gerados pela
+recessão que tiveram grande impacto no mercado.
+influência desse grupo junto aos estilos pós-modernos
+que surgiram nos anos 1990.
+interesse em produtos indesejáveis que revela uma
+consciência sustentável no mercado.
 
 ## Questão 15
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 201
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1204,11 +1354,24 @@ conta bancária que a diferença entre os dois se sobressai.
 O esporte é uma manifestação cultural na qual se
 estabelecem relações sociais. Considerando o texto, o
 futebol é uma modalidade que
+apresenta proximidades com o tênis, no que tange às
+relações de gênero entre homens e mulheres.
+se caracteriza por uma identidade masculina no
+Brasil, conferindo maior remuneração aos jogadores.
+traz remunerações, aos jogadores e jogadoras,
+proporcionais aos seus esforços no treinamento
+esportivo.
+resulta em melhor eficiência para as mulheres e,
+consequentemente, em remuneração mais alta às
+jogadoras.
+possui jogadores e jogadoras com a mesma
+visibilidade, apesar de haver expoentes femininas de
+destaque, como Marta.
 
 ## Questão 16
 
 - Idioma: geral
-- Palavras: 223
+- Palavras: 275
 - Tem imagem: não
 
 ### Texto extraído
@@ -1283,11 +1446,21 @@ As reivindicações dos operários, quanto às condições
 aviltantes de trabalho a que são submetidos, recebem
 algumas tentativas de neutralização dos representantes
 do empregador, das quais a mais forte é o(a)
+sequência de atribuição de responsabilidades e de
+poder decisório a terceiros.
+solicitação em nome dos prejuízos e compromissos
+para entrega da obra.
+intimidação pela discreta presença de um agente de
+segurança na cena.
+promessa de imediato atendimento da carência
+sexual dos operários.
+apelo pela identificação com a empresa extensiva ao
+amor patriótico.
 
 ## Questão 17
 
 - Idioma: geral
-- Palavras: 143
+- Palavras: 212
 - Tem imagem: não
 
 ### Texto extraído
@@ -1342,11 +1515,21 @@ e saudável. Há desigualdades estruturais com raízes
 políticas, econômicas e sociais que dificultam a adoção
 desses estilos de vida.
 Com base no texto, a relação entre saúde e estilos de vida
+constrói a ideia de que a mudança individual de
+hábitos promove a saúde.
+considera a homogeneidade da escolha de hábitos
+saudáveis pelos indivíduos.
+reforça a necessidade de solucionar os problemas de
+saúde da sociedade com a prática de exercícios.
+problematiza a organização social e seu impacto na
+mudança de hábitos dos indivíduos.
+reproduz a noção de que a melhoria da aptidão física
+pela prática de exercícios promove a saúde.
 
 ## Questão 18
 
 - Idioma: geral
-- Palavras: 102
+- Palavras: 146
 - Tem imagem: não
 
 ### Texto extraído
@@ -1425,11 +1608,25 @@ a polpa toda é fruição
 de medo.
 No poema, a descrição lírica do objeto representado é
 orientada por um olhar que
+desvela sentimentos de vazio e angústia sob a
+aparente austeridade.
+expressa desilusão ante a possibilidade de superação
+do sofrimento.
+contrapõe a fragilidade emocional ao uso desmedido
+da força física.
+associa
+a
+incomunicabilidade
+emocional
+às
+determinações culturais.
+privilegia imagens relacionadas à exposição do
+dinamismo urbano.
 
 ## Questão 19
 
 - Idioma: geral
-- Palavras: 105
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -1488,11 +1685,21 @@ Juntada desta aos autos nós pedimos
 E pedimos, enfim, deferimento.
 Essa petição de habeas corpus, ao transgredir o rigor da
 linguagem jurídica,
+permite que a narrativa seja objetiva e repleta de
+sentidos denotativos.
+mostra que o cordel explora termos próprios da esfera
+do direito.
+demonstra que o jogo de linguagem proposto atenua
+a gravidade do delito.
+exemplifica como o texto em forma de cordel
+compromete a solicitação pretendida.
+esclarece que os termos “crime” e “processo de
+contravenção” são sinônimos.
 
 ## Questão 20
 
 - Idioma: geral
-- Palavras: 158
+- Palavras: 182
 - Tem imagem: não
 
 ### Texto extraído
@@ -1550,11 +1757,16 @@ ser mais proativo. Vamos fazer mais um powermind ? Eu
 consigo um precinho bacana para você…
 De acordo com o texto, é possível identificar o
 “empreendedor de palco” por
+livros por ele indicados.
+suas habilidades em língua inglesa.
+experiências por ele compartilhadas.
+padrões de linguagem por ele utilizados.
+preços acessíveis de seus treinamentos.
 
 ## Questão 21
 
 - Idioma: geral
-- Palavras: 135
+- Palavras: 278
 - Tem imagem: não
 
 ### Texto extraído
@@ -1635,11 +1847,35 @@ Sou de Pernambuco, sou o Leão do Norte
 O fragmento faz parte da canção brasileira contemporânea
 e celebra a cultura popular nordestina. Nele, o artista
 exalta as diferentes manifestações culturais pela
+valorização do teatro, música, artesanato, literatura,
+dança, personagens históricos e artistas populares,
+compondo um tecido diversificado e enriquecedor da
+cultura popular como patrimônio regional e nacional.
+identificação
+dos
+lugares
+pernambucanos,
+manifestações culturais, como o bumba meu boi, as
+cirandas, os bonecos mamulengos e heróis locais,
+fazendo com que essa canção se apresente como
+uma referência à cultura popular nordestina.
+exaltação das raízes populares, como a poesia, a
+literatura de cordel e o frevo, misturadas ao erudito,
+como a Orquestra Armorial, compondo um rico tecido
+cultural, que transforma o popular em erudito.
+caracterização das festas populares como identidade
+cultural localizada e como representantes de uma
+cultura que reflete valores históricos e sociais próprios
+da população local.
+apresentação do Pastoril do Faceta, do maracatu, do
+bumba meu boi e dos autos como representação da
+musicalidade e do teatro popular religioso, bastante
+comum ao folclore brasileiro.
 
 ## Questão 22
 
 - Idioma: geral
-- Palavras: 11
+- Palavras: 66
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1663,11 +1899,21 @@ estádios.
 
 Esse anúncio publicitário propõe soluções para um
 problema social recorrente, ao
+promover ações de conscientização para reduzir a
+violência de gênero em eventos esportivos.
+estimular o compartilhamento de políticas públicas
+sobre a igualdade de gênero no esporte.
+divulgar para a população as novas regras
+complementares para as torcidas de futebol.
+informar ao público masculino as consequências de
+condutas ofensivas.
+regulamentar normas de boa convivência nos
+estádios.
 
 ## Questão 23
 
 - Idioma: geral
-- Palavras: 132
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -1720,11 +1966,21 @@ em Nova York, tomarei providências.
 As repetições e as frases curtas constituem procedimentos
 linguísticos importantes para a compreensão da temática
 do texto, pois
+expressam a futilidade do discurso de poder e de
+distinção do narrador.
+disfarçam a falta de densidade das angústias
+existenciais narradas.
+ironizam a valorização da cultura norte-americana
+pelos brasileiros.
+explicitam a ganância financeira do capitalismo
+contemporâneo.
+criticam os estereótipos sociais das visões de mundo
+elitistas.
 
 ## Questão 24
 
 - Idioma: geral
-- Palavras: 112
+- Palavras: 131
 - Tem imagem: não
 
 ### Texto extraído
@@ -1771,11 +2027,16 @@ publicação.
 Art. 4º Revogam-se as disposições em contrário.
 Esse decreto pauta-se na ideia de que o uso do gerúndio,
 como “desculpa de ineficiência”, indica
+conclusão de uma ação.
+realização de um evento.
+repetição de uma prática.
+continuidade de um processo.
+transferência de responsabilidade.
 
 ## Questão 25
 
 - Idioma: geral
-- Palavras: 45
+- Palavras: 83
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1807,11 +2068,22 @@ uma fotografia de cadeira, uma cadeira exposta e um
 quadro com o verbete “Cadeira”. Trata-se de um exemplo
 de arte conceitual que revela o paradoxo entre verdade e
 imitação, já que a arte
+não é a realidade, mas uma representação dela.
+fundamenta-se na repetição, construindo variações.
+não se define, pois depende da interpretação do fruidor.
+resiste ao tempo, beneficiada por múltiplas formas
+de registro.
+redesenha
+a
+verdade,
+aproximando-se
+das
+definições lexicais.
 
 ## Questão 26
 
 - Idioma: geral
-- Palavras: 20
+- Palavras: 105
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1842,11 +2114,26 @@ outras realidades.
 A realidade virtual é uma tecnologia de informação que,
 conforme sugere a imagem, tem como uma de suas
 principais funções
+promover a manipulação eficiente de conhecimentos
+e informações de difícil compreensão no mundo
+físico.
+conduzir escolhas profissionais da área de ciência
+da computação, oferecendo um leque de opções de
+atuação.
+transferir conhecimento da inteligência artificial para
+as áreas tradicionais, como as das ciências exatas e
+naturais.
+levar o ser humano a experimentar mentalmente
+outras realidades, para as quais é transportado sem
+sair de seu próprio lugar.
+delimitar tecnologias exclusivas de jogos virtuais, a
+fim de oferecer maior emoção ao jogador por meio de
+outras realidades.
 
 ## Questão 27
 
 - Idioma: geral
-- Palavras: 86
+- Palavras: 179
 - Tem imagem: não
 
 ### Texto extraído
@@ -1910,11 +2197,26 @@ Eu vou
 É comum coexistirem sequências tipológicas em um
 mesmo gênero textual. Nesse fragmento, os tipos textuais
 que se destacam na organização temática são
+descritivo e argumentativo, pois o enunciador detalha
+cada lugar por onde passa, argumentando contra a
+violência urbana.
+dissertativo e argumentativo, pois o enunciador
+apresenta seu ponto de vista sobre as notícias
+relativas à cidade.
+expositivo e injuntivo, pois o enunciador fala de
+seus estados físicos e psicológicos e interage com a
+mulher amada.
+narrativo e descritivo, pois o enunciador conta sobre
+suas andanças pelas ruas da cidade ao mesmo
+tempo que a descreve.
+narrativo e injuntivo, pois o enunciador ensina
+o interlocutor como andar pelas ruas da cidade
+contando sobre sua própria experiência.
 
 ## Questão 28
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 201
 - Tem imagem: não
 
 ### Texto extraído
@@ -1971,11 +2273,27 @@ A “flauta envolvente” da música é um trecho da Partita
 em Lá menor, escrita pelo alemão Johann Sebastian
 A incorporação de um trecho da obra para flauta solo de
 Johann Sebastian Bach na música de MC Fioti demonstra a
+influência permanente da cultura eurocêntrica nas
+produções musicais brasileiras.
+homenagem aos referenciais estéticos que deram
+origem às produções da música popular.
+necessidade de divulgar a música de concerto nos
+meios populares nas periferias das grandes cidades.
+utilização
+desintencional
+de
+uma
+música
+excessivamente distante da realidade cultural dos
+jovens brasileiros.
+inter-relação de elementos culturais vindos de
+realidades distintas na construção de uma nova
+proposta musical.
 
 ## Questão 29
 
 - Idioma: geral
-- Palavras: 109
+- Palavras: 140
 - Tem imagem: não
 
 ### Texto extraído
@@ -2023,11 +2341,16 @@ Nessa confusão já nem sei quem sou
 Acaba esse garoto sendo meu avô.
 Nessa letra da canção, a suposição do último verso
 sinaliza a intenção do autor de
+ironizar as relações familiares modernas.
+reforçar o humor da situação representada.
+expressar perplexidade em relação ao parente.
+atribuir à criança a causa da dúvida existencial.
+questionar os lugares predeterminados da família.
 
 ## Questão 30
 
 - Idioma: geral
-- Palavras: 42
+- Palavras: 96
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2057,11 +2380,21 @@ sofrido pelas mulheres nas ruas constrói-se pela
 combinação da linguagem verbal e não verbal. A imagem
 da mulher com o nariz e a boca cobertos por um lenço é
 a representação não verbal do(a)
+silêncio imposto às mulheres, que não podem
+denunciar o assédio sofrido.
+metáfora de que as mulheres precisam defender-se
+do assédio masculino.
+constrangimento pelo qual passam as mulheres e
+sua tentativa de esconderem-se.
+necessidade que as mulheres têm de passarem
+despercebidas para evitar o assédio.
+incapacidade de as mulheres protegerem-se da
+agressão verbal dos assediadores.
 
 ## Questão 31
 
 - Idioma: geral
-- Palavras: 212
+- Palavras: 256
 - Tem imagem: não
 
 ### Texto extraído
@@ -2140,11 +2473,24 @@ Houston, nos Estados Unidos.
 Pelas características do texto lido, que trata das
 consequências da perda de um animal de estimação,
 considera-se que ele se enquadra no gênero
+conto, pois exibe a história de vida de Joanie Simpson.
+depoimento, pois expõe o sofrimento da dona do
+animal.
+reportagem,
+pois
+discute
+cientificamente
+a
+cardiomiopatia.
+relato, pois narra um fato estressante vivido pela
+paciente.
+notícia, pois divulga fatos sobre a síndrome do
+coração partido.
 
 ## Questão 32
 
 - Idioma: geral
-- Palavras: 153
+- Palavras: 187
 - Tem imagem: não
 
 ### Texto extraído
@@ -2197,11 +2543,16 @@ Os ditados populares são frases de sabedoria criadas
 pelo povo, utilizadas em várias situações da vida. Nesse
 texto, a personagem emprega um ditado popular com a
 intenção de
+criticar a natureza forte do filho.
+justificar o gênio difícil de Chiquito.
+legitimar o direito do filho à herança.
+conter o ânimo violento de Chico Lourenço.
+condenar a agressividade do marido contra o filho.
 
 ## Questão 33
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 178
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2255,11 +2606,21 @@ em nós mesmos.
 Considerando-se a função que os cartazes colados em
 postes normalmente exercem nas ruas das cidades
 grandes, esse texto evidencia a
+disseminação da arte poética em um veículo não
+convencional.
+manutenção da expectativa das pessoas ao andarem
+pelas ruas.
+necessidade de exposição de poemas pequenos em
+diferentes suportes.
+característica corriqueira do suporte lambe-lambe,
+muito comum nas ruas.
+exposição da beleza escondida das esquinas da
+cidade de Belo Horizonte.
 
 ## Questão 34
 
 - Idioma: geral
-- Palavras: 148
+- Palavras: 180
 - Tem imagem: não
 
 ### Texto extraído
@@ -2309,11 +2670,17 @@ passam depressa deixando marcas fundas na nossa
 memória, que alguns chamam também de coração.
 As significações afetivas engendradas no fragmento
 pressupõem o reconhecimento da
+perspectiva infantil assumida pela voz narrativa.
+suspensão da linearidade temporal da narração.
+tentativa de materializar lembranças da infância.
+incidência da memória sobre as imagens narradas.
+alternância entre impressões subjetivas e relatos
+factuais.
 
 ## Questão 35
 
 - Idioma: geral
-- Palavras: 154
+- Palavras: 197
 - Tem imagem: não
 
 ### Texto extraído
@@ -2369,11 +2736,21 @@ num contexto machista, sexista, misógino e homofóbico.
 Os jogos eletrônicos presentes na cultura juvenil podem
 desempenhar uma relevante função na abordagem do
 futebol ao
+disseminarem uma modalidade, promovendo a
+igualdade de gênero.
+superarem jogos malsucedidos no mercado, lançados
+anteriormente.
+inovarem a modalidade com novas ofertas de jogos
+ao mercado.
+explorarem nichos de mercado antes ignorados,
+produzindo mais lucro.
+reforçarem estereótipos de gênero masculino ou
+feminino nos esportes.
 
 ## Questão 36
 
 - Idioma: geral
-- Palavras: 68
+- Palavras: 116
 - Tem imagem: não
 
 ### Texto extraído
@@ -2414,11 +2791,23 @@ personifi cado no oponente.
 De acordo com o texto, podemos identifi car uma
 abordagem das lutas nas aulas de educação física
 quando o professor realiza uma proposta envolvendo
+contato corporal intenso entre o aluno e seu oponente.
+contenda entre os alunos que se agridem fi sicamente.
+confronto corporal em que os vencedores são
+previamente identifi cados.
+combate
+corporal
+intencional
+com
+ações
+regulamentadas entre os oponentes.
+confl ito resolvido pelos alunos por meio de regras
+previamente estabelecidas.
 
 ## Questão 37
 
 - Idioma: geral
-- Palavras: 202
+- Palavras: 233
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2701,11 +3090,17 @@ Habitação
 Desemprego
 Com base no conceito apresentado no texto, a saúde é
 consequência direta do(a)
+adoção de um estilo de vida ativo por parte dos
+indivíduos.
+disponibilidade de emprego no mercado de trabalho.
+condição habitacional presente nas cidades.
+acesso ao sistema educacional.
+forma de organização social.
 
 ## Questão 38
 
 - Idioma: geral
-- Palavras: 222
+- Palavras: 291
 - Tem imagem: não
 
 ### Texto extraído
@@ -2783,11 +3178,21 @@ histórica do povo português. O trecho que evidencia
 esse procedimento argumentativo é
 A “Que linda a ‘antiga, muy nobre, sempre leal e invicta’
 cidade do Porto!”.
+“Que linda a ‘antiga, muy nobre, sempre leal e invicta’
+cidade do Porto!”.
+“‘Encantei-me’, diriam eles... pelas belas paisagens,
+construções históricas com lindas fachadas [...]”.
+“Os tripeiros, sinônimo de portuenses, têm orgulho de
+sua cidade [...]”.
+“E valorizam tudo o que há de bom ali, como ‘a melhor
+estrada para se dirigir do mundo’ [...]”.
+“Pois na manhã do 25 de abril, dia da Revolução dos
+Cravos, resolvemos conhecer a tal maravilha”.
 
 ## Questão 39
 
 - Idioma: geral
-- Palavras: 89
+- Palavras: 110
 - Tem imagem: não
 
 ### Texto extraído
@@ -2833,11 +3238,16 @@ Paira sempre sagrada bandeira
 Pavilhão da justiça e do amor!
 No Hino à Bandeira, a descrição é um recurso utilizado
 para exaltar o símbolo nacional na medida em que
+remete a um momento futuro.
+promove a união dos cidadãos.
+valoriza os seus elementos.
+emprega termos religiosos.
+recorre à sua história.
 
 ## Questão 40
 
 - Idioma: geral
-- Palavras: 152
+- Palavras: 181
 - Tem imagem: não
 
 ### Texto extraído
@@ -2888,11 +3298,16 @@ questão social, comunismo e integralismo.
 A ficção modernista explorou tipos humanos em situação
 de conflito social. No fragmento do romancista gaúcho,
 esse conflito revela a
+sujeição moral amplificada pela pobreza.
+crise econômica em expansão nas cidades.
+falta de diálogo entre patrões e empregados.
+perspicácia marcada pela formação intelectual.
+tensão política gerada pelas ideologias vigentes.
 
 ## Questão 41
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 156
 - Tem imagem: não
 
 ### Texto extraído
@@ -2940,11 +3355,16 @@ o Congresso Nacional decrete o tupi-guarani como língua
 oficial e nacional do povo brasileiro.
 Nessa petição da pitoresca personagem do romance de
 Lima Barreto, o uso da norma-padrão justifica-se pela
+situação social de enunciação representada.
+divergência teórica entre gramáticos e literatos.
+pouca representatividade das línguas indígenas.
+atitude irônica diante da língua dos colonizadores.
+tentativa de solicitação do documento demandado.
 
 ## Questão 42
 
 - Idioma: geral
-- Palavras: 128
+- Palavras: 161
 - Tem imagem: não
 
 ### Texto extraído
@@ -2995,11 +3415,17 @@ práticas corporais, pois não motivam a longo prazo a
 prática permanente de atividades físicas.
 Pela sua interatividade, os exergames apresentam-se
 como possibilidade para estimular o(a)
+exercitação física, promovendo a saúde.
+vivência de exercícios físicos sistemáticos.
+envolvimento com atividades físicas ao longo da vida.
+jogo por meio de comandos fornecidos pelo videogame.
+disputa entre jogadores, contribuindo para o
+individualismo.
 
 ## Questão 43
 
 - Idioma: geral
-- Palavras: 148
+- Palavras: 157
 - Tem imagem: não
 
 ### Texto extraído
@@ -3052,11 +3478,16 @@ palavra procurada.
 O texto permite o desnudamento da sociedade ao
 relacionar as tecnologias de informação e comunicação
 com o(a)
+agilidade dos softwares.
+passar dos anos.
+linguagem.
+preconceito.
+educação.
 
 ## Questão 44
 
 - Idioma: geral
-- Palavras: 18
+- Palavras: 50
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3075,11 +3506,16 @@ E 	 os filhos adotivos são companheiros dos pais.
 
 Nessa campanha publicitária, a imagem da família e o
 texto verbal unem-se para reforçar a ideia de que
+a família que adota é mais feliz.
+a adoção tardia é muito positiva.
+as famílias preferem adotar bebês.
+a adoção de adolescentes é mais simples.
+os filhos adotivos são companheiros dos pais.
 
 ## Questão 45
 
 - Idioma: geral
-- Palavras: 156
+- Palavras: 226
 - Tem imagem: não
 
 ### Texto extraído
@@ -3138,11 +3574,24 @@ para inglês ver, com amor eu viajo, viajo, viajo.
 A tematização de Curitiba é frequente na obra de Dalton
 Trevisan. No fragmento, a relação do narrador com o
 espaço urbano é caracterizada por um olhar
+destituído de afetividade, que ironiza os costumes e
+as tradições da sociedade curitibana.
+marcado pela negatividade, que busca desconstruir
+perspectivas habituais de representação da cidade.
+carregado de melancolia, que constata a falta
+de identidade cultural diante dos impactos da
+urbanização.
+embevecido pela simplicidade do cenário, indiferente
+à descrição de elementos de reconhecido valor
+histórico.
+distanciado dos elementos narrados, que recorre
+ao ponto de vista do viajante como expressão de
+estranhamento.
 
 ## Questão 46
 
 - Idioma: geral
-- Palavras: 112
+- Palavras: 132
 - Tem imagem: não
 
 ### Texto extraído
@@ -3189,11 +3638,16 @@ e equipamentos de alto valor.
 Uma ação estatal de longo prazo capaz de reduzir a
 assimetria na balança comercial brasileira, conforme
 exposto no texto, é o(a)
+expansão do setor extrativista.
+incremento da atividade agrícola.
+diversificação da matriz energética.
+fortalecimento da pesquisa científica.
+monitoramento do fluxo alfandegário.
 
 ## Questão 47
 
 - Idioma: geral
-- Palavras: 102
+- Palavras: 138
 - Tem imagem: não
 
 ### Texto extraído
@@ -3236,11 +3690,18 @@ aumentou a massa de desempregados, inativos e
 aposentados que mantêm residência rural.
 Sobre o espaço brasileiro, o texto apresenta argumentos
 que refletem a
+heterogeneidade do modo de vida agrário.
+redução do fluxo populacional nas cidades.
+correlação entre força de trabalho e migração sazonal.
+indissociabilidade entre local de moradia e acesso à
+renda.
+desregulamentação das propriedades nas zonas de
+fronteira.
 
 ## Questão 48
 
 - Idioma: geral
-- Palavras: 76
+- Palavras: 127
 - Tem imagem: não
 
 ### Texto extraído
@@ -3282,11 +3743,21 @@ em grande medida, se encontra mais acentuada.
 A transformação descrita no texto tem sido insuficiente
 para o estabelecimento de uma condição de igualdade de
 oportunidade em virtude da(s)
+estagnação de direitos adquiridos e do anacronismo
+da legislação vigente.
+manutenção do status quo gerencial e dos padrões
+de socialização familiar.
+desestruturação da herança patriarcal e das
+mudanças do perfil ocupacional.
+disputas na composição sindical e da presença na
+esfera político-partidária.
+exigências de aperfeiçoamento profissional e de
+habilidades na competência diretiva.
 
 ## Questão 49
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 146
 - Tem imagem: não
 
 ### Texto extraído
@@ -3331,11 +3802,17 @@ dos direitos da coletividade, visando  o bem-estar geral, no
 Os movimentos em prol da reforma agrária, que
 atuam com base no conceito de direito à propriedade
 apresentado no texto, propõem-se a
+reverter o processo de privatização fundiária.
+ressaltar a inviabilidade da produção latifundiária.
+defender a desapropriação dos espaços improdutivos.
+impedir a produção exportadora nas terras agricultáveis.
+coibir o funcionamento de empresas agroindustriais
+no campo.
 
 ## Questão 50
 
 - Idioma: geral
-- Palavras: 55
+- Palavras: 75
 - Tem imagem: não
 
 ### Texto extraído
@@ -3358,11 +3835,16 @@ A expansão das cidades e a formação das aglomerações urbanas no Brasil fora
 industrial e pela consolidação das metrópoles como locais de seu desenvolvimento. Na segunda metade do século XX,
 as metrópoles brasileiras estenderam-se por áreas de ocupação contínua, configurando densas regiões urbanizadas.
 O resultado do processo geográfico descrito foi o(a)
+valorização da escala local.
+crescimento das áreas periféricas.
+densificação do transporte ferroviário.
+predomínio do planejamento estadual.
+inibição de consórcios intermunicipais.
 
 ## Questão 51
 
 - Idioma: geral
-- Palavras: 43
+- Palavras: 65
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3397,11 +3879,16 @@ COLHEITA DE MILHO VERDE - - -
 COLHEITA DE MILHO SECO - - -
 COLHEITA DE ALGODÃO - - - - - -
 A dinâmica produtiva apresentada na imagem tem como estratégia central a
+separação pelo tipo de solo.
+exportação da colheita sazonal.
+priorização da tecnologia moderna.
+adequação pelo tempo da natureza.
+intensificação da atividade pecuária.
 
 ## Questão 52
 
 - Idioma: geral
-- Palavras: 102
+- Palavras: 127
 - Tem imagem: não
 
 ### Texto extraído
@@ -3443,11 +3930,16 @@ príncipes, como queria.
 Os acontecimentos históricos citados ajudaram esse
 indivíduo, no século XVI, a repensar a visão católica do
 mundo ao possibilitarem a
+consulta pública das bibliotecas reais.
+sofisticação barroca do ritual litúrgico.
+aceitação popular da educação secular.
+interpretação autônoma dos textos bíblicos.
+correção doutrinária das heresias medievais.
 
 ## Questão 53
 
 - Idioma: geral
-- Palavras: 112
+- Palavras: 137
 - Tem imagem: não
 
 ### Texto extraído
@@ -3489,11 +3981,16 @@ a menor ideia do que fosse latitude ou longitude, mas
 achou que eram palavras muito imponentes).
 O texto descreve uma confusão da personagem em
 relação
+ao tipo de projeção cartográfica.
+aos contornos dos fusos horários.
+à localização do norte magnético.
+aos referenciais de posição relativa.
+às distorções das formas continentais.
 
 ## Questão 54
 
 - Idioma: geral
-- Palavras: 87
+- Palavras: 107
 - Tem imagem: não
 
 ### Texto extraído
@@ -3530,11 +4027,16 @@ A educação dos povos que desconhecem a escrita está
 baseada sobretudo na imagem e no som, no audiovisual.
 De acordo com o texto, a arte mencionada é importante
 para os povos que a cultivam por colaborar para o(a)
+transmissão dos saberes acumulados.
+expansão da propriedade individual.
+ruptura da disciplina hierárquica.
+surgimento dos laços familiares.
+rejeição de práticas exógenas.
 
 ## Questão 55
 
 - Idioma: geral
-- Palavras: 88
+- Palavras: 139
 - Tem imagem: não
 
 ### Texto extraído
@@ -3576,11 +4078,21 @@ despertar. Logo, não seria exatamente igual a um sonho
 ou alucinação normal.
 O texto confere visibilidade a uma doutrina filosófica
 contemporânea conhecida como:
+Personalismo, que vincula a realidade circundante
+aos domínios do pessoal.
+Falsificacionismo, que estabelece ciclos de problemas
+para refutar uma conjectura.
+Falibilismo, que rejeita mecanismos mentais para
+sustentar uma crença inequívoca.
+Idealismo, que nega a existência de objetos
+independentemente do trabalho cognoscente.
+Solipsismo, que reconhece limitações cognitivas para
+compreender uma experiência compartilhada.
 
 ## Questão 56
 
 - Idioma: geral
-- Palavras: 55
+- Palavras: 76
 - Tem imagem: não
 
 ### Texto extraído
@@ -3622,11 +4134,16 @@ disponibilidade total.
 Para que haja a redução da pressão sobre o recurso
 natural mencionado, a expansão da agricultura demanda
 melhorias no(a)
+fertilização química do solo.
+escoamento hídrico do terreno.
+manutenção de poços artesianos.
+eficiência das técnicas de irrigação.
+velocidade das máquinas colheitadeiras.
 
 ## Questão 57
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 143
 - Tem imagem: não
 
 ### Texto extraído
@@ -3672,11 +4189,16 @@ Buenos Aires: Clacso, 2005 (adaptado).
 Tomando o texto como parâmetro, qual tendência
 contemporânea impulsiona a formulação de estratégias
 mais abrangentes por parte do Estado americano?
+Erradicação dos conflitos em territórios.
+Propagação de organizações em redes.
+Eliminação das diferenças regionais.
+Ampliação de modelo democrático.
+Projeção da diplomacia mundial.
 
 ## Questão 58
 
 - Idioma: geral
-- Palavras: 60
+- Palavras: 80
 - Tem imagem: não
 
 ### Texto extraído
@@ -3708,11 +4230,16 @@ riquezas; o primeiro e principal objetivo do planejamento
 devia ser o de azeitar a máquina.
 O modelo de planejamento urbano problematizado no
 texto é marcado pelo(a)
+primazia da gestão popular.
+uso de práticas sustentáveis.
+construção do bem-estar social.
+soberania do poder governamental.
+ampliação da participação empresarial.
 
 ## Questão 59
 
 - Idioma: geral
-- Palavras: 79
+- Palavras: 98
 - Tem imagem: não
 
 ### Texto extraído
@@ -3763,11 +4290,16 @@ o
 Brasil
 por
 concentrarem
+fontes de águas termais.
+afloramentos de sal-gema.
+jazidas de minerais metálicos.
+depósitos de calcário agrícola.
+reservas de combustível fóssil.
 
 ## Questão 60
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 125
 - Tem imagem: não
 
 ### Texto extraído
@@ -3804,11 +4336,16 @@ conseguia compreendê-la”.
 O texto descreve a experiência do personagem de Tolstoi
 diante de um aspecto incontornável de nossas vidas.
 Esse aspecto foi um tema central na tradição filosófica
+marxista, no contexto do materialismo histórico.
+logicista, no propósito de entendimento dos fatos.
+utilitarista, no sentido da racionalidade das ações.
+pós-modernista, na discussão da fluidez das relações.
+existencialista, na questão do reconhecimento de si.
 
 ## Questão 61
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 109
 - Tem imagem: não
 
 ### Texto extraído
@@ -3847,11 +4384,16 @@ Latina aprimorou suas funções.
 Escrito na década de 1970, o texto considera a
 participação da América Latina na Divisão Internacional
 do Trabalho marcada pela
+produção inovadora de padrões de tecnologia.
+superação paulatina do caráter agroexportador.
+apropriação imperialista dos recursos territoriais.
+valorização econômica dos saberes tradicionais.
+dependência externa do suprimento de alimentos.
 
 ## Questão 62
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 143
 - Tem imagem: não
 
 ### Texto extraído
@@ -3896,11 +4438,20 @@ a tradição jurídica, harmonizou os costumes e estendeu o
 direito e a lei a todos os súditos.
 Nesse contexto de organização da vida social, as leis
 contidas no Código citado tinham o sentido de
+assegurar garantias individuais aos cidadãos livres.
+tipificar regras referentes aos atos dignos de
+punição.
+conceder benefícios de indulto aos prisioneiros de
+guerra.
+promover distribuição de terras aos desempregados
+urbanos.
+conferir prerrogativas políticas aos descendentes de
+estrangeiros.
 
 ## Questão 63
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 153
 - Tem imagem: não
 
 ### Texto extraído
@@ -3943,11 +4494,21 @@ preguiça, criando uma ética positiva do trabalho.
 O processo de ressignificação do trabalho nas sociedades
 modernas teve início a partir do surgimento de uma nova
 mentalidade, influenciada pela
+reforma higienista, que combateu o caráter excessivo
+e insalubre do trabalho fabril.
+Reforma Protestante, que expressou a importância
+das atividades laborais no mundo secularizado.
+força do sindicalismo, que emergiu no esteio do
+anarquismo reivindicando direitos trabalhistas.
+participação das mulheres em movimentos sociais,
+defendendo o direito ao trabalho.
+visão do catolicismo, que, desde a Idade Média,
+defendia a dignidade do trabalho e do lucro.
 
 ## Questão 64
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 142
 - Tem imagem: não
 
 ### Texto extraído
@@ -3991,11 +4552,21 @@ adequada a tudo isso.
 Nesse contexto, a criticada postura dos governos frente
 à situação social do país coincidiu com a priorização de
 que medidas?
+Expansão dos investimentos nas empresas públicas
+e nos bancos estatais.
+Democratização do crédito habitacional e da aquisição
+de moradias populares.
+Enxugamento da carga fiscal individual e da
+contribuição tributária empresarial.
+Reformulação do acesso ao ensino superior e do
+financiamento científico nacional.
+Reforma das políticas macroeconômicas e dos
+mecanismos de controle inflacionário.
 
 ## Questão 65
 
 - Idioma: geral
-- Palavras: 78
+- Palavras: 98
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4020,11 +4591,16 @@ territórios. Como há uma elevação da formação de fluxos, materiais e imate
 escalas que vão do local ao global terminam por pressionar o Estado a agir visando uma instalação no território
 de fixos diversos, bem como de uma regulação específica.
 O mapa e o texto se complementam indicando que a expansão das rodovias se deu como resposta ao(à)
+alteração da matriz econômica.
+substituição do modal hidroviário.
+retração do contingente demográfico.
+projeção do escoamento produtivo.
+estagnação de lavouras policultoras.
 
 ## Questão 66
 
 - Idioma: geral
-- Palavras: 69
+- Palavras: 89
 - Tem imagem: não
 
 ### Texto extraído
@@ -4049,11 +4625,16 @@ anunciar os próximos passos da coreografia. O abrasileiramento de termos france
 saruê (soirée — reunião social noturna, ordem para todos se juntarem no centro do salão), anarriê (en arrière — para
 trás) e anavã (en avant — para frente).
 A característica apresentada dessa manifestação popular resulta do seguinte processo socio-histórico:
+Massificação da arte erudita.
+Rejeição de hábitos elitistas.
+Laicização dos rituais religiosos.
+Restauração dos costumes antigos.
+Apropriação de práticas estrangeiras.
 
 ## Questão 67
 
 - Idioma: geral
-- Palavras: 16
+- Palavras: 37
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4078,11 +4659,16 @@ Fenda
 Vulcões
 Os aspectos físicos apresentados originam-se da atuação
 da força natural de
+colisão de placas tectônicas.
+rifteamento da crosta terrestre.
+subducção da plataforma oceânica.
+formação de cadeias montanhosas.
+metamorfi smo de bordas continentais.
 
 ## Questão 68
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 113
 - Tem imagem: não
 
 ### Texto extraído
@@ -4124,11 +4710,16 @@ testemunhas, como refl exos, como reveladores de uma
 De acordo com o texto, novos estudos têm valorizado
 a história do indivíduo por se constituir como
 possibilidade de
+adesão ao método positivista.
+expressão do papel das elites.
+resgate das narrativas heroicas.
+acesso ao cotidiano das comunidades.
+interpretação das manifestações do divino.
 
 ## Questão 69
 
 - Idioma: geral
-- Palavras: 87
+- Palavras: 107
 - Tem imagem: não
 
 ### Texto extraído
@@ -4168,11 +4759,16 @@ todos os participantes podem razoavelmente aceitar,
 desde que todos os demais também o aceitem.
 No contexto do pensamento político, a ideia apresentada
 mostra-se consoante o(a)
+ideal republicano de governo.
+corrente tripartite dos poderes.
+posicionamento crítico do socialismo.
+legitimidade do absolutismo monárquico.
+entendimento do contratualismo moderno.
 
 ## Questão 70
 
 - Idioma: geral
-- Palavras: 86
+- Palavras: 108
 - Tem imagem: não
 
 ### Texto extraído
@@ -4210,11 +4806,16 @@ males pelos quais a prosperidade tem predileção, isto
 O acontecimento histórico mencionado no texto de
 Salústio, datado de I a.C., manteve correspondência com
 o processo de
+demarcação de terras públicas.
+imposição da escravidão por dívidas.
+restrição da cidadania por parentesco.
+restauração de instituições ancestrais.
+expansão das fronteiras extrapeninsulares.
 
 ## Questão 71
 
 - Idioma: geral
-- Palavras: 85
+- Palavras: 108
 - Tem imagem: não
 
 ### Texto extraído
@@ -4260,11 +4861,16 @@ Plantemos a roça.
 Lavremos a gleba.
 No contexto das distintas formas de apropriação da terra,
 o poema de Cora Coralina valoriza a relação entre
+grileiros e controle territorial.
+meeiros e divisão do trabalho.
+camponeses e uso da natureza.
+indígenas e manejo agroecológico.
+latifundiários e fertilização do solo.
 
 ## Questão 72
 
 - Idioma: geral
-- Palavras: 55
+- Palavras: 90
 - Tem imagem: não
 
 ### Texto extraído
@@ -4300,11 +4906,23 @@ moderna um espaço privado, o espaço do “eu”, do texto
 no qual hesitações, autocríticas, correções entram no
 próprio texto.
 O novo gênero de escrita aludido no texto é o(a)
+confissão, que relata experiências de transformação.
+ensaio, que expõe concepções subjetivas de um tema.
+carta, que comunica informações para um conhecido.
+meditação,
+que
+propõe
+preparações
+para
+o
+conhecimento.
+diálogo, que discute assuntos com diferentes
+interlocutores.
 
 ## Questão 73
 
 - Idioma: geral
-- Palavras: 87
+- Palavras: 102
 - Tem imagem: não
 
 ### Texto extraído
@@ -4345,11 +4963,16 @@ diversidade de tais características e necessidades.
 Como signatário da Declaração citada, o Brasil
 comprometeu-se com a elaboração de políticas públicas
 educacionais que contemplem a
+criação de privilégios.
+contenção dos gastos.
+pluralidade dos sujeitos.
+padronização do currículo.
+valorização da meritocracia.
 
 ## Questão 74
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 112
 - Tem imagem: não
 
 ### Texto extraído
@@ -4391,11 +5014,16 @@ poderiam dizer nada.
 Os textos mostram-se alinhados a um entendimento
 acerca da ideia de conhecimento, numa perspectiva que
 ampara a
+anterioridade da razão no domínio cognitivo.
+confirmação da existência de saberes inatos.
+valorização do corpo na apreensão da realidade.
+verificabilidade de proposições no campo da lógica.
+possibilidade de contemplação de verdades atemporais.
 
 ## Questão 75
 
 - Idioma: geral
-- Palavras: 64
+- Palavras: 89
 - Tem imagem: não
 
 ### Texto extraído
@@ -4428,11 +5056,16 @@ eles foram privados de sua representação territorial e da
 autoridade que seus conhecimentos tinham sobre o espaço.
 Na análise contida no texto, a representação cartográfica
 da América foi marcada por
+asserção da cultura dos nativos.
+avanço dos estudos do ambiente.
+afirmação das formas de dominação.
+exatidão da demarcação das regiões.
+aprimoramento do conceito de fronteira.
 
 ## Questão 76
 
 - Idioma: geral
-- Palavras: 93
+- Palavras: 113
 - Tem imagem: não
 
 ### Texto extraído
@@ -4482,11 +5115,16 @@ o oposto: dividem, partilham e disseminam os bens e
 o poder.
 O texto tematiza o papel desempenhado por uma norma
 na criação de um ambiente propício ao(à)
+emprego do trabalho escravo.
+consolidação dos valores burgueses.
+banimento das dissidências religiosas.
+contenção da identificação nacionalista.
+hierarquização dos agentes econômicos.
 
 ## Questão 77
 
 - Idioma: geral
-- Palavras: 94
+- Palavras: 136
 - Tem imagem: não
 
 ### Texto extraído
@@ -4526,11 +5164,19 @@ importante de todos os bens.
 No fragmento, Aristóteles promove uma reflexão que
 associa dois elementos essenciais à discussão sobre a
 vida em comunidade, a saber:
+Ética e política, pois conduzem à eudaimonia.
+Retórica e linguagem, pois cuidam dos discursos
+na ágora.
+Metafísica e ontologia, pois tratam da filosofia primeira.
+Democracia e sociedade, pois se referem a relações
+sociais.
+Geração e corrupção, pois abarcam o campo da
+physis.
 
 ## Questão 78
 
 - Idioma: geral
-- Palavras: 47
+- Palavras: 71
 - Tem imagem: não
 
 ### Texto extraído
@@ -4558,11 +5204,16 @@ os países avançados como uma opção possível para a
 superação de uma crise de acumulação.
 A característica organizacional do modelo em questão,
 requerida no contexto de crise, foi o(a)
+expansão dos grandes estoques.
+incremento da fabricação em massa.
+adequação da produção à demanda.
+aumento da mecanização do trabalho.
+centralização das etapas de planejamento.
 
 ## Questão 79
 
 - Idioma: geral
-- Palavras: 97
+- Palavras: 121
 - Tem imagem: não
 
 ### Texto extraído
@@ -4601,11 +5252,16 @@ ao tráfico africano de escravos por muitos periodistas e
 analistas do século XIX.
 A comparação mencionada no texto foi possível em razão
 da seguinte característica:
+Oferta de contrato formal.
+Origem étnica dos grupos de trabalhadores.
+Conhecimento das tarefas desenvolvidas.
+Controle opressivo das vidas dos indivíduos.
+Investimento requerido dos empregadores.
 
 ## Questão 80
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 115
 - Tem imagem: não
 
 ### Texto extraído
@@ -4643,11 +5299,16 @@ invisibilidade à posição de paradigma de desenvolvimento
 sustentável com participação popular.
 De acordo com o texto, a visibilidade dos seringueiros
 amazônicos foi estabelecida pela relação entre
+crescimento econômico e migração de trabalhadores.
+produção de borracha e escassez de recursos naturais.
+reivindicação de terra e preservação de mata nativa.
+incentivo governamental e conservação de territórios.
+modernização de plantio e comércio de látex.
 
 ## Questão 81
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 113
 - Tem imagem: não
 
 ### Texto extraído
@@ -4687,11 +5348,16 @@ permitem, quando puder para nossos colégios e casas
 de meninos.
 O texto explicita premissas da expansão ultramarina
 portuguesa ao buscar justificar a
+propagação do ideário cristão.
+valorização do trabalho braçal.
+adoção do cativeiro na Colônia.
+adesão ao ascetismo contemplativo.
+alfabetização dos indígenas nas Missões.
 
 ## Questão 82
 
 - Idioma: geral
-- Palavras: 119
+- Palavras: 129
 - Tem imagem: não
 
 ### Texto extraído
@@ -4734,11 +5400,16 @@ que seria sensato, continuam ali, indiferentes ao perigo
 que os espreita.
 A característica física que justifica a fixação do homem
 nos locais apresentados no texto é a ocorrência de
+solo fértil.
+encosta íngreme.
+vegetação diversificada.
+drenagem eficiente.
+clima ameno.
 
 ## Questão 83
 
 - Idioma: geral
-- Palavras: 70
+- Palavras: 123
 - Tem imagem: não
 
 ### Texto extraído
@@ -4776,11 +5447,21 @@ Esse ambiente garantia peculiar apoio emocional às
 experiências intensamente individuais que abrigava.
 Um motivo que explica a ambientação da prática descrita
 no texto encontra-se no(a)
+regra judaica, que pregava a superioridade espiritual
+dos cultos das sinagogas.
+moralismo da legislação, que dificultava as reuniões
+abertas da juventude livre.
+adesão do patriciado, que subvertia o conceito
+original dos valores estrangeiros.
+decisão política, que censurava as manifestações
+públicas da doutrina dissidente.
+violência senhorial, que impunha a desestruturação
+forçada das famílias escravas.
 
 ## Questão 84
 
 - Idioma: geral
-- Palavras: 63
+- Palavras: 73
 - Tem imagem: não
 
 ### Texto extraído
@@ -4813,11 +5494,16 @@ metamorfismo tanto de rochas preexistentes como de
 parte das rochas formadas no processo.
 Qual feição fisiográfica é gerada pelo processo tectônico
 apresentado?
+Planícies abissais.
+Planaltos cristalinos.
+Depressões absolutas.
+Bacias sedimentares.
+Dobramentos modernos.
 
 ## Questão 85
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 158
 - Tem imagem: não
 
 ### Texto extraído
@@ -4871,11 +5557,20 @@ acontecimento, embora com percepções diversas,
 relacionam-se a um aspecto do processo de
 independência da colônia luso-americana expresso
 em dissensões entre
+quadros dirigentes em torno da abolição da ordem
+escravocrata.
+grupos regionais acerca da configuração político-
+-territorial.
+intelectuais laicos acerca da revogação do domínio
+eclesiástico.
+homens livres em torno da extensão do direito de voto.
+elites locais acerca da ordenação do monopólio
+fundiário.
 
 ## Questão 86
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 136
 - Tem imagem: não
 
 ### Texto extraído
@@ -4920,11 +5615,16 @@ conservação da Constituição e à felicidade geral.
 Esse documento, elaborado no contexto da Revolução
 Francesa, reflete uma profunda mudança social ao
 estabelecer a
+manutenção das terras comunais.
+supressão do poder constituinte.
+falência da sociedade burguesa.
+paridade do tratamento jurídico.
+abolição dos partidos políticos.
 
 ## Questão 87
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 91
 - Tem imagem: não
 
 ### Texto extraído
@@ -4957,11 +5657,16 @@ atenienses nos séculos IV e V a.C. pode ser caracterizada,
 fundamentalmente, como direta.
 Naquele contexto, a emergência do sistema de governo
 mencionado no excerto promoveu o(a)
+competição para a escolha de representantes.
+campanha pela revitalização das oligarquias.
+estabelecimento de mandatos temporários.
+declínio da sociedade civil organizada.
+participação no exercício do poder.
 
 ## Questão 88
 
 - Idioma: geral
-- Palavras: 96
+- Palavras: 121
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5002,11 +5707,16 @@ já no interior de São Paulo. Nesse trecho, a água não
 tem oxigênio suficiente para abrigar vida.
 Considerando a análise dos textos, a condição atual
 desse rio tem como origem a
+valorização do sítio urbano.
+extinção da vegetação nativa.
+recepção de densa carga de dejetos.
+captação desordenada do regime pluvial.
+expansão do uso de defensivos químicos.
 
 ## Questão 89
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 121
 - Tem imagem: não
 
 ### Texto extraído
@@ -5047,11 +5757,16 @@ conclusão referente à existência efetiva de coisas ou
 questões de fato.
 Segundo o autor, qual é a origem do conhecimento
 humano?
+A potência inata da mente.
+A revelação da inspiração divina.
+O estudo das tradições filosóficas.
+A vivência dos fenômenos do mundo.
+O desenvolvimento do raciocínio abstrato.
 
 ## Questão 90
 
 - Idioma: geral
-- Palavras: 172
+- Palavras: 192
 - Tem imagem: não
 
 ### Texto extraído
@@ -5111,3 +5826,8 @@ região onde os rejeitos não chegaram com força para
 derrubar a floresta”, diz o biólogo.
 Sobre a tragédia de Mariana, os textos apresentam
 divergência quanto ao(à)
+poluição dos rios locais.
+identificação da área afetada.
+destruição da vegetação nativa.
+aparecimento de enfermidade endêmica.
+surgimento de comunidades desabrigadas.

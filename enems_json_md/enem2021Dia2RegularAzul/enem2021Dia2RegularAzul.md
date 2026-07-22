@@ -3,7 +3,7 @@
 ## Questão 91
 
 - Idioma: geral
-- Palavras: 174
+- Palavras: 195
 - Tem imagem: sim
 
 ### Texto extraído
@@ -76,12 +76,16 @@ Micronutrientes
 cr - 4,5 x 10%
 Para correção do pH da solução nutritiva preparada, esse
 produtor pode empregar uma solução de
-VOOS
+ácido fosfórico, H,PO,.
+sulfato de cálcio, CaSO,.
+óxido de alumínio, Al,O,.
+cloreto de ferro(Il), FeCl,.
+hidróxido de potássio, KOH.
 
 ## Questão 92
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 107
 - Tem imagem: sim
 
 ### Texto extraído
@@ -120,11 +124,19 @@ Considere f, e v,, respectivamente, como a frequência
 fundamental e a velocidade de propagação do som emitido
 pela barra de menor comprimento, e f, e v, sáo essas
 mesmas grandezas para o som emitido pela barra de
+maior comprimento.
+As relações entre as frequências fundamentais e entre as
+velocidades de propagacáo sáo, respectivamente,
+f<f e v,<v,.
+f<f e v,=v,.
+f <f e v,>v,.
+f>f e v,=v,.
+f,>f, e v,>v,.
 
 ## Questão 93
 
 - Idioma: geral
-- Palavras: 67
+- Palavras: 90
 - Tem imagem: sim
 
 ### Texto extraído
@@ -164,18 +176,20 @@ a orientação de seus tentáculos, assemelhando-se a
 alguns animais. As imagens 1, 3 e 5 apresentam polvos
 mimetizando, respectivamente, um peixe-linguado (2),
 um peixe-leão (4) e uma serpente-marinha (6).
-O o
 Do ponto de vista evolutivo, a capacidade apresentada se
 estabeleceu porque os polvos
 O originaram-se do mesmo ancestral
 que esses
 animais.
-v O 00
+passaram por mutações similares a esses organismos.
+observaram esses animais em seus nichos ecológicos.
+resultaram de convergência adaptativa com essas espécies.
+sobreviveram às pressões seletivas com esses comportamentos.
 
 ## Questão 94
 
 - Idioma: geral
-- Palavras: 130
+- Palavras: 147
 - Tem imagem: sim
 
 ### Texto extraído
@@ -221,11 +235,17 @@ cos 53°= 0,6 e desprezível a ação de forças dissipativas.
 Com base nas distâncias dadas e mantendo o último
 ângulo de disparo, qual deveria ser, aproximadamente,
 o menor valor de |v,| que permitiria ao disparo efetuado
+pelo canhão B atingir o canhão A?
+30m's.
+35m's.
+40m's.
+45m's.
+50m's.
 
 ## Questão 95
 
 - Idioma: geral
-- Palavras: 38
+- Palavras: 87
 - Tem imagem: não
 
 ### Texto extraído
@@ -251,13 +271,20 @@ Exame Nacional do Ensino Médio
 Os pesticidas organoclorados foram amplamente
 empregados na agricultura, contudo, em razão das suas
 elevadas toxicidades e persistências no meio ambiente,
+eles foram banidos. Considere a aplicação de 500 g de
 um pesticida organoclorado em uma cultura e que, em
 certas condições, o tempo de meia-vida do pesticida no
+solo seja de 5 anos.
+A massa do pesticida no decorrer de 35 anos será mais
+31,29. impede a mistura sanguínea.
+, uma passagem única pelo coração.
+250,09. temporalmente o sangue venoso do arterial.
+* 0 2 03 25 A 73 *
 
 ## Questão 96
 
 - Idioma: geral
-- Palavras: 51
+- Palavras: 103
 - Tem imagem: não
 
 ### Texto extraído
@@ -288,11 +315,18 @@ códons, está escrita a seguir.
 AUG | UUU | GUU | CAA | UGU | AGU | UAG
 Pesquisadores submeteram a sequência a mutações
 independentes. Sabe-se que os códons UAG e UAA são
+terminais, ou seja, indicam a interrupção da tradução.
+Qual mutação produzirá a menor proteina?
+Deleção de G no códon 3.
+Substituição de C por U no códon 4.
+Substituição de G por C no códon 6.
+Substituição de A por G no códon 7.
+Deleção dos dois primeiros nucleotídeos no códon 5.
 
 ## Questão 97
 
 - Idioma: geral
-- Palavras: 86
+- Palavras: 90
 - Tem imagem: não
 
 ### Texto extraído
@@ -327,12 +361,16 @@ tem sido reaproveitá-lo para fazer sabáo. Para isso, sáo
 necessários, além do próprio óleo, água e soda cáustica.
 Com base no texto, a reação química que permite o
 reaproveitamento do óleo vegetal é denominada
-VOVOAO
+redução.
+epoxidação.
+substituição.
+esterificação.
+saponificação.
 
 ## Questão 98
 
 - Idioma: geral
-- Palavras: 83
+- Palavras: 107
 - Tem imagem: não
 
 ### Texto extraído
@@ -366,13 +404,15 @@ Os prejuízos no período embrionário são evitados porque
 a circulação fetal se assemelha à dos(as)
 O aves, porque a pequena circulação e a grande
 circulação estão presentes.
-próxima de O répteis, porque a mistura de sangue é minimizada por
-um metabolismo lento.
+próxima de O répteis, porque a mistura de sangue é minimizada por um metabolismo lento.
+399. O crocodilianos, porque a separação dos ventrículos
+6259. O peixes, porque a circulação é simples, ocorrendo
+12509. O anfibios, porque pressões diferenciais isolam
 
 ## Questão 99
 
 - Idioma: geral
-- Palavras: 125
+- Palavras: 151
 - Tem imagem: sim
 
 ### Texto extraído
@@ -421,18 +461,24 @@ maneira, há condensação e chuvas fortes no centro da
 cidade, em vez de na região de mananciais. A imagem
 apresenta os três subsistemas que trocam energia
 nesse fenômeno.
-Sol
 Brisa
 marítima
 Ilha de calor
 No processo de fortes chuvas no centro da cidade
 de Sáo Paulo, há dois mecanismos dominantes de
 transferência de calor: entre o Sol e a ilha de calor, e entre
+a ilha de calor e a brisa marítima.
+Esses mecanismos são, respectivamente,
+irradiação e convecção.
+irradiação e irradiação.
+condução e irradiação.
+convecção e irradiação.
+convecção e convecção.
 
 ## Questão 100
 
 - Idioma: geral
-- Palavras: 168
+- Palavras: 183
 - Tem imagem: não
 
 ### Texto extraído
@@ -494,11 +540,16 @@ explicação!”.
 O aspecto físico comum que explica a diferença de
 comportamento dos corpos em queda nessa discussão
 é o(a)
+peso dos corpos.
+resistência do ar.
+massa dos corpos.
+densidade dos corpos.
+aceleração da gravidade.
 
 ## Questão 101
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 114
 - Tem imagem: não
 
 ### Texto extraído
@@ -547,18 +598,16 @@ O melaço utilizado apresentou 50 kg de monossacarídeos
 na forma de glicose.
 O volume de etanol, em litro, obtido nesse processo é
 mais próximo de
-oo oo
 16.
 20.
 25.
 64.
-@
-100.
+@ 100.
 
 ## Questão 102
 
 - Idioma: geral
-- Palavras: 46
+- Palavras: 79
 - Tem imagem: não
 
 ### Texto extraído
@@ -586,16 +635,15 @@ enem202 CN - 2º dia | Caderno 7 - AZUL - 1? Aplicação 5)
 ### Texto contado
 
 tradicionais pilhas. A ilustração apresenta uma montagem que faz funcionar um cronômetro digital.
-Papel umedecido Papel umedecido
-com Na,SO, (aq) com Na,SO, (aq)
+Papel umedecido Papel umedecido com Na,SO, (aq) com Na,SO, (aq)
 CuSO,(aq) ZnSO,(aq) CuSO, (aq)
-Utilizando a representação de projetos elétricos, o circuito equivalente a esse sistema é
-mM O
+Utilizando a representação de projetos elétricos, o circuito equivalente a esse sistema é mM O A) O o. wWw— > [ AMM EAN 4 e enem202/ AI 0000 É possível ligar aparelhos elétricos de baixa corrente utilizando materiais comuns de laboratório no lugar das
+Voltímetro \ \ 00:06: ZnSO,(aq)
 
 ## Questão 103
 
 - Idioma: geral
-- Palavras: 126
+- Palavras: 124
 - Tem imagem: sim
 
 ### Texto extraído
@@ -645,16 +693,15 @@ por comprimido foi de apenas 40% da esperada.
 O OH
 O
 Ácido acetilsalicílico
-O teste que permitiu reprovar o lote de analgésicos foi
-o de número
+teste que permitiu reprovar o lote de analgésicos foi
+de número
 00009
-RON
-@ 5.
+RON @ 5.
 
 ## Questão 104
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 89
 - Tem imagem: não
 
 ### Texto extraído
@@ -695,6 +742,13 @@ algas macroscópicas, os peixes herbívoros e os golfinhos.
 Concentrações mais elevadas dos compostos citados
 são encontradas em
 im OR OR oe >)
+esponjas.
+golfinhos.
+fitopláncton.
+peixes herbívoros.
+algas macroscópicas.
+MM
+o
 
 ## Questão 105
 
@@ -763,7 +817,7 @@ está representado em
 ## Questão 106
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 97
 - Tem imagem: sim
 
 ### Texto extraído
@@ -796,12 +850,16 @@ H H H H H H H
 Forma isomérica
 Bile, urina Hiperbilirrubinemia
 Na fototerapia, a luz provoca a conversáo da bilirrubina no seu isómero
-VOVOO
+ótico.
+funcional.
+de cadeia.
+de posição.
+geométrico.
 
 ## Questão 107
 
 - Idioma: geral
-- Palavras: 260
+- Palavras: 301
 - Tem imagem: sim
 
 ### Texto extraído
@@ -846,30 +904,23 @@ Parâmetro Motor a gasolina Motor a álcool
 Aceleração de 0 a 100 km/h em 13,4 s de O a 100 km/h em 12,9 s
 Velocidade máxima 165 km/h 163 km/h
 Considerando desprezível a resistência do ar, qual versão apresenta a maior potência?
-G O 008
 Como a versão a gasolina consegue a maior aceleração, esta é a que desenvolve a maior potência.
 potência.
 desenvolvida é a mesma.
 desenvolve a maior potência.
+enem202 O A
 A icterícia, popularmente conhecida por amarelão, é uma patologia frequente em recém-nascidos. Um bebê com
 icterícia não consegue metabolizar e excretar de forma eficiente a bilirrubina. Com isso, o acúmulo dessa substância
+MOREIRA, M. et al. O recém-nascido de alto risco: teoria e prática do cuidar [on-line]. Rio de Janeiro: Fiocruz, 2004 (adaptado).
 400 a 500 nm
-HOOC COOH HOOC COOH
-a» HS) >H HS O
-ON 0 Ny << TAS N ENDS
-5 Náo é suficientemente
-Excregáo X excretada pelo
-| recém-nascido
-Analisando a ficha técnica de um automóvel popular, verificam-se algumas características em relacáo ao seu
-Como a versão a gasolina atinge o maior valor de energia cinética, esta é a que desenvolve a maior potência.
-Como a versão a álcool apresenta a maior taxa de variação de energia cinética, esta é a que desenvolve a maior
-Como ambas as versões apresentam a mesma variação de velocidade no cálculo da aceleração, a potência
-Como a versão a gasolina fica com o motor trabalhando por mais tempo para atingir os 100 km/h, esta é a que
+HOOC COOH HOOC COOH a» HS) >H HS O ON 0 Ny << TAS N ENDS 5 Náo é suficientemente Excregáo X excretada pelo | recém-nascido WANG, J. et. al. Challenges of phototherapy for neonatal hyperbilirubinemia (Review). Experimental and Therapeutic Medicine, n. 21, 2021 (adaptado).
+Analisando a ficha técnica de um automóvel popular, verificam-se algumas características em relacáo ao seu Como a versão a gasolina atinge o maior valor de energia cinética, esta é a que desenvolve a maior potência.
+Como a versão a álcool apresenta a maior taxa de variação de energia cinética, esta é a que desenvolve a maior Como ambas as versões apresentam a mesma variação de velocidade no cálculo da aceleração, a potência Como a versão a gasolina fica com o motor trabalhando por mais tempo para atingir os 100 km/h, esta é a que
 
 ## Questão 108
 
 - Idioma: geral
-- Palavras: 172
+- Palavras: 186
 - Tem imagem: não
 
 ### Texto extraído
@@ -935,11 +986,18 @@ ao Sol (u.a.) relativa média
 *Urano 19 1,2
 u.a. = 149 600 000 km, é a unidade astronómica, *Planeta clássico, **Planeta-anáo
 Considerando os versos da sextilha e as informações da
+tabela, a qual planeta o cordel faz referência?
+© Mercúrio.
+Júpiter.
+Urano.
+Saturno.
+Netuno.
+MM
 
 ## Questão 109
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 131
 - Tem imagem: não
 
 ### Texto extraído
@@ -970,20 +1028,15 @@ Cientistas da Universidade de New South Wales,
 na Austrália, demonstraram em 2012 que a Lei de
 Ohm é válida mesmo para fios finíssimos, cuja área
 da seção reta compreende alguns poucos átomos.
-Atabela apresenta as áreas e comprimentos de alguns
-dos fios construídos (respectivamente com as mesmas
-unidades de medida). Considere que a resistividade
-mantém-se constante para todas as geometrias (uma
-aproximação confirmada pelo estudo).
-a i A Resisténcia
-Fio 4 1 106 R4
-*Vênus 0,72 5,2 a Le . x
-As resistências elétricas dos fios, em ordem crescente, são
+Atabela apresenta as áreas e comprimentos de alguns dos fios construídos (respectivamente com as mesmas unidades de medida). Considere que a resistividade mantém-se constante para todas as geometrias (uma aproximação confirmada pelo estudo).
+a i A Resisténcia MEDEIROS, A.; AGRA, J. T. M., A astronomia na literatura de cordel, Area Comprimento PA Física na Escola, n. 1, abr. 2010 (fragmento). elétrica Fio 4 1 106 R4 WEBER, S. B. etal. Ohm's Law Survives to the Atomic Scale.
+Science, n. 335, jan. 2012 (adaptado).
+*Vênus 0,72 5,2 a Le . x As resistências elétricas dos fios, em ordem crescente, são
 
 ## Questão 110
 
 - Idioma: geral
-- Palavras: 69
+- Palavras: 91
 - Tem imagem: não
 
 ### Texto extraído
@@ -1019,11 +1072,19 @@ eventualmente degradado pelos organismos, resultando
 Ainda, outros compostos orgánicos sáo catabolizados
 pelos seres, com menor rendimento energético,
 produzindo compostos secundários (subprodutos) que
+podem funcionar como combustíveis ambientais.
+O processo metabólico associado à expressão
+combustíveis ambientais é a
+fotossíntese.
+fermentação.
+quimiossíntese.
+respiração aeróbica.
+fosforilação oxidativa.
 
 ## Questão 111
 
 - Idioma: geral
-- Palavras: 117
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -1074,13 +1135,15 @@ Para completar a ação proposta no ambiente escolar, o que
 falta ser inserido no planejamento?
 O Realizar campanhas educativas de sensibilização em
 bairros vizinhos para fortalecer a coleta seletiva.
-O Firmar parceria com a prefeitura ou cooperativa de
-catadores para recolhimento dos materiais recicláveis
+Firmar parceria com a prefeitura ou cooperativa de catadores para recolhimento dos materiais recicláveis e destinação apropriada.
+Organizar visitas ao lixão ou aterro local para identificar aspectos importantes sobre a disposição final do lixo.
+Divulgar na rádio local, no jornal impresso e nas redes sociais que a escola está realizando a coleta seletiva.
+A Colocar recipientes coletores de lixo reciclável fora da escola para entrega voluntária pela população.
 
 ## Questão 112
 
 - Idioma: geral
-- Palavras: 45
+- Palavras: 70
 - Tem imagem: não
 
 ### Texto extraído
@@ -1110,11 +1173,19 @@ controle reprodutivo. Por causa desse tipo de criação,
 a consanguinidade é favorecida, proporcionando o
 aparecimento de enfermidades, como o albinismo, defeitos
 cardíacos, entre outros. Separar os animais de forma
+adequada minimizaria a ocorrência desses problemas.
+Qual procedimento biotecnológico prévio é recomendado
+nessa situação?
+Transgenia.
+Terapia génica.
+Vacina de DNA.
+Clonagem terapêutica.
+(A Mapeamento genético.
 
 ## Questão 113
 
 - Idioma: geral
-- Palavras: 55
+- Palavras: 90
 - Tem imagem: não
 
 ### Texto extraído
@@ -1143,11 +1214,20 @@ o cobre metálico é utilizado como reagente de partida.
 Após uma sequência de reações (I, Il, III, IV e V), o cobre econômica é
 retorna ao seu estado inicial ao final do ciclo.
 cu HNO, Cu(NO,) NaOH Cu(OH) O cobre-aço, alumínio e ferro.
+| ) 32 II ? O alumínio, cobre-aço e ferro.
+one CuSO, ee CuO 7 @ ferro, alumínio e cobre-aço.
+* 0 203 25 A Z9 *
+A reação de redução do cobre ocorre na etapa
+|.
+Il.
+II.
+Iv.
+V.
 
 ## Questão 114
 
 - Idioma: geral
-- Palavras: 52
+- Palavras: 73
 - Tem imagem: não
 
 ### Texto extraído
@@ -1176,11 +1256,19 @@ patelar. Esse exame consiste na estimulação da patela, um
 pequeno osso localizado na parte anterior da articulação
 do joelho, com um pequeno martelo. A resposta reflexa
 ao estímulo é caracterizada pelo levantamento da perna
+em que o estímulo foi aplicado.
+Qual região específica do sistema nervoso coordena
+essa resposta?
+Ponte.
+Medula.
+Cerebelo.
+Hipotálamo.
+QA Neuro-hipófise.
 
 ## Questão 115
 
 - Idioma: geral
-- Palavras: 143
+- Palavras: 208
 - Tem imagem: não
 
 ### Texto extraído
@@ -1230,11 +1318,16 @@ em que d, e d, são as espessuras dos dois materiais,
 e k e k são as condutividades de cada material.
 Os materiais mais comuns no mercado para panelas são
 o alumínio (k = 20 W/m K), o ferro (k = 8 W/m K) e 0 aço
+(k = 5 W/m K) combinado com o cobre (k = 40 W/m K).
+Compara-se uma panela de ferro, uma de alumínio e uma composta de : da espessura em cobre e ; da espessura em aço, todas com a mesma espessura total e com a mesma área de fundo.
+A ordem crescente da mais econômica para a menos
+cobre-aço, ferro e alumínio.
+alumínio, ferro e cobre-aço.
 
 ## Questão 116
 
 - Idioma: geral
-- Palavras: 48
+- Palavras: 51
 - Tem imagem: não
 
 ### Texto extraído
@@ -1266,14 +1359,17 @@ a N Y O ci
 I HI II
 OA X
 i
-IV Vv
 O teste positivo será observado com o pesticida
 ® |.
+Il.
+Ill.
+lv.
+e v.
 
 ## Questão 117
 
 - Idioma: geral
-- Palavras: 34
+- Palavras: 56
 - Tem imagem: não
 
 ### Texto extraído
@@ -1294,11 +1390,18 @@ biodiesel.
 
 suínos são 200 vezes mais poluentes. Sendo assim, a utilização desses resíduos como matéria-prima na obtenção de
 combustíveis é uma alternativa que permite diversificar a matriz energética nacional, ao mesmo tempo em que parte
+dos recursos hídricos do país são preservados.
+O biocombustível a que se refere o texto é o
+etanol.
+biogás.
+butano.
+metanol.
+biodiesel.
 
 ## Questão 118
 
 - Idioma: geral
-- Palavras: 197
+- Palavras: 243
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1336,7 +1439,6 @@ quando adicionada á água de criadouros do mosquito transmissor. Essa substánc
 após ser ingerida com a água do criadouro e, quando ativada pela luz, induz a produção de espécies reativas de
 oxigênio que danificam de forma fatal o tecido do tubo digestório.
 A forma de combate relatada tem como atividade o(a)
-VOO
 morte do indivíduo adulto.
 redução da eclosão dos ovos.
 comprometimento da metamorfose.
@@ -1347,18 +1449,16 @@ usualmente encontradas, algumas são apresentadas na figura. A distinção dessa
 meio de uma análise química qualitativa, ou seja, determinando sua presença mediante a adição de um reagente
 OH OH
 | | o Cl Cl
-O Y NEN e
+Y NEN e
 Cl Cl
 N O
-u I Ng F
-Com o aumento da população de suínos no Brasil, torna-se necessária a adoção de métodos para reduzir o
-potencial poluidor dos resíduos dessa agroindústria, uma vez que, comparativamente ao esgoto doméstico, os dejetos
-A curcumina, uma das substáncias que confere a cor alaranjada ao acafráo, pode auxiliar no combate á dengue
+u I Ng F Com o aumento da população de suínos no Brasil, torna-se necessária a adoção de métodos para reduzir o potencial poluidor dos resíduos dessa agroindústria, uma vez que, comparativamente ao esgoto doméstico, os dejetos BECK, A. M. Resíduos suínos como alternativa energética sustentável. XXVII Encontro Nacional de Engenharia de Produção. Anais ENEGEP, Foz do Iguaçu, 2007 (adaptado).
+A curcumina, uma das substáncias que confere a cor alaranjada ao acafráo, pode auxiliar no combate á dengue TOLEDO, K. Corante extraído do açafrão pode ser útil no combate à dengue. Disponível em: http://agencia.fapesp.br. Acesso em: 25 abr. 2015 (adaptado).
 
 ## Questão 119
 
 - Idioma: geral
-- Palavras: 47
+- Palavras: 50
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1390,12 +1490,16 @@ Espécie Periderme/Esclerênquima Floema/Esclerênquima
 Legenda: (-) ausente, (+) presente em pequena quantidade, (++) presente em média quantidade,
 (+++) presente em grande quantidade.
 Qual espécie corresponde ao objetivo proposto?
-¡moco HR)
+1
+2
+3
+4
+5
 
 ## Questão 120
 
 - Idioma: geral
-- Palavras: 244
+- Palavras: 263
 - Tem imagem: não
 
 ### Texto extraído
@@ -1453,26 +1557,19 @@ ho]
 <x
 | j Á > Amarelo
 Em qual faixa do espectro visível os carotenos absorvem majoritariamente?
-VOVOO
 Entre o violeta e o azul.
 Entre o azul e o verde.
 Entre o verde e o amarelo.
 Entre o amarelo e o laranja.
 Entre o laranja e o vermelho.
-Com o objetivo de identificar a melhor espécie produtora de madeira para construção (com resistência mecánica
-Tecido analisado
-Alburno Cerne
-No outono, as folhas das árvores mudam de cor, de verde para tons de amarelo, castanho, laranja e vermelho.
-Conforme apresentado no espectro de absorcáo, as moléculas de clorofila absorvem a radiacáo solar nas
-Espectro de absorção na região do visível Cores complementares
-2 Laranja Azul
-590
-300 400 500 600 700 560 A (nm)
+enem202 NA A Com o objetivo de identificar a melhor espécie produtora de madeira para construção (com resistência mecánica Tecido analisado Alburno Cerne No outono, as folhas das árvores mudam de cor, de verde para tons de amarelo, castanho, laranja e vermelho.
+Conforme apresentado no espectro de absorcáo, as moléculas de clorofila absorvem a radiacáo solar nas Espectro de absorção na região do visível Cores complementares 2 Laranja Azul 590 300 400 500 600 700 560 A (nm)
+Comprimento de onda (nm) Disponível em: https://vidauniversoydemas.wordpress.com. Acesso em: 6 dez. 2017 (adaptado).
 
 ## Questão 121
 
 - Idioma: geral
-- Palavras: 36
+- Palavras: 55
 - Tem imagem: não
 
 ### Texto extraído
@@ -1489,12 +1586,15 @@ longo da coevolução patógeno-hospedeiro.
 ### Texto contado
 
 vírus da dengue, que, embora tenha período de incubação menor (até 10 dias), apresenta taxa de letalidade abaixo de 1%.
-Segundo as informações do texto e aplicando princípios de evolução biológica às relações do tipo patógeno-hospedeiro,
+Segundo as informações do texto e aplicando princípios de evolução biológica às relações do tipo patógeno-hospedeiro, qual dos dois vírus infecta seres humanos há mais tempo?
+evolução.
+evolutiva dos seres humanos.
+longo da coevolução patógeno-hospedeiro.
 
 ## Questão 122
 
 - Idioma: geral
-- Palavras: 76
+- Palavras: 78
 - Tem imagem: não
 
 ### Texto extraído
@@ -1530,12 +1630,16 @@ Recebe o que vem dos banheiros
 e lavanderia, reunindo todo o esgoto
 residencial.
 Em qual etapa decanta-se o lodo a ser separado do esgoto residencial?
-GO@O8
+1
+2
+3
+5
+6
 
 ## Questão 123
 
 - Idioma: geral
-- Palavras: 248
+- Palavras: 289
 - Tem imagem: não
 
 ### Texto extraído
@@ -1579,6 +1683,7 @@ no solo para produzir novas gerações. Na floricultura, é comum utilizar o cau
 
 ### Texto contado
 
+propagação da planta é positiva em razão da aplicação de auxinas na porção inferior do caule.
 A utilizagao de auxinas no método de estaquia das roseiras contribui para
 VODOS
 floração da planta.
@@ -1607,13 +1712,13 @@ bactérias consomem
 relativamente maior que
 a matéria orgânica.
 nas outras etapas.
-O plantio por estaquia é um método de propagação de plantas no qual partes de um espécime são colocadas
-no solo para produzir novas gerações. Na floricultura, é comum utilizar o caule das roseiras para estaquia, pois a
+TAVARES, K. Estações de trat. to de esgoto individuais permitem a reutilização da água. Disponível em: https://extra.globo.com. Acesso em: 18 nov. 2014 (adaptado).
+plantio por estaquia é um método de propagação de plantas no qual partes de um espécime são colocadas no solo para produzir novas gerações. Na floricultura, é comum utilizar o caule das roseiras para estaquia, pois a
 
 ## Questão 124
 
 - Idioma: geral
-- Palavras: 70
+- Palavras: 94
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1645,11 +1750,18 @@ PEM 60 - 100 Acido
 PAFC 175 - 200 Ácido fosfórico líquido 4
 SOFC 600 - 1 000 Óxido de zircônio(IV) sólido 2
 que operam em baixos níveis de energia térmica, são formadas por membranas de eletrólitos poliméricos e ocorrem
+em meio ácido.
+A tecnologia testada mais adequada para o emprego em veículos automotivos é a célula de combustível
+AFC.
+MSFC.
+PEM.
+PAFC.
+SOFC.
 
 ## Questão 125
 
 - Idioma: geral
-- Palavras: 205
+- Palavras: 222
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1698,12 +1810,12 @@ TÁ QUENTE
 MESMO E A UMIDADE.
 HOJE, NÉ?
 O incômodo mencionado pelo personagem da tirinha deve-se ao fato de que, em dias úmidos,
-VOVOS
 a temperatura do vapor-d'água presente no ar é alta.
 o suor apresenta maior dificuldade para evaporar do corpo.
 a taxa de absorção de radiação pelo corpo torna-se maior.
 o ar torna-se mau condutor e dificulta o processo de liberação de calor.
 o vapor-d'água presente no ar condensa-se ao entrar em contato com a pele.
+* 0 203 25 AZ 13 *
 O emprego de células de combustível a hidrogênio pode ser uma tecnologia adequada ao transporte automotivo.
 [pe elo Lea ES UOTE ETE Eletrolito Semirreações nos eletrodos
 H, + 20H> 2 H,0+2e-
@@ -1722,11 +1834,12 @@ ENTÃO, SALTA
 GOSTA DE
 CORRENDO.
 UMIDADE?
+WATTERSON, B. Disponível em: https://novaescola.org.br. Acesso em: 11 ago. 2014.
 
 ## Questão 126
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 78
 - Tem imagem: não
 
 ### Texto extraído
@@ -1759,21 +1872,15 @@ Ele dispõe das lâmpadas, de fios, uma bateria e dois
 interruptores, como ilustrado, junto com seu símbolo de =
 três pontos. Quando esse interruptor fecha AB, abre BC
 e vice-versa.
-Bateria Lâmpadas
-A ¡e >. q. o
-O garoto fez cinco circuitos elétricos usando os dois
-interruptores, mas apenas um satisfaz a sua necessidade.
-Esse circuito é representado por +
-E:
-295
-a
-> W
-o ME
+Bateria Lâmpadas A ¡e >. q. o
+garoto fez cinco circuitos elétricos usando os dois interruptores, mas apenas um satisfaz a sua necessidade.
+Esse circuito é representado por + E: 295 a > W
+ME
 
 ## Questão 127
 
 - Idioma: geral
-- Palavras: 37
+- Palavras: 78
 - Tem imagem: não
 
 ### Texto extraído
@@ -1801,11 +1908,18 @@ cuja base da dieta eram frutos e sementes, provocou
 impactos consideráveis na vegetação do Pantanal
 brasileiro. A flora, embora não tenha desaparecido,
 tornou-se menos abundante que no passado, além de
+ocupar áreas mais restritas.
+O evento descrito com a flora ocorreu em razão da redução
+da produção de flores.
+do tamanho das plantas.
+de fatores de disseminação das sementes.
+da quantidade de sementes por fruto.
+dos hábitats disponíveis para as plantas.
 
 ## Questão 128
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 129
 - Tem imagem: não
 
 ### Texto extraído
@@ -1852,7 +1966,6 @@ carregador ideal que opera a uma tensão de 220 V e é
 percorrido por uma corrente de 20 A.
 Quantas horas são necessárias para recarregar a energia
 utilizada nesse percurso?
-O VOO
 0,005
 0,125
 2,5
@@ -1862,7 +1975,7 @@ O VOO
 ## Questão 129
 
 - Idioma: geral
-- Palavras: 30
+- Palavras: 57
 - Tem imagem: não
 
 ### Texto extraído
@@ -1890,11 +2003,17 @@ existe uma segunda fertilização que resulta num tecido
 triploide.
 Essa segunda fertilizacáo foi importante evolutivamente,
 pois viabilizou a formação de um tecido de
+nutrição para o fruto.
+reserva para o embrião.
+revestimento para a semente.
+proteção para o megagametofito.
+vascularização para a planta jovem.
+* 0 203 25 AZ 1 5 *
 
 ## Questão 130
 
 - Idioma: geral
-- Palavras: 97
+- Palavras: 102
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1942,11 +2061,16 @@ Antranilato de
 metila C;H,NH,CO,CH, Uva
 O aroma do flavorizante derivado do ácido etanoico e que
 apresenta cadeia carbônica saturada é de
+kiwi.
+banana.
+pêssego.
+rum.
+uva.
 
 ## Questão 131
 
 - Idioma: geral
-- Palavras: 69
+- Palavras: 67
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1988,10 +2112,7 @@ L
 I
 »
 tempo (s)
-De acordo com o eletrocardiograma apresentado, qual
-foi o número de batimentos cardíacos por minuto desse
-paciente durante o exame?
-O VOVO
+De acordo com o eletrocardiograma apresentado, qual foi o número de batimentos cardíacos por minuto desse paciente durante o exame?
 100
 120
 180
@@ -1999,7 +2120,7 @@ O VOVO
 ## Questão 132
 
 - Idioma: geral
-- Palavras: 54
+- Palavras: 70
 - Tem imagem: não
 
 ### Texto extraído
@@ -2032,11 +2153,18 @@ Os pais dos pacientes podem não saber que são portadores
 dos genes da doença até o nascimento do primeiro filho
 afetado. Quando ambos os progenitores são portadores,
 existe uma chance, em quatro, de que seu bebê possa
+nascer com essa doença.
+Essa é uma doença hereditária de caráter
+recessivo.
+dominante.
+codominante.
+poligénico.
+polialélico.
 
 ## Questão 133
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 111
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2075,30 +2203,15 @@ estão presentes no dia a dia, bem como a faixa de força
 eletromotriz necessária ao seu funcionamento.
 Dispositivo eletrónico ala ES EE
 eletromotriz (V)
-| Relógio de parede 1,2a1,5
-I Celular 3,5a3,8
-Ill Camera digital 75a7,8
-IV Carrinho de controle 10,5 a 10,9
-remoto
-V Notebook/Laptop 19,5 a 20,0
-Considere que uma bateria é construída pela
-associação em série de três pilhas de litio-iodo, nas
-condições-padrão, conforme as semiequações de
-redução apresentadas.
-L+2e > 20 E” =+0,54 V
-Li + €e > Li E" =-3,05 V
-Essa bateria é adequada para o funcionamento de qual
-dispositivo eletrónico?
-O |
-O
-O ill
-O Iv
-@v
+| Relógio de parede 1,2a1,5 I Celular 3,5a3,8 Ill Camera digital 75a7,8 IV Carrinho de controle 10,5 a 10,9 remoto V Notebook/Laptop 19,5 a 20,0 Considere que uma bateria é construída pela associação em série de três pilhas de litio-iodo, nas condições-padrão, conforme as semiequações de redução apresentadas.
+L+2e > 20 E” =+0,54 V Li + €e > Li E" =-3,05 V Essa bateria é adequada para o funcionamento de qual dispositivo eletrónico?
+| O
+ill
 
 ## Questão 134
 
 - Idioma: geral
-- Palavras: 149
+- Palavras: 183
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2152,12 +2265,16 @@ EL Leitura da temperatura (*C)
 36 36,0 | 35,6 | 35,2 | 34,8 | 34,4 | 34,0
 É necessária a correção da medida do instrumento, pois
 um aumento na temperatura promove o(a)
-GO@O8
+aumento da dissociação da água.
+aumento da densidade da água e do álcool.
+mudança do volume dos materiais por dilatação.
+aumento da concentração de álcool durante a medida.
+alteração das propriedades químicas da mistura álcool e água.
 
 ## Questão 135
 
 - Idioma: geral
-- Palavras: 56
+- Palavras: 57
 - Tem imagem: não
 
 ### Texto extraído
@@ -2185,22 +2302,17 @@ enem202/
 
 O Prêmio Nobel de Química de 2000 deveu-se
 à descoberta e ao desenvolvimento de polímeros
+condutores. Esses materiais têm ampla aplicação em
 novos dispositivos eletroluminescentes (LEDs), células
 fotovoltaicas etc. Uma propriedade-chave de um polímero
 condutor é a presença de ligações duplas conjugadas ao
 longo da cadeia principal do polímero.
 Um exemplo desse polímero é representado pela estrutura
-(A) NA
-®
-107
-ou
-El
-= So
 
 ## Questão 136
 
 - Idioma: geral
-- Palavras: 129
+- Palavras: 127
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2241,7 +2353,6 @@ q? q? pi q? pe q”
 O+1 |29+1| 39+2 | 5p+3 | 89 +5
 A potência q”, escrita na forma ap + b (a e b são inteiros
 positivos), é
-voo oo
 50 + 3
 71p+2
 99 +6
@@ -2251,7 +2362,7 @@ voo oo
 ## Questão 137
 
 - Idioma: geral
-- Palavras: 229
+- Palavras: 245
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2307,24 +2418,15 @@ esfera foi construída centrada no ponto de interseção das
 diagonais do cubo. As oito esferas sobre os vértices são
 interligadas segundo suas arestas, e a esfera central se
 conecta a elas pelas diagonais do cubo.
-Todas essas interligações são feitas por tubos
-cilíndricos que possuem escadas em seu interior,
-permitindo o deslocamento de pessoas pela parte
-interna da estrutura. Na diagonal ortogonal à base, o
-deslocamento é feito por um elevador, que permite o
-deslocamento entre as esferas da base e a esfera do
-ponto mais alto, passando pela esfera central.
-Considere um visitante que se deslocou pelo interior
-do Atomium sempre em linha reta e seguindo o menor
-trajeto entre dois vértices, passando por todas as arestas
-e todas as diagonais do cubo.
-A projeção ortogonal sobre o plano do solo do trajeto
-percorrido por esse visitante é representada por
+Todas essas interligações são feitas por tubos cilíndricos que possuem escadas em seu interior, permitindo o deslocamento de pessoas pela parte interna da estrutura. Na diagonal ortogonal à base, o deslocamento é feito por um elevador, que permite o deslocamento entre as esferas da base e a esfera do ponto mais alto, passando pela esfera central.
+* 0 203 2 5 AZ 17 * Considere um visitante que se deslocou pelo interior do Atomium sempre em linha reta e seguindo o menor trajeto entre dois vértices, passando por todas as arestas e todas as diagonais do cubo.
+Disponível em: http://trupedatrip.com. Acesso em: 25 out. 2019.
+A projeção ortogonal sobre o plano do solo do trajeto percorrido por esse visitante é representada por
 
 ## Questão 138
 
 - Idioma: geral
-- Palavras: 266
+- Palavras: 275
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2386,7 +2488,6 @@ Internacional Criciuma Vasco da Gama Atlético Mineiro Santos
 Fluminense Sport Paulista FC Santo André Juventude
 01 Titulo 01 Titulo 01 Titulo 01 Titulo 01 Titulo
 Qual expressão determina a quantidade de painéis diferentes que a CBF poderá montar?
-o O oo
 5! 3! 6! 31.3!
 7!-5!-7!-91-10!
 30!
@@ -2395,18 +2496,13 @@ o O oo
 9! 7! 9!
 6 3! > 2! 4! 0)
 —.5/.—.—.10!
-A Copa do Brasil teve, até a edição de 2018, 15 times diferentes como campeões da competição, conforme
-(CBF) pretenda colocar um painel na sua sede. Esse painel teria 6 linhas e, em cada uma delas, 5 placas, referentes
-Cruzeiro Grêmio Corinthians Flamengo Palmeiras
-=
-a
-ES /
-(Rio de Janeiro) (Pernambuco) (Sao Paulo) (Sao Paulo) (Rio Grande do Sul)
+A Copa do Brasil teve, até a edição de 2018, 15 times diferentes como campeões da competição, conforme (CBF) pretenda colocar um painel na sua sede. Esse painel teria 6 linhas e, em cada uma delas, 5 placas, referentes Cruzeiro Grêmio Corinthians Flamengo Palmeiras = a ES / (Rio de Janeiro) (Pernambuco) (Sao Paulo) (Sao Paulo) (Rio Grande do Sul)
+Disponivel em: http://campeoesdofutebol.com.br. Acesso em: 1 nov. 2018 (adaptado).
 
 ## Questão 139
 
 - Idioma: geral
-- Palavras: 138
+- Palavras: 142
 - Tem imagem: não
 
 ### Texto extraído
@@ -2456,11 +2552,16 @@ Franquia ll} 415 445 370 370 425
 Franquia Ill) 415 390 425 433 420
 Com base nessas informações, a gerência decidiu incluir
 no cardápio o lanche de tipo
+|.
+Il.
+Ill.
+Iv.
+ev.
 
 ## Questão 140
 
 - Idioma: geral
-- Palavras: 128
+- Palavras: 140
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2509,6 +2610,7 @@ representantes dos supermercados que atingirem uma
 média de faturamento mensal (M), conforme apresentado
 no quadro.
 Comissão | Média de faturamento mensal (M)
+| 1<M<2
 II 2<M<4
 III 4<M<5
 IV 5<M<6
@@ -2522,14 +2624,19 @@ Tento) uae Quantidade de meses mais atrativo ©
 5 > O 6.
 3 4 O 9.
 13 1 e 10.
+* 0 203 25 AZ 19 ox
 Nas condições apresentadas, os representantes desse
 supermercado avaliam que receberão, no ano seguinte,
 a comissão de tipo
+|.
+Il.
+Ill.
+Iv.
 
 ## Questão 141
 
 - Idioma: geral
-- Palavras: 98
+- Palavras: 118
 - Tem imagem: não
 
 ### Texto extraído
@@ -2566,11 +2673,16 @@ percentual s calculado sobre o valor pago pelo total das
 diárias.
 Nessa situação, o preço a ser pago ao aplicativo para uma
 hospedagem de n diárias pode ser obtido pela expressáo
+P=dn+L+ans
+P=dn+L+*d:s
+P=d+L+s
+P=a-ns+L
+P=dn+L+s
 
 ## Questão 142
 
 - Idioma: geral
-- Palavras: 128
+- Palavras: 133
 - Tem imagem: não
 
 ### Texto extraído
@@ -2610,11 +2722,16 @@ lancados em cada rodada.
 Com base nos valores considerados pelo organizador da
 competicáo, a quantidade mínima de dardos que devem
 ser disponibilizados em uma rodada para tornar o jogo
+2
+4
+6
+9
+10
 
 ## Questão 143
 
 - Idioma: geral
-- Palavras: 76
+- Palavras: 81
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2674,11 +2791,16 @@ v 30 —
 Reservatório
 Nessa data, o reservatório com o maior volume de água
 era o
+[A |.
+I.
+Ill.
+lv.
+@ V.
 
 ## Questão 144
 
 - Idioma: geral
-- Palavras: 42
+- Palavras: 47
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2717,11 +2839,15 @@ o
 9 18 27
 Idade (ano)
 Qual é a média das idades, em ano, desses alunos?
+12
+18
+19
+27 [20
 
 ## Questão 145
 
 - Idioma: geral
-- Palavras: 144
+- Palavras: 159
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2770,11 +2896,16 @@ De 10 a 24 anos x
 Entre 24 e 60 anos y
 A partir de 60 anos x
 Os valores de x e y do quadro são, respectivamente, iguais a
+10€e80.
+10e90.
+20€e60.
+20€e80.
+25e50.
 
 ## Questão 146
 
 - Idioma: geral
-- Palavras: 212
+- Palavras: 211
 - Tem imagem: não
 
 ### Texto extraído
@@ -2840,7 +2971,6 @@ alimentados com a ração atual.
 Asubstituição da ração ocorrerá se a média da distribuição
 das massas dos coelhos da amostra, em quilograma, for
 superior a
-VOVOS
 5,0.
 9,5.
 10,0.
@@ -2850,7 +2980,7 @@ VOVOS
 ## Questão 147
 
 - Idioma: geral
-- Palavras: 86
+- Palavras: 101
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2891,12 +3021,16 @@ Frequéncia
 20 000
 10 000
 As quatro letras mais frequentes, em ordem decrescente de frequência, do texto codificado são
-VOVOS
+A,E,OeS.
+D,E,FeG.
+D,H,ReV.
+R,L, BeX.
+X, B, Le P.
 
 ## Questão 148
 
 - Idioma: geral
-- Palavras: 39
+- Palavras: 250
 - Tem imagem: não
 
 ### Texto extraído
@@ -2931,11 +3065,25 @@ Um pesquisador acredita que a mediana representa bem o número anual típico de 
 em nosso planeta nos anos de 2000 a 2011.
 Terremotos 15 16 13 15 16 11 11 18 12 17 24 20
 Segundo esse pesquisador, o número anual típico de terremotos de magnitude maior ou igual a 7 é
+O 11.
+O 15.
+O 155.
+O 15,7.
+O 175.
+enem202 UN
+A Cifra de César é um exemplo de um método de codificação de mensagens usado por Júlio César para se
+No método, cada letra era trocada por uma letra que aparecia no alfabeto um número fixo de casas adiante (ou atrás)
+Original |A|B|ICID|E|FIG|H|I|JIK|L|IM|N|/O|P|IQIRIS|T|IU|VIWI|XI|YI|Z
+Para quebrar um código como esse, a análise de frequéncias das letras de um texto é uma ferramenta importante.
+Uma análise do texto do romance O guarani, de José de Alencar, que é composto por 491 631 letras, gerou o ABCDEFGHIJKLMNOPQRSTUVWX YZ Disponivel em: www.dominiopublico.gov.br. Acesso em: 7 fev. 2015.
+Após codificar esse texto com a regra do exemplo fornecido, faz-se nova análise de frequéncia no texto codificado.
+quadro apresenta o número de terremotos de magnitude maior ou igual a 7, na escala Richter, ocorridos Ano 2000 | 2001 | 2002 | 2003 | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 Disponível em: https://earthquake.usgs.gov/earthquakes/browse/m7-world.php. Acesso em: 13 ago. 2012 (adaptado).
+Um pesquisador acredita que a mediana representa bem o número anual típico de terremotos em um período.
 
 ## Questão 149
 
 - Idioma: geral
-- Palavras: 115
+- Palavras: 150
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2980,11 +3128,19 @@ Receitas e despesas
 janeiro fevereiro março abril maio
 Receita Despesa = = =
 Aprevisáo para os próximos meses é que o lucro mensal
+náo seja inferior ao maior lucro obtido até o més de maio.
+Nessas condições, o lucro mensal para os próximos
+meses deve ser maior ou igual ao do més de
+janeiro.
+fevereiro.
+março.
+abri.
+maio.
 
 ## Questão 150
 
 - Idioma: geral
-- Palavras: 96
+- Palavras: 101
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3045,11 +3201,16 @@ N
 N
 No período de 2005 a 2009, o aumento percentual no
 volume de vendas foi de
+45,4.
+54,5
+120.
+220.
+283,2.
 
 ## Questão 151
 
 - Idioma: geral
-- Palavras: 199
+- Palavras: 204
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3117,11 +3278,16 @@ Preço (em mil reais)
 Com base no gráfico obtido, o menor preço, p (em mil reais),
 para o qual pelo menos 50% dos apartamentos apresenta
 preço inferior a p é
+600.
+700.
+800.
+900.
+1000.
 
 ## Questão 152
 
 - Idioma: geral
-- Palavras: 138
+- Palavras: 136
 - Tem imagem: não
 
 ### Texto extraído
@@ -3168,17 +3334,14 @@ Um navio deseja enviar ao outro a mensagem
 “ATENÇÃO! Para isso, deve utilizar o valor de entrada
 b=1.
 Dessa forma, o valor recebido pelo navio receptor será
-O V5
-o V3
-e vi
-— +45
-®
-3+v5
+V5
+V3
+e vi — +45 ® 3+v5
 
 ## Questão 153
 
 - Idioma: geral
-- Palavras: 39
+- Palavras: 107
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3212,11 +3375,21 @@ miniatura do castelo de Liechtenstein. O castelo original,
 representado na imagem, está situado na Alemanha e foi
 reconstruído entre os anos de 1840 e 1842, após duas
 destruições causadas por guerras.
+* 0 2 03 254A4723%
+O castelo possui uma ponte de 38,4 m de comprimento
+e 1,68 m de largura. O artesão que trabalhou para o
+parque produziu a réplica do castelo, em escala. Nessa
+obra, as medidas do comprimento e da largura da ponte
+eram, respectivamente, 160 cm e 7 cm.
+A escala utilizada para fazer a réplica é
+MOR)
+: 576 : 240 : 24 :4,2
+1:24
 
 ## Questão 154
 
 - Idioma: geral
-- Palavras: 159
+- Palavras: 158
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3274,7 +3447,6 @@ projeção, determina-se o número de médicos por mil
 O número, com duas casas na parte decimal, mais
 próximo do número de médicos por mil habitantes no ano
 de 2020 seria de
-VOO
 0,17.
 0,49.
 1,71.
@@ -3285,7 +3457,7 @@ VOO
 ## Questão 155
 
 - Idioma: geral
-- Palavras: 58
+- Palavras: 63
 - Tem imagem: não
 
 ### Texto extraído
@@ -3309,11 +3481,15 @@ Refeição
 preços não serão alterados. O atleta deseja manter o custo da refeição, a quantidade de batata-doce e a hortaliça.
 Portanto, terá que reduzir a quantidade de frango.
 Qual deve ser a redução percentual da quantidade de frango para que o atleta alcance seu objetivo?
+12,5
+28,0
+30,0
+50,0 @ 70,0
 
 ## Questão 156
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 198
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3355,11 +3531,19 @@ m A
 Mola distendida —2
 ms
 A expressão algébrica que representa as posições P(t) da massa m, ao longo do tempo, no gráfico, é
+O -3cos (2t)
+O -3 sen (2f)
+O 3cos (21)
+-6 cos (2t)
+6 sen (2t)
+Um atleta produz sua própria refeição com custo fixo de R$ 10,00. Ela é composta por 400 g de frango, 600 g de Frango (kg) Batata-doce (kg) Hortaliças (unidade)
+R$ 12,50 R$ 5,00 R$ 2,00 Em relação a esses preços, haverá um aumento de 50% no preço do quilograma de batata-doce, e os outros Uma mola é solta da posição distendida conforme a figura. A figura à direita representa o gráfico da posição P (em cm)
+Gráfico
 
 ## Questão 157
 
 - Idioma: geral
-- Palavras: 162
+- Palavras: 156
 - Tem imagem: não
 
 ### Texto extraído
@@ -3407,22 +3591,15 @@ durante um certo período, e o elemento aj; é considerado
 nulo, uma vez que somente são consideradas mudanças
 entre regiões distintas. A seguir, está apresentada a
 matriz com os dados da pesquisa.
-0 422 5
-0 062 3
-A=|2 2 0 3 0
-102 0 4
-1 2 0 4 0
-Qual região foi selecionada para o investimento da
-construtora?
-O 1
-000
-ES
-O 5
+422 5
+062 3 A=|2 2 0 3 0 102 0 4 1 2 0 4 0 Qual região foi selecionada para o investimento da construtora?
+1
+5
 
 ## Questão 158
 
 - Idioma: geral
-- Palavras: 117
+- Palavras: 134
 - Tem imagem: não
 
 ### Texto extraído
@@ -3467,11 +3644,17 @@ por passageiro.
 A quantidade de combustível consumida pelo modelo
 de aeronave B, em relação à do modelo de aeronave A,
 em um voo lotado entre as duas cidades, é
+® 10% menor.
+1% menor.
+igual.
+1% maior.
+11% maior.
+| _enem2021 * 0 203 25 AZ 2 5 *
 
 ## Questão 159
 
 - Idioma: geral
-- Palavras: 136
+- Palavras: 141
 - Tem imagem: não
 
 ### Texto extraído
@@ -3513,11 +3696,16 @@ pôde participar da troca e nem foi substituído, de forma que
 um dos quatro grupos de troca ficou reduzido.
 Nessa parada específica, com um dos grupos reduzido, qual
 foi o tempo gasto, em segundo, para trocar os quatro pneus?
+60
+5,7
+5,0
+45
+44
 
 ## Questão 160
 
 - Idioma: geral
-- Palavras: 239
+- Palavras: 243
 - Tem imagem: não
 
 ### Texto extraído
@@ -3582,11 +3770,16 @@ minerais indicada pelo nutricionista, mesmo que consumisse
 alguns deles além de sua necessidade.
 Nessas condições, o cliente deverá comprar sachês do
 suplemento
+|.
+I.
+Ill.
+lv.
+25 )
 
 ## Questão 161
 
 - Idioma: geral
-- Palavras: 300
+- Palavras: 299
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3695,21 +3888,13 @@ A Arrecadação
 2 000
 1 500
 1 000
-500 Desconto
-012345 67 8 9 1011 121314151617 181920212223
-O administrador de um teatro percebeu que, com o ingresso do evento a R$ 20,00, um show conseguia atrair
-Ele sabe que os donos do teatro só admitem trabalhar com valores inteiros para os ingressos, pela dificuldade
-, 50 Desconto 500 | Desconto
-012345678 9 1011121314 15 16 17 18 19 20 21 22 23 >
-01234567 8 9 1011 121314151617 181920212223
-1000 “oo Desconto
-500 Desconto 300 o LO
-01234567 8 9 1011121314 151617 1819 2021 2223 012345 6 7 8 9 101112131415161718192021 2223
+500 Desconto 012345 67 8 9 1011 121314151617 181920212223
+administrador de um teatro percebeu que, com o ingresso do evento a R$ 20,00, um show conseguia atrair Ele sabe que os donos do teatro só admitem trabalhar com valores inteiros para os ingressos, pela dificuldade , 50 Desconto 500 | Desconto 012345678 9 1011121314 15 16 17 18 19 20 21 22 23 > 01234567 8 9 1011 121314151617 181920212223 1000 “oo Desconto 500 Desconto 300 o LO 01234567 8 9 1011121314 151617 1819 2021 2223 012345 6 7 8 9 101112131415161718192021 2223
 
 ## Questão 162
 
 - Idioma: geral
-- Palavras: 102
+- Palavras: 104
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3776,25 +3961,21 @@ of 5000 10000 15000 .
 »
 >
 5000 10000 15000
+enem202 E
 devido (1)
 Imposto
 isento
 10% de (R — 5 000)
 500 + 30% de (R — 10 000)
-DJ
-| A
-2000} --------- oe
-500 | --- O——®
-“or o ; >
-0 5000 10000 15000
+DJ | A 2000} --------- oe 500 | --- O——® “or o ; >
+5000 10000 15000
 1 000
-500
-5000 10000 15000 —
+500 5000 10000 15000 —
 
 ## Questão 163
 
 - Idioma: geral
-- Palavras: 36
+- Palavras: 73
 - Tem imagem: não
 
 ### Texto extraído
@@ -3819,11 +4000,19 @@ A relação de Newton-Laplace estabelece que o módulo
 volumétrico de um fluido é diretamente proporcional ao
 quadrado da velocidade do som (em metro por segundo) no
 fluido e à sua densidade (em quilograma por metro cúbico),
+com uma constante de proporcionalidade adimensional.
+Nessa relação, a unidade de medida adequada para o
+módulo volumétrico é
+kg.m?2s”
+kg-m'-s?
+kgm*.s?
+(D) kg”1-m!.s?
+(E) kg”1-m$.s2
 
 ## Questão 164
 
 - Idioma: geral
-- Palavras: 96
+- Palavras: 102
 - Tem imagem: não
 
 ### Texto extraído
@@ -3855,6 +4044,7 @@ Em duas viagens que realizou, essa pessoa utilizou
 a mesma mala e conseguiu 10 kg com as seguintes
 combinações de itens:
 Viagem | Camisetas Calças Sapatos
+| 12 4 3
 Il 18 3 2
 Para ter certeza de que sua bagagem terá massa de
 10 kg, ela decide levar essa mala com duas calças, um
@@ -3862,12 +4052,16 @@ sapato e o máximo de camisetas, admitindo que itens do
 mesmo tipo têm a mesma massa.
 Qual a quantidade máxima de camisetas que essa
 pessoa poderá levar?
-O vVOVO
+22
+24
+27
+33
+39
 
 ## Questão 165
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 64
 - Tem imagem: não
 
 ### Texto extraído
@@ -3902,7 +4096,6 @@ percorridos.
 O valor do desempenho médio do automóvel com o novo
 motor, em quilómetro por litro, expresso com uma casa
 decimal, é
-VOOS
 15,9.
 16,1.
 16,4.
@@ -3910,12 +4103,11 @@ VOOS
 18,0.
 Mm
 No
-oo
 
 ## Questão 166
 
 - Idioma: geral
-- Palavras: 233
+- Palavras: 227
 - Tem imagem: não
 
 ### Texto extraído
@@ -3971,36 +4163,15 @@ para o dobro do originalmente previsto, mantendo inalterada
 a altura. Ao pedir novos orçamentos aos fornecedores, para
 as novas dimensões, cada um deu uma resposta diferente
 sobre as novas quantidades de tinta necessárias.
-Em relação ao previsto para o projeto original, as
-novas quantidades de tinta necessárias informadas pelos
-fornecedores foram as seguintes:
-* Fornecedor |: “O dobro, tanto para as paredes
-quanto para o piso.”
-* Fornecedor Il: “O dobro para as paredes e quatro
-vezes para o piso.”
-* Fornecedor III: “Quatro vezes, tanto para as paredes
-quanto para o piso.”
-* Fornecedor IV: “Quatro vezes para as paredes e o
-dobro para o piso.”
-* Fornecedor V: “Oito vezes para as paredes e quatro
-vezes para o piso.”
-Analisando as informações dos fornecedores, o
-construtor providenciará a quantidade adequada de
-material. Considere a porta de acesso do contêiner como
-parte de uma das paredes.
-Qual dos fornecedores prestou as informações adequadas,
-devendo ser o escolhido pelo construtor para a aquisição
-do material?
-O |
-OI
-O ill
-O IV
-@ v
+Em relação ao previsto para o projeto original, as novas quantidades de tinta necessárias informadas pelos fornecedores foram as seguintes: * Fornecedor |: “O dobro, tanto para as paredes quanto para o piso.” * Fornecedor Il: “O dobro para as paredes e quatro vezes para o piso.” * Fornecedor III: “Quatro vezes, tanto para as paredes quanto para o piso.” * Fornecedor IV: “Quatro vezes para as paredes e o dobro para o piso.” * Fornecedor V: “Oito vezes para as paredes e quatro vezes para o piso.” Analisando as informações dos fornecedores, o construtor providenciará a quantidade adequada de material. Considere a porta de acesso do contêiner como parte de uma das paredes.
+Qual dos fornecedores prestou as informações adequadas, devendo ser o escolhido pelo construtor para a aquisição do material?
+|
+ill
 
 ## Questão 167
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 116
 - Tem imagem: não
 
 ### Texto extraído
@@ -4039,11 +4210,19 @@ população por um período de exatamente sete dias
 consecutivos. No oitavo dia, o reservatório vazio é
 completamente reabastecido por carros-pipa.
 Considere que o consumo médio diário por habitante
+é de 120 litros de água. Use 3 como aproximação para 7.
+Nas condições apresentadas, o reservatório deverá ser
+construído com uma altura interna mínima, em metro, igual a
+1,12.
+3,10.
+4,35.
+4,48.
+5,60.
 
 ## Questão 168
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 76
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4075,16 +4254,15 @@ cor cinza escuro e outras quatro faces numeradas.
 Qual(is) face(s) ficará(ão) oposta(s) à face de cor cinza
 escuro, quando o octaedro for reconstruído a partir da
 planificação dada?
-O 1,2,3e4
-Q 1e3
-O 1
-O 2
-@ 4
+1,2,3e4
+1e3
+1
+2 @ 4
 
 ## Questão 169
 
 - Idioma: geral
-- Palavras: 117
+- Palavras: 171
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4136,11 +4314,20 @@ aquecida, deformando os cantos, e cortada em um dos
 vértices, dando origem à miniatura. Assuma que não
 ocorram perdas de material no processo de produção, de
 forma que o comprimento da barra utilizada seja igual ao
+perímetro do triângulo equilátero representado na Figura 2.
+Considere 1,7 como valor aproximado para V3.
+Nessas condições, o valor que mais se aproxima da
+medida do comprimento da barra, em centímetro, é O triângulo.
+9,07. O quadrado.
+5 om O retângulo.
+27 18, O hexágono.
+@ 36,24. O círculo.
+* 0 203 25 A 229 *
 
 ## Questão 170
 
 - Idioma: geral
-- Palavras: 81
+- Palavras: 86
 - Tem imagem: não
 
 ### Texto extraído
@@ -4174,11 +4361,16 @@ Além disso, sabe-se que a altura (h) dessa caneca mede
 topo e da base).
 Utilize 3 como aproximação para TT.
 Qual é a capacidade volumétrica, em mililitro, dessa caneca?
+216
+408
+732
+2196
+2928
 
 ## Questão 171
 
 - Idioma: geral
-- Palavras: 139
+- Palavras: 137
 - Tem imagem: não
 
 ### Texto extraído
@@ -4206,26 +4398,15 @@ tem como face útil para impressão um
 
 O dono de uma loja pretende usar cartões imantados
 para a divulgação de sua loja. A empresa que fornecerá
-o serviço lhe informa que o custo de fabricação do cartão
-é de R$ 0,01 por centímetro quadrado e que disponibiliza
-modelos tendo como faces úteis para impressão:
-* um triângulo equilátero de lado 12 cm;
-* um quadrado de lado 8 cm;
-* um retângulo de lados 11 cm e 8 cm;
-* um hexágono regular de lado 6 cm;
-* um círculo de diâmetro 10 cm.
-O dono da loja está disposto a pagar, no máximo,
-R$ 0,80 por cartão. Ele escolherá, dentro desse limite de
-preço, o modelo que tiver maior área de impressão.
-Use 3 como aproximação para TT e use 1,7 como
-aproximação para 3.
-Nessas condições, o modelo que deverá ser escolhido
-tem como face útil para impressão um
+serviço lhe informa que o custo de fabricação do cartão é de R$ 0,01 por centímetro quadrado e que disponibiliza modelos tendo como faces úteis para impressão: * um triângulo equilátero de lado 12 cm; * um quadrado de lado 8 cm; * um retângulo de lados 11 cm e 8 cm; * um hexágono regular de lado 6 cm; * um círculo de diâmetro 10 cm.
+dono da loja está disposto a pagar, no máximo, R$ 0,80 por cartão. Ele escolherá, dentro desse limite de preço, o modelo que tiver maior área de impressão.
+Use 3 como aproximação para TT e use 1,7 como aproximação para 3.
+Nessas condições, o modelo que deverá ser escolhido tem como face útil para impressão um
 
 ## Questão 172
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 174
 - Tem imagem: não
 
 ### Texto extraído
@@ -4284,11 +4465,16 @@ Os trechos do percurso nos quais esse ciclista se mantém
 dentro de sua faixa aeróbica ideal, para o ganho de
 condicionamento físico, são
 O) leve no plano, forte no plano, subida moderada e
+subida forte.
+VODO leve no plano, forte no plano e subida moderada.
+forte no plano, subida moderada e subida forte.
+forte no plano e subida moderada.
+leve no plano e subida forte.
 
 ## Questão 173
 
 - Idioma: geral
-- Palavras: 44
+- Palavras: 69
 - Tem imagem: não
 
 ### Texto extraído
@@ -4315,11 +4501,19 @@ veículos: lavagem simples, ao preço de R$ 20,00, e
 lavagem completa, ao preço de R$ 35,00. Para cobrir
 as despesas com produtos e funcionários, e não ter
 prejuízos, o lava-rápido deve ter uma receita diária de,
+pelo menos, R$ 300,00.
+Para não ter prejuízo, o menor número de lavagens
+diárias que o lava-rápido deve efetuar é
+6.
+Os.
+9.
+15.
+20.
 
 ## Questão 174
 
 - Idioma: geral
-- Palavras: 125
+- Palavras: 183
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4367,6 +4561,7 @@ X Y Z
 Farmácia 1 | R$ 45,00 R$ 40,00 R$ 50,00
 Farmácia 2 | R$ 50,00 R$ 50,00 R$ 40,00
 Farmácia 3 | R$ 65,00 R$ 45,00 R$ 35,00
+| 30
 Dessas farmácias, algumas oferecem descontos:
 * na compra dos medicamentos X e Y na
 Farmácia 2, recebe-se um desconto de 20% em
@@ -4377,11 +4572,19 @@ medicamento Z;
 recebe-se 20% de desconto no valor total da
 compra.
 O paciente deseja efetuar a compra de modo a
+minimizar sua despesa com os medicamentos.
+De acordo com as informações fornecidas, o paciente
+deve comprar os medicamentos da seguinte forma:
+X,YeZna Farmácia 1.
+XeY na Farmácia 1, e Z na Farmácia 3.
+XeY na Farmácia 2, e Z na Farmácia 3.
+Xna Farmacia 2, e Y e Z na Farmácia 3.
+X, YeZna Farmácia 3.
 
 ## Questão 175
 
 - Idioma: geral
-- Palavras: 78
+- Palavras: 110
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4423,11 +4626,17 @@ tonalidade e espessura são congruentes.
 / \
 Com base na proposta apresentada, quantas figuras
 geométricas planas de cada tipo são formadas pela
+união das hastes?
+12 trapézios isosceles e 12 quadrados.
+24 trapézios isosceles e 12 quadrados.
+12 paralelogramos e 12 quadrados.
+8 trapézios isósceles e 12 quadrados.
+@ 12 trapézios escalenos e 12 retângulos.
 
 ## Questão 176
 
 - Idioma: geral
-- Palavras: 171
+- Palavras: 166
 - Tem imagem: não
 
 ### Texto extraído
@@ -4479,16 +4688,16 @@ Em uma cidade europeia há uma placa indicando o
 ano de sua fundação: MCDLXIX.
 Quantos anos de fundação essa cidade comemorará em
 2050?
-O 379
-O 381
-O 579
-O 581
-O 601
+379
+381
+579
+581
+601
 
 ## Questão 177
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 148
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4535,11 +4744,26 @@ respectivamente. A operação de adição, na base binária,
 segue um algoritmo similar ao utilizado na base decimal,
 como detalhado no quadro:
 a b a+b
+0 1 1
+1 0 1
+1 1 10
+Por exemplo, na base binária, a soma dos números
+10 e 10 é 100, como apresentado:
++10
+100
+Considerando as informações do texto, o resultado da
+adição 9 + 12 será representado, na base binária, por
+® 101.
+1101. O 1,90 mil reais.
+1111. O 2,30 mil reais.
+10101. O 2,36 mil reais.
+11001. O 2,95 mil reais.
+* 0 203 25 AZ 3 1 *
 
 ## Questão 178
 
 - Idioma: geral
-- Palavras: 103
+- Palavras: 108
 - Tem imagem: não
 
 ### Texto extraído
@@ -4577,11 +4801,16 @@ demais, R$ 30 000,00 cada.
 Nas condições estabelecidas, o valor total, em real,
 obtido pelo fazendeiro com a venda de todos os terrenos
 será igual a
+700000.
+1600000.
+1900000.
+2200000.
+2800000.
 
 ## Questão 179
 
 - Idioma: geral
-- Palavras: 67
+- Palavras: 66
 - Tem imagem: não
 
 ### Texto extraído
@@ -4619,16 +4848,15 @@ sas!
 2 4 15!
 6 4121 1015!
 6! 15!
-— + —
-2! 51
-o 21 5!
+— + — 2! 51
+21 5!
 21!
 71141
 
 ## Questão 180
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 129
 - Tem imagem: não
 
 ### Texto extraído
@@ -4664,4 +4892,8 @@ implantado será utilizado na totalidade de sua capacidade.
 A economia da escola, na utilização de um laboratório
 tipo B, em vez de um laboratório tipo A, num período de
 4 anos, por usuário, será de
-O 1,31 mil reais.
+1,31 mil reais.
+1,90 mil reais.
+2,30 mil reais.
+2,36 mil reais.
+2,95 mil reais.

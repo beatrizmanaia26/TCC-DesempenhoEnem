@@ -3,7 +3,7 @@
 ## Questão 91
 
 - Idioma: geral
-- Palavras: 97
+- Palavras: 102
 - Tem imagem: sim
 
 ### Texto extraído
@@ -43,11 +43,16 @@ a diferença entre as estruturas físicas do carvão comum e do
 carvão ativado.
 Qual característica do carvão ativado explica a sua maior
 eficiência nesse processo?
+Massa.
+Dureza.
+Densidade.
+Superfície.
+Condutividade.
 
 ## Questão 92
 
 - Idioma: geral
-- Palavras: 73
+- Palavras: 118
 - Tem imagem: não
 
 ### Texto extraído
@@ -84,11 +89,16 @@ elongatus para o genoma da bactéria Escherichia coli, um
 organismo não circadiano.
 Estarão presentes no organismo geneticamente modificado os
 genes do
+metabolismo de E. coli, apenas.
+ciclo circadiano de E. coli, apenas.
+metabolismo de S. elongatus e do ciclo circadiano de E. coli.
+ciclo circadiano de S. elongatus e do metabolismo de E. coli.
+ciclo circadiano de S. elongatus e do ciclo circadiano de E. coli.
 
 ## Questão 93
 
 - Idioma: geral
-- Palavras: 59
+- Palavras: 81
 - Tem imagem: não
 
 ### Texto extraído
@@ -116,11 +126,16 @@ várias semanas e observou que elas apresentavam dificuldade
 de flutuação, por causa do encharcamento das penas com água.
 O aumento na taxa de mortalidade dessas aves estava associado
 a uma redução na
+dilatação do papo.
+reposição de penas das asas.
+secreção da glândula uropigial.
+formação da membrana natatória.
+largura das cavidades de ossos pneumáticos.
 
 ## Questão 94
 
 - Idioma: geral
-- Palavras: 188
+- Palavras: 193
 - Tem imagem: sim
 
 ### Texto extraído
@@ -202,11 +217,16 @@ Sabe-se que a régua foi ligada à tensão elétrica de 110 V,
 adequada para o funcionamento desses aparelhos.
 Considerando a ordem das tentativas, quantas atividades a
 estudante conseguiu realizar sem queimar o fusível?
+4
+3
+2
+1
+0
 
 ## Questão 95
 
 - Idioma: geral
-- Palavras: 104
+- Palavras: 109
 - Tem imagem: não
 
 ### Texto extraído
@@ -252,11 +272,16 @@ gerado pelas lâmpadas, sobretudo as incandescentes, pode
 aquecer as mariposas.
 Nesse contexto, o processo de transferência de calor para as
 mariposas que independe da presença de fluidos é a
+reflexão.
+refração.
+irradiação.
+dispersão.
+convecção.
 
 ## Questão 96
 
 - Idioma: geral
-- Palavras: 81
+- Palavras: 100
 - Tem imagem: não
 
 ### Texto extraído
@@ -293,11 +318,16 @@ condições artificiais, ou quando nascidos em cativeiro, não
 são tóxicos.
 A perda da capacidade de se obter a toxina nos nascidos em
 cativeiro é causada pela
+diferença de umidade entre os ambientes.
+ausência de alimentação natural.
+adaptação ao novo ambiente.
+mudança de comportamento.
+variabilidade genética.
 
 ## Questão 97
 
 - Idioma: geral
-- Palavras: 54
+- Palavras: 80
 - Tem imagem: sim
 
 ### Texto extraído
@@ -325,11 +355,16 @@ para a fabricação de uma vacina utilizando a tecnologia tradicional
 e o efeito dela no organismo.
 O antígeno utilizado na vacina causa um efeito protetor contra
 o vírus porque
+mata o vírus pela ligação.
+aglutina o vírus por associação.
+contém imunoglobulinas de defesa.
+induz a produção de proteínas neutralizadoras.
+mantém a quantidade de anticorpos preexistentes.
 
 ## Questão 98
 
 - Idioma: geral
-- Palavras: 84
+- Palavras: 111
 - Tem imagem: não
 
 ### Texto extraído
@@ -366,11 +401,16 @@ ressaltar que essa espécie vegetal é capaz de se espalhar por
 grandes áreas, devido à sua agressividade e poder competitivo.
 Em longo prazo, essa ação do homem pode gerar qual
 consequência?
+Diversificar nichos ecológicos.
+Assorear as nascentes do bioma.
+Dificultar a infiltração de água na terra.
+Diminuir as espécies nativas do bioma.
+Contribuir com a redução das queimadas.
 
 ## Questão 99
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 85
 - Tem imagem: não
 
 ### Texto extraído
@@ -404,11 +444,16 @@ Considerando que animais de um mesmo grupo taxonômico
 podem apresentar características adaptativas semelhantes em
 ambientes similares, onde seria mais provável encontrar lagartos
 com essas características no território brasileiro?
+Cerrado.
+Pampas.
+Caatinga.
+Restinga.
+Pantanal.
 
 ## Questão 100
 
 - Idioma: geral
-- Palavras: 63
+- Palavras: 68
 - Tem imagem: não
 
 ### Texto extraído
@@ -436,11 +481,16 @@ removidos os sais dissolvidos. A água que passa por esse processo
 tipo de água não é adequado para ingestão, pois pode causar
 problemas de saúde, como carência iônica e diarreia.
 Essa água é chamada de
+dura.
+pesada.
+sanitária.
+destilada.
+oxigenada.
 
 ## Questão 101
 
 - Idioma: geral
-- Palavras: 64
+- Palavras: 102
 - Tem imagem: não
 
 ### Texto extraído
@@ -473,11 +523,16 @@ no globo ocular, sendo refletida por uma região repleta de
 vasos sanguíneos.
 Esse efeito é mais comum à noite ou em lugares pouco iluminados
 porque, com a pupila
+dilatada, chega mais luz à retina.
+retraída, chega mais luz vermelha à retina.
+retraída, chega mais luz vermelha aos bastonetes.
+retraída, chegam menos luzes azul e verde aos cones.
+dilatada, chegam menos luzes azul e verde aos bastonetes.
 
 ## Questão 102
 
 - Idioma: geral
-- Palavras: 50
+- Palavras: 83
 - Tem imagem: não
 
 ### Texto extraído
@@ -504,11 +559,17 @@ morte por parada respiratória, pois esse peixe contém uma
 potente neurotoxina termoestável, a tetrodotoxina, que é
 produzida e armazenada nas gônadas e vísceras.
 Que ação poderia evitar essa intoxicação?
+Criar os peixes em cativeiro.
+Realizar a pesca com redes.
+Consumir peixes cozidos ou fritos.
+Preparar o peixe em condições adequadas de higiene.
+Manusear o peixe sem provocar o rompimento dos órgãos
+internos.
 
 ## Questão 103
 
 - Idioma: geral
-- Palavras: 43
+- Palavras: 50
 - Tem imagem: não
 
 ### Texto extraído
@@ -537,11 +598,16 @@ esterificado nem triglicerídeos, resultando no depósito desses
 compostos em diversos órgãos, principalmente no fígado.
 Essa doença resulta da insuficiência funcional de qual estrutura
 celular?
+Lisossomos.
+Ribossomos.
+Mitocôndrias.
+Peroxissomos.
+Retículo endoplasmático liso.
 
 ## Questão 104
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 155
 - Tem imagem: não
 
 ### Texto extraído
@@ -582,11 +648,16 @@ reduzam tanto as emissões quanto os níveis de CO2 na atmosfera.
 Um guia rápido para entender as mudanças climáticas.
 Qual ação mitigadora auxilia na remoção desse gás presente na
 atmosfera, reduzindo seus níveis?
+Plantar mais árvores.
+Instalar mais usinas eólicas.
+Ampliar o uso de energia solar.
+Manter os combustíveis fósseis no solo.
+Produzir menos resíduos sólidos urbanos.
 
 ## Questão 105
 
 - Idioma: geral
-- Palavras: 111
+- Palavras: 131
 - Tem imagem: sim
 
 ### Texto extraído
@@ -615,11 +686,16 @@ um sistema de água de refrigeração, formado por uma bomba ligada a uma fonte 
 Durante a operação da usina, se o sistema de água de refrigeração funcionar de forma ineficiente pode causar poluição
 térmica, comprometendo a vida no ecossistema aquático.
 Para o ecossistema aquático, a ineficiência do sistema de água de refrigeração tem como consequência a
+diminuição do pH.
+liberação de gases poluentes.
+contaminação por combustíveis.
+liberação de elementos radioativos.
+diminuição da solubilidade do gás oxigênio.
 
 ## Questão 106
 
 - Idioma: geral
-- Palavras: 120
+- Palavras: 148
 - Tem imagem: sim
 
 ### Texto extraído
@@ -650,6 +726,11 @@ oxigênio atômico (O) ao monóxido de nitrogênio (AzO) com a formação de di�
 de sódio era representado por NaAzO3.
 Em 1909, as representações das substâncias ácido nítrico e cloreto de cálcio, tendo por base essas informações e seguindo a
 mesma lógica, seriam, respectivamente:
+HAzO3 e CaCl2
+HAz3O e Ca2Cl
+H3AzO4 e CaCl
+HAz3O e KCl2
+HAzO2 e KCl
 
 ## Questão 107
 
@@ -732,7 +813,7 @@ E
 ## Questão 109
 
 - Idioma: geral
-- Palavras: 79
+- Palavras: 84
 - Tem imagem: sim
 
 ### Texto extraído
@@ -767,11 +848,16 @@ anacárdico presente no LCC é convertido a cardanol, que recebe
 a denominação de LCC técnico, conforme o esquema:
 O LCC técnico é produzido por meio de uma reação orgânica
 do tipo
+hidrólise.
+fenilação.
+esterificação.
+hidrogenação.
+descarboxilação.
 
 ## Questão 110
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 101
 - Tem imagem: não
 
 ### Texto extraído
@@ -807,11 +893,16 @@ de 5,3 anos. Considere um frasco com uma amostra contendo
 de 26,5 anos.
 A massa de cobalto-60, em miligrama, que restará ao final
 desse tempo é mais próxima de
+2,00 mg.
+1,00 mg.
+0,40 mg.
+0,13 mg.
+0,06 mg.
 
 ## Questão 111
 
 - Idioma: geral
-- Palavras: 47
+- Palavras: 70
 - Tem imagem: sim
 
 ### Texto extraído
@@ -839,11 +930,16 @@ e restos de comida produzidos em áreas de criação de gado e
 porcos confinados.
 Dar destino sustentável às sobras, conforme apresentado na
 etapa 4, ajuda a evitar a
+bioacumulação de toxinas em plantas.
+eutrofização dos corpos de água.
+destruição da camada de ozônio.
+ocorrência de inversão térmica.
+produção de chuva ácida.
 
 ## Questão 112
 
 - Idioma: geral
-- Palavras: 54
+- Palavras: 61
 - Tem imagem: não
 
 ### Texto extraído
@@ -873,11 +969,16 @@ da deficiência dessa vitamina. Para a obtenção dessa variedade
 de arroz, foram utilizados métodos de engenharia genética.
 Esse alimento contribui para diminuir a carência associada a
 qual doença?
+Hemofilia.
+Escorbuto.
+Raquitismo.
+Cegueira noturna.
+Anemia perniciosa.
 
 ## Questão 113
 
 - Idioma: geral
-- Palavras: 125
+- Palavras: 130
 - Tem imagem: sim
 
 ### Texto extraído
@@ -920,11 +1021,16 @@ que é acelerado e, posteriormente, atinge um ponto da tela.
 O campo elétrico na região B apresenta a seguinte configuração:
 Nessa situação, qual ponto da tela será atingido pelo feixe de
 elétrons?
+1
+2
+3
+4
+5
 
 ## Questão 114
 
 - Idioma: geral
-- Palavras: 70
+- Palavras: 87
 - Tem imagem: sim
 
 ### Texto extraído
@@ -956,11 +1062,16 @@ Mônica naquele momento, que, diferentemente do que sugere
 a tirinha, não está relacionada à sua intensidade.
 Esse fenômeno e a característica associada à voz da Mônica
 são, respectivamente,
+reflexão e comprimento de onda.
+ressonância e frequência.
+interferência e velocidade.
+ressonância e timbre.
+reflexão e amplitude.
 
 ## Questão 115
 
 - Idioma: geral
-- Palavras: 83
+- Palavras: 110
 - Tem imagem: sim
 
 ### Texto extraído
@@ -999,11 +1110,16 @@ professor solicitou que os alunos identificassem o frasco contendo
 a substância cânfora.
 Borneol
 O frasco contendo cânfora apresenta a fórmula molecular:
+C9H16O
+C9H17O
+C10H16O
+C10H16O2
+C10H18O2
 
 ## Questão 116
 
 - Idioma: geral
-- Palavras: 87
+- Palavras: 92
 - Tem imagem: não
 
 ### Texto extraído
@@ -1040,11 +1156,16 @@ ambiente abriga comunidades de plantas e animais com elevado
 número de espécies e distribuição restrita.
 A seleção adaptativa nesses ambientes favorece a ocorrência
 de espécies
+exóticas.
+migratórias.
+endêmicas.
+dominantes.
+generalistas.
 
 ## Questão 117
 
 - Idioma: geral
-- Palavras: 94
+- Palavras: 125
 - Tem imagem: não
 
 ### Texto extraído
@@ -1080,11 +1201,16 @@ Depois da cloração, o tetracloreto de titânio é condensado
 e convertido, novamente, a dióxido de titânio.
 Após o sistema atingir o equilíbrio químico, como a formação
 do TiCl4 pode ser favorecida?
+Aumentando a pressão total do sistema.
+Diminuindo a temperatura do sistema.
+Aumentando a pressão parcial de O2.
+Aumentando a pressão parcial de Cl2.
+Variando a quantidade de TiO2.
 
 ## Questão 118
 
 - Idioma: geral
-- Palavras: 70
+- Palavras: 80
 - Tem imagem: não
 
 ### Texto extraído
@@ -1112,6 +1238,11 @@ produto cuja densidade é 1 250 kg/m3. Considere a aceleração
 da gravidade igual a 10 m/s2.
 A altura máxima, em metro, de empilhamento do produto que
 essa laje é capaz de suportar é
+0,16 m.
+0,50 m.
+0,80 m.
+1,60 m.
+8,00 m.
 
 ## Questão 119
 
@@ -1173,7 +1304,7 @@ E
 ## Questão 120
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 131
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1213,11 +1344,16 @@ movimentos de um invasor e suas velocidades típicas, que devem
 ser observadas para a escolha do tempo de resposta.
 Nesse sistema, o menor tempo de resposta, em milissegundo,
 que garante a detecção de um possível invasor é mais próximo de
+30 ms.
+70 ms.
+300 ms.
+400 ms.
+700 ms.
 
 ## Questão 121
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 110
 - Tem imagem: não
 
 ### Texto extraído
@@ -1253,11 +1389,16 @@ substâncias ou misturas como água, vinagre, óleo de soja, sal
 de cozinha e bicarbonato de sódio.
 Dentre as opções apresentadas, o tratamento correto para
 minimizar esse problema é usar
+água.
+vinagre.
+óleo de soja.
+sal de cozinha.
+bicarbonato de sódio.
 
 ## Questão 122
 
 - Idioma: geral
-- Palavras: 71
+- Palavras: 129
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1291,11 +1432,19 @@ O mecanismo aquece apenas a panela que se encontra na zona
 de cozimento, o que é uma das principais vantagens em relação
 ao uso do fogão a gás ou de resistência elétrica.
 O uso do campo magnético variável tem a finalidade de
+imantar o material da panela por indução.
+movimentar os átomos de ferro concentrados no fundo da panela.
+emitir radiação eletromagnética, aquecendo a panela através
+do vidro cerâmico.
+induzir corrente elétrica na parte inferior da panela, aquecendo-a
+por efeito Joule.
+gerar um fluxo de corrente de convecção no ar contido entre
+a região da bobina e o vidro cerâmico.
 
 ## Questão 123
 
 - Idioma: geral
-- Palavras: 79
+- Palavras: 84
 - Tem imagem: não
 
 ### Texto extraído
@@ -1329,11 +1478,16 @@ fotossíntese anoxigênica, um processo de síntese de matéria
 orgânica utilizando o gás carbônico (CO2) e o gás sulfídrico (H2S).
 Na fotossíntese oxigênica, qual composto desempenha função
 análoga à do H2S?
+ATP.
+NADPH.
+Oxigênio.
+Clorofila.
+Água.
 
 ## Questão 124
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 167
 - Tem imagem: não
 
 ### Texto extraído
@@ -1386,11 +1540,16 @@ Al3+ (aq) + 3 e− → Al (s)
 Os valores das diferenças de potencial-padrão das reações que
 representam o escurecimento e o clareamento do objeto de
 prata são, respectivamente:
++0,54 V e +2,37 V.
++1,92 V e +0,99 V.
+−0,15 V e +5,43 V.
++2,61 V e +1,29 V.
++0,15 V e −1,29 V.
 
 ## Questão 125
 
 - Idioma: geral
-- Palavras: 171
+- Palavras: 181
 - Tem imagem: não
 
 ### Texto extraído
@@ -1440,11 +1599,16 @@ Dados: Massa molar do NH4HCO3 = 79 g ⋅ mol−1 e
 R = 0,082 atm ⋅ L ⋅ mol−1 ⋅ K−1.
 A massa, em grama, de bicarbonato de amônio que ela deve
 utilizar é mais próxima de
+2,3 g.
+3,5 g.
+5,9 g.
+6,8 g.
+8,9 g.
 
 ## Questão 126
 
 - Idioma: geral
-- Palavras: 165
+- Palavras: 245
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1492,6 +1656,11 @@ vetor velocidade tem componentes 30 km/h para Leste,
 Durante a ação do vento, a velocidade v que o piloto deve
 estabelecer em relação ao ar para que o avião chegue à posição
 esperada no tempo indicado tem as componentes
+230 km/h para Leste, 180 km/h para Sul e 9 km/h para baixo.
+230 km/h para Leste, 180 km/h para Norte e 9 km/h para cima.
+200 km/h para Oeste, 200 km/h para Norte e 10 km/h para cima.
+170 km/h para Leste, 220 km/h para Norte e 11 km/h para cima.
+170 km/h para Leste, 180 km/h para Norte e 11 km/h para cima.
 
 ## Questão 127
 
@@ -1535,11 +1704,12 @@ C
 D
 E
 ￼
+￼
 
 ## Questão 128
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 106
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1571,11 +1741,16 @@ R(T) = A + BT, em que T é a temperatura e A e B são constantes.
 O gráfico apresenta a dependência da resistência em função
 da temperatura para cinco diferentes sensores.
 Os sensores que apresentam maior sensibilidade são
+1 e 2.
+1 e 3.
+2 e 3.
+2 e 4.
+2 e 5.
 
 ## Questão 129
 
 - Idioma: geral
-- Palavras: 50
+- Palavras: 56
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1619,6 +1794,11 @@ Média eficiência
 Vermes platelmintos
 Ineficiente
 O ácido úsnico mostrou-se mais indicado para o controle da
+esquistossomose.
+febre amarela.
+coqueluche.
+tuberculose.
+dengue.
 
 ## Questão 130
 
@@ -1678,7 +1858,7 @@ E
 ## Questão 131
 
 - Idioma: geral
-- Palavras: 135
+- Palavras: 145
 - Tem imagem: não
 
 ### Texto extraído
@@ -1721,11 +1901,16 @@ para a produção de um lote de peças de aço encomendado por
 uma indústria, considerando um rendimento de 100%.
 A massa de alumínio, em quilograma, estimada pela engenheira
 é mais próxima de
+2,7 kg.
+3,0 kg.
+4,1 kg.
+4,5 kg.
+5,0 kg.
 
 ## Questão 132
 
 - Idioma: geral
-- Palavras: 126
+- Palavras: 136
 - Tem imagem: não
 
 ### Texto extraído
@@ -1773,11 +1958,16 @@ obtido, considerando um grande número de medidas, foi de
 enquanto gritavam, simultaneamente, a palavra “gol”.
 O valor médio estimado para o ruído produzido por essas
 pessoas, na posição central desse estádio hipotético, foi de
+60 dB.
+104 dB.
+140 dB.
+400 dB.
+800 dB.
 
 ## Questão 133
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 133
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1821,11 +2011,16 @@ polímero e a última é um surfactante, conforme apresentado
 na figura.
 Representação esquemática do dispositivo
 Na utilização desse dispositivo, a retenção do óleo ocorre
+no surfactante.
+na camada superior de polímero.
+nas nanopartículas de sílica.
+na camada inferior de polímero.
+na malha de aço.
 
 ## Questão 134
 
 - Idioma: geral
-- Palavras: 136
+- Palavras: 141
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1872,6 +2067,11 @@ risco para os ambientes aquáticos. As figuras a seguir apresentam
 as estruturas de alguns desses hormônios.
 Do ponto de vista das interações químicas, qual desses hormônios
 apresenta maior solubilidade em ambientes aquáticos?
+Estradiol.
+Estriol.
+Estrona.
+Novestrol.
+Noretindrona.
 
 ## Questão 135
 
@@ -1938,7 +2138,7 @@ E
 ## Questão 136
 
 - Idioma: geral
-- Palavras: 114
+- Palavras: 119
 - Tem imagem: não
 
 ### Texto extraído
@@ -1964,11 +2164,16 @@ respectivamente: 10, 14, 17, 21 e 25. O preço do cilindro é proporcional à s
 7 dias por semana, e o consumo do GNV é de 1 m3 a cada 13 km rodados. A pessoa escolherá o modelo de cilindro de menor
 preço e que garanta apenas um abastecimento semanal.
 Nessas condições, qual será a capacidade, em metro cúbico, do cilindro escolhido por essa pessoa?
+10
+14
+17
+21
+25
 
 ## Questão 137
 
 - Idioma: geral
-- Palavras: 63
+- Palavras: 70
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1995,6 +2200,13 @@ reportagem estão apresentados no infográfico.
 Perfil dos brasileiros nas redes sociais
 Segundo os dados do infográfico, ao se escolher aleatoriamente um internauta brasileiro no período ao qual se refere a reportagem,
 a probabilidade de ele ser um homem que acessa alguma rede social é
+30
+36
+100
+40
+100
+40
+46
 
 ## Questão 138
 
@@ -2034,7 +2246,7 @@ E
 ## Questão 139
 
 - Idioma: geral
-- Palavras: 124
+- Palavras: 129
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2076,11 +2288,16 @@ Desconsidere a largura da pista da ciclovia e utilize 3 como
 aproximação para p.
 Nessas condições, a quantidade mínima necessária de policiais a
 serem alocados ao longo dessa ciclovia para torná-la protegida é
+4.
+8.
+15.
+30.
+60.
 
 ## Questão 140
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 71
 - Tem imagem: não
 
 ### Texto extraído
@@ -2106,11 +2323,16 @@ Dessa solução, 99,95% é de S1. Uma quantidade de S1 será
 retirada dessa solução, mantendo a quantidade inicial de S2,
 de modo que 99,90% da nova solução seja de S1.
 Qual é a quantidade de S1, em litro, que será retirada?
+0,0050
+0,0100
+0,5000
+4,9775
+5,0000
 
 ## Questão 141
 
 - Idioma: geral
-- Palavras: 128
+- Palavras: 138
 - Tem imagem: não
 
 ### Texto extraído
@@ -2154,11 +2376,16 @@ pedido anterior.
 Utilizando o mesmo caminhão da entrega anterior, qual é o volume
 mínimo de gasolina, em litro, que a distribuidora deverá enviar para
 garantir a entrega da quantidade encomendada nesse novo pedido?
+20 100
+20 200
+20 300
+20 400
+20 600
 
 ## Questão 142
 
 - Idioma: geral
-- Palavras: 110
+- Palavras: 115
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2232,11 +2459,16 @@ C10
 360
 A velocidade de referência, em megabyte por segundo, a ser
 adotada por essa empresa é
+360.
+370.
+380.
+390.
+400.
 
 ## Questão 143
 
 - Idioma: geral
-- Palavras: 52
+- Palavras: 66
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2264,11 +2496,16 @@ produtos estão indicadas nas imagens.
 Uma estudante opta sempre pelo alimento com a menor
 quantidade total de sódio por pacote.
 Qual desses produtos deve ser o escolhido pela estudante?
+Batata chips.
+Palitos salgados.
+Biscoito multigrãos.
+Biscoito de polvilho.
+Biscoito de água e sal.
 
 ## Questão 144
 
 - Idioma: geral
-- Palavras: 126
+- Palavras: 131
 - Tem imagem: não
 
 ### Texto extraído
@@ -2306,11 +2543,16 @@ O critério definido para realização da pintura considera que faces
 congruentes entre si devem ser pintadas com uma mesma cor, e
 faces não congruentes entre si devem apresentar cores distintas.
 Qual é a quantidade de cores utilizadas para pintar o protótipo?
+9
+8
+6
+4
+3
 
 ## Questão 145
 
 - Idioma: geral
-- Palavras: 123
+- Palavras: 165
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2354,11 +2596,17 @@ durante a meditação.
 A partir do instante t1, em que se inicia a prática meditativa,
 o comportamento da frequência respiratória, em relação
 ao tempo,
+mantém-se constante.
+é diretamente proporcional ao tempo.
+é inversamente proporcional ao tempo.
+diminui até o instante t2, a partir do qual se torna constante.
+diminui de forma proporcional ao tempo, tanto entre t1 e t2
+quanto após t2.
 
 ## Questão 146
 
 - Idioma: geral
-- Palavras: 70
+- Palavras: 75
 - Tem imagem: não
 
 ### Texto extraído
@@ -2388,11 +2636,16 @@ recorde mundial masculino dessa prova, com o tempo de
 9,58 segundos.
 Qual é a diferença, em segundo, entre a marca de referência e
 a marca estabelecida por Usain Bolt em 2009?
+0,02
+0,42
+0,52
+1,02
+1,42
 
 ## Questão 147
 
 - Idioma: geral
-- Palavras: 87
+- Palavras: 92
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2416,11 +2669,16 @@ das matrículas, por idioma, em 2023, e a distribuição da quantidade de matrí
 Para planejar as atividades de 2025, o gerente da escola estimou que o total de matrículas será o mesmo de 2024, e a distribuição
 percentual das matrículas, por idioma, será igual à registrada em 2023.
 Segundo essa estimativa, o número de matrículas no curso de francês para o ano de 2025 será
+2.
+12.
+20.
+22.
+40.
 
 ## Questão 148
 
 - Idioma: geral
-- Palavras: 84
+- Palavras: 89
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2444,11 +2702,16 @@ na exibição de cada deslocamento. A tela apresenta a imagem do deslocamento, a
 o comprimento desse deslocamento, em centímetro, em conformidade com a escala empregada. As figuras representam a tela
 do controle remoto exibindo os dados de cinco deslocamentos realizados por esse carrinho.
 A opção que indica o deslocamento de maior comprimento realizado pelo carrinho de brinquedo é
+I.
+II.
+III.
+IV.
+V.
 
 ## Questão 149
 
 - Idioma: geral
-- Palavras: 45
+- Palavras: 50
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2474,11 +2737,16 @@ de Platão, de Arquimedes, prisma ou antiprisma.
 As figuras apresentam esse poliedro em duas posições e
 uma de suas planificações.
 Quantos vértices tem esse poliedro?
+21
+25
+55
+80
+110
 
 ## Questão 150
 
 - Idioma: geral
-- Palavras: 83
+- Palavras: 92
 - Tem imagem: não
 
 ### Texto extraído
@@ -2512,11 +2780,16 @@ de tijolos a cada hora, independentemente de trabalharem
 6 ou 9 horas diárias.
 O número de tijolos fabricados diariamente após o aumento da
 capacidade de produção é
+800.
+1 080.
+1 200.
+1 800.
+2 520.
 
 ## Questão 151
 
 - Idioma: geral
-- Palavras: 172
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -2568,11 +2841,16 @@ Um visitante chegou à empresa às 10 horas da manhã para
 se reunir com o funcionário identificado pelo número 109,
 que trabalha no setor 08 da empresa, localizado no 2º andar.
 O código de identificação desse visitante é
+0109082.
+0281090.
+1010982.
+2081090.
+2810910.
 
 ## Questão 152
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 88
 - Tem imagem: não
 
 ### Texto extraído
@@ -2605,11 +2883,17 @@ quatro candidatos, de maneira aleatória, já que não havia feito
 a identificação dos envelopes.
 A probabilidade de que todos os candidatos tenham recebido
 de volta os envelopes com os seus respectivos celulares é
+1
+1
+1
+1
+1
+256
 
 ## Questão 153
 
 - Idioma: geral
-- Palavras: 123
+- Palavras: 143
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2649,11 +2933,16 @@ V e T representam as posições fixas dos vilões, e S, a posição
 inicial do herói, como apresentado na figura.
 Qual é a equação da trajetória em que o herói poderá se
 movimentar sem ser atacado?
+y = −3x + 20
+y = −3x + 16
+y = −3x − 20
+y = 3x + 16
+y = 3x − 16
 
 ## Questão 154
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 151
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2693,11 +2982,18 @@ somente do gênero cuja quantidade em estoque seja insuficiente
 para atender a demanda constatada pela enquete.
 O gênero de livro do qual o gerente deverá encomendar mais
 exemplares é
+ficção, pois é o que apresenta maior demanda.
+biografia, pois é o gênero que tem a menor demanda.
+autoajuda, pois a quantidade em estoque é inferior à demanda.
+biografia, pois é o gênero que tem a menor quantidade de
+livros em estoque.
+romance, pois é o que apresenta o menor estoque de livros
+de autores brasileiros.
 
 ## Questão 155
 
 - Idioma: geral
-- Palavras: 46
+- Palavras: 63
 - Tem imagem: não
 
 ### Texto extraído
@@ -2725,11 +3021,16 @@ máximo uma pessoa por casal poderá ocupar um cargo nessa
 diretoria.
 Quantas diretorias diferentes podem ser constituídas por esses
 10 casais?
+10 × 9 × 8
+20 × 18 × 16
+20 × 19 × 18
+10 × 9 × 8 × 2
+20 × 18 × 16 × 2
 
 ## Questão 156
 
 - Idioma: geral
-- Palavras: 79
+- Palavras: 89
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2759,11 +3060,16 @@ Após a conclusão, a obra de arte obtida manteve as mesmas
 proporções do desenho feito pelo banhista, sendo que as
 medidas indicadas na figura foram ampliadas para 30 m.
 Em qual escala esse desenho representa a obra de arte?
+1 : 1,5
+1 : 2,25
+1 : 10
+1 : 100
+1 : 150
 
 ## Questão 157
 
 - Idioma: geral
-- Palavras: 69
+- Palavras: 86
 - Tem imagem: não
 
 ### Texto extraído
@@ -2799,11 +3105,20 @@ salivar em um dia de trabalho, denotada por T, era, em média,
 1,59 vezes a concentração de cortisol salivar em um dia de
 folga, denotada por F.
 Nesse estudo, a relação obtida entre T e F foi
+T = 1,59 + F
+F = 1,59 + T
+T
+F = 1 59
+,
+F
+T = 1 59
+,
+F ⋅ T = 1,59
 
 ## Questão 158
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 132
 - Tem imagem: não
 
 ### Texto extraído
@@ -2845,11 +3160,16 @@ Com isso, o dono do estacionamento reajustará as mensalidades
 para obter um lucro mensal de R$ 10 000,00. Apesar desse
 reajuste, todas as vagas continuarão ocupadas.
 O valor, em real, da mensalidade reajustada será
+185,60.
+226,09.
+245,20.
+268,93.
+285,60.
 
 ## Questão 159
 
 - Idioma: geral
-- Palavras: 42
+- Palavras: 47
 - Tem imagem: não
 
 ### Texto extraído
@@ -2871,11 +3191,16 @@ O dono de uma sorveteria armazena sorvete em potes de
 20 000 cm3. Ele serve o sorvete em taças, em porções de 250 mL.
 A quantidade de taças que ele consegue servir a partir de um
 pote cheio de sorvete é
+5.
+8.
+50.
+80.
+800.
 
 ## Questão 160
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 118
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2925,11 +3250,30 @@ entre 0 e 4 minutos, conforme ilustrado na figura, na qual estão
 apresentadas assíntotas verticais da função tangente utilizada
 na definição de D.
 A expressão algébrica que representa a relação entre D e T é
+D
+T
+2 5
+,
+tg
+D
+T
+tg
+D
+T
+2 5
+tg
+,
+D
+T
+tg
+D
+T
+tg
 
 ## Questão 161
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 126
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2967,11 +3311,16 @@ quarteirões na direção norte e dobrar à esquerda. A casa de
 seu amigo fica no segundo quarteirão a oeste.
 O quarteirão onde se encontra a casa de João é representado
 pelo quadrado com a letra
+P.
+Q.
+R.
+S.
+T.
 
 ## Questão 162
 
 - Idioma: geral
-- Palavras: 114
+- Palavras: 119
 - Tem imagem: não
 
 ### Texto extraído
@@ -3009,11 +3358,16 @@ foi produzida nesse mês, mas com redução de, pelo menos,
 Para que no mês seguinte a empresa atinja a meta, a quantidade
 mínima de toneladas de plástico que devem ser produzidas a
 partir de reciclagem deverá ser
+135.
+140.
+155.
+160.
+175.
 
 ## Questão 163
 
 - Idioma: geral
-- Palavras: 64
+- Palavras: 69
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3043,11 +3397,16 @@ quantitativos de estudantes que praticam essas modalidades
 esportivas nessa escola, apesar de algumas quantidades não
 terem sido informadas.
 Qual é a quantidade de estudantes no ensino médio dessa escola?
+720
+360
+320
+288
+240
 
 ## Questão 164
 
 - Idioma: geral
-- Palavras: 228
+- Palavras: 254
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3111,11 +3470,16 @@ chegar ao ponto de destino R por meio de uma rota retilínea.
 Considere 0,64 como aproximação para cos 50°.
 A direção e o tempo aproximado de navegação que o dono da
 embarcação deve utilizar são, respectivamente,
+135 e 7 horas e 15 minutos.
+45 e 7 horas e 15 minutos.
+135 e 12 horas.
+135 e 6 horas.
+45 e 6 horas.
 
 ## Questão 165
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 112
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3157,11 +3521,16 @@ Desvio padrão
 Mesmo com o quadro incompleto, foi possível selecionar um desses grupos porque, apenas com os dados apresentados no
 quadro, foi identificado um grupo que, certamente, atendia ao critério de escolha.
 O grupo escolhido foi o
+1.
+2.
+3.
+4.
+5.
 
 ## Questão 166
 
 - Idioma: geral
-- Palavras: 123
+- Palavras: 128
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3189,11 +3558,16 @@ trechos de 1 km, em uma corrida de 5 km, e o tempo gasto para percorrer cada t
 O melhor pace que esse corredor alcançou em corridas de 5 km foi 281 s/km.
 Para que consiga repetir nessa corrida seu melhor pace em corridas de 5 km, seu tempo, no 5º trecho, deve ser quantos segundos
 menor do que o que ele gastou para percorrer o 4º trecho?
+1
+2
+8
+9
+15
 
 ## Questão 167
 
 - Idioma: geral
-- Palavras: 147
+- Palavras: 152
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3223,11 +3597,16 @@ assuma que em todo o trajeto se manteve uma velocidade constante de 60 km/h. Co
 foi utilizado apenas GNV e, na outra metade, apenas gasolina. O que foi pago pelo metro cúbico de GNV e pelo litro de gasolina
 correspondeu, respectivamente, a R$ 2,00 e a R$ 3,00.
 Qual foi a diferença, em real, entre os gastos totais com gasolina e com GNV?
+4
+8
+14
+21
+30
 
 ## Questão 168
 
 - Idioma: geral
-- Palavras: 123
+- Palavras: 166
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3277,6 +3656,11 @@ III
 400
 Ela contratará os três produtos numa mesma autoescola de modo que o custo total nessa primeira etapa seja o menor possível.
 A autoescola que será contratada é a
+I, com o custo total de R$ 1 400,00.
+II, com o custo total de R$ 280,00.
+II, com o custo total de R$ 1 300,00.
+III, com o custo total de R$ 460,00.
+III, com o custo total de R$ 1 200,00.
 
 ## Questão 169
 
@@ -3338,7 +3722,7 @@ E
 ## Questão 170
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 142
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3382,11 +3766,16 @@ Para garantir o funcionamento eficiente, o mínimo de água
 despejada a cada acionamento deve ser de 5 L.
 A quantidade máxima de garrafas que serão colocadas nessa
 caixa, garantindo um funcionamento eficiente, é igual a
+10.
+8.
+4.
+3.
+2.
 
 ## Questão 171
 
 - Idioma: geral
-- Palavras: 158
+- Palavras: 163
 - Tem imagem: não
 
 ### Texto extraído
@@ -3430,11 +3819,16 @@ lado da base maior, que sejam adequadas para embalar todos
 os tipos de torta que produz.
 A aresta da base das novas caixas deve ser, no mínimo, quantos
 centímetros maior do que a das caixas originais?
+4
+12
+16
+18
+20
 
 ## Questão 172
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 127
 - Tem imagem: não
 
 ### Texto extraído
@@ -3478,11 +3872,18 @@ contínuo de 10 horas. Para isso, precisa definir o modelo de
 máquina a ser adquirida escolhendo o maior valor possível
 do parâmetro K, atendendo à recomendação do fabricante.
 O maior valor a ser escolhido para K é
+100,5
+108
+10
+2 5,
+10
+2 5,
+25 × 10−2
 
 ## Questão 173
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 204
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3531,11 +3932,19 @@ de material retirado da montanha.
 Considere 3 como aproximação para p e desconsidere as
 espessuras das muretas.
 O projeto a ser aprovado é
+o 1, pois apresenta área de seção transversal medindo
+67,5 m2.
+o 2, pois apresenta área de seção transversal medindo
+121,5 m2.
+o 1, pois apresenta área de seção transversal medindo 135 m2.
+o 2, pois apresenta área de seção transversal medindo 243 m2.
+qualquer um dos dois, pois apresentam áreas de suas seções
+transversais com medidas iguais.
 
 ## Questão 174
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 100
 - Tem imagem: não
 
 ### Texto extraído
@@ -3571,11 +3980,16 @@ Nas duas opções de pagamento, o valor total a ser pago
 pelo carro é o mesmo.
 Qual é a quantidade n de parcelas contidas na opção 1 de
 pagamento?
+18
+24
+30
+42
+48
 
 ## Questão 175
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 82
 - Tem imagem: não
 
 ### Texto extraído
@@ -3607,11 +4021,16 @@ ganhará, entre seus presentes, ou uma bicicleta ou um celular,
 mas não ambos.
 De quantas maneiras distintas a distribuição dos presentes
 pode ser feita?
+36
+53
+300
+360
+560
 
 ## Questão 176
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 95
 - Tem imagem: não
 
 ### Texto extraído
@@ -3645,11 +4064,16 @@ percorrido 4,5 km. Ele manteve na prorrogação a mesma velocidade
 média que havia mantido no segundo tempo regulamentar.
 A distância percorrida por esse jogador durante sua participação
 na partida, em quilômetro, foi
+4,5.
+6,0.
+7,5.
+9,0.
+12,0.
 
 ## Questão 177
 
 - Idioma: geral
-- Palavras: 88
+- Palavras: 94
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3683,11 +4107,16 @@ cunhar 100 dessas medalhas.
 Considere 3,1 como valor aproximado para p.
 Qual é o volume de ouro, em centímetro cúbico, necessário
 para a confecção dessas medalhas?
+288
+297
+567
+990
+1 134
 
 ## Questão 178
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 110
 - Tem imagem: não
 
 ### Texto extraído
@@ -3720,11 +4149,19 @@ cima e compararem o maior número obtido por Artur com
 o número obtido por João. Vence o jogador que obtiver o
 maior número. Em caso de empate, a vitória é de João.
 O jogador que tem a maior probabilidade de vitória é
+Artur, com probabilidade de 2
+João, com probabilidade de 4
+Artur, com probabilidade de 91
+216
+João, com probabilidade de 91
+216
+Artur, com probabilidade de 125
+216
 
 ## Questão 179
 
 - Idioma: geral
-- Palavras: 60
+- Palavras: 72
 - Tem imagem: não
 
 ### Texto extraído
@@ -3755,11 +4192,21 @@ Ela está definida como a razão entre a intensidade luminosa,
 medida em candela (cd), e o quadrado da distância do objeto
 até o foco de luz, medida em metro (m).
 A unidade de medida da luminância de um objeto é
+cd
+m2
+m
+cd
+cd
+m
+m
+cd
+m
+cd2
 
 ## Questão 180
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 152
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3805,3 +4252,8 @@ na posição 4;
 na posição 1, completando a rodada.
 Ao final da rodada n, qual é a expressão algébrica que representa
 o número de moedas do jogador na posição 1?
+103 + 4n
+103 + 3n
+100 + 4n
+100 + 3n
+99 + 4n

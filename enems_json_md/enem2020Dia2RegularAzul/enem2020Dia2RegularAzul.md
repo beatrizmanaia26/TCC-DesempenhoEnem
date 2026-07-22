@@ -3,7 +3,7 @@
 ## Questão 91
 
 - Idioma: geral
-- Palavras: 9
+- Palavras: 60
 - Tem imagem: sim
 
 ### Texto extraído
@@ -20,11 +20,16 @@ E 	 Repulsão entre partículas elétricas da calça e dos pelos do gato.
 ### Texto contado
 
 Por qual motivo ocorre a eletrização ilustrada na tirinha?
+Troca de átomos entre a calça e os pelos do gato.
+Diminuição do número de prótons nos pelos do gato.
+Criação de novas partículas eletrizadas nos pelos do gato.
+Movimentação de elétrons entre a calça e os pelos do gato.
+Repulsão entre partículas elétricas da calça e dos pelos do gato.
 
 ## Questão 92
 
 - Idioma: geral
-- Palavras: 56
+- Palavras: 85
 - Tem imagem: não
 
 ### Texto extraído
@@ -48,11 +53,16 @@ uma preocupação socioambiental, em especial pela quantidade de lixo produzido.
 reúso, pode-se melhorar ainda mais a qualidade de vida, substituindo polímeros convencionais por polímeros
 biodegradáveis.
 Esses polímeros têm grandes vantagens socioambientais em relação aos convencionais porque
+não são tóxicos.
+não precisam ser reciclados.
+não causam poluição ambiental quando descartados.
+são degradados em um tempo bastante menor que os convencionais.
+apresentam propriedades mecânicas semelhantes aos convencionais.
 
 ## Questão 93
 
 - Idioma: geral
-- Palavras: 124
+- Palavras: 159
 - Tem imagem: não
 
 ### Texto extraído
@@ -121,11 +131,31 @@ Bateria
 Amperímetro
 2,5 A
 Circuito do veículo
+Amperímetro
+Bateria
+Circuito do veículo
+0,5 A
+Bateria
+Amperímetro
+0,5 A
+Circuito do veículo
+Bateria
+Amperímetro
+2,5 A
+Circuito do veículo
+Bateria
+Amperímetro
+12 A
+Circuito do veículo
+12 A
+Bateria
+Amperímetro
+Circuito do veículo
 
 ## Questão 94
 
 - Idioma: geral
-- Palavras: 62
+- Palavras: 67
 - Tem imagem: não
 
 ### Texto extraído
@@ -167,11 +197,16 @@ OH
 (4)
 (5)
 Qual substância o empresário deverá utilizar?
+1
+2
+3
+4
+5
 
 ## Questão 95
 
 - Idioma: geral
-- Palavras: 93
+- Palavras: 117
 - Tem imagem: não
 
 ### Texto extraído
@@ -209,11 +244,16 @@ conectividade e o efeito de borda são determinantes para
 a persistência ou não das espécies originais.
 Uma medida que auxilia na conservação da biodiversidade
 nas ilhas mencionadas no texto compreende a
+formação de micro-hábitats.
+ampliação do efeito de borda.
+construção de corredores ecológicos.
+promoção da sucessão ecológica.
+introdução de novas espécies de animais e vegetais.
 
 ## Questão 96
 
 - Idioma: geral
-- Palavras: 109
+- Palavras: 139
 - Tem imagem: não
 
 ### Texto extraído
@@ -251,11 +291,16 @@ inicial. As massas molares dos elementos H, C e O são
 iguais a 1, 12 e 16 g mol−1, respectivamente.
 Qual é a concentração de sacarose depois de 400 minutos
 do início da reação de hidrólise?
+2,50 × 10−3 mol L−1
+6,25 × 10−2 mol L−1
+1,25 × 10−1 mol L−1
+2,50 × 10−1 mol L−1
+4,27 × 10−1 mol L−1
 
 ## Questão 97
 
 - Idioma: geral
-- Palavras: 43
+- Palavras: 93
 - Tem imagem: não
 
 ### Texto extraído
@@ -300,11 +345,25 @@ camada
 denominada pré-sal, formada há 150 milhões de anos.
 A utilização desse recurso energético acarreta para o
 ambiente um desequilíbrio no ciclo do
+nitrogênio,
+devido
+à
+nitrificação
+ambiental
+transformando amônia em nitrito.
+nitrogênio, devido ao aumento dos compostos
+nitrogenados no ambiente terrestre.
+carbono, devido ao aumento dos carbonatos
+dissolvidos no ambiente marinho.
+carbono, devido à liberação das cadeias carbônicas
+aprisionadas abaixo dos sedimentos.
+fósforo, devido à liberação dos fosfatos acumulados
+no ambiente marinho.
 
 ## Questão 98
 
 - Idioma: geral
-- Palavras: 101
+- Palavras: 201
 - Tem imagem: não
 
 ### Texto extraído
@@ -353,11 +412,25 @@ nos terminais das bobinas.
 Nessa situação, o aumento do módulo da diferença de
 potencial obtida nos terminais das bobinas resulta do
 aumento do(a)
+intervalo de tempo em que as bobinas ficam imersas no
+campo magnético externo, por meio de uma diminuição
+de velocidade no eixo de rotação do gerador.
+fluxo magnético através das bobinas, por meio de
+um aumento em sua área interna exposta ao campo
+magnético aplicado.
+intensidade do campo magnético no qual as bobinas
+estão imersas, por meio de aplicação de campos
+magnéticos mais intensos.
+rapidez com que o fluxo magnético varia através das
+bobinas, por meio de um aumento em sua velocidade
+angular.
+resistência interna do condutor que constitui as bobinas,
+por meio de um aumento na espessura dos terminais.
 
 ## Questão 99
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 176
 - Tem imagem: sim
 
 ### Texto extraído
@@ -419,11 +492,16 @@ condições,
 aproximadamente
 quanto tempo depois da abertura do semáforo O os
 semáforos A, B e C devem abrir, respectivamente?
+20 s, 45 s e 70 s.
+25 s, 50 s e 75 s.
+28 s, 42 s e 53 s.
+30 s, 55 s e 80 s.
+35 s, 60 s e 85 s.
 
 ## Questão 100
 
 - Idioma: geral
-- Palavras: 157
+- Palavras: 165
 - Tem imagem: sim
 
 ### Texto extraído
@@ -479,11 +557,16 @@ aquosa de carbonato de sódio (Na2CO3), liberou gás
 carbônico.
 Qual foi o gás liberado majoritariamente na decomposição
 térmica desse tipo de plástico?
+H2
+Cl2
+CO
+CO2
+HCl
 
 ## Questão 101
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 125
 - Tem imagem: sim
 
 ### Texto extraído
@@ -533,11 +616,20 @@ D1
 D2
 Tempo
 A representação indica que, no momento D, na situação
+D1 ocorre um novo fator de isolamento geográfico.
+D1 existe uma única população distribuída em
+gradiente.
+D1 ocorrem duas populações separadas por
+isolamento reprodutivo.
+D2 coexistem duas populações com características
+fenotípicas distintas.
+D2 foram preservadas as mesmas características
+fenotípicas da população original A.
 
 ## Questão 102
 
 - Idioma: geral
-- Palavras: 89
+- Palavras: 94
 - Tem imagem: sim
 
 ### Texto extraído
@@ -597,11 +689,16 @@ Obtenção do óleo bruto com hexano
 Destilação
 Separação do óleo e do solvente
 Qual das subetapas do processo é realizada em função apenas da polaridade das substâncias?
+Trituração.
+Cozimento.
+Prensagem.
+Extração.
+Destilação.
 
 ## Questão 103
 
 - Idioma: geral
-- Palavras: 110
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -631,11 +728,16 @@ ou por resíduos industriais, queima de combustíveis fósseis e queimadas. Apes
 excesso causa perturbações no equilíbrio ambiental.
 Considerando as propriedades descritas, o aumento atmosférico da substância afetará os organismos aquáticos em
 razão da
+redução do potencial hidrogeniônico da água.
+restrição da aerobiose pelo excesso de poluentes.
+diminuição da emissão de oxigênio pelos autótrofos.
+limitação de transferência de energia entre os seres vivos.
+retração dos oceanos pelo congelamento do gás nos polos.
 
 ## Questão 104
 
 - Idioma: geral
-- Palavras: 67
+- Palavras: 92
 - Tem imagem: não
 
 ### Texto extraído
@@ -659,11 +761,16 @@ petróleo. Essas aves são lavadas com água e detergente neutro para a retirada
 posteriormente, são aquecidas, medicadas, desintoxicadas e alimentadas. Mesmo após esses cuidados, o retorno ao
 ambiente não pode ser imediato, pois elas precisam recuperar a capacidade de flutuação.
 Para flutuar, essas aves precisam
+recuperar o tônus muscular.
+restaurar a massa corporal.
+substituir as penas danificadas.
+restabelecer a capacidade de homeotermia.
+refazer a camada de cera impermeabilizante das penas.
 
 ## Questão 105
 
 - Idioma: geral
-- Palavras: 63
+- Palavras: 125
 - Tem imagem: não
 
 ### Texto extraído
@@ -720,11 +827,31 @@ o funcionamento do refrigerador e aumenta o consumo
 de energia.
 O não atendimento dessa recomendação resulta em
 aumento do consumo de energia porque
+o fl uxo de calor por condução no condensador sofre
+considerável redução.
+a
+temperatura
+da
+substância
+refrigerante
+no
+condensador diminui mais rapidamente.
+o fl uxo de calor promove signifi cativa elevação da
+temperatura no interior do refrigerador.
+a
+liquefação
+da
+substância
+refrigerante
+no
+condensador exige mais trabalho do compressor.
+as correntes de convecção nas proximidades do
+condensador ocorrem com maior difi culdade.
 
 ## Questão 106
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 147
 - Tem imagem: não
 
 ### Texto extraído
@@ -792,11 +919,16 @@ igual a 10 m s−2 e que a densidade da água seja de
 ρ = 1 000 kg m−3.
 Em minutos, qual é o tempo de descompressão a que o
 mergulhador deverá ser submetido?
+100
+80
+60
+40
+20
 
 ## Questão 107
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 118
 - Tem imagem: não
 
 ### Texto extraído
@@ -836,11 +968,16 @@ uma massa Mmodelo e exercerá uma pressão Pmodelo.
 Como a pressão exercida pela torre se compara  com a
 pressão exercida pelo protótipo? Ou seja, qual é a razão
 entre as pressões (Ptorre)/(Pmodelo) ?
+100
+101
+102
+104
+106
 
 ## Questão 108
 
 - Idioma: geral
-- Palavras: 86
+- Palavras: 136
 - Tem imagem: não
 
 ### Texto extraído
@@ -882,11 +1019,19 @@ liberado quando em contato com soluções aquosas cujo pH
 se encontre próximo da faixa da neutralidade.
 Qual é a finalidade do uso desse revestimento à base de
 celulose?
+Diminuir a absorção do princípio ativo no intestino.
+Impedir que o fármaco seja solubilizado no intestino.
+Garantir que o fármaco não seja afetado pelas
+secreções gástricas.
+Permitir a liberação do princípio ativo pela ação das
+amilases salivares.
+Facilitar a liberação do fármaco pela ação dos sais
+biliares sobre o revestimento.
 
 ## Questão 109
 
 - Idioma: geral
-- Palavras: 53
+- Palavras: 86
 - Tem imagem: não
 
 ### Texto extraído
@@ -912,11 +1057,16 @@ ebulição da água. Os usuários conhecedores do utensílio
 normalmente abaixam a intensidade do fogo em panelas
 de pressão após estas iniciarem a saída dos vapores.
 Ao abaixar o fogo, reduz-se a chama, pois assim evita-se o(a)
+aumento da pressão interna e os riscos de explosão.
+dilatação da panela e a desconexão com sua tampa.
+perda da qualidade nutritiva do alimento.
+deformação da borracha de vedação.
+consumo de gás desnecessário.
 
 ## Questão 110
 
 - Idioma: geral
-- Palavras: 78
+- Palavras: 93
 - Tem imagem: não
 
 ### Texto extraído
@@ -952,11 +1102,16 @@ aumento da velocidade da reação química envolvida.
 O êxito da aplicação dessa tecnologia é por causa
 da realização de reações químicas que ocorrem em
 condições de
+alta pressão.
+alta temperatura.
+excesso de reagentes.
+maior superfície de contato.
+elevada energia de ativação.
 
 ## Questão 111
 
 - Idioma: geral
-- Palavras: 139
+- Palavras: 144
 - Tem imagem: não
 
 ### Texto extraído
@@ -1005,11 +1160,16 @@ no avião a um volume muito menor (e mais seguro).
 A tecnologia redutora de ruído CR utilizada na produção
 de fones de ouvido baseia-se em qual fenômeno
 ondulatório?
+Absorção.
+Interferência.
+Polarização.
+Reflexão.
+Difração.
 
 ## Questão 112
 
 - Idioma: geral
-- Palavras: 69
+- Palavras: 91
 - Tem imagem: não
 
 ### Texto extraído
@@ -1049,11 +1209,16 @@ a equação química:
 Como você procederia para reutilizar, num curto
 intervalo de tempo, um cartão que já estivesse com a
 coloração rosa?
+Resfriaria no congelador.
+Borrifaria com spray de água.
+Envolveria com papel alumínio.
+Aqueceria com secador de cabelos.
+Embrulharia em guardanapo de papel.
 
 ## Questão 113
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 136
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1122,11 +1287,26 @@ E
 Mesa
 Solo
 V0
+Mesa
+Solo
+V0
+Mesa
+Solo
+V0
+Mesa
+Solo
+V0
+Mesa
+Solo
+V0
+Mesa
+Solo
+V0
 
 ## Questão 114
 
 - Idioma: geral
-- Palavras: 110
+- Palavras: 120
 - Tem imagem: não
 
 ### Texto extraído
@@ -1166,11 +1346,16 @@ do som dentro da cavidade perfurada é de 360 m s-1.
 Se a profundidade estiver de acordo com o projeto, qual
 será o valor da próxima frequência de ressonância que
 será medida?
+137 Hz.
+138 Hz.
+141 Hz.
+144 Hz.
+159 Hz.
 
 ## Questão 115
 
 - Idioma: geral
-- Palavras: 72
+- Palavras: 79
 - Tem imagem: não
 
 ### Texto extraído
@@ -1203,11 +1388,16 @@ pelo vírus causador da aids. Essa leguminosa está sendo
 induzida a produzir a enzima cianovirina-N, que tem
 eficiência comprovada contra o vírus.
 A técnica para gerar essa leguminosa é um exemplo de
+hibridismo.
+transgenia.
+conjugação.
+terapia gênica.
+melhoramento genético.
 
 ## Questão 116
 
 - Idioma: geral
-- Palavras: 122
+- Palavras: 152
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1273,11 +1463,16 @@ uma resistência interna de 10 kΩ.
 Entre quais pontos do divisor de tensão esse equipamento
 deve ser ligado para funcionar corretamente e qual será o
 valor da intensidade da corrente nele estabelecida?
+Entre A e C; 30 mA.
+Entre B e E; 30 mA.
+Entre A e D; 1,2 mA.
+Entre B e E; 0,9 mA.
+Entre A e E; 0,9 mA.
 
 ## Questão 117
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 122
 - Tem imagem: não
 
 ### Texto extraído
@@ -1320,11 +1515,16 @@ no corpo e chegam até a molécula IR700, que é ativada e
 libera uma substância que ataca a célula cancerosa.
 Com base nas etapas de desenvolvimento, o nome
 apropriado para a técnica descrita é:
+Radioterapia.
+Cromoterapia.
+Quimioterapia.
+Fotoimunoterapia.
+Terapia magnética.
 
 ## Questão 118
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 115
 - Tem imagem: não
 
 ### Texto extraído
@@ -1359,11 +1559,21 @@ desertos e solos arenosos. Podem ter sido os primeiros
 representantes do filo Arthropoda a habitar a terra seca.
 A característica que justifica o sucesso adaptativo desse
 grupo na ocupação do ambiente terrestre é a presença de
+quelíceras e pedipalpos que coordenam o movimento
+corporal.
+excreção de ácido úrico que confere estabilidade ao
+pH corporal.
+exoesqueleto constituído de quitina que auxilia no
+controle hídrico corporal.
+circulação sanguínea aberta que impede a desidratação
+dos tecidos corporais.
+sistema nervoso ganglionar que promove a coordenação
+central do movimento corporal.
 
 ## Questão 119
 
 - Idioma: geral
-- Palavras: 194
+- Palavras: 199
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1458,11 +1668,16 @@ orgânica, durante um período de tempo, numa
 temperatura de incubação específica.
 Qual ponto de amostragem da água do rio está mais
 próximo ao local em que o rio recebe despejo de esgoto?
+1
+2
+3
+4
+5
 
 ## Questão 120
 
 - Idioma: geral
-- Palavras: 201
+- Palavras: 206
 - Tem imagem: não
 
 ### Texto extraído
@@ -1523,11 +1738,16 @@ em um mesmo trajeto de 1 000 km.
 A quantidade equivalente de etanol economizada, em
 quilograma, com o uso do veículo elétrico nesse trajeto,
 é mais próxima de
+50.
+60.
+95.
+99.
+120.
 
 ## Questão 121
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 87
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1579,11 +1799,16 @@ Anil
 Violeta
 Considerando a figura, a faixa do microespectro em que a
 alga possui maior taxa de realização fotossintética é a do:
+Anil.
+Verde.
+Violeta.
+Amarelo.
+Vermelho.
 
 ## Questão 122
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 128
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1652,11 +1877,16 @@ Taenia saginata
 1,30
 Considerando-se a densidade dos ovos e da solução, ovos
 de quais parasitos podem ser detectados por esse método?
+A. lumbricoides, A. suum e S. mansoni.
+S. mansoni, T. saginata e Ancylostoma.
+Ancylostoma, A. lumbricoides e A. suum.
+T. saginata, S. mansoni e A. lumbricoides.
+A. lumbricoides, A. suum e T. saginata.
 
 ## Questão 123
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 138
 - Tem imagem: não
 
 ### Texto extraído
@@ -1699,11 +1929,21 @@ Considere os dados do acetato de etila:
 •	 	Pressão de vapor maior que a da água.
 A fim de tratar o resíduo, recuperando o acetato de etila,
 o técnico deve
+evaporar o acetato de etila sem alterar o conteúdo de
+água.
+filtrar a mistura utilizando um funil comum e um papel
+de filtro.
+realizar uma destilação simples para separar a água do
+acetato de etila.
+proceder a uma centrifugação da mistura para remover
+o acetato de etila.
+decantar a mistura separando os dois componentes em
+um funil adequado.
 
 ## Questão 124
 
 - Idioma: geral
-- Palavras: 37
+- Palavras: 117
 - Tem imagem: não
 
 ### Texto extraído
@@ -1740,11 +1980,27 @@ derramamento de petróleo na bacia hidrográfica de
 Campos, no Rio de Janeiro.
 Os impactos decorrentes desse derramamento ocorrem
 porque os componentes do petróleo
+reagem com a água do mar e sofrem degradação,
+gerando compostos com elevada toxicidade.
+acidificam o meio, promovendo o desgaste das
+conchas calcárias de moluscos e a morte de corais.
+dissolvem-se na água, causando a mortandade dos
+seres marinhos por ingestão da água contaminada.
+têm caráter hidrofóbico e baixa densidade, impedindo
+as trocas gasosas entre o meio aquático e a atmosfera.
+têm
+cadeia
+pequena
+e
+elevada
+volatilidade,
+contaminando a atmosfera local e regional em função
+dos ventos nas orlas marítimas.
 
 ## Questão 125
 
 - Idioma: geral
-- Palavras: 84
+- Palavras: 89
 - Tem imagem: não
 
 ### Texto extraído
@@ -1802,11 +2058,16 @@ ii
 r2
 A porcentagem de doadores compatíveis para alguém do
 grupo B nessa população deve ser de
+11%.
+19%.
+26%.
+36%.
+60%.
 
 ## Questão 126
 
 - Idioma: geral
-- Palavras: 70
+- Palavras: 107
 - Tem imagem: não
 
 ### Texto extraído
@@ -1844,11 +2105,20 @@ preocupação associada ao emprego desse artefato
 bélico é a poeira radioativa deixada após a bomba
 ser detonada.
 Qual é o processo envolvido na detonação dessa bomba?
+Fissão nuclear do urânio, provocada por nêutrons.
+Fusão nuclear do hidrogênio, provocada por
+prótons.
+Desintegração nuclear do plutônio, provocada por
+elétrons.
+Associação em cadeia de chumbo, provocada por
+pósitrons.
+Decaimento radioativo do carbono, provocado por
+partículas beta.
 
 ## Questão 127
 
 - Idioma: geral
-- Palavras: 64
+- Palavras: 84
 - Tem imagem: não
 
 ### Texto extraído
@@ -1882,11 +2152,16 @@ grande quantidade de sementes e possuem ciclo de
 vida curto.
 Essas plantas são importantes em um projeto de
 restauração ambiental, pois promovem, no solo,
+aumento da incidência de luz solar.
+diminuição da absorção de água.
+estabilização da umidade.
+elevação de temperatura.
+liberação de oxigênio.
 
 ## Questão 128
 
 - Idioma: geral
-- Palavras: 138
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -1930,11 +2205,16 @@ calor específico 4,0 kJ kg−1 K−1 e a densidade 1 kg L−1.
 Se o sistema de aquecimento for desligado por 1 h, qual
 o valor mais próximo para a redução da temperatura da
 água do aquário?
+4,0 °C
+3,6 °C
+0,9 °C
+0,6 °C
+0,3 °C
 
 ## Questão 129
 
 - Idioma: geral
-- Palavras: 128
+- Palavras: 133
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2006,11 +2286,16 @@ IV
 V
 Qual quimioterápico deve ser escolhido para tratamento
 desse tipo de tumor?
+I
+II
+III
+IV
+V
 
 ## Questão 130
 
 - Idioma: geral
-- Palavras: 194
+- Palavras: 199
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2081,11 +2366,16 @@ visível
 Recipientes
 PRISMA
 Em qual dos recipientes a água terá maior temperatura ao final do experimento?
+A
+B
+C
+D
+E
 
 ## Questão 131
 
 - Idioma: geral
-- Palavras: 88
+- Palavras: 154
 - Tem imagem: não
 
 ### Texto extraído
@@ -2109,11 +2399,16 @@ parte do reagente em produto, de forma mais rápida e seletiva, que utilizem pou
 produto desejado, evitando a formação de coprodutos, e que utilizem solventes não agressivos ao meio ambiente. Assim,
 as indústrias contornariam problemas relacionados à poluição ambiental e ao desperdício de água e energia.
 O perfil de um processo que segue todos os princípios desse ramo da química pode ser representado por:
+A + B + C → D    (a reação ocorre a altas pressões).
+A + B → C + D    (a reação é fortemente endotérmica).
+A + 3B → C    (a reação ocorre com uso de solvente orgânico).
+3A + 2B → 2C → 3D + 2E    (a reação ocorrre sob pressão atmosférica).
+A + 1−2B → C    (a reação ocorre com o uso de um catalisador contendo um metal não tóxico).
 
 ## Questão 132
 
 - Idioma: geral
-- Palavras: 64
+- Palavras: 135
 - Tem imagem: não
 
 ### Texto extraído
@@ -2153,11 +2448,22 @@ potássio, bário, cálcio, chumbo, antimônio, cromo, além
 de percloratos e gases, como os dióxidos de nitrogênio
 e enxofre.
 Esses espetáculos promovem riscos ambientais, porque
+as substâncias resultantes da queima de fogos de
+artifício são inflamáveis.
+os resíduos produzidos na queima de fogos de
+artifício ainda são explosivos.
+o sódio e o potássio são os principais responsáveis
+pela toxicidade do produto da queima.
+os produtos da queima contêm metais pesados e
+gases tóxicos que resultam em poluição atmosférica.
+o material particulado gerado se deposita na superfície
+das folhas das plantas impedindo os processos de
+respiração celular.
 
 ## Questão 133
 
 - Idioma: geral
-- Palavras: 72
+- Palavras: 96
 - Tem imagem: não
 
 ### Texto extraído
@@ -2191,11 +2497,16 @@ abrigo para proteção é o interior de um automóvel, desde
 que este não seja conversível.
 Qual o motivo físico da proteção fornecida pelos
 automóveis, conforme citado no texto?
+Isolamento elétrico dos pneus.
+Efeito de para-raios da antena.
+Blindagem pela carcaça metálica.
+Escoamento da água pela lataria.
+Aterramento pelo fio terra da bateria.
 
 ## Questão 134
 
 - Idioma: geral
-- Palavras: 155
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -2263,11 +2574,16 @@ B
 C
 C
 Com base nos dados obtidos, o investidor adquiriu as moedas
+A e B.
+A e C.
+B e C.
+B e D.
+C e D.
 
 ## Questão 135
 
 - Idioma: geral
-- Palavras: 98
+- Palavras: 150
 - Tem imagem: não
 
 ### Texto extraído
@@ -2310,11 +2626,21 @@ nos cromossomos de C. arabica detectam os alelos de
 ambas as origens.
 A alteração cromossômica que poderia explicar o
 surgimento do café da espécie C. arabica é:
+Duplicação em uma das plantas parentais antes do
+cruzamento.
+Inversão durante a meiose gamética em ambas as
+plantas parentais.
+Separação desigual na meiose gamética de uma das
+plantas parentais.
+Falha na separação durante a meiose gamética em
+ambas as plantas parentais.
+Deleções durante as primeiras mitoses zigóticas na
+planta descendente C. arabica.
 
 ## Questão 136
 
 - Idioma: geral
-- Palavras: 211
+- Palavras: 216
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2386,11 +2712,16 @@ verde.
 Qual a medida, em centímetro, do lado do menor
 quadrado de tecido azul que deverá ser comprado para
 confecção do círculo da bandeira desejada?
+27
+32
+53
+63
+90
 
 ## Questão 137
 
 - Idioma: geral
-- Palavras: 109
+- Palavras: 113
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2435,11 +2766,15 @@ imagem, é
 A 16
 B 16
 C 26
+16
+16
+26
+42
 
 ## Questão 138
 
 - Idioma: geral
-- Palavras: 50
+- Palavras: 63
 - Tem imagem: não
 
 ### Texto extraído
@@ -2465,11 +2800,16 @@ paralelepípedo retângulo reto com volume igual a
 a caixa-d’água tem dimensões 2 cm × 3,51 cm × 4 cm.
 Dado: 1 dm³ = 1 L.
 A escala usada pelo arquiteto foi
+1 : 10
+1 : 100
+1 : 1 000
+1 : 10 000
+1 : 100 000
 
 ## Questão 139
 
 - Idioma: geral
-- Palavras: 85
+- Palavras: 90
 - Tem imagem: não
 
 ### Texto extraído
@@ -2505,11 +2845,16 @@ for a razão entre o número de peças produzidas e o
 número de horas trabalhadas, maior será a eficiência
 da metodologia.
 Em qual dia foi aplicada a metodologia mais eficiente?
+1
+2
+3
+4
+5
 
 ## Questão 140
 
 - Idioma: geral
-- Palavras: 119
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -2553,11 +2898,16 @@ feitos.
 A compra que atende às necessidades do proprietário,
 proporciona a menor sobra de pisos e resulta no menor
 preço é
+5 caixas do tipo A.
+1 caixa do tipo A e 4 caixas do tipo B.
+3 caixas do tipo A e 2 caixas do tipo B.
+5 caixas do tipo A e 1 caixa do tipo B.
+6 caixas do tipo B.
 
 ## Questão 141
 
 - Idioma: geral
-- Palavras: 62
+- Palavras: 67
 - Tem imagem: não
 
 ### Texto extraído
@@ -2587,11 +2937,16 @@ uma simbolizando um único algarismo.
 Qual a quantidade mínima de peças, simbolizando o
 algarismo 2, necessárias para identificar o número de
 todos os quartos?
+160
+157
+130
+120
+60
 
 ## Questão 142
 
 - Idioma: geral
-- Palavras: 114
+- Palavras: 118
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2657,11 +3012,15 @@ Antônio
 Fernanda
 Nessas condições, a probabilidade de João ser a sétima
 pessoa do grupo a receber sua restituição é igual a
+1
+7
+1
+1
 
 ## Questão 143
 
 - Idioma: geral
-- Palavras: 156
+- Palavras: 161
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2728,11 +3087,16 @@ patamar de 70% do tempo necessário à obtenção do
 curso superior dado anteriormente.
 O ano em que o tempo médio de estudo de pessoas
 acima de 14 anos atingirá o percentual pretendido será
+2018.
+2023.
+2031.
+2035.
+2043.
 
 ## Questão 144
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 79
 - Tem imagem: não
 
 ### Texto extraído
@@ -2762,11 +3126,16 @@ da torneira, e uma gota é formada, em média, por
 5 × 10−2 mL de água.
 Quanto tempo, em hora, será necessário para encher
 completamente o balde, partindo do instante atual?
+2 × 101
+1 × 101
+2 × 10−2
+1 × 10−2
+1 × 10−3
 
 ## Questão 145
 
 - Idioma: geral
-- Palavras: 180
+- Palavras: 185
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2830,11 +3199,16 @@ topo da esfera e a tampa dessa caixa de vidro. Nessas
 condições deseja-se fazer a maior miniatura possível.
 A medida da altura, em centímetro, dessa caixa de vidro
 deverá ser igual a
+12.
+14.
+16.
+18.
+20.
 
 ## Questão 146
 
 - Idioma: geral
-- Palavras: 111
+- Palavras: 124
 - Tem imagem: não
 
 ### Texto extraído
@@ -2873,11 +3247,16 @@ Nesse caso, o mais amplo intervalo numérico ao qual a
 profundidade da pisada (b) deve pertencer, para que as
 regras sejam satisfeitas é
 A 30 ≤ b
+30 ≤ b
+30 ≤ b ≤ 31,5
+30 ≤ b ≤ 33
+31,5 ≤ b ≤ 33
+b ≤ 33
 
 ## Questão 147
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 152
 - Tem imagem: não
 
 ### Texto extraído
@@ -2936,11 +3315,19 @@ X
 D 1
 X
 E 1 ∙X
+X ∙100
+X
+100
+100
+X
+1
+X
+1 ∙X
 
 ## Questão 148
 
 - Idioma: geral
-- Palavras: 86
+- Palavras: 96
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2993,11 +3380,16 @@ Não trabalha
 nem estuda
 De acordo com as informações dadas, o número de
 jovens entrevistados que trabalha é
+114 708.
+164 076.
+213 444.
+284 592.
+291 582.
 
 ## Questão 149
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 129
 - Tem imagem: não
 
 ### Texto extraído
@@ -3056,11 +3448,18 @@ Com base nos valores de X = log (r) e Y = log ( f ) , é
 possível estimar valores para A e B.
 No caso hipotético em que a lei é verificada exatamente,
 a relação entre Y e X é
+X B
+log
+X
+log
+Y =
+Y =
+Y =
 
 ## Questão 150
 
 - Idioma: geral
-- Palavras: 176
+- Palavras: 181
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3134,11 +3533,16 @@ Q(t)
 2 048
 128
 O fóssil mais antigo encontrado nessa expedição foi
+1.
+2.
+3.
+4.
+5.
 
 ## Questão 151
 
 - Idioma: geral
-- Palavras: 50
+- Palavras: 83
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3166,11 +3570,16 @@ ser representado por um tronco reto de pirâmide de base
 quadrada.
 As quantidades de cada tipo de figura plana que formam
 esse tronco de pirâmide são
+2 quadrados e 4 retângulos.
+1 retângulo e 4 triângulos isósceles.
+2 quadrados e 4 trapézios isósceles.
+1 quadrado, 3 retângulos e 2 trapézios retângulos.
+2 retângulos, 2 quadrados e 2 trapézios retângulos.
 
 ## Questão 152
 
 - Idioma: geral
-- Palavras: 184
+- Palavras: 198
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3243,11 +3652,16 @@ saiu de T1, denotada por X, e a altura da coluna de líquido
 que chegou a T2, denotada por y.
 A equação que relaciona as medidas das alturas y e x é
 dada por
+y = 1,265x
+y = 1,250x
+y = 1,150x
+y = 1,125x
+y = x
 
 ## Questão 153
 
 - Idioma: geral
-- Palavras: 88
+- Palavras: 117
 - Tem imagem: não
 
 ### Texto extraído
@@ -3301,11 +3715,16 @@ Sábado
 A fim de poupar tempo no deslocamento para a
 universidade, em quais dias o aluno deve seguir pela
 ciclovia?
+Às segundas, quintas e sextas-feiras.
+Às terças e quintas-feiras e aos sábados.
+Às segundas, quartas e sextas-feiras.
+Às terças, quartas e sextas-feiras.
+Às terças e quartas-feiras e aos sábados.
 
 ## Questão 154
 
 - Idioma: geral
-- Palavras: 94
+- Palavras: 109
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3347,11 +3766,16 @@ comprimento. Um micrômetro é a milionésima parte
 de um metro.
 Usando notação científica, qual é a representação do
 comprimento dessa miniatura, em metro?
+1,0 × 10 − 1
+1,0 × 10 − 3
+1,0 × 10 − 4
+1,0 × 10 − 6
+1,0 × 10 − 7
 
 ## Questão 155
 
 - Idioma: geral
-- Palavras: 133
+- Palavras: 139
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3410,11 +3834,17 @@ e criando-se um novo quadrado, cujo lado corresponde
 repete recursivamente.
 Qual é a medida do lado do centésimo quadrado
 construído de acordo com esse padrão?
+1
+100
+1
+1
+1
+1
 
 ## Questão 156
 
 - Idioma: geral
-- Palavras: 154
+- Palavras: 159
 - Tem imagem: não
 
 ### Texto extraído
@@ -3498,11 +3928,16 @@ estocada do perfume do tipo que gerou a maior
 arrecadação em espécie, em real, no mês de novembro.
 Nessas condições, qual o tipo de perfume que deverá ter
 maior reposição no estoque?
+I
+II
+III
+IV
+V
 
 ## Questão 157
 
 - Idioma: geral
-- Palavras: 120
+- Palavras: 122
 - Tem imagem: não
 
 ### Texto extraído
@@ -3544,11 +3979,13 @@ Qual é a probabilidade de que a primeira pessoa a revelar
 o seu amigo secreto e a última presenteada sejam as duas
 pessoas do casal?
 A
+1
+100
 
 ## Questão 158
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 112
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3598,11 +4035,16 @@ segundo o esquema da figura.
 O número de diferentes caminhos que André poderá
 utilizar para realizar o deslocamento nas condições
 propostas é
+4.
+14.
+17.
+35.
+48.
 
 ## Questão 159
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 147
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3694,11 +4136,16 @@ realizar sua compra, considerando os preços do cimento
 e do frete oferecidos em cada opção.
 Se a pessoa decidir pela opção mais econômica, o depósito
 escolhido para a realização dessa compra será o
+A.
+B.
+C.
+D.
+E.
 
 ## Questão 160
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 142
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3744,11 +4191,16 @@ A quantidade mínima de combustível, em litro, que
 esse motociclista deve reabastecer no posto Estrela na
 viagem de ida, que seja suficiente para fazer o segundo
 reabastecimento, é
+13.
+14.
+17.
+18.
+21.
 
 ## Questão 161
 
 - Idioma: geral
-- Palavras: 68
+- Palavras: 77
 - Tem imagem: não
 
 ### Texto extraído
@@ -3774,11 +4226,16 @@ possuem o mesmo volume, e a altura da caixa-d’água do
 tipo B é igual a 25% da altura da caixa-d’água do tipo A.
 Se R denota o raio da caixa-d’água do tipo A, então o raio
 da caixa-d’água do tipo B é
+R
+2 R
+4 R
+5 R
+16 R
 
 ## Questão 162
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 147
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3848,11 +4305,16 @@ Lote
 Lote
 Rua
 A prefeitura aprovará apenas a planta da casa
+1.
+2.
+3.
+4.
+5.
 
 ## Questão 163
 
 - Idioma: geral
-- Palavras: 76
+- Palavras: 85
 - Tem imagem: não
 
 ### Texto extraído
@@ -3891,11 +4353,16 @@ B 4! 5!
 C 2 × 4! 5!
 D 9!
 E 4! 5!
+9!
+4! 5!
+2 × 4! 5!
+9!
+4! 5!
 
 ## Questão 164
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 123
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3940,11 +4407,16 @@ Hora
 0  1  2  3  4  5  6  7  8  9 10 11 12  13  14  15  16 17  18 19 20  21  22  23 24
 Nesse dia, durante quantas horas o ruído esteve acima
 de 55 decibéis?
+5
+8
+10
+11
+13
 
 ## Questão 165
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 136
 - Tem imagem: não
 
 ### Texto extraído
@@ -3986,11 +4458,16 @@ do critério inicialmente estabelecido.
 Qual deverá ser a média mínima das estaturas, em metro,
 que ele deverá fi xar para o grupo de três novos jogadores
 que ainda irá contratar?
+1,96
+1,98
+2,05
+2,06
+2,08
 
 ## Questão 166
 
 - Idioma: geral
-- Palavras: 92
+- Palavras: 102
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4053,11 +4530,21 @@ tempo
 E
 altura
 tempo
+altura
+tempo
+altura
+tempo
+altura
+tempo
+altura
+tempo
+altura
+tempo
 
 ## Questão 167
 
 - Idioma: geral
-- Palavras: 75
+- Palavras: 80
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4099,11 +4586,16 @@ tiveram acréscimos, respectivamente, de 20% e 10%.
 Necessitando manter o valor da despesa mensal total
 com os itens citados, a família reduzirá a mesada do fi lho.
 Qual será a porcentagem da redução da mesada?
+15,0
+23,5
+30,0
+70,0
+76,5
 
 ## Questão 168
 
 - Idioma: geral
-- Palavras: 105
+- Palavras: 110
 - Tem imagem: não
 
 ### Texto extraído
@@ -4147,11 +4639,16 @@ colocar dentro do recipiente bolinhas de volume igual a
 O número mínimo de bolinhas necessárias para que se
 possa retirar o objeto que flutua na água, seguindo as
 instruções dadas, é de
+14.
+16.
+18.
+30.
+34.
 
 ## Questão 169
 
 - Idioma: geral
-- Palavras: 112
+- Palavras: 117
 - Tem imagem: não
 
 ### Texto extraído
@@ -4196,11 +4693,16 @@ dos antígenos está presente.
 Dessas pessoas que foram submetidas à coleta de
 sangue, o número das que possuem o tipo sanguíneo A
 é igual a
+30.
+60.
+70.
+90.
+100.
 
 ## Questão 170
 
 - Idioma: geral
-- Palavras: 67
+- Palavras: 70
 - Tem imagem: não
 
 ### Texto extraído
@@ -4232,11 +4734,14 @@ A fração do capital de cada sócio que Antônio deverá
 adquirir é
 A
 B
+1
+2
+4
 
 ## Questão 171
 
 - Idioma: geral
-- Palavras: 124
+- Palavras: 135
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4287,11 +4792,16 @@ painel. Uma loja oferece azulejos nos seguintes formatos:
 3 – Quadrado.
 Os azulejos necessários para o devido preenchimento
 das áreas em branco desse painel são os de formato
+1.
+3.
+1 e 2.
+1 e 3.
+2 e 3.
 
 ## Questão 172
 
 - Idioma: geral
-- Palavras: 159
+- Palavras: 164
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4349,11 +4859,16 @@ quais ele decide usar exatamente 100 m e deixar o
 restante como reserva.
 Para que ele atinja seu objetivo, o raio, em metro, da
 circunferência deverá ser de
+4,00.
+4,87.
+5,00.
+5,83.
+6,26.
 
 ## Questão 173
 
 - Idioma: geral
-- Palavras: 166
+- Palavras: 171
 - Tem imagem: não
 
 ### Texto extraído
@@ -4408,11 +4923,16 @@ arquiteto, as vigas do pergolado devem ser construídas
 de maneira que a altura, em centímetro, seja a mais
 próxima possível de
 A 9.
+9.
+15.
+26.
+52.
+60.
 
 ## Questão 174
 
 - Idioma: geral
-- Palavras: 260
+- Palavras: 270
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4502,11 +5022,16 @@ Parado
 Carro de som
 Obs.: a figura não está em escala (considere as medidas dadas).
 Segundo a metodologia descrita, o número estimado de pessoas presentes a essa manifestação foi igual a
+110 000.
+104 000.
+93 000.
+92 000.
+87 000.
 
 ## Questão 175
 
 - Idioma: geral
-- Palavras: 110
+- Palavras: 150
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4603,6 +5128,36 @@ R$
 −5
 Quantidade de
 itens produzidos
+R$
+−5
+−10
+−15
+−20
+Quantidade de
+itens produzidos
+R$
+−5
+−10
+−15
+−20
+−25
+−30
+−35
+−40
+Quantidade de
+itens produzidos
+R$
+−5
+Quantidade de
+itens produzidos
+R$
+−5
+Quantidade de
+itens produzidos
+R$
+−5
+Quantidade de
+itens produzidos
 
 ## Questão 176
 
@@ -4691,7 +5246,7 @@ C
 ## Questão 178
 
 - Idioma: geral
-- Palavras: 180
+- Palavras: 185
 - Tem imagem: não
 
 ### Texto extraído
@@ -4747,11 +5302,16 @@ de certa corrida, a probabilidade de chover era de 70%
 e o chefe da equipe calculou o CRC de cada um dos
 cinco tipos de pneu.
 O pneu escolhido foi
+I.
+II.
+III.
+IV.
+V.
 
 ## Questão 179
 
 - Idioma: geral
-- Palavras: 73
+- Palavras: 80
 - Tem imagem: não
 
 ### Texto extraído
@@ -4782,11 +5342,16 @@ metro quadrado, e a área de uma folha de A4 é 0,062
 metro quadrado.
 Nessas condições, quantos quilogramas de papel rende,
 em média, um pé de eucalipto?
+4 301
+1 500
+930
+267
+93
 
 ## Questão 180
 
 - Idioma: geral
-- Palavras: 111
+- Palavras: 116
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4858,3 +5423,8 @@ média ponderada das notas obtidas nos procedimentos
 analisados.
 Após a análise dos resultados da pesquisa de satisfação,
 os executivos da agência bancária contrataram a empresa
+X.
+Y.
+Z.
+W.
+T.

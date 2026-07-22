@@ -121,6 +121,12 @@ class Question:
         return text.strip()
 
 
+@dataclass
+class Alternative:
+    label: str
+    text: str
+
+
 def block_text(block: dict) -> str:
     lines = []
     for line in block.get("lines", []):
@@ -157,6 +163,91 @@ def strip_alternative_marker(line: str) -> str:
 
 def is_alternative_line(line: str) -> bool:
     return bool(re.fullmatch(r"[A-E]", line) or ALT_WITH_TEXT_RE.match(line))
+
+
+def alternative_marker(
+    line: str,
+    expected_label: str | None = None,
+    allow_single_space: bool = False,
+) -> tuple[str, str] | None:
+    if re.fullmatch(r"[A-E]", line):
+        label = line
+        text = ""
+    else:
+        match = ALT_WITH_TEXT_RE.match(line)
+        if match:
+            label = match.group(1)
+            text = match.group(2).strip()
+        elif allow_single_space:
+            if expected_label:
+                match = re.match(rf"^({expected_label})\s+\S", line)
+            else:
+                match = re.match(r"^([A-E])\s+\S", line)
+
+            if not match:
+                return None
+
+            label = match.group(1)
+            text = line[1:].strip()
+        else:
+            return None
+
+    if expected_label and label != expected_label:
+        return None
+    return label, text
+
+
+def next_label(label: str) -> str | None:
+    if label == "E":
+        return None
+    return chr(ord(label) + 1)
+
+
+def has_strict_marker(lines: list[str], label: str, start_index: int) -> bool:
+    return any(
+        alternative_marker(line, label, allow_single_space=False)
+        for line in lines[start_index:]
+    )
+
+
+def extract_alternatives(text: str) -> list[Alternative]:
+    alternatives: list[Alternative] = []
+    current_label: str | None = None
+    current_lines: list[str] = []
+    expected_label = "A"
+    lines = [item.strip() for item in text.splitlines() if item.strip()]
+
+    for index, line in enumerate(lines):
+        marker = None
+        if current_label is not None:
+            marker = alternative_marker(line, expected_label=None, allow_single_space=True)
+        elif expected_label is not None:
+            allow_single_space = current_label is not None or not has_strict_marker(
+                lines, expected_label, index + 1
+            )
+            marker = alternative_marker(line, expected_label, allow_single_space)
+        if marker:
+            if current_label is not None:
+                alternatives.append(
+                    Alternative(current_label, "\n".join(current_lines).strip())
+                )
+
+            current_label, first_line = marker
+            current_lines = [first_line] if first_line else []
+            expected_label = next_label(current_label)
+            continue
+
+        if current_label is not None:
+            current_lines.append(strip_alternative_marker(line))
+
+    if current_label is not None:
+        alternatives.append(Alternative(current_label, "\n".join(current_lines).strip()))
+
+    alternatives_by_label = {alternative.label: alternative for alternative in alternatives}
+    if set(alternatives_by_label) != set("ABCDE"):
+        return []
+
+    return [alternatives_by_label[label] for label in "ABCDE"]
 
 
 def line_starts_bibliographic_reference(line: str) -> bool:
@@ -453,15 +544,24 @@ def redistribute_shared_texts(questions: list[Question]) -> None:
 
 
 def question_stats(question: Question) -> dict:
-    counted_text = countable_text(question.text)
+    statement_counted_text = countable_text(question.text)
+    alternatives = extract_alternatives(question.text)
+    alternatives_counted_text = "\n".join(
+        alternative.text for alternative in alternatives if alternative.text
+    )
+    counted_text = "\n".join(
+        part for part in [statement_counted_text, alternatives_counted_text] if part
+    )
     words = WORD_RE.findall(counted_text)
-    visual_cues = sorted({match.group(0).lower() for match in VISUAL_CUE_RE.finditer(counted_text)})
+    visual_cues = sorted(
+        {match.group(0).lower() for match in VISUAL_CUE_RE.finditer(statement_counted_text)}
+    )
     has_visual = bool(
         question.image_blocks
-        or LAYOUT_VISUAL_RE.search(counted_text)
-        or ORDER_VISUAL_RE.search(counted_text)
-        or HYDROLOGY_VISUAL_RE.search(counted_text)
-        or STRUCTURED_VISUAL_RE.search(counted_text)
+        or LAYOUT_VISUAL_RE.search(statement_counted_text)
+        or ORDER_VISUAL_RE.search(statement_counted_text)
+        or HYDROLOGY_VISUAL_RE.search(statement_counted_text)
+        or STRUCTURED_VISUAL_RE.search(statement_counted_text)
     )
     return {
         "question": question.number,
@@ -474,6 +574,11 @@ def question_stats(question: Question) -> dict:
         "visual_cues": visual_cues,
         "text": question.text,
         "counted_text": counted_text,
+        "alternatives": [
+            {"letra": alternative.label, "texto": alternative.text}
+            for alternative in alternatives
+        ],
+        "alternatives_counted_text": alternatives_counted_text,
     }
 
 
@@ -484,6 +589,7 @@ def question_summary(question: Question) -> dict:
         "idioma": stats["language"],
         "texto": stats["text"],
         "texto_contado": stats["counted_text"],
+        "alternativas": stats["alternatives"],
         "tem_imagem": stats["has_image"],
         "quantidade_palavras": stats["word_count"],
     }
