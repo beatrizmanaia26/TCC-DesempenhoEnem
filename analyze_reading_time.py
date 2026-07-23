@@ -61,10 +61,20 @@ def fmt_tempo(minutos):
         partes.append(f"{s}s")
     return " ".join(partes)
 
-
+#  Conta caracteres considerando: "texto" (campo principal da questão), "letra" de cada item em "alternativas" "texto" de cada item em "alternativas", exclui espaços, tabs e quebras de linha da contagem.
 def analisar_questao(dados_questao):
-    texto = dados_questao.get("texto_contado", "")
-    chars = contar_caracteres(texto)
+    texto = dados_questao.get("texto", "")
+    
+    alternativas = dados_questao.get("alternativas", [])
+
+    partes_alternativas = ""
+    for alt in alternativas:
+        partes_alternativas += alt.get("letra", "")
+        partes_alternativas += alt.get("texto", "")
+    
+    texto_final = texto + partes_alternativas
+    
+    chars = contar_caracteres(texto_final)
     leitura_min = tempo_leitura_minutos(chars)
 
     return {
