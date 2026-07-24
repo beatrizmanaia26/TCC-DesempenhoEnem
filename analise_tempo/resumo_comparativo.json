@@ -11,98 +11,206 @@
     {
       "nome": "enem2020Dia1RegularAzul",
       "dia": 1,
-      "total_caracteres": 52638,
-      "leitura_total_min": 47.85,
-      "resolucao_total_min": 207.15,
-      "pct_leitura": 18.77
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 112503,
+        "leitura_total_min": 102.28,
+        "resolucao_total_min": 152.72,
+        "pct_leitura": 40.11
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1895,
+        "total_caracteres": 114398,
+        "leitura_total_min": 104.0,
+        "resolucao_total_min": 151.0,
+        "pct_leitura": 40.78
+      }
     },
     {
       "nome": "enem2020Dia2RegularAzul",
       "dia": 2,
-      "total_caracteres": 47657,
-      "leitura_total_min": 43.32,
-      "resolucao_total_min": 256.68,
-      "pct_leitura": 14.44
-    },
-    {
-      "nome": "enem2022Dia1RegularAzul",
-      "dia": 1,
-      "total_caracteres": 64433,
-      "leitura_total_min": 58.58,
-      "resolucao_total_min": 196.42,
-      "pct_leitura": 22.97
-    },
-    {
-      "nome": "enem2022Dia2RegularAzul",
-      "dia": 2,
-      "total_caracteres": 50837,
-      "leitura_total_min": 46.22,
-      "resolucao_total_min": 253.78,
-      "pct_leitura": 15.41
-    },
-    {
-      "nome": "enem2023Dia1RegularAzul",
-      "dia": 1,
-      "total_caracteres": 63616,
-      "leitura_total_min": 57.83,
-      "resolucao_total_min": 197.17,
-      "pct_leitura": 22.68
-    },
-    {
-      "nome": "enem2023Dia2RegularAzul",
-      "dia": 2,
-      "total_caracteres": 49991,
-      "leitura_total_min": 45.45,
-      "resolucao_total_min": 254.55,
-      "pct_leitura": 15.15
-    },
-    {
-      "nome": "enem2024Dia1RegularAzul",
-      "dia": 1,
-      "total_caracteres": 64798,
-      "leitura_total_min": 58.91,
-      "resolucao_total_min": 196.09,
-      "pct_leitura": 23.1
-    },
-    {
-      "nome": "enem2024Dia2RegularAzul",
-      "dia": 2,
-      "total_caracteres": 43945,
-      "leitura_total_min": 39.95,
-      "resolucao_total_min": 260.05,
-      "pct_leitura": 13.32
-    },
-    {
-      "nome": "enem2025Dia1RegularAzul",
-      "dia": 1,
-      "total_caracteres": 65370,
-      "leitura_total_min": 59.43,
-      "resolucao_total_min": 195.57,
-      "pct_leitura": 23.3
-    },
-    {
-      "nome": "enem2025Dia2RegularAzul",
-      "dia": 2,
-      "total_caracteres": 45216,
-      "leitura_total_min": 41.11,
-      "resolucao_total_min": 258.89,
-      "pct_leitura": 13.7
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 67095,
+        "leitura_total_min": 61.0,
+        "resolucao_total_min": 239.0,
+        "pct_leitura": 20.33
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1542,
+        "total_caracteres": 68637,
+        "leitura_total_min": 62.4,
+        "resolucao_total_min": 237.6,
+        "pct_leitura": 20.8
+      }
     },
     {
       "nome": "enem2021Dia1RegularAzul",
       "dia": 1,
-      "total_caracteres": 59317,
-      "leitura_total_min": 53.92,
-      "resolucao_total_min": 201.08,
-      "pct_leitura": 21.15
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 27174,
+        "leitura_total_min": 24.7,
+        "resolucao_total_min": 230.3,
+        "pct_leitura": 9.69
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1868,
+        "total_caracteres": 29042,
+        "leitura_total_min": 26.4,
+        "resolucao_total_min": 228.6,
+        "pct_leitura": 10.35
+      }
     },
     {
       "nome": "enem2021Dia2RegularAzul",
       "dia": 2,
-      "total_caracteres": 48291,
-      "leitura_total_min": 43.9,
-      "resolucao_total_min": 256.1,
-      "pct_leitura": 14.63
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 44527,
+        "leitura_total_min": 40.48,
+        "resolucao_total_min": 259.52,
+        "pct_leitura": 13.49
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1552,
+        "total_caracteres": 46079,
+        "leitura_total_min": 41.89,
+        "resolucao_total_min": 258.11,
+        "pct_leitura": 13.96
+      }
+    },
+    {
+      "nome": "enem2022Dia1RegularAzul",
+      "dia": 1,
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 120832,
+        "leitura_total_min": 109.85,
+        "resolucao_total_min": 145.15,
+        "pct_leitura": 43.08
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1934,
+        "total_caracteres": 122766,
+        "leitura_total_min": 111.61,
+        "resolucao_total_min": 143.39,
+        "pct_leitura": 43.77
+      }
+    },
+    {
+      "nome": "enem2022Dia2RegularAzul",
+      "dia": 2,
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 68474,
+        "leitura_total_min": 62.25,
+        "resolucao_total_min": 237.75,
+        "pct_leitura": 20.75
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1490,
+        "total_caracteres": 69964,
+        "leitura_total_min": 63.6,
+        "resolucao_total_min": 236.4,
+        "pct_leitura": 21.2
+      }
+    },
+    {
+      "nome": "enem2023Dia1RegularAzul",
+      "dia": 1,
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 125006,
+        "leitura_total_min": 113.64,
+        "resolucao_total_min": 141.36,
+        "pct_leitura": 44.57
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1866,
+        "total_caracteres": 126872,
+        "leitura_total_min": 115.34,
+        "resolucao_total_min": 139.66,
+        "pct_leitura": 45.23
+      }
+    },
+    {
+      "nome": "enem2023Dia2RegularAzul",
+      "dia": 2,
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 67256,
+        "leitura_total_min": 61.14,
+        "resolucao_total_min": 238.86,
+        "pct_leitura": 20.38
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1545,
+        "total_caracteres": 68801,
+        "leitura_total_min": 62.55,
+        "resolucao_total_min": 237.45,
+        "pct_leitura": 20.85
+      }
+    },
+    {
+      "nome": "enem2024Dia1RegularAzul",
+      "dia": 1,
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 119634,
+        "leitura_total_min": 108.76,
+        "resolucao_total_min": 146.24,
+        "pct_leitura": 42.65
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1867,
+        "total_caracteres": 121501,
+        "leitura_total_min": 110.46,
+        "resolucao_total_min": 144.54,
+        "pct_leitura": 43.32
+      }
+    },
+    {
+      "nome": "enem2024Dia2RegularAzul",
+      "dia": 2,
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 63627,
+        "leitura_total_min": 57.84,
+        "resolucao_total_min": 242.16,
+        "pct_leitura": 19.28
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 1508,
+        "total_caracteres": 65135,
+        "leitura_total_min": 59.21,
+        "resolucao_total_min": 240.79,
+        "pct_leitura": 19.74
+      }
+    },
+    {
+      "nome": "enem2025Dia1RegularAzul",
+      "dia": 1,
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 116140,
+        "leitura_total_min": 105.58,
+        "resolucao_total_min": 149.42,
+        "pct_leitura": 41.4
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 5583,
+        "total_caracteres": 121723,
+        "leitura_total_min": 110.66,
+        "resolucao_total_min": 144.34,
+        "pct_leitura": 43.4
+      }
+    },
+    {
+      "nome": "enem2025Dia2RegularAzul",
+      "dia": 2,
+      "opcao1_apenas_questoes": {
+        "total_caracteres": 60984,
+        "leitura_total_min": 55.44,
+        "resolucao_total_min": 244.56,
+        "pct_leitura": 18.48
+      },
+      "opcao2_caderno_completo": {
+        "caracteres_textos_introdutorios": 2079,
+        "total_caracteres": 63063,
+        "leitura_total_min": 57.33,
+        "resolucao_total_min": 242.67,
+        "pct_leitura": 19.11
+      }
     }
   ]
 }

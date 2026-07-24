@@ -88,6 +88,39 @@ def analisar_questao(dados_questao):
     }
 
 
+# Conta caracteres dos textos introdutórios (capa, orientações, divisões de seção, etc.)
+def analisar_textos_introdutorios(textos_introdutorios):
+    """Analisa os textos introdutórios do caderno (capa, instruções, divisões de seção).
+    Retorna dict com total de caracteres, palavras e tempo de leitura."""
+    total_chars = 0
+    total_palavras = 0
+    detalhes = []
+
+    for ti in textos_introdutorios:
+        texto = ti.get("texto", "")
+        chars = contar_caracteres(texto)
+        palavras = ti.get("quantidade_palavras", 0)
+        total_chars += chars
+        total_palavras += palavras
+        detalhes.append({
+            "id": ti.get("id"),
+            "texto_resumo": texto[:80] + "..." if len(texto) > 80 else texto,
+            "caracteres": chars,
+            "palavras": palavras,
+        })
+
+    leitura_min = tempo_leitura_minutos(total_chars)
+
+    return {
+        "total_caracteres": total_chars,
+        "total_palavras": total_palavras,
+        "tempo_leitura_min": leitura_min,
+        "tempo_leitura_seg": leitura_min * 60,
+        "quantidade_textos": len(textos_introdutorios),
+        "detalhes": detalhes,
+    }
+
+
 def analisar_prova(caminho):
     nome = caminho.stem
     dia = detectar_dia(nome)
@@ -96,10 +129,19 @@ def analisar_prova(caminho):
     with open(caminho, encoding="utf-8") as f:
         dados = json.load(f)
 
-    total_questoes = len(dados)
+    # Se o JSON for um dicionário com chave "questoes", extrair a lista
+    if isinstance(dados, dict):
+        lista_questoes = dados.get("questoes", [])
+        lista_textos_intro = dados.get("textos_introdutorios", [])
+    else:
+        lista_questoes = dados
+        lista_textos_intro = []
 
-    questoes = [analisar_questao(q) for q in dados]
+    total_questoes = len(lista_questoes)
 
+    questoes = [analisar_questao(q) for q in lista_questoes]
+
+    #OPÇÃO 1: Apenas questões (enunciado + alternativas)
     total_chars = sum(q["caracteres"] for q in questoes)
     leitura_total_min = sum(q["tempo_leitura_min"] for q in questoes)
     resolucao_total_min = disponivel_min - leitura_total_min
@@ -110,11 +152,23 @@ def analisar_prova(caminho):
     pct_leitura = (leitura_total_min / disponivel_min) * 100 if disponivel_min else 0
     pct_resolucao = 100.0 - pct_leitura
 
+    #OPÇÃO 2: Questões + textos introdutórios (caderno completo)
+    intro = analisar_textos_introdutorios(lista_textos_intro)
+
+    total_chars_completo = total_chars + intro["total_caracteres"]
+    leitura_total_completo_min = leitura_total_min + intro["tempo_leitura_min"]
+    resolucao_total_completo_min = disponivel_min - leitura_total_completo_min
+    pct_leitura_completo = (leitura_total_completo_min / disponivel_min) * 100 if disponivel_min else 0
+    pct_resolucao_completo = 100.0 - pct_leitura_completo
+    leitura_media_completo = leitura_total_completo_min / total_questoes if total_questoes else 0
+    resolucao_media_completo = resolucao_total_completo_min / total_questoes if total_questoes else 0
+
     return {
         "nome": nome,
         "dia": dia,
         "questoes": questoes,
         "total_questoes": total_questoes,
+        # Opção 1 - Apenas questões
         "total_caracteres": total_chars,
         "disponivel_min": disponivel_min,
         "leitura_total_min": leitura_total_min,
@@ -124,6 +178,15 @@ def analisar_prova(caminho):
         "tempo_medio_total_min": tempo_medio_total,
         "pct_leitura": pct_leitura,
         "pct_resolucao": pct_resolucao,
+        # Opção 2 - Caderno completo (questões + textos introdutórios)
+        "textos_introdutorios": intro,
+        "total_caracteres_completo": total_chars_completo,
+        "leitura_total_completo_min": leitura_total_completo_min,
+        "resolucao_total_completo_min": resolucao_total_completo_min,
+        "leitura_media_completo_min": leitura_media_completo,
+        "resolucao_media_completo_min": resolucao_media_completo,
+        "pct_leitura_completo": pct_leitura_completo,
+        "pct_resolucao_completo": pct_resolucao_completo,
     }
 
 
@@ -139,16 +202,37 @@ def imprimir_resumo(prova):
         print(f"    • Tempo estimado para redação: {fmt_tempo(TEMPO_REDACAO)}")
     print(f"    • Tempo disponível para questões: {fmt_tempo(prova['disponivel_min'])}")
     print()
-    print("  RESULTADOS:")
+
+    #OPÇÃO 1: Apenas questões 
+    print("  ┌─────────────────────────────────────────────────────────────┐")
+    print("  │ OPÇÃO 1 — APENAS QUESTÕES (enunciado + alternativas)        │")
+    print("  └─────────────────────────────────────────────────────────────┘")
     print(f"    • Questões analisadas: {prova['total_questoes']}")
-    print(f"    • Total de caracteres: {prova['total_caracteres']:,}")
+    print(f"    • Total de caracteres (questões): {prova['total_caracteres']:,}")
     print()
     print(f"    • Tempo de leitura total: {fmt_tempo(prova['leitura_total_min'])} ({prova['pct_leitura']:.1f}%)")
     print(f"    • Tempo de resolução total: {fmt_tempo(prova['resolucao_total_min'])} ({prova['pct_resolucao']:.1f}%)")
     print()
     print(f"    • Leitura média/questão: {prova['leitura_media_min']:.2f} min ({prova['leitura_media_min'] * 60:.1f}s)")
     print(f"    • Resolução média/questão: {prova['resolucao_media_min']:.2f} min ({prova['resolucao_media_min'] * 60:.1f}s)")
-    print(f"    • tempo total médio/questão: {prova['tempo_medio_total_min']:.2f} min ({prova['tempo_medio_total_min'] * 60:.1f}s)")
+    print(f"    • Tempo total médio/questão: {prova['tempo_medio_total_min']:.2f} min ({prova['tempo_medio_total_min'] * 60:.1f}s)")
+    print()
+
+    #OPÇÃO 2: Caderno completo
+    intro = prova["textos_introdutorios"]
+    print("  ┌─────────────────────────────────────────────────────────────┐")
+    print("  │ OPÇÃO 2 — CADERNO COMPLETO (questões + textos introdutórios)│")
+    print("  └─────────────────────────────────────────────────────────────┘")
+    print(f"    • Textos introdutórios encontrados: {intro['quantidade_textos']}")
+    print(f"    • Caracteres dos textos introdutórios: {intro['total_caracteres']:,}")
+    print(f"    • Tempo leitura textos introdutórios: {fmt_tempo(intro['tempo_leitura_min'])}")
+    print()
+    print(f"    • Total de caracteres (caderno completo): {prova['total_caracteres_completo']:,}")
+    print(f"    • Tempo de leitura total: {fmt_tempo(prova['leitura_total_completo_min'])} ({prova['pct_leitura_completo']:.1f}%)")
+    print(f"    • Tempo de resolução total: {fmt_tempo(prova['resolucao_total_completo_min'])} ({prova['pct_resolucao_completo']:.1f}%)")
+    print()
+    print(f"    • Leitura média/questão: {prova['leitura_media_completo_min']:.2f} min ({prova['leitura_media_completo_min'] * 60:.1f}s)")
+    print(f"    • Resolução média/questão: {prova['resolucao_media_completo_min']:.2f} min ({prova['resolucao_media_completo_min'] * 60:.1f}s)")
     print()
 
     # Tabela por questão
@@ -183,6 +267,7 @@ def imprimir_comparativo(provas):
 
 def salvar_json(prova, destino):
     """Salva resultado em JSON."""
+    intro = prova["textos_introdutorios"]
     saida = {
         "prova": prova["nome"],
         "dia": prova["dia"],
@@ -192,7 +277,7 @@ def salvar_json(prova, destino):
             "tempo_redacao_min": TEMPO_REDACAO if prova["dia"] == 1 else 0,
             "tempo_disponivel_min": prova["disponivel_min"],
         },
-        "resumo": {
+        "opcao1_apenas_questoes": {
             "total_questoes": prova["total_questoes"],
             "total_caracteres": prova["total_caracteres"],
             "leitura_total_min": round(prova["leitura_total_min"], 2),
@@ -203,6 +288,20 @@ def salvar_json(prova, destino):
             "pct_leitura": round(prova["pct_leitura"], 2),
             "pct_resolucao": round(prova["pct_resolucao"], 2),
         },
+        "opcao2_caderno_completo": {
+            "total_questoes": prova["total_questoes"],
+            "caracteres_textos_introdutorios": intro["total_caracteres"],
+            "caracteres_questoes": prova["total_caracteres"],
+            "total_caracteres": prova["total_caracteres_completo"],
+            "tempo_leitura_textos_introdutorios_min": round(intro["tempo_leitura_min"], 4),
+            "leitura_total_min": round(prova["leitura_total_completo_min"], 2),
+            "resolucao_total_min": round(prova["resolucao_total_completo_min"], 2),
+            "leitura_media_min": round(prova["leitura_media_completo_min"], 4),
+            "resolucao_media_min": round(prova["resolucao_media_completo_min"], 4),
+            "pct_leitura": round(prova["pct_leitura_completo"], 2),
+            "pct_resolucao": round(prova["pct_resolucao_completo"], 2),
+        },
+        "textos_introdutorios": intro["detalhes"],
         "questoes": prova["questoes"],
     }
     destino.write_text(json.dumps(saida, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -210,6 +309,7 @@ def salvar_json(prova, destino):
 
 def salvar_md(prova, destino):
     """Salva resultado em Markdown."""
+    intro = prova["textos_introdutorios"]
     linhas = [
         f"# Análise de Tempo de Leitura — {prova['nome']}",
         "",
@@ -226,7 +326,7 @@ def salvar_md(prova, destino):
     linhas.extend([
         f"| Tempo disponível (questões) | {fmt_tempo(prova['disponivel_min'])} |",
         "",
-        "## Resumo",
+        "## Opção 1 — Apenas Questões (enunciado + alternativas)",
         "",
         "| Métrica | Valor |",
         "|---------|-------|",
@@ -237,6 +337,30 @@ def salvar_md(prova, destino):
         f"| Leitura média/questão | {prova['leitura_media_min'] * 60:.1f}s |",
         f"| Resolução média/questão | {prova['resolucao_media_min'] * 60:.1f}s |",
         f"| Total médio/questão | {prova['tempo_medio_total_min'] * 60:.1f}s |",
+        "",
+        "## Opção 2 — Caderno Completo (questões + textos introdutórios)",
+        "",
+        "| Métrica | Valor |",
+        "|---------|-------|",
+        f"| Textos introdutórios | {intro['quantidade_textos']} |",
+        f"| Caracteres textos introdutórios | {intro['total_caracteres']:,} |",
+        f"| Tempo leitura textos introdutórios | {fmt_tempo(intro['tempo_leitura_min'])} |",
+        f"| Total de caracteres (completo) | {prova['total_caracteres_completo']:,} |",
+        f"| Leitura total | {fmt_tempo(prova['leitura_total_completo_min'])} ({prova['pct_leitura_completo']:.1f}%) |",
+        f"| Resolução total | {fmt_tempo(prova['resolucao_total_completo_min'])} ({prova['pct_resolucao_completo']:.1f}%) |",
+        f"| Leitura média/questão | {prova['leitura_media_completo_min'] * 60:.1f}s |",
+        f"| Resolução média/questão | {prova['resolucao_media_completo_min'] * 60:.1f}s |",
+        "",
+        "## Textos Introdutórios",
+        "",
+        "| ID | Texto (resumo) | Caracteres | Palavras |",
+        "|----|----------------|-----------|----------|",
+    ])
+    for d in intro["detalhes"]:
+        linhas.append(
+            f"| {d['id']} | {d['texto_resumo'][:50]} | {d['caracteres']} | {d['palavras']} |"
+        )
+    linhas.extend([
         "",
         "## Caracteres por Questão",
         "",
@@ -268,10 +392,19 @@ def salvar_comparativo(provas, destino):
             {
                 "nome": p["nome"],
                 "dia": p["dia"],
-                "total_caracteres": p["total_caracteres"],
-                "leitura_total_min": round(p["leitura_total_min"], 2),
-                "resolucao_total_min": round(p["resolucao_total_min"], 2),
-                "pct_leitura": round(p["pct_leitura"], 2),
+                "opcao1_apenas_questoes": {
+                    "total_caracteres": p["total_caracteres"],
+                    "leitura_total_min": round(p["leitura_total_min"], 2),
+                    "resolucao_total_min": round(p["resolucao_total_min"], 2),
+                    "pct_leitura": round(p["pct_leitura"], 2),
+                },
+                "opcao2_caderno_completo": {
+                    "caracteres_textos_introdutorios": p["textos_introdutorios"]["total_caracteres"],
+                    "total_caracteres": p["total_caracteres_completo"],
+                    "leitura_total_min": round(p["leitura_total_completo_min"], 2),
+                    "resolucao_total_min": round(p["resolucao_total_completo_min"], 2),
+                    "pct_leitura": round(p["pct_leitura_completo"], 2),
+                },
             }
             for p in provas
         ],

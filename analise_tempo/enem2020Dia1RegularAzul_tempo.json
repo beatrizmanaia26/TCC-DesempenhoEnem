@@ -7,23 +7,92 @@
     "tempo_redacao_min": 75,
     "tempo_disponivel_min": 255
   },
-  "resumo": {
+  "opcao1_apenas_questoes": {
     "total_questoes": 95,
-    "total_caracteres": 108006,
-    "leitura_total_min": 98.19,
-    "resolucao_total_min": 156.81,
-    "leitura_media_min": 1.0336,
-    "resolucao_media_min": 1.6507,
+    "total_caracteres": 112503,
+    "leitura_total_min": 102.28,
+    "resolucao_total_min": 152.72,
+    "leitura_media_min": 1.0766,
+    "resolucao_media_min": 1.6076,
     "tempo_medio_total_min": 2.6842,
-    "pct_leitura": 38.5,
-    "pct_resolucao": 61.5
+    "pct_leitura": 40.11,
+    "pct_resolucao": 59.89
   },
+  "opcao2_caderno_completo": {
+    "total_questoes": 95,
+    "caracteres_textos_introdutorios": 1895,
+    "caracteres_questoes": 112503,
+    "total_caracteres": 114398,
+    "tempo_leitura_textos_introdutorios_min": 1.7227,
+    "leitura_total_min": 104.0,
+    "resolucao_total_min": 151.0,
+    "leitura_media_min": 1.0947,
+    "resolucao_media_min": 1.5895,
+    "pct_leitura": 40.78,
+    "pct_resolucao": 59.22
+  },
+  "textos_introdutorios": [
+    {
+      "id": 1,
+      "texto_resumo": "EXAME NACIONAL DO ENSINO MÉDIO\nPROVA DE LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS E...",
+      "caracteres": 1693,
+      "palavras": 333
+    },
+    {
+      "id": 2,
+      "texto_resumo": "LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS",
+      "caracteres": 34,
+      "palavras": 5
+    },
+    {
+      "id": 3,
+      "texto_resumo": "Questões de 01 a 45",
+      "caracteres": 15,
+      "palavras": 5
+    },
+    {
+      "id": 4,
+      "texto_resumo": "Questões de 01 a 05 (opção inglês)",
+      "caracteres": 28,
+      "palavras": 7
+    },
+    {
+      "id": 5,
+      "texto_resumo": "Questões de 01 a 05 (opção espanhol)",
+      "caracteres": 30,
+      "palavras": 7
+    },
+    {
+      "id": 6,
+      "texto_resumo": "LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS",
+      "caracteres": 34,
+      "palavras": 5
+    },
+    {
+      "id": 7,
+      "texto_resumo": "Questões de 06 a 45",
+      "caracteres": 15,
+      "palavras": 5
+    },
+    {
+      "id": 8,
+      "texto_resumo": "CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS",
+      "caracteres": 31,
+      "palavras": 5
+    },
+    {
+      "id": 9,
+      "texto_resumo": "Questões de 46 a 90",
+      "caracteres": 15,
+      "palavras": 5
+    }
+  ],
   "questoes": [
     {
       "questao": 1,
       "idioma": "inglês",
       "caracteres": 576,
-      "palavras": 57,
+      "palavras": 75,
       "tem_imagem": true,
       "tempo_leitura_min": 0.5236363636363637,
       "tempo_leitura_seg": 31.41818181818182
@@ -32,7 +101,7 @@
       "questao": 2,
       "idioma": "inglês",
       "caracteres": 572,
-      "palavras": 54,
+      "palavras": 71,
       "tem_imagem": true,
       "tempo_leitura_min": 0.52,
       "tempo_leitura_seg": 31.200000000000003
@@ -41,7 +110,7 @@
       "questao": 3,
       "idioma": "inglês",
       "caracteres": 1399,
-      "palavras": 222,
+      "palavras": 238,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2718181818181817,
       "tempo_leitura_seg": 76.3090909090909
@@ -50,7 +119,7 @@
       "questao": 4,
       "idioma": "inglês",
       "caracteres": 798,
-      "palavras": 122,
+      "palavras": 140,
       "tem_imagem": false,
       "tempo_leitura_min": 0.7254545454545455,
       "tempo_leitura_seg": 43.52727272727273
@@ -59,7 +128,7 @@
       "questao": 5,
       "idioma": "inglês",
       "caracteres": 1506,
-      "palavras": 258,
+      "palavras": 275,
       "tem_imagem": false,
       "tempo_leitura_min": 1.3690909090909091,
       "tempo_leitura_seg": 82.14545454545456
@@ -68,7 +137,7 @@
       "questao": 1,
       "idioma": "espanhol",
       "caracteres": 1382,
-      "palavras": 179,
+      "palavras": 199,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2563636363636363,
       "tempo_leitura_seg": 75.38181818181818
@@ -77,7 +146,7 @@
       "questao": 2,
       "idioma": "espanhol",
       "caracteres": 2103,
-      "palavras": 302,
+      "palavras": 321,
       "tem_imagem": false,
       "tempo_leitura_min": 1.9118181818181819,
       "tempo_leitura_seg": 114.70909090909092
@@ -86,7 +155,7 @@
       "questao": 3,
       "idioma": "espanhol",
       "caracteres": 1992,
-      "palavras": 299,
+      "palavras": 319,
       "tem_imagem": false,
       "tempo_leitura_min": 1.8109090909090908,
       "tempo_leitura_seg": 108.65454545454544
@@ -95,7 +164,7 @@
       "questao": 4,
       "idioma": "espanhol",
       "caracteres": 1037,
-      "palavras": 148,
+      "palavras": 168,
       "tem_imagem": false,
       "tempo_leitura_min": 0.9427272727272727,
       "tempo_leitura_seg": 56.56363636363636
@@ -104,7 +173,7 @@
       "questao": 5,
       "idioma": "espanhol",
       "caracteres": 1345,
-      "palavras": 214,
+      "palavras": 232,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2227272727272727,
       "tempo_leitura_seg": 73.36363636363636
@@ -113,7 +182,7 @@
       "questao": 6,
       "idioma": "geral",
       "caracteres": 2166,
-      "palavras": 336,
+      "palavras": 356,
       "tem_imagem": false,
       "tempo_leitura_min": 1.969090909090909,
       "tempo_leitura_seg": 118.14545454545454
@@ -122,7 +191,7 @@
       "questao": 7,
       "idioma": "geral",
       "caracteres": 487,
-      "palavras": 44,
+      "palavras": 63,
       "tem_imagem": true,
       "tempo_leitura_min": 0.44272727272727275,
       "tempo_leitura_seg": 26.563636363636366
@@ -131,7 +200,7 @@
       "questao": 8,
       "idioma": "geral",
       "caracteres": 1441,
-      "palavras": 216,
+      "palavras": 234,
       "tem_imagem": false,
       "tempo_leitura_min": 1.31,
       "tempo_leitura_seg": 78.60000000000001
@@ -140,7 +209,7 @@
       "questao": 9,
       "idioma": "geral",
       "caracteres": 1392,
-      "palavras": 193,
+      "palavras": 212,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2654545454545454,
       "tempo_leitura_seg": 75.92727272727272
@@ -149,7 +218,7 @@
       "questao": 10,
       "idioma": "geral",
       "caracteres": 1362,
-      "palavras": 185,
+      "palavras": 206,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2381818181818183,
       "tempo_leitura_seg": 74.2909090909091
@@ -158,7 +227,7 @@
       "questao": 11,
       "idioma": "geral",
       "caracteres": 1354,
-      "palavras": 166,
+      "palavras": 182,
       "tem_imagem": false,
       "tempo_leitura_min": 1.230909090909091,
       "tempo_leitura_seg": 73.85454545454546
@@ -167,7 +236,7 @@
       "questao": 12,
       "idioma": "geral",
       "caracteres": 1785,
-      "palavras": 266,
+      "palavras": 319,
       "tem_imagem": false,
       "tempo_leitura_min": 1.6227272727272728,
       "tempo_leitura_seg": 97.36363636363637
@@ -176,7 +245,7 @@
       "questao": 13,
       "idioma": "geral",
       "caracteres": 1329,
-      "palavras": 177,
+      "palavras": 200,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2081818181818182,
       "tempo_leitura_seg": 72.4909090909091
@@ -185,7 +254,7 @@
       "questao": 14,
       "idioma": "geral",
       "caracteres": 1502,
-      "palavras": 142,
+      "palavras": 205,
       "tem_imagem": true,
       "tempo_leitura_min": 1.3654545454545455,
       "tempo_leitura_seg": 81.92727272727272
@@ -194,7 +263,7 @@
       "questao": 15,
       "idioma": "geral",
       "caracteres": 1612,
-      "palavras": 201,
+      "palavras": 219,
       "tem_imagem": true,
       "tempo_leitura_min": 1.4654545454545456,
       "tempo_leitura_seg": 87.92727272727274
@@ -203,7 +272,7 @@
       "questao": 16,
       "idioma": "geral",
       "caracteres": 1796,
-      "palavras": 275,
+      "palavras": 296,
       "tem_imagem": false,
       "tempo_leitura_min": 1.6327272727272728,
       "tempo_leitura_seg": 97.96363636363637
@@ -212,7 +281,7 @@
       "questao": 17,
       "idioma": "geral",
       "caracteres": 1578,
-      "palavras": 212,
+      "palavras": 239,
       "tem_imagem": false,
       "tempo_leitura_min": 1.4345454545454546,
       "tempo_leitura_seg": 86.07272727272728
@@ -221,7 +290,7 @@
       "questao": 18,
       "idioma": "geral",
       "caracteres": 1127,
-      "palavras": 146,
+      "palavras": 168,
       "tem_imagem": false,
       "tempo_leitura_min": 1.0245454545454546,
       "tempo_leitura_seg": 61.472727272727276
@@ -230,7 +299,7 @@
       "questao": 19,
       "idioma": "geral",
       "caracteres": 1232,
-      "palavras": 162,
+      "palavras": 181,
       "tem_imagem": false,
       "tempo_leitura_min": 1.12,
       "tempo_leitura_seg": 67.2
@@ -239,7 +308,7 @@
       "questao": 20,
       "idioma": "geral",
       "caracteres": 1214,
-      "palavras": 182,
+      "palavras": 203,
       "tem_imagem": false,
       "tempo_leitura_min": 1.1036363636363635,
       "tempo_leitura_seg": 66.21818181818182
@@ -248,7 +317,7 @@
       "questao": 21,
       "idioma": "geral",
       "caracteres": 2456,
-      "palavras": 278,
+      "palavras": 304,
       "tem_imagem": false,
       "tempo_leitura_min": 2.232727272727273,
       "tempo_leitura_seg": 133.96363636363637
@@ -257,7 +326,7 @@
       "questao": 22,
       "idioma": "geral",
       "caracteres": 832,
-      "palavras": 66,
+      "palavras": 84,
       "tem_imagem": true,
       "tempo_leitura_min": 0.7563636363636363,
       "tempo_leitura_seg": 45.38181818181818
@@ -266,7 +335,7 @@
       "questao": 23,
       "idioma": "geral",
       "caracteres": 1371,
-      "palavras": 177,
+      "palavras": 205,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2463636363636363,
       "tempo_leitura_seg": 74.78181818181818
@@ -275,7 +344,7 @@
       "questao": 24,
       "idioma": "geral",
       "caracteres": 898,
-      "palavras": 131,
+      "palavras": 162,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8163636363636364,
       "tempo_leitura_seg": 48.981818181818184
@@ -284,7 +353,7 @@
       "questao": 25,
       "idioma": "geral",
       "caracteres": 823,
-      "palavras": 83,
+      "palavras": 112,
       "tem_imagem": true,
       "tempo_leitura_min": 0.7481818181818182,
       "tempo_leitura_seg": 44.89090909090909
@@ -293,7 +362,7 @@
       "questao": 26,
       "idioma": "geral",
       "caracteres": 1164,
-      "palavras": 105,
+      "palavras": 122,
       "tem_imagem": true,
       "tempo_leitura_min": 1.0581818181818181,
       "tempo_leitura_seg": 63.490909090909085
@@ -302,7 +371,7 @@
       "questao": 27,
       "idioma": "geral",
       "caracteres": 1546,
-      "palavras": 179,
+      "palavras": 198,
       "tem_imagem": false,
       "tempo_leitura_min": 1.4054545454545455,
       "tempo_leitura_seg": 84.32727272727273
@@ -311,7 +380,7 @@
       "questao": 28,
       "idioma": "geral",
       "caracteres": 1584,
-      "palavras": 201,
+      "palavras": 226,
       "tem_imagem": false,
       "tempo_leitura_min": 1.44,
       "tempo_leitura_seg": 86.39999999999999
@@ -320,7 +389,7 @@
       "questao": 29,
       "idioma": "geral",
       "caracteres": 912,
-      "palavras": 140,
+      "palavras": 158,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8290909090909091,
       "tempo_leitura_seg": 49.74545454545455
@@ -329,7 +398,7 @@
       "questao": 30,
       "idioma": "geral",
       "caracteres": 925,
-      "palavras": 96,
+      "palavras": 114,
       "tem_imagem": true,
       "tempo_leitura_min": 0.8409090909090909,
       "tempo_leitura_seg": 50.45454545454545
@@ -338,7 +407,7 @@
       "questao": 31,
       "idioma": "geral",
       "caracteres": 1725,
-      "palavras": 256,
+      "palavras": 275,
       "tem_imagem": false,
       "tempo_leitura_min": 1.5681818181818181,
       "tempo_leitura_seg": 94.0909090909091
@@ -347,7 +416,7 @@
       "questao": 32,
       "idioma": "geral",
       "caracteres": 1182,
-      "palavras": 187,
+      "palavras": 206,
       "tem_imagem": false,
       "tempo_leitura_min": 1.0745454545454545,
       "tempo_leitura_seg": 64.47272727272727
@@ -356,7 +425,7 @@
       "questao": 33,
       "idioma": "geral",
       "caracteres": 1309,
-      "palavras": 178,
+      "palavras": 202,
       "tem_imagem": true,
       "tempo_leitura_min": 1.19,
       "tempo_leitura_seg": 71.39999999999999
@@ -365,7 +434,7 @@
       "questao": 34,
       "idioma": "geral",
       "caracteres": 1243,
-      "palavras": 180,
+      "palavras": 198,
       "tem_imagem": false,
       "tempo_leitura_min": 1.13,
       "tempo_leitura_seg": 67.8
@@ -374,7 +443,7 @@
       "questao": 35,
       "idioma": "geral",
       "caracteres": 1422,
-      "palavras": 197,
+      "palavras": 216,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2927272727272727,
       "tempo_leitura_seg": 77.56363636363636
@@ -383,7 +452,7 @@
       "questao": 36,
       "idioma": "geral",
       "caracteres": 1085,
-      "palavras": 116,
+      "palavras": 145,
       "tem_imagem": false,
       "tempo_leitura_min": 0.9863636363636363,
       "tempo_leitura_seg": 59.18181818181818
@@ -392,7 +461,7 @@
       "questao": 37,
       "idioma": "geral",
       "caracteres": 1118,
-      "palavras": 233,
+      "palavras": 261,
       "tem_imagem": true,
       "tempo_leitura_min": 1.0163636363636364,
       "tempo_leitura_seg": 60.981818181818184
@@ -401,7 +470,7 @@
       "questao": 38,
       "idioma": "geral",
       "caracteres": 1895,
-      "palavras": 291,
+      "palavras": 296,
       "tem_imagem": false,
       "tempo_leitura_min": 1.7227272727272727,
       "tempo_leitura_seg": 103.36363636363636
@@ -410,7 +479,7 @@
       "questao": 39,
       "idioma": "geral",
       "caracteres": 739,
-      "palavras": 110,
+      "palavras": 134,
       "tem_imagem": false,
       "tempo_leitura_min": 0.6718181818181819,
       "tempo_leitura_seg": 40.30909090909091
@@ -419,7 +488,7 @@
       "questao": 40,
       "idioma": "geral",
       "caracteres": 1181,
-      "palavras": 181,
+      "palavras": 199,
       "tem_imagem": false,
       "tempo_leitura_min": 1.0736363636363637,
       "tempo_leitura_seg": 64.41818181818182
@@ -428,7 +497,7 @@
       "questao": 41,
       "idioma": "geral",
       "caracteres": 1256,
-      "palavras": 156,
+      "palavras": 181,
       "tem_imagem": false,
       "tempo_leitura_min": 1.1418181818181818,
       "tempo_leitura_seg": 68.50909090909092
@@ -437,7 +506,7 @@
       "questao": 42,
       "idioma": "geral",
       "caracteres": 1342,
-      "palavras": 161,
+      "palavras": 194,
       "tem_imagem": false,
       "tempo_leitura_min": 1.22,
       "tempo_leitura_seg": 73.2
@@ -446,7 +515,7 @@
       "questao": 43,
       "idioma": "geral",
       "caracteres": 976,
-      "palavras": 157,
+      "palavras": 177,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8872727272727273,
       "tempo_leitura_seg": 53.23636363636364
@@ -455,7 +524,7 @@
       "questao": 44,
       "idioma": "geral",
       "caracteres": 480,
-      "palavras": 50,
+      "palavras": 68,
       "tem_imagem": true,
       "tempo_leitura_min": 0.43636363636363634,
       "tempo_leitura_seg": 26.18181818181818
@@ -463,17 +532,17 @@
     {
       "questao": 45,
       "idioma": "geral",
-      "caracteres": 1721,
-      "palavras": 226,
+      "caracteres": 6218,
+      "palavras": 931,
       "tem_imagem": false,
-      "tempo_leitura_min": 1.5645454545454545,
-      "tempo_leitura_seg": 93.87272727272727
+      "tempo_leitura_min": 5.652727272727272,
+      "tempo_leitura_seg": 339.16363636363633
     },
     {
       "questao": 46,
       "idioma": "geral",
       "caracteres": 1119,
-      "palavras": 132,
+      "palavras": 170,
       "tem_imagem": false,
       "tempo_leitura_min": 1.0172727272727273,
       "tempo_leitura_seg": 61.03636363636364
@@ -482,7 +551,7 @@
       "questao": 47,
       "idioma": "geral",
       "caracteres": 1081,
-      "palavras": 138,
+      "palavras": 161,
       "tem_imagem": false,
       "tempo_leitura_min": 0.9827272727272728,
       "tempo_leitura_seg": 58.96363636363637
@@ -491,7 +560,7 @@
       "questao": 48,
       "idioma": "geral",
       "caracteres": 1277,
-      "palavras": 127,
+      "palavras": 162,
       "tem_imagem": false,
       "tempo_leitura_min": 1.160909090909091,
       "tempo_leitura_seg": 69.65454545454546
@@ -500,7 +569,7 @@
       "questao": 49,
       "idioma": "geral",
       "caracteres": 1255,
-      "palavras": 146,
+      "palavras": 183,
       "tem_imagem": false,
       "tempo_leitura_min": 1.1409090909090909,
       "tempo_leitura_seg": 68.45454545454545
@@ -509,7 +578,7 @@
       "questao": 50,
       "idioma": "geral",
       "caracteres": 788,
-      "palavras": 75,
+      "palavras": 103,
       "tem_imagem": false,
       "tempo_leitura_min": 0.7163636363636363,
       "tempo_leitura_seg": 42.98181818181818
@@ -518,7 +587,7 @@
       "questao": 51,
       "idioma": "geral",
       "caracteres": 661,
-      "palavras": 65,
+      "palavras": 86,
       "tem_imagem": true,
       "tempo_leitura_min": 0.600909090909091,
       "tempo_leitura_seg": 36.054545454545455
@@ -527,7 +596,7 @@
       "questao": 52,
       "idioma": "geral",
       "caracteres": 1032,
-      "palavras": 127,
+      "palavras": 158,
       "tem_imagem": false,
       "tempo_leitura_min": 0.9381818181818182,
       "tempo_leitura_seg": 56.290909090909096
@@ -536,7 +605,7 @@
       "questao": 53,
       "idioma": "geral",
       "caracteres": 959,
-      "palavras": 137,
+      "palavras": 163,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8718181818181818,
       "tempo_leitura_seg": 52.30909090909091
@@ -545,7 +614,7 @@
       "questao": 54,
       "idioma": "geral",
       "caracteres": 904,
-      "palavras": 107,
+      "palavras": 137,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8218181818181818,
       "tempo_leitura_seg": 49.309090909090905
@@ -554,7 +623,7 @@
       "questao": 55,
       "idioma": "geral",
       "caracteres": 1274,
-      "palavras": 139,
+      "palavras": 158,
       "tem_imagem": false,
       "tempo_leitura_min": 1.1581818181818182,
       "tempo_leitura_seg": 69.4909090909091
@@ -563,7 +632,7 @@
       "questao": 56,
       "idioma": "geral",
       "caracteres": 706,
-      "palavras": 76,
+      "palavras": 99,
       "tem_imagem": false,
       "tempo_leitura_min": 0.6418181818181818,
       "tempo_leitura_seg": 38.50909090909091
@@ -572,7 +641,7 @@
       "questao": 57,
       "idioma": "geral",
       "caracteres": 1021,
-      "palavras": 143,
+      "palavras": 150,
       "tem_imagem": false,
       "tempo_leitura_min": 0.9281818181818182,
       "tempo_leitura_seg": 55.690909090909095
@@ -581,7 +650,7 @@
       "questao": 58,
       "idioma": "geral",
       "caracteres": 733,
-      "palavras": 80,
+      "palavras": 109,
       "tem_imagem": false,
       "tempo_leitura_min": 0.6663636363636364,
       "tempo_leitura_seg": 39.981818181818184
@@ -590,7 +659,7 @@
       "questao": 59,
       "idioma": "geral",
       "caracteres": 867,
-      "palavras": 98,
+      "palavras": 117,
       "tem_imagem": false,
       "tempo_leitura_min": 0.7881818181818182,
       "tempo_leitura_seg": 47.29090909090909
@@ -599,7 +668,7 @@
       "questao": 60,
       "idioma": "geral",
       "caracteres": 1001,
-      "palavras": 125,
+      "palavras": 148,
       "tem_imagem": false,
       "tempo_leitura_min": 0.91,
       "tempo_leitura_seg": 54.6
@@ -608,7 +677,7 @@
       "questao": 61,
       "idioma": "geral",
       "caracteres": 953,
-      "palavras": 109,
+      "palavras": 130,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8663636363636363,
       "tempo_leitura_seg": 51.98181818181818
@@ -617,7 +686,7 @@
       "questao": 62,
       "idioma": "geral",
       "caracteres": 1177,
-      "palavras": 143,
+      "palavras": 162,
       "tem_imagem": false,
       "tempo_leitura_min": 1.07,
       "tempo_leitura_seg": 64.2
@@ -626,7 +695,7 @@
       "questao": 63,
       "idioma": "geral",
       "caracteres": 1404,
-      "palavras": 153,
+      "palavras": 188,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2763636363636364,
       "tempo_leitura_seg": 76.58181818181818
@@ -635,7 +704,7 @@
       "questao": 64,
       "idioma": "geral",
       "caracteres": 1226,
-      "palavras": 142,
+      "palavras": 162,
       "tem_imagem": false,
       "tempo_leitura_min": 1.1145454545454545,
       "tempo_leitura_seg": 66.87272727272727
@@ -644,7 +713,7 @@
       "questao": 65,
       "idioma": "geral",
       "caracteres": 829,
-      "palavras": 98,
+      "palavras": 126,
       "tem_imagem": true,
       "tempo_leitura_min": 0.7536363636363637,
       "tempo_leitura_seg": 45.21818181818182
@@ -653,7 +722,7 @@
       "questao": 66,
       "idioma": "geral",
       "caracteres": 764,
-      "palavras": 89,
+      "palavras": 107,
       "tem_imagem": false,
       "tempo_leitura_min": 0.6945454545454546,
       "tempo_leitura_seg": 41.67272727272727
@@ -662,7 +731,7 @@
       "questao": 67,
       "idioma": "geral",
       "caracteres": 473,
-      "palavras": 37,
+      "palavras": 57,
       "tem_imagem": true,
       "tempo_leitura_min": 0.43,
       "tempo_leitura_seg": 25.8
@@ -671,7 +740,7 @@
       "questao": 68,
       "idioma": "geral",
       "caracteres": 895,
-      "palavras": 113,
+      "palavras": 137,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8136363636363636,
       "tempo_leitura_seg": 48.81818181818181
@@ -680,7 +749,7 @@
       "questao": 69,
       "idioma": "geral",
       "caracteres": 922,
-      "palavras": 107,
+      "palavras": 129,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8381818181818181,
       "tempo_leitura_seg": 50.29090909090909
@@ -689,7 +758,7 @@
       "questao": 70,
       "idioma": "geral",
       "caracteres": 858,
-      "palavras": 108,
+      "palavras": 128,
       "tem_imagem": false,
       "tempo_leitura_min": 0.78,
       "tempo_leitura_seg": 46.800000000000004
@@ -698,7 +767,7 @@
       "questao": 71,
       "idioma": "geral",
       "caracteres": 756,
-      "palavras": 108,
+      "palavras": 133,
       "tem_imagem": false,
       "tempo_leitura_min": 0.6872727272727273,
       "tempo_leitura_seg": 41.236363636363635
@@ -707,7 +776,7 @@
       "questao": 72,
       "idioma": "geral",
       "caracteres": 818,
-      "palavras": 90,
+      "palavras": 105,
       "tem_imagem": false,
       "tempo_leitura_min": 0.7436363636363637,
       "tempo_leitura_seg": 44.61818181818182
@@ -716,7 +785,7 @@
       "questao": 73,
       "idioma": "geral",
       "caracteres": 838,
-      "palavras": 102,
+      "palavras": 121,
       "tem_imagem": false,
       "tempo_leitura_min": 0.7618181818181818,
       "tempo_leitura_seg": 45.70909090909091
@@ -725,7 +794,7 @@
       "questao": 74,
       "idioma": "geral",
       "caracteres": 976,
-      "palavras": 112,
+      "palavras": 155,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8872727272727273,
       "tempo_leitura_seg": 53.23636363636364
@@ -734,7 +803,7 @@
       "questao": 75,
       "idioma": "geral",
       "caracteres": 847,
-      "palavras": 89,
+      "palavras": 123,
       "tem_imagem": false,
       "tempo_leitura_min": 0.77,
       "tempo_leitura_seg": 46.2
@@ -743,7 +812,7 @@
       "questao": 76,
       "idioma": "geral",
       "caracteres": 946,
-      "palavras": 113,
+      "palavras": 134,
       "tem_imagem": false,
       "tempo_leitura_min": 0.86,
       "tempo_leitura_seg": 51.6
@@ -752,7 +821,7 @@
       "questao": 77,
       "idioma": "geral",
       "caracteres": 953,
-      "palavras": 136,
+      "palavras": 148,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8663636363636363,
       "tempo_leitura_seg": 51.98181818181818
@@ -761,7 +830,7 @@
       "questao": 78,
       "idioma": "geral",
       "caracteres": 668,
-      "palavras": 71,
+      "palavras": 98,
       "tem_imagem": false,
       "tempo_leitura_min": 0.6072727272727273,
       "tempo_leitura_seg": 36.43636363636364
@@ -770,7 +839,7 @@
       "questao": 79,
       "idioma": "geral",
       "caracteres": 928,
-      "palavras": 121,
+      "palavras": 143,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8436363636363636,
       "tempo_leitura_seg": 50.61818181818182
@@ -779,7 +848,7 @@
       "questao": 80,
       "idioma": "geral",
       "caracteres": 1058,
-      "palavras": 115,
+      "palavras": 143,
       "tem_imagem": false,
       "tempo_leitura_min": 0.9618181818181818,
       "tempo_leitura_seg": 57.70909090909091
@@ -788,7 +857,7 @@
       "questao": 81,
       "idioma": "geral",
       "caracteres": 869,
-      "palavras": 113,
+      "palavras": 136,
       "tem_imagem": false,
       "tempo_leitura_min": 0.79,
       "tempo_leitura_seg": 47.400000000000006
@@ -797,7 +866,7 @@
       "questao": 82,
       "idioma": "geral",
       "caracteres": 835,
-      "palavras": 129,
+      "palavras": 151,
       "tem_imagem": false,
       "tempo_leitura_min": 0.759090909090909,
       "tempo_leitura_seg": 45.54545454545454
@@ -806,7 +875,7 @@
       "questao": 83,
       "idioma": "geral",
       "caracteres": 1161,
-      "palavras": 123,
+      "palavras": 140,
       "tem_imagem": false,
       "tempo_leitura_min": 1.0554545454545454,
       "tempo_leitura_seg": 63.32727272727273
@@ -815,7 +884,7 @@
       "questao": 84,
       "idioma": "geral",
       "caracteres": 642,
-      "palavras": 73,
+      "palavras": 94,
       "tem_imagem": false,
       "tempo_leitura_min": 0.5836363636363636,
       "tempo_leitura_seg": 35.018181818181816
@@ -824,7 +893,7 @@
       "questao": 85,
       "idioma": "geral",
       "caracteres": 1333,
-      "palavras": 158,
+      "palavras": 191,
       "tem_imagem": false,
       "tempo_leitura_min": 1.211818181818182,
       "tempo_leitura_seg": 72.70909090909092
@@ -833,7 +902,7 @@
       "questao": 86,
       "idioma": "geral",
       "caracteres": 1003,
-      "palavras": 136,
+      "palavras": 154,
       "tem_imagem": false,
       "tempo_leitura_min": 0.9118181818181819,
       "tempo_leitura_seg": 54.70909090909091
@@ -842,7 +911,7 @@
       "questao": 87,
       "idioma": "geral",
       "caracteres": 796,
-      "palavras": 91,
+      "palavras": 106,
       "tem_imagem": false,
       "tempo_leitura_min": 0.7236363636363636,
       "tempo_leitura_seg": 43.41818181818182
@@ -851,7 +920,7 @@
       "questao": 88,
       "idioma": "geral",
       "caracteres": 861,
-      "palavras": 121,
+      "palavras": 144,
       "tem_imagem": true,
       "tempo_leitura_min": 0.7827272727272727,
       "tempo_leitura_seg": 46.96363636363636
@@ -860,7 +929,7 @@
       "questao": 89,
       "idioma": "geral",
       "caracteres": 886,
-      "palavras": 121,
+      "palavras": 140,
       "tem_imagem": false,
       "tempo_leitura_min": 0.8054545454545454,
       "tempo_leitura_seg": 48.32727272727273
@@ -869,7 +938,7 @@
       "questao": 90,
       "idioma": "geral",
       "caracteres": 1381,
-      "palavras": 192,
+      "palavras": 242,
       "tem_imagem": false,
       "tempo_leitura_min": 1.2554545454545454,
       "tempo_leitura_seg": 75.32727272727273
