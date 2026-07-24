@@ -1,9 +1,143 @@
 # Questões extraídas
 
+# Textos introdutórios
+
+## Texto introdutório 1
+
+- Palavras: 468
+
+1º DIA
+CADERNO 1 | AZUL
+LEIA ATENTAMENTE AS INSTRUÇÕES SEGUINTES:
+1.  Este CADERNO DE QUESTÕES contém 90 questões numeradas de 01 a 90 e a Proposta de Redação,
+dispostas da seguinte maneira:
+a) questões de número 01 a 45, relativas à área de Linguagens, Códigos e suas Tecnologias;
+b) Proposta de Redação;
+c) questões de número 46 a 90, relativas à área de Ciências Humanas e suas Tecnologias.
+ATENÇãO: as questões de 01 a 05 são relativas à língua estrangeira. Você deverá responder apenas às
+questões relativas à língua estrangeira (inglês ou espanhol) escolhida no ato de sua inscrição.
+2.  Confira se a quantidade e a ordem das questões do seu CADERNO DE QUESTÕES estão de acordo com as
+instruções anteriores. Caso o caderno esteja incompleto, tenha defeito ou apresente qualquer divergência,
+comunique ao aplicador da sala para que ele tome as providências cabíveis.
+3.  Para cada uma das questões objetivas, são apresentadas 5 opções. Apenas uma responde corretamente
+à questão.
+4. O tempo disponível para estas provas é de cinco horas e trinta minutos.
+5. Reserve tempo suficiente para preencher o CARTÃO-RESPOSTA e a FOLHA DE REDAÇÃO.
+6.  Os rascunhos e as marcações assinaladas no CADERNO DE QUESTÕES não serão considerados na avaliação.
+7. Somente serão corrigidas as redações transcritas na FOLHA DE REDAÇÃO.
+8.  Quando terminar as provas, acene para chamar o aplicador e entregue este CADERNO DE QUESTÕES e
+o CARTÃO-RESPOSTA/FOLHA DE REDAÇÃO.
+9.  Você poderá deixar o local de prova somente após decorridas duas horas do início da aplicação e poderá
+levar seu CADERNO DE QUESTÕES ao deixar em definitivo a sala de prova nos 30 minutos que antecedem
+o término das provas.
+ATENÇãO: transcreva no espaço apropriado do seu CARTÃO-RESPOSTA,
+com sua caligrafia usual, considerando as letras maiúsculas e minúsculas, a seguinte frase:
+Nada na vida deve ser temido, somente compreendido
+CADERNO
+AZUL
+øÃ Ä®ÊÄ½ Ê ÄÝ®ÄÊ Ã®Ê
+PROVA DE LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS E REDAÇãO
+PROVA DE CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS
+025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEN2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENE
+
+## Texto introdutório 2
+
+- Palavras: 5
+
+LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS
+
+## Texto introdutório 3 - Questões 1 a 45
+
+- Palavras: 5
+
+Questões de 01 a 45
+
+## Texto introdutório 4 - Questões 1 a 5
+
+- Palavras: 7
+
+Questões de 01 a 05 (opção inglês)
+
+## Texto introdutório 5 - Questões 1 a 5
+
+- Palavras: 7
+
+Questões de 01 a 05 (opção espanhol)
+
+## Texto introdutório 6
+
+- Palavras: 5
+
+CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS
+
+## Texto introdutório 7 - Questões 46 a 90
+
+- Palavras: 5
+
+Questões de 46 a 90
+
+## Texto introdutório 8 - Questões 6 a 10
+
+- Palavras: 666
+
+Texto para as Questões de 06 a 10.
+De próprio punho
+A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda
+que vai do simples bilhete aos originais de um livro
+Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia
+que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem
+burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,
+o que importava era a autenticidade da minha caligrafia, que à época ainda era mais
+fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,
+hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,
+mais rotunda e mais cheia de arestas.
+É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,
+manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso
+não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que
+eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de
+tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou
+sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever
+neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais
+ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias
+possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,
+são elas que batucam meu teclado de computador ou que tocam suavemente duas ou
+três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times
+New Roman, Arial, Calibri e mais uma centena de “letras” à  minha escolha. Eu e Deus
+e o mundo.
+A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca
+deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até
+hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços
+e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está
+em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na
+cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus
+coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its
+na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico
+comigo mesma, a evitar um comportamento esquecido e relapso.
+No escritório, costumo ser mais suave comigo mesma, mas também muito mais
+lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai
+minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados
+precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam
+como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por
+outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais
+ainda as adultas) precisa conviver.
+As formas de escrever mudam, as necessidades também, e o resultado é um elenco
+complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas
+ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,
+mudando de status, numa ciranda interessante e importante que pode ser vista à luz de
+certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta
+muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação
+por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,
+e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma
+frase filosoficamente correta. O negócio é mais “o punho e o pixel”.
+RIBEIRO, A. E. Disponível em: https://rascunho.com.br.
+Acesso em: 16 jan. 2024 (adaptado).
+
+# Questões
+
 ## Questão 1
 
 - Idioma: inglês
-- Palavras: 173
+- Palavras: 195
 - Tem imagem: não
 
 ### Texto extraído
@@ -25,27 +159,10 @@ C	valorizar as vestimentas características dos povos originários.
 D	criticar a exploração indevida de elementos da identidade indígena.
 E	sugerir ações de combate ao preconceito contra os povos originários.
 
-### Texto contado
-
-Glory Ames, from the White Earth reservation, is frustrated that despite the presence of several indigenous reservations
-near Moorhead, local Halloween stores still feature a western section with costumes such as “pow wow princess”.
-Even worse, despite a long-running debate about racism and cultural appropriation, often prompted by backlash against
-celebrities and politicians for donning offensive costumes, people continue to wear such costumes.
-Last Halloween, Ames spotted a photo on Instagram of a girl dressed as a Native American with a bullet in her forehead.
-She immediately reported it to the social media platform and had it removed.
-“They blatantly take certain aspects of our culture, race, religion, and use it for their advantage and ignore the people living
-it”, said Ames.
-Ao abordar um aspecto da celebração do Halloween, esse texto tem por objetivo
-denunciar a violência contra crianças indígenas.
-descrever costumes tradicionais em celebrações indígenas.
-valorizar as vestimentas características dos povos originários.
-criticar a exploração indevida de elementos da identidade indígena.
-sugerir ações de combate ao preconceito contra os povos originários.
-
 ## Questão 2
 
 - Idioma: inglês
-- Palavras: 118
+- Palavras: 135
 - Tem imagem: não
 
 ### Texto extraído
@@ -63,23 +180,10 @@ C	afastá-la da abordagem socrática.
 D	aproximá-la dos problemas sociais.
 E	responsabilizá-la pela pobreza humana.
 
-### Texto contado
-
-My idea of philosophy is that if it is not relevant to human problems, if it does not tell us how we can go about eradicating
-some of the misery in this world, then it is not worth the name of philosophy. I think Socrates made a very profound statement
-when he asserted that philosophy is to teach us proper living. In this day and age “proper living” means liberation from the
-urgent problems of poverty, economic necessity and indoctrination, mental oppression.
-Nesse texto, ao discorrer sobre a relevância da filosofia, a escritora Angela Davis tem por objetivo
-criticá-la pela restrição temática.
-vinculá-la ao universo acadêmico.
-afastá-la da abordagem socrática.
-aproximá-la dos problemas sociais.
-responsabilizá-la pela pobreza humana.
-
 ## Questão 3
 
 - Idioma: inglês
-- Palavras: 151
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -107,33 +211,10 @@ C	importância do apego à terra natal.
 D	relação entre seres humanos e natureza.
 E	conexão entre o tempo real e o tempo imaginário.
 
-### Texto contado
-
-Remember the sky that you were born under,
-know each of the star’s stories.
-Remember the moon, know who she is.
-Remember the sun’s birth at dawn. [...]
-Remember your birth, how your mother struggled
-to give you form and breath [...]
-Remember the earth whose skin you are:
-red earth, black earth, yellow earth, white earth
-brown earth, we are earth.
-Remember the plants, trees, animal life who all have their
-tribes, their families, their histories, too [...]
-Remember you are all people and all people are you.
-Remember you are this universe and this universe is you.
-Remember all is in motion, is growing, is you.
-Nesse poema, de uma autora de ascendência indígena, o eu lírico ressalta a
-potência dos astros celestes.
-origem das plantas e dos animais.
-importância do apego à terra natal.
-relação entre seres humanos e natureza.
-conexão entre o tempo real e o tempo imaginário.
-
 ## Questão 4
 
 - Idioma: inglês
-- Palavras: 175
+- Palavras: 195
 - Tem imagem: não
 
 ### Texto extraído
@@ -153,25 +234,10 @@ C	estimular ações proativas em situações de emergência.
 D	retratar relações conflituosas em ambiente universitário.
 E	apontar posturas de uma juventude avessa a contrariedades.
 
-### Texto contado
-
-It is true that all children are special, simply because they are children. But most adults are not special, and children end up as adults
-pretty quickly. Life then can be difficult and even disappointing. The shock of this may account for the emergence of the “snowflake
-generation” of university students, who are so delicate they can’t handle controversial ideas being put forward in their lectures. The roots
-of this fragility run deep in modern culture. So, an approach of the world that states: “Life is wonderful, you’re special and, if you are a good
-boy/girl, life will be amazing forever” is not a message designed to aid bouncing back from failure or confronting catastrophe. Resilience is
-not about feeding ego — telling your children how wonderful they are — but strengthening it.
-Nesse texto, a expressão “snowflake generation” é usada para
-abordar obstáculos impostos a universitários.
-destacar mensagens de incentivo a estudantes.
-estimular ações proativas em situações de emergência.
-retratar relações conflituosas em ambiente universitário.
-apontar posturas de uma juventude avessa a contrariedades.
-
 ## Questão 5
 
 - Idioma: inglês
-- Palavras: 49
+- Palavras: 67
 - Tem imagem: sim
 
 ### Texto extraído
@@ -185,19 +251,10 @@ C	gasto com bebidas que combatem a insônia.
 D	consumo de bebidas que causam dependência.
 E	necessidade de um produto que provoque o sono.
 
-### Texto contado
-
-Nesse texto, a pergunta “What is sleep?”, em uma das embalagens do produto, está relacionada ao(à)
-escassez de horas de sono.
-estímulo a um descanso de qualidade.
-gasto com bebidas que combatem a insônia.
-consumo de bebidas que causam dependência.
-necessidade de um produto que provoque o sono.
-
 ## Questão 1
 
 - Idioma: espanhol
-- Palavras: 108
+- Palavras: 128
 - Tem imagem: não
 
 ### Texto extraído
@@ -222,29 +279,10 @@ C	apresenta propostas para diminuir as desigualdades sociais.
 D	evidencia o diálogo horizontal entre patrão e trabalhadores.
 E	questiona a insalubridade do ambiente de trabalho.
 
-### Texto contado
-
-¿Dónde está nuestro pan, patrón?
-¿Dónde quedó todo ese dinero?
-¿Lo tiene oculto bajo el colchón
-o lo escondió en otro sucio agujero?
-Yo tengo un Tàpies, dice Juan Luis;
-yo tengo un Antonio López, dice Jaume.
-¿Quién de los dos sabrá decir
-cuántos muertos tiene a sus espaldas?
-Na letra da canção Polvorado, ao apresentar as reflexões do eu
-poético, o cantor espanhol Nacho Vegas
-demonstra o orgulho dos trabalhadores para com artistas
-de referência.
-critica a postura dos patrões frente aos direitos dos trabalhadores.
-apresenta propostas para diminuir as desigualdades sociais.
-evidencia o diálogo horizontal entre patrão e trabalhadores.
-questiona a insalubridade do ambiente de trabalho.
-
 ## Questão 2
 
 - Idioma: espanhol
-- Palavras: 259
+- Palavras: 276
 - Tem imagem: não
 
 ### Texto extraído
@@ -278,39 +316,10 @@ C	concorrência entre línguas indígenas e a língua espanhola.
 D	valorização da língua de um país em detrimento da de outro.
 E	disputa entre hispano-americanos e espanhóis por sua origem.
 
-### Texto contado
-
-Guagua, las palabras también migran
-Pocas palabras del idioma castellano despiertan tanto
-interés y asombro como guagua. En España su uso se reduce a las
-Islas Canarias, donde se registra a partir de los años 30 del pasado
-siglo. El origen de guagua resulta algo polémico. Todo parece
-indicar que la voz vino de Cuba. La trajeron de vuelta, junto con
-sus maletas y sus recuerdos, aquellos inmigrantes canarios que
-viajaron a la isla antillana en busca de fortuna. Recientemente en
-Lanzarote, las autoridades acuñaron “guagüismo” para potenciar
-el uso del transporte público y han solicitado a la Real Academia
-Española que introduzca dicho término en el diccionario.
-El origen de guagua cambia si nos vamos al sur del continente.
-Autobús no es la única acepción de la palabra guagua que se
-usa en América. En los países del sur, tales como Colombia,
-Argentina o Perú, como una derivación del término quechua
-wáwa, también se le dice guagua a un niño de pecho o bebé.
-Algunos autores chilenos han defendido también que esta
-acepción de guagua como bebé proviene del idioma mapuche.
-Sea uno u otro el origen, es común en todo el cono sur oír a
-hombres y mujeres hablar con ternura de sus “guaguas lindas”.
-Ao abordar a trajetória da palavra “guagua”, o texto destaca a
-presença de empréstimo linguístico no espanhol.
-validação de um vocábulo por uma instituição renomada.
-concorrência entre línguas indígenas e a língua espanhola.
-valorização da língua de um país em detrimento da de outro.
-disputa entre hispano-americanos e espanhóis por sua origem.
-
 ## Questão 3
 
 - Idioma: espanhol
-- Palavras: 135
+- Palavras: 161
 - Tem imagem: não
 
 ### Texto extraído
@@ -347,41 +356,10 @@ C	vocábulos relacionados à fauna cubana.
 D	verbos no pretérito imperfeito do indicativo.
 E	marcas linguísticas de uma variedade caribenha.
 
-### Texto contado
-
-Cuando yo era chiquito
-todo quedaba cerca, cerquita.
-Para llegar al cielo
-no más bastaba una subidita.
-El sueño me alcanzaba
-para ir tan lejos como quería.
-Cuando yo era chiquito
-yo sí podía, yo sí podía.
-Libertad, libertad,
-libertad para mi niño.
-[...]
-Cuando yo era vejigo
-me iba pa’l río porque era hermoso,
-aunque estaba prohibido
-por peligroso, por peligroso.
-Como jagüey y ceiba,
-como la palma y la yagruma,
-cuando yo era vejigo
-yo era del monte y soñaba espuma.
-Libertad, libertad,
-libertad para mi niño.
-O recurso que caracteriza essa letra de canção como um relato
-das memórias do eu poético é o uso de
-palavras no grau diminutivo.
-adjetivos na descrição da paisagem.
-vocábulos relacionados à fauna cubana.
-verbos no pretérito imperfeito do indicativo.
-marcas linguísticas de uma variedade caribenha.
-
 ## Questão 4
 
 - Idioma: espanhol
-- Palavras: 47
+- Palavras: 67
 - Tem imagem: sim
 
 ### Texto extraído
@@ -395,19 +373,10 @@ C	advérbios característicos do repertório vocabular dos jovens.
 D	marcas da oralidade expressas na representação escrita da fala.
 E	enunciados interrogativos em situação comunicativa com um interlocutor.
 
-### Texto contado
-
-Na charge, a diversidade linguística está representada pelo uso de
-estruturas verbais com valor de futuro próximo.
-expressões idiomáticas características de uma região.
-advérbios característicos do repertório vocabular dos jovens.
-marcas da oralidade expressas na representação escrita da fala.
-enunciados interrogativos em situação comunicativa com um interlocutor.
-
 ## Questão 5
 
 - Idioma: espanhol
-- Palavras: 187
+- Palavras: 205
 - Tem imagem: não
 
 ### Texto extraído
@@ -431,29 +400,10 @@ C	dependência de recursos digitais.
 D	valor dos acontecimentos sociais.
 E	indiferença em relação a fatos históricos.
 
-### Texto contado
-
-¿Qué es la generación Alfa?
-Hacer cortes generacionales no es una ciencia exacta. Sin embargo, según un análisis de 2018 del centro de estudios Pew
-Research Center, analizar las generaciones ofrece “una manera de entender cómo los acontecimientos globales y los cambios
-tecnológicos, económicos y sociales interactúan para definir la forma en que la gente ve el mundo”. Y está claro cómo ve el
-mundo la próxima generación: a través de una pantalla.
-“Antes las generaciones se definían a partir de sucesos históricos o sociales importantes. Hoy se delimitan por el uso
-de determinada tecnología”, le explica a BBC Mundo un psicólogo, docente, escritor y experto en el uso — y abuso — de las
-redes sociales.
-Ninguna de las generaciones anteriores será comparable a nivel digital con los Alfa, que, como contraparte, serán la primera
-a la que le serán ajenos muchos aspectos del mundo analógico.
-Nesse texto, a expressão “a través de una pantalla” evidencia que a geração Alfa estabelece com o mundo uma relação marcada pelo(a)
-conflito etário.
-efemeridade da tecnologia.
-dependência de recursos digitais.
-valor dos acontecimentos sociais.
-indiferença em relação a fatos históricos.
-
 ## Questão 6
 
 - Idioma: geral
-- Palavras: 695
+- Palavras: 725
 - Tem imagem: não
 
 ### Texto extraído
@@ -517,67 +467,10 @@ C	expressa a obrigatoriedade de concisão nas anotações.
 D	questiona a prática da escrita de próprio punho.
 E	apresenta a diversidade de usos no cotidiano.
 
-### Texto contado
-
-De próprio punho
-A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda
-que vai do simples bilhete aos originais de um livro
-Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia
-que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem
-burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,
-o que importava era a autenticidade da minha caligrafia, que à época ainda era mais
-fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,
-hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,
-mais rotunda e mais cheia de arestas.
-É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,
-manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso
-não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que
-eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de
-tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou
-sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever
-neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais
-ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias
-possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,
-são elas que batucam meu teclado de computador ou que tocam suavemente duas ou
-três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times
-New Roman, Arial, Calibri e mais uma centena de “letras” à  minha escolha. Eu e Deus
-e o mundo.
-A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca
-deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até
-hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços
-e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está
-em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na
-cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus
-coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its
-na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico
-comigo mesma, a evitar um comportamento esquecido e relapso.
-No escritório, costumo ser mais suave comigo mesma, mas também muito mais
-lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai
-minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados
-precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam
-como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por
-outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais
-ainda as adultas) precisa conviver.
-As formas de escrever mudam, as necessidades também, e o resultado é um elenco
-complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas
-ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,
-mudando de status, numa ciranda interessante e importante que pode ser vista à luz de
-certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta
-muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação
-por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,
-e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma
-frase filosoficamente correta. O negócio é mais “o punho e o pixel”.
-No que diz respeito ao gênero bilhete, a autora dessa crônica
-ressalta a formalidade na comunicação com as pessoas de sua convivência.
-critica a ansiedade causada pela velocidade da comunicação.
-expressa a obrigatoriedade de concisão nas anotações.
-questiona a prática da escrita de próprio punho.
-apresenta a diversidade de usos no cotidiano.
-
 ## Questão 7
 
 - Idioma: geral
-- Palavras: 707
+- Palavras: 737
 - Tem imagem: não
 
 ### Texto extraído
@@ -641,67 +534,10 @@ C	abordagem de fatos do contexto pessoal em uma perspectiva reflexiva.
 D	utilização de recursos linguísticos para a interlocução direta com o leitor.
 E	apresentação de acontecimentos segundo a ordem de sucessão no tempo.
 
-### Texto contado
-
-De próprio punho
-A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda
-que vai do simples bilhete aos originais de um livro
-Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia
-que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem
-burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,
-o que importava era a autenticidade da minha caligrafia, que à época ainda era mais
-fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,
-hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,
-mais rotunda e mais cheia de arestas.
-É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,
-manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso
-não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que
-eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de
-tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou
-sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever
-neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais
-ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias
-possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,
-são elas que batucam meu teclado de computador ou que tocam suavemente duas ou
-três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times
-New Roman, Arial, Calibri e mais uma centena de “letras” à  minha escolha. Eu e Deus
-e o mundo.
-A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca
-deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até
-hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços
-e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está
-em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na
-cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus
-coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its
-na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico
-comigo mesma, a evitar um comportamento esquecido e relapso.
-No escritório, costumo ser mais suave comigo mesma, mas também muito mais
-lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai
-minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados
-precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam
-como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por
-outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais
-ainda as adultas) precisa conviver.
-As formas de escrever mudam, as necessidades também, e o resultado é um elenco
-complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas
-ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,
-mudando de status, numa ciranda interessante e importante que pode ser vista à luz de
-certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta
-muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação
-por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,
-e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma
-frase filosoficamente correta. O negócio é mais “o punho e o pixel”.
-O elemento que caracteriza esse texto como uma crônica é a
-defesa das opiniões da autora sobre um tema de interesse coletivo.
-exposição sobre o uso de tecnologias nas práticas de escrita atuais.
-abordagem de fatos do contexto pessoal em uma perspectiva reflexiva.
-utilização de recursos linguísticos para a interlocução direta com o leitor.
-apresentação de acontecimentos segundo a ordem de sucessão no tempo.
-
 ## Questão 8
 
 - Idioma: geral
-- Palavras: 696
+- Palavras: 726
 - Tem imagem: não
 
 ### Texto extraído
@@ -765,67 +601,10 @@ C	possibilidade de interações mediadas por telas.
 D	diversidade de fontes tipográficas que estão disponíveis.
 E	delimitação dos espaços onde a produção textual ocorre.
 
-### Texto contado
-
-De próprio punho
-A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda
-que vai do simples bilhete aos originais de um livro
-Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia
-que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem
-burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,
-o que importava era a autenticidade da minha caligrafia, que à época ainda era mais
-fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,
-hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,
-mais rotunda e mais cheia de arestas.
-É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,
-manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso
-não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que
-eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de
-tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou
-sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever
-neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais
-ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias
-possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,
-são elas que batucam meu teclado de computador ou que tocam suavemente duas ou
-três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times
-New Roman, Arial, Calibri e mais uma centena de “letras” à  minha escolha. Eu e Deus
-e o mundo.
-A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca
-deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até
-hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços
-e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está
-em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na
-cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus
-coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its
-na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico
-comigo mesma, a evitar um comportamento esquecido e relapso.
-No escritório, costumo ser mais suave comigo mesma, mas também muito mais
-lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai
-minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados
-precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam
-como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por
-outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais
-ainda as adultas) precisa conviver.
-As formas de escrever mudam, as necessidades também, e o resultado é um elenco
-complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas
-ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,
-mudando de status, numa ciranda interessante e importante que pode ser vista à luz de
-certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta
-muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação
-por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,
-e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma
-frase filosoficamente correta. O negócio é mais “o punho e o pixel”.
-Nesse texto, o que caracteriza a escrita “de próprio punho” é a letra manuscrita, enquanto a escrita digital é ilustrada pelo(a)
-utilização de tecnologias diversificadas.
-desenvolvimento de novos recursos de escrita.
-possibilidade de interações mediadas por telas.
-diversidade de fontes tipográficas que estão disponíveis.
-delimitação dos espaços onde a produção textual ocorre.
-
 ## Questão 9
 
 - Idioma: geral
-- Palavras: 679
+- Palavras: 709
 - Tem imagem: não
 
 ### Texto extraído
@@ -889,67 +668,10 @@ C	coexistem com outras já estabelecidas.
 D	promovem maior agilidade na comunicação.
 E	surgem nos contextos em que são necessárias.
 
-### Texto contado
-
-De próprio punho
-A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda
-que vai do simples bilhete aos originais de um livro
-Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia
-que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem
-burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,
-o que importava era a autenticidade da minha caligrafia, que à época ainda era mais
-fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,
-hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,
-mais rotunda e mais cheia de arestas.
-É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,
-manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso
-não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que
-eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de
-tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou
-sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever
-neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais
-ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias
-possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,
-são elas que batucam meu teclado de computador ou que tocam suavemente duas ou
-três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times
-New Roman, Arial, Calibri e mais uma centena de “letras” à  minha escolha. Eu e Deus
-e o mundo.
-A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca
-deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até
-hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços
-e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está
-em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na
-cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus
-coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its
-na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico
-comigo mesma, a evitar um comportamento esquecido e relapso.
-No escritório, costumo ser mais suave comigo mesma, mas também muito mais
-lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai
-minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados
-precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam
-como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por
-outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais
-ainda as adultas) precisa conviver.
-As formas de escrever mudam, as necessidades também, e o resultado é um elenco
-complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas
-ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,
-mudando de status, numa ciranda interessante e importante que pode ser vista à luz de
-certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta
-muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação
-por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,
-e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma
-frase filosoficamente correta. O negócio é mais “o punho e o pixel”.
-A autora conclui que as novas tecnologias de escrita
-evoluem para facilitar a vida cotidiana.
-alcançam diferentes realidades sociais.
-coexistem com outras já estabelecidas.
-promovem maior agilidade na comunicação.
-surgem nos contextos em que são necessárias.
-
 ## Questão 10
 
 - Idioma: geral
-- Palavras: 749
+- Palavras: 779
 - Tem imagem: não
 
 ### Texto extraído
@@ -1013,67 +735,10 @@ C	uso de pronome possessivo em “Minha letra, hoje, tem uma espécie de altern�
 D	adoção de termo autorreflexivo em “No escritório, costumo ser mais suave comigo mesma”. (l. 30)
 E	substituição da expressão “Do punho ao pixel” (l. 44) pela expressão “o punho e o pixel”. (l. 45)
 
-### Texto contado
-
-De próprio punho
-A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda
-que vai do simples bilhete aos originais de um livro
-Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia
-que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem
-burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,
-o que importava era a autenticidade da minha caligrafia, que à época ainda era mais
-fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,
-hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,
-mais rotunda e mais cheia de arestas.
-É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,
-manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso
-não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que
-eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de
-tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou
-sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever
-neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais
-ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias
-possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,
-são elas que batucam meu teclado de computador ou que tocam suavemente duas ou
-três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times
-New Roman, Arial, Calibri e mais uma centena de “letras” à  minha escolha. Eu e Deus
-e o mundo.
-A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca
-deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até
-hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços
-e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está
-em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na
-cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus
-coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its
-na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico
-comigo mesma, a evitar um comportamento esquecido e relapso.
-No escritório, costumo ser mais suave comigo mesma, mas também muito mais
-lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai
-minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados
-precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam
-como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por
-outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais
-ainda as adultas) precisa conviver.
-As formas de escrever mudam, as necessidades também, e o resultado é um elenco
-complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas
-ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,
-mudando de status, numa ciranda interessante e importante que pode ser vista à luz de
-certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta
-muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação
-por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,
-e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma
-frase filosoficamente correta. O negócio é mais “o punho e o pixel”.
-O recurso linguístico usado para marcar a síntese da opinião da autora sobre a temática desenvolvida foi o(a)
-emprego da primeira pessoa em “Estranhei muito na primeira vez que escutei a expressão ‘de próprio punho’”. (l. 1)
-utilização de locução adverbial em “Na verdade, o que importava era a autenticidade da minha caligrafia”. (l. 3-4)
-uso de pronome possessivo em “Minha letra, hoje, tem uma espécie de alternância”. (l. 5-6)
-adoção de termo autorreflexivo em “No escritório, costumo ser mais suave comigo mesma”. (l. 30)
-substituição da expressão “Do punho ao pixel” (l. 44) pela expressão “o punho e o pixel”. (l. 45)
-
 ## Questão 11
 
 - Idioma: geral
-- Palavras: 280
+- Palavras: 303
 - Tem imagem: não
 
 ### Texto extraído
@@ -1112,43 +777,10 @@ C	equivalência de origem social para a harmonia do casal.
 D	importância do dote como condição para o casamento.
 E	aura de mistério sobre a identidade da jovem.
 
-### Texto contado
-
-— Vejo, disse ele com algum acanhamento, que o doutor não
-é nenhum pé-rapado, mas nunca é bom facilitar... Minha filha
-Nocência fez 18 anos pelo Natal, e é rapariga que pela feição parece
-moça de cidade, muito ariscazinha de modos, mas bonita e boa
-deveras... Coitada, foi criada sem mãe, e aqui nestes fundões. [...]
-— Ora muito que bem, continuou Pereira caindo aos poucos
-na habitual garrulice, quando vi a menina tomar corpo, tratei
-logo de casá-la.
-— Ah! é casada? perguntou Cirino.
-— Isto é, é e não é. A coisa está apalavrada. Por aqui costuma
-labutar no costeio do gado para São Paulo um homem de mão-
-cheia, que talvez o sr. conheça... o Manecão Doca...
-— Não, respondeu Cirino abanando a cabeça.
-— Pois isso é um homem às direitas, desempenado e trabucador
-como ele só... fura estes sertões todos e vem tangendo pontes de
-gado que metem pasmo. Também dizem que tem bichado muito
-e ajuntado cobre grosso, o que é possível, porque não é gastador
-nem dado a mulheres. Uma feita que estava aqui de pousada...
-olhe, mesmo neste lugar onde estava mecê inda agorinha, falei-lhe
-em casamento... isto é, dei-lhe uns toques... porque os pais devem
-tomar isso a si para bem de suas famílias; não acha?
-— Boa dúvida, aprovou Cirino, dou-lhe toda a razão; era
-do seu dever.
-Nesse trecho, ao se referir à sua filha, o pai de Inocência reproduz
-os ideais românticos, presentes na
-valorização do ambiente rural na formação moral da mulher.
-figura decorativa da mulher ante o protagonismo masculino.
-equivalência de origem social para a harmonia do casal.
-importância do dote como condição para o casamento.
-aura de mistério sobre a identidade da jovem.
-
 ## Questão 12
 
 - Idioma: geral
-- Palavras: 154
+- Palavras: 173
 - Tem imagem: não
 
 ### Texto extraído
@@ -1174,31 +806,10 @@ D	eficiência das iniciativas de inclusão em megaeventos esportivos.
 E	escassez de investimento em práticas corporais de aventura
 na natureza.
 
-### Texto contado
-
-O Ministério do Esporte no Brasil lançou o programa Maré
-Inclusiva, em 2024, ano dos Jogos Paralímpicos de Paris. Esse
-programa visa ampliar as oportunidades para pessoas com
-deficiência que desejam praticar o surf. O parasurf é a prática
-do surf adaptada para permitir que pessoas com deficiência
-pratiquem o esporte em todas as suas categorias, modalidades
-e manifestações. Para a Secretaria Nacional do Paradesporto,
-a iniciativa é mais do que um programa de esporte, é uma
-iniciativa que busca transformar vidas e promover a inclusão por
-meio do parasurf, criando um legado de igualdade e respeito.
-De acordo com esse texto, o programa voltado ao estímulo da
-prática do parasurf evidencia a
-adesão de diferentes países a programas inclusivos.
-preocupação política em atender a demandas paralímpicas.
-importância de uma política pública esportiva para a inclusão.
-eficiência das iniciativas de inclusão em megaeventos esportivos.
-escassez de investimento em práticas corporais de aventura
-na natureza.
-
 ## Questão 13
 
 - Idioma: geral
-- Palavras: 149
+- Palavras: 173
 - Tem imagem: não
 
 ### Texto extraído
@@ -1225,31 +836,10 @@ C	pelos contextos pedagógicos em que circula.
 D	pela importância para os grupos étnico-raciais.
 E	pelas características do gênero a que pertence.
 
-### Texto contado
-
-Art. 26-A. Nos estabelecimentos de ensino fundamental
-e médio, oficiais e particulares, torna-se obrigatório o ensino
-sobre História e Cultura Afro-Brasileira.
-§ 1º O conteúdo programático a que se refere o caput deste
-artigo incluirá o estudo da História da África e dos Africanos, a luta
-dos negros no Brasil, a cultura negra brasileira e o negro na formação
-da sociedade nacional, resgatando a contribuição do povo negro nas
-áreas social, econômica e política pertinentes à História do Brasil.
-§ 2º Os conteúdos referentes à História e Cultura Afro-
--Brasileira serão ministrados no âmbito de todo o currículo
-escolar, em especial nas áreas de Educação Artística e de
-Literatura e História Brasileiras.
-O emprego da norma-padrão é justificado nesse texto
-pela especialização de seu público-alvo.
-pela relevância cultural de seu conteúdo.
-pelos contextos pedagógicos em que circula.
-pela importância para os grupos étnico-raciais.
-pelas características do gênero a que pertence.
-
 ## Questão 14
 
 - Idioma: geral
-- Palavras: 56
+- Palavras: 74
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1264,20 +854,10 @@ C	ressaltar o impacto da leitura na vida das pessoas.
 D	fomentar o turismo cultural na cidade de São Paulo.
 E	evidenciar a influência de Pessoa na literatura brasileira.
 
-### Texto contado
-
-Nesse cartaz publicitário, os recursos verbais e não verbais
-constroem um argumento que objetiva
-divulgar a obra de Fernando Pessoa no Brasil.
-valorizar a realização de eventos literários no país.
-ressaltar o impacto da leitura na vida das pessoas.
-fomentar o turismo cultural na cidade de São Paulo.
-evidenciar a influência de Pessoa na literatura brasileira.
-
 ## Questão 15
 
 - Idioma: geral
-- Palavras: 124
+- Palavras: 143
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1300,28 +880,10 @@ C	personagens retratadas simbolizam a sociedade brasileira.
 D	pintura funciona como instrumento de ascensão social.
 E	imagens tradicionais preservam memórias afetivas.
 
-### Texto contado
-
-O retrato como gênero da pintura ocidental ficou vinculado
-às elites, tornando invisíveis as populações que não faziam parte
-do círculo dominante. Num país de tradição escravocrata e
-colonizado por europeus como o Brasil, pouquíssimas pessoas
-negras e indígenas foram retratadas em pintura, e menos ainda
-identificadas com seus nomes nos retratos. Daí a importância,
-para a história da arte e para a história brasileira, dos retratos
-de Dalton Paula.
-Ao dar protagonismo a Zeferina e a João de Deus Nascimento,
-o artista Dalton Paula evidencia que a(s)
-arte pode promover formas de afirmação de identidade social.
-comunidades periféricas passam a adquirir o gênero retrato.
-personagens retratadas simbolizam a sociedade brasileira.
-pintura funciona como instrumento de ascensão social.
-imagens tradicionais preservam memórias afetivas.
-
 ## Questão 16
 
 - Idioma: geral
-- Palavras: 178
+- Palavras: 195
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1352,35 +914,10 @@ C	representar o “eu” e o “tu” como sujeitos volúveis.
 D	associar a sua inconsciência a elementos da natureza.
 E	metaforizar o conflito amoroso nas imagens de “mar” e “rocha”.
 
-### Texto contado
-
-Símbolos
-Eu e tu, ante a noite e o amplo desdobramento
-do mar, fero, a estourar de encontro à rocha nua...
-Um símbolo descubro aqui, neste momento
-esta rocha, este mar... a minha vida e a tua.
-O mar vem, o mar vai, nele há o gesto violento
-de quem maltrata e, após, se arrepende e recua.
-Como compreendo bem da rocha o sentimento!
-São muito iguais, por certo, a minha mágoa e a sua.
-Contemplo neste quadro a nossa triste vida;
-tu és dúbio mar que, na sua inconsciência,
-tem carinhos de amor e fúrias de demência!
-Eu sou a dor estanque, a dor empedernida,
-sou rocha a emergir de um côncavo de areia,
-imóvel, muda, isenta e alheia ao mar, alheia.
-Nesse soneto, os traços da estética simbolista são resgatados
-pelo eu lírico ao
-rejeitar as emoções de “amor” e “mágoa”.
-expressar a dubiedade do olhar sobre o outro.
-representar o “eu” e o “tu” como sujeitos volúveis.
-associar a sua inconsciência a elementos da natureza.
-metaforizar o conflito amoroso nas imagens de “mar” e “rocha”.
-
 ## Questão 17
 
 - Idioma: geral
-- Palavras: 210
+- Palavras: 247
 - Tem imagem: não
 
 ### Texto extraído
@@ -1415,38 +952,10 @@ C	ressalta fatos que ressignificam o momento presente.
 D	sinaliza uma sequência que denota ações consecutivas.
 E	apresenta uma explicação para as memórias resgatadas.
 
-### Texto contado
-
-Antes do inverno chegar.
-Ela tinha olhinhos brilhantes. Os mesmos de antes. Antes
-da fome. Antes das 17 mudanças de cidade. Dos sete filhos e
-dos muitos anos de trabalho dentro e fora de casa.
-Ela fazia ambrosia, bolo de fubá e pedacinhos de queijo.
-Antes do inverno, ela plantava flores novas e diferentes para
-nos esperar nas próximas férias de verão.
-Ela tinha o jeito de menina. Menina sapeca, correndo na
-grama seca do cerrado. O mesmo jeito de antes. Antes do
-marido (e mesmo com o marido). Antes do cansaço dos anos.
-Antes da dureza do trato com a terra.
-Ela tinha histórias. Compridas, curtas, divertidas e
-verdadeiras. Mas isso foi antes. Antes das lembranças se
-bagunçarem feito bolas coloridas de Natal esperando para
-serem montadas na árvore.
-Eu era sua neta. Antes do Alzheimer chegar, eu era sua
-neta. Mas ela é e sempre será minha avó.
-A narradora, ao resgatar memórias da história de vida da avó,
-faz uso recorrente da locução “antes de”. Esse termo colabora
-para a progressão temática na medida em que
-relaciona eventos ocorridos simultaneamente.
-estabelece uma comparação entre as lembranças.
-ressalta fatos que ressignificam o momento presente.
-sinaliza uma sequência que denota ações consecutivas.
-apresenta uma explicação para as memórias resgatadas.
-
 ## Questão 18
 
 - Idioma: geral
-- Palavras: 237
+- Palavras: 257
 - Tem imagem: não
 
 ### Texto extraído
@@ -1482,40 +991,10 @@ profissional.
 D	as ações de incentivo financeiro a jovens atletas são precárias.
 E	as publicações da mídia esportiva rotulam atletas iniciantes.
 
-### Texto contado
-
-Com 20 anos de experiência no futebol de alto rendimento,
-Marina, ex-jogadora da seleção brasileira de futebol, salienta que,
-por trás do espetáculo apresentado nas mídias, com mensagens de
-motivação e superação, o esporte não é tão inclusivo assim. “É esta
-análise que devemos fazer: aqueles atletas que estão ali estão
-trazendo uma alta performance a partir dos seus limites”, explica.
-Para a profissional, é preciso analisar com cautela “a ideia romântica
-que a mídia passa para os telespectadores”. A realidade é muito
-mais dura do que as imagens espetaculosas que principalmente
-a televisão busca transmitir para a audiência. “Por trás existe
-um ser humano, a gente não pode nunca esquecer isso. Aquela
-pessoa treinou insistentemente para estar ali, durante meses,
-semanas e temporadas. Duas vezes ao dia, de duas a quatro horas”,
-pondera Marina. Atualmente, as crianças e os jovens vislumbram
-o sucesso profissional e a boa-vida financeira de poucos atletas
-que se destacam e estampam os meios de comunicação. Tudo
-parece ser muito mais fácil do que realmente é quando apenas
-as conquistas são mostradas.
-Nesse texto, a visão crítica de uma ex-atleta de futebol revela que
-os meios de comunicação invisibilizam as dificuldades
-presentes no esporte.
-o treinamento atlético de alto nível é desestimulante para
-os indivíduos.
-o trabalho contínuo é desvalorizado no contexto esportivo
-profissional.
-as ações de incentivo financeiro a jovens atletas são precárias.
-as publicações da mídia esportiva rotulam atletas iniciantes.
-
 ## Questão 19
 
 - Idioma: geral
-- Palavras: 158
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -1542,31 +1021,10 @@ C	estímulo à competição entre adversárias.
 D	aprimoramento da expressão corporal.
 E	importância da saúde emocional.
 
-### Texto contado
-
-No predomínio das mulheres pretas brasileiras nos Jogos
-Olímpicos de 2024, uma coisa chamou a atenção no pódio: elas
-valorizam a parte psicológica. As duas medalhistas de ouro, a
-judoca Beatriz Souza e a ginasta Rebeca Andrade, ressaltam, em
-várias entrevistas, a importância da saúde mental. Em uma dessas
-entrevistas, Rebeca sinaliza: “Acho que não é só sobre vencer a
-Simone, é sobre vencer a mim mesma. A minha briga está na
-minha cabeça, não está com outras pessoas. Para conseguir fazer
-as minhas apresentações, preciso controlar a minha cabeça, o meu
-corpo, e essa é a briga”. Na mesma linha, a skatista Rayssa Leal
-exalta a necessidade da terapia, e a Seleção Brasileira de Futebol de
-Mulheres tem o suporte psicológico como reforço no treinamento.
-Nesse texto, as atletas brasileiras defendem o(a)
-investimento na modernização de equipamentos.
-subordinação do treinamento físico ao mental.
-estímulo à competição entre adversárias.
-aprimoramento da expressão corporal.
-importância da saúde emocional.
-
 ## Questão 20
 
 - Idioma: geral
-- Palavras: 196
+- Palavras: 215
 - Tem imagem: não
 
 ### Texto extraído
@@ -1599,37 +1057,10 @@ C	resgatar expressões portuguesas do período colonial.
 D	decodificar o ritual religioso dos nossos antepassados.
 E	favorecer a compreensão do léxico africano contemporâneo.
 
-### Texto contado
-
-A característica fundamental no aprendizado das práticas
-rituais nos candomblés é o processo iniciático e participante.
-Durante o período de reclusão em terreiros ou rocas, o iniciado
-passa por uma série de ritos esotéricos (banhos rituais, raspagem
-da cabeça etc.), ao mesmo tempo em que começa a adquirir
-um complexo código de símbolos materiais (substâncias, folhas,
-frutos, raízes etc.) e de gestos associados a um repertório
-linguístico específico das cerimônias que se desenrolam nos
-contextos sagrados em geral e em cada terreiro em particular.
-Esse repertório linguístico, genericamente chamado de
-“língua de santo” na Bahia, compreende uma terminologia
-religiosa operacional, de caráter mágico-semântico e de aparente
-forma portuguesa, mas que repousa sobre sistemas lexicais de
-diferentes línguas africanas que provavelmente foram faladas
-no Brasil escravocrata, vindo a constituir uma língua ritual, que
-se acredita pertencer à nação do vodum, do orixá ou do inquice,
-e não a determinada nação africana política atual.
-A “língua de santo” tem sua importância para o patrimônio
-linguístico brasileiro por
-apresentar uma carga semântica mítica.
-conservar elementos dos falares dos escravizados.
-resgatar expressões portuguesas do período colonial.
-decodificar o ritual religioso dos nossos antepassados.
-favorecer a compreensão do léxico africano contemporâneo.
-
 ## Questão 21
 
 - Idioma: geral
-- Palavras: 182
+- Palavras: 198
 - Tem imagem: não
 
 ### Texto extraído
@@ -1657,33 +1088,10 @@ C	incertezas centradas em sua condição social.
 D	hesitações em relação à sua formação profissional.
 E	preocupações com as políticas públicas assistenciais.
 
-### Texto contado
-
-O meu medo é entrar na faculdade e tirar zero eu que nunca
-fui bom de matemática fraco no inglês eu que nunca gostei de
-química geografia e português o que é que eu faço agora hein
-mãe não sei. [...]
-O meu medo é a vida piorar e eu não conseguir arranjar
-emprego nem de faxineiro nem de porteiro nem de ajudante
-de pedreiro e o pessoal dizer que o governo já fez o que pôde
-já pôde o que fez já deu a sua cota de participação hein mãe
-não sei.
-O meu medo é que mesmo com diploma debaixo do braço
-andando por aí desiludido e desempregado o policial me olhe
-de cara feia e eu acabe fazendo uma burrice sei lá uma besteira
-será que eu vou ter direito a uma cela especial hein mãe não sei.
-Nesse texto, a reiteração dos medos e das angústias do
-narrador exprime
-inseguranças sobre o futuro familiar.
-dilemas resultantes de seu fracasso escolar.
-incertezas centradas em sua condição social.
-hesitações em relação à sua formação profissional.
-preocupações com as políticas públicas assistenciais.
-
 ## Questão 22
 
 - Idioma: geral
-- Palavras: 179
+- Palavras: 232
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1715,32 +1123,10 @@ C	reprodução em madeira de modelos artísticos canônicos.
 D	representação de práticas corporais da comunidade.
 E	replicação seriada para distribuição em larga escala.
 
-### Texto contado
-
-A Ilha do Ferro, situada a 18 km do município de Pão de
-Açúcar, não é uma ilha, como o nome indica. A história do
-povoado é semelhante à de inúmeros outros que encontramos
-às margens do Rio São Francisco, entre Alagoas e Sergipe. O que
-torna diferente o lugar é sua gente. Hoje, dezenas de artistas
-populares povoam a Ilha do Ferro, trabalhando principalmente
-com o entalhe em madeira. Onde pessoas comuns enxergariam
-apenas troncos e galhos retorcidos, eles vislumbram bancos,
-bonecos, pássaros, cobras e bailarinas. “Às vezes, você passa
-por um pedaço de madeira uma vez e não vê nada, passa cinco
-vezes por ele e não vê nada”, conta um dos artistas, “mas, na
-décima vez, você consegue enxergar alguma forma nesse pedaço
-de madeira e transformá-lo em arte”.
-A originalidade do trabalho dos artistas da Ilha do Ferro se dá pela
-reutilização de materiais para redução do impacto ambiental.
-ressignificação da matéria-prima atribuindo-lhe nova função.
-reprodução em madeira de modelos artísticos canônicos.
-representação de práticas corporais da comunidade.
-replicação seriada para distribuição em larga escala.
-
 ## Questão 23
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 169
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1769,28 +1155,10 @@ D	desigualdades nos incentivos à produção artística brasileira.
 E	negligência na conservação do patrimônio arquitetônico
 luso-brasileiro.
 
-### Texto contado
-
-Os trabalhos da exposição Adriana Varejão: suturas, fissuras,
-ruínas colocam em pauta o exame da história visual, das tradições
-iconográficas europeias e do fazer artístico ocidental. O corte,
-a rachadura, o talho e a fissura são elementos de narrativas
-recorrentes nos trabalhos da artista desde 1992. As produções
-recentes incluem pinturas tridimensionais de grande escala das
-séries Ruínas de charque e Línguas.
-A utilização de recursos visuais como suturas, cortes e ruínas por
-Adriana Varejão, na obra Azulejaria em carne viva, remete à(s)
-sobreposição da cultura brasileira à arte portuguesa.
-manutenção da representação realista na arte brasileira.
-violências desencadeadas pelo processo colonial brasileiro.
-desigualdades nos incentivos à produção artística brasileira.
-negligência na conservação do patrimônio arquitetônico
-luso-brasileiro.
-
 ## Questão 24
 
 - Idioma: geral
-- Palavras: 78
+- Palavras: 97
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1804,19 +1172,10 @@ C	indicar a importância da orientação vocacional na educação de crianças n
 D	chamar a atenção sobre a necessidade de ações voltadas para a educação infantil.
 E	valorizar o trabalho de agências internacionais na luta contra a discriminação racial.
 
-### Texto contado
-
-Nesse cartaz, a utilização de frases que projetam a vida profissional de duas crianças tem como objetivo
-sugerir a arrecadação de fundos para o sustento de povos originários no país.
-sensibilizar a sociedade sobre os benefícios decorrentes do combate ao racismo.
-indicar a importância da orientação vocacional na educação de crianças no Brasil.
-chamar a atenção sobre a necessidade de ações voltadas para a educação infantil.
-valorizar o trabalho de agências internacionais na luta contra a discriminação racial.
-
 ## Questão 25
 
 - Idioma: geral
-- Palavras: 279
+- Palavras: 302
 - Tem imagem: não
 
 ### Texto extraído
@@ -1841,30 +1200,10 @@ C	efeito estilístico da repetição intencional da palavra “assim” no últi
 D	sedução sugerida pelo envolvimento direto do leitor marcado nos usos de “você” e “sua”.
 E	humor gerado pelo uso das estruturas linguísticas que são objeto da reflexão desenvolvida.
 
-### Texto contado
-
-Passando por aqui para lembrar algumas palavras, frases e expressões que nos infernizaram em 2023. Inclusive passando
-por aqui. Se você for proativo, vai achar que é o novo normal. Estarão na sua zona de conforto. Mas, se for reativo como eu, vai
-achar que é uma narrativa que precisa ser ressignificada.
-É uma questão de empatia. É sobre entregar um discurso mais robusto e empoderado. Sei bem que não tenho lugar de fala
-para harmonizar certos pontos fora da curva e que preciso aplicar toda a minha resiliência para fazer um realinhamento. O nível
-de fitness está hoje num sarrafo muito alto.
-O fato é que acho cringe essas falas fora da caixinha. Aliás, falar cringe já é meio cringe. Preciso usar a superação para me
-reinventar e entender que resenha não tem mais a ver com futebol, é qualquer papo, desde que latente.
-Pensando bem, não é tão difícil. Frases feitas são aquelas que entram por um ouvido e saem pelo outro sem um estágio
-intermediário no cérebro. A boca fala por conta própria, dispensando-nos de pensar. E não tem problema nisso. Ou as ditas
-frases se incorporam à língua ou morrem e nascem outras. A língua é assim. Simples assim.
-Nesse texto, a estratégia empregada para criticar a constante exposição a palavras, frases e expressões automatizadas é o(a)
-menção feita à efemeridade de alguns usos linguísticos aleatórios.
-subjetividade marcada pela reflexão que se desenvolve em primeira pessoa.
-efeito estilístico da repetição intencional da palavra “assim” no último parágrafo.
-sedução sugerida pelo envolvimento direto do leitor marcado nos usos de “você” e “sua”.
-humor gerado pelo uso das estruturas linguísticas que são objeto da reflexão desenvolvida.
-
 ## Questão 26
 
 - Idioma: geral
-- Palavras: 35
+- Palavras: 50
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1879,20 +1218,10 @@ C	disputa regional pelo melhor prato.
 D	modos de preparo de um mesmo alimento.
 E	paladares diversificados entre diferentes estados.
 
-### Texto contado
-
-Esse texto, que apresenta um prato da culinária brasileira,
-evidencia
-valor afetivo nas nomenclaturas.
-variedade linguística entre regiões.
-disputa regional pelo melhor prato.
-modos de preparo de um mesmo alimento.
-paladares diversificados entre diferentes estados.
-
 ## Questão 27
 
 - Idioma: geral
-- Palavras: 125
+- Palavras: 149
 - Tem imagem: não
 
 ### Texto extraído
@@ -1916,28 +1245,10 @@ C	predomínio de regras na briga.
 D	desafio externo presente na luta.
 E	habilidade desenvolvida na briga.
 
-### Texto contado
-
-A diferença entre briga e luta é a existência de juízes e medalhas?
-A briga desumaniza o outro e pode até matá-lo. Já na luta, as
-intenções do outro são consideradas sua proposta combativa e suas
-habilidades, enfim, sua meta de vencer. Na luta, o desenvolvimento
-passa pelo contato com a agressividade, a raiva, a frustração, o
-orgulho, a determinação e a fraqueza. Daí também a luta não ser
-apenas com o outro, mas consigo mesmo, num combate contra as
-próprias limitações, sobretudo, contra o próprio orgulho.
-Esse texto apresenta as diferenças entre briga e luta, na medida
-em que aponta o(a)
-superação pessoal na luta.
-violência evidenciada na luta.
-predomínio de regras na briga.
-desafio externo presente na luta.
-habilidade desenvolvida na briga.
-
 ## Questão 28
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 160
 - Tem imagem: não
 
 ### Texto extraído
@@ -1968,35 +1279,10 @@ C	sonoridade dos versos produzida pela pontuação.
 D	religiosidade evocada como forma de fortalecimento.
 E	impressão de sonho na construção da estrutura poética.
 
-### Texto contado
-
-Pequenino morto
-Tange o sino, tange, numa voz de choro,
-Numa voz de choro... tão desconsolado...
-No caixão dourado, como em berço de ouro,
-Pequenino, levam-te dormindo... Acorda!
-Olha que te levam para o mesmo lado
-De onde o sino tange numa voz de choro...
-Pequenino, acorda!
-Que caminho triste, e que viagem! Alas
-De ciprestes negros a gemer no vento;
-Tanta boca aberta de famintas valas
-A pedir que as fartem, a esperar que as encham...
-Pequenino, acorda! Recupera o alento,
-Foge da cobiça dessas fundas valas
-A pedir que as encham.
-Nesse fragmento do poema, o sentimento de luto adquire
-contornos expressivos e é intensificado pela
-descrição da paisagem de um cemitério.
-recusa do eu lírico à irreversibilidade da morte.
-sonoridade dos versos produzida pela pontuação.
-religiosidade evocada como forma de fortalecimento.
-impressão de sonho na construção da estrutura poética.
-
 ## Questão 29
 
 - Idioma: geral
-- Palavras: 192
+- Palavras: 210
 - Tem imagem: não
 
 ### Texto extraído
@@ -2026,35 +1312,10 @@ C	mostra os benefícios da fartura na agricultura.
 D	defende a importância da atividade coletiva.
 E	valoriza o trabalho ao longo das gerações.
 
-### Texto contado
-
-Só entende os corações desse lugar quem mergulha nesse
-mar a perder de vista e recoberto de cana caiana, cana fita, cana
-roxa, cana-de-macaco, açúcar, melado, rapadura, aguardente,
-fumo, mandioca, quiabos, pimentas, moendas, frutas, fruta-pão,
-sobrados, senzalas, tachos, casa de purgar. Um reino dentro de
-outro, com tudo o que se tem direito: reis, rainhas, príncipes e
-princesas, bobos da corte, cortesãos, conselheiros e escravos,
-muitos escravos. […]
-A corte do massapé, como qualquer outra na história da
-humanidade, fazia tudo para não deixar escapar nenhum mísero
-grão dos seus domínios para quem estivesse de fora do seu
-apertado círculo. Os nomes se repetiam de pai para filho, para
-sobrinho, para netos e bisnetos, de forma concêntrica e repetitiva,
-para que não pairasse nenhuma dúvida de que são todos da
-mesma parentela. As farinhas todas num mesmo saco brasonado.
-Nesse fragmento, o narrador enumera o resultado do trabalho
-com a terra, o qual, no contexto em que aparece,
-espelha a permanência dos privilégios de classe.
-oferece um panorama da população do campo.
-mostra os benefícios da fartura na agricultura.
-defende a importância da atividade coletiva.
-valoriza o trabalho ao longo das gerações.
-
 ## Questão 30
 
 - Idioma: geral
-- Palavras: 189
+- Palavras: 210
 - Tem imagem: não
 
 ### Texto extraído
@@ -2087,37 +1348,10 @@ línguas indígenas.
 D	atualização de saberes tradicionais dos povos indígenas brasileiros.
 E	descrição das propriedades científicas de plantas silvestres.
 
-### Texto contado
-
-Uruku
-Urucum
-Rocou
-(Bixa orellana)
-Moju, dono da água, não gosta do cheiro de urucum. Mani’ojarã,
-dono da mandioca, e os donos das outras plantas cultivadas também
-não. Eles não suportam. Por isso, os Wajãpi se untam de urucum,
-deixam o rosto vermelho e se perfumam com seu aroma agradável.
-Além disso, os seres agressores, os jarã (donos) e os espíritos
-terrestres, gostam do cheiro dos fluidos humanos, do sangue, do
-suor. Então, o urucum os dissimula, protegendo as pessoas que
-vão caçar, caminhar pela floresta, que estão sendo perturbadas
-por espíritos em sonhos ou que estão em resguardo, como os
-doentes. O seu uso é tão cotidiano que os Wajãpi o plantam na
-aldeia, para ter sempre pertinho. Como o urucum não tem jarã,
-não tem problema nenhum em arrancar e usar para pintar.
-Esse verbete contribui para a preservação do patrimônio
-linguístico nacional, pois apresenta uma
-explicação de um rito medicinal do povo Wajãpi.
-definição de um termo na perspectiva ancestral indígena.
-relação de equivalência entre vocábulos de diferentes
-línguas indígenas.
-atualização de saberes tradicionais dos povos indígenas brasileiros.
-descrição das propriedades científicas de plantas silvestres.
-
 ## Questão 31
 
 - Idioma: geral
-- Palavras: 49
+- Palavras: 75
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2133,20 +1367,10 @@ C	os conflitos de identidade dos usuários da internet.
 D	o impacto das tecnologias nas interações humanas.
 E	os desejos de compartilhar vivências com os amigos.
 
-### Texto contado
-
-Nesse texto, a autora aborda diferentes sentidos da palavra
-“rede” para evidenciar
-as formas de comunicação em meios digitais.
-a necessidade de atualização das mídias sociais.
-os conflitos de identidade dos usuários da internet.
-o impacto das tecnologias nas interações humanas.
-os desejos de compartilhar vivências com os amigos.
-
 ## Questão 32
 
 - Idioma: geral
-- Palavras: 238
+- Palavras: 254
 - Tem imagem: não
 
 ### Texto extraído
@@ -2181,40 +1405,10 @@ C	ênfase no público leitor.
 D	apresentação de uma moral.
 E	restrição espacial do suporte.
 
-### Texto contado
-
-Muitos pensam que narrativa curta é sinônimo de conto,
-perdendo de vista gêneros que, por tradição ruim, continuam à
-margem da nobreza. Acontece que o conto tem uma densidade
-específica, centrando-se na exemplaridade de um instante da
-condição humana, sem que essa exemplaridade se refira à valoração
-moral, já que uma grande mazela pode muito bem exemplificar uma
-das nossas faces. A crônica não tem essa característica. Conservou a
-marca do registro circunstancial feito por narrador-repórter que relata
-um fato para muitos leitores que formam um público determinado.
-Mas que público é esse? Sendo a crônica uma soma de jornalismo
-e literatura (daí a imagem do narrador-repórter), dirige-se a uma
-classe que tem preferência pelo jornal em que ela é publicada, o
-que significa uma espécie de censura ou, pelo menos, de limitação: a
-ideologia do veículo corresponde ao interesse dos seus consumidores,
-direcionados pelos proprietários dos periódicos e/ou pelos editores-
--chefes da redação. Ocorre ainda o limite de espaço, uma vez que
-a página comporta várias matérias, o que impõe a cada uma delas
-um número restrito de laudas, obrigando o redator a explorar, da
-maneira mais econômica possível, o pequeno espaço de que dispõe.
-É dessa economia que nasce sua riqueza estrutural.
-De acordo com esse texto, o aspecto tecnológico que influencia
-a composição do gênero crônica advém da
-conexão ideológica.
-densidade temática.
-ênfase no público leitor.
-apresentação de uma moral.
-restrição espacial do suporte.
-
 ## Questão 33
 
 - Idioma: geral
-- Palavras: 61
+- Palavras: 80
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2231,22 +1425,10 @@ D	ressaltar a importância da segurança dos estudantes no
 ambiente escolar.
 E	dar visibilidade a estudos e pesquisas do setor de segurança.
 
-### Texto contado
-
-Esse texto trata de um problema social com o propósito de
-divulgar campanha virtual contra casos de feminicídio.
-promover engajamento do setor educacional na luta contra
-a violência.
-comparar o impacto da violência na qualidade de vida de
-meninas e meninos.
-ressaltar a importância da segurança dos estudantes no
-ambiente escolar.
-dar visibilidade a estudos e pesquisas do setor de segurança.
-
 ## Questão 34
 
 - Idioma: geral
-- Palavras: 73
+- Palavras: 92
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2265,23 +1447,10 @@ C	a construção dessa frase possibilita mais de uma interpretação.
 D	essa frase estabelece um diálogo direto com o leitor.
 E	a linguagem utilizada volta-se para si mesma.
 
-### Texto contado
-
-Com base na relação dos elementos não verbais com a frase
-“VOCÊ (NÃO) ESTÁ SOZINHO”, nessa capa de revista, a função
-poética fica evidente, pois
-essa frase informa sobre os riscos de um determinado
-comportamento social.
-o conteúdo da mensagem expressa a atitude do enunciador
-sobre o tema.
-a construção dessa frase possibilita mais de uma interpretação.
-essa frase estabelece um diálogo direto com o leitor.
-a linguagem utilizada volta-se para si mesma.
-
 ## Questão 35
 
 - Idioma: geral
-- Palavras: 205
+- Palavras: 229
 - Tem imagem: não
 
 ### Texto extraído
@@ -2313,36 +1482,10 @@ de autoridade.
 E	enumera críticas à aparência de mulheres consideradas
 padrões de beleza.
 
-### Texto contado
-
-Margot Robbie foi criticada por “não ser bonita o suficiente”
-para interpretar a Barbie. Recentemente, Paolla Oliveira foi
-chamada de gorda. Só fico pensando o que serei eu com mais de
-50 (também no peso), com a minha aparência comum. O corpo
-da mulher vive um reality show permanente: é sempre vigiado
-e fiscalizado, como se fosse domínio público. A mulher que não
-atender aos estereótipos está sujeita a sofrer penalidades básicas,
-como distúrbios, obsessões, medo do próprio corpo e, é claro, dietas
-à base de rúcula. “A dieta é o sedativo político mais potente na
-história das mulheres”, escreveu Naomi Wolf, em 1991. A regra é
-não haver singularidade, mascarar a passagem do tempo, imobilizar
-a beleza (já imaginou como isso seria enfadonho?). O mandamento
-é obedecer às regras sociais do bom comportamento corporal,
-“como deve ser”, não nos atos, mas na forma.
-Nesse texto, para introduzir a ideia de que a fiscalização
-permanente sobre o corpo afeta todas as mulheres, a autora
-faz um comentário sobre sua própria imagem.
-destaca avaliações particulares entre parênteses.
-cita um formato de programa influente no segmento da beleza.
-utiliza declaração de uma jornalista como argumento
-de autoridade.
-enumera críticas à aparência de mulheres consideradas
-padrões de beleza.
-
 ## Questão 36
 
 - Idioma: geral
-- Palavras: 187
+- Palavras: 222
 - Tem imagem: não
 
 ### Texto extraído
@@ -2372,33 +1515,10 @@ C	a escolaridade do falante.
 D	uma estratégia presente na linguagem oral.
 E	uma ênfase em determinadas partes do discurso.
 
-### Texto contado
-
-I: o nome do filme é roupa suja ... eu assisti na minha casa ...
-com minha mãe ... tinha um ... o filme era sobre um homem que
-colocaram ... trocaram as bolsas ... daí o homem levou uma bolsa
-cheia de dinheiro sem ele saber que na mala dele ... pensando
-que era dele mas era errada ... quando ele chegou onde ele ia
-trabalhar ... tinha uma moça tentando abrir a porta pra fazer
-entrevista com uns cantores lá que tinham ... daí ele perguntou
-... “você tá tentando abrir a porta?”... daí ele ... “não ... não” ...
-daí ele disse ... “ah ... tá ... sim” ... daí ela ... “é ... e quero fazer
-uma entrevista” ... daí ele disse ... “você quer entrar ... então
-pode entrar” ... daí entraram ... daí ficaram lá ... quando ela
-entrou e queria fazer a entrevista um homem num deixou ... daí a
-mulher pegou ... subiu onde o homem tava trabalhando ... rapaz
-né ... onde ele tava trabalhando e ficou lá e dando o show ...
-Nesse texto, a repetição da forma “daí” revela
-a necessidade de adequação ao interlocutor.
-a origem regional do locutor.
-a escolaridade do falante.
-uma estratégia presente na linguagem oral.
-uma ênfase em determinadas partes do discurso.
-
 ## Questão 37
 
 - Idioma: geral
-- Palavras: 302
+- Palavras: 367
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2432,33 +1552,10 @@ C	vocabulário empregado no Texto II é ancorado em conhecimento literário.
 D	tema do trabalho como reparação é abordado em ambos os textos.
 E	marcação temporal no passado predomina em ambos os textos.
 
-### Texto contado
-
-Os Doze Trabalhos de Hércules
-Hércules é uma figura lendária da mitologia greco-romana. Ele é frequentemente retratado como um herói de força
-sobre-humana e coragem, filho de Zeus, o rei dos deuses, e Alcmena, uma mulher mortal. O episódio mais conhecido de Hércules
-é a realização dos Doze Trabalhos.
-Esses trabalhos são impostos a ele como uma forma de expiação pelos crimes cometidos durante um acesso de loucura,
-causado pela deusa Hera, esposa de Zeus. Os Doze Trabalhos são: matar o Leão de Nemeia; matar a Hidra de Lerna; capturar a
-corça de Cerineia; capturar o javali de Erimanto; limpar os estábulos de Áugias; matar as aves do lago Estínfalo; matar o touro
-de Creta; capturar os cavalos de Diomedes; roubar o cinturão de Hipólita, a rainha das Amazonas; capturar o gado de Gerião;
-capturar os pomos de ouro do Jardim das Hespérides; capturar o cão de Hades, Cérbero.
-Os Doze Trabalhos
-O que lhe faltava de estudo lhe sobrava de boa vontade e inteligência. No escritório improvisado na salinha da casa, anunciava
-seus serviços de bombeiro hidráulico e eletricista. Nas horas vagas entregava panfletos e lavava carros. Quando a cidade fervia
-com alguma festa, postava-se à entrada vendendo cerveja. Se fosse algum show infantil, cocadas. Aos sábados, era pedreiro e, aos
-domingos, conservava um jardim de uma mansão, além de tratar da piscina e dos cachorros. Nas férias, abrigava-se na fazenda
-A comparação entre os textos I e II indica que o(a)
-intertextualidade com o mito apresentado no Texto I é um recurso presente no Texto II.
-narração de fatos do Texto II sintetiza os acontecimentos retratados no Texto I.
-vocabulário empregado no Texto II é ancorado em conhecimento literário.
-tema do trabalho como reparação é abordado em ambos os textos.
-marcação temporal no passado predomina em ambos os textos.
-
 ## Questão 38
 
 - Idioma: geral
-- Palavras: 216
+- Palavras: 237
 - Tem imagem: não
 
 ### Texto extraído
@@ -2481,28 +1578,10 @@ C	palavra “isso” (l. 5) remete ao segmento textual posterior “os alarmes n
 D	pronome “o” em “o que nos daria tempo” (l. 7) remete a “ou usar nossos cartões de crédito” (l. 8).
 E	fragmento “o asteroide da Sibéria” (l. 3) introduz um elemento novo no texto.
 
-### Texto contado
-
-O mais assustador do meteoro que cruzou o céu da Sibéria e explodiu no ar como
-várias bombas atômicas é que ele chegou sem ser anunciado. Com todas as atenções
-voltadas para o outro asteroide, o que passou de raspão, o asteroide da Sibéria entrou pela
-porta dos fundos sem ser detectado. A desculpa é que era pequeno demais para chamar a
-atenção e por isso os alarmes não funcionaram. Nossa ilusão, até agora, era que qualquer
-detrito espacial que se aproximasse de nós seria identificado e rotulado, e sua trajetória
-calculada até o último milímetro com grande antecedência, o que nos daria tempo para
-preparar o espírito — ou usar nossos cartões de crédito até o limite — no caso da colisão
-com a Terra ser inevitável.
-Com base na organização coesiva desse texto, o(a)
-oração “que passou de raspão” (l. 3) refere-se ao “meteoro que cruzou o céu da Sibéria” (l. 1).
-expressão “sua trajetória” (l. 6) refere-se ao elemento textual “qualquer detrito espacial” (l. 5-6).
-palavra “isso” (l. 5) remete ao segmento textual posterior “os alarmes não funcionaram” (l. 5).
-pronome “o” em “o que nos daria tempo” (l. 7) remete a “ou usar nossos cartões de crédito” (l. 8).
-fragmento “o asteroide da Sibéria” (l. 3) introduz um elemento novo no texto.
-
 ## Questão 39
 
 - Idioma: geral
-- Palavras: 241
+- Palavras: 264
 - Tem imagem: não
 
 ### Texto extraído
@@ -2527,30 +1606,10 @@ C	permanência do rádio e sua evolução por meio da tecnologia digital.
 D	influência da televisão sobre os programas de radiojornalismo.
 E	interferência da tecnologia digital nas interações humanas.
 
-### Texto contado
-
-Do rádio ao podcast
-Desde a disseminação do rádio no Brasil, entre as décadas de 1920 e 1930, principalmente no governo de Getúlio Vargas,
-as pessoas passaram a dedicar uma parte de seu dia para escutar notícias, novelas, músicas e eventos esportivos em aparelhos
-de som. O radiojornalismo, por sua vez, teve seu pontapé inicial durante a Revolução Constitucionalista (1932) e se desenvolveu
-durante a Segunda Guerra Mundial (1939-1945).
-Quando a TV surgiu, esperava-se que o rádio fosse totalmente substituído, porém ele se manteve em alta, pois o sinal de televisão
-não cobria todos os lugares, diferentemente do rádio. Com o surgimento da internet, dos smartphones e de outros dispositivos
-móveis, o rádio foi incorporado a essas novas tecnologias até o desenvolvimento da web rádio e do podcast, mostrando-se um
-meio de comunicação versátil e democrático na área jornalística.
-Para um pesquisador da Universidade Federal de Uberlândia (UFU), o rádio não se tornou obsoleto, visto que não deixou de
-ser consumido e se reinventou com o tempo. “O podcast é uma continuação, uma evolução natural do rádio”, opina.
-Ao abordar a trajetória dos meios de comunicação, esse texto propõe uma reflexão sobre a
-tecnologia digital e seus desdobramentos no desenvolvimento da televisão.
-evolução da tecnologia digital com o predomínio do podcast sobre o rádio.
-permanência do rádio e sua evolução por meio da tecnologia digital.
-influência da televisão sobre os programas de radiojornalismo.
-interferência da tecnologia digital nas interações humanas.
-
 ## Questão 40
 
 - Idioma: geral
-- Palavras: 363
+- Palavras: 380
 - Tem imagem: não
 
 ### Texto extraído
@@ -2583,38 +1642,10 @@ C	persistência do sentimentalismo explorado pelos folhetins.
 D	prática do enriquecimento ilícito visto nas grandes cidades.
 E	desigualdade de gênero acentuada pela baixa escolarização.
 
-### Texto contado
-
-Desenvolvendo-se nesse meio, é natural que Celina, filha mais velha de D. Adozinda, tivesse seus pequenos flirts com alguns
-desses rapazes, muito íntimos da casa e trazendo-lhe da cidade presentes de doces, de balas de ovo, de jornais ilustrados ou
-de frutas.
-As irmãs mais novas iam ao colégio; ela ficava, enchendo o tempo com uns crochês vagarosos, costuras leves, a leitura dos
-folhetins dos jornais; e o Gilberto, que raramente saía, andava sempre ao seu lado, muito caído por esse tipo um pouco mórbido
-de menina anêmica [...].
-O Gilberto não valia nada, mas quem sabe se apareceria outro, simplório e sincero como ele? E a filha, com os seus
-dezessete anos, começava a embaraçá-la um pouco, nesse difícil papel de virgem numa casa de pensão, cheia de rapazes. Ora,
-o melhor era esperar, dar tempo ao tempo... E o Gilberto e a Celina continuaram a namorar-se, ele cândido, ela dúbia; enquanto
-o Coronel Juvenato, que deixara a mulher em Sobral para tratar de uma concessão rendosa com os políticos do Rio, ia agora
-monopolizando, como protetor mais importante, as alegres visitas matinais da viúva, que já lhe levava sempre o café — mas
-sem flores colhidas no jardim, ainda rociadas de orvalho, porque o cearense não dava para essas coisas de poesia. Era rápido,
-prático, e não admitia bobagens. Por isso, todos os sábados à noite, ele dizia a D. Adozinda com um tremor lúbrico nas banhas
-moles da face, os olhinhos vivos pestanejando:
-— A senhora não se esqueça que amanhã é domingo... Leve-me cedo o café, hein?... que eu tenho de ir à missa...
-— Pois não, pois não, Coronel! fique descansado — respondia a viúva do Ferreira, muito atenciosamente, tirando-lhe umas
-caspas da gola do paletó, com a mão repolhuda.
-Os outros hóspedes riam-se à socapa; e no domingo o café não faltava, bem cedinho...
-Nesse trecho, ao explorar a descrição como recurso que demarca impressões e pontos de vista, o narrador cria uma ambiência
-sugestiva do(a)
-escárnio relacionado à degradação moral dos indivíduos.
-cenário urbano marcado por condições de insalubridade.
-persistência do sentimentalismo explorado pelos folhetins.
-prática do enriquecimento ilícito visto nas grandes cidades.
-desigualdade de gênero acentuada pela baixa escolarização.
-
 ## Questão 41
 
 - Idioma: geral
-- Palavras: 207
+- Palavras: 257
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2640,27 +1671,10 @@ C	anulação dos traços que permitem reconhecer o animal representado.
 D	presença de grafismos na forma animal representada no banco.
 E	criação de figuras fantásticas baseadas em formas animais.
 
-### Texto contado
-
-Origem, tradição e resistência
-Foi sentada em seu banco de quartzo que a avó do universo, moradora da Maloca do Céu, criou os homens, os animais,
-a terra e as águas. O banco foi entregue aos ancestrais dos atuais Tukano, que passaram a reproduzi-lo em madeira. O mito
-Tukano — povo do noroeste da Amazônia que ainda hoje fabrica os bancos em seu estilo tradicional — indica o lugar dos bancos
-entre os objetos sagrados, ao mesmo tempo parte do universo primitivo e fonte do poder de criação. A presença nos mitos
-de origem de alguns povos atesta a antiguidade da arte de talhar bancos: os primeiros registros do uso desses objetos entre
-ameríndios das terras baixas da América do Sul, do Caribe e da América Central datam de, pelo menos, 4 mil anos.
-Os textos I e ll demonstram, na confecção dos bancos, uma íntima relação de sacralidade entre o ser humano e a natureza,
-perceptível por meio da
-representação realista de animais, mostrando o domínio do homem sobre a natureza.
-manutenção da herança cultural, atribuindo nova função aos elementos da fauna.
-anulação dos traços que permitem reconhecer o animal representado.
-presença de grafismos na forma animal representada no banco.
-criação de figuras fantásticas baseadas em formas animais.
-
 ## Questão 42
 
 - Idioma: geral
-- Palavras: 173
+- Palavras: 180
 - Tem imagem: não
 
 ### Texto extraído
@@ -2691,37 +1705,10 @@ C	coloquial, que reproduz as relações sociais cotidianas.
 D	erudita, que resgata a origem latina da língua portuguesa.
 E	técnica, que facilita a circulação de informações no sistema judiciário.
 
-### Texto contado
-
-TRADUZINDO O JURIDIQUÊS
-“Denego a liminar pleiteada na exordial, inobstante
-após a oitiva da parte adversa e da dilação probatória
-possa lograr alcançar um outro epílogo para o deslinde
-da quaestio sub examine.”
-TRADUÇãO
-Não atendo, por ora, a liminar requerida na petição
-inicial, ainda que possa chegar a uma outra conclusão
-após ouvir a outra parte e avaliar as  provas produzidas.
-Proposta de emenda à Constituição 269 de 2013. Aplica-se
-aos Governadores e Prefeitos o Regime Geral de Previdência
-Social, vedada a concessão graciosa, após o término do
-mandato, de vantagem pecuniária, verba de representação,
-pensão ou subsídio.
-TRADUÇãO
-Torna-se proibido pagar benefícios vitalícios para
-ex-prefeitos e ex-governadores.
-Superinteressante, n. 322, ago. 2013 (adaptado).
-Nesse texto, contribui para a construção da ironia a tradução das passagens escritas em “juridiquês” para uma variedade
-padrão, que alcança o público em geral.
-histórica, que registra a evolução das leis.
-coloquial, que reproduz as relações sociais cotidianas.
-erudita, que resgata a origem latina da língua portuguesa.
-técnica, que facilita a circulação de informações no sistema judiciário.
-
 ## Questão 43
 
 - Idioma: geral
-- Palavras: 239
+- Palavras: 258
 - Tem imagem: não
 
 ### Texto extraído
@@ -2756,40 +1743,10 @@ C	estudo sobre a demarcação das terras indígenas.
 D	protagonismo feminino na linha sucessória desse povo.
 E	reconhecimento dessa comunidade pelo governo brasileiro.
 
-### Texto contado
-
-Em 1995, os Jenipapo-Kanindé quebraram a tradição da
-sucessão masculina e nomearam Maria de Lourdes da Conceição
-Alves como sua líder. Desde então, a Cacique Pequena guia o
-povo em grandes batalhas pelo direito a terra, educação, saúde
-e cidadania. Hoje, a anciã de 73 anos prepara duas filhas para
-lhe sucederem quando ela “tombar e pai Tupã a levar”.
-Hoje, 129 famílias do município de Aquiraz são reconhecidas
-pela Fundação Nacional dos Povos Indígenas (Funai) como
-indígenas, principal luta de Pequena para o seu povo desde
-o início. “Em 1995, fui a Brasília e tive a oportunidade de
-conversar com o presidente da Funai. Pedi que mandasse o
-povo dele na aldeia para fazer o estudo da nossa mãe-terra
-e de nós”. Dois anos depois, vieram os antropólogos, que
-concluíram: “Nós era índio sim!”, diz ela.
-Há cerca de oito anos, Pequena adoeceu e ficou entre a
-vida e a morte. Nesse momento, precisou escolher, entre os
-16 filhos, quem assumiria sua missão quando partisse. Reunida,
-a família decidiu sobre a sucessão. “Disseram que, como eu
-era a primeira cacique mulher do Ceará, acharam melhor eu
-colocar duas filhas”.
-Ao abordar a realidade da etnia Jenipapo-Kanindé, essa
-reportagem cumpre uma função social quando destaca o(a)
-quantidade de famílias indígenas em Aquiraz.
-força da tradição nas comunidades indígenas.
-estudo sobre a demarcação das terras indígenas.
-protagonismo feminino na linha sucessória desse povo.
-reconhecimento dessa comunidade pelo governo brasileiro.
-
 ## Questão 44
 
 - Idioma: geral
-- Palavras: 233
+- Palavras: 252
 - Tem imagem: não
 
 ### Texto extraído
@@ -2827,42 +1784,10 @@ D	enumerar razões pertinentes a esse ato, como no exemplo
 E	implicar o autor do texto como corresponsável pela campanha,
 pelo uso de “é nossa função”.
 
-### Texto contado
-
-Porque ler para crianças é um ato de amor
-Parece que, com o avanço da tecnologia, os livros têm
-enfrentado cada vez mais concorrência. Por isso, é nossa
-função lembrar a importância da leitura em todas as fases
-da vida, mas principalmente na primeira infância (entre 0 e
-5 anos), quando o desenvolvimento das crianças acontece de
-forma mais intensa.
-O ato de ler com uma criança ou ler para ela vai muito além
-de apenas aproveitar uma história em conjunto. É um laço de
-amorosidade, porque oferece a ela ferramentas que vão ajudá-
-la a crescer forte e independente.
-Se você precisa de uma motivação extra para entrar nessa
-rede de incentivo, fique ligado nos motivos a seguir. Adotar
-esse hábito em casa:
-1 – cria um laço emocional com a criança;
-2 – ajuda no desenvolvimento das capacidades cognitivas;
-3 – ensina sobre o mundo;
-4 – incentiva o processamento de informações e a imaginação.
-Para persuadir o interlocutor sobre a importância de ler para as
-crianças, esse texto recorre à estratégia de
-propor uma condição aos pais, pelo emprego da conjunção “se”.
-relativizar a opinião apresentada pelo autor, com o uso de
-“Parece que”.
-empregar uma linguagem metafórica, com o uso da expressão
-“laço de amorosidade”.
-enumerar razões pertinentes a esse ato, como no exemplo
-“ensina sobre o mundo”.
-implicar o autor do texto como corresponsável pela campanha,
-pelo uso de “é nossa função”.
-
 ## Questão 45
 
 - Idioma: geral
-- Palavras: 72
+- Palavras: 227
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2881,24 +1806,23 @@ B	destacar os múltiplos sentidos do verbete.
 C	explicar o significado da expressão ilustrada.
 D	apresentar termos equivalentes em outras línguas.
 E	apontar para a dificuldade de compreensão do termo.
-
-### Texto contado
-
-A artista Marija Tiurina criou uma série chamada Palavras
-intraduzíveis, com diversas ilustrações detalhadas que
-transmitem o sentido desses vocábulos, que nenhuma palavra
-única em outras línguas pode descrever.
-O uso do texto verbal nesse desenho assume a função de
-descrever de forma técnica a ilustração.
-destacar os múltiplos sentidos do verbete.
-explicar o significado da expressão ilustrada.
-apresentar termos equivalentes em outras línguas.
-apontar para a dificuldade de compreensão do termo.
+INSTRUÇÕES PARA A REDAÇÃO
+1. O rascunho da redação deve ser feito no espaço apropriado.
+2. O texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 (trinta) linhas.
+3. A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas
+copiadas desconsiderado para a contagem de linhas.
+4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:
+4.1. tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”;
+4.2. fugir ao tema ou não atender ao tipo dissertativo-argumentativo;
+4.3. apresentar parte do texto deliberadamente desconectada do tema proposto;
+4.4. apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.
+RASCUNHO
+DA REDAÇÃO
 
 ## Questão 46
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 161
 - Tem imagem: não
 
 ### Texto extraído
@@ -2919,26 +1843,10 @@ C	subjugar a minoria étnica.
 D	expandir o território nacional.
 E	intensificar a integração regional.
 
-### Texto contado
-
-Macedônia do Norte
-Acordo entra em vigor e país muda oficialmente de nome
-Entrou em vigor, em 2019, o acordo que determina a mudança de nome da Macedônia para Macedônia do Norte. A troca
-põe fim — ao menos por enquanto — no impasse entre essa antiga república da Iugoslávia e a vizinha Grécia. O governo grego
-se opunha ao uso do nome Macedônia pelo novo país vizinho porque a Grécia tem uma província no norte com o mesmo nome.
-Por causa desse impasse, a Grécia bloqueou as negociações de adesão de seu vizinho à União Europeia. Depois de negociações,
-as duas partes chegaram a um acordo.
-Para o país originado da antiga Iugoslávia, a mudança de nome é uma estratégia política para
-criar a moeda própria.
-proteger a cultura local.
-subjugar a minoria étnica.
-expandir o território nacional.
-intensificar a integração regional.
-
 ## Questão 47
 
 - Idioma: geral
-- Palavras: 39
+- Palavras: 75
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2953,19 +1861,10 @@ C	Ocorrência de chuvas de relevo.
 D	Circulação de massas de ar.
 E	Ausência de frentes frias.
 
-### Texto contado
-
-A dispersão espacial do problema ambiental representado na imagem de satélite é explicada pela seguinte característica geográfica:
-Amplitude das temperaturas médias.
-Homogeneidade da insolação anual.
-Ocorrência de chuvas de relevo.
-Circulação de massas de ar.
-Ausência de frentes frias.
-
 ## Questão 48
 
 - Idioma: geral
-- Palavras: 114
+- Palavras: 139
 - Tem imagem: não
 
 ### Texto extraído
@@ -2982,22 +1881,10 @@ C	domínio da lógica, consoante a compreensão aristotélica nos Analíticos.
 D	paradigma da racionalidade, alinhado ao modelo cartesiano de método.
 E	âmbito da persuasão, análogo às críticas platônicas aos sofistas.
 
-### Texto contado
-
-A credulidade dos ouvintes aumenta o descaramento do narrador, e o descaramento deste conquista-lhes a credulidade.
-A eloquência, quando levada a seu patamar mais alto, deixa pouco lugar à razão ou à reflexão, mas, dirigindo-se inteiramente
-à imaginação e aos afetos, cativa os ouvintes condescendentes e subjuga-lhes o entendimento.
-No contexto do século XVIII, o autor propõe uma reflexão radical acerca da arte da eloquência, restringindo-a ao
-sistema de crenças, conforme a proposta kantiana de objetividade do conhecimento.
-campo dos absolutos, semelhante ao entendimento medieval dos Universais.
-domínio da lógica, consoante a compreensão aristotélica nos Analíticos.
-paradigma da racionalidade, alinhado ao modelo cartesiano de método.
-âmbito da persuasão, análogo às críticas platônicas aos sofistas.
-
 ## Questão 49
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 114
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3021,23 +1908,10 @@ C	Integração do comércio mediterrâneo.
 D	Popularização do pensamento humanista.
 E	Desenvolvimento das corporações de ofício.
 
-### Texto contado
-
-Antigo centro da economia mundo-europeia do século XV,
-no final do século XVII e início do século XVIII, Veneza ainda era
-uma cidade cosmopolita onde orientais podiam sentir-se em casa.
-Qual elemento da condição cosmopolita de Veneza na Idade
-Moderna está explicitado nos textos?
-Avanço do ensino laico.
-Conquista das terras da América.
-Integração do comércio mediterrâneo.
-Popularização do pensamento humanista.
-Desenvolvimento das corporações de ofício.
-
 ## Questão 50
 
 - Idioma: geral
-- Palavras: 102
+- Palavras: 120
 - Tem imagem: não
 
 ### Texto extraído
@@ -3058,26 +1932,10 @@ C	Conflitos de natureza intercontinental.
 D	Manifestações do movimento sindical.
 E	Mobilizações de agremiações estudantis.
 
-### Texto contado
-
-O direito não é a justiça. O direito é o elemento do cálculo,
-é justo que haja um direito, mas a justiça é incalculável, ela exige
-que se calcule o incalculável; e as experiências aporéticas são
-experiências tão improváveis quanto necessárias da justiça,
-isto é, são momentos em que a decisão entre o justo e o injusto
-nunca é garantida por uma regra.
-De acordo com o texto, ainda que estejam em desconformidade
-com o ordenamento jurídico, são exemplos de ação justa:
-Casos de desobediência civil.
-Repressões do aparato estatal.
-Conflitos de natureza intercontinental.
-Manifestações do movimento sindical.
-Mobilizações de agremiações estudantis.
-
 ## Questão 51
 
 - Idioma: geral
-- Palavras: 184
+- Palavras: 207
 - Tem imagem: não
 
 ### Texto extraído
@@ -3126,53 +1984,10 @@ C	redução da mobilidade urbana.
 D	efemeridade dos vínculos de afetividade.
 E	obsolescência dos meios de comunicação.
 
-### Texto contado
-
-Sinal fechado
-Olá, como vai?
-Eu vou indo e você, tudo bem?
-Tudo bem, eu vou indo, correndo
-Pegar meu lugar no futuro, e você?
-Tudo bem, eu vou indo em busca
-De um sono tranquilo, quem sabe?
-Quanto tempo...
-Pois é, quanto tempo...
-Me perdoe a pressa
-É a alma dos nossos negócios...
-Oh, não tem de que
-Eu também só ando a cem
-Quando é que você telefona?
-Precisamos nos ver por aí
-Pra semana, prometo,
-Talvez nos vejamos, quem sabe?
-Quanto tempo...
-Pois é, quanto tempo...
-Tanta coisa que eu tinha a dizer
-Mas eu sumi na poeira das ruas
-Eu também tenho algo a dizer
-Mas me foge a lembrança
-Por favor, telefone, eu preciso beber
-Alguma coisa rapidamente
-Pra semana...
-O sinal...
-Eu procuro você...
-Vai abrir! Vai abrir!
-Prometo, não esqueço
-Por favor, não esqueça
-Não esqueço, não esqueço
-Adeus...
-A letra da canção apresenta a permanência de uma situação da
-vida cotidiana ao destacar a
-diminuição do comportamento competitivo.
-importância da memória coletiva.
-redução da mobilidade urbana.
-efemeridade dos vínculos de afetividade.
-obsolescência dos meios de comunicação.
-
 ## Questão 52
 
 - Idioma: geral
-- Palavras: 144
+- Palavras: 169
 - Tem imagem: não
 
 ### Texto extraído
@@ -3198,30 +2013,10 @@ C	controle dos relatos oriundos de campos de batalha.
 D	emprego de armas biológicas em confrontos transnacionais.
 E	circulação de refugiados contaminados em áreas conflagradas.
 
-### Texto contado
-
-Não há consenso em torno do nome dado à pandemia,
-tendo, desde o seu início, sido chamada de gripe espanhola
-provavelmente por causa da desinformação em torno da notícia
-sobre sua origem. Uma das hipóteses deriva da neutralidade
-espanhola na Primeira Guerra Mundial e a consequente
-liberdade de imprensa naquele país, maior do que nos demais
-países envolvidos no conflito. Hoje existe o consenso entre
-virologistas e epidemiologistas de que o vírus da gripe não se
-originou na Espanha. Entretanto, dificilmente essa pandemia
-deixará de ser conhecida como gripe espanhola.
-De acordo com o texto, a denominação recebida pela pandemia
-do começo do século XX foi determinada pelo(a)
-precariedade dos conhecimentos da medicina militar.
-retaliação da tríplice aliança aos soldados desertores.
-controle dos relatos oriundos de campos de batalha.
-emprego de armas biológicas em confrontos transnacionais.
-circulação de refugiados contaminados em áreas conflagradas.
-
 ## Questão 53
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 176
 - Tem imagem: não
 
 ### Texto extraído
@@ -3250,30 +2045,10 @@ C	transe individual e progresso intelectual.
 D	penitência pessoal e juramento coletivo.
 E	dogmatismo religioso e adesão de fiéis.
 
-### Texto contado
-
-A partir do século IV, com os imperadores ditos cristãos,
-o teatro e a dança foram condenados. O batismo era recusado aos
-que atuavam no circo ou na pantomima. E em 398, no Concílio de
-Cartago, os que iam ao teatro nos dias santos foram excomungados.
-A dança no ato litúrgico cumpre tanto um papel de adoração
-quanto mercadológico. Não à toa há aceitação, expansão
-e investimento nessa prática percebida massivamente pela
-ampla divulgação principalmente nas redes sociais. A expansão
-e ampliação por via de festivais, aulas, cursos, palestras etc.
-consolida a criação de um mercado específico para esse público.
-A percepção sobre a dança e a cultura corporal apresenta
-aspectos relacionados, respectivamente, a
-segregação social e intolerância eclesiástica.
-rituais eucarísticos e sacramentos da Igreja.
-transe individual e progresso intelectual.
-penitência pessoal e juramento coletivo.
-dogmatismo religioso e adesão de fiéis.
-
 ## Questão 54
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 163
 - Tem imagem: não
 
 ### Texto extraído
@@ -3299,31 +2074,10 @@ C	estagnação de atividades comerciais.
 D	precariedade de infraestruturas rodoviárias.
 E	seletividade de deslocamentos populacionais.
 
-### Texto contado
-
-A ideia de êxodo urbano assume ares caricaturais. Pega a mais
-reduzida parte da pirâmide social e projeta para todos seus desejos
-defensivos. Se o êxodo urbano for compreendido como aquisição
-de uma segunda residência, então não estamos, de fato, falando
-de êxodo, mas da reversão de um excedente de renda de uma
-pequena fração da elite para as franjas metropolitanas. Se o êxodo
-urbano for compreendido como retorno aos municípios menos
-povoados, então não estamos, de fato, falando de êxodo urbano,
-mas de um movimento de migração de pessoas cuja estabilidade
-no emprego e a elevada renda lhes permitem simular, nas ilhas
-urbanas do interior agropecuário, a vida urbana metropolitana.
-A crítica apresentada no texto evidencia uma dinâmica socioespacial
-marcada pela
-valorização de tradições rurais.
-redução de plantações agrícolas.
-estagnação de atividades comerciais.
-precariedade de infraestruturas rodoviárias.
-seletividade de deslocamentos populacionais.
-
 ## Questão 55
 
 - Idioma: geral
-- Palavras: 108
+- Palavras: 123
 - Tem imagem: não
 
 ### Texto extraído
@@ -3346,28 +2100,10 @@ C	Dissolução das distinções de nobreza.
 D	Capilarização das práticas de controle.
 E	Espetacularização das medidas de penitência.
 
-### Texto contado
-
-A “invenção” dessa nova anatomia política não deve
-ser entendida como uma descoberta súbita. Mas como uma
-multiplicidade de processos muitas vezes mínimos, de origens
-diferentes, de localizações esparsas, que se recordam, que se
-repetem, ou se imitam, apoiam-se uns sobre os outros e esboçam
-aos poucos a fachada de um método geral. Encontramo-los
-em funcionamento nos colégios, muito cedo; mais tarde, nas
-escolas primárias, no espaço hospitalar e na organização militar.
-O texto indica o seguinte aspecto da disciplina como ferramenta
-política:
-Expansão das técnicas de suplício.
-Judicialização das relações de poder.
-Dissolução das distinções de nobreza.
-Capilarização das práticas de controle.
-Espetacularização das medidas de penitência.
-
 ## Questão 56
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 118
 - Tem imagem: não
 
 ### Texto extraído
@@ -3388,26 +2124,10 @@ C	Encarecimento da logística de transporte.
 D	Inviabilização da agricultura de subsistência.
 E	Sucateamento da indústria de transformação.
 
-### Texto contado
-
-Por séculos, o Rio Reno tem sido uma rota de navegação
-confiável, ajudando a criar gigantes fabris ao longo de suas
-margens. No entanto, esses dias parecem estar no fim, pois
-o nível da água tem diminuído regularmente, o que impede a
-navegação fluvial do final do verão até o outono. Isso mostra
-como a crise climática atinge as economias dos países ricos.
-Qual é o efeito econômico do problema ambiental apresentado
-no texto?
-Supressão da extração de minério.
-Intensificação da atividade de pesca.
-Encarecimento da logística de transporte.
-Inviabilização da agricultura de subsistência.
-Sucateamento da indústria de transformação.
-
 ## Questão 57
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -3434,30 +2154,10 @@ C	preconceitos linguísticos e dinâmicas territoriais.
 D	lembranças fabris e discriminação dos operários.
 E	experiências profissionais e segregação regional.
 
-### Texto contado
-
-Dos 10 aos 15 anos de idade, Virgínia adorava acompanhar
-seu pai, aos domingos, naquela sinestésica Feira de São Cristóvão
-(RJ), talvez por ser o maior elo que ela experimentava com o
-mundo exterior à sua casa e, visto assim e agora, tão íntimo
-e próximo de algo que ela ainda não sabia, mas que seria, no
-futuro, a sua própria casa: a Paraíba. Dona Didi costurava, sob
-medida, camisas sociais, bermudas, shorts, vestidos, saias,
-sempre em casa e rodeada pelos quatro filhos pequenos do
-casal, desdobrando-se para dar conta de toda a responsabilidade
-sem trégua que isso demandava.
-Os itinerários afetivos e socioespaciais mencionados no texto
-associam-se à vida dos personagens por apresentarem
-histórias conectadas e recordações do lugar.
-direitos trabalhistas e produção industrial.
-preconceitos linguísticos e dinâmicas territoriais.
-lembranças fabris e discriminação dos operários.
-experiências profissionais e segregação regional.
-
 ## Questão 58
 
 - Idioma: geral
-- Palavras: 120
+- Palavras: 140
 - Tem imagem: não
 
 ### Texto extraído
@@ -3482,29 +2182,10 @@ C	comprovação de domicílio.
 D	exigência da alfabetização.
 E	obrigatoriedade do sufrágio.
 
-### Texto contado
-
-Em 1872, havia mais de 1 milhão de votantes, correspondentes
-a 13% da população livre. Em 1886, votaram nas eleições
-parlamentares pouco mais de 100 mil eleitores, ou 0,8% da
-população total. Houve um corte de quase 90% do eleitorado.
-O dado é chocante, sobretudo se lembrarmos que a tendência
-de todos os países europeus da época era na direção de ampliar
-os direitos políticos. O mais grave é que esse retrocesso foi
-duradouro. A Proclamação da República não alterou o quadro.
-De acordo com o texto, a participação no processo eleitoral
-brasileiro após a Reforma de 1881 sofreu uma variação que
-se explica pela
-restrição de gênero.
-exclusão de imigrantes.
-comprovação de domicílio.
-exigência da alfabetização.
-obrigatoriedade do sufrágio.
-
 ## Questão 59
 
 - Idioma: geral
-- Palavras: 119
+- Palavras: 146
 - Tem imagem: não
 
 ### Texto extraído
@@ -3529,28 +2210,10 @@ C	demandas em regiões industriais.
 D	metas em acordos climáticos.
 E	geologia em áreas naturais.
 
-### Texto contado
-
-Pela falta de chuvas, a geração de energia eólica, solar e
-térmica atingiu níveis recordes em agosto de 2021, quando
-as hidrelétricas ficaram com cerca de 50% do total. Para um
-professor da Universidade Federal da Bahia, essa queda não
-é uma surpresa. “Não aconteceu de uma hora para outra.
-Se olharmos o mapa do Brasil, um dos grandes provedores de
-água é a Floresta Amazônica. Se você diminui a floresta, diminui
-a quantidade de água que vai para a atmosfera”, explica.
-De acordo com o texto, a dificuldade na produção de energia
-é causada pela alteração da(s)
-variável em pesquisas meteorológicas.
-paisagem em locais estratégicos.
-demandas em regiões industriais.
-metas em acordos climáticos.
-geologia em áreas naturais.
-
 ## Questão 60
 
 - Idioma: geral
-- Palavras: 89
+- Palavras: 107
 - Tem imagem: não
 
 ### Texto extraído
@@ -3570,25 +2233,10 @@ C	estruturação do monopólio comercial.
 D	percepção de responsabilidade ética.
 E	conquista do reconhecimento público.
 
-### Texto contado
-
-Adam Smith via o açougueiro e o padeiro não só como
-indivíduos buscando seus interesses financeiros, mas como pessoas
-moralmente motivadas dentro de uma sociedade. A base da moral
-era a empatia e o julgamento, instaurando uma distinção entre o
-que queremos fazer e o que sentimos que devemos fazer.
-O texto defende uma motivação capitalista para o campo dos
-negócios, na qual o lucro se mostra associado à
-consolidação do poder político.
-procura de satisfação subjetiva.
-estruturação do monopólio comercial.
-percepção de responsabilidade ética.
-conquista do reconhecimento público.
-
 ## Questão 61
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 113
 - Tem imagem: não
 
 ### Texto extraído
@@ -3609,26 +2257,10 @@ C	ditadura, autocracia e anarquia.
 D	plutocracia, tecnocracia e demagogia.
 E	monarquia, aristocracia e democracia.
 
-### Texto contado
-
-O corpo de cidadãos é o poder supremo dos Estados.
-A supremacia pode residir ou num homem, ou na minoria,
-ou em todos. Sempre que o Um, ou a Minoria, ou Todos governam,
-tendo em vista o bem-estar comum, essas constituições são
-justas; mas se procuram apenas o benefício de uma das partes,
-seja ela o Um, a Minoria ou Todos, estabelece-se um desvio.
-No excerto encontra-se a base da teoria clássica das três formas
-de governo representadas pela
-tirania, oligarquia e república.
-burocracia, autarquia e império.
-ditadura, autocracia e anarquia.
-plutocracia, tecnocracia e demagogia.
-monarquia, aristocracia e democracia.
-
 ## Questão 62
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 149
 - Tem imagem: não
 
 ### Texto extraído
@@ -3646,23 +2278,10 @@ C	Legitimar experiências pretéritas.
 D	Perpetuar paradigmas científicos.
 E	Empreender soluções conclusivas.
 
-### Texto contado
-
-Para que a utopia nasça, é preciso duas condições. A primeira é a forte sensação de que o mundo não está funcionando adequadamente
-e deve ter seus fundamentos revistos para que se reajuste. A segunda condição é a existência de uma confiança no potencial humano
-à altura da tarefa de reformar o mundo, a crença de que nós, seres humanos, podemos fazê-lo, sendo capazes de perceber o que
-está errado com o mundo, o que precisa ser modificado, quais são os pontos problemáticos, e ter força e coragem para extirpá-los.
-De acordo com o autor, qual é a função da utopia no contexto das transformações sociais?
-Habilitar memórias afetivas.
-Apontar alternativas possíveis.
-Legitimar experiências pretéritas.
-Perpetuar paradigmas científicos.
-Empreender soluções conclusivas.
-
 ## Questão 63
 
 - Idioma: geral
-- Palavras: 50
+- Palavras: 88
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3679,19 +2298,10 @@ C	Diminuição do uso de trabalho especializado na agropecuária.
 D	Valorização da moeda nacional em relação ao dólar americano.
 E	Inclusão de pequenas propriedades em cultivos de subsistência.
 
-### Texto contado
-
-Qual condição favoreceu o cenário produtivo exposto na figura?
-Redução do poder de compra da população brasileira.
-Ampliação da entrada do capital agroindustrial no campo.
-Diminuição do uso de trabalho especializado na agropecuária.
-Valorização da moeda nacional em relação ao dólar americano.
-Inclusão de pequenas propriedades em cultivos de subsistência.
-
 ## Questão 64
 
 - Idioma: geral
-- Palavras: 124
+- Palavras: 146
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3709,23 +2319,10 @@ C	mobilização da sociedade na defesa do governo.
 D	abandono da censura aos meios de comunicação.
 E	apoio dos parlamentares aos candidatos oposicionistas.
 
-### Texto contado
-
-Em toda a sua carreira política, Getúlio Vargas sempre contara com o seu talento pessoal de persuasão e poder de manipulação.
-Agora, porém, seus amigos começavam a perceber que ele parecia envelhecido e cansado. A principal figura da oposição, concordavam
-eles, era o belicoso jornalista Carlos Lacerda. Se ao menos pudessem “removê-lo” do cenário político, talvez Vargas se salvasse
-da situação. Esses seguidores decidiram tomar o assunto em suas próprias mãos com o atentado da Rua Tonelero.
-Nesse contexto, a ação dos aliados de Getúlio Vargas teve como consequência imediata o(a)
-intensificação dos ataques do grupo udenista.
-intervenção dos sindicatos no conflito partidário.
-mobilização da sociedade na defesa do governo.
-abandono da censura aos meios de comunicação.
-apoio dos parlamentares aos candidatos oposicionistas.
-
 ## Questão 65
 
 - Idioma: geral
-- Palavras: 146
+- Palavras: 164
 - Tem imagem: não
 
 ### Texto extraído
@@ -3752,32 +2349,10 @@ C	pensamento altruísta.
 D	movimento antiespecista.
 E	comportamento pragmático.
 
-### Texto contado
-
-O que eu queria ter sido
-Um nome para o que sou, importa muito pouco. Importa
-o que eu gostaria de ser. O que eu gostaria de ser era uma
-lutadora. Quero dizer, uma pessoa que luta pelo bem dos outros.
-Isso desde pequena eu quis. Por que foi o destino me levando
-a escrever o que já escrevi, em vez de também desenvolver em
-mim a qualidade de lutadora que eu tinha? Em pequena, minha
-família por brincadeira chamava-me de “a protetora dos animais”.
-Porque bastava acusarem uma pessoa para eu imediatamente
-defendê-la. E eu sentia o drama social com tanta intensidade que
-vivia de coração perplexo diante das grandes injustiças a que são
-submetidas as chamadas classes menos privilegiadas.
-A reflexão contida no texto faz referência aos pressupostos
-de uma doutrina ética representada pelo
-estado eudaimônico.
-referencial hedonista.
-pensamento altruísta.
-movimento antiespecista.
-comportamento pragmático.
-
 ## Questão 66
 
 - Idioma: geral
-- Palavras: 92
+- Palavras: 110
 - Tem imagem: não
 
 ### Texto extraído
@@ -3801,28 +2376,10 @@ C	Desobediência civil.
 D	Realidade unidimensional.
 E	Desenvolvimento tecnológico.
 
-### Texto contado
-
-Independência de pensamento, autonomia e direito
-à oposição política estão perdendo sua função crítica básica
-numa sociedade que parece cada vez mais capaz de atender
-às necessidades dos indivíduos através da forma pela qual é
-organizada. Nas condições de um padrão de vida crescente,
-o não conformismo com o próprio sistema parece socialmente
-inútil, principalmente quando acarreta desvantagens econômicas
-e políticas tangíveis e ameaça o funcionamento suave do todo.
-Qual é a característica da sociedade industrial do século XX
-apresentada no texto?
-Gestão integrada.
-Relativismo moral.
-Desobediência civil.
-Realidade unidimensional.
-Desenvolvimento tecnológico.
-
 ## Questão 67
 
 - Idioma: geral
-- Palavras: 126
+- Palavras: 152
 - Tem imagem: não
 
 ### Texto extraído
@@ -3847,29 +2404,10 @@ C	hegemonia das classes dominantes.
 D	revisão das desigualdades econômicas.
 E	homogeneização da distribuição fundiária.
 
-### Texto contado
-
-Do ponto de vista administrativo e judicial, a desapropriação
-da fazenda Cabaceiras, localizada na região sul do estado do
-Pará, é a primeira da história motivada pelo desrespeito à função
-social de um imóvel rural, como prevê a Constituição Federal
-de 1988, em decorrência da exploração de “trabalho em condições
-análogas à escravidão”. Na realidade, essa desapropriação não se
-deu apenas pela ocorrência de relações de trabalho extremamente
-degradantes, mas também pelas graves infrações ambientais
-verificadas na fazenda — o que também configura um ataque
-à função social da terra, de acordo com os preceitos constitucionais.
-O texto considera a promoção da justiça como um mecanismo de
-manutenção da ordem agrária.
-legitimação da propriedade privada.
-hegemonia das classes dominantes.
-revisão das desigualdades econômicas.
-homogeneização da distribuição fundiária.
-
 ## Questão 68
 
 - Idioma: geral
-- Palavras: 38
+- Palavras: 57
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3886,21 +2424,10 @@ C	Implantação de moradias populares.
 D	Predomínio da atividade comercial.
 E	Processo de verticalização urbana.
 
-### Texto contado
-
-Salvador, capital do estado da Bahia.
-A análise dos elementos presentes na fotografia permite
-identificar qual característica socioespacial?
-Estagnação da especulação imobiliária.
-Conservação da arquitetura colonial.
-Implantação de moradias populares.
-Predomínio da atividade comercial.
-Processo de verticalização urbana.
-
 ## Questão 69
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 141
 - Tem imagem: não
 
 ### Texto extraído
@@ -3925,29 +2452,10 @@ C	ações voluntárias.
 D	ideias messiânicas.
 E	celebrações coletivas.
 
-### Texto contado
-
-A difusão pelos cônegos do ideal apostólico, bem como
-a influência dos eremitas e dos pregadores errantes que na
-sua esteira propagavam temas evangélicos, contribuíram para
-fazer nascer, entre os fiéis, o desejo de se erguerem ao nível
-espiritual do clero e de obterem a sua salvação, sem que para
-isso tivessem de renunciar ao seu estado. Pela primeira vez,
-a Igreja entreabria as portas da graça em benefício da totalidade
-dos fiéis, colocando, como única condição, a sua partida para
-o Oriente, a fim de aí lutarem contra os inimigos de Cristo.
-Conforme o texto, no imaginário dos fiéis cristãos do período
-medieval, a salvação era alcançada por meio das
-palavras escritas.
-práticas litúrgicas.
-ações voluntárias.
-ideias messiânicas.
-celebrações coletivas.
-
 ## Questão 70
 
 - Idioma: geral
-- Palavras: 146
+- Palavras: 166
 - Tem imagem: não
 
 ### Texto extraído
@@ -3972,30 +2480,10 @@ C	recomposição da mata ciliar.
 D	acumulação de sedimentos orgânicos.
 E	impermeabilização da superfície ocupada.
 
-### Texto contado
-
-Nos Estados Unidos, um hotel perto de um parque foi engolido
-por uma enorme cratera. E não é a primeira vez que esse tipo
-de incidente acontece na Flórida. Em minutos, uma ala inteira
-do hotel era engolida pela cratera de 30 metros de diâmetro e
-cinco de profundidade. O diretor do resort em Clermont, perto
-dos parques temáticos da Flórida, diz que o prédio tinha 15 anos,
-e que até então o solo nunca havia apresentado problemas.
-Os afundamentos são um fenômeno comum na Flórida por
-causa das formações de calcário e argila no subsolo, mas às vezes
-chuvas fortes, ou a drenagem do solo para construção, acabam
-contribuindo para o surgimento desses buracos.
-A situação de desmoronamento do solo descrita no texto origina-se da
-cristalização da estrutura geológica.
-ação do intemperismo químico.
-recomposição da mata ciliar.
-acumulação de sedimentos orgânicos.
-impermeabilização da superfície ocupada.
-
 ## Questão 71
 
 - Idioma: geral
-- Palavras: 86
+- Palavras: 119
 - Tem imagem: não
 
 ### Texto extraído
@@ -4017,25 +2505,10 @@ C	adesão à arquitetura neoclássica.
 D	negação das influências orientais.
 E	reorganização da mobilidade urbana.
 
-### Texto contado
-
-Moradores de Berlim protestaram contra a demolição de
-um trecho do muro que dividiu a cidade durante quase três
-décadas. Tratado como patrimônio cultural e histórico da cidade,
-o East Side Gallery, repleto de grafites emblemáticos, está na
-mira de uma construtora que pretende levantar um condomínio
-de luxo às margens do Rio Spree, que corta a cidade.
-A demolição do símbolo histórico mencionado representa uma
-violação da memória coletiva.
-alteração das fronteiras políticas.
-adesão à arquitetura neoclássica.
-negação das influências orientais.
-reorganização da mobilidade urbana.
-
 ## Questão 72
 
 - Idioma: geral
-- Palavras: 74
+- Palavras: 85
 - Tem imagem: não
 
 ### Texto extraído
@@ -4057,26 +2530,10 @@ C	imobilidade imanente do universo.
 D	distribuição dicotômica do cosmos.
 E	desordem incontornável das coisas.
 
-### Texto contado
-
-Em conjunto: todo e não todo, unido e separado, em
-consonância e em dissonância. De todos um e de um todos.
-(Fragmento B10)
-Deus é dia-noite, inverno-verão, guerra-paz, saciedade-fome.
-(Fragmento B67)
-Pré-socráticos. São Paulo: Nova Cultural, 1996.
-A característica do pensamento do filósofo Heráclito, registrada
-nos fragmentos mencionados, é a ênfase na
-qualidade imperecível do mundo.
-degradação material da natureza.
-imobilidade imanente do universo.
-distribuição dicotômica do cosmos.
-desordem incontornável das coisas.
-
 ## Questão 73
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 125
 - Tem imagem: não
 
 ### Texto extraído
@@ -4101,28 +2558,10 @@ C	fanatismo — humilhação.
 D	intolerância — violência.
 E	repressão — justiça.
 
-### Texto contado
-
-Entre esses preconceitos estava o canibalismo. A prática não
-era, porém, uma mentira, uma invenção europeia, mas um ritual
-controlado por regras. Entre os tupis, por exemplo, os guerreiros
-se sentiam honrados quando morriam em um banquete canibal.
-Para os europeus, no entanto, comer carne humana era
-abominável, pois nem mesmo os leões ingeriam seus semelhantes.
-Portanto, para os conquistadores, o canibalismo era sinônimo de
-barbarismo e da incapacidade de se autogovernar.
-No texto, europeus e ameríndios atribuíram à prática relatada,
-respectivamente, o significado de
-selvageria — empoderamento.
-impetuosidade — resistência.
-fanatismo — humilhação.
-intolerância — violência.
-repressão — justiça.
-
 ## Questão 74
 
 - Idioma: geral
-- Palavras: 112
+- Palavras: 131
 - Tem imagem: não
 
 ### Texto extraído
@@ -4145,28 +2584,10 @@ D	Inexistência de direitos constitucionais e negação do ecumenismo.
 E	Efemeridade das relações políticas e debilidade do pertencimento
 étnico.
 
-### Texto contado
-
-Fragmentada em pequenos grupos, fragilizada pela ausência
-de algum tipo de organização ampla, tendo que carregar
-o peso do preconceito racial que se transfere do negro para a
-cultura negra, a religião dos orixás tem poucas chances de se
-sair melhor na competição — desigual — com outras religiões.
-Silenciosamente, assistimos hoje a um verdadeiro massacre das
-religiões afro-brasileiras.
-No processo de invisibilização dos cultos afro-brasileiros, o texto
-associa os seguintes elementos essenciais:
-Ausência de soluções partidárias e rejeição da laicidade.
-Precariedade de coesão representativa e recusa da alteridade.
-Insuficiência de estruturas decisórias e exclusão da dialogicidade.
-Inexistência de direitos constitucionais e negação do ecumenismo.
-Efemeridade das relações políticas e debilidade do pertencimento
-étnico.
-
 ## Questão 75
 
 - Idioma: geral
-- Palavras: 72
+- Palavras: 91
 - Tem imagem: não
 
 ### Texto extraído
@@ -4186,24 +2607,10 @@ C	contaminação de lençóis freáticos.
 D	produtividade da terra cultivada.
 E	ocorrência da erosão laminar.
 
-### Texto contado
-
-A partir do século XIX e, principalmente, no século XX, iniciou-se
-o uso de produtos sintéticos na agricultura. No Brasil, a partir da
-década de 1960 e, posteriormente, nos anos 1970, os inseticidas
-ampliam sua fatia no mercado dos defensivos agrícolas.
-Nos espaços agrícolas, a mudança técnica descrita provocou
-a diminuição da
-desagregação de camadas pedológicas.
-diversidade de polinizadores naturais.
-contaminação de lençóis freáticos.
-produtividade da terra cultivada.
-ocorrência da erosão laminar.
-
 ## Questão 76
 
 - Idioma: geral
-- Palavras: 124
+- Palavras: 142
 - Tem imagem: não
 
 ### Texto extraído
@@ -4229,31 +2636,10 @@ C	convenções coletivas.
 D	resquícios religiosos.
 E	imposições políticas.
 
-### Texto contado
-
-Os direitos do homem constituem uma classe variável, como
-a história destes últimos séculos demonstra suficientemente.
-O elenco dos direitos do homem se modificou, e continua a se
-modificar, com a mudança das condições históricas, ou seja,
-dos carecimentos e dos interesses, das classes no poder, dos meios
-disponíveis para a realização dos mesmos, das transformações
-técnicas. Direitos que foram declarados absolutos no final do
-século XVIII foram submetidos a radicais limitações nas declarações
-contemporâneas; direitos que as declarações do século XVIII
-nem sequer mencionavam, como os direitos sociais, são agora
-proclamados com grande ostentação nas recentes declarações.
-Os argumentos apresentados no texto sustentam que os direitos
-humanos são variáveis porque os considera como
-fenômenos espontâneos.
-conquistas atemporais.
-convenções coletivas.
-resquícios religiosos.
-imposições políticas.
-
 ## Questão 77
 
 - Idioma: geral
-- Palavras: 111
+- Palavras: 135
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4278,29 +2664,10 @@ C	Demanda de mão de obra qualificada.
 D	Precariedade da legislação industrial.
 E	Utilização de materiais recicláveis.
 
-### Texto contado
-
-Carro elétrico, uma miragem ecológica
-A mudança para a eletromobilidade de fato promove uma
-alteração no consumo de recursos naturais. Hoje, amplamente
-dependentes do petróleo, nossos modais de transporte poderiam
-se tornar cada vez mais dependentes de trinta metais raros. Gálio,
-tântalo, cobalto, platinoides, tungstênio, metais de terras-raras: uma
-mina contém apenas ínfimas quantidades desses metais dotados
-de fabulosas propriedades eletrônicas, ópticas e magnéticas.
-No que se refere ao desenvolvimento sustentável, a charge e o
-texto indicam uma contradição no uso da tecnologia alternativa
-derivada do seguinte aspecto:
-Necessidade de fontes não renováveis.
-Padronização dos modelos produtivos.
-Demanda de mão de obra qualificada.
-Precariedade da legislação industrial.
-Utilização de materiais recicláveis.
-
 ## Questão 78
 
 - Idioma: geral
-- Palavras: 87
+- Palavras: 115
 - Tem imagem: não
 
 ### Texto extraído
@@ -4323,26 +2690,10 @@ C	reconhecimento de vínculos familiares.
 D	discurso de cunho técnico-científico.
 E	ideologia de caráter abolicionista.
 
-### Texto contado
-
-A Roda dos Expostos de Salvador (Bahia) data de 1726 e
-foi uma das instituições implantadas com o objetivo de acolher
-e prover um encaminhamento para a criança recém-nascida
-abandonada. Essa assistência fundamentava-se em práticas
-caritativas, paternalistas e imediatistas que visavam ao cuidado
-básico da criança e, especialmente, à salvação da sua alma,
-via batismo, devido à alta mortalidade.
-A instituição apresentada no texto justificava-se pelo(a)
-defesa de direitos humanos.
-preceito de natureza sociorreligiosa.
-reconhecimento de vínculos familiares.
-discurso de cunho técnico-científico.
-ideologia de caráter abolicionista.
-
 ## Questão 79
 
 - Idioma: geral
-- Palavras: 130
+- Palavras: 154
 - Tem imagem: não
 
 ### Texto extraído
@@ -4366,28 +2717,10 @@ C	Sobreposição de princípios para fundamentar um direito.
 D	Criação de parâmetros para reconhecer uma prescrição.
 E	Elaboração de convenções para referendar um costume.
 
-### Texto contado
-
-A missão dos governantes consiste em promover a felicidade
-da sociedade, punindo e recompensando. A parte da missão de
-governo que consiste em punir constitui mais particularmente
-o objeto da lei penal. A obrigatoriedade ou necessidade de
-punir uma ação é proporcional à medida que tal ação tende
-a perturbar a felicidade e à medida que a tendência do referido
-ato é perniciosa. A felicidade consiste naquilo que já vimos,
-ou seja, em desfrutar prazeres e em estar isento de dores.
-Qual perspectiva de justiça emerge da relação, estabelecida
-no texto, entre punição e felicidade?
-Aplicação de meios para atingir um fim.
-Imposição de regras para estabelecer um dever.
-Sobreposição de princípios para fundamentar um direito.
-Criação de parâmetros para reconhecer uma prescrição.
-Elaboração de convenções para referendar um costume.
-
 ## Questão 80
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 102
 - Tem imagem: não
 
 ### Texto extraído
@@ -4408,25 +2741,10 @@ C	canalização dos cursos hídricos.
 D	arborização das avenidas centrais.
 E	educação ambiental da comunidade.
 
-### Texto contado
-
-Cidade sustentável é o assentamento humano constituído
-por uma sociedade com consciência de seu papel de agente
-transformador dos espaços e cuja relação não se dá pela razão
-natureza-objeto, e sim por uma ação sinérgica entre prudência
-ecológica, eficiência energética e equidade socioespacial.
-Uma medida pública que contradiz o modelo de cidade exposto
-no texto é a
-coleta seletiva de lixo.
-reutilização das águas pluviais.
-canalização dos cursos hídricos.
-arborização das avenidas centrais.
-educação ambiental da comunidade.
-
 ## Questão 81
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 106
 - Tem imagem: não
 
 ### Texto extraído
@@ -4448,26 +2766,10 @@ C	Extinção do crime de feminicídio.
 D	Redução da licença-maternidade.
 E	Criação de delegacia especializada.
 
-### Texto contado
-
-Em decorrência da naturalização da inferioridade social
-da mulher e da concepção de justiça do Estado, baseada na
-igualdade abstratamente concebida, torna-se possível convencer
-o Estado burguês a conceber e implementar políticas públicas
-cujo conteúdo se define pela discriminação positiva de mulheres,
-embora isso aparentemente seja paradoxal.
-No contexto atual, qual medida atende ao tipo de política pública
-abordada no texto?
-Ampliação do sufrágio universal.
-Diminuição da jornada de trabalho.
-Extinção do crime de feminicídio.
-Redução da licença-maternidade.
-Criação de delegacia especializada.
-
 ## Questão 82
 
 - Idioma: geral
-- Palavras: 100
+- Palavras: 116
 - Tem imagem: não
 
 ### Texto extraído
@@ -4489,27 +2791,10 @@ C	cidadania e primazia da retórica.
 D	moralidade e virtudes cardeais.
 E	ética e exercício do poder.
 
-### Texto contado
-
-A cidade justa é governada pelos filósofos, administrada
-pelos cientistas, protegida pelos guerreiros e mantida pelos
-produtores. Cada classe cumprirá sua função para o bem da
-pólis, racionalmente dirigida pelos filósofos. Em contrapartida,
-a cidade injusta é aquela onde o governo está nas mãos dos
-proprietários — que não pensam no bem comum da pólis
-e lutarão por interesses econômicos particulares.
-O texto apresenta a estrutura de governo da cidade ideal pensada
-por Platão, que postula uma indissociabilidade entre
-cognoscência e relação intersubjetiva.
-mitologia e teorias cosmogônicas.
-cidadania e primazia da retórica.
-moralidade e virtudes cardeais.
-ética e exercício do poder.
-
 ## Questão 83
 
 - Idioma: geral
-- Palavras: 139
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -4533,29 +2818,10 @@ C	divulgar as conquistas às metrópoles europeias.
 D	integrar as regiões territoriais ao poder central.
 E	difundir as publicações às elites lusitanas.
 
-### Texto contado
-
-A Impressão Régia do Rio de Janeiro foi criada pelo decreto de
-13 de maio de 1808 para dar continuidade à nova sede do império
-português. A nova tipografia é criada em um momento no qual o
-projeto de reforma do império se transforma em um projeto de
-construção de um novo império português na América. Frente
-às tensões políticas que essa nova situação criava, a tipografia
-atuou na legitimação e sustentação daquele projeto político.
-na construção do novo império português na América (1808-1822).
-Topoi, n. 31, jul.-dez. 2015 (adaptado).
-A função política da tecnologia mencionada no texto favoreceu
-a nova sede do Império português por
-estabelecer as normativas ideológicas aos periódicos.
-propagar as diretrizes administrativas às capitanias.
-divulgar as conquistas às metrópoles europeias.
-integrar as regiões territoriais ao poder central.
-difundir as publicações às elites lusitanas.
-
 ## Questão 84
 
 - Idioma: geral
-- Palavras: 157
+- Palavras: 180
 - Tem imagem: não
 
 ### Texto extraído
@@ -4584,33 +2850,10 @@ C	significância da cosmologia nativa.
 D	importância de pesquisas acadêmicas.
 E	interferência de interesses estrangeiros.
 
-### Texto contado
-
-Com o objetivo de auxiliar a prevenção e o combate a
-incêndios no Cerrado, o Centro de Sensoriamento Remoto
-da Universidade Federal de Minas Gerais (UFMG) desenvolveu
-um modelo computacional capaz de prever o comportamento
-do fogo. Essa tecnologia integra o projeto Monitoramento do
-Cerrado, do qual também participa o Instituto Nacional de
-Pesquisas Espaciais (Inpe). O instituto produz e processa dados
-de satélite sobre focos de calor para determinar a localização
-de incêndios no bioma. Esses focos são o ponto de ignição para
-o modelo desenvolvido na UFMG: com base em outros dados,
-como relevo, ventos, umidade e biomassa seca, a ferramenta
-estima as áreas com maior risco de incêndio e prevê a intensidade
-e a direção de propagação do fogo no Cerrado brasileiro.
-Em relação à causa ambiental, o uso da tecnologia mencionada
-indica a
-influência da produção orgânica.
-relevância da infraestrutura viária.
-significância da cosmologia nativa.
-importância de pesquisas acadêmicas.
-interferência de interesses estrangeiros.
-
 ## Questão 85
 
 - Idioma: geral
-- Palavras: 161
+- Palavras: 183
 - Tem imagem: não
 
 ### Texto extraído
@@ -4638,31 +2881,10 @@ C	discursos contraditórios sobre a mesma didática escolar.
 D	regras teológicas acerca de um mesmo recurso pedagógico.
 E	justificativas idênticas acerca de um mesmo aspecto cultural.
 
-### Texto contado
-
-O cinema constituía um encanto indefinível: além do
-entretenimento delicioso das vidas alheias por meio dos filmes,
-o pretexto amável para os encontros de olhos, para a mostra
-dos vestidos, para as tagarelices com as vizinhas de cadeiras.
-O pouco caso na seleção dos filmes para serem exibidos
-nos espetáculos diurnos tem sido causa de inúmeros dissabores
-sofridos pelos progenitores que levam os seus filhos ao cinema
-para recreá-los. Em toda parte, tanto nas casas de famílias
-como nos colégios, só se ouve a petizada falar em fitas,
-em artistas cinematográficos, nas proezas de William Hart ou
-nas façanhas de Mutt.
-O cinema e a criança. Diário de Pernambuco. 29 ago. 1925 (adaptado).
-Publicados na primeira metade do século XX, os textos apresentam
-conclusões semelhantes sobre o mesmo suporte midiático.
-argumentos contrários sobre o mesmo tipo de diversão.
-discursos contraditórios sobre a mesma didática escolar.
-regras teológicas acerca de um mesmo recurso pedagógico.
-justificativas idênticas acerca de um mesmo aspecto cultural.
-
 ## Questão 86
 
 - Idioma: geral
-- Palavras: 148
+- Palavras: 167
 - Tem imagem: não
 
 ### Texto extraído
@@ -4687,30 +2909,10 @@ C	redução da pressão sobre as usinas hidrelétricas.
 D	estagnação do consumo em unidades industriais.
 E	superação da necessidade de recursos renováveis.
 
-### Texto contado
-
-Pesquisa pioneira no Brasil propõe o uso de
-energia do solo para climatizar edifícios
-Pela primeira vez na história, o Brasil terá um prédio que usa
-energia do solo para climatizar seus ambientes. Uma pesquisa
-inovadora avaliou o uso das fundações de edifícios como meio para
-a troca de energia térmica entre o prédio e o subsolo. A energia
-geotérmica é aquela encontrada dentro da crosta terrestre, seja
-no solo, nas rochas ou mesmo na água, sendo identificada pela
-temperatura. Essa energia pode ser transferida para a superfície
-por processos de troca térmica a partir das fundações da edificação.
-Para o sistema elétrico brasileiro, a expansão de tecnologias
-como a descrita no texto representa uma tendência de
-homogeneização da oferta da matriz produtiva.
-ampliação do consumo em unidades residenciais.
-redução da pressão sobre as usinas hidrelétricas.
-estagnação do consumo em unidades industriais.
-superação da necessidade de recursos renováveis.
-
 ## Questão 87
 
 - Idioma: geral
-- Palavras: 83
+- Palavras: 100
 - Tem imagem: não
 
 ### Texto extraído
@@ -4729,24 +2931,10 @@ C	nobres, que desejavam superar a relação de dependência.
 D	camponeses, que aspiravam diminuir a jornada de trabalho.
 E	estrangeiros, que ambicionavam acessar os espaços públicos.
 
-### Texto contado
-
-Durante a realeza, e nos primeiros anos republicanos,
-as leis eram transmitidas oralmente de uma geração para outra.
-A ausência de uma legislação escrita permitia aos patrícios
-manipular a justiça conforme seus interesses.
-A conjuntura sociopolítica da Roma Antiga, conforme apresentada
-no texto, foi contestada pelos
-monarcas, que queriam expandir o código jurídico.
-plebeus, que almejavam participar da vida política.
-nobres, que desejavam superar a relação de dependência.
-camponeses, que aspiravam diminuir a jornada de trabalho.
-estrangeiros, que ambicionavam acessar os espaços públicos.
-
 ## Questão 88
 
 - Idioma: geral
-- Palavras: 98
+- Palavras: 124
 - Tem imagem: não
 
 ### Texto extraído
@@ -4769,27 +2957,10 @@ C	complexidade dos saberes tradicionais.
 D	sofisticação das práticas de sobrevivência.
 E	diversificação da economia de subsistência.
 
-### Texto contado
-
-Os povos indígenas têm o direito de manter, controlar, proteger
-e desenvolver seu patrimônio cultural, seus conhecimentos do
-passado, suas expressões culturais e as manifestações de suas
-e genéticos, as sementes, os medicamentos, o conhecimento
-das propriedades da fauna e da flora, as transmissões orais,
-as literaturas, os desenhos, os esportes, os jogos e as artes visuais
-e interpretativas.
-Declaração das Nações Unidas sobre os Direitos dos Povos Indígenas.
-Os direitos reconhecidos no texto representam a
-multiplicidade dos troncos linguísticos.
-ampliação das influências externas.
-complexidade dos saberes tradicionais.
-sofisticação das práticas de sobrevivência.
-diversificação da economia de subsistência.
-
 ## Questão 89
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 156
 - Tem imagem: não
 
 ### Texto extraído
@@ -4818,29 +2989,10 @@ C	avanço da intolerância e rivalidades nacionais.
 D	preservação das tradições e rituais místicos.
 E	desenvolvimento social e práticas laborais.
 
-### Texto contado
-
-Eu escolhi Bezalel e lhe dei competência e habilidade
-para fazer todo tipo de trabalho artístico; para fazer desenhos
-e trabalhar em ouro, prata e bronze; para lapidar e montar
-pedras preciosas; para entalhar madeira; e para fazer todo
-tipo de artesanato.
-Moisés foi educado em toda a sabedoria dos egípcios e
-veio a ser poderoso em palavras e obras.
-Se conhecêsseis a ciência certa, logo renunciarias à ostentação.
-Escritos em temporalidades diferentes (Antiguidade e Idade
-Média), os textos sagrados aproximam-se ao mostrar o papel
-da ciência para o(a)
-emergência das universidades e escolas confessionais.
-crescimento religioso e movimentos sectários.
-avanço da intolerância e rivalidades nacionais.
-preservação das tradições e rituais místicos.
-desenvolvimento social e práticas laborais.
-
 ## Questão 90
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -4868,26 +3020,3 @@ B	militar e disciplinador.
 C	lúdico e filantrópico.
 D	mercantil e predatório.
 E	religioso e humanitário.
-
-### Texto contado
-
-Em 1914, uma expedição estudantil saiu da Rússia em direção
-à América do Sul, sendo considerada a segunda campanha
-científica da Rússia no continente depois da longa viagem do
-barão Langsdorff pelo interior do Brasil na primeira metade
-do século XIX. O empreendimento foi enviado pelo Museu de
-Antropologia e Etnografia de São Petersburgo e integrado por
-cinco jovens cientistas, sendo dois zoólogos, dois etnógrafos
-e um antropólogo, cujo objetivo era a coleta de material de valor
-biológico e etnográfico para compor coleções nas instituições
-que participaram de seu financiamento. A expedição passou
-por países como Brasil, Paraguai e Argentina, resultando em
-amplo material manuscrito e algumas publicações, além dos
-objetos coletados.
-Além do significado científico, o evento mencionado conectava-se
-a um projeto nacionalista de caráter
-imperialista e colonizador.
-militar e disciplinador.
-lúdico e filantrópico.
-mercantil e predatório.
-religioso e humanitário.

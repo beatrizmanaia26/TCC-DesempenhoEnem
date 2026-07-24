@@ -1,9 +1,96 @@
 # Questões extraídas
 
+# Textos introdutórios
+
+## Texto introdutório 1
+
+- Palavras: 333
+
+EXAME NACIONAL DO ENSINO MÉDIO
+PROVA DE LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS E REDAÇÃO
+PROVA DE CIENCIAS HUMANAS E SUAS TECNOLOGIAS
+4º DIA +
+ATENÇÃO: transcreva no espaço apropriado do seu CARTÃO-RESPOSTA,
+com sua caligrafia usual, considerando as letras maiúsculas e minúsculas, a seguinte frase:
+Me deu um beijo e virou poesia.
+LEIA ATENTAMENTE AS INSTRUÇÕES SEGUINTES:
+1. Este CADERNO DE QUESTÕES contém 90 questões numeradas de 01 a 90 e a Proposta de Redação,
+dispostas da seguinte maneira:
+a) questões de número 01 a 45, relativas à área de Linguagens, Códigos e suas Tecnologias;
+b) Proposta de Redação;
+c) questões de número 46 a 90, relativas à área de Ciências Humanas e suas Tecnologias.
+ATENÇÃO: as questões de 01 a 05 são relativas à língua estrangeira. Você deverá responder apenas às
+questões relativas à língua estrangeira (inglês ou espanhol) escolhida no ato de sua inscrição.
+2. Confira se a quantidade e a ordem das questões do seu CADERNO DE QUESTÕES estão de acordo com
+as instruções anteriores. Caso o caderno esteja incompleto, tenha defeito ou apresente qualquer divergência,
+comunique ao aplicador da sala para que ele tome as providências cabíveis.
+3. Para cada uma das questões objetivas, são apresentadas 5 opções. Apenas uma responde corretamente à questão.
+4. O tempo disponível para estas provas é de cinco horas e trinta minutos.
+5. Reserve tempo suficiente para preencher o CARTÃO-RESPOSTA e a FOLHA DE REDAÇÃO.
+6. Os rascunhos e as marcações assinaladas no CADERNO DE QUESTÕES não serão considerados na avaliação.
+7. Somente serão corrigidas as redações transcritas na FOLHA DE REDAÇÃO.
+8. Quando terminar as provas, acene para chamar o aplicador e entregue este CADERNO DE QUESTÕES
+e o CARTÃO-RESPOSTA/FOLHA DE REDAÇÃO.
+9. Você poderá deixar o local de prova somente após decorridas duas horas do início da aplicação e poderá levar
+seu CADERNO DE QUESTÕES ao deixar em definitivo a sala de prova nos 30 minutos que antecedem o
+término das provas.
+LD O E  MINISTÉRIODA
+DS ria INEP MSieom E
+
+## Texto introdutório 2
+
+- Palavras: 5
+
+LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS
+
+## Texto introdutório 3 - Questões 1 a 45
+
+- Palavras: 5
+
+Questões de 01 a 45
+
+## Texto introdutório 4 - Questões 1 a 5
+
+- Palavras: 7
+
+Questões de 01 a 05 (opção inglês)
+
+## Texto introdutório 5 - Questões 1 a 5
+
+- Palavras: 7
+
+Questões de 01 a 05 (opção espanhol)
+
+## Texto introdutório 6
+
+- Palavras: 5
+
+LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS
+
+## Texto introdutório 7 - Questões 6 a 45
+
+- Palavras: 5
+
+Questões de 06 a 45
+
+## Texto introdutório 8
+
+- Palavras: 5
+
+CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS
+
+## Texto introdutório 9 - Questões 46 a 90
+
+- Palavras: 5
+
+Questões de 46 a 90
+
+# Questões
+
 ## Questão 1
 
 - Idioma: inglês
-- Palavras: 57
+- Palavras: 75
 - Tem imagem: sim
 
 ### Texto extraído
@@ -18,20 +105,10 @@ C 	 questionar a sobrecarga de atribuições da mulher.
 D 	 analisar as pesquisas acerca dos direitos da mulher.
 E 	 censurar a mulher pelo uso de determinadas palavras.
 
-### Texto contado
-
-Os recursos usados nesse pôster de divulgação de uma
-campanha levam o leitor a refletir sobre a necessidade de
-criticar o tipo de tratamento dado à mulher.
-rever o desempenho da mulher no trabalho.
-questionar a sobrecarga de atribuições da mulher.
-analisar as pesquisas acerca dos direitos da mulher.
-censurar a mulher pelo uso de determinadas palavras.
-
 ## Questão 2
 
 - Idioma: inglês
-- Palavras: 54
+- Palavras: 71
 - Tem imagem: sim
 
 ### Texto extraído
@@ -47,21 +124,10 @@ C 	 banir imigrantes de determinadas origens.
 D 	 julgar padrões de beleza de diversas etnias.
 E 	 desvalorizar costumes de algumas sociedades.
 
-### Texto contado
-
-Nesse pôster de divulgação de uma campanha que
-aborda a diversidade e a inclusão, a interação dos
-elementos verbais e não verbais faz referência ao ato de
-estereotipar povos de certas culturas.
-discriminar hábitos de grupos minoritários.
-banir imigrantes de determinadas origens.
-julgar padrões de beleza de diversas etnias.
-desvalorizar costumes de algumas sociedades.
-
 ## Questão 3
 
 - Idioma: inglês
-- Palavras: 222
+- Palavras: 238
 - Tem imagem: não
 
 ### Texto extraído
@@ -103,47 +169,10 @@ filho.
 D 	 consternação ao visitar o túmulo do filho recém-falecido.
 E 	 impressões sensoriais experimentadas no ambiente.
 
-### Texto contado
-
-A Mother in a Refugee Camp
-No Madonna and Child could touch
-Her tenderness for a son
-She soon would have to forget...
-The air was heavy with odors of diarrhea,
-Of unwashed children with washed-out ribs
-And dried-up bottoms waddling in labored steps
-Behind blown-empty bellies. Other mothers there
-Had long ceased to care, but not this one:
-She held a ghost-smile between her teeth,
-and in her eyes the memory
-Of a mother’s pride... She had bathed him
-And rubbed him down with bare palms.
-She took from their bundle of possessions
-A broken comb and combed
-The rust-colored hair left on his skull
-And then — humming in her eyes — began carefully
-[to part it.
-In their former life this was perhaps
-A little daily act of no consequence
-Before his breakfast and school; now she did it
-Like putting flowers on a tiny grave.
-O escritor nigeriano Chinua Achebe traz uma reflexão
-sobre a situação dos refugiados em um cenário pós-guerra
-civil em seu país. Essa reflexão é construída no poema
-por meio da representação de uma mãe, explorando a(s)
-demonstração de orgulho por não precisar pedir
-doações.
-descrições artísticas detalhadas de uma obra
-conhecida.
-aceitação de um diagnóstico de doença terminal do
-filho.
-consternação ao visitar o túmulo do filho recém-falecido.
-impressões sensoriais experimentadas no ambiente.
-
 ## Questão 4
 
 - Idioma: inglês
-- Palavras: 122
+- Palavras: 140
 - Tem imagem: não
 
 ### Texto extraído
@@ -167,29 +196,10 @@ C 	 necessidade de entender o silêncio do pássaro.
 D 	 sensibilização com relação à natureza do pássaro.
 E 	 irritação quanto à persistência do canto do pássaro.
 
-### Texto contado
-
-A Minor Bird
-I have wished a bird would fly away,
-And not sing by my house all day;
-Have clapped my hands at him from the door
-When it seemed as if I could bear no more.
-The fault must partly have been in me.
-The bird was not to blame for his key.
-And of course there must be something wrong
-In wanting to silence any song.
-No poema de Robert Frost, as palavras “fault” e “blame”
-revelam por parte do eu lírico uma
-culpa por não poder cuidar do pássaro.
-atitude errada por querer matar o pássaro.
-necessidade de entender o silêncio do pássaro.
-sensibilização com relação à natureza do pássaro.
-irritação quanto à persistência do canto do pássaro.
-
 ## Questão 5
 
 - Idioma: inglês
-- Palavras: 258
+- Palavras: 275
 - Tem imagem: não
 
 ### Texto extraído
@@ -231,47 +241,10 @@ C 	 revelam uma atitude de resistência.
 D 	 demonstram uma postura de imaturidade.
 E 	 evidenciam uma mudança de comportamento.
 
-### Texto contado
-
-Finally, Aisha finished with her customer and asked
-what colour Ifemelu wanted for her hair attachments.
-“Colour four.”
-“Not good colour,” Aisha said promptly.
-“That’s what I use.”
-“It look dirty. You don’t want colour one?”
-“Colour one is too black, it looks fake,” Ifemelu said,
-loosening her headwrap. “Sometimes I use colour two,
-but colour four is closest to my natural colour.”
-[...]
-She touched Ifemelu’s hair. “Why you don’t have
-relaxer?”
-“I like my hair the way God made it.”
-“But how you comb it? Hard to comb,” Aisha said.
-Ifemelu had brought her own comb. She gently combed
-her hair, dense, soft and tightly coiled, until it framed her
-head like a halo. “It’s not hard to comb if you moisturize
-it properly,” she said, slipping into the coaxing tone of the
-proselytizer that she used whenever she was trying to
-convince other black women about the merits of wearing
-their hair natural. Aisha snorted; she clearly could not
-understand why anybody would choose to suffer through
-combing natural hair, instead of simply relaxing it. She
-sectioned out Ifemelu’s hair, plucked a little attachment
-from the pile on the table and began deftly to twist.
-A passagem do romance da escritora nigeriana traz
-um diálogo entre duas mulheres negras: a cabeleireira,
-Aisha, e a cliente, Ifemelu. O posicionamento da cliente é
-sustentado por argumentos que
-reforçam um padrão de beleza.
-retratam um conflito de gerações.
-revelam uma atitude de resistência.
-demonstram uma postura de imaturidade.
-evidenciam uma mudança de comportamento.
-
 ## Questão 1
 
 - Idioma: espanhol
-- Palavras: 179
+- Palavras: 199
 - Tem imagem: não
 
 ### Texto extraído
@@ -311,45 +284,10 @@ suas inquietações e, por isso, mantém-se silencioso.
 E 	 usar um apelido jocoso para designar a atuação de
 um indivíduo em seu próprio bairro.
 
-### Texto contado
-
-Pablo Pueblo
-Regresa un hombre en silencio
-De su trabajo cansado
-Su paso no lleva prisa
-Su sombra nunca lo alcanza
-Lo espera el barrio de siempre
-Con el farol en la esquina
-Con la basura allá en frente
-Y el ruido de la cantina
-Pablo Pueblo
-llega hasta el zaguán oscuro
-Y vuelve a ver las paredes
-Con las viejas papeletas
-Que prometían futuros
-en lides politiqueras
-Y en su cara se dibuja
-la decepción de la espera.
-Rubén Blades é um compositor panamenho de canções
-socialmente engajadas. O título Pablo Pueblo, associado ao
-conteúdo da letra da canção, revela uma crítica social ao
-contrapor a individualidade de um sujeito a uma
-estrutura social marcada pela decepção na atuação
-política.
-demonstrar que o problema sofrido pelo indivíduo
-atinge toda a comunidade.
-relativizar a importância que se dá ao sofrimento
-individual em uma estrutura social baseada na
-exploração.
-descrever a vida de um sujeito que nunca resolve
-suas inquietações e, por isso, mantém-se silencioso.
-usar um apelido jocoso para designar a atuação de
-um indivíduo em seu próprio bairro.
-
 ## Questão 2
 
 - Idioma: espanhol
-- Palavras: 302
+- Palavras: 321
 - Tem imagem: não
 
 ### Texto extraído
@@ -406,61 +344,10 @@ têm
 um
 posicionamento acrítico perante o poder.
 
-### Texto contado
-
-Los propietarios de la libertad
-Las palabras cumplen ciclos; las actitudes también. Sin
-embargo, cuando las palabras designan actitudes, los ciclos
-se vuelven más complejos. Cuando el hoy tan denostado
-Sartre puso la palabra compromiso sobre el tapete y
-hasta Mac Leish publicó un libro sobre la responsabilidad
-de los intelectuales, estas dos palabras, compromiso y
-responsabilidad, designaban actitudes que, sin ser gemelas,
-eran bastante afines. Salvo contadas excepciones, los
-intelectuales de entonces las hicieron suyas y, equivocados
-o no, dijeron sin eufemismos por qué empeño se la jugaban.
-Los
-intelectuales
-latinoamericanos
-también
-comprendieron dónde estaba esta vez el enemigo. Sólo
-entonces empezó la mala prensa. Los grandes pontífices
-de la propaganda subrayaron una y otra vez la palabra
-libertad y denostaron el compromiso. Libertad no era
-librarse de Batista o de Somoza, sino mantener la prensa
-libre. Libertad es la emocionada comprobación de que la
-gran prensa norteamericana es capaz de descubrir que
-Lumumba o Allende fueron liquidados por la CIA, sin
-poner el acento en que eso no sirve para resucitarlos.
-¿Y compromiso? Es la actitud que adoptan
-ciertos intelectuales, cuya carga ideológica perjudica
-notoriamente su arte. Después de todo, ¿cómo se atreven
-a frecuentar las provincias del espíritu, si es público y
-notorio que tales ámbitos son patrimonio exclusivo de los
-propietarios de la libertad?
-Transformar palavras em atitudes tem sido um dos
-grandes dilemas dos intelectuais. Ao ponderar sobre
-essa temática, o autor, um  dos grandes críticos e literatos
-latino-americanos da atualidade, leva o leitor a perceber
-que
-o compromisso político afasta o artista da criação.
-os costumes sociais governam a linguagem e as
-atitudes das pessoas.
-o compromisso ideológico de alguns intelectuais está
-refletido em suas obras.
-a complexidade relacionada ao conceito de liberdade
-impede o compromisso.
-os
-intelectuais
-latino-americanos
-têm
-um
-posicionamento acrítico perante o poder.
-
 ## Questão 3
 
 - Idioma: espanhol
-- Palavras: 299
+- Palavras: 319
 - Tem imagem: não
 
 ### Texto extraído
@@ -507,52 +394,10 @@ o espaço do cinema argentino.
 E 	 autorreconhecimento diante dos diversos tipos de
 comportamento humano frente à violência.
 
-### Texto contado
-
-La violencia como bella arte
-Pues bien, ‘Relatos Salvajes’, de Damián Szifrón,
-es sobre todo un brillante esfuerzo por poner rostro, por
-fotografiar, a la parte de la violencia que tanto cuesta
-ver en el cine. De repente, el director argentino coloca
-al espectador ante el espectáculo, digamos putrefacto,
-de una sociedad enferma de su propia indolencia,
-anestesiada por su ira, incapaz de entender el origen
-de la insatisfacción que la habita. ¿Cómo se quedan?
-Sí, estamos delante de la una película vocacionalmente
-violenta, obligadamente salvaje, pero, y sobre todo,
-deslumbrante en su claridad.
-Más allá del esplendor sabio de una producción
-perfecta, lo que más duele, lo que más divierte, lo que
-más conmueve es la sensación de reconocimiento. Cada
-uno de los damnificados, pese a su acento marcadamente
-argentino, somos nosotros. O, mejor, cada insulto
-proferido, y no siempre entendido, es nuestro, en algún
-momento ha salido de nuestra boca. O saldrá.
-La violencia no es sólo eso que tanto desagrada a
-los profesionales del buen gusto, a los programadores de
-ópera o a los filósofos de la nada; la violencia, la realmente
-insoportable, es también una cuestión de actitud, un
-simple gesto. Y esa violencia está por todas partes, está
-dentro. Y Szifrón acierta a retratarla tan fielmente que no
-queda otra cosa que romper a reír. Aunque sólo sea de
-simple desesperación. Brillante, magistral incluso.
-Nessa resenha crítica acerca do filme Relatos Salvajes,
-o autor evidencia o
-cômico como fuga da sociedade diante de situações
-violentas.
-estado de apatia da sociedade perante a violência
-rotineira do mundo atual.
-empecilho para o espectador vivenciar a violência
-bruta na realidade e na ficção.
-sotaque reforçado dos personagens a fim de marcar
-o espaço do cinema argentino.
-autorreconhecimento diante dos diversos tipos de
-comportamento humano frente à violência.
-
 ## Questão 4
 
 - Idioma: espanhol
-- Palavras: 148
+- Palavras: 168
 - Tem imagem: não
 
 ### Texto extraído
@@ -593,46 +438,10 @@ C 	 certeza de manutenção de suas tradições.
 D 	 reivindicação de um mundo unificado.
 E 	 sentimento de conflito de identidades.
 
-### Texto contado
-
-Oye, Pito, ésta es: la vida bruta de un boy
-mis tierras eran
-nuevo méxico, colorado,
-california, arizona, tejas,
-y muchos otros senderos,
-aún cuando la luz existía
-sonrientemente
-en las palabras
-de mis antepasados...
-era entonces hombre,
-maduro y sencillo
-como los cerros y los peñascos,
-y mi cultura era el atole,
-el chaquehue, y los buenos días;
-mi idioma cantaba
-versículos
-por los cañones
-de tierra roja
-y tierra amarilla...
-Hoy sí, hoy ya no soy
-mejicano ni hispano
-ni tampoco americano,
-pero soy — y bien lo siento ser —
-una sombra del pasado
-y un esfuerzo
-hacia el futuro...
-Ao abordar a expropriação de territórios mexicanos pelos
-Estados Unidos, o eu lírico do poema revela um(a)
-rejeição da língua utilizada por seus antepassados.
-desejo de pertencimento ao espaço estadunidense.
-certeza de manutenção de suas tradições.
-reivindicação de um mundo unificado.
-sentimento de conflito de identidades.
-
 ## Questão 5
 
 - Idioma: espanhol
-- Palavras: 214
+- Palavras: 232
 - Tem imagem: não
 
 ### Texto extraído
@@ -665,38 +474,10 @@ C 	 discrição para administrar questões financeiras.
 D 	 disposição para resolver problemas familiares.
 E 	 cuidado para tratar de assuntos íntimos.
 
-### Texto contado
-
-Poco después apareció en casa de Elisenda Morales,
-arrastrando su cansancio y las contrariedades de un largo
-día que había dejado su ánimo en ruinas. A pesar de
-todo, supo resistirlo, y cuando ella le ofreció una copa de
-mistela, abandonó su asiento para ir hasta la tienda en
-busca de algo más estimulante.
-Allí, en el corredor de la casa, en taburetes separados,
-recibieron los primeros cálidos soplos de la noche. Con su
-habitual entereza, Elisenda entró a conectar la luz de la
-sala, sofocando parte de su reflejo, mientras comentaba
-que así estarían mejor. Al menos, pensó el tío Camarillo,
-no había sacado la lámpara como otras veces, ni le había
-entregado alguno de sus álbumes, y parecía en cambio
-decidida a mantener en ascuas al vecindario. Aquélla fue
-la primera vez que en mucho tiempo dejaron de lado el
-tema de las rentas, para entrar con pies de plomo en el
-espinoso terreno de las confidencias.
-No texto, no qual é narrada a visita à casa de uma
-personagem, a expressão “entrar con pies de plomo” é
-utilizada para se referir ao(à)
-determinação para conduzir discussões pessoais.
-insensibilidade para lidar com temas do passado.
-discrição para administrar questões financeiras.
-disposição para resolver problemas familiares.
-cuidado para tratar de assuntos íntimos.
-
 ## Questão 6
 
 - Idioma: geral
-- Palavras: 336
+- Palavras: 356
 - Tem imagem: não
 
 ### Texto extraído
@@ -744,53 +525,10 @@ de um dos poemas mais conhecidos de Bandeira.
 E 	 apelativa, porque o poeta tenta convencer os leitores
 sobre sua dificuldade de compor um poema.
 
-### Texto contado
-
-Vou-me embora p’ra Pasárgada foi o poema de
-mais longa gestação em toda a minha obra. Vi pela
-primeira vez esse nome Pasárgada quando tinha os
-meus dezesseis anos e foi num autor grego. [...] Esse
-nome de Pasárgada, que significa “campo dos persas”
-ou “tesouro dos persas”, suscitou na minha imaginação
-uma paisagem fabulosa, um país de delícias, como o
-de L’invitation au Voyage, de Baudelaire. Mais de vinte
-anos depois, quando eu morava só na minha casa da
-Rua do Curvelo, num momento de fundo desânimo,
-da mais aguda sensação de tudo o que eu não tinha
-feito em minha vida por motivo da doença, saltou-me
-de súbito do subconsciente este grito estapafúrdio:
-“Vou-me embora p’ra Pasárgada!” Senti na redondilha
-a primeira célula de um poema, e tentei realizá-lo,
-mas fracassei. Alguns anos depois, em idênticas
-circunstâncias de desalento e tédio, me ocorreu o
-mesmo desabafo de evasão da “vida besta”. Desta vez
-o poema saiu sem esforço como se já estivesse pronto
-dentro de mim. Gosto desse poema porque vejo nele,
-em escorço, toda a minha vida; [...] Não sou arquiteto,
-como meu pai desejava, não fiz nenhuma casa, mas
-reconstruí e “não de uma forma imperfeita neste mundo
-de aparências”, uma cidade ilustre, que hoje não é mais
-a Pasárgada de Ciro, e sim a “minha” Pasárgada.
-Os processos de interação comunicativa preveem a
-presença ativa de múltiplos elementos da comunicação,
-entre os quais se destacam as funções da linguagem.
-Nesse fragmento, a função da linguagem predominante é a
-emotiva, porque o poeta expõe os sentimentos de
-angústia que o levaram à criação poética.
-referencial, porque o texto informa sobre a origem do
-nome empregado em um famoso poema de Bandeira.
-metalinguística, porque o poeta tece comentários
-sobre a gênese e o processo de escrita de um de
-seus poemas.
-poética, porque o texto aborda os elementos estéticos
-de um dos poemas mais conhecidos de Bandeira.
-apelativa, porque o poeta tenta convencer os leitores
-sobre sua dificuldade de compor um poema.
-
 ## Questão 7
 
 - Idioma: geral
-- Palavras: 44
+- Palavras: 63
 - Tem imagem: sim
 
 ### Texto extraído
@@ -806,21 +544,10 @@ C 	organização interrogativa da frase.
 D 	utilização de um verbo de ação.
 E 	apagamento de uma preposição.
 
-### Texto contado
-
-A frase, título do filme, reproduz uma variedade
-linguística recorrente na fala de muitos brasileiros.
-Essa estrutura caracteriza-se pelo(a)
-uso de uma marcação temporal.
-imprecisão do referente de pessoa.
-organização interrogativa da frase.
-utilização de um verbo de ação.
-apagamento de uma preposição.
-
 ## Questão 8
 
 - Idioma: geral
-- Palavras: 216
+- Palavras: 234
 - Tem imagem: não
 
 ### Texto extraído
@@ -855,40 +582,10 @@ D 	 traduzir expressões verbais para a língua de sinais.
 E 	 proporcionar performances estéticas de pessoas
 surdas.
 
-### Texto contado
-
-Slam do Corpo é um encontro pensado para surdos
-e ouvintes, existente desde 2014, em São Paulo. Uma
-iniciativa pioneira do grupo Corposinalizante, criado em
-2008. (Antes de seguirmos, vale a explicação: o termo
-slam vem do inglês e significa — numa nova acepção
-para o verbo geralmente utilizado para dizer “bater com
-força” — a “poesia falada nos ritmos das palavras e da
-cidade”). Nos saraus, o primeiro objetivo foi o de botar
-os poemas em Libras na roda, colocar os surdos para
-circular e entender esse encontro entre a poesia e a língua
-de sinais, compreender o encontro dessas duas línguas.
-Poemas de autoria própria, três minutos, um microfone.
-Sem figurino, nem adereços, nem acompanhamento
-musical. O que vale é modular a voz e o corpo, um
-trabalho artesanal de tornar a palavra “visível”, numa
-arena cujo objetivo maior é o de emocionar a plateia, tirar
-o público da passividade, seja pelo humor, horror, caos,
-doçura e outras tantas sensações.
-Na prática artística mencionada no texto, o corpo assume
-papel de destaque ao articular diferentes linguagens com
-o intuito de
-imprimir ritmo e visibilidade à expressão poética.
-redefinir o espaço de circulação da poesia urbana.
-estimular produções autorais de usuários de Libras.
-traduzir expressões verbais para a língua de sinais.
-proporcionar performances estéticas de pessoas
-surdas.
-
 ## Questão 9
 
 - Idioma: geral
-- Palavras: 193
+- Palavras: 212
 - Tem imagem: não
 
 ### Texto extraído
@@ -921,38 +618,10 @@ C 	 influências da fala do nordestino no uso da língua.
 D 	 explorações do falar de um grupo social específico.
 E 	 representações da mudança linguística do português.
 
-### Texto contado
-
-É possível afirmar que muitas expressões idiomáticas
-transmitidas pela cultura regional possuem autores
-anônimos, no entanto, algumas delas surgiram em
-consequência de contextos históricos bem curiosos.
-“Aquele é um cabra da peste” é um bom exemplo dessas
-construções.
-Para compreender essa expressão tão repetida no
-Nordeste brasileiro, faz-se necessário voltar o olhar para o
-século 16. “Cabra” remete à forma com que os navegadores
-portugueses chamavam os índios. Já “peste” estaria ligada
-à questão da superação e resistência, ou mesmo uma
-associação com o diabo. Assim, com o passar dos anos,
-passou-se a utilizar tal expressão para denominar qualquer
-indivíduo que se mostre corajoso, ou mesmo insolente, já
-que a expressão pode ter caráter positivo ou negativo. Aliás,
-quem já não ficou de “nhe-nhe-nhém” por aí? O termo, que
-normalmente tem significado de conversa interminável,
-monótona ou resmungo, tem origem no tupi-guarani e
-“nhém” significa “falar”.
-A leitura do texto permite ao leitor entrar em contato com
-registros do inventário do português brasileiro.
-justificativas da variedade linguística do país.
-influências da fala do nordestino no uso da língua.
-explorações do falar de um grupo social específico.
-representações da mudança linguística do português.
-
 ## Questão 10
 
 - Idioma: geral
-- Palavras: 185
+- Palavras: 206
 - Tem imagem: não
 
 ### Texto extraído
@@ -990,42 +659,10 @@ reportagem.
 E 	 marcar a apropriação de termos de outra ciência pela
 reportagem.
 
-### Texto contado
-
-O ouro do século 21
-Cério, gadolínio, lutécio, promécio e érbio; sumário,
-térbio e disprósio; hólmio, túlio e itérbio. Essa lista de nomes
-esquisitos e pouco conhecidos pode parecer a escalação
-de um time de futebol, que ainda teria no banco de reservas
-lantânio, neodímio, praseodímio, európio, escândio e ítrio.
-Mas esses 17 metais, chamados de terras-raras, fazem
-parte da vida de quase todos os humanos do planeta.
-Chamados por muitos de “ouro do século 21”, “elementos do
-futuro” ou “vitaminas da indústria”, eles estão nos materiais
-usados na fabricação de lâmpadas, telas de computadores,
-tablets e celulares, motores de carros elétricos, baterias e
-até turbinas eólicas. Apesar de tantas aplicações, o Brasil,
-dono da segunda maior reserva do mundo desses metais,
-parou de extraí-los e usá-los em 2002. Agora, volta a pensar
-em retomar sua exploração.
-As aspas sinalizam expressões metafóricas empregadas
-intencionalmente pelo autor do texto para
-imprimir um tom irônico à reportagem.
-incorporar citações de especialistas à reportagem.
-atribuir maior valor aos metais, objeto da reportagem.
-esclarecer
-termos
-científicos
-empregados
-na
-reportagem.
-marcar a apropriação de termos de outra ciência pela
-reportagem.
-
 ## Questão 11
 
 - Idioma: geral
-- Palavras: 166
+- Palavras: 182
 - Tem imagem: não
 
 ### Texto extraído
@@ -1058,38 +695,10 @@ da morte iminente.
 E 	 instabilidade psicológica da personagem face à
 realidade hostil.
 
-### Texto contado
-
-Na sua imaginação perturbada sentia a natureza toda
-agitando-se para sufocá-la. Aumentavam as sombras. No
-céu, nuvens colossais e túmidas rolavam para o abismo do
-horizonte... Na várzea, ao clarão indeciso do crepúsculo,
-os seres tomavam ares de monstros... As montanhas,
-subindo ameaçadoras da terra, perfilavam-se tenebrosas...
-Os caminhos, espreguiçando-se sobre os campos,
-animavam-se quais serpentes infinitas... As árvores soltas
-choravam ao vento, como carpideiras fantásticas da
-natureza morta... Os aflitivos pássaros noturnos gemiam
-agouros com pios fúnebres. Maria quis fugir, mas os
-membros cansados não acudiam aos ímpetos do medo
-e deixavam-na prostrada em uma angústia desesperada.
-No trecho, o narrador mobiliza recursos de linguagem que
-geram uma expressividade centrada na percepção da
-relação entre a natureza opressiva e o desejo de
-libertação da personagem.
-confluência entre o estado emocional da personagem
-e a configuração da paisagem.
-prevalência do mundo natural em relação à fragilidade
-humana.
-depreciação do sentido da vida diante da consciência
-da morte iminente.
-instabilidade psicológica da personagem face à
-realidade hostil.
-
 ## Questão 12
 
 - Idioma: geral
-- Palavras: 266
+- Palavras: 319
 - Tem imagem: não
 
 ### Texto extraído
@@ -1135,46 +744,10 @@ concepção tradicional de originalidade.
 E 	 resgate que a letra da canção promove de obras
 pouco conhecidas pelo público no país.
 
-### Texto contado
-
-É pau, é pedra, é o fim do caminho
-É um resto de toco, é um pouco sozinho
-É um caco de vidro, é a vida, é o sol
-É a noite, é a morte, é o laço, é o anzol
-É peroba-do-campo, é o nó da madeira
-Caingá, candeia, é o matita-pereira
-A inspiração súbita e certeira do compositor serve
-ainda de exemplo do lema antigo: nada vem do nada.
-Para ninguém, nem mesmo para Tom Jobim. Duas
-fontes são razoavelmente conhecidas. A primeira é o
-poema O caçador de esmeraldas, do mestre parnasiano
-Olavo Bilac: “Foi em março, ao findar da chuva,
-quase à entrada/ do outono, quando a terra em sede
-requeimada/ bebera longamente as águas da estação
-[...]”. E a outra é um ponto de macumba, gravado com
-sucesso por J. B. Carvalho, do Conjunto Tupi: “É pau, é
-pedra, é seixo miúdo, roda a baiana por cima de tudo”.
-Combinar Olavo Bilac e macumba já seria bom; mas o
-que se vê em Águas de março vai muito além: tudo se
-transforma numa outra coisa e numa outra música, que
-recompõem o mundo para nós.
-Ao situar a composição no panorama cultural brasileiro, o
-Texto II destaca o(a)
-diálogo que a letra da canção estabelece com
-diferentes tradições da cultura nacional.
-singularidade com que o compositor converte
-referências eruditas em populares.
-caráter inovador com que o compositor concebe o
-processo de criação artística.
-relativização que a letra da canção promove na
-concepção tradicional de originalidade.
-resgate que a letra da canção promove de obras
-pouco conhecidas pelo público no país.
-
 ## Questão 13
 
 - Idioma: geral
-- Palavras: 177
+- Palavras: 200
 - Tem imagem: não
 
 ### Texto extraído
@@ -1209,39 +782,10 @@ dos esportes.
 E 	 formação de grupos em comunidades virtuais para a
 prática esportiva.
 
-### Texto contado
-
-Deu vontade de jogar, mas não sabe como reunir
-os amigos...
-Muitas vezes é difícil encontrar grupos para bater
-uma bola. Em função disso, estão sendo disponibilizados
-aplicativos que reúnem times e reservam espaços para
-os adeptos da paixão nacional. Num exemplo dessas
-iniciativas, é possível organizar uma partida de futebol,
-se inscrever para participar de um jogo, alugar campos e
-quadras, convidar jogadores. O aplicativo tem dois tipos
-de usuários: um que o usa como ferramenta de gestão
-do grupo, convidando amigos para jogar, vendo quem
-confirmou e avaliando os jogos. Outro usuário é o que
-busca partidas perto de onde ele está, caso de pessoas
-que estão de passagem numa cidade.
-A inter-relação entre tecnologia e sociedade tem
-estimulado a criação de aplicativos. Nesse texto, isso é
-percebido pelo desenvolvimento de aplicativos para
-organização de eventos de competições esportivas.
-agendamento de viagens para eventos de esporte
-amador.
-mapeamento dos interesses dos praticantes acerca
-dos esportes.
-identificação da escassez de espaços para a vivência
-dos esportes.
-formação de grupos em comunidades virtuais para a
-prática esportiva.
-
 ## Questão 14
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 205
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1275,33 +819,10 @@ que surgiram nos anos 1990.
 E 	 interesse em produtos indesejáveis que revela uma
 consciência sustentável no mercado.
 
-### Texto contado
-
-O grupo Jovens Artistas Britânicos (YABs), que surgiu
-no final da década de 1980, possui obras diversificadas
-que incluem fotografias, instalações, pinturas e carcaças
-desmembradas. O trabalho desses artistas chamou
-a atenção no final do período da recessão, por utilizar
-materiais incomuns, como esterco de elefantes, sangue
-e legumes, o que expressava os detritos da vida e uma
-atmosfera de niilismo, temperada por um humor mordaz.
-A provocação desse grupo gera um debate em torno da
-obra de arte pelo(a)
-recusa a crenças, convicções, valores morais,
-estéticos e políticos na história moderna.
-frutífero arsenal de materiais e formas que se
-relacionam com os objetos construídos.
-economia e problemas financeiros gerados pela
-recessão que tiveram grande impacto no mercado.
-influência desse grupo junto aos estilos pós-modernos
-que surgiram nos anos 1990.
-interesse em produtos indesejáveis que revela uma
-consciência sustentável no mercado.
-
 ## Questão 15
 
 - Idioma: geral
-- Palavras: 201
+- Palavras: 219
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1337,41 +858,10 @@ E 	 possui jogadores e jogadoras com a mesma
 visibilidade, apesar de haver expoentes femininas de
 destaque, como Marta.
 
-### Texto contado
-
-O suor para estar em competições nacionais e
-internacionais de alto nível é o mesmo para homens e
-mulheres, mas não raramente as remunerações são
-menores para elas. Se no tênis, um dos esportes mais
-equânimes em termos de gênero, todos os principais
-torneios oferecem prêmios idênticos nas disputas
-femininas e masculinas, no futebol a desigualdade atinge
-seu ápice. Neymar e Marta são dois expoentes dessa
-paixão nacional. Ela já foi eleita cinco vezes a melhor
-jogadora do mundo pela Fifa. Ele conquistou o terceiro
-lugar na última votação para melhor do mundo. Mas é na
-conta bancária que a diferença entre os dois se sobressai.
-O esporte é uma manifestação cultural na qual se
-estabelecem relações sociais. Considerando o texto, o
-futebol é uma modalidade que
-apresenta proximidades com o tênis, no que tange às
-relações de gênero entre homens e mulheres.
-se caracteriza por uma identidade masculina no
-Brasil, conferindo maior remuneração aos jogadores.
-traz remunerações, aos jogadores e jogadoras,
-proporcionais aos seus esforços no treinamento
-esportivo.
-resulta em melhor eficiência para as mulheres e,
-consequentemente, em remuneração mais alta às
-jogadoras.
-possui jogadores e jogadoras com a mesma
-visibilidade, apesar de haver expoentes femininas de
-destaque, como Marta.
-
 ## Questão 16
 
 - Idioma: geral
-- Palavras: 275
+- Palavras: 296
 - Tem imagem: não
 
 ### Texto extraído
@@ -1417,50 +907,10 @@ sexual dos operários.
 E 	 apelo pela identificação com a empresa extensiva ao
 amor patriótico.
 
-### Texto contado
-
-Fomos falar com o tal encarregado, depois com um
-engenheiro, depois com um supervisor que mandou
-chamar um engenheiro da nossa companhia. Esses
-homens são da sua companhia, engenheiro, ele falou,
-estão pedindo a conta. A companhia está empenhada
-nessa ponte, gente, falou o engenheiro, vocês não
-podem sair assim sem mais nem menos. Tinha uma
-serra circular cortando uns caibros ali perto, então
-só dava pra falar quando a serra parava, e aquilo foi
-dando nos nervos.
-Falei que a gente tinha o direito de sair quando a
-gente quisesse, e pronto. Nisso encostou um sujeito
-de paletó mas sem gravata, o engenheiro continuou
-falando e a serra cortando. Quando ele parou de falar,
-50 Volts aproveitou uma parada da serra e falou que
-a gente não era bicho pra trabalhar daquele jeito; daí
-o supervisor falou que, se era falta de mulher, eles
-davam um jeito. O engenheiro falou que tinha mais
-de vinte companhias trabalhando na ponte, a maioria
-com prejuízo, porque era mais uma questão de honra,
-a gente tinha de acabar a ponte, a nossa companhia
-nunca ia esquecer nosso trabalho ali naquela ponte,
-um orgulho nacional.
-As reivindicações dos operários, quanto às condições
-aviltantes de trabalho a que são submetidos, recebem
-algumas tentativas de neutralização dos representantes
-do empregador, das quais a mais forte é o(a)
-sequência de atribuição de responsabilidades e de
-poder decisório a terceiros.
-solicitação em nome dos prejuízos e compromissos
-para entrega da obra.
-intimidação pela discreta presença de um agente de
-segurança na cena.
-promessa de imediato atendimento da carência
-sexual dos operários.
-apelo pela identificação com a empresa extensiva ao
-amor patriótico.
-
 ## Questão 17
 
 - Idioma: geral
-- Palavras: 212
+- Palavras: 239
 - Tem imagem: não
 
 ### Texto extraído
@@ -1496,40 +946,10 @@ mudança de hábitos dos indivíduos.
 E 	 reproduz a noção de que a melhoria da aptidão física
 pela prática de exercícios promove a saúde.
 
-### Texto contado
-
-Uma das mais contundentes críticas ao discurso
-da aptidão física relacionada à saúde está no caráter
-eminentemente individual de suas propostas, o que
-serve para obscurecer outros determinantes da saúde.
-Ou seja, costuma-se apresentar o indivíduo como o
-problema e a mudança do estilo de vida como a solução.
-Argumenta-se ainda que o movimento da aptidão física
-relacionada à saúde considera a existência de uma
-cultura homogênea na qual todos seriam livres para
-escolher seus estilos de vida, o que não condiz com a
-realidade. O fato é que vivemos numa sociedade dividida
-em classes sociais, na qual nem todas as pessoas têm
-condições econômicas para adotar um estilo de vida ativo
-e saudável. Há desigualdades estruturais com raízes
-políticas, econômicas e sociais que dificultam a adoção
-desses estilos de vida.
-Com base no texto, a relação entre saúde e estilos de vida
-constrói a ideia de que a mudança individual de
-hábitos promove a saúde.
-considera a homogeneidade da escolha de hábitos
-saudáveis pelos indivíduos.
-reforça a necessidade de solucionar os problemas de
-saúde da sociedade com a prática de exercícios.
-problematiza a organização social e seu impacto na
-mudança de hábitos dos indivíduos.
-reproduz a noção de que a melhoria da aptidão física
-pela prática de exercícios promove a saúde.
-
 ## Questão 18
 
 - Idioma: geral
-- Palavras: 146
+- Palavras: 168
 - Tem imagem: não
 
 ### Texto extraído
@@ -1579,54 +999,10 @@ determinações culturais.
 E 	 privilegia imagens relacionadas à exposição do
 dinamismo urbano.
 
-### Texto contado
-
-Retrato de homem
-A paisagem estrita
-ao apuro do muro
-feito vértebra a vértebra
-e escuro.
-A geração dos pelos
-sobre a casca e os rostos
-em seus diques de sombra
-repostos.
-Os poços com seu lodo
-de ira e de tensão:
-entre cimento e fronte
-— um vão.
-As setas se atiram
-às margens de ninguém,
-ilesas a si mesmas
-retêm.
-Compassos de evasão
-entre falange e rua
-sondando a solitude
-nua.
-E na armadura de coisa
-salobra, um só segredo:
-a polpa toda é fruição
-de medo.
-No poema, a descrição lírica do objeto representado é
-orientada por um olhar que
-desvela sentimentos de vazio e angústia sob a
-aparente austeridade.
-expressa desilusão ante a possibilidade de superação
-do sofrimento.
-contrapõe a fragilidade emocional ao uso desmedido
-da força física.
-associa
-a
-incomunicabilidade
-emocional
-às
-determinações culturais.
-privilegia imagens relacionadas à exposição do
-dinamismo urbano.
-
 ## Questão 19
 
 - Idioma: geral
-- Palavras: 162
+- Palavras: 181
 - Tem imagem: não
 
 ### Texto extraído
@@ -1664,42 +1040,10 @@ compromete a solicitação pretendida.
 E 	 esclarece que os termos “crime” e “processo de
 contravenção” são sinônimos.
 
-### Texto contado
-
-Senhor Juiz
-O instrumento do “crime” que se arrola
-Nesse processo de contravenção
-Não é faca, revólver ou pistola,
-Simplesmente, doutor, é um violão.
-Será crime, afinal, será pecado,
-Será delito de tão vis horrores,
-Perambular na rua um desgraçado
-Derramando nas praças suas dores?
-Mande, pois, libertá-lo da agonia
-(a consciência assim nos insinua)
-Não sufoque o cantar que vem da rua,
-Que vem da noite para saudar o dia.
-É o apelo que aqui lhe dirigimos,
-Na certeza do seu acolhimento
-Juntada desta aos autos nós pedimos
-E pedimos, enfim, deferimento.
-Essa petição de habeas corpus, ao transgredir o rigor da
-linguagem jurídica,
-permite que a narrativa seja objetiva e repleta de
-sentidos denotativos.
-mostra que o cordel explora termos próprios da esfera
-do direito.
-demonstra que o jogo de linguagem proposto atenua
-a gravidade do delito.
-exemplifica como o texto em forma de cordel
-compromete a solicitação pretendida.
-esclarece que os termos “crime” e “processo de
-contravenção” são sinônimos.
-
 ## Questão 20
 
 - Idioma: geral
-- Palavras: 182
+- Palavras: 203
 - Tem imagem: não
 
 ### Texto extraído
@@ -1734,39 +1078,10 @@ C 	 experiências por ele compartilhadas.
 D 	 padrões de linguagem por ele utilizados.
 E 	 preços acessíveis de seus treinamentos.
 
-### Texto contado
-
-Por que a indústria do empreendedorismo de palco
-irá destruir você
-Se, antigamente, os livros, enormes e com suas
-setecentas páginas, cuspiam fórmulas, equações e
-cálculos que te ensinavam a lidar com o fluxo de caixa
-da sua empresa, hoje eles dizem: “Você irá chegar lá!
-Acredite, você irá vencer!”.
-Mindset, empoderamento, millennials, networking,
-coworking, deal, business, deadline, salesman com
-perfil hunter… tudo isso faz parte do seu vocabulário.
-O pacote de livros é sempre idêntico e as experiências
-são passadas da mesma forma: você está a um único
-centímetro da vitória. Não pare!
-Se desistir agora, será para sempre. Tome, leia a
-estratégia do oceano azul. Faça mais uma mentoria,
-participe de mais uma sessão de coaching. O problema
-é que o seu mindset não está ajustado. Você precisa
-ser mais proativo. Vamos fazer mais um powermind ? Eu
-consigo um precinho bacana para você…
-De acordo com o texto, é possível identificar o
-“empreendedor de palco” por
-livros por ele indicados.
-suas habilidades em língua inglesa.
-experiências por ele compartilhadas.
-padrões de linguagem por ele utilizados.
-preços acessíveis de seus treinamentos.
-
 ## Questão 21
 
 - Idioma: geral
-- Palavras: 278
+- Palavras: 304
 - Tem imagem: não
 
 ### Texto extraído
@@ -1822,60 +1137,10 @@ bumba meu boi e dos autos como representação da
 musicalidade e do teatro popular religioso, bastante
 comum ao folclore brasileiro.
 
-### Texto contado
-
-Sou o coração do folclore nordestino
-Eu sou Mateus e Bastião do Boi-bumbá
-Sou o boneco de Mestre Vitalino
-Dançando uma ciranda em Itamaracá
-Eu sou um verso de Carlos Pena Filho
-Num frevo de Capiba
-Ao som da Orquestra Armorial
-Sou Capibaribe
-Num livro de João Cabral
-Sou mamulengo de São Bento do Una
-Vindo no baque solto de maracatu
-Eu sou um auto de Ariano Suassuna
-No meio da Feira de Caruaru
-Sou Frei Caneca do Pastoril do Faceta
-Levando a flor da lira
-Pra Nova Jerusalém
-Sou Luiz Gonzaga
-E sou do mangue também
-Eu sou mameluco, sou de Casa Forte
-Sou de Pernambuco, sou o Leão do Norte
-O fragmento faz parte da canção brasileira contemporânea
-e celebra a cultura popular nordestina. Nele, o artista
-exalta as diferentes manifestações culturais pela
-valorização do teatro, música, artesanato, literatura,
-dança, personagens históricos e artistas populares,
-compondo um tecido diversificado e enriquecedor da
-cultura popular como patrimônio regional e nacional.
-identificação
-dos
-lugares
-pernambucanos,
-manifestações culturais, como o bumba meu boi, as
-cirandas, os bonecos mamulengos e heróis locais,
-fazendo com que essa canção se apresente como
-uma referência à cultura popular nordestina.
-exaltação das raízes populares, como a poesia, a
-literatura de cordel e o frevo, misturadas ao erudito,
-como a Orquestra Armorial, compondo um rico tecido
-cultural, que transforma o popular em erudito.
-caracterização das festas populares como identidade
-cultural localizada e como representantes de uma
-cultura que reflete valores históricos e sociais próprios
-da população local.
-apresentação do Pastoril do Faceta, do maracatu, do
-bumba meu boi e dos autos como representação da
-musicalidade e do teatro popular religioso, bastante
-comum ao folclore brasileiro.
-
 ## Questão 22
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 84
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1895,25 +1160,10 @@ condutas ofensivas.
 E 	 regulamentar normas de boa convivência nos
 estádios.
 
-### Texto contado
-
-Esse anúncio publicitário propõe soluções para um
-problema social recorrente, ao
-promover ações de conscientização para reduzir a
-violência de gênero em eventos esportivos.
-estimular o compartilhamento de políticas públicas
-sobre a igualdade de gênero no esporte.
-divulgar para a população as novas regras
-complementares para as torcidas de futebol.
-informar ao público masculino as consequências de
-condutas ofensivas.
-regulamentar normas de boa convivência nos
-estádios.
-
 ## Questão 23
 
 - Idioma: geral
-- Palavras: 177
+- Palavras: 205
 - Tem imagem: não
 
 ### Texto extraído
@@ -1948,39 +1198,10 @@ contemporâneo.
 E 	 criticam os estereótipos sociais das visões de mundo
 elitistas.
 
-### Texto contado
-
-Eu tenho empresas e sou digno do visto para ir a
-Nova York. O dinheiro que chove em Nova York é para
-pessoas com poder de compra. Pessoas que tenham
-um visto do consulado americano. O dinheiro que chove
-em Nova York também é para os nova-iorquinos. São
-milhares de dólares. [...] Estou indo para Nova York, onde
-está chovendo dinheiro. Sou um grande administrador.
-Sim, está chovendo dinheiro em Nova York. Deu no rádio.
-Vejo que há pedestres invadindo a via onde trafega o
-meu carro vermelho, importado da Alemanha. Vejo que
-há carros nacionais trafegando pela via onde trafega o
-meu carro vermelho, importado da Alemanha. Ao chegar
-em Nova York, tomarei providências.
-As repetições e as frases curtas constituem procedimentos
-linguísticos importantes para a compreensão da temática
-do texto, pois
-expressam a futilidade do discurso de poder e de
-distinção do narrador.
-disfarçam a falta de densidade das angústias
-existenciais narradas.
-ironizam a valorização da cultura norte-americana
-pelos brasileiros.
-explicitam a ganância financeira do capitalismo
-contemporâneo.
-criticam os estereótipos sociais das visões de mundo
-elitistas.
-
 ## Questão 24
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -2010,33 +1231,10 @@ C 	 repetição de uma prática.
 D 	 continuidade de um processo.
 E 	 transferência de responsabilidade.
 
-### Texto contado
-
-DECRETO N. 28 314, DE 28 DE SETEMBRO DE 2007
-Demite o Gerúndio do Distrito Federal
-e dá outras providências.
-O GOVERNADOR DO DISTRITO FEDERAL, no uso
-das atribuições que lhe confere o artigo 100, incisos VII
-e XXVI, da Lei Orgânica do Distrito Federal, DECRETA:
-Art. 1° Fica demitido o Gerúndio de todos os órgãos do
-Governo do Distrito Federal.
-Art. 2° Fica proibido, a partir desta data, o uso do gerúndio
-para desculpa de INEFICIÊNCIA.
-Art. 3° Este Decreto entra em vigor na data de sua
-publicação.
-Art. 4º Revogam-se as disposições em contrário.
-Esse decreto pauta-se na ideia de que o uso do gerúndio,
-como “desculpa de ineficiência”, indica
-conclusão de uma ação.
-realização de um evento.
-repetição de uma prática.
-continuidade de um processo.
-transferência de responsabilidade.
-
 ## Questão 25
 
 - Idioma: geral
-- Palavras: 83
+- Palavras: 112
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2061,29 +1259,10 @@ aproximando-se
 das
 definições lexicais.
 
-### Texto contado
-
-A obra de Joseph Kosuth data de 1965 e se constitui por
-uma fotografia de cadeira, uma cadeira exposta e um
-quadro com o verbete “Cadeira”. Trata-se de um exemplo
-de arte conceitual que revela o paradoxo entre verdade e
-imitação, já que a arte
-não é a realidade, mas uma representação dela.
-fundamenta-se na repetição, construindo variações.
-não se define, pois depende da interpretação do fruidor.
-resiste ao tempo, beneficiada por múltiplas formas
-de registro.
-redesenha
-a
-verdade,
-aproximando-se
-das
-definições lexicais.
-
 ## Questão 26
 
 - Idioma: geral
-- Palavras: 105
+- Palavras: 122
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2109,31 +1288,10 @@ E 	 delimitar tecnologias exclusivas de jogos virtuais, a
 fim de oferecer maior emoção ao jogador por meio de
 outras realidades.
 
-### Texto contado
-
-A realidade virtual é uma tecnologia de informação que,
-conforme sugere a imagem, tem como uma de suas
-principais funções
-promover a manipulação eficiente de conhecimentos
-e informações de difícil compreensão no mundo
-físico.
-conduzir escolhas profissionais da área de ciência
-da computação, oferecendo um leque de opções de
-atuação.
-transferir conhecimento da inteligência artificial para
-as áreas tradicionais, como as das ciências exatas e
-naturais.
-levar o ser humano a experimentar mentalmente
-outras realidades, para as quais é transportado sem
-sair de seu próprio lugar.
-delimitar tecnologias exclusivas de jogos virtuais, a
-fim de oferecer maior emoção ao jogador por meio de
-outras realidades.
-
 ## Questão 27
 
 - Idioma: geral
-- Palavras: 179
+- Palavras: 198
 - Tem imagem: não
 
 ### Texto extraído
@@ -2176,47 +1334,10 @@ E 	 narrativo e injuntivo, pois o enunciador ensina
 o interlocutor como andar pelas ruas da cidade
 contando sobre sua própria experiência.
 
-### Texto contado
-
-Caminhando contra o vento,
-Sem lenço e sem documento
-No sol de quase dezembro
-Eu vou
-O sol se reparte em crimes
-Espaçonaves, guerrilhas
-Em cardinales bonitas
-Eu vou
-Em caras de presidentes
-Em grandes beijos de amor
-Em dentes, pernas, bandeiras
-Bombas e Brigitte Bardot
-O sol nas bancas de revista
-Me enche de alegria e preguiça
-Quem lê tanta notícia
-Eu vou
-É comum coexistirem sequências tipológicas em um
-mesmo gênero textual. Nesse fragmento, os tipos textuais
-que se destacam na organização temática são
-descritivo e argumentativo, pois o enunciador detalha
-cada lugar por onde passa, argumentando contra a
-violência urbana.
-dissertativo e argumentativo, pois o enunciador
-apresenta seu ponto de vista sobre as notícias
-relativas à cidade.
-expositivo e injuntivo, pois o enunciador fala de
-seus estados físicos e psicológicos e interage com a
-mulher amada.
-narrativo e descritivo, pois o enunciador conta sobre
-suas andanças pelas ruas da cidade ao mesmo
-tempo que a descreve.
-narrativo e injuntivo, pois o enunciador ensina
-o interlocutor como andar pelas ruas da cidade
-contando sobre sua própria experiência.
-
 ## Questão 28
 
 - Idioma: geral
-- Palavras: 201
+- Palavras: 226
 - Tem imagem: não
 
 ### Texto extraído
@@ -2256,44 +1377,10 @@ E 	 inter-relação de elementos culturais vindos de
 realidades distintas na construção de uma nova
 proposta musical.
 
-### Texto contado
-
-Leandro Aparecido Ferreira, o MC Fioti, compôs em
-2017 a música Bum bum tam tam, que gerou, em nove
-meses, 480 milhões de visualizações no YouTube. É o
-funk brasileiro mais ouvido na história do site.
-A partir de uma gravação da flauta que achou na
-internet, MC Fioti fez tudo sozinho: compôs, cantou e
-produziu em uma noite só. “Comecei a pesquisar alguns
-tipos de flauta, coisas antigas. E nisso eu achei a ‘flautinha
-do Sebastian Bach’”, conta. A descoberta foi por acaso:
-Fioti não sabia quem era o músico alemão e não sabe
-tocar o instrumento.
-A “flauta envolvente” da música é um trecho da Partita
-em Lá menor, escrita pelo alemão Johann Sebastian
-A incorporação de um trecho da obra para flauta solo de
-Johann Sebastian Bach na música de MC Fioti demonstra a
-influência permanente da cultura eurocêntrica nas
-produções musicais brasileiras.
-homenagem aos referenciais estéticos que deram
-origem às produções da música popular.
-necessidade de divulgar a música de concerto nos
-meios populares nas periferias das grandes cidades.
-utilização
-desintencional
-de
-uma
-música
-excessivamente distante da realidade cultural dos
-jovens brasileiros.
-inter-relação de elementos culturais vindos de
-realidades distintas na construção de uma nova
-proposta musical.
-
 ## Questão 29
 
 - Idioma: geral
-- Palavras: 140
+- Palavras: 158
 - Tem imagem: não
 
 ### Texto extraído
@@ -2323,34 +1410,10 @@ C 	 expressar perplexidade em relação ao parente.
 D 	 atribuir à criança a causa da dúvida existencial.
 E 	 questionar os lugares predeterminados da família.
 
-### Texto contado
-
-Seu delegado
-Eu sou viúvo e tenho um filho homem
-Arrumei uma viúva e fui me casar
-A minha sogra era muito teimosa
-Com o meu filho foi se matrimoniar
-Desse matrimônio nasceu um garoto
-Desde esse dia que eu ando é louco
-Esse garoto é filho do meu filho
-E o filho da minha sogra é irmão da minha mulher
-Ele é meu neto e eu sou cunhado dele
-A minha nora é minha sogra
-Meu filho meu sogro é
-Nessa confusão já nem sei quem sou
-Acaba esse garoto sendo meu avô.
-Nessa letra da canção, a suposição do último verso
-sinaliza a intenção do autor de
-ironizar as relações familiares modernas.
-reforçar o humor da situação representada.
-expressar perplexidade em relação ao parente.
-atribuir à criança a causa da dúvida existencial.
-questionar os lugares predeterminados da família.
-
 ## Questão 30
 
 - Idioma: geral
-- Palavras: 96
+- Palavras: 114
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2373,28 +1436,10 @@ despercebidas para evitar o assédio.
 E 	 incapacidade de as mulheres protegerem-se da
 agressão verbal dos assediadores.
 
-### Texto contado
-
-Essa campanha de conscientização sobre o assédio
-sofrido pelas mulheres nas ruas constrói-se pela
-combinação da linguagem verbal e não verbal. A imagem
-da mulher com o nariz e a boca cobertos por um lenço é
-a representação não verbal do(a)
-silêncio imposto às mulheres, que não podem
-denunciar o assédio sofrido.
-metáfora de que as mulheres precisam defender-se
-do assédio masculino.
-constrangimento pelo qual passam as mulheres e
-sua tentativa de esconderem-se.
-necessidade que as mulheres têm de passarem
-despercebidas para evitar o assédio.
-incapacidade de as mulheres protegerem-se da
-agressão verbal dos assediadores.
-
 ## Questão 31
 
 - Idioma: geral
-- Palavras: 256
+- Palavras: 275
 - Tem imagem: não
 
 ### Texto extraído
@@ -2443,54 +1488,10 @@ paciente.
 E 	 notícia, pois divulga fatos sobre a síndrome do
 coração partido.
 
-### Texto contado
-
-Mulher tem coração clinicamente partido após morte
-de cachorro
-Como explica o The New England Journal of
-Medicine, a paciente, chamada Joanie Simpson, tinha
-sinais de infarto, como dores no peito e pressão alta,
-e apresentava problemas nas artérias coronárias. Ao
-fazerem um ecocardiograma, os médicos encontraram o
-problema: cardiomiopatia de Takotsubo, conhecida como
-síndrome do coração partido.
-Essa condição médica tipicamente acontece com
-mulheres em fase pós-menstrual e pode ser precedida
-por um evento muito estressante ou emotivo. Nesses
-casos, o coração apresenta um movimento discinético
-transitório da parede anterior do ventrículo esquerdo, com
-acentuação da cinética da base ventricular, de acordo
-com um artigo médico brasileiro que relata um caso
-semelhante. Simpson foi encaminhada para casa após
-dois dias e passou a tomar medicamentos regulares.
-Ao Washington Post, ela contou que estava quase
-inconsolável após a perda do seu animal de estimação,
-um cão da raça yorkshire terrier. Recuperada após cerca
-de um ano, ela diz que não abrirá mão de ter um animal
-de estimação porque aprecia a companhia e o amor que
-os cachorros dão aos humanos. O caso aconteceu em
-Houston, nos Estados Unidos.
-Pelas características do texto lido, que trata das
-consequências da perda de um animal de estimação,
-considera-se que ele se enquadra no gênero
-conto, pois exibe a história de vida de Joanie Simpson.
-depoimento, pois expõe o sofrimento da dona do
-animal.
-reportagem,
-pois
-discute
-cientificamente
-a
-cardiomiopatia.
-relato, pois narra um fato estressante vivido pela
-paciente.
-notícia, pois divulga fatos sobre a síndrome do
-coração partido.
-
 ## Questão 32
 
 - Idioma: geral
-- Palavras: 187
+- Palavras: 206
 - Tem imagem: não
 
 ### Texto extraído
@@ -2522,37 +1523,10 @@ C 	 legitimar o direito do filho à herança.
 D 	 conter o ânimo violento de Chico Lourenço.
 E 	 condenar a agressividade do marido contra o filho.
 
-### Texto contado
-
-Chiquito tinha quase trinta quando conheceu Mariana
-num baile de casamento na Forquilha, onde moravam
-uns parentes dele. Por lá foi ficando, remanchando. Fez
-mal à moça, como costumavam dizer, tiveram de casar às
-pressas. Morou uns tempos com o sogro, descombinaram.
-Foi só conta de colher o milho e vender. Mudou pra casa
-do velho Chico Lourenço [seu pai]. Fumaça própria só viu
-subir um par de anos depois, quando o pai repartiu as
-terras. De tão parecidos, pai e filho nunca combinaram
-direito. Cada qual mais topetudo, muitas vezes dona
-Aparecida ouvia o marido reclamar da natureza forte do
-filho. Ela escutava com paciência e respondia dum jeito
-sempre igual:
-— “Quem herda, não rouba”.
-Vinha um brilho nos olhos, o velho se acalmava.
-Os ditados populares são frases de sabedoria criadas
-pelo povo, utilizadas em várias situações da vida. Nesse
-texto, a personagem emprega um ditado popular com a
-intenção de
-criticar a natureza forte do filho.
-justificar o gênio difícil de Chiquito.
-legitimar o direito do filho à herança.
-conter o ânimo violento de Chico Lourenço.
-condenar a agressividade do marido contra o filho.
-
 ## Questão 33
 
 - Idioma: geral
-- Palavras: 178
+- Palavras: 202
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2588,39 +1562,10 @@ muito comum nas ruas.
 E 	 exposição da beleza escondida das esquinas da
 cidade de Belo Horizonte.
 
-### Texto contado
-
-Poesia em cartaz
-O caminho habitual para o trabalho, aquele em que
-a gente já nem repara direito, pode ficar mais belo com
-um poema. O projeto #UmLambePorDia nasceu desta
-intenção: trazer mais cor e alegria para a cidade por meio
-de cartazes coloridos ao estilo lambe-lambe. Quem teve
-a ideia foi o escritor Leonardo Beltrão, em Belo Horizonte.
-“Em meio a olhares cada vez mais viciados, acabamos
-nos esquecendo da beleza envolvida em cada esquina
-e no próprio poder transformador da palavra”. Assim, a
-cada dia um cartaz é colocado por aí, para nos lembrar de
-reparar na cidade, na vida que corre ao redor e também
-em nós mesmos.
-Considerando-se a função que os cartazes colados em
-postes normalmente exercem nas ruas das cidades
-grandes, esse texto evidencia a
-disseminação da arte poética em um veículo não
-convencional.
-manutenção da expectativa das pessoas ao andarem
-pelas ruas.
-necessidade de exposição de poemas pequenos em
-diferentes suportes.
-característica corriqueira do suporte lambe-lambe,
-muito comum nas ruas.
-exposição da beleza escondida das esquinas da
-cidade de Belo Horizonte.
-
 ## Questão 34
 
 - Idioma: geral
-- Palavras: 180
+- Palavras: 198
 - Tem imagem: não
 
 ### Texto extraído
@@ -2651,36 +1596,10 @@ D 	 incidência da memória sobre as imagens narradas.
 E 	alternância entre impressões subjetivas e relatos
 factuais.
 
-### Texto contado
-
-A vida às vezes é como um jogo brincado na rua:
-estamos no último minuto de uma brincadeira bem quente
-e não sabemos que a qualquer momento pode chegar um
-mais velho a avisar que a brincadeira já acabou e está na
-hora de jantar. A vida afinal acontece muito de repente
-— nunca ninguém nos avisou que aquele era mesmo o
-último Carnaval da Vitória. O Carnaval também chegava
-sempre de repente. Nós, as crianças, vivíamos num tempo
-fora do tempo, sem nunca sabermos dos calendários de
-verdade. [...] O “dia da véspera do Carnaval”, como dizia
-a avó Nhé, era dia de confusão com roupas e pinturas a
-serem preparadas, sonhadas e inventadas. Mas quando
-acontecia era um dia rápido, porque os dias mágicos
-passam depressa deixando marcas fundas na nossa
-memória, que alguns chamam também de coração.
-As significações afetivas engendradas no fragmento
-pressupõem o reconhecimento da
-perspectiva infantil assumida pela voz narrativa.
-suspensão da linearidade temporal da narração.
-tentativa de materializar lembranças da infância.
-incidência da memória sobre as imagens narradas.
-alternância entre impressões subjetivas e relatos
-factuais.
-
 ## Questão 35
 
 - Idioma: geral
-- Palavras: 197
+- Palavras: 216
 - Tem imagem: não
 
 ### Texto extraído
@@ -2716,41 +1635,10 @@ produzindo mais lucro.
 E 	 reforçarem estereótipos de gênero masculino ou
 feminino nos esportes.
 
-### Texto contado
-
-Em 2000 tivemos a primeira experiência do futebol
-feminino em um jogo de videogame, o Mia Hamm
-Soccer. Doze anos depois, uma petição on-line pedia
-que a EA Sports incluísse o futebol feminino no Fifa 13.
-Contudo, só em 2015, com uma nova petição on-line,
-que arrecadou milhares de assinaturas, tivemos o futebol
-feminino incluído no Fifa 16. Vendo um nicho de mercado
-inexplorado, a EA Sports produziu o jogo com 12 seleções
-femininas e o apresentou como inovação. A empresa sabe
-que mais de 40% dos praticantes de futebol nos EUA são
-meninas. Para elas, ver o futebol feminino representado
-em um jogo de videogame é extremamente importante.
-Ter o futebol feminino no Fifa 16 é um grande passo para
-a sua popularização na luta pela igualdade de gênero,
-num contexto machista, sexista, misógino e homofóbico.
-Os jogos eletrônicos presentes na cultura juvenil podem
-desempenhar uma relevante função na abordagem do
-futebol ao
-disseminarem uma modalidade, promovendo a
-igualdade de gênero.
-superarem jogos malsucedidos no mercado, lançados
-anteriormente.
-inovarem a modalidade com novas ofertas de jogos
-ao mercado.
-explorarem nichos de mercado antes ignorados,
-produzindo mais lucro.
-reforçarem estereótipos de gênero masculino ou
-feminino nos esportes.
-
 ## Questão 36
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 145
 - Tem imagem: não
 
 ### Texto extraído
@@ -2780,34 +1668,10 @@ regulamentadas entre os oponentes.
 E  confl ito resolvido pelos alunos por meio de regras
 previamente estabelecidas.
 
-### Texto contado
-
-LUTA: prática corporal imprevisível, caracterizada por
-determinado estado de contato proposital, que possibilita
-a duas ou mais pessoas se enfrentarem numa constante
-troca de ações ofensivas e/ou defensivas, regida por
-regras, com o objetivo mútuo sobre um alvo móvel
-personifi cado no oponente.
-De acordo com o texto, podemos identifi car uma
-abordagem das lutas nas aulas de educação física
-quando o professor realiza uma proposta envolvendo
-contato corporal intenso entre o aluno e seu oponente.
-contenda entre os alunos que se agridem fi sicamente.
-confronto corporal em que os vencedores são
-previamente identifi cados.
-combate
-corporal
-intencional
-com
-ações
-regulamentadas entre os oponentes.
-confl ito resolvido pelos alunos por meio de regras
-previamente estabelecidas.
-
 ## Questão 37
 
 - Idioma: geral
-- Palavras: 233
+- Palavras: 261
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2955,152 +1819,10 @@ C  condição habitacional presente nas cidades.
 D  acesso ao sistema educacional.
 E  forma de organização social.
 
-### Texto contado
-
-O conceito de saúde formulado na histórica VIII
-Conferência Nacional de Saúde, no ano de 1986, fi cou
-conhecido como um “conceito ampliado” de saúde,
-conforme ilustrado na fi gura. Esse conceito foi fruto de
-intensa mobilização em diversos países da América
-Latina nas décadas de 1970 e 1980, como resposta à
-crise dos sistemas públicos de saúde.
-C
-on
-di
-çõ
-e
-s
-S
-o
-ci
-o
-e
-c
-o
-n
-ô
-m
-ic
-as
-,
-C
-ul
-tu
-ra
-is
-e
-A
-m
-bi
-e
-nt
-ai
-s
-G
-er
-ai
-s
-Idade,
-sexo e fatores
-hereditários
-E
-S
-T
-I
-L
-O
-D
-E
-V
-I
-D
-A
-D
-O
-S
-I
-N
-D
-I
-V
-Í
-D
-U
-O
-S
-R
-E
-D
-E
-S
-S
-O
-C
-I
-A
-I
-S
-E
-C
-O
-M
-U
-N
-I
-T
-Á
-R
-I
-A
-S
-C
-o
-n
-di
-ç
-õ
-e
-s
-d
-e
-vi
-d
-a
-e
-d
-e
-tr
-a
-b
-al
-h
-o
-Produção
-agrícola e de
-alimentos
-Serviços
-sociais
-de saúde
-Água e
-esgoto
-Educação
-Ambiente
-de trabalho
-Habitação
-Desemprego
-Com base no conceito apresentado no texto, a saúde é
-consequência direta do(a)
-adoção de um estilo de vida ativo por parte dos
-indivíduos.
-disponibilidade de emprego no mercado de trabalho.
-condição habitacional presente nas cidades.
-acesso ao sistema educacional.
-forma de organização social.
-
 ## Questão 38
 
 - Idioma: geral
-- Palavras: 291
+- Palavras: 296
 - Tem imagem: não
 
 ### Texto extraído
@@ -3146,53 +1868,10 @@ estrada para se dirigir do mundo’ [...]”.
 E  “Pois na manhã do 25 de abril, dia da Revolução dos
 Cravos, resolvemos conhecer a tal maravilha”.
 
-### Texto contado
-
-Relatos de viagem: nas curvas da Nacional 222,
-em Portugal
-Em abril deste ano, fomos a Portugal para uma
-viagem de um mês que esperávamos há um ano. Pois
-no dia 4 de maio, chegávamos ao Aeroporto Francisco
-Sá Carneiro, no Porto. Que linda a “antiga, muy nobre,
-sempre leal e invicta” cidade do Porto! “Encantei-me”,
-diriam eles... pelas belas paisagens, construções
-históricas com lindas fachadas, parques e praças muito
-bem cuidados.
-Os tripeiros, sinônimo de portuenses, têm
-orgulho de sua cidade, apelidada de Invicta — nunca
-foi invadida. E valorizam tudo o que há de bom ali,
-como “a melhor estrada para se dirigir do mundo”, a
-Nacional 222.
-Pois na manhã do 25 de abril, dia da Revolução
-dos Cravos, resolvemos conhecer a tal maravilha.
-A cada 10 km tínhamos que encostar: corríamos,
-dançávamos, tomávamos chocolate quente, sopa, tudo
-que fosse quentinho. E lá íamos para mais uma etapa.
-Uma aventura deliciosa. Depois de três horas — mais
-ou menos o dobro do tempo necessário, não fossem
-as paradas para aquecimento —, chegamos a casa!
-Congelados, mas maravilhados e invictos!
-Nesse texto, busca-se seduzir o leitor por meio da
-exploração de uma voz externa sobre a identidade
-histórica do povo português. O trecho que evidencia
-esse procedimento argumentativo é
-A “Que linda a ‘antiga, muy nobre, sempre leal e invicta’
-cidade do Porto!”.
-“Que linda a ‘antiga, muy nobre, sempre leal e invicta’
-cidade do Porto!”.
-“‘Encantei-me’, diriam eles... pelas belas paisagens,
-construções históricas com lindas fachadas [...]”.
-“Os tripeiros, sinônimo de portuenses, têm orgulho de
-sua cidade [...]”.
-“E valorizam tudo o que há de bom ali, como ‘a melhor
-estrada para se dirigir do mundo’ [...]”.
-“Pois na manhã do 25 de abril, dia da Revolução dos
-Cravos, resolvemos conhecer a tal maravilha”.
-
 ## Questão 39
 
 - Idioma: geral
-- Palavras: 110
+- Palavras: 134
 - Tem imagem: não
 
 ### Texto extraído
@@ -3221,33 +1900,10 @@ C 	 valoriza os seus elementos.
 D 	 emprega termos religiosos.
 E 	 recorre à sua história.
 
-### Texto contado
-
-Hino à Bandeira
-Em teu seio formoso retratas
-Este céu de puríssimo azul,
-A verdura sem par destas matas,
-E o esplendor do Cruzeiro do Sul.
-Contemplando o teu vulto sagrado,
-Compreendemos o nosso dever,
-E o Brasil por seus filhos amado,
-Poderoso e feliz há de ser!
-Sobre a imensa Nação Brasileira,
-Nos momentos de festa ou de dor,
-Paira sempre sagrada bandeira
-Pavilhão da justiça e do amor!
-No Hino à Bandeira, a descrição é um recurso utilizado
-para exaltar o símbolo nacional na medida em que
-remete a um momento futuro.
-promove a união dos cidadãos.
-valoriza os seus elementos.
-emprega termos religiosos.
-recorre à sua história.
-
 ## Questão 40
 
 - Idioma: geral
-- Palavras: 181
+- Palavras: 199
 - Tem imagem: não
 
 ### Texto extraído
@@ -3278,36 +1934,10 @@ C 	 falta de diálogo entre patrões e empregados.
 D 	 perspicácia marcada pela formação intelectual.
 E 	 tensão política gerada pelas ideologias vigentes.
 
-### Texto contado
-
-— O senhor pensa que eu tenho alguma fábrica de
-dinheiro? (O diretor diz essas coisas a ele, mas olha
-para todos como quem quer dar uma explicação a todos.
-Todas as caras sorriem.) Quando seu filho esteve doente,
-eu o ajudei como pude. Não me peça mais nada. Não me
-encarregue de pagar as suas contas: já tenho as minhas,
-e é o que me basta... (Risos.)
-O diretor tem o rosto escanhoado, a camisa limpa. A
-palavra possui um tom educado, de pessoa que convive
-com gente inteligente, causeuse. O rosto do Dr. Rist
-resplandece, vermelho e glabro. Um que outro tem os
-olhos no chão, a atitude discreta.
-Naziazeno espera que ele lhe dê as costas, vá reatar
-a palestra interrompida, aquelas observações sobre a
-questão social, comunismo e integralismo.
-A ficção modernista explorou tipos humanos em situação
-de conflito social. No fragmento do romancista gaúcho,
-esse conflito revela a
-sujeição moral amplificada pela pobreza.
-crise econômica em expansão nas cidades.
-falta de diálogo entre patrões e empregados.
-perspicácia marcada pela formação intelectual.
-tensão política gerada pelas ideologias vigentes.
-
 ## Questão 41
 
 - Idioma: geral
-- Palavras: 156
+- Palavras: 181
 - Tem imagem: não
 
 ### Texto extraído
@@ -3337,34 +1967,10 @@ C 	 pouca representatividade das línguas indígenas.
 D 	 atitude irônica diante da língua dos colonizadores.
 E 	 tentativa de solicitação do documento demandado.
 
-### Texto contado
-
-Policarpo Quaresma, cidadão brasileiro, funcionário
-público, certo de que a língua portuguesa é emprestada
-ao Brasil; certo também de que, por esse fato, o
-falar e o escrever em geral, sobretudo no campo das
-letras, se veem na humilhante contingência de sofrer
-continuamente censuras ásperas dos proprietários da
-língua; sabendo, além, que, dentro do nosso país, os
-autores e os escritores, com especialidade os gramáticos,
-não se entendem no tocante à correção gramatical,
-vendo-se, diariamente, surgir azedas polêmicas entre os
-mais profundos estudiosos do nosso idioma — usando
-do direito que lhe confere a Constituição, vem pedir que
-o Congresso Nacional decrete o tupi-guarani como língua
-oficial e nacional do povo brasileiro.
-Nessa petição da pitoresca personagem do romance de
-Lima Barreto, o uso da norma-padrão justifica-se pela
-situação social de enunciação representada.
-divergência teórica entre gramáticos e literatos.
-pouca representatividade das línguas indígenas.
-atitude irônica diante da língua dos colonizadores.
-tentativa de solicitação do documento demandado.
-
 ## Questão 42
 
 - Idioma: geral
-- Palavras: 161
+- Palavras: 194
 - Tem imagem: não
 
 ### Texto extraído
@@ -3396,36 +2002,10 @@ D 	 jogo por meio de comandos fornecidos pelo videogame.
 E 	 disputa entre jogadores, contribuindo para o
 individualismo.
 
-### Texto contado
-
-Atualmente os jovens estão imersos numa sociedade
-permeada pela tecnologia. Nesse contexto, os jogos
-digitais são artefatos muito empregados. Videogames
-ativos ou exergames foram introduzidos como forma
-de permitir que o corpo controlasse tais jogos. Como
-resultado, passaram a ser vistos como uma ferramenta
-auxiliar na adoção de um estilo de vida menos sedentário,
-com efeitos positivos sobre a saúde. Tem-se defendido
-que os exergames podem contribuir para a prática regular
-de atividade física moderada, bem como promover a
-interação entre jogadores, reduzindo o sentimento de
-isolamento social. Por outro lado, argumenta-se que os
-exergames não podem substituir a experiência real das
-práticas corporais, pois não motivam a longo prazo a
-prática permanente de atividades físicas.
-Pela sua interatividade, os exergames apresentam-se
-como possibilidade para estimular o(a)
-exercitação física, promovendo a saúde.
-vivência de exercícios físicos sistemáticos.
-envolvimento com atividades físicas ao longo da vida.
-jogo por meio de comandos fornecidos pelo videogame.
-disputa entre jogadores, contribuindo para o
-individualismo.
-
 ## Questão 43
 
 - Idioma: geral
-- Palavras: 157
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -3457,37 +2037,10 @@ C 	 linguagem.
 D 	 preconceito.
 E 	 educação.
 
-### Texto contado
-
-Quando quis agilizar o processo de seleção de
-novos alunos, a tradicional faculdade britânica de
-medicina St. George usou um software para definir
-quem deveria ser entrevistado. Ao reproduzir a forma
-como os funcionários faziam essa escolha, o programa
-eliminou, de cara, 60 de 2 000 candidatos. Só por causa
-do sexo ou da origem racial, numa dedução baseada
-em sobrenome e local de nascimento. Um estudo sobre
-o caso foi publicado em 1988, mas, 25 anos depois,
-outra pesquisa apontou que esse tipo de discriminação
-segue firme. O exemplo recente envolve o buscador
-do Google: ao digitar nomes comuns entre negros dos
-EUA, a chance de os anúncios automáticos oferecerem
-checagem de antecedentes criminais pode aumentar
-25%. E pode piorar com a pergunta “detido?” logo após a
-palavra procurada.
-O texto permite o desnudamento da sociedade ao
-relacionar as tecnologias de informação e comunicação
-com o(a)
-agilidade dos softwares.
-passar dos anos.
-linguagem.
-preconceito.
-educação.
-
 ## Questão 44
 
 - Idioma: geral
-- Palavras: 50
+- Palavras: 68
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3502,20 +2055,10 @@ C 	 as famílias preferem adotar bebês.
 D 	 a adoção de adolescentes é mais simples.
 E 	 os filhos adotivos são companheiros dos pais.
 
-### Texto contado
-
-Nessa campanha publicitária, a imagem da família e o
-texto verbal unem-se para reforçar a ideia de que
-a família que adota é mais feliz.
-a adoção tardia é muito positiva.
-as famílias preferem adotar bebês.
-a adoção de adolescentes é mais simples.
-os filhos adotivos são companheiros dos pais.
-
 ## Questão 45
 
 - Idioma: geral
-- Palavras: 226
+- Palavras: 931
 - Tem imagem: não
 
 ### Texto extraído
@@ -3553,45 +2096,101 @@ histórico.
 E 	 distanciado dos elementos narrados, que recorre
 ao ponto de vista do viajante como expressão de
 estranhamento.
-
-### Texto contado
-
-Viajo Curitiba das conferências positivistas, elas
-são onze em Curitiba, há treze no mundo inteiro; do
-tocador de realejo que não roda a manivela desde que
-o macaquinho morreu; dos bravos soldados do fogo que
-passam chispando no carro vermelho atrás do incêndio
-que ninguém não viu, esta Curitiba e a do cachorro-quente
-com chope duplo no Buraco do Tatu eu viajo.
-Curitiba, aquela do Burro Brabo, um cidadão
-misterioso morreu nos braços da Rosicler, quem foi?
-quem não foi? foi o reizinho do Sião; da Ponte Preta da
-estação, a única ponte da cidade, sem rio por baixo, esta
-Curitiba viajo.
-Curitiba sem pinheiro ou céu azul, pelo que vosmecê
-é — província, cárcere, lar —, esta Curitiba, e não a outra
-para inglês ver, com amor eu viajo, viajo, viajo.
-A tematização de Curitiba é frequente na obra de Dalton
-Trevisan. No fragmento, a relação do narrador com o
-espaço urbano é caracterizada por um olhar
-destituído de afetividade, que ironiza os costumes e
-as tradições da sociedade curitibana.
-marcado pela negatividade, que busca desconstruir
-perspectivas habituais de representação da cidade.
-carregado de melancolia, que constata a falta
-de identidade cultural diante dos impactos da
-urbanização.
-embevecido pela simplicidade do cenário, indiferente
-à descrição de elementos de reconhecido valor
-histórico.
-distanciado dos elementos narrados, que recorre
-ao ponto de vista do viajante como expressão de
-estranhamento.
+INSTRUÇÕES PARA A REDAÇÃO
+1. 	O rascunho da redação deve ser feito no espaço apropriado.
+2. 	O texto definitivo deve ser escrito à tinta, na folha própria, em até 30 linhas.
+3. 	A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas copiadas
+desconsiderado para efeito de correção.
+4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:
+4.1. tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”.
+4.2. fugir ao tema ou que não atender ao tipo dissertativo-argumentativo.
+4.3. apresentar parte do texto deliberadamente desconectada do tema proposto.
+TEXTOS MOTIVADORES
+TEXTO I
+A maior parte das pessoas, quando ouve falar em “saúde mental”, pensa em “doença mental”. Mas a saúde mental
+implica muito mais que a ausência de doenças mentais. Pessoas mentalmente saudáveis compreendem que
+ninguém é perfeito, que todos possuem limites e que não se pode ser tudo para todos. Elas vivenciam diariamente
+uma série de emoções como alegria, amor, satisfação, tristeza, raiva e frustração. São capazes de enfrentar os
+desafios e as mudanças da vida cotidiana com equilíbrio e sabem procurar ajuda quando têm dificuldade em lidar
+com conflitos, perturbações, traumas ou transições importantes nos diferentes ciclos da vida. A saúde mental de
+uma pessoa está relacionada à forma como ela reage às exigências da vida e ao modo como harmoniza seus
+desejos, capacidades, ambições, ideias e emoções. Todas as pessoas podem apresentar sinais de sofrimento
+psíquico em alguma fase da vida.
+Disponível em: http://www.saude.pr.gov.br. Acesso em: 27 jul. 2020 (adaptado).
+TEXTO II
+A origem da palavra “estigma” aponta para marcas ou cicatrizes
+deixadas por feridas. Por extensão, em um período que remonta
+à Grécia Antiga, passou a designar também as marcas feitas com
+ferro em brasa em criminosos, escravos e outras pessoas que se
+desejava separar da sociedade “correta” e “honrada”. Essa mesma
+palavra muitas vezes está presente no universo das doenças
+psiquiátricas. No lugar da marca de ferro, relegamos preconceito,
+falta de informação e tratamentos precários a pessoas que sofrem
+de depressão, ansiedade, transtorno bipolar e outros transtornos
+mentais graves.
+Achar que a manifestação de um transtorno mental é “frescura”
+está relacionado a um ideal de felicidade que não é igual para
+todo mundo. A tentativa de se encaixar nesse modelo cria
+distância dos sentimentos reais, e quem os demonstra é rotulado,
+o que progressivamente dificulta a interação social. É aqui que
+redes sociais de enorme popularidade mostram uma face cruel,
+desempenhando um papel de validação da vida perfeita e criando
+um ambiente em que tudo deve ser mostrado em seu melhor
+ângulo. Fora dos holofotes da internet, porém, transtornos mentais
+mostram-se mais presentes do que se imagina.
+http://www.abrata.org.br. Acesso em: 27 jul. 2020 (adaptado).
+PROPOSTA DE REDAÇÃO
+A partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua
+formação, redija um texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa
+sobre o tema “O estigma associado às doenças mentais na sociedade brasileira”, apresentando proposta de
+intervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa,
+argumentos e fatos para defesa de seu ponto de vista.
+SOCORRO,
+BRASIL!
+Saiba mais sobre o problema de
+saúde que afeta mais de 1 em
+cada 20 pessoas, mas que
+continuamos ignorando!
+Mais de
+de brasileiros têm depressão
+11,5 milhões
+322
+milhões
+Hoje
+O Brasil é o país
+mais depressivo
+da América Latina
+de afastamento de
+trabalho no mundo
+Depressão é a
+2a causa
+de pessoas vivem com
+depressão em todo o mundo
+A depressão é a
+doença mais
+incapacitante
+do mundo
+1 trilhão
+de dólares
+é o valor da perda econômica
+mundial gerada pelas consequências
+dos transtornos mentais
+Todos os dados foram divulgados pela Organização Mundial da Saúde
+(OMS) em fevereiro de 2017.
+Se você precisa de ajuda, ligue para o Centro de Valorização da Vida (CVV): 188.
+afetadas pela depressão
+é 30% mais elevado
+que o dos homens
+Mulheres
+O número de
+TEXTO III
+Disponível em: https://zenklub.com.br.
+Acesso em: 27 jul. 2020 (adaptado).
 
 ## Questão 46
 
 - Idioma: geral
-- Palavras: 132
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -3621,33 +2220,10 @@ C 	 diversificação da matriz energética.
 D 	 fortalecimento da pesquisa científica.
 E 	 monitoramento do fluxo alfandegário.
 
-### Texto contado
-
-Embora inegáveis os benefícios que ambas as
-economias têm auferido do intercâmbio comercial, o Brasil
-tem reiterado seu objetivo de desenvolver com a China
-uma relação comercial menos assimétrica. Os números
-revelam com clareza a assimetria. As exportações
-brasileiras de produtos básicos, especialmente soja,
-minério de ferro e petróleo, compõem, dependendo do
-ano, algo entre 75% e 80% da pauta, ao passo que as
-importações brasileiras consistem, aproximadamente,
-em 95% de produtos industrializados chineses, que vão
-desde os mais variados bens de consumo até máquinas
-e equipamentos de alto valor.
-Uma ação estatal de longo prazo capaz de reduzir a
-assimetria na balança comercial brasileira, conforme
-exposto no texto, é o(a)
-expansão do setor extrativista.
-incremento da atividade agrícola.
-diversificação da matriz energética.
-fortalecimento da pesquisa científica.
-monitoramento do fluxo alfandegário.
-
 ## Questão 47
 
 - Idioma: geral
-- Palavras: 138
+- Palavras: 161
 - Tem imagem: não
 
 ### Texto extraído
@@ -3675,33 +2251,10 @@ renda.
 E 	 desregulamentação das propriedades nas zonas de
 fronteira.
 
-### Texto contado
-
-As estatísticas mais recentes do Brasil rural revelam
-um paradoxo que interessa a toda sociedade: o emprego
-de natureza agrícola definha em praticamente todo o país,
-mas a população residente no campo voltou a crescer; ou
-pelo menos parou de cair. Esses sinais trocados sugerem
-que a dinâmica agrícola, embora fundamental, já não
-determina sozinha os rumos da demografia no campo.
-Esse novo cenário é explicado em parte pelo incremento
-do emprego não agrícola no campo. Ao mesmo tempo,
-aumentou a massa de desempregados, inativos e
-aposentados que mantêm residência rural.
-Sobre o espaço brasileiro, o texto apresenta argumentos
-que refletem a
-heterogeneidade do modo de vida agrário.
-redução do fluxo populacional nas cidades.
-correlação entre força de trabalho e migração sazonal.
-indissociabilidade entre local de moradia e acesso à
-renda.
-desregulamentação das propriedades nas zonas de
-fronteira.
-
 ## Questão 48
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -3731,33 +2284,10 @@ esfera político-partidária.
 E 	 exigências de aperfeiçoamento profissional e de
 habilidades na competência diretiva.
 
-### Texto contado
-
-Nas últimas décadas, uma acentuada feminização
-no mundo do trabalho vem ocorrendo. Se a participação
-masculina pouco cresceu no período pós-1970, a
-intensificação da inserção das mulheres foi o traço
-marcante. Entretanto, essa presença feminina se dá mais
-no espaço dos empregos precários, onde a exploração,
-em grande medida, se encontra mais acentuada.
-A transformação descrita no texto tem sido insuficiente
-para o estabelecimento de uma condição de igualdade de
-oportunidade em virtude da(s)
-estagnação de direitos adquiridos e do anacronismo
-da legislação vigente.
-manutenção do status quo gerencial e dos padrões
-de socialização familiar.
-desestruturação da herança patriarcal e das
-mudanças do perfil ocupacional.
-disputas na composição sindical e da presença na
-esfera político-partidária.
-exigências de aperfeiçoamento profissional e de
-habilidades na competência diretiva.
-
 ## Questão 49
 
 - Idioma: geral
-- Palavras: 146
+- Palavras: 183
 - Tem imagem: não
 
 ### Texto extraído
@@ -3786,33 +2316,10 @@ D 	 impedir a produção exportadora nas terras agricultáveis.
 E 	 coibir o funcionamento de empresas agroindustriais
 no campo.
 
-### Texto contado
-
-A propriedade compreende, em seu conteúdo e alcance,
-além do tradicional direito de uso, gozo e disposição por
-parte de seu titular, a obrigatoriedade do atendimento de
-sua função social, cuja definição é inseparável do requisito
-obrigatório do uso racional da propriedade e dos recursos
-ambientais que lhe são integrantes. O proprietário, como
-membro integrante da comunidade, se sujeita a obrigações
-crescentes que, ultrapassando os limites do direito de
-vizinhança, no âmbito do direito privado, abrangem o campo
-dos direitos da coletividade, visando  o bem-estar geral, no
-âmbito do direito público.
-Os movimentos em prol da reforma agrária, que
-atuam com base no conceito de direito à propriedade
-apresentado no texto, propõem-se a
-reverter o processo de privatização fundiária.
-ressaltar a inviabilidade da produção latifundiária.
-defender a desapropriação dos espaços improdutivos.
-impedir a produção exportadora nas terras agricultáveis.
-coibir o funcionamento de empresas agroindustriais
-no campo.
-
 ## Questão 50
 
 - Idioma: geral
-- Palavras: 75
+- Palavras: 103
 - Tem imagem: não
 
 ### Texto extraído
@@ -3829,22 +2336,10 @@ C 	 densificação do transporte ferroviário.
 D 	 predomínio do planejamento estadual.
 E 	 inibição de consórcios intermunicipais.
 
-### Texto contado
-
-A expansão das cidades e a formação das aglomerações urbanas no Brasil foram marcadas pela produção
-industrial e pela consolidação das metrópoles como locais de seu desenvolvimento. Na segunda metade do século XX,
-as metrópoles brasileiras estenderam-se por áreas de ocupação contínua, configurando densas regiões urbanizadas.
-O resultado do processo geográfico descrito foi o(a)
-valorização da escala local.
-crescimento das áreas periféricas.
-densificação do transporte ferroviário.
-predomínio do planejamento estadual.
-inibição de consórcios intermunicipais.
-
 ## Questão 51
 
 - Idioma: geral
-- Palavras: 65
+- Palavras: 86
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3867,28 +2362,10 @@ C 	 priorização da tecnologia moderna.
 D 	 adequação pelo tempo da natureza.
 E 	 intensificação da atividade pecuária.
 
-### Texto contado
-
-Zona de pastoreio e cultura do algodão e cereais do agreste (1963)
-CONVENÇÕES
-PASTOREIO - - - - - - - - - - - - - - -
-PLANTIO E LIMPA - - - - - - - - - -
-CRESCIMENTO- - - - - - - - - - -
-COLHEITA DE FEIJÃO - - - - - - - -
-COLHEITA DE MILHO VERDE - - -
-COLHEITA DE MILHO SECO - - -
-COLHEITA DE ALGODÃO - - - - - -
-A dinâmica produtiva apresentada na imagem tem como estratégia central a
-separação pelo tipo de solo.
-exportação da colheita sazonal.
-priorização da tecnologia moderna.
-adequação pelo tempo da natureza.
-intensificação da atividade pecuária.
-
 ## Questão 52
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 158
 - Tem imagem: não
 
 ### Texto extraído
@@ -3915,31 +2392,10 @@ C 	 aceitação popular da educação secular.
 D 	 interpretação autônoma dos textos bíblicos.
 E 	 correção doutrinária das heresias medievais.
 
-### Texto contado
-
-Dois grandes eventos históricos tornaram possível
-um caso como o de Menocchio: a invenção da imprensa
-e a Reforma. A imprensa lhe permitiu confrontar os
-livros com a tradição oral em que havia crescido e lhe
-forneceu as palavras para organizar o amontoado de
-ideias e fantasias que nele conviviam. A Reforma lhe
-deu audácia para comunicar o que pensava ao padre do
-vilarejo, conterrâneos, inquisidores — mesmo não tendo
-conseguido dizer tudo diante do papa, dos cardeais e dos
-príncipes, como queria.
-Os acontecimentos históricos citados ajudaram esse
-indivíduo, no século XVI, a repensar a visão católica do
-mundo ao possibilitarem a
-consulta pública das bibliotecas reais.
-sofisticação barroca do ritual litúrgico.
-aceitação popular da educação secular.
-interpretação autônoma dos textos bíblicos.
-correção doutrinária das heresias medievais.
-
 ## Questão 53
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 163
 - Tem imagem: não
 
 ### Texto extraído
@@ -3966,31 +2422,10 @@ C 	 à localização do norte magnético.
 D 	 aos referenciais de posição relativa.
 E 	 às distorções das formas continentais.
 
-### Texto contado
-
-“Devo estar chegando perto do centro da Terra. Deixe
-ver: deve ter sido mais de seis mil quilômetros, por aí...”
-(como se vê, Alice tinha aprendido uma porção de coisas
-desse tipo na escola, e embora essa não fosse uma
-oportunidade lá muito boa de demonstrar conhecimentos,
-já que não havia ninguém por perto para escutá-la, em
-todo caso era bom praticar um pouco) “... sim, deve ser
-mais ou menos essa a distância... mas então qual seria
-a latitude ou longitude em que estou?” (Alice não tinha
-a menor ideia do que fosse latitude ou longitude, mas
-achou que eram palavras muito imponentes).
-O texto descreve uma confusão da personagem em
-relação
-ao tipo de projeção cartográfica.
-aos contornos dos fusos horários.
-à localização do norte magnético.
-aos referenciais de posição relativa.
-às distorções das formas continentais.
-
 ## Questão 54
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 137
 - Tem imagem: não
 
 ### Texto extraído
@@ -4015,28 +2450,10 @@ C 	 ruptura da disciplina hierárquica.
 D 	 surgimento dos laços familiares.
 E 	 rejeição de práticas exógenas.
 
-### Texto contado
-
-A arte pré-histórica africana foi incontestavelmente um
-veículo de mensagens pedagógicas e sociais. Os San,
-que constituem hoje o povo mais próximo da realidade
-das representações rupestres, afirmam que seus
-antepassados lhes explicaram sua visão do mundo a partir
-desse gigantesco livro de imagens que são as galerias.
-A educação dos povos que desconhecem a escrita está
-baseada sobretudo na imagem e no som, no audiovisual.
-De acordo com o texto, a arte mencionada é importante
-para os povos que a cultivam por colaborar para o(a)
-transmissão dos saberes acumulados.
-expansão da propriedade individual.
-ruptura da disciplina hierárquica.
-surgimento dos laços familiares.
-rejeição de práticas exógenas.
-
 ## Questão 55
 
 - Idioma: geral
-- Palavras: 139
+- Palavras: 158
 - Tem imagem: não
 
 ### Texto extraído
@@ -4065,34 +2482,10 @@ independentemente do trabalho cognoscente.
 E 	 Solipsismo, que reconhece limitações cognitivas para
 compreender uma experiência compartilhada.
 
-### Texto contado
-
-Será que as coisas lhe pareceriam diferentes se, de
-fato, todas elas existissem apenas na sua mente — se
-tudo o que você julgasse ser o mundo externo real fosse
-apenas um sonho ou alucinação gigante, de que você
-jamais fosse despertar? Se assim fosse, então é claro
-que você nunca poderia despertar, como faz quando
-sonha, pois significaria que não há mundo “real” no qual
-despertar. Logo, não seria exatamente igual a um sonho
-ou alucinação normal.
-O texto confere visibilidade a uma doutrina filosófica
-contemporânea conhecida como:
-Personalismo, que vincula a realidade circundante
-aos domínios do pessoal.
-Falsificacionismo, que estabelece ciclos de problemas
-para refutar uma conjectura.
-Falibilismo, que rejeita mecanismos mentais para
-sustentar uma crença inequívoca.
-Idealismo, que nega a existência de objetos
-independentemente do trabalho cognoscente.
-Solipsismo, que reconhece limitações cognitivas para
-compreender uma experiência compartilhada.
-
 ## Questão 56
 
 - Idioma: geral
-- Palavras: 76
+- Palavras: 99
 - Tem imagem: não
 
 ### Texto extraído
@@ -4119,31 +2512,10 @@ C 	 manutenção de poços artesianos.
 D 	 eficiência das técnicas de irrigação.
 E 	 velocidade das máquinas colheitadeiras.
 
-### Texto contado
-
-A demanda mundial para a produção de alimentos
-aumenta
-progressivamente
-a
-taxas
-muito
-altas.
-Atualmente, na maioria dos países, continentes e regiões,
-a água consumida na agricultura é de cerca de 70% da
-disponibilidade total.
-Para que haja a redução da pressão sobre o recurso
-natural mencionado, a expansão da agricultura demanda
-melhorias no(a)
-fertilização química do solo.
-escoamento hídrico do terreno.
-manutenção de poços artesianos.
-eficiência das técnicas de irrigação.
-velocidade das máquinas colheitadeiras.
-
 ## Questão 57
 
 - Idioma: geral
-- Palavras: 143
+- Palavras: 150
 - Tem imagem: não
 
 ### Texto extraído
@@ -4171,34 +2543,10 @@ C 	 Eliminação das diferenças regionais.
 D 	 Ampliação de modelo democrático.
 E 	 Projeção da diplomacia mundial.
 
-### Texto contado
-
-No caso do Departamento de Defesa dos Estados
-Unidos, a ênfase está posta no traçado de uma estratégia
-geral de desarticulação, não só dos inimigos reais como
-dos potenciais, inserida na concepção preventiva que
-supõe que a mínima dissidência é um sinal de perigo e de
-guerra futura. Deve-se ter capacidade para responder a
-uma guerra convencional tanto quanto para enfrentar um
-inimigo difuso, atentando simultaneamente para todas
-as áreas geográficas do planeta. Trata-se, sem dúvida,
-da estratégia com pretensões mais abrangentes que se
-desenvolveu até agora.
-CECEÑA, A. E. Hegemonias e emancipações no século XXI.
-Buenos Aires: Clacso, 2005 (adaptado).
-Tomando o texto como parâmetro, qual tendência
-contemporânea impulsiona a formulação de estratégias
-mais abrangentes por parte do Estado americano?
-Erradicação dos conflitos em territórios.
-Propagação de organizações em redes.
-Eliminação das diferenças regionais.
-Ampliação de modelo democrático.
-Projeção da diplomacia mundial.
-
 ## Questão 58
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 109
 - Tem imagem: não
 
 ### Texto extraído
@@ -4220,26 +2568,10 @@ C 	 construção do bem-estar social.
 D 	 soberania do poder governamental.
 E 	 ampliação da participação empresarial.
 
-### Texto contado
-
-O planejamento deixou de controlar o crescimento
-urbano e passou a encorajá-lo por todos os meios
-possíveis e imagináveis. Cidades, a nova mensagem
-soou em alto e bom som, eram máquinas de produzir
-riquezas; o primeiro e principal objetivo do planejamento
-devia ser o de azeitar a máquina.
-O modelo de planejamento urbano problematizado no
-texto é marcado pelo(a)
-primazia da gestão popular.
-uso de práticas sustentáveis.
-construção do bem-estar social.
-soberania do poder governamental.
-ampliação da participação empresarial.
-
 ## Questão 59
 
 - Idioma: geral
-- Palavras: 98
+- Palavras: 117
 - Tem imagem: não
 
 ### Texto extraído
@@ -4270,36 +2602,10 @@ C 	 jazidas de minerais metálicos.
 D 	 depósitos de calcário agrícola.
 E 	 reservas de combustível fóssil.
 
-### Texto contado
-
-Escudos antigos ou maciços cristalinos são
-blocos imensos de rochas antigas. Estes escudos
-são constituídos por rochas cristalinas (magmático-
-plutônicas), formadas em eras pré-cambrianas, ou
-por rochas metamórficas (material sedimentar) do
-Paleozoico. São resistentes, estáveis, porém bastante
-desgastadas. Correspondem a 36% da área territorial
-e dividem-se em duas grandes porções: o Escudo das
-Guianas (norte da Planície Amazônica) e o Escudo
-Brasileiro (porção centro-oriental brasileira).
-As estruturas geológicas indicadas no texto são
-importantes
-economicamente
-para
-o
-Brasil
-por
-concentrarem
-fontes de águas termais.
-afloramentos de sal-gema.
-jazidas de minerais metálicos.
-depósitos de calcário agrícola.
-reservas de combustível fóssil.
-
 ## Questão 60
 
 - Idioma: geral
-- Palavras: 125
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -4323,29 +2629,10 @@ C 	 utilitarista, no sentido da racionalidade das ações.
 D 	 pós-modernista, na discussão da fluidez das relações.
 E 	 existencialista, na questão do reconhecimento de si.
 
-### Texto contado
-
-Em A morte de Ivan Ilitch, Tolstoi descreve com
-detalhes repulsivos o terror de encarar a morte
-iminente. Ilitch adoece depois de um pequeno acidente
-e logo compreende que se encaminha para o fim de
-modo impossível de parar. “Nas profundezas de seu
-coração, ele sabia estar morrendo, mas em vez de se
-acostumar com a ideia, simplesmente não o fazia e não
-conseguia compreendê-la”.
-O texto descreve a experiência do personagem de Tolstoi
-diante de um aspecto incontornável de nossas vidas.
-Esse aspecto foi um tema central na tradição filosófica
-marxista, no contexto do materialismo histórico.
-logicista, no propósito de entendimento dos fatos.
-utilitarista, no sentido da racionalidade das ações.
-pós-modernista, na discussão da fluidez das relações.
-existencialista, na questão do reconhecimento de si.
-
 ## Questão 61
 
 - Idioma: geral
-- Palavras: 109
+- Palavras: 130
 - Tem imagem: não
 
 ### Texto extraído
@@ -4370,30 +2657,10 @@ C 	 apropriação imperialista dos recursos territoriais.
 D 	 valorização econômica dos saberes tradicionais.
 E 	 dependência externa do suprimento de alimentos.
 
-### Texto contado
-
-A Divisão Internacional do Trabalho significa
-que alguns países se especializam em ganhar
-e outros, em perder. Nossa comarca no mundo,
-que hoje chamamos América Latina, foi precoce:
-especializou-se em perder desde os remotos
-tempos em que os europeus do Renascimento se
-aventuraram pelos mares e lhe cravaram os dentes
-na garganta. Passaram-se os séculos e a América
-Latina aprimorou suas funções.
-Escrito na década de 1970, o texto considera a
-participação da América Latina na Divisão Internacional
-do Trabalho marcada pela
-produção inovadora de padrões de tecnologia.
-superação paulatina do caráter agroexportador.
-apropriação imperialista dos recursos territoriais.
-valorização econômica dos saberes tradicionais.
-dependência externa do suprimento de alimentos.
-
 ## Questão 62
 
 - Idioma: geral
-- Palavras: 143
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -4423,35 +2690,10 @@ urbanos.
 E 	 conferir prerrogativas políticas aos descendentes de
 estrangeiros.
 
-### Texto contado
-
-Sexto rei sumério (governante entre os séculos XVIII e
-XVII a.C.) e nascido em Babel, “Khammu-rabi” (pronúncia
-em babilônio) foi fundador do I Império Babilônico
-(correspondente ao atual Iraque), unificando amplamente
-o mundo mesopotâmico, unindo os semitas e os sumérios
-e levando a Babilônia ao máximo esplendor. O nome
-de Hamurabi permanece indissociavelmente ligado ao
-código jurídico tido como o mais remoto já descoberto: o
-Código de Hamurabi. O legislador babilônico consolidou
-a tradição jurídica, harmonizou os costumes e estendeu o
-direito e a lei a todos os súditos.
-Nesse contexto de organização da vida social, as leis
-contidas no Código citado tinham o sentido de
-assegurar garantias individuais aos cidadãos livres.
-tipificar regras referentes aos atos dignos de
-punição.
-conceder benefícios de indulto aos prisioneiros de
-guerra.
-promover distribuição de terras aos desempregados
-urbanos.
-conferir prerrogativas políticas aos descendentes de
-estrangeiros.
-
 ## Questão 63
 
 - Idioma: geral
-- Palavras: 153
+- Palavras: 188
 - Tem imagem: não
 
 ### Texto extraído
@@ -4481,34 +2723,10 @@ defendendo o direito ao trabalho.
 E 	 visão do catolicismo, que, desde a Idade Média,
 defendia a dignidade do trabalho e do lucro.
 
-### Texto contado
-
-Desde o mundo antigo e sua filosofia, que o trabalho
-tem sido compreendido como expressão de vida e
-degradação, criação e infelicidade, atividade vital e
-escravidão, felicidade social e servidão. Trabalho e
-fadiga. Na Modernidade, sob o comando do mundo da
-mercadoria e do dinheiro, a prevalência do negócio (negar
-o ócio) veio sepultar o império do repouso, da folga e da
-preguiça, criando uma ética positiva do trabalho.
-O processo de ressignificação do trabalho nas sociedades
-modernas teve início a partir do surgimento de uma nova
-mentalidade, influenciada pela
-reforma higienista, que combateu o caráter excessivo
-e insalubre do trabalho fabril.
-Reforma Protestante, que expressou a importância
-das atividades laborais no mundo secularizado.
-força do sindicalismo, que emergiu no esteio do
-anarquismo reivindicando direitos trabalhistas.
-participação das mulheres em movimentos sociais,
-defendendo o direito ao trabalho.
-visão do catolicismo, que, desde a Idade Média,
-defendia a dignidade do trabalho e do lucro.
-
 ## Questão 64
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -4538,35 +2756,10 @@ financiamento científico nacional.
 E 	 Reforma das políticas macroeconômicas e dos
 mecanismos de controle inflacionário.
 
-### Texto contado
-
-É difícil imaginar que nos anos 1990, num país
-com setores da população na pobreza absoluta e sem
-uma rede de benefícios sociais em que se apoiar, um
-governo possa abandonar o papel de promotor de
-programas de geração de emprego, de assistência
-social, de desenvolvimento da infraestrutura e de
-promoção de regiões excluídas, na expectativa de
-que o mercado venha algum dia a dar uma resposta
-adequada a tudo isso.
-Nesse contexto, a criticada postura dos governos frente
-à situação social do país coincidiu com a priorização de
-que medidas?
-Expansão dos investimentos nas empresas públicas
-e nos bancos estatais.
-Democratização do crédito habitacional e da aquisição
-de moradias populares.
-Enxugamento da carga fiscal individual e da
-contribuição tributária empresarial.
-Reformulação do acesso ao ensino superior e do
-financiamento científico nacional.
-Reforma das políticas macroeconômicas e dos
-mecanismos de controle inflacionário.
-
 ## Questão 65
 
 - Idioma: geral
-- Palavras: 98
+- Palavras: 126
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4584,23 +2777,10 @@ C 	 retração do contingente demográfico.
 D 	 projeção do escoamento produtivo.
 E 	 estagnação de lavouras policultoras.
 
-### Texto contado
-
-O conjunto representado pelo agronegócio demanda condições específicas que passam a ser exigidas dos
-territórios. Como há uma elevação da formação de fluxos, materiais e imateriais, a crescente articulação com as
-escalas que vão do local ao global terminam por pressionar o Estado a agir visando uma instalação no território
-de fixos diversos, bem como de uma regulação específica.
-O mapa e o texto se complementam indicando que a expansão das rodovias se deu como resposta ao(à)
-alteração da matriz econômica.
-substituição do modal hidroviário.
-retração do contingente demográfico.
-projeção do escoamento produtivo.
-estagnação de lavouras policultoras.
-
 ## Questão 66
 
 - Idioma: geral
-- Palavras: 89
+- Palavras: 107
 - Tem imagem: não
 
 ### Texto extraído
@@ -4618,23 +2798,10 @@ C 	 Laicização dos rituais religiosos.
 D 	 Restauração dos costumes antigos.
 E 	 Apropriação de práticas estrangeiras.
 
-### Texto contado
-
-Um dos resquícios franceses na dança são os comandos proferidos pelo marcador da quadrilha. Seu papel é
-anunciar os próximos passos da coreografia. O abrasileiramento de termos franceses deu origem, por exemplo, ao
-saruê (soirée — reunião social noturna, ordem para todos se juntarem no centro do salão), anarriê (en arrière — para
-trás) e anavã (en avant — para frente).
-A característica apresentada dessa manifestação popular resulta do seguinte processo socio-histórico:
-Massificação da arte erudita.
-Rejeição de hábitos elitistas.
-Laicização dos rituais religiosos.
-Restauração dos costumes antigos.
-Apropriação de práticas estrangeiras.
-
 ## Questão 67
 
 - Idioma: geral
-- Palavras: 37
+- Palavras: 57
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4652,23 +2819,10 @@ C  subducção da plataforma oceânica.
 D  formação de cadeias montanhosas.
 E  metamorfi smo de bordas continentais.
 
-### Texto contado
-
-Vale da Grande
-Fenda
-Vulcões
-Os aspectos físicos apresentados originam-se da atuação
-da força natural de
-colisão de placas tectônicas.
-rifteamento da crosta terrestre.
-subducção da plataforma oceânica.
-formação de cadeias montanhosas.
-metamorfi smo de bordas continentais.
-
 ## Questão 68
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 137
 - Tem imagem: não
 
 ### Texto extraído
@@ -4695,31 +2849,10 @@ C  resgate das narrativas heroicas.
 D  acesso ao cotidiano das comunidades.
 E  interpretação das manifestações do divino.
 
-### Texto contado
-
-A reabilitação da biografi a histórica integrou as
-aquisições da história social e cultural, oferecendo
-aos diferentes atores históricos uma importância
-diferenciada, distinta, individual. Mas não se tratava
-mais de fazer, simplesmente, a história dos grandes
-nomes, em formato hagiográfi co — quase uma vida
-de santo —, sem problemas, nem máculas. Mas de
-examinar os atores (ou o ator) célebres ou não, como
-testemunhas, como refl exos, como reveladores de uma
-época.
-De acordo com o texto, novos estudos têm valorizado
-a história do indivíduo por se constituir como
-possibilidade de
-adesão ao método positivista.
-expressão do papel das elites.
-resgate das narrativas heroicas.
-acesso ao cotidiano das comunidades.
-interpretação das manifestações do divino.
-
 ## Questão 69
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 129
 - Tem imagem: não
 
 ### Texto extraído
@@ -4745,30 +2878,10 @@ C  posicionamento crítico do socialismo.
 D  legitimidade do absolutismo monárquico.
 E  entendimento do contratualismo moderno.
 
-### Texto contado
-
-A sociedade como um sistema justo de cooperação
-social consiste em uma das ideias familiares
-fundamentais, que dá estrutura e organização à justiça
-como equidade. A cooperação social guia-se por
-regras e procedimentos publicamente reconhecidos
-e aceitos por aqueles que cooperam como sendo
-apropriados para regular a sua conduta. Diz-se que a
-cooperação é justa porque seus termos são tais que
-todos os participantes podem razoavelmente aceitar,
-desde que todos os demais também o aceitem.
-No contexto do pensamento político, a ideia apresentada
-mostra-se consoante o(a)
-ideal republicano de governo.
-corrente tripartite dos poderes.
-posicionamento crítico do socialismo.
-legitimidade do absolutismo monárquico.
-entendimento do contratualismo moderno.
-
 ## Questão 70
 
 - Idioma: geral
-- Palavras: 108
+- Palavras: 128
 - Tem imagem: não
 
 ### Texto extraído
@@ -4793,29 +2906,10 @@ C  restrição da cidadania por parentesco.
 D  restauração de instituições ancestrais.
 E  expansão das fronteiras extrapeninsulares.
 
-### Texto contado
-
-Com efeito, até a destruição de Cartago, o povo e o
-Senado romano governavam a República em harmonia
-e sem paixão, e não havia entre os cidadãos luta por
-glória ou dominação; o medo do inimigo mantinha a
-cidade no cumprimento do dever. Mas, assim que o
-medo desapareceu dos espíritos, introduziram-se os
-males pelos quais a prosperidade tem predileção, isto
-é, a libertinagem e o orgulho.
-O acontecimento histórico mencionado no texto de
-Salústio, datado de I a.C., manteve correspondência com
-o processo de
-demarcação de terras públicas.
-imposição da escravidão por dívidas.
-restrição da cidadania por parentesco.
-restauração de instituições ancestrais.
-expansão das fronteiras extrapeninsulares.
-
 ## Questão 71
 
 - Idioma: geral
-- Palavras: 108
+- Palavras: 133
 - Tem imagem: não
 
 ### Texto extraído
@@ -4844,33 +2938,10 @@ C 	 camponeses e uso da natureza.
 D 	 indígenas e manejo agroecológico.
 E 	 latifundiários e fertilização do solo.
 
-### Texto contado
-
-O cântico da terra
-Eu sou a terra, eu sou a vida.
-A ti, ó lavrador, tudo quanto é meu.
-Teu arado, tua foice, teu machado.
-O berço pequenino de teu filho.
-O algodão de tua veste
-e o pão de tua casa.
-E um dia bem distante
-a mim tu voltarás.
-E no canteiro materno de meu seio
-tranquilo dormirás.
-Plantemos a roça.
-Lavremos a gleba.
-No contexto das distintas formas de apropriação da terra,
-o poema de Cora Coralina valoriza a relação entre
-grileiros e controle territorial.
-meeiros e divisão do trabalho.
-camponeses e uso da natureza.
-indígenas e manejo agroecológico.
-latifundiários e fertilização do solo.
-
 ## Questão 72
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 105
 - Tem imagem: não
 
 ### Texto extraído
@@ -4897,32 +2968,10 @@ conhecimento.
 E 	 diálogo, que discute assuntos com diferentes
 interlocutores.
 
-### Texto contado
-
-Montaigne deu o nome para um novo gênero
-literário; foi dos primeiros a instituir na literatura
-moderna um espaço privado, o espaço do “eu”, do texto
-íntimo. Ele cria um novo processo de escrita filosófica,
-no qual hesitações, autocríticas, correções entram no
-próprio texto.
-O novo gênero de escrita aludido no texto é o(a)
-confissão, que relata experiências de transformação.
-ensaio, que expõe concepções subjetivas de um tema.
-carta, que comunica informações para um conhecido.
-meditação,
-que
-propõe
-preparações
-para
-o
-conhecimento.
-diálogo, que discute assuntos com diferentes
-interlocutores.
-
 ## Questão 73
 
 - Idioma: geral
-- Palavras: 102
+- Palavras: 121
 - Tem imagem: não
 
 ### Texto extraído
@@ -4948,31 +2997,10 @@ C 	 pluralidade dos sujeitos.
 D 	 padronização do currículo.
 E 	 valorização da meritocracia.
 
-### Texto contado
-
-Declaração de Salamanca – 1994
-Acreditamos e proclamamos que: toda criança
-tem direito fundamental à educação e deve ser dada
-a oportunidade de atingir e manter o nível adequado
-de aprendizagem; toda criança possui características,
-interesses, habilidades e necessidades de aprendizagem
-que são únicas; sistemas educacionais deveriam ser
-designados e programas educacionais deveriam ser
-implementados no sentido de se levar em conta a vasta
-diversidade de tais características e necessidades.
-Como signatário da Declaração citada, o Brasil
-comprometeu-se com a elaboração de políticas públicas
-educacionais que contemplem a
-criação de privilégios.
-contenção dos gastos.
-pluralidade dos sujeitos.
-padronização do currículo.
-valorização da meritocracia.
-
 ## Questão 74
 
 - Idioma: geral
-- Palavras: 112
+- Palavras: 155
 - Tem imagem: não
 
 ### Texto extraído
@@ -5001,29 +3029,10 @@ C 	 valorização do corpo na apreensão da realidade.
 D 	 verificabilidade de proposições no campo da lógica.
 E 	 possibilidade de contemplação de verdades atemporais.
 
-### Texto contado
-
-Os meus pensamentos são todos sensações.
-Penso com os olhos e com os ouvidos
-E com as mãos e os pés
-E com o nariz e a boca.
-Tudo aquilo que sei do mundo, mesmo por ciência, eu
-o sei a partir de uma visão minha ou de uma experiência
-do mundo sem a qual os símbolos da ciência não
-poderiam dizer nada.
-Os textos mostram-se alinhados a um entendimento
-acerca da ideia de conhecimento, numa perspectiva que
-ampara a
-anterioridade da razão no domínio cognitivo.
-confirmação da existência de saberes inatos.
-valorização do corpo na apreensão da realidade.
-verificabilidade de proposições no campo da lógica.
-possibilidade de contemplação de verdades atemporais.
-
 ## Questão 75
 
 - Idioma: geral
-- Palavras: 89
+- Palavras: 123
 - Tem imagem: não
 
 ### Texto extraído
@@ -5046,26 +3055,10 @@ C 	 afirmação das formas de dominação.
 D 	 exatidão da demarcação das regiões.
 E 	 aprimoramento do conceito de fronteira.
 
-### Texto contado
-
-Afirmar que a cartografia da época moderna integrou o
-processo de invenção da América por parte dos europeus
-significa que os conhecimentos dos ameríndios sobre o
-território foram ignorados pela cartografia europeia ou que
-eles foram privados de sua representação territorial e da
-autoridade que seus conhecimentos tinham sobre o espaço.
-Na análise contida no texto, a representação cartográfica
-da América foi marcada por
-asserção da cultura dos nativos.
-avanço dos estudos do ambiente.
-afirmação das formas de dominação.
-exatidão da demarcação das regiões.
-aprimoramento do conceito de fronteira.
-
 ## Questão 76
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 134
 - Tem imagem: não
 
 ### Texto extraído
@@ -5096,35 +3089,10 @@ C 	 banimento das dissidências religiosas.
 D 	 contenção da identificação nacionalista.
 E 	 hierarquização dos agentes econômicos.
 
-### Texto contado
-
-A principal característica da situação social dos
-anglo-americanos
-é
-seu
-caráter
-eminentemente
-democrático. Afirmei anteriormente que reinava uma
-igualdade muito grande entre os emigrantes que foram
-se estabelecer na Nova Inglaterra. Para isso contribuiu
-a influência das leis de sucessão. Estabelecidas
-de uma maneira, as leis de sucessão reúnem,
-concentram e agrupam em um só a propriedade e o
-poder. Estabelecidas por outros princípios, produzem
-o oposto: dividem, partilham e disseminam os bens e
-o poder.
-O texto tematiza o papel desempenhado por uma norma
-na criação de um ambiente propício ao(à)
-emprego do trabalho escravo.
-consolidação dos valores burgueses.
-banimento das dissidências religiosas.
-contenção da identificação nacionalista.
-hierarquização dos agentes econômicos.
-
 ## Questão 77
 
 - Idioma: geral
-- Palavras: 136
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -5151,32 +3119,10 @@ sociais.
 E 	 Geração e corrupção, pois abarcam o campo da
 physis.
 
-### Texto contado
-
-Vemos que toda cidade é uma espécie de
-comunidade, e toda comunidade se forma com vistas
-a algum bem, pois todas as ações de todos os homens
-são praticadas com vistas ao que lhe parece um bem;
-se todas as comunidades visam algum bem, é evidente
-que a mais importante de todas elas e que inclui todas as
-outras tem mais que todas este objetivo e visa ao mais
-importante de todos os bens.
-No fragmento, Aristóteles promove uma reflexão que
-associa dois elementos essenciais à discussão sobre a
-vida em comunidade, a saber:
-Ética e política, pois conduzem à eudaimonia.
-Retórica e linguagem, pois cuidam dos discursos
-na ágora.
-Metafísica e ontologia, pois tratam da filosofia primeira.
-Democracia e sociedade, pois se referem a relações
-sociais.
-Geração e corrupção, pois abarcam o campo da
-physis.
-
 ## Questão 78
 
 - Idioma: geral
-- Palavras: 71
+- Palavras: 98
 - Tem imagem: não
 
 ### Texto extraído
@@ -5196,24 +3142,10 @@ C 	 adequação da produção à demanda.
 D 	 aumento da mecanização do trabalho.
 E 	 centralização das etapas de planejamento.
 
-### Texto contado
-
-O toyotismo, a partir dos anos 1970, teve grande
-impacto no mundo ocidental, quando se mostrou para
-os países avançados como uma opção possível para a
-superação de uma crise de acumulação.
-A característica organizacional do modelo em questão,
-requerida no contexto de crise, foi o(a)
-expansão dos grandes estoques.
-incremento da fabricação em massa.
-adequação da produção à demanda.
-aumento da mecanização do trabalho.
-centralização das etapas de planejamento.
-
 ## Questão 79
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 143
 - Tem imagem: não
 
 ### Texto extraído
@@ -5238,30 +3170,10 @@ C 	 Conhecimento das tarefas desenvolvidas.
 D 	 Controle opressivo das vidas dos indivíduos.
 E 	 Investimento requerido dos empregadores.
 
-### Texto contado
-
-O fenômeno histórico conhecido como “tráfico de
-coolies” esteve associado diretamente ao período que vai
-do final da década de 1840 até o ano de 1874, quando
-milhares de chineses foram encaminhados principalmente
-para Cuba e Peru e muitos abusos no recrutamento de
-mão de obra foram identificados. O tráfico de coolies
-ou, em outros termos, o transporte por meios coativos
-de mão de obra de um lugar para outro, foi comparado
-ao tráfico africano de escravos por muitos periodistas e
-analistas do século XIX.
-A comparação mencionada no texto foi possível em razão
-da seguinte característica:
-Oferta de contrato formal.
-Origem étnica dos grupos de trabalhadores.
-Conhecimento das tarefas desenvolvidas.
-Controle opressivo das vidas dos indivíduos.
-Investimento requerido dos empregadores.
-
 ## Questão 80
 
 - Idioma: geral
-- Palavras: 115
+- Palavras: 143
 - Tem imagem: não
 
 ### Texto extraído
@@ -5286,29 +3198,10 @@ C 	 reivindicação de terra e preservação de mata nativa.
 D 	 incentivo governamental e conservação de territórios.
 E 	 modernização de plantio e comércio de látex.
 
-### Texto contado
-
-Os seringueiros amazônicos eram invisíveis no
-cenário nacional nos anos 1970. Começaram a se
-articular como um movimento agrário no início dos anos
-1980, e na década seguinte conseguiram reconhecimento
-nacional, obtendo a implantação das primeiras reservas
-extrativas após o assassinato de Chico Mendes. Assim,
-em vinte anos, os camponeses da floresta passaram da
-invisibilidade à posição de paradigma de desenvolvimento
-sustentável com participação popular.
-De acordo com o texto, a visibilidade dos seringueiros
-amazônicos foi estabelecida pela relação entre
-crescimento econômico e migração de trabalhadores.
-produção de borracha e escassez de recursos naturais.
-reivindicação de terra e preservação de mata nativa.
-incentivo governamental e conservação de territórios.
-modernização de plantio e comércio de látex.
-
 ## Questão 81
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 136
 - Tem imagem: não
 
 ### Texto extraído
@@ -5334,30 +3227,10 @@ C 	 adoção do cativeiro na Colônia.
 D 	 adesão ao ascetismo contemplativo.
 E 	 alfabetização dos indígenas nas Missões.
 
-### Texto contado
-
-Porque todos confessamos não se poder viver sem
-alguns escravos, que busquem a lenha e a água, e
-façam cada dia o pão que se come, e outros serviços
-que não são possíveis poderem-se fazer pelos
-Irmãos Jesuítas, máxime sendo tão poucos, que seria
-necessário deixar as confissões e tudo mais. Parece-
-me que a Companhia de Jesus deve ter e adquirir
-escravos, justamente, por meios que as Constituições
-permitem, quando puder para nossos colégios e casas
-de meninos.
-O texto explicita premissas da expansão ultramarina
-portuguesa ao buscar justificar a
-propagação do ideário cristão.
-valorização do trabalho braçal.
-adoção do cativeiro na Colônia.
-adesão ao ascetismo contemplativo.
-alfabetização dos indígenas nas Missões.
-
 ## Questão 82
 
 - Idioma: geral
-- Palavras: 129
+- Palavras: 151
 - Tem imagem: não
 
 ### Texto extraído
@@ -5384,32 +3257,10 @@ C 	 vegetação diversificada.
 D 	 drenagem eficiente.
 E 	 clima ameno.
 
-### Texto contado
-
-As cidades de Puebla, no México, e Legazpi, nas
-Filipinas, não têm quase nada em comum. Estão muito
-longe uma da outra e são habitadas por povos muito
-diferentes. O que as une é um trágico detalhe de sua
-geografia. Elas foram erguidas na vizinhança de alguns
-dos vulcões mais perigosos do mundo: o mexicano
-Popocatepétl e o filipino Mayon. Seus habitantes
-precisam estar prontos para correr a qualquer hora. Eles
-fazem parte dos 550 milhões de indivíduos que moram
-em zonas de risco vulcânico no mundo. Ao contrário do
-que seria sensato, continuam ali, indiferentes ao perigo
-que os espreita.
-A característica física que justifica a fixação do homem
-nos locais apresentados no texto é a ocorrência de
-solo fértil.
-encosta íngreme.
-vegetação diversificada.
-drenagem eficiente.
-clima ameno.
-
 ## Questão 83
 
 - Idioma: geral
-- Palavras: 123
+- Palavras: 140
 - Tem imagem: não
 
 ### Texto extraído
@@ -5436,32 +3287,10 @@ públicas da doutrina dissidente.
 E 	 violência senhorial, que impunha a desestruturação
 forçada das famílias escravas.
 
-### Texto contado
-
-Ao abrigo do teto, sua jornada de fé começava na
-sala de jantar. Na pequena célula cristã, dividia-se a
-refeição e durante elas os crentes conversavam, rezavam
-e liam cartas de correligionários residentes em locais
-diferentes do Império Romano (século II da Era Cristã).
-Esse ambiente garantia peculiar apoio emocional às
-experiências intensamente individuais que abrigava.
-Um motivo que explica a ambientação da prática descrita
-no texto encontra-se no(a)
-regra judaica, que pregava a superioridade espiritual
-dos cultos das sinagogas.
-moralismo da legislação, que dificultava as reuniões
-abertas da juventude livre.
-adesão do patriciado, que subvertia o conceito
-original dos valores estrangeiros.
-decisão política, que censurava as manifestações
-públicas da doutrina dissidente.
-violência senhorial, que impunha a desestruturação
-forçada das famílias escravas.
-
 ## Questão 84
 
 - Idioma: geral
-- Palavras: 73
+- Palavras: 94
 - Tem imagem: não
 
 ### Texto extraído
@@ -5483,27 +3312,10 @@ C 	 Depressões absolutas.
 D 	 Bacias sedimentares.
 E 	 Dobramentos modernos.
 
-### Texto contado
-
-A colisão entre uma placa continental e uma oceânica
-provocará a subducção desta última sob a placa
-continental, que, a exemplo dos arcos e ilhas, produzirá
-um arco magmático na borda do continente, composto
-por rochas vulcânicas acompanhado de deformações e
-metamorfismo tanto de rochas preexistentes como de
-parte das rochas formadas no processo.
-Qual feição fisiográfica é gerada pelo processo tectônico
-apresentado?
-Planícies abissais.
-Planaltos cristalinos.
-Depressões absolutas.
-Bacias sedimentares.
-Dobramentos modernos.
-
 ## Questão 85
 
 - Idioma: geral
-- Palavras: 158
+- Palavras: 191
 - Tem imagem: não
 
 ### Texto extraído
@@ -5538,39 +3350,10 @@ D 	 homens livres em torno da extensão do direito de voto.
 E 	 elites locais acerca da ordenação do monopólio
 fundiário.
 
-### Texto contado
-
-O movimento sedicioso ocorrido na capitania
-de Pernambuco, no ano 1817, foi analisado de
-formas diferentes por dois meios de comunicação
-daquela época. O Correio Braziliense apontou para
-o fato de ser “a comoção no Brasil motivada por um
-descontentamento geral, e não por maquinações de
-alguns indivíduos”. Já a Gazeta do Rio de Janeiro
-considerou o movimento como um “pontual desvio
-de norma, apenas uma ‘mancha’ nas ‘páginas da
-História Portuguesa’, tão distinta pelos testemunhos
-de amor e respeito que os vassalos desta nação
-consagram ao seu soberano”.
-Os fragmentos das matérias jornalísticas sobre o
-acontecimento, embora com percepções diversas,
-relacionam-se a um aspecto do processo de
-independência da colônia luso-americana expresso
-em dissensões entre
-quadros dirigentes em torno da abolição da ordem
-escravocrata.
-grupos regionais acerca da configuração político-
--territorial.
-intelectuais laicos acerca da revogação do domínio
-eclesiástico.
-homens livres em torno da extensão do direito de voto.
-elites locais acerca da ordenação do monopólio
-fundiário.
-
 ## Questão 86
 
 - Idioma: geral
-- Palavras: 136
+- Palavras: 154
 - Tem imagem: não
 
 ### Texto extraído
@@ -5598,33 +3381,10 @@ C 	 falência da sociedade burguesa.
 D 	 paridade do tratamento jurídico.
 E 	 abolição dos partidos políticos.
 
-### Texto contado
-
-Declaração de Direitos do Homem e do Cidadão – 1789
-Os representantes do povo francês, tendo em vista
-que a ignorância, o esquecimento ou o desprezo dos
-direitos do homem são as únicas causas dos males
-públicos e da corrupção dos governos, resolveram
-declarar solenemente os direitos naturais, inalienáveis e
-sagrados do homem, a fim de que esta declaração, sempre
-presente em todos os membros do corpo social, lhes
-lembre permanentemente seus direitos e seus deveres; a
-fim de que as reivindicações dos cidadãos, fundadas em
-princípios simples e incontestáveis, se dirijam sempre à
-conservação da Constituição e à felicidade geral.
-Esse documento, elaborado no contexto da Revolução
-Francesa, reflete uma profunda mudança social ao
-estabelecer a
-manutenção das terras comunais.
-supressão do poder constituinte.
-falência da sociedade burguesa.
-paridade do tratamento jurídico.
-abolição dos partidos políticos.
-
 ## Questão 87
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 106
 - Tem imagem: não
 
 ### Texto extraído
@@ -5646,27 +3406,10 @@ C 	 estabelecimento de mandatos temporários.
 D 	 declínio da sociedade civil organizada.
 E 	 participação no exercício do poder.
 
-### Texto contado
-
-Na Grécia, o conceito de povo abrange tão
-somente aqueles indivíduos considerados cidadãos.
-Assim é possível perceber que o conceito de povo era
-muito restritivo. Mesmo tendo isso em conta, a forma
-democrática vivenciada e experimentada pelos gregos
-atenienses nos séculos IV e V a.C. pode ser caracterizada,
-fundamentalmente, como direta.
-Naquele contexto, a emergência do sistema de governo
-mencionado no excerto promoveu o(a)
-competição para a escolha de representantes.
-campanha pela revitalização das oligarquias.
-estabelecimento de mandatos temporários.
-declínio da sociedade civil organizada.
-participação no exercício do poder.
-
 ## Questão 88
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 144
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5693,30 +3436,10 @@ C 	 recepção de densa carga de dejetos.
 D 	 captação desordenada do regime pluvial.
 E 	 expansão do uso de defensivos químicos.
 
-### Texto contado
-
-Rio Tietê, São Paulo (SP). Foto: Delfim Martins/Pulsar.
-O Rio Tietê está morto. Ao menos uma parte
-dele: 137 quilômetros, para ser mais preciso. Uma
-pesquisa da Fundação SOS Mata Atlântica mostra
-que, em 2016, o trecho do rio com qualidade de
-água classificada como ruim ou péssima começa
-em Itaquaquecetuba, passa por toda a Região
-Metropolitana de São Paulo e chega até Cabreúva,
-já no interior de São Paulo. Nesse trecho, a água não
-tem oxigênio suficiente para abrigar vida.
-Considerando a análise dos textos, a condição atual
-desse rio tem como origem a
-valorização do sítio urbano.
-extinção da vegetação nativa.
-recepção de densa carga de dejetos.
-captação desordenada do regime pluvial.
-expansão do uso de defensivos químicos.
-
 ## Questão 89
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 140
 - Tem imagem: não
 
 ### Texto extraído
@@ -5742,31 +3465,10 @@ C 	 O estudo das tradições filosóficas.
 D 	 A vivência dos fenômenos do mundo.
 E 	 O desenvolvimento do raciocínio abstrato.
 
-### Texto contado
-
-Adão, ainda que supuséssemos que suas faculdades
-racionais fossem inteiramente perfeitas desde o início,
-não poderia ter inferido da fluidez e transparência da
-água que ela o sufocaria, nem da luminosidade e calor
-do fogo que este poderia consumi-lo. Nenhum objeto
-jamais revela, pelas qualidades que aparecem aos
-sentidos, nem as causas que o produziram, nem os
-efeitos que dele provirão; e tampouco nossa razão é
-capaz de extrair, sem auxílio da experiência, qualquer
-conclusão referente à existência efetiva de coisas ou
-questões de fato.
-Segundo o autor, qual é a origem do conhecimento
-humano?
-A potência inata da mente.
-A revelação da inspiração divina.
-O estudo das tradições filosóficas.
-A vivência dos fenômenos do mundo.
-O desenvolvimento do raciocínio abstrato.
-
 ## Questão 90
 
 - Idioma: geral
-- Palavras: 192
+- Palavras: 242
 - Tem imagem: não
 
 ### Texto extraído
@@ -5803,31 +3505,3 @@ B 	 identificação da área afetada.
 C 	 destruição da vegetação nativa.
 D 	 aparecimento de enfermidade endêmica.
 E 	 surgimento de comunidades desabrigadas.
-
-### Texto contado
-
-O aumento de casos suspeitos de febre amarela em
-Minas pode estar relacionado à tragédia de Mariana,
-em 2015, segundo a bióloga da Fiocruz Márcia Chame.
-A hipótese tem como ponto de partida a localização das
-cidades mineiras que identificaram até o momento casos
-de pacientes com sintomas da doença. Grande parte está
-na região próxima do Rio Doce, afetado pelo rompimento
-da Barragem de Fundão, em novembro de 2015.
-Por outro lado, Servio Ribeiro considera remota a
-possibilidade de influência da tragédia de Mariana (MG)
-neste surto de febre amarela em Minas Gerais. “A febre
-amarela é uma doença de interior de floresta. O mosquito
-que a transmite põe ovos em cavidades de árvores e em
-bromélias. É um mosquito da estrutura da floresta. Ele
-não se relaciona muito com grandes corpos-d’água e
-com rios. As cidades afetadas pela doença estão em uma
-região onde os rejeitos não chegaram com força para
-derrubar a floresta”, diz o biólogo.
-Sobre a tragédia de Mariana, os textos apresentam
-divergência quanto ao(à)
-poluição dos rios locais.
-identificação da área afetada.
-destruição da vegetação nativa.
-aparecimento de enfermidade endêmica.
-surgimento de comunidades desabrigadas.

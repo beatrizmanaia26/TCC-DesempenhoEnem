@@ -1,9 +1,70 @@
 # Questões extraídas
 
+# Textos introdutórios
+
+## Texto introdutório 1
+
+- Palavras: 287
+
+DI 2º DIA
+PROVA DE CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS
+PROVA DE MATEMÁTICA E SUAS TECNOLOGIAS
+ATENÇÃO: transcreva no espaço apropriado do seu CARTÃO-RESPOSTA,
+com sua caligrafia usual, considerando as letras maiúsculas e minúsculas, a seguinte frase:
+É só questão de tempo, o fim do sofrimento
+LEIA ATENTAMENTE AS INSTRUÇÕES SEGUINTES:
+1. Este CADERNO DE QUESTÕES contém 90 questões numeradas de 91 a 180 e uma
+FOLHA DE RASCUNHO, dispostas da seguinte maneira:
+a) questões de número 91 a 135, relativas à área de Ciências da Natureza e suas Tecnologias;
+b) questões de número 136 a 180, relativas à área de Matemática e suas Tecnologias;
+c) FOLHA DE RASCUNHO.
+2. Confira se a quantidade e a ordem das questões do seu CADERNO DE QUESTÕES estão de acordo
+com as instruções anteriores. Caso o caderno esteja incompleto, tenha defeito ou apresente qualquer
+divergência, comunique ao aplicador da sala para que ele tome as providências cabíveis.
+3. Para cada uma das questões objetivas, são apresentadas 5 opções. Apenas uma responde corretamente
+à questão.
+4. O tempo disponível para estas provas é de cinco horas.
+5. Reserve tempo suficiente para preencher o CARTÃO-RESPOSTA.
+6. Osrascunhos e as marcações assinaladas no CADERNO DE QUESTÕES e na FOLHADE RASCUNHO
+não serão considerados na avaliação.
+7. Quandoterminar as provas, acene para chamar o aplicador e entregue este CADERNO DE QUESTÕES,
+o CARTÃO-RESPOSTA e a FOLHA DE RASCUNHO.
+8. Você poderá deixar o local de prova somente após decorridas duas horas do início da aplicação e
+= poderá levar seu CADERNO DE QUESTÕES ao deixar em definitivo a sala de prova nos 30 minutos
+que antecedem o término das provas.
+Da TO ne umsréricos NDA GURI E
+do asia || | má EDUCAÇÃO Dal Im * 020325471 *
+
+## Texto introdutório 2
+
+- Palavras: 6
+
+CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS
+
+## Texto introdutório 3 - Questões 91 a 135
+
+- Palavras: 5
+
+Questões de 91 a 135
+
+## Texto introdutório 4
+
+- Palavras: 4
+
+MATEMÁTICA E SUAS TECNOLOGIAS
+
+## Texto introdutório 5 - Questões 136 a 180
+
+- Palavras: 5
+
+Questões de 136 a 180
+
+# Questões
+
 ## Questão 91
 
 - Idioma: geral
-- Palavras: 105
+- Palavras: 132
 - Tem imagem: não
 
 ### Texto extraído
@@ -33,29 +94,10 @@ D	 aumenta a oferta de alimento.
 E
 E	 aumenta os locais de reprodução.
 
-### Texto contado
-
-O número de abelhas encontra-se em declínio em
-várias regiões do mundo, inclusive no Brasil, sendo
-que vários fatores contribuem para o colapso de suas
-colmeias. Nos Estados Unidos, bombas de sementes
-de espécies vegetais nativas têm sido utilizadas para
-combater o desaparecimento desses insetos. Elas são
-pequenas bolinhas recheadas com sementes, adubo e
-argila. Quando são arremessadas e ficam expostas ao
-sol e à chuva, germinam até mesmo em solo pouco fértil.
-Esse método contribui para a preservação das abelhas
-porque
-reduz sua predação.
-reduz o uso de pesticidas.
-reduz a competição por abrigo.
-aumenta a oferta de alimento.
-aumenta os locais de reprodução.
-
 ## Questão 92
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 94
 - Tem imagem: não
 
 ### Texto extraído
@@ -79,25 +121,10 @@ D	 remediar o raquitismo.
 E
 E	 combater a febre amarela.
 
-### Texto contado
-
-Os mais antigos cozinhavam o feijão na panela de ferro a
-fim de acabar com a palidez de seus filhos. Alguns chegavam
-até a colocar um prego enferrujado nesse cozimento para
-liberar o ferro contido nele. Sabe-se que esse elemento
-pode ser encontrado na sua forma metálica ou iônica,
-sendo essencial para a manutenção da vida humana.
-As estratégias citadas eram utilizadas com o objetivo de
-tratar a diarreia.
-prevenir a anemia.
-evitar as verminoses.
-remediar o raquitismo.
-combater a febre amarela.
-
 ## Questão 93
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 119
 - Tem imagem: não
 
 ### Texto extraído
@@ -124,28 +151,10 @@ D	 Emitir gases tóxicos que são lançados no ambiente.
 E
 E	 Produzir calor sem o consumo de combustíveis fósseis.
 
-### Texto contado
-
-A utilização de tecnologia nuclear é um tema
-bastante controverso, por causa do risco de acidentes
-graves, como aqueles ocorridos em Chernobyl (1986),
-em Goiânia (1987) e em Fukushima (2011). Apesar de
-muitas desvantagens, como a geração de resíduos
-tóxicos, a descontaminação ambiental dispendiosa em
-caso de acidentes e a utilização em armas nucleares,
-a geração de energia nuclear apresenta vantagens em
-comparação a outras fontes de energia.
-A geração dessa energia tem como característica:
-Formar resíduos facilmente recicláveis.
-Promover o aumento do desmatamento.
-Contribuir para a produção de chuva ácida.
-Emitir gases tóxicos que são lançados no ambiente.
-Produzir calor sem o consumo de combustíveis fósseis.
-
 ## Questão 94
 
 - Idioma: geral
-- Palavras: 85
+- Palavras: 97
 - Tem imagem: não
 
 ### Texto extraído
@@ -178,34 +187,10 @@ D	 4
 E
 E	 5
 
-### Texto contado
-
-Em uma indústria, o controle da dureza da água é
-importante quando ela é utilizada em caldeiras, uma vez
-que sais pouco solúveis, formados a partir de sulfatos e
-carbonatos, podem acumular-se no interior das tubulações,
-causando obstruções. Para avaliar a água utilizada nessa
-indústria, foram realizados testes de qualidade que
-consideraram os seguintes parâmetros:
-Teste
-Parâmetro medido
-Cálcio
-Cloreto
-Turbidez
-Coliformes totais
-Sólidos sedimentáveis
-Qual teste deve ser considerado para controlar a
-formação desse tipo de obstrução de tubulações?
-1
-2
-3
-4
-5
-
 ## Questão 95
 
 - Idioma: geral
-- Palavras: 65
+- Palavras: 77
 - Tem imagem: não
 
 ### Texto extraído
@@ -228,24 +213,10 @@ D	 deslocamento a grandes velocidades.
 E
 E	 capacidade de voo em grandes altitudes.
 
-### Texto contado
-
-As aves apresentam dois tipos de músculos em seus
-corpos: vermelhos e brancos. Aves migratórias como garças,
-gansos e patos selvagens têm os músculos vermelhos bem
-desenvolvidos, com ampla rede de vasos sanguíneos.
-Nas viagens por grandes distâncias, tais músculos são
-fundamentais, pois favorecem o(a)
-execução de manobras.
-metabolismo corpóreo elevado.
-manutenção da aerodinâmica.
-deslocamento a grandes velocidades.
-capacidade de voo em grandes altitudes.
-
 ## Questão 96
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 103
 - Tem imagem: não
 
 ### Texto extraído
@@ -271,27 +242,10 @@ D	 32%
 E
 E	 75%
 
-### Texto contado
-
-Existe no comércio um produto antimofo constituído por
-uma embalagem com tampa perfurada contendo cloreto
-de cálcio anidro, CaCl2. Uma vez aberto o lacre, essa
-substância absorve a umidade ambiente, transformando-se
-em cloreto de cálcio di-hidratado, CaCl2⋅ 2H2O.
-Considere a massa molar da água igual a 18 g mol−1, e a
-massa molar do cloreto de cálcio anidro igual a 111 g mol−1.
-Na hidratação da substância presente no antimofo, o
-ganho percentual, em massa, é mais próximo de
-14%
-16%
-24%
-32%
-75%
-
 ## Questão 97
 
 - Idioma: geral
-- Palavras: 104
+- Palavras: 116
 - Tem imagem: não
 
 ### Texto extraído
@@ -319,29 +273,10 @@ D	 diminuição da intensidade luminosa.
 E
 E	 isolamento do contato com O2 atmosférico.
 
-### Texto contado
-
-Um garoto comprou vários abacates na feira, mas
-descobriu que eles não estavam maduros o suficiente
-para serem consumidos. Sua mãe recomendou que
-ele colocasse os abacates em um recipiente fechado,
-pois isso aceleraria seu amadurecimento. Com certa
-dúvida, o garoto realizou esta experiência: colocou
-alguns abacates no recipiente e deixou os demais em
-uma fruteira aberta. Surpreendendo-se, ele percebeu
-que os frutos que estavam no recipiente fechado
-amadureceram mais rapidamente.
-A aceleração desse processo é causada por
-acúmulo de gás etileno.
-redução da umidade do ar.
-aumento da concentração de CO2.
-diminuição da intensidade luminosa.
-isolamento do contato com O2 atmosférico.
-
 ## Questão 98
 
 - Idioma: geral
-- Palavras: 76
+- Palavras: 99
 - Tem imagem: não
 
 ### Texto extraído
@@ -370,29 +305,10 @@ D	 vitaminas.
 E
 E	 lipídios.
 
-### Texto contado
-
-Há muito tempo são conhecidas espécies de
-lesmas-do-mar com uma capacidade ímpar: guardar
-parte da maquinaria das células das algas que
-consomem — os cloroplastos — e mantê-los funcionais
-dentro das suas próprias células, obtendo assim
-parte do seu alimento. Investigadores portugueses
-descobriram que essas lesmas-do-mar podem ser
-mais eficientes nesse processo do que as próprias
-algas que consomem.
-Essa adaptação confere a esse organismo a capacidade
-de obter primariamente
-ácidos nucleicos.
-carboidratos.
-proteínas.
-vitaminas.
-lipídios.
-
 ## Questão 99
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 125
 - Tem imagem: não
 
 ### Texto extraído
@@ -422,31 +338,10 @@ D	 Sangue.
 E
 E	 Secreção ocular.
 
-### Texto contado
-
-A leishmaniose visceral é uma zoonose causada por
-um protozoário do gênero Leishmania que é encontrado em
-diversos tecidos. Ela é transmitida ao homem de forma
-indireta, por vetores do ambiente doméstico. O cão é
-considerado um importante hospedeiro desse protozoário,
-podendo ou não apresentar os sintomas da doença, como
-perda de peso, anemia, ferimentos na pele, diarreia,
-conjuntivite e insuficiência renal. Em uma região que
-sofre com alta incidência dessa doença, uma campanha
-do centro de zoonoses buscou verificar a presença desse
-protozoário nos cães para tentar controlar a doença.
-Em qual material biológico dos cães a presença desse
-protozoário representa risco de transmissão dessa zoonose?
-Urina.
-Saliva.
-Fezes.
-Sangue.
-Secreção ocular.
-
 ## Questão 100
 
 - Idioma: geral
-- Palavras: 145
+- Palavras: 157
 - Tem imagem: sim
 
 ### Texto extraído
@@ -488,43 +383,10 @@ D	 v ≠ 0 para cima e a ≠ 0 para cima.
 E
 E	 v ≠ 0 para baixo e a ≠ 0 para baixo.
 
-### Texto contado
-
-Um professor lança uma esfera verticalmente para
-cima, a qual retorna, depois de alguns segundos, ao ponto
-de lançamento. Em seguida, lista em um quadro todas as
-possibilidades para as grandezas cinemáticas.
-Grandeza cinemática
-Módulo
-Sentido
-Velocidade
-v ≠ 0
-Para cima
-Para baixo
-v = 0
-Indefi nido*
-Aceleração
-a ≠ 0
-Para cima
-Para baixo
-a = 0
-Indefi nido*
-*Grandezas com módulo nulo não têm sentido definido.
-Ele solicita aos alunos que analisem as grandezas
-cinemáticas no instante em que a esfera atinge a altura
-máxima, escolhendo uma combinação para os módulos
-e sentidos da velocidade e da aceleração.
-A escolha que corresponde à combinação correta é
-v = 0 e a ≠ 0 para cima.
-v ≠ 0 para cima e a = 0.
-v = 0 e a ≠ 0 para baixo.
-v ≠ 0 para cima e a ≠ 0 para cima.
-v ≠ 0 para baixo e a ≠ 0 para baixo.
-
 ## Questão 101
 
 - Idioma: geral
-- Palavras: 103
+- Palavras: 138
 - Tem imagem: não
 
 ### Texto extraído
@@ -554,29 +416,10 @@ D	 aumento nos níveis dos hormônios LH e FSH.
 E
 E	 elevação nos níveis sorológicos de adrenalina.
 
-### Texto contado
-
-Muitas mulheres sofrem com desconfortos nos dias
-que antecedem a menstruação, a chamada tensão
-pré-menstrual. Entre outros sintomas, podem ocorrer
-alterações de humor. Atualmente, acredita-se que os
-sintomas são resultado da queda na concentração do
-neurotransmissor serotonina, que, por sua vez, está
-relacionado com a diminuição na produção dos hormônios
-ovarianos estrógeno e progesterona, observada nessa
-fase do ciclo feminino.
-A redução da produção desses hormônios nessa fase
-está relacionada com o(a)
-regressão do corpo lúteo ovariano.
-diminuição na produção de ocitocina.
-liberação do gameta feminino na ovulação.
-aumento nos níveis dos hormônios LH e FSH.
-elevação nos níveis sorológicos de adrenalina.
-
 ## Questão 102
 
 - Idioma: geral
-- Palavras: 72
+- Palavras: 84
 - Tem imagem: não
 
 ### Texto extraído
@@ -601,26 +444,10 @@ D	 hex-1-en-1-ol.
 E
 E	 ácido hexanoico.
 
-### Texto contado
-
-As cetonas fazem parte de famílias olfativas encontradas
-em muitos alimentos. A molécula de hexan-3-ona é um
-exemplo desses compostos voláteis responsáveis pelo
-aroma, podendo ser obtida por processos energéticos
-realizados em meio ácido, na presença de oxidantes como
-o permanganato de potássio.
-Para se produzir esse composto volátil em laboratório,
-deve-se oxidar a molécula de
-hexanal.
-hexan-1-ol.
-hexan-3-ol.
-hex-1-en-1-ol.
-ácido hexanoico.
-
 ## Questão 103
 
 - Idioma: geral
-- Palavras: 67
+- Palavras: 79
 - Tem imagem: não
 
 ### Texto extraído
@@ -645,26 +472,10 @@ D	 Tubo polínico.
 E
 E	 Vaso condutor.
 
-### Texto contado
-
-Durante a evolução das plantas, ocorreu uma transição
-do ambiente aquático para o ambiente terrestre graças ao
-surgimento de algumas estruturas que as tornaram
-independentes da água. Esse fato permitiu maior dispersão
-desse grupo de seres vivos, sendo possível observá-los
-em diferentes ambientes na atualidade.
-Qual estrutura possibilitou a independência da água para
-a fecundação dos seres vivos citados acima?
-Fruto.
-Esporo.
-Semente.
-Tubo polínico.
-Vaso condutor.
-
 ## Questão 104
 
 - Idioma: geral
-- Palavras: 154
+- Palavras: 177
 - Tem imagem: não
 
 ### Texto extraído
@@ -701,37 +512,10 @@ E
 E	 reação do alumínio com gluconato de cálcio for
 endotérmica.
 
-### Texto contado
-
-O vidro contendo alumínio em sua composição é
-um excelente material para acondicionar medicamentos
-e suplementos, porque pode ser esterilizado por
-aquecimento. No entanto, quando o medicamento
-ou suplemento contém substâncias que se ligam
-fortemente ao íon desse metal, a dissolução do
-alumínio é promovida em função do deslocamento
-do equilíbrio químico estabelecido entre a espécie
-imobilizada no vidro e a espécie em solução. Por essa
-razão, recomenda-se que suplementos de nutrição de
-recém-nascidos contendo gluconato de cálcio sejam
-acondicionados em embalagens plásticas, e não nesse
-tipo de vidro.
-Atualização da recomendação da Sociedade Portuguesa de Neonatologia.
-Caso esse suplemento seja acondicionado em embalagem
-desse tipo de vidro, o risco de contaminação por alumínio
-será maior se o(a)
-vidro do frasco for translúcido.
-concentração de gluconato de cálcio for alta.
-frasco de vidro apresentar uma maior espessura.
-vidro for previamente esterilizado em altas
-temperaturas.
-reação do alumínio com gluconato de cálcio for
-endotérmica.
-
 ## Questão 105
 
 - Idioma: geral
-- Palavras: 93
+- Palavras: 105
 - Tem imagem: não
 
 ### Texto extraído
@@ -758,28 +542,10 @@ D	 formação de brotos.
 E
 E	 nutrição das raízes.
 
-### Texto contado
-
-Barbatimão é o nome popular de uma árvore cuja
-casca é utilizada para fins medicinais. Essa casca é
-constituída principalmente de dois tecidos vegetais:
-periderme e floema. A extração da casca tem levado à
-morte muitos indivíduos dessa espécie, quando o corte
-retira um anel completo ao longo da circunferência do
-tronco. Aqueles que têm parte da casca retirada sem
-completar essa circunferência podem sobreviver.
-A morte desses indivíduos, decorrente da retirada do anel
-completo da casca, é provocada pela interrupção da
-fotossíntese.
-transpiração.
-troca de gases.
-formação de brotos.
-nutrição das raízes.
-
 ## Questão 106
 
 - Idioma: geral
-- Palavras: 150
+- Palavras: 174
 - Tem imagem: não
 
 ### Texto extraído
@@ -814,35 +580,10 @@ E
 E	 incorporação do RNAm viral ao genoma do hospedeiro,
 gerando novo fenótipo.
 
-### Texto contado
-
-A tecnologia de vacinas de RNA mensageiro (RNAm)
-é investigada há anos. Avanços científicos em genética
-molecular permitiram desenvolver uma vacina para
-controle da pandemia da covid-19 causada pelo vírus de
-RNA SARS-CoV-2. A vacina de RNAm tem sequências
-de genes do vírus. Entretanto, por ser muito instável, o
-RNAm deve ser recoberto por uma capa de lipídios que
-evita sua degradação e favorece sua ação. Dessa forma,
-o RNAm desempenhará sua função específica atuando
-no mesmo compartimento celular de sempre.
-A imunização produzida por esse tipo de vacina é
-alcançada por meio da
-estimulação de leucócitos induzida pela capa lipídica
-contendo RNAm.
-atuação do RNAm como sequestrador do vírus para
-o meio extracelular.
-tradução do RNAm em proteína viral, desencadeando
-a resposta antigênica.
-competição entre o RNAm vacinal e o RNA viral pelos
-sítios dos ribossomos.
-incorporação do RNAm viral ao genoma do hospedeiro,
-gerando novo fenótipo.
-
 ## Questão 107
 
 - Idioma: geral
-- Palavras: 108
+- Palavras: 120
 - Tem imagem: não
 
 ### Texto extraído
@@ -871,30 +612,10 @@ E
 E	 fusão das membranas plasmáticas do ovócito e do
 espermatozoide.
 
-### Texto contado
-
-Na fertilização in vitro, espermatozoides são adicionados
-aos gametas femininos retirados de uma mulher. Após o
-período de incubação, a fecundação é favorecida pela ação
-de enzimas. Em um procedimento realizado, observou-se
-que nenhum dos gametas femininos foi fertilizado e,
-posteriormente, verificou-se que havia sido adicionado,
-equivocadamente, um coquetel de inibidores das enzimas do
-acrossomo, no lugar de um dos nutrientes constituintes do
-meio de cultura.
-O coquetel de inibidores impediu o(a)
-formação do pronúcleo masculino.
-início da divisão mitótica do zigoto.
-término da segunda divisão meiótica do ovócito.
-passagem do espermatozoide pela corona radiata e
-zona pelúcida.
-fusão das membranas plasmáticas do ovócito e do
-espermatozoide.
-
 ## Questão 108
 
 - Idioma: geral
-- Palavras: 64
+- Palavras: 76
 - Tem imagem: não
 
 ### Texto extraído
@@ -918,25 +639,10 @@ D	 campo magnético variável.
 E
 E	 ressonância eletromagnética.
 
-### Texto contado
-
-O fogão por indução funciona a partir do surgimento
-de uma corrente elétrica induzida no fundo da panela,
-com consequente transformação de energia elétrica
-em calor por efeito Joule. A principal vantagem desses
-fogões é a eficiência energética, que é substancialmente
-maior que a dos fogões convencionais.
-A corrente elétrica mencionada é induzida por
-radiação.
-condução.
-campo elétrico variável.
-campo magnético variável.
-ressonância eletromagnética.
-
 ## Questão 109
 
 - Idioma: geral
-- Palavras: 147
+- Palavras: 159
 - Tem imagem: sim
 
 ### Texto extraído
@@ -976,41 +682,10 @@ D	 2
 E
 E	 4
 
-### Texto contado
-
-Uma academia decide trocar gradualmente seus
-aparelhos de musculação. Agora, os frequentadores
-que utilizam os aparelhos do tipo 1 podem também
-utilizar os aparelhos do tipo 2, representados na figura,
-para elevar cargas correspondentes às massas M1 e M2,
-com velocidade constante. A fim de que o exercício seja
-realizado com a mesma força F, os usuários devem ser
-orientados a respeito da relação entre as cargas nos dois
-tipos de aparelhos, já que as polias fixas apenas mudam a
-direção das forças, enquanto a polia móvel divide as forças.
-Em ambos os aparelhos, considere as cordas
-inextensíveis, as massas das polias e das cordas desprezíveis
-e que não há dissipação de energia.
-F
-F
-M1
-M2
-Aparelho do tipo 2
-Aparelho do tipo 1
-Para essa academia, qual deve ser a razão M
-M
-informada
-aos usuários?
-1
-1
-1
-2
-4
-
 ## Questão 110
 
 - Idioma: geral
-- Palavras: 419
+- Palavras: 326
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1102,148 +777,10 @@ E
 Massa de Hg2Cl2 (g)
 Massa de NaCI (g)
 
-### Texto contado
-
-Um assistente de laboratório precisou descartar sete frascos contendo solução de nitrato de mercúrio(I) que não
-foram utilizados em uma aula prática. Cada frasco continha 5,25 g de Hg2(NO3)2 dissolvidos em água. Temendo a
-toxidez do mercúrio e sabendo que o Hg2Cl2 tem solubilidade muito baixa, o assistente optou por retirar o mercúrio da
-solução por precipitação com cloreto de sódio (NaCl), conforme a equação química:
-Hg2(NO3)2 (aq) + 2 NaCl (aq)
-Hg2Cl2 (s) + 2 NaNO3 (aq)
-Na dúvida sobre a massa de NaCl a ser utilizada, o assistente aumentou gradativamente a quantidade adicionada
-em cada frasco, como apresentado no quadro.
-Frasco
-I
-II
-III
-IV
-V
-VI
-VII
-Massa de NaCl
-em grama (g)
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-O produto obtido em cada experimento foi filtrado, secado e teve sua massa aferida. O assistente organizou os
-resultados na forma de um gráfico que correlaciona a massa de NaCl adicionada com a massa de Hg2Cl2 obtida em
-cada frasco. A massa molar do Hg2(NO3)2 é 525 g mol–1, a do NaCl é 58 g mol–1 e a do Hg2Cl2 é 472 g mol–1.
-Qual foi o gráfico obtido pelo assistente de laboratório?
-A
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-B
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-C
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-D
-D
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-E
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-0,0
-0,2
-0,4
-0,6
-0,8
-1,0
-1,2
-1,4
-Massa de Hg2Cl2 (g)
-Massa de NaCI (g)
-
 ## Questão 111
 
 - Idioma: geral
-- Palavras: 78
+- Palavras: 104
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1265,22 +802,10 @@ D	 Velocidade.
 E
 E	 Comprimento de onda.
 
-### Texto contado
-
-Na tirinha de Mauricio de Sousa, os personagens Cebolinha e Cascão fazem uma brincadeira utilizando duas latas
-e um barbante. Ao perceberem que o som pode ser transmitido através do barbante, resolvem alterar o comprimento do
-barbante para ficar cada vez mais extenso. As demais condições permaneceram inalteradas durante a brincadeira.
-Na prática, à medida que se aumenta o comprimento do barbante, ocorre a redução de qual característica da onda sonora?
-Altura.
-Período.
-Amplitude.
-Velocidade.
-Comprimento de onda.
-
 ## Questão 112
 
 - Idioma: geral
-- Palavras: 140
+- Palavras: 152
 - Tem imagem: não
 
 ### Texto extraído
@@ -1305,26 +830,10 @@ D	 Vermelho.
 E
 E	 Infravermelho.
 
-### Texto contado
-
-Informações digitais — dados — são gravadas em discos ópticos, como CD e DVD, na forma de cavidades
-microscópicas. A gravação e a leitura óptica dessas informações são realizadas por um laser (fonte de luz monocromática).
-Quanto menores as dimensões dessas cavidades, mais dados são armazenados na mesma área do disco. O fator limitante
-para a leitura de dados é o espalhamento da luz pelo efeito de difração, fenômeno que ocorre quando a luz atravessa um
-obstáculo com dimensões da ordem de seu comprimento de onda. Essa limitação motivou o desenvolvimento de lasers
-com emissão em menores comprimentos de onda, possibilitando armazenar e ler dados em cavidades cada vez menores.
-Em qual região espectral se situa o comprimento de onda do laser que otimiza o armazenamento e a leitura de dados
-em discos de uma mesma área?
-Violeta.
-Azul.
-Verde.
-Vermelho.
-Infravermelho.
-
 ## Questão 113
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 143
 - Tem imagem: não
 
 ### Texto extraído
@@ -1350,27 +859,10 @@ D	 2,4 × 10–3.
 E
 E	 2,4 × 10–1.
 
-### Texto contado
-
-O bluetooth é uma tecnologia de comunicação sem fio, de curto alcance, presente em diferentes dispositivos
-eletrônicos de consumo. Ela permite que aparelhos eletrônicos diferentes se conectem e troquem dados entre
-si. No padrão bluetooth, denominado de Classe 2, as antenas transmitem sinais de potência igual a 2,4 mW e
-possibilitam conectar dois dispositivos distanciados até 10 m. Considere que essas antenas se comportam como
-fontes puntiformes que emitem ondas eletromagnéticas esféricas e que a intensidade do sinal é calculada pela
-potência por unidade de área. Considere 3 como valor aproximado para π.
-Para que o sinal de bluetooth seja detectado pelas antenas, o valor mínimo de sua intensidade, em W
-m2 , é mais
-próximo de
-2,0 × 10–6.
-2,0 × 10–5.
-2,4 × 10–5.
-2,4 × 10–3.
-2,4 × 10–1.
-
 ## Questão 114
 
 - Idioma: geral
-- Palavras: 236
+- Palavras: 248
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1409,40 +901,10 @@ E
 E	 aceleração: T1 = 640 e T2 = 0; frenagem: T1 = 0 e
 T2 = 1 040.
 
-### Texto contado
-
-Uma equipe de segurança do transporte de uma empresa
-avalia o comportamento das tensões que aparecem em duas
-cordas, 1 e 2, usadas para prender uma carga de massa
-M = 200 kg na carroceria, conforme a ilustração. Quando o
-caminhão parte do repouso, sua aceleração é constante
-e igual a 3 m/s2 e, quando ele é freado bruscamente, sua
-frenagem é constante e igual a 5 m/s2. Em ambas as
-situações, a carga encontra-se na iminência de movimento,
-e o sentido do movimento do caminhão está indicado na
-figura. O coeficiente de atrito estático entre a caixa e o
-assoalho da carroceria é igual a 0,2. Considere a aceleração
-da gravidade igual a 10 m/s2, as tensões iniciais nas cordas
-iguais a zero e as duas cordas ideais.
-M
-V
-Nas situações de aceleração e frenagem do caminhão,
-as tensões nas cordas 1 e 2, em newton, serão
-aceleração: T1 = 0 e T2 = 200; frenagem: T1 = 600 e
-T2 = 0.
-aceleração: T1 = 0 e T2 = 200; frenagem: T1 = 1 400 e
-T2 = 0.
-aceleração: T1 = 0 e T2 = 600; frenagem: T1 = 600 e
-T2 = 0.
-aceleração: T1 = 560 e T2 = 0; frenagem: T1 = 0 e
-T2 = 960.
-aceleração: T1 = 640 e T2 = 0; frenagem: T1 = 0 e
-T2 = 1 040.
-
 ## Questão 115
 
 - Idioma: geral
-- Palavras: 79
+- Palavras: 91
 - Tem imagem: não
 
 ### Texto extraído
@@ -1468,27 +930,10 @@ D	 metabolizados por glândulas.
 E
 E	 utilizados como fonte energética.
 
-### Texto contado
-
-A biorremediação designa tratamentos que usam
-organismos para reduzir a quantidade de substâncias
-tóxicas no ambiente ou degradá-las em substâncias
-não tóxicas ou de menor toxicidade. Uma planta aquática,
-o aguapé, tem sido utilizada para a biorremediação de
-ambientes contaminados por metais tóxicos. Sabe-se
-que esses poluentes serão captados para dentro do
-corpo do vegetal.
-Dentro do corpo do vegetal, esses contaminantes serão
-digeridos por enzimas.
-acumulados nos tecidos.
-eliminados pelos estômatos.
-metabolizados por glândulas.
-utilizados como fonte energética.
-
 ## Questão 116
 
 - Idioma: geral
-- Palavras: 45
+- Palavras: 57
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1515,28 +960,10 @@ D	 4
 E
 E	 5
 
-### Texto contado
-
-O ciclo do nitrogênio é composto por várias etapas,
-conforme a figura, sendo cada uma desempenhada por
-um grupo específico de microrganismos.
-Gás nitrogênio
-Amônia
-Detritos
-Nitrito
-Nitrato
-Se o grupo dos microrganismos decompositores fosse
-exterminado, qual etapa não ocorreria?
-1
-2
-3
-4
-5
-
 ## Questão 117
 
 - Idioma: geral
-- Palavras: 184
+- Palavras: 214
 - Tem imagem: não
 
 ### Texto extraído
@@ -1575,38 +1002,10 @@ D	 100
 E
 E	 1 000
 
-### Texto contado
-
-Os raios cósmicos são fontes de radiação ionizante
-potencialmente perigosas para o organismo humano.
-Para quantificar a dose de radiação recebida, utiliza-se
-o sievert (Sv), definido como a unidade de energia
-recebida por unidade de massa. A exposição à radiação
-proveniente de raios cósmicos aumenta com a altitude,
-o que pode representar um problema para as tripulações
-de aeronaves. Recentemente, foram realizadas medições
-acuradas das doses de radiação ionizante para voos entre
-Rio de Janeiro e Roma. Os resultados têm indicado que a
-dose média de radiação recebida na fase de cruzeiro (que
-geralmente representa 80% do tempo total de voo) desse
-trecho intercontinental é 2 μSv/h. As normas internacionais
-da aviação civil limitam em 1 000 horas por ano o tempo
-de trabalho para as tripulações que atuem em voos
-intercontinentais. Considere que a dose de radiação ionizante
-para uma radiografia torácica é estimada em 0,2 mSv.
-A quantas radiografias torácicas corresponde a dose de
-radiação ionizante à qual um tripulante que atue no trecho
-Rio de Janeiro−Roma é exposto ao longo de um ano?
-8
-10
-80
-100
-1 000
-
 ## Questão 118
 
 - Idioma: geral
-- Palavras: 105
+- Palavras: 117
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1645,40 +1044,10 @@ D	 IV.
 E
 E	 V.
 
-### Texto contado
-
-A gasolina é uma mistura de hidrocarbonetos de
-cadeias saturadas contendo de 8 a 12 átomos de carbono.
-Além disso, a gasolina de alto desempenho deve conter
-elevados teores de hidrocarbonetos de cadeias ramificadas,
-de forma a resistir à compressão e entrar em ignição apenas
-quando a vela aciona uma centelha elétrica no motor.
-No quadro, estão apresentados compostos que podem
-ser utilizados como combustíveis.
-Composto
-Nomenclatura
-I
-n-decano
-II
-n-heptano
-III
-2,2,4-trimetilpentano
-IV
-3-etil-4-metilex-1-eno
-V
-3-etil-2-metilpentan-1-ol
-Entre esses compostos, aquele que conferirá maior
-desempenho como combustível é o
-I.
-II.
-III.
-IV.
-V.
-
 ## Questão 119
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 175
 - Tem imagem: não
 
 ### Texto extraído
@@ -1717,38 +1086,10 @@ D	 53.
 E
 E	 13.
 
-### Texto contado
-
-De acordo com a Constituição Federal, é competência
-dos municípios o gerenciamento dos serviços de limpeza e
-coleta dos resíduos urbanos (lixo). No entanto, há relatos
-de que parte desse lixo acaba sendo incinerado, liberando
-substâncias tóxicas para o ambiente e causando acidentes
-por explosões, principalmente quando ocorre a incineração
-de frascos de aerossóis (por exemplo: desodorantes,
-inseticidas e repelentes). A temperatura elevada provoca
-a vaporização de todo o conteúdo dentro desse tipo de
-frasco, aumentando a pressão em seu interior até culminar
-na explosão da embalagem.
-Suponha um frasco metálico de um aerossol de
-capacidade igual a 100 mL, contendo 0,1 mol de produtos
-gasosos à temperatura de 650 °C, no momento da explosão.
-Considere: R = 0,082 L atm
-mol K
-⋅
-⋅
-A pressão, em atm, dentro do frasco, no momento da
-explosão, é mais próxima de
-756.
-533.
-76.
-53.
-13.
-
 ## Questão 120
 
 - Idioma: geral
-- Palavras: 132
+- Palavras: 144
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1784,37 +1125,10 @@ D	 menos intenso para L 1 e o mesmo para L3.
 E
 E	 mais intenso para L 1 e menos intenso para L3.
 
-### Texto contado
-
-O circuito com três lâmpadas incandescentes idênticas,
-representado na figura, consiste em uma associação mista
-de resistores. Cada lâmpada (L 1, L2 e L3) é associada,
-em paralelo, a um resistor de resistência R, formando um
-conjunto. Esses conjuntos são associados em série, tendo
-todas as lâmpadas o mesmo brilho quando ligadas à fonte
-de energia. Após vários dias em uso, apenas a lâmpada L2
-queima, enquanto as demais permanecem acesas.
-Fonte de
-energia
-R
-L³
-R
-R
-L²
-L¹
-Em relação à situação em que todas as lâmpadas
-funcionam, após a queima de L2, os brilhos das
-lâmpadas serão
-os mesmos.
-mais intensos.
-menos intensos.
-menos intenso para L 1 e o mesmo para L3.
-mais intenso para L 1 e menos intenso para L3.
-
 ## Questão 121
 
 - Idioma: geral
-- Palavras: 230
+- Palavras: 254
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1865,51 +1179,10 @@ D	 zinco.
 E
 E	 ferro.
 
-### Texto contado
-
-Os solos amazônicos, ricos em silicato, não são apropriados para o cultivo por serem incapazes de reter nutrientes.
-Contudo, descobertas arqueológicas têm demonstrado que os antigos habitantes da Amazônia dominavam a técnica
-de preparo de um insumo agrícola natural, denominado terra preta. Esse insumo era constituído principalmente
-de uma espécie de biocarvão (biochar) obtido da queima de matéria orgânica, como troncos de árvores, pedaços de
-ossos e esterco, capaz de manter um solo fértil por anos.
-Admite-se que o efeito do biocarvão na fertilização do solo estava, em parte, relacionado à presença de grupos
-orgânicos do tipo carboxilato em sua superfície, carregados negativamente (—COO−). Esses grupos atraem íons
-positivos necessários como nutrientes, tais quais os provenientes do potássio (K), do cálcio (Ca) e do magnésio (Mg),
-além de micronutrientes, como zinco (Zn) e ferro (Fe). Essa ligação no solo fertilizado é predominantemente iônica,
-conforme ilustra a figura, em que Mn+ representa os cátions metálicos. De acordo com a escala de Pauling, a
-eletronegatividade do elemento oxigênio é igual a 3,44.
-Mn+
-O
-O–
-O
-O– Mn+
-Solo com biocarvão
-Solo fertilizado
-O quadro apresenta os valores de eletronegatividade desses cinco elementos metálicos.
-Elemento metálico
-Eletronegatividade
-K
-0,82
-Ca
-1,00
-Mg
-1,31
-Zn
-1,65
-Fe
-1,83
-O cátion que resultará em uma interação de maior caráter iônico com o ânion carboxilato será aquele proveniente
-do elemento
-potássio.
-cálcio.
-magnésio.
-zinco.
-ferro.
-
 ## Questão 122
 
 - Idioma: geral
-- Palavras: 127
+- Palavras: 139
 - Tem imagem: não
 
 ### Texto extraído
@@ -1931,23 +1204,10 @@ D	 do calor sensível e do calor latente de condensação.
 E
 E	 do calor latente de condensação e do calor latente de vaporização.
 
-### Texto contado
-
-Em uma indústria alimentícia, para produção de doce de leite, utiliza-se um tacho de parede oca com uma entrada
-para vapor de água a 120 °C  e uma saída para água líquida em equilíbrio com o vapor a 100 °C. Ao passar pela parte
-oca do tacho, o vapor de água transforma-se em líquido, liberando energia. A parede transfere essa energia para o
-interior do tacho, resultando na evaporação de água e consequente concentração do produto.
-No processo de concentração do produto, é utilizada energia proveniente
-somente do calor latente de vaporização.
-somente do calor latente de condensação.
-do calor sensível e do calor latente de vaporização.
-do calor sensível e do calor latente de condensação.
-do calor latente de condensação e do calor latente de vaporização.
-
 ## Questão 123
 
 - Idioma: geral
-- Palavras: 133
+- Palavras: 145
 - Tem imagem: não
 
 ### Texto extraído
@@ -2006,60 +1266,10 @@ D	 diclofenaco sódico.
 E
 E	 butilbrometo de escopolamina.
 
-### Texto contado
-
-Entre os medicamentos mais comuns consumidos para o alívio da dor está o ibuprofeno, um composto quiral
-com ação anti-inflamatória e efeito analgésico, que é comercializado como fármaco opticamente puro, ou seja, sem
-a mistura com outro isômero óptico. A fórmula estrutural plana do ibuprofeno é:
-O
-OH
-Ibuprofeno
-Além do ibuprofeno, destacam-se também os princípios ativos a seguir, presentes em outros medicamentos para
-o alívio da dor:
-N
-H
-O
-Fenacetina
-O
-O−
-Diclofenaco sódico
-NH
-Cl
-Cl
-Na+
-Dipirona sódica
-O−Na+
-O
-O
-S
-N
-O
-N
-N
-Paracetamol
-HO
-O
-O
-O
-H
-OH
-N+ Br −
-Butilbrometo de escopolamina
-N
-H
-O
-O
-O princípio ativo que apresenta o mesmo tipo de isomeria espacial que o ibuprofeno é o(a)
-fenacetina.
-paracetamol.
-dipirona sódica.
-diclofenaco sódico.
-butilbrometo de escopolamina.
-
 ## Questão 124
 
 - Idioma: geral
-- Palavras: 146
+- Palavras: 158
 - Tem imagem: não
 
 ### Texto extraído
@@ -2085,27 +1295,10 @@ D	 288
 E
 E	 360
 
-### Texto contado
-
-Uma concessionária é responsável por um trecho de 480 quilômetros de uma rodovia. Nesse trecho, foram
-construídas 10 praças de pedágio, onde funcionários recebem os pagamentos nas cabines de cobrança. Também
-existe o serviço automático, em que os veículos providos de um dispositivo passam por uma cancela, que se abre
-automaticamente, evitando filas e diminuindo o tempo de viagem. Segundo a concessionária, o tempo médio para
-efetuar a passagem em uma cabine é de 3 minutos, e as velocidades máximas permitidas na rodovia são 100 km/h,
-para veículos leves, e 80 km/h, para veículos de grande porte.
-Considere um carro e um caminhão viajando, ambos com velocidades constantes e iguais às máximas permitidas,
-e que somente o caminhão tenha o serviço automático de cobrança.
-Comparado ao caminhão, quantos minutos a menos o carro leva para percorrer toda a rodovia?
-30
-42
-72
-288
-360
-
 ## Questão 125
 
 - Idioma: geral
-- Palavras: 133
+- Palavras: 179
 - Tem imagem: não
 
 ### Texto extraído
@@ -2131,26 +1324,10 @@ D	 apenas trissômicos ou tetrassômicos.
 E
 E	 normais, trissômicos ou tetrassômicos.
 
-### Texto contado
-
-Pais com síndrome de Down
-A síndrome de Down é uma alteração genética associada à trissomia do cromossomo 21, ou seja, o indivíduo possui
-três cromossomos 21 e não um par, como é normal. Isso ocorre pela união de um gameta contendo um cromossomo 21
-com um gameta possuidor de dois cromossomos 21. Embora, normalmente, as mulheres com a síndrome sejam
-estéreis, em 2008, no interior de São Paulo, uma delas deu à luz uma menina sem a síndrome de Down.
-Sabendo disso, um jovem casal, ambos com essa síndrome, procura um médico especialista para aconselhamento
-genético porque querem ter um bebê.
-O médico informa ao casal que, com relação ao cromossomo 21, os zigotos formados serão
-todos normais.
-todos tetrassômicos.
-apenas normais ou tetrassômicos.
-apenas trissômicos ou tetrassômicos.
-normais, trissômicos ou tetrassômicos.
-
 ## Questão 126
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 153
 - Tem imagem: não
 
 ### Texto extraído
@@ -2177,28 +1354,10 @@ D	 cadeia carbônica.
 E
 E	 estado de oxidação.
 
-### Texto contado
-
-Para que uma molécula dê origem a um medicamento de administração oral, além de apresentar atividade
-farmacológica, deve ser capaz de atingir o local de ação. Para tanto, essa molécula não deve se degradar no estômago
-(onde o meio é fortemente ácido e há várias enzimas que reagem mediante catálise ácida), deve ser capaz de atravessar
-as membranas celulares e ser solúvel no plasma sanguíneo (sistema aquoso). Para os fármacos cujas estruturas são
-formadas por cadeias carbônicas longas contendo pelo menos um grupamento amino, um recurso tecnológico empregado
-é sua conversão no cloridrato correspondente. Essa conversão é representada, de forma genérica, pela equação química:
-R3N + HCl
-(R3NH)+Cl–
-O aumento da eficiência de circulação do fármaco no sangue, promovido por essa conversão, deve-se ao incremento
-de seu(sua)
-basicidade.
-lipofilicidade.
-caráter iônico.
-cadeia carbônica.
-estado de oxidação.
-
 ## Questão 127
 
 - Idioma: geral
-- Palavras: 150
+- Palavras: 175
 - Tem imagem: não
 
 ### Texto extraído
@@ -2250,52 +1409,10 @@ D	 dióxido de carbono.
 E
 E	 citocromo c oxidase.
 
-### Texto contado
-
-Toxicidade do cianeto
-A produção de ATP depende do gradiente de prótons gerado pela cadeia respiratória. Nessas reações, os elétrons
-provenientes da oxidação do NADH em NAD+ percorrem a cadeia até chegarem à citocromo c oxidase reduzindo o
-Fe3+ a Fe2+. O oxigênio atua como aceptor final desses elétrons formando água. O cianeto é uma espécie química
-altamente tóxica que tem grande afinidade pelo Fe3+. Quando células são expostas ao cianeto, ele se liga ao sítio de
-Fe3+ da citocromo c oxidase, impedindo a sua conversão em Fe2+ e bloqueando a cadeia respiratória.
-Substrato
-proveniente
-do nutriente
-Forma
-oxidada
-Forma
-oxidada
-Forma
-oxidada
-Forma
-reduzida
-Forma
-reduzida
-Transportador
-Transportador
-Transportador
-Citocromo c
-oxidase
-Forma
-reduzida
-Fe2+
-Fe3+
-H2O
-2 O2
-CO2
-NADH
-NAD+
-Esse bloqueio aumenta a concentração celular de
-ATP.
-água.
-NADH.
-dióxido de carbono.
-citocromo c oxidase.
-
 ## Questão 128
 
 - Idioma: geral
-- Palavras: 93
+- Palavras: 105
 - Tem imagem: não
 
 ### Texto extraído
@@ -2321,27 +1438,10 @@ D	 tiverem a mesma intensidade.
 E
 E	 propagarem-se com velocidades diferentes.
 
-### Texto contado
-
-É comum em viagens de avião sermos solicitados a
-desligar aparelhos cujo funcionamento envolva a emissão
-ou a recepção de ondas eletromagnéticas, como celulares.
-A justificativa dada para esse procedimento é, entre
-outras coisas, a necessidade de eliminar fontes de sinais
-eletromagnéticos que possam interferir nas comunicações,
-via rádio, dos pilotos com a torre de controle.
-Essa interferência poderá ocorrer somente se as ondas
-emitidas pelo celular e as recebidas pelo rádio do avião
-forem ambas audíveis.
-tiverem a mesma potência.
-tiverem a mesma frequência.
-tiverem a mesma intensidade.
-propagarem-se com velocidades diferentes.
-
 ## Questão 129
 
 - Idioma: geral
-- Palavras: 143
+- Palavras: 178
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2384,42 +1484,10 @@ D	 Urina, pela presença de moléculas de ureia.
 E
 E	 Leite, por causa do alto teor de gorduras.
 
-### Texto contado
-
-O Aldrin é um inseticida agrícola organoclorado
-sintético de baixa polaridade, cuja estrutura molecular
-simétrica, de fórmula C12H8Cl6, está representada na
-figura. Introduzido na agricultura a partir da década de
-1950, esse composto apresenta alta persistência no meio
-ambiente e acumulação nos organismos, sendo danoso
-para a saúde.
-Aldrin
-Cl
-Cl
-Cl
-Cl
-Cl
-Cl
-C
-H
-H
-C
-Um pesquisador coletou fluidos biológicos de indivíduos
-de uma população contaminada por esse inseticida agrícola.
-Ele analisou amostras de saliva, sangue, lágrima, urina e
-leite quanto à presença dessa substância.
-Em qual dos fluidos o pesquisador provavelmente encontrou
-a maior concentração dessa substância?
-Saliva, por consequência da atividade de enzimas.
-Sangue, em função das hemácias e leucócitos.
-Lágrima, em razão da concentração de sais.
-Urina, pela presença de moléculas de ureia.
-Leite, por causa do alto teor de gorduras.
-
 ## Questão 130
 
 - Idioma: geral
-- Palavras: 162
+- Palavras: 195
 - Tem imagem: não
 
 ### Texto extraído
@@ -2456,36 +1524,10 @@ E
 E	 Ter alta condutividade térmica e possibilitar a
 degradação do material no meio ambiente.
 
-### Texto contado
-
-Uma cafeteria adotou copos fabricados a partir
-de uma composição de 50% de plástico reciclado não
-biodegradável e 50% de casca de café. O copo é reutilizável
-e retornável, pois o material, semelhante a uma cerâmica,
-suporta a lavagem. Embora ele seja comercializado por
-um preço considerado alto quando comparado ao de um
-copo de plástico descartável, essa cafeteria possibilita aos
-clientes retornarem o copo sujo e levarem o café quente
-servido em outro copo já limpo e higienizado. O material
-desse copo oferece também o conforto de não esquentar
-na parte externa.
-Quais duas vantagens esse copo apresenta em
-comparação ao copo descartável?
-Ter a durabilidade de uma cerâmica e ser totalmente
-biodegradável.
-Ser tão durável quanto uma cerâmica e ter alta
-condutividade térmica.
-Ser um mau condutor térmico e aumentar o resíduo
-biodegradável na natureza.
-Ter baixa condutividade térmica e reduzir o resíduo
-não biodegradável na natureza.
-Ter alta condutividade térmica e possibilitar a
-degradação do material no meio ambiente.
-
 ## Questão 131
 
 - Idioma: geral
-- Palavras: 94
+- Palavras: 139
 - Tem imagem: não
 
 ### Texto extraído
@@ -2515,29 +1557,10 @@ D	 menor massa de solutos dissolvidos.
 E
 E	 maior temperatura de congelamento.
 
-### Texto contado
-
-O consumo exagerado de refrigerantes é preocupante,
-pois contribui para o aumento de casos de obesidade e
-diabetes. Considere dois refrigerantes enlatados, um
-comum e um diet, e que ambos possuam a mesma
-quantidade de aditivos, exceto pela presença de
-açúcar. O refrigerante comum contém basicamente
-água carbonatada e grande quantidade de açúcar;
-já o refrigerante diet tem água carbonatada e adoçantes,
-cujas massas são muito pequenas.
-Entre as duas versões apresentadas, o refrigerante
-comum possui
-maior densidade.
-menor viscosidade.
-maior volume de gás dissolvido.
-menor massa de solutos dissolvidos.
-maior temperatura de congelamento.
-
 ## Questão 132
 
 - Idioma: geral
-- Palavras: 233
+- Palavras: 190
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2583,77 +1606,10 @@ T
 T (K)
 P (Pa)
 
-### Texto contado
-
-O manual de um automóvel alerta sobre os cuidados em relação à pressão do ar no interior dos pneus.
-Recomenda-se que a pressão seja verificada com os pneus frios (à temperatura ambiente). Um motorista,
-desatento a essa informação, realizou uma viagem longa sobre o asfalto quente e, em seguida, verificou que a
-pressão P0 no interior dos pneus não era a recomendada pelo fabricante. Na ocasião, a temperatura dos pneus
-era T0. Após um longo período em repouso, os pneus do carro atingiram a temperatura ambiente T. Durante o
-resfriamento, não há alteração no volume dos pneus e na quantidade de ar no seu interior. Considere o ar dos
-pneus um gás perfeito (também denominado gás ideal).
-Durante o processo de resfriamento, os valores de pressão em relação à temperatura (P × T) são representados
-pelo gráfico:
-A
-P (Pa)
-P0
-T0
-T (K)
-T
-B
-P0
-T0
-T
-P (Pa)
-T (K)
-C
-P0
-T0
-T
-T (K)
-P (Pa)
-D
-T0
-T
-T (K)
-P (Pa)
-P0
-E
-P0
-T0
-T
-T (K)
-P (Pa)
-P (Pa)
-P0
-T0
-T (K)
-T
-P0
-T0
-T
-P (Pa)
-T (K)
-P0
-T0
-T
-T (K)
-P (Pa)
-T0
-T
-T (K)
-P (Pa)
-P0
-P0
-T0
-T
-T (K)
-P (Pa)
-
 ## Questão 133
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 130
 - Tem imagem: não
 
 ### Texto extraído
@@ -2686,34 +1642,10 @@ D	 Alterar o grupo aniônico por um grupo catiônico.
 E
 E	 Modificar a cadeia carbônica para cadeia normal.
 
-### Texto contado
-
-O descarte de detergentes comuns nos esgotos
-domésticos ocasiona a formação de uma camada
-de espuma que impede a entrada de oxigênio na
-água. Os microrganismos que vivem nessas águas
-não são capazes de quebrar moléculas ramificadas,
-ocorrendo assim um desequilíbrio ambiental nos rios.
-A fórmula a seguir representa a estrutura química de um
-tensoativo presente na composição de um detergente
-não biodegradável.
-S
-O
-O
-O– Na+
-Tensoativo não biodegradável
-Qual modificação química na estrutura desse tensoativo
-o tornaria um detergente biodegradável?
-Retirar a parte polar da molécula.
-Eliminar as insaturações do anel aromático.
-Trocar o grupo aniônico por um grupo neutro.
-Alterar o grupo aniônico por um grupo catiônico.
-Modificar a cadeia carbônica para cadeia normal.
-
 ## Questão 134
 
 - Idioma: geral
-- Palavras: 59
+- Palavras: 90
 - Tem imagem: não
 
 ### Texto extraído
@@ -2740,26 +1672,10 @@ D	 mitocôndrias.
 E
 E	 cromossomos.
 
-### Texto contado
-
-Avaliação de substâncias genotóxicas
-O ensaio de micronúcleos é um teste de avaliação de
-genotoxicidade que associa a presença de micronúcleos
-(pequenos núcleos que aparecem próximo aos núcleos
-das células) com lesões genéticas. Os micronúcleos são
-fragmentos de DNA encapsulados, provenientes do fuso
-mitótico durante a divisão celular.
-Os micronúcleos se originam dos(as)
-nucléolos.
-lisossomos.
-ribossomos.
-mitocôndrias.
-cromossomos.
-
 ## Questão 135
 
 - Idioma: geral
-- Palavras: 164
+- Palavras: 176
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2799,41 +1715,10 @@ D	 1 500.
 E
 E	 1 800.
 
-### Texto contado
-
-O petróleo é uma matéria-prima muito valiosa
-e métodos geofísicos são úteis na sua prospecção.
-É possível identificar a composição de materiais
-estratificados medindo-se a velocidade de propagação
-do som (onda mecânica) através deles. Considere que
-uma camada de 450 m de um líquido se encontra presa
-no subsolo entre duas camadas rochosas, conforme o
-esquema. Um pulso acústico (que gera uma vibração
-mecânica) é emitido a partir da superfície do solo, onde
-são posteriormente recebidas duas vibrações refletidas
-(ecos). A primeira corresponde à reflexão do pulso na
-interface superior do líquido com a camada rochosa.
-A segunda vibração deve-se à reflexão do pulso na
-interface inferior. O tempo entre a emissão do pulso e
-a chegada do primeiro eco é de 0,5 s. O segundo eco
-chega 1,1 s após a emissão do pulso.
-Emissor e detector de pulsos
-Rocha
-Rocha
-450 m
-Líquido
-A velocidade do som na camada líquida, em metro por
-segundo, é
-270.
-540.
-818.
-1 500.
-1 800.
-
 ## Questão 136
 
 - Idioma: geral
-- Palavras: 155
+- Palavras: 167
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2868,36 +1753,10 @@ D	 4 665,6
 E
 E	 4 860,0
 
-### Texto contado
-
-Um artista plástico esculpe uma escultura a partir
-de um bloco de madeira de lei, em etapas. Inicialmente,
-esculpe um cone reto com 36 cm de altura e diâmetro da
-base medindo 18 cm. Em seguida, remove desse cone um
-cone menor, cujo diâmetro da base mede 6 cm, obtendo,
-assim, um tronco de cone, conforme ilustrado na figura.
-6 cm
-36 cm
-18 cm
-Em seguida, perfura esse tronco de cone, removendo
-um cilindro reto, de diâmetro 6 cm, cujo eixo de simetria é o
-mesmo do cone original. Dessa forma, ao final, a escultura
-tem a forma de um tronco de cone com uma perfuração
-cilíndrica de base a base.
-O tipo de madeira utilizada para produzir essa escultura
-tem massa igual a 0,6 g por centímetro cúbico de volume.
-Utilize 3 como aproximação para π.
-Qual é a massa, em grama, dessa escultura?
-1 198,8
-1 296,0
-1 360,8
-4 665,6
-4 860,0
-
 ## Questão 137
 
 - Idioma: geral
-- Palavras: 73
+- Palavras: 85
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2930,34 +1789,10 @@ D	 4 500,00.
 E
 E	 9 000,00.
 
-### Texto contado
-
-Os 100 funcionários de uma empresa estão
-distribuídos em dois setores: Produção e Administração.
-Os funcionários de um mesmo setor recebem salários
-com valores iguais. O quadro apresenta a quantidade de
-funcionários por setor e seus respectivos salários.
-Setor
-Quantidade de
-funcionários
-Salário
-(em real)
-Produção
-2 000,00
-Administração
-7 000,00
-A média dos salários dos 100 funcionários dessa
-empresa, em real, é
-2 000,00.
-2 500,00.
-3 250,00.
-4 500,00.
-9 000,00.
-
 ## Questão 138
 
 - Idioma: geral
-- Palavras: 219
+- Palavras: 231
 - Tem imagem: não
 
 ### Texto extraído
@@ -2997,41 +1832,10 @@ D	 68
 E
 E	 80
 
-### Texto contado
-
-Visando atrair mais clientes, o gerente de uma loja
-anunciou uma promoção em que cada cliente que realizar
-uma compra pode ganhar um voucher para ser usado
-em sua próxima compra. Para ganhar seu voucher,
-o cliente precisa retirar, ao acaso, uma bolinha de dentro
-de cada uma das duas urnas A e B disponibilizadas pelo
-gerente, nas quais há apenas bolinhas pretas e brancas.
-Atualmente, a probabilidade de se escolher, ao acaso,
-uma bolinha preta na urna A é igual a 20% e a probabilidade
-de se escolher uma bolinha preta na urna B é 25%.
-Ganha o voucher o cliente que retirar duas bolinhas pretas,
-uma de cada urna.
-Com o passar dos dias, o gerente percebeu que, para a
-promoção ser viável aos negócios, era preciso alterar
-a probabilidade de acerto do cliente sem alterar a regra
-da promoção. Para isso, resolveu alterar a quantidade de
-bolinhas brancas na urna B de forma que a probabilidade
-de um cliente ganhar o voucher passasse a ser menor ou
-igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e
-que, em ambas as urnas, todas as bolinhas têm a mesma
-probabilidade de serem retiradas.
-Qual é o número mínimo de bolinhas brancas que o
-gerente deve adicionar à urna B?
-20
-60
-64
-68
-80
-
 ## Questão 139
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 149
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3072,42 +1876,10 @@ D	 Setembro.
 E
 E	 Outubro.
 
-### Texto contado
-
-O gerente de uma fábrica pretende comparar a evolução das vendas de dois produtos similares (I e II). Para isso,
-passou a verificar o número de unidades vendidas de cada um desses produtos em cada mês. Os resultados dessa
-verificação, para os meses de abril a junho, são apresentados na tabela.
-Produto
-Vendas
-em abril
-(unidade)
-Vendas
-em maio
-(unidade)
-Vendas
-em junho
-(unidade)
-l
-100
-ll
-190
-170
-150
-O gerente estava decidido a cessar a produção do produto II no mês seguinte àquele em que as vendas do
-produto I superassem as do produto II.
-Suponha que a variação na quantidade de unidades vendidas dos produtos I e II se manteve, mês a mês, como
-no período representado na tabela.
-Em qual mês o produto II parou de ser produzido?
-Junho.
-Julho.
-Agosto.
-Setembro.
-Outubro.
-
 ## Questão 140
 
 - Idioma: geral
-- Palavras: 104
+- Palavras: 116
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3132,26 +1904,10 @@ D	 moda < média < mediana.
 E
 E	 moda < mediana < média.
 
-### Texto contado
-
-Uma empresa de transporte faz regularmente um levantamento do número de viagens realizadas durante o dia
-por todos os 160 motoristas cadastrados em seu aplicativo. Em um certo dia, foi gerado um relatório, por meio de um
-gráfico de barras, no qual se relacionaram a quantidade de motoristas com a quantidade de viagens realizadas até
-aquele instante do dia.
-Quantidade de viagens realizadas
-Quantidade de motoristas
-Comparando os valores da média, da mediana e da moda da distribuição das quantidades de viagens realizadas
-pelos motoristas cadastrados nessa empresa, obtém-se
-mediana = média < moda.
-mediana = moda < média.
-mediana < média < moda.
-moda < média < mediana.
-moda < mediana < média.
-
 ## Questão 141
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 154
 - Tem imagem: não
 
 ### Texto extraído
@@ -3176,26 +1932,10 @@ D	  2
 E
 E	  3
 
-### Texto contado
-
-No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos
-ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto,
-um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão
-depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com
-seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano,
-três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro
-ano. Todos os cartões têm a mesma probabilidade de serem sorteados.
-Qual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?
-1
-1
-1
-2
-3
-
 ## Questão 142
 
 - Idioma: geral
-- Palavras: 155
+- Palavras: 167
 - Tem imagem: não
 
 ### Texto extraído
@@ -3221,27 +1961,10 @@ D	 140
 E
 E	 150
 
-### Texto contado
-
-A água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto
-cujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador
-desse vilarejo consome, em média, 200 litros de água por dia.
-No mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água
-nos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório
-e constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água
-durante os 10 dias seguintes. Considere 3 como aproximação para p.
-Qual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo
-que o reservatório não fique sem água nos próximos 10 dias?
-50
-60
-80
-140
-150
-
 ## Questão 143
 
 - Idioma: geral
-- Palavras: 158
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -3267,27 +1990,10 @@ D	 30.
 E
 E	 33.
 
-### Texto contado
-
-Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com
-10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos
-dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado,
-a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.
-A direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma
-quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para
-a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista
-de espera no próximo ano seja 25% menor que o deste ano.
-O número mínimo de salas que deverão ser construídas é
-10.
-11.
-13.
-30.
-33.
-
 ## Questão 144
 
 - Idioma: geral
-- Palavras: 105
+- Palavras: 127
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3324,37 +2030,10 @@ D	 1,8
 E
 E	 2,7
 
-### Texto contado
-
-A foto mostra a construção de uma cisterna destinada
-ao armazenamento de água. Uma cisterna como essa, na
-forma de cilindro circular reto com 3 m² de área da base,
-foi abastecida por um curso-d’água com vazão constante.
-O seu proprietário registrou a altura do nível da água no
-interior da cisterna durante o abastecimento em diferentes
-momentos de um mesmo dia, conforme o quadro.
-Horário (h)
-Nível da água (m)
-6:00
-0,5
-8:00
-1,1
-12:00
-2,3
-15:00
-3,2
-Qual foi a vazão, em metro cúbico por hora, do
-curso-d’água que abasteceu a cisterna?
-0,3
-0,5
-0,9
-1,8
-2,7
-
 ## Questão 145
 
 - Idioma: geral
-- Palavras: 143
+- Palavras: 155
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3395,42 +2074,10 @@ D	 Q5
 E
 E	 Q6
 
-### Texto contado
-
-Num certo momento de um jogo digital, a tela
-apresenta a imagem representada na figura. O ponto Q1
-representa a posição de um jogador que está com a bola,
-os pontos Q2, Q3, Q4, Q5 e Q6 também indicam posições
-de jogadores da mesma equipe, e os pontos A e B indicam
-os dois pés da trave mais próxima deles. No momento da
-partida retratado, o jogador Q1 tem a posse da bola, que
-será passada para um dos outros jogadores das posições
-Qn, n ∈ {2, 3, 4, 5, 6}, cujo ângulo AQ B
-n
-tenha a mesma
-medida do ângulo
-AQ B
-1 .
-A
-B
-Q1
-Q2
-Q3
-Q4
-Q5
-Q6
-α
-Qual é o jogador que receberá a bola?
-Q2
-Q3
-Q4
-Q5
-Q6
-
 ## Questão 146
 
 - Idioma: geral
-- Palavras: 202
+- Palavras: 214
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3466,37 +2113,10 @@ E	 Há somente duas soluções possíveis, uma em que
 as somas em cada lado do triângulo são iguais a 10
 e outra em que as somas são iguais a 11.
 
-### Texto contado
-
-O triângulo da figura é denominado triângulo mágico.
-Nos círculos, escrevem-se os números de 1 a 6, sem
-repetição, com um número em cada círculo. O objetivo
-é distribuir os números de forma que as somas dos
-números em cada lado do triângulo sejam iguais.
-Considere que os números colocados nos vértices
-do triângulo estejam em progressão aritmética de razão
-igual a 2.
-Nas condições propostas, quais as possíveis soluções
-para as somas dos números que formam os lados do
-triângulo?
-Há somente uma solução possível, e as somas em
-cada lado do triângulo são iguais a 7.
-Há somente uma solução possível, e as somas em
-cada lado do triângulo são iguais a 9.
-Há somente duas soluções possíveis, uma em que
-as somas em cada lado do triângulo são iguais a 7 e
-outra em que as somas são iguais a 9.
-Há somente duas soluções possíveis, uma em que
-as somas em cada lado do triângulo são iguais a 9 e
-outra em que as somas são iguais a 12.
-Há somente duas soluções possíveis, uma em que
-as somas em cada lado do triângulo são iguais a 10
-e outra em que as somas são iguais a 11.
-
 ## Questão 147
 
 - Idioma: geral
-- Palavras: 147
+- Palavras: 182
 - Tem imagem: não
 
 ### Texto extraído
@@ -3532,35 +2152,10 @@ D	 7.
 E
 E	 8.
 
-### Texto contado
-
-Alguns estudos comprovam que os carboidratos
-fornecem energia ao corpo, preservam as proteínas
-estruturais dos músculos durante a prática de atividade
-física e ainda dão força para o cérebro coordenar os
-movimentos, o que de fato tem impacto positivo no
-desenvolvimento do praticante. O ideal é consumir 1 grama
-de carboidrato para cada minuto de caminhada.
-Um casal realizará diariamente 30 minutos de
-caminhada, ingerindo, antes dessa atividade, a quantidade
-ideal de carboidratos recomendada. Para ter o consumo ideal
-apenas por meio do consumo de pão de fôrma integral, o
-casal planeja garantir o suprimento de pães para um período
-de 30 dias ininterruptos. Sabe-se que cada pacote desse pão
-vem com 18 fatias, e que cada uma delas tem 15 gramas
-de carboidratos.
-A quantidade mínima de pacotes de pão de fôrma
-necessários para prover o suprimento a esse casal é
-1.
-4.
-6.
-7.
-8.
-
 ## Questão 148
 
 - Idioma: geral
-- Palavras: 154
+- Palavras: 166
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3601,42 +2196,10 @@ D	  12 3
 E
 E	  22
 
-### Texto contado
-
-O mastro de uma bandeira foi instalado
-perpendicularmente ao solo em uma região plana.
-Devido aos fortes ventos, três cabos de aço, de mesmo
-comprimento, serão instalados para dar sustentação ao
-mastro. Cada cabo de aço ficará perfeitamente esticado,
-com uma extremidade num ponto P do mastro, a uma
-altura h do solo, e a outra extremidade, num ponto no
-chão, como mostra a figura.
-P
-h
-α
-α
-α
-Os cabos de aço formam um ângulo a com o plano
-do chão.
-Por medida de segurança, há apenas três opções de
-instalação:
-•	 opção I: h = 11 m e a = 30°
-•	 opção II: h = 12 m e a = 45°
-•	 opção III: h = 18 m e a = 60°
-A opção a ser escolhida é aquela em que a medida
-dos cabos seja a menor possível.
-Qual será a medida, em metro, de cada um dos cabos a
-serem instalados?
-22 3
-11 2
-12 2
-12 3
-22
-
 ## Questão 149
 
 - Idioma: geral
-- Palavras: 153
+- Palavras: 165
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3673,38 +2236,10 @@ D	 1 : 5 000.
 E
 E	 1 : 500 000.
 
-### Texto contado
-
-Um controlador de voo dispõe de um instrumento que
-descreve a altitude de uma aeronave em voo, em função
-da distância em solo. Essa distância em solo é a medida na
-horizontal entre o ponto de origem do voo até o ponto que
-representa a projeção ortogonal da posição da aeronave,
-em voo, no solo. Essas duas grandezas são dadas numa
-mesma unidade de medida.
-A tela do instrumento representa proporcionalmente
-as dimensões reais das distâncias associadas ao voo.
-A figura apresenta a tela do instrumento depois de
-concluída a viagem de um avião, sendo a medida do lado
-de cada quadradinho da malha igual a 1 cm.
-Altitude
-Origem
-do voo
-Destino
-Distância
-Essa tela apresenta os dados de um voo cuja maior
-altitude alcançada foi de 5 km.
-A escala em que essa tela representa as medidas reais é
-1 : 5.
-1 : 11.
-1 : 55.
-1 : 5 000.
-1 : 500 000.
-
 ## Questão 150
 
 - Idioma: geral
-- Palavras: 132
+- Palavras: 157
 - Tem imagem: não
 
 ### Texto extraído
@@ -3735,31 +2270,10 @@ D	 C = 1 − 0,9q
 E
 E	 C = q − 10
 
-### Texto contado
-
-Dirigir após ingerir bebidas alcoólicas é uma atitude
-extremamente perigosa, uma vez que, a partir da primeira
-dose, a pessoa já começa a ter perda de sensibilidade
-de movimentos e de reflexos. Apesar de a eliminação e
-absorção do álcool depender de cada pessoa e de como
-o organismo consegue metabolizar a substância, ao final
-da primeira hora após a ingestão, a concentração de álcool
-(C) no sangue corresponde a aproximadamente 90% da
-quantidade (q) de álcool ingerida, e a eliminação total
-dessa concentração pode demorar até 12 horas.
-Nessas condições, ao final da primeira hora após a ingestão
-da quantidade q de álcool, a concentração C dessa
-substância no sangue é expressa algebricamente por
-C = 0,9q
-C = 0,1q
-C = 1 − 0,1q
-C = 1 − 0,9q
-C = q − 10
-
 ## Questão 151
 
 - Idioma: geral
-- Palavras: 66
+- Palavras: 78
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3788,30 +2302,10 @@ D	 7
 E
 E	 9
 
-### Texto contado
-
-Um investidor iniciante observou o gráfico que
-apresenta a evolução dos valores de duas criptomoedas
-A e B em relação ao tempo.
-Criptomoeda B
-(milhar de real)
-Criptomoeda A
-(milhar de real)
-Durante horas consecutivas, esses valores foram
-observados em nove instantes, representados por horas
-exatas.
-Em quantos desses instantes a criptomoeda A estava
-mais valorizada do que a criptomoeda B?
-3
-4
-6
-7
-9
-
 ## Questão 152
 
 - Idioma: geral
-- Palavras: 229
+- Palavras: 253
 - Tem imagem: não
 
 ### Texto extraído
@@ -3854,43 +2348,10 @@ D	 IV.
 E
 E	 V.
 
-### Texto contado
-
-A exposição a alguns níveis sonoros pode causar
-lesões auditivas. Por isso, em uma indústria, são adotadas
-medidas preventivas de acordo com a máquina que o
-funcionário opera e o nível N de intensidade do som,
-medido em decibel (dB), a que o operário é exposto,
-sendo N = log10I 10 − log10I 10
-0 , I a intensidade do som e
-I0 = 10−12 W/m2.
-Quando o som é considerado baixo, ou seja,
-N = 48 dB ou menos, deve ser utilizada a medida
-preventiva I. No caso de o som ser moderado, quando
-N está no intervalo (48 dB, 55 dB), deve ser utilizada a
-medida preventiva II. Quando o som é moderado alto,
-que equivale a N no intervalo (55 dB, 80 dB), a medida
-preventiva a ser usada é a III. Se N estiver no intervalo
-(80 dB, 115 dB), quando o som é considerado alto, deve ser
-utilizada a medida preventiva IV. E se o som é considerado
-muito alto, com N maior que 115 dB, deve-se utilizar a
-medida preventiva V.
-Uma nova máquina, com I = 8 × 10−8 W/m2, foi adquirida
-e será classificada de acordo com o nível de ruído
-que produz.
-Considere 0,3 como aproximação para log102.
-O funcionário que operará a nova máquina deverá adotar
-a medida preventiva
-I.
-II.
-III.
-IV.
-V.
-
 ## Questão 153
 
 - Idioma: geral
-- Palavras: 145
+- Palavras: 157
 - Tem imagem: não
 
 ### Texto extraído
@@ -3923,34 +2384,10 @@ D	 IV.
 E
 E	 V.
 
-### Texto contado
-
-Um supermercado conta com cinco caixas disponíveis
-para pagamento. Foram instaladas telas que apresentam
-o tempo médio gasto por cada caixa para iniciar e finalizar o
-atendimento de cada cliente, e o número de pessoas
-presentes na fila de cada caixa em tempo real. Um cliente,
-na hora de passar sua compra, sabendo que cada um
-dos cinco caixas iniciará um novo atendimento naquele
-momento, pretende gastar o menor tempo possível de
-espera na fila. Ele observa que as telas apresentavam as
-informações a seguir.
-•	 Caixa I: atendimento 12 minutos, 5 pessoas na fila.
-•	 Caixa II: atendimento 6 minutos, 9 pessoas na fila.
-•	 Caixa III: atendimento 5 minutos, 6 pessoas na fila.
-•	 Caixa IV: atendimento 15 minutos, 2 pessoas na fila.
-•	 Caixa V: atendimento 9 minutos, 3 pessoas na fila.
-Para alcançar seu objetivo, o cliente deverá escolher o caixa
-I.
-II.
-III.
-IV.
-V.
-
 ## Questão 154
 
 - Idioma: geral
-- Palavras: 101
+- Palavras: 113
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3976,27 +2413,10 @@ D	 triângulo isósceles.
 E
 E	 arco de circunferência.
 
-### Texto contado
-
-As figuras pintadas no quadro da sala de estar de
-uma residência representam as silhuetas de parte das
-torres de um castelo e, ao fundo, a de uma lua cheia.
-A lua foi pintada na forma de um círculo, e o telhado da
-torre mais alta, na forma de triângulo equilátero, foi pintado
-sobrepondo parte da lua. O centro da lua coincide com um
-dos vértices do telhado da torre mais alta.
-Nesse quadro, a parte da lua escondida atrás da torre
-mais alta do castelo pode ser representada por um
-cone.
-setor circular.
-segmento circular.
-triângulo isósceles.
-arco de circunferência.
-
 ## Questão 155
 
 - Idioma: geral
-- Palavras: 62
+- Palavras: 74
 - Tem imagem: não
 
 ### Texto extraído
@@ -4025,30 +2445,10 @@ D	 500
 E
 E	 400
 
-### Texto contado
-
-Na planta baixa de um clube, a piscina é representada
-por um quadrado cuja área real mede 400 m². Ao redor
-dessa piscina, será construída uma calçada, de largura
-constante igual a 5 m.
-5 m
-Calçada
-5 m
-Piscina
-5 m
-5 m
-Qual é a medida da área, em metro quadrado, ocupada
-pela calçada?
-1 000
-900
-600
-500
-400
-
 ## Questão 156
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 89
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4078,31 +2478,10 @@ D	 14
 E
 E	 24
 
-### Texto contado
-
-Uma pessoa caminha por 30 minutos e utiliza um
-aplicativo instalado em seu celular para monitorar a
-variação da intensidade do sinal de internet recebido
-pelo aparelho durante o deslocamento. Chegando ao seu
-destino, o aplicativo forneceu este gráfico:
-Intensidade do sinal de internet
-Tempo (min)
-10 12 14
-18 20
-22 24
-26 28 30
-Por quantos minutos, durante essa caminhada, o celular
-dessa pessoa ficou sem receber sinal de internet?
-6
-8
-10
-14
-24
-
 ## Questão 157
 
 - Idioma: geral
-- Palavras: 145
+- Palavras: 157
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4146,45 +2525,10 @@ D	 50
 E
 E	 70
 
-### Texto contado
-
-Um professor, para promover a aprendizagem dos
-estudantes em estatística, propôs uma atividade. O objetivo
-era verificar o percentual de estudantes com massa corporal
-abaixo da média e altura acima da média de um grupo de
-estudantes. Para isso, usando uma balança e uma fita
-métrica, avaliou uma amostra de dez estudantes, anotando as
-medidas observadas. O gráfico apresenta a massa corporal,
-em quilograma, e a altura, em metro, obtidas na atividade.
-Massa corporal e altura de estudantes
-Altura (m)
-Massa corporal (kg)
-1,8
-1,75
-1,7
-1,65
-1,6
-1,55
-1,5
-1,45
-100
-120
-140
-Após a coleta dos dados, os estudantes calcularam a
-média dos valores obtidos, referentes à massa corporal e
-à altura, obtendo, respectivamente, 80 kg e 1,65 m.
-Qual é o percentual de estudantes dessa amostra com
-massa corporal abaixo da média e altura acima da média?
-10
-20
-30
-50
-70
-
 ## Questão 158
 
 - Idioma: geral
-- Palavras: 170
+- Palavras: 182
 - Tem imagem: não
 
 ### Texto extraído
@@ -4217,34 +2561,10 @@ D	 4.
 E
 E	 5.
 
-### Texto contado
-
-Um pescador tem um custo fixo diário de R$ 900,00
-com combustível, iscas, manutenção de seu barco e outras
-pequenas despesas. Ele vende cada quilograma de peixe por
-R$ 5,00. Sua meta é obter um lucro mínimo de R$ 800,00
-por dia. Sozinho, ele consegue, ao final de um dia de trabalho,
-pescar 180 kg de peixe, o que é suficiente apenas para cobrir o
-custo fixo diário. Portanto, precisa contratar ajudantes, pagando
-para cada um R$ 250,00 por dia de trabalho. Além desse valor,
-4% da receita obtida pela venda de peixe é repartida igualmente
-entre os ajudantes. Considerando o tamanho de seu barco, ele
-pode contratar até 5 ajudantes. Ele sabe que com um ajudante
-a pesca diária é de 300 kg e que, a partir do segundo
-ajudante contratado, aumenta-se em 100 kg a quantidade de
-peixe pescada por ajudante em um dia de trabalho.
-A quantidade mínima de ajudantes que esse pescador
-precisa contratar para conseguir o lucro diário pretendido é
-1.
-2.
-3.
-4.
-5.
-
 ## Questão 159
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 130
 - Tem imagem: não
 
 ### Texto extraído
@@ -4274,31 +2594,10 @@ D	 12
 E
 E	 18
 
-### Texto contado
-
-Um agricultor é informado sobre um método de proteção
-para sua lavoura que consiste em inserir larvas específicas,
-de rápida reprodução. A reprodução dessas larvas faz com
-que sua população multiplique-se por 10 a cada 3 dias e,
-para evitar eventuais desequilíbrios, é possível cessar essa
-reprodução aplicando-se um produto X. O agricultor decide
-iniciar esse método com 100 larvas e dispõe de 5 litros do
-produto X, cuja aplicação recomendada é de exatamente
-1 litro para cada população de 200 000 larvas. A quantidade
-total do produto X de que ele dispõe deverá ser aplicada
-de uma única vez.
-Quantos dias após iniciado esse método o agricultor
-deverá aplicar o produto X?
-2
-4
-6
-12
-18
-
 ## Questão 160
 
 - Idioma: geral
-- Palavras: 197
+- Palavras: 209
 - Tem imagem: não
 
 ### Texto extraído
@@ -4338,41 +2637,10 @@ D	 tipo III, pois p3 < p2 < p1.
 E
 E	 tipo III, pois tem maior quantidade de caracteres.
 
-### Texto contado
-
-Ao realizar o cadastro em um aplicativo de investimentos,
-foi solicitado ao usuário que criasse uma senha, sendo
-permitido o uso somente dos seguintes caracteres:
-•	 algarismos de 0 a 9;
-•	 26 letras minúsculas do alfabeto;
-•	 26 letras maiúsculas do alfabeto;
-•	 6 caracteres especiais !, @, #, $, , &.
-Três tipos de estruturas para senha foram apresentadas
-ao usuário:
-•	 tipo I: formada por quaisquer quatro caracteres
-distintos, escolhidos dentre os permitidos;
-•	 tipo II: formada por cinco caracteres distintos,
-iniciando por três letras, seguidas por um algarismo
-e, ao final, um caractere especial;
-•	 tipo III: formada por seis caracteres distintos, iniciando
-por duas letras, seguidas por dois algarismos e, ao
-final, dois caracteres especiais.
-Considere p1, p2 e p3 as probabilidades de se
-descobrirem ao acaso, na primeira tentativa, as senhas
-dos tipos I, II e III, respectivamente.
-Nessas condições, o tipo de senha que apresenta a
-menor probabilidade de ser descoberta ao acaso, na
-primeira tentativa, é o
-tipo I, pois p1 < p2 < p3.
-tipo I, pois tem menor quantidade de caracteres.
-tipo II, pois tem maior quantidade de letras.
-tipo III, pois p3 < p2 < p1.
-tipo III, pois tem maior quantidade de caracteres.
-
 ## Questão 161
 
 - Idioma: geral
-- Palavras: 107
+- Palavras: 119
 - Tem imagem: não
 
 ### Texto extraído
@@ -4402,31 +2670,10 @@ D	 21,5%
 E
 E	 23,3%
 
-### Texto contado
-
-Uma loja vende seus produtos de duas formas:
-à vista ou financiado em três parcelas mensais iguais.
-Para definir o valor dessas parcelas nas vendas
-financiadas, a loja aumenta em 20% o valor do produto
-à vista e divide esse novo valor por 3. A primeira parcela
-deve ser paga no ato da compra, e as duas últimas,
-em 30 e 60 dias após a compra.
-Um cliente da loja decidiu comprar, de forma financiada,
-um produto cujo valor à vista é R$ 1 500,00.
-Utilize 5,29 como aproximação para
-28.
-A taxa mensal de juros compostos praticada nesse
-financiamento é de
-6,7%
-10%
-20%
-21,5%
-23,3%
-
 ## Questão 162
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 111
 - Tem imagem: não
 
 ### Texto extraído
@@ -4453,28 +2700,10 @@ D	 y = 250x + 500
 E
 E	 y = 500x + 250
 
-### Texto contado
-
-Para concretar a laje de sua residência, uma pessoa
-contratou uma construtora. Tal empresa informa que o
-preço y do concreto bombeado é composto de duas
-partes: uma fixa, chamada de taxa de bombeamento,
-e uma variável, que depende do volume x de concreto
-utilizado. Sabe-se que a taxa de bombeamento custa
-R$ 500,00 e que o metro cúbico do concreto bombeado
-é de R$ 250,00.
-A expressão que representa o preço y em função do
-volume x, em metro cúbico, é
-y = 250x
-y = 500x
-y = 750x
-y = 250x + 500
-y = 500x + 250
-
 ## Questão 163
 
 - Idioma: geral
-- Palavras: 150
+- Palavras: 152
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4512,44 +2741,10 @@ D
 E
 E
 
-### Texto contado
-
-Uma empresa de segurança domiciliar oferece o serviço
-de patrulha noturna, no qual vigilantes em motocicletas
-fazem o monitoramento periódico de residências.
-A empresa conta com uma base, de onde acompanha
-o trajeto realizado pelos vigilantes durante as patrulhas
-e orienta o deslocamento de equipes de reforço quando
-necessário. Numa patrulha rotineira, sem ocorrências,
-um vigilante conduziu sua motocicleta a uma velocidade
-constante durante todo o itinerário estabelecido, levando
-30 minutos para conclusão. De acordo com os registros
-do GPS alocado na motocicleta, a distância da posição
-do vigilante à base, ao longo do tempo de realização do
-trajeto, é descrita pelo gráfico.
-Distância do vigilante em relação
-à base em função do tempo
-Tempo (min)
-Distância do vigilante
-à base (km)
-A vista superior da trajetória realizada pelo vigilante
-durante a patrulha registrada no gráfico é descrita pela
-representação
-A
-A
-B
-B
-C
-C
-D
-D
-E
-E
-
 ## Questão 164
 
 - Idioma: geral
-- Palavras: 119
+- Palavras: 131
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4581,33 +2776,10 @@ D	 adultos entre 20 e 29 anos.
 E
 E	 crianças de 6 meses a 2 anos.
 
-### Texto contado
-
-O gráfico expõe alguns números da gripe A-H1N1. Entre as categorias que estão em processo de imunização,
-uma já está completamente imunizada, a dos trabalhadores da saúde.
-Adultos entre 20 e 29 anos
-0,0%
-Crianças de 6 meses a 2 anos
-Gestantes
-Doentes crônicos
-Indígenas
-10,0% 20,0%
-30,0% 40,0% 50,0% 60,0% 70,0% 80,0% 90,0% 100,0%
-Trabalhadores da saúde
-Números da campanha contra a gripe A-H1N1
-Época, 26 abr. 2010 (adaptado).
-De acordo com o gráfico, entre as demais categorias, a que está mais exposta ao vírus da gripe A-H1N1 é a
-categoria de
-indígenas.
-gestantes.
-doentes crônicos.
-adultos entre 20 e 29 anos.
-crianças de 6 meses a 2 anos.
-
 ## Questão 165
 
 - Idioma: geral
-- Palavras: 63
+- Palavras: 75
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4628,22 +2800,10 @@ D	 1,80.
 E
 E	 1,95.
 
-### Texto contado
-
-A figura representa uma escada com três degraus, construída em concreto maciço, com suas medidas especificadas.
-Nessa escada, pisos e espelhos têm formato retangular, e as paredes laterais têm formato de um polígono cujos
-lados adjacentes são perpendiculares. Pisos, espelhos e paredes laterais serão revestidos em cerâmica.
-A área a ser revestida em cerâmica, em metro quadrado, mede
-1,20.
-1,35.
-1,65.
-1,80.
-1,95.
-
 ## Questão 166
 
 - Idioma: geral
-- Palavras: 150
+- Palavras: 162
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4706,64 +2866,10 @@ D	 quinta-feira.
 E
 E	 sexta-feira.
 
-### Texto contado
-
-Uma pessoa pratica quatro atividades físicas — caminhar, correr, andar de bicicleta e jogar futebol — como parte
-de seu programa de emagrecimento. Essas atividades são praticadas semanalmente de acordo com o quadro, que
-apresenta o número de horas diárias por atividade.
-Dias da semana
-Caminhar Correr
-Andar de bicicleta
-Jogar futebol
-Segunda-feira
-1,0
-0,5
-0,0
-2,0
-Terça-feira
-0,5
-1,0
-0,5
-1,0
-Quarta-feira
-0,0
-1,5
-1,0
-0,5
-Quinta-feira
-0,0
-2,0
-0,0
-0,0
-Sexta-feira
-0,0
-0,5
-0,0
-2,5
-Ela deseja comemorar seu aniversário e escolhe o dia da semana em que o gasto calórico com as atividades
-físicas praticadas for o maior. Para tanto, considera que os valores dos gastos calóricos das atividades por hora (cal/h)
-são os seguintes:
-Atividade física
-Caminhar
-Correr
-Andar de bicicleta
-Jogar futebol
-Gasto calórico (cal/h)
-248
-764
-356
-492
-O dia da semana em que será comemorado o aniversário é
-segunda-feira.
-terça-feira.
-quarta-feira.
-quinta-feira.
-sexta-feira.
-
 ## Questão 167
 
 - Idioma: geral
-- Palavras: 136
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -4787,25 +2893,10 @@ D	 (19,5 ; 20,5).
 E
 E	 (3,5 ; 4,0).
 
-### Texto contado
-
-A cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número
-de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos
-matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos.
-A diretora só pode gastar R$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel
-ofício em embalagens de 100 unidades a R$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um
-desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.
-O desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo
-(5,0 ; 5,5).
-(8,0 ; 8,5).
-(11,5 ; 12,5).
-(19,5 ; 20,5).
-(3,5 ; 4,0).
-
 ## Questão 168
 
 - Idioma: geral
-- Palavras: 149
+- Palavras: 161
 - Tem imagem: não
 
 ### Texto extraído
@@ -4844,39 +2935,10 @@ E
 100
 e
 
-### Texto contado
-
-Em um colégio público, a admissão no primeiro ano se
-dá por sorteio. Neste ano há 55 candidatos, cujas inscrições
-são numeradas de 01 a 55. O sorteio de cada número de
-inscrição será realizado em etapas, utilizando-se duas
-urnas. Da primeira urna será sorteada uma bola, dentre
-bolas numeradas de 0 a 9, que representará o algarismo
-das unidades do número de inscrição a ser sorteado e, em
-seguida, da segunda urna, será sorteada uma bola para
-representar o algarismo das dezenas desse número. Depois
-do primeiro sorteio, e antes de se sortear o algarismo das
-dezenas, as bolas que estarão presentes na segunda
-urna serão apenas aquelas cujos números formam, com o
-algarismo já sorteado, um número de 01 a 55.
-As probabilidades de os candidatos de inscrição número
-50 e 02 serem sorteados são, respectivamente,
-1
-e
-1
-e
-1
-e
-1
-e
-100
-100
-e
-
 ## Questão 169
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 107
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4917,42 +2979,10 @@ E	  128
 2187
 L
 
-### Texto contado
-
-O esquema mostra como a intensidade luminosa
-decresce com o aumento da profundidade em um rio,
-sendo L0 a intensidade na sua superfície.
-0 m
-L0
-1 m
-2 L0
-2 m
-4 L0
-3 m
-8 L0
-Intensidade luminosa
-Profundidade
-Considere que a intensidade luminosa diminui, a cada
-metro acrescido na profundidade, segundo o mesmo
-padrão do esquema.
-A intensidade luminosa correspondente à profundidade
-de 6 m é igual a
-1
-9 L 0
-16
-27 L 0
-32
-243 L 0
-64
-729 L 0
-128
-2187
-L
-
 ## Questão 170
 
 - Idioma: geral
-- Palavras: 128
+- Palavras: 140
 - Tem imagem: não
 
 ### Texto extraído
@@ -4989,38 +3019,10 @@ D	 Ruim.
 E
 E	 Péssimo.
 
-### Texto contado
-
-Analisando as vendas de uma empresa, o gerente
-concluiu que o montante diário arrecadado, em milhar de real,
-poderia ser calculado pela expressão V x
-x
-x
-105,
-em que os valores de x representam os dias do mês,
-variando de 1 a 30.
-Um dos fatores para avaliar o desempenho mensal
-da empresa é verificar qual é o menor montante diário V0
-arrecadado ao longo do mês e classificar o desempenho
-conforme as categorias apresentadas a seguir, em que as
-quantidades estão expressas em milhar de real.
-•	 Ótimo: V0 ≥ 24
-•	 Bom: 20 ≤ V0 < 24
-•	 Normal: 10 ≤ V0 < 20
-•	 Ruim: 4 ≤ V0 < 10
-•	 Péssimo: V0 < 4
-No caso analisado, qual seria a classificação do
-desempenho da empresa?
-Ótimo.
-Bom.
-Normal.
-Ruim.
-Péssimo.
-
 ## Questão 171
 
 - Idioma: geral
-- Palavras: 92
+- Palavras: 114
 - Tem imagem: não
 
 ### Texto extraído
@@ -5049,29 +3051,10 @@ D	 2 100
 E
 E	 5 200
 
-### Texto contado
-
-O calendário maia apresenta duas contagens
-simultâneas de anos, o chamado ano Tzolkim, composto
-por 260 dias e que determinava o calendário religioso,
-e o ano Haab, composto por 365 dias e que determinava o
-calendário agrícola. Um historiador encontrou evidências
-de que gerações de uma mesma família governaram certa
-comunidade maia pelo período de 20 ciclos, sendo cada
-ciclo formado por 52 anos Haab.
-De acordo com as informações fornecidas, durante
-quantos anos Tzolkim aquela comunidade maia foi
-governada por tal família?
-741
-1 040
-1 460
-2 100
-5 200
-
 ## Questão 172
 
 - Idioma: geral
-- Palavras: 241
+- Palavras: 253
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5121,51 +3104,10 @@ D	 a = 180°
 E
 E	 180° < a < 360°
 
-### Texto contado
-
-Sejam a, b e c as medidas dos lados de um triângulo
-retângulo, tendo a como medida da hipotenusa. Esses
-valores a, b e c são, respectivamente, os diâmetros dos
-círculos C1, C2 e C3, como apresentados na figura.
-Círculo C1
-Círculo C2
-Círculo C3
-c
-a
-b
-Observe que essa construção assegura, pelo teorema
-de Pitágoras, que área (C1) = área (C2) + área (C3).
-Um professor de matemática era conhecedor dessa
-construção e, confraternizando com dois amigos em uma
-pizzaria onde são vendidas pizzas somente em formato
-de círculo, lançou um desafio: mesmo sem usar um
-instrumento de medição, poderia afirmar com certeza se
-a área do círculo correspondente à pizza que ele pedisse
-era maior, igual ou menor do que a soma das áreas das
-pizzas dos dois amigos. Assim, foram pedidas três pizzas.
-O professor as dividiu ao meio e formou um triângulo com
-os diâmetros das pizzas, conforme indicado na figura.
-Meia pizza do amigo 2
-Meia pizza do
-amigo 1
-Meia pizza do professor
-de matemática
-α
-A partir da medida do ângulo a, o professor afirmou
-que a área de sua pizza é maior do que a soma das áreas
-das outras duas pizzas.
-A área da pizza do professor de matemática é maior do
-que a soma das áreas das outras duas pizzas, pois
-0° < a < 90°
-a = 90°
-90° < a < 180°
-a = 180°
-180° < a < 360°
-
 ## Questão 173
 
 - Idioma: geral
-- Palavras: 117
+- Palavras: 131
 - Tem imagem: não
 
 ### Texto extraído
@@ -5207,50 +3149,10 @@ E	  mL kg
 min
 ⋅
 
-### Texto contado
-
-Entre maratonistas, um parâmetro utilizado é o de
-economia de corrida (EC). O valor desse parâmetro é
-calculado pela razão entre o consumo de oxigênio, em
-mililitro (mL) por minuto (min), e a massa, em quilograma (kg),
-do atleta correndo a uma velocidade constante.
-Um maratonista, visando melhorar sua performance,
-auxiliado por um médico, mensura o seu consumo de
-oxigênio por minuto a velocidade constante. Com base
-nesse consumo e na massa do atleta, o médico calcula
-o EC do atleta.
-A unidade de medida da grandeza descrita pelo
-parâmetro EC é
-A
-A
-min
-mL kg
-⋅
-B
-B
-mL
-min kg
-⋅
-min
-mL kg
-⋅
-mL
-min kg
-⋅
-min mL
-kg
-⋅
-min kg
-mL
-⋅
-mL kg
-min
-⋅
-
 ## Questão 174
 
 - Idioma: geral
-- Palavras: 155
+- Palavras: 167
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5297,48 +3199,10 @@ D	 I1.
 E
 E	 I6.
 
-### Texto contado
-
-Uma pessoa comprou um ingresso para o cinema em cuja entrada está afixado um mapa com a representação
-bidimensional do posicionamento das poltronas, conforme a figura. Essa pessoa, após consultar o mapa, começou
-a subir uma das escadas e parou na posição indicada pela estrela, direcionada para o norte. Ela conferiu seu bilhete
-e observou que, para encontrar sua poltrona, deveria partir do ponto onde estava, continuar subindo a escada na
-direção norte por mais quatro fileiras e olhar à sua direita, e sua poltrona será a terceira.
-Fileiras
-Escada
-Escada
-Poltrona
-Posições
-Tela
-Entrada
-A
-B
-C
-D
-E
-F
-G
-H
-I
-J
-10 11 12
-S
-N
-L
-O
-Nesse cinema, as poltronas são identificadas por uma letra, que indica a fileira, e um número, que fornece a
-posição da poltrona na fileira, respectivamente.
-A poltrona dessa pessoa é a identificada por
-A6.
-H1.
-H6.
-I1.
-I6.
-
 ## Questão 175
 
 - Idioma: geral
-- Palavras: 90
+- Palavras: 102
 - Tem imagem: não
 
 ### Texto extraído
@@ -5360,23 +3224,10 @@ D	 10,50
 E
 E	 10,65
 
-### Texto contado
-
-O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos
-em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e
-uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço
-de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.
-Qual o preço, em real, de uma cartela de tíquetes vermelhos?
-4,68
-6,30
-9,30
-10,50
-10,65
-
 ## Questão 176
 
 - Idioma: geral
-- Palavras: 44
+- Palavras: 56
 - Tem imagem: não
 
 ### Texto extraído
@@ -5399,24 +3250,10 @@ D	 89.
 E
 E	 92.
 
-### Texto contado
-
-Os números figurados pentagonais provavelmente
-foram introduzidos pelos pitagóricos por volta do
-século V a.C. As figuras ilustram como obter os seis
-primeiros deles, sendo os demais obtidos seguindo o
-mesmo padrão geométrico.
-O oitavo número pentagonal é
-59.
-83.
-86.
-89.
-92.
-
 ## Questão 177
 
 - Idioma: geral
-- Palavras: 167
+- Palavras: 139
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5461,66 +3298,10 @@ Altura em
 relação ao solo
 Tempo
 
-### Texto contado
-
-A figura ilustra uma roda-gigante no exato instante em
-que a cadeira onde se encontra a pessoa P está no ponto
-mais alto dessa roda-gigante.
-P
-Solo
-Com o passar do tempo, à medida que a roda-gigante
-gira, com velocidade angular constante e no sentido
-horário, a altura da cadeira onde se encontra a pessoa P,
-em relação ao solo, vai se alterando.
-O gráfico que melhor representa a variação dessa altura,
-em função do tempo, contado a partir do instante em que
-a cadeira da pessoa P se encontra na posição mais alta
-da roda-gigante, é
-A
-A
-Altura em
-relação ao solo
-Tempo
-B
-B
-Altura em
-relação ao solo
-Tempo
-C
-C
-Altura em
-relação ao solo
-Tempo
-D
-D
-Altura em
-relação ao solo
-Tempo
-E
-E
-Altura em
-relação ao solo
-Tempo
-Altura em
-relação ao solo
-Tempo
-Altura em
-relação ao solo
-Tempo
-Altura em
-relação ao solo
-Tempo
-Altura em
-relação ao solo
-Tempo
-Altura em
-relação ao solo
-Tempo
-
 ## Questão 178
 
 - Idioma: geral
-- Palavras: 242
+- Palavras: 194
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5567,68 +3348,10 @@ E
 t (s)
 Volume de água (L)
 
-### Texto contado
-
-Estudantes trabalhando com robótica criaram uma
-“torneira inteligente” que automatiza sua abertura e seu
-fechamento durante a limpeza das mãos. A tecnologia
-funciona da seguinte forma: ao se colocarem as mãos
-sob a torneira, ela libera água durante 3 segundos para
-que a pessoa possa molhá-las. Em seguida, interrompe o
-fornecimento de água por 5 segundos, enquanto a pessoa
-ensaboa suas mãos, e finaliza o ciclo liberando água para
-o enxágue por mais 3 segundos. Considere o tempo ( t ),
-em segundo, contado a partir do instante em que se inicia
-o ciclo. A vazão de água nessa torneira é constante.
-Um esboço de gráfico que descreve o volume de água
-acumulado, em litro, liberado por essa torneira durante um
-ciclo de lavagem das mãos, em função do tempo ( t ), em
-segundo, é
-A
-A
-9 10 11 12
-t (s)
-Volume de água (L)
-B
-B
-9 10 11 12
-Volume de água (L)
-t (s)
-C
-C
-9 10 11 12
-Volume de água (L)
-t (s)
-D
-D
-9 10 11 12
-Volume de água (L)
-t (s)
-E
-E
-9 10 11 12
-t (s)
-Volume de água (L)
-9 10 11 12
-t (s)
-Volume de água (L)
-9 10 11 12
-Volume de água (L)
-t (s)
-9 10 11 12
-Volume de água (L)
-t (s)
-9 10 11 12
-Volume de água (L)
-t (s)
-9 10 11 12
-t (s)
-Volume de água (L)
-
 ## Questão 179
 
 - Idioma: geral
-- Palavras: 91
+- Palavras: 103
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5653,26 +3376,10 @@ urapum.
 E
 E	 okosa okosa urapum e okosa okosa okosa okosa.
 
-### Texto contado
-
-As características culturais variam de povo para povo.
-Há notícias de um povo que possuía formas de contar
-diferentes das nossas, como indicado no quadrinho a seguir.
-Segundo o padrão de contagem indicado na figura, as
-representações dos numerais cinco e sete, nessa cultura,
-devem ser, respectivamente,
-okosa urapum urapum urapum e okosa okosa urapum
-urapum urapum.
-okosa okosa urapum e okosa okosa okosa okosa urapum.
-okosa okosa urapum e okosa okosa okosa urapum.
-okosa urapum urapum e okosa urapum okosa urapum
-urapum.
-okosa okosa urapum e okosa okosa okosa okosa.
-
 ## Questão 180
 
 - Idioma: geral
-- Palavras: 140
+- Palavras: 152
 - Tem imagem: não
 
 ### Texto extraído
@@ -5706,31 +3413,4 @@ D
 D	 Janeiro.
 E
 E	 Fevereiro.
-2º DIA • CADERNO 7 • AZUL
-
-### Texto contado
-
-Um tipo de semente necessita de bastante água nos
-dois primeiros meses após o plantio. Um produtor pretende
-estabelecer o melhor momento para o plantio desse tipo de
-semente, nos meses de outubro a março. Após consultar
-a previsão do índice mensal de precipitação de chuva
-(ImPC) da região onde ocorrerá o plantio, para o período
-chuvoso de 2020 - 2021, ele obteve os seguintes dados:
-•	 outubro/2020: ImPC = 250 mm;
-•	 novembro/2020: ImPC = 150 mm;
-•	 dezembro/2020: ImPC = 200 mm;
-•	 janeiro/2021: ImPC = 450 mm;
-•	 fevereiro/2021: ImPC = 100 mm;
-•	 março/2021: ImPC = 200 mm.
-Com base nessas previsões, ele precisa escolher
-dois meses consecutivos em que a média mensal de
-precipitação seja a maior possível.
-No início de qual desses meses o produtor deverá plantar
-esse tipo de semente?
-Outubro.
-Novembro.
-Dezembro.
-Janeiro.
-Fevereiro.
 2º DIA • CADERNO 7 • AZUL

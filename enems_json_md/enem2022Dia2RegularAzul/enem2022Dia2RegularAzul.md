@@ -1,9 +1,70 @@
 # Questões extraídas
 
+# Textos introdutórios
+
+## Texto introdutório 1
+
+- Palavras: 276
+
+DIA 2º DIA
+PROVA DE CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS
+PROVA DE MATEMÁTICA E SUAS TECNOLOGIAS
+AZUL É
+ATENÇÃO: transcreva no espaço apropriado do seu CARTÃO-RESPOSTA,
+com sua caligrafia usual, considerando as letras maiúsculas e minúsculas, a seguinte frase:
+LEIA ATENTAMENTE AS INSTRUÇÕES SEGUINTES:
+1. Este CADERNO DE QUESTÕES contém 90 questões numeradas de 91 a 180 e uma
+FOLHA DE RASCUNHO, dispostas da seguinte maneira:
+a) questões de número 91 a 135, relativas à área de Ciências da Natureza e suas Tecnologias;
+b) questões de número 136 a 180, relativas à área de Matemática e suas Tecnologias;
+c) FOLHA DE RASCUNHO.
+2. Confira se a quantidade e a ordem das questões do seu CADERNO DE QUESTÕES estão de acordo
+com as instruções anteriores. Caso o caderno esteja incompleto, tenha defeito ou apresente qualquer
+divergência, comunique ao aplicador da sala para que ele tome as providências cabíveis.
+3. Para cada uma das questões objetivas, são apresentadas 5 opções. Apenas uma responde corretamente
+à questão.
+4. O tempo disponível para estas provas é de cinco horas.
+5. Reserve tempo suficiente para preencher o CARTÃO-RESPOSTA.
+6. Osrascunhos e as marcações assinaladas no CADERNO DE QUESTÕES e na FOLHADE RASCUNHO
+não serão considerados na avaliação.
+7. Quando terminar as provas, acene para chamar aplicador e entregue este CADERNO DE QUESTÕES,
+o CARTÃO-RESPOSTA e a FOLHA DE RASCUNHO.
+8. Você poderá deixar o local de prova somente após decorridas duas horas do início da aplicação e
+poderá levar seu CADERNO DE QUESTÕES ao deixar em definitivo a sala de prova nos 30 minutos
+que antecedem o término das provas.
+| mstO em me O MINISTÉRIO DA
+INEP o MSson EO
+
+## Texto introdutório 2
+
+- Palavras: 6
+
+CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS
+
+## Texto introdutório 3 - Questões 91 a 135
+
+- Palavras: 5
+
+Questões de 91 a 135
+
+## Texto introdutório 4
+
+- Palavras: 4
+
+MATEMÁTICA E SUAS TECNOLOGIAS
+
+## Texto introdutório 5 - Questões 136 a 180
+
+- Palavras: 5
+
+Questões de 136 a 180
+
+# Questões
+
 ## Questão 91
 
 - Idioma: geral
-- Palavras: 156
+- Palavras: 193
 - Tem imagem: sim
 
 ### Texto extraído
@@ -75,71 +136,10 @@ D	 desidratação.
 E
 E	 neutralização.
 
-### Texto contado
-
-A figura ilustra esquematicamente um processo de
-remediação de solos contaminados com tricloroeteno
-(TCE), um agente desengraxante. Em razão de
-vazamentos de tanques de estocagem ou de manejo
-inapropriado de resíduos industriais, ele se encontra
-presente em águas subterrâneas, nas quais forma
-uma fase líquida densa não aquosa (DNAPL) que se
-deposita no fundo do aquífero. Essa tecnologia de
-descontaminação emprega o íon persulfato (S2O8
-2−), que
-é convertido no radical •SO4
-− por minerais que contêm
-Fe(III). O esquema representa de forma simplificada o
-mecanismo de ação química sobre o TCE e a formação
-dos produtos de degradação.
-A
-A
-A
-A
-A
-SOLO
-Cl
-Cl
-Cl
-OH
-Cl
-Cl
-O
-OH
-O
-O
-H
-O
-OH
-C
-H
-O
-MONITORAMENTO
-TCE
-DNAPL
-SOLUBILIZAÇÃO
-ÁGUA SUBTERRÂNEA
-TCE
-S O
-SO
-Fe III
-⋅
-S O
-2−
-(
-)
-Esse procedimento de remediação de águas subterrâneas
-baseia-se em reações de
-oxirredução.
-substituição.
-precipitação.
-desidratação.
-neutralização.
-
 ## Questão 92
 
 - Idioma: geral
-- Palavras: 72
+- Palavras: 84
 - Tem imagem: não
 
 ### Texto extraído
@@ -162,24 +162,10 @@ D	 controle das populações dos vetores.
 E
 E	 consumo de carnes vermelhas bem cozidas.
 
-### Texto contado
-
-De acordo com a Organização Mundial da Saúde,
-a filariose e a leishmaniose são consideradas doenças
-tropicais infecciosas e constituem uma preocupação para
-a saúde pública por ser alto o índice de mortalidade a
-elas associado.
-Uma medida profilática comum a essas duas doenças é o(a)
-incineração do lixo orgânico.
-construção de rede de esgoto.
-uso de vermífugo pela população.
-controle das populações dos vetores.
-consumo de carnes vermelhas bem cozidas.
-
 ## Questão 93
 
 - Idioma: geral
-- Palavras: 116
+- Palavras: 146
 - Tem imagem: não
 
 ### Texto extraído
@@ -209,29 +195,10 @@ D	 100 000 m2
 E
 E	 20 000 m2
 
-### Texto contado
-
-Em 2017, foi inaugurado, no estado da Bahia, o
-Parque Solar Lapa, composto por duas usinas (Bom Jesus
-da Lapa e Lapa) e capaz de gerar cerca de 300 GWh de
-energia por ano. Considere que cada usina apresente
-potência igual a 75 MW, com o parque totalizando uma
-potência instalada de 150 MW. Considere ainda que a
-irradiância solar média é de 1 500 W
-m2  e que a eficiência
-dos painéis é de 20%.
-Nessas condições, a área total dos painéis solares que
-compõem o Parque Solar Lapa é mais próxima de:
-1 000 000 m2
-500 000 m2
-250 000 m2
-100 000 m2
-20 000 m2
-
 ## Questão 94
 
 - Idioma: geral
-- Palavras: 179
+- Palavras: 202
 - Tem imagem: não
 
 ### Texto extraído
@@ -293,62 +260,10 @@ D	 liberação de gás tóxico e liberação de gás oxidante.
 E
 E	 formação de sais tóxicos e liberação de gás oxidante.
 
-### Texto contado
-
-Os riscos apresentados pelos produtos dependem de
-suas propriedades e da reatividade quando em contato
-com outras substâncias. Para prevenir os riscos devido
-à natureza química dos produtos, devemos conhecer
-a lista de substâncias incompatíveis e de uso cotidiano
-em fábricas, hospitais e laboratórios, a fim de observar
-cuidados na estocagem, manipulação e descarte.
-O quadro elenca algumas dessas incompatibilidades, que
-podem levar à ocorrência de acidentes.
-Substância
-Incompatibilidade
-Riscos
-associados
-Ácidos
-minerais
-fortes
-concentrados
-Bases fortes
-Cianetos
-Hipoclorito de sódio
-Reação enérgica,
-explosão,
-produção de
-oxidante forte e
-produto tóxico
-Ácido nítrico
-concentrado
-Matéria orgânica
-Reação enérgica,
-explosão e
-produto tóxico
-Considere que houve o descarte indevido de dois
-conjuntos de substâncias:
-(1) ácido clorídrico concentrado com cianeto de potássio;
-(2) ácido nítrico concentrado com sacarose.
-O
-descarte
-dos
-conjuntos
-(1)
-e
-(2)
-resultará,
-respectivamente, em
-liberação de gás tóxico e reação oxidativa forte.
-reação oxidativa forte e liberação de gás tóxico.
-formação de sais tóxicos e reação oxidativa forte.
-liberação de gás tóxico e liberação de gás oxidante.
-formação de sais tóxicos e liberação de gás oxidante.
-
 ## Questão 95
 
 - Idioma: geral
-- Palavras: 115
+- Palavras: 112
 - Tem imagem: sim
 
 ### Texto extraído
@@ -378,41 +293,10 @@ i
 C
 i
 
-### Texto contado
-
-O físico Hans C. Oersted observou que um fio transportando corrente elétrica produz um campo magnético. A presença
-do campo magnético foi verificada ao aproximar uma bússola de um fio conduzindo corrente elétrica.
-A figura ilustra um fio percorrido por uma corrente elétrica i, constante e com sentido para cima. Os pontos A, B e C
-estão num plano transversal e equidistantes do fio. Em cada ponto foi colocada uma bússola.
-A
-B
-C
-i
-S
-N
-Bússola
-Considerando apenas o campo magnético por causa da corrente i, as respectivas configurações das bússolas nos
-pontos A, B e C serão
-A
-i
-D
-i
-B
-i
-E
-i
-C
-i
-i
-i
-i
-i
-i
-
 ## Questão 96
 
 - Idioma: geral
-- Palavras: 174
+- Palavras: 191
 - Tem imagem: sim
 
 ### Texto extraído
@@ -483,80 +367,10 @@ B
 -
 +
 
-### Texto contado
-
-O quadro mostra valores de corrente elétrica e seus
-efeitos sobre o corpo humano.
-Corrente elétrica
-Dano físico
-Até 10 mA
-Dor e contração muscular
-De 10 mA até 20 mA
-Aumento das contrações
-musculares
-De 20 mA até 100 mA
-Parada respiratória
-De 100 mA até 3 A
-Fibrilação ventricular
-Acima de 3 A
-Parada cardíaca e queimaduras
-A corrente elétrica que percorrerá o corpo de um
-indivíduo depende da tensão aplicada e da resistência
-elétrica média do corpo humano. Esse último fator está
-intimamente relacionado com a umidade da pele, que
-seca apresenta resistência elétrica da ordem de 500 kΩ,
-mas, se molhada, pode chegar a apenas 1 kΩ.
-Apesar de incomum, é possível sofrer um acidente
-utilizando baterias de 12 V. Considere que um indivíduo
-com a pele molhada sofreu uma parada respiratória
-ao tocar simultaneamente nos pontos A e B de uma
-associação de duas dessas baterias.
-Qual associação de baterias foi responsável pelo acidente?
-A
--
-+
-A
-B
--
-+
-B
--
-+
-A
-B
--
-+
-C
-A
-B
--
-+
--
-+
-D
-+
-A
-B
--
--
-+
-E
-A
-B
--
-+
--
-+
--
-+
--
-+
-+
-
 ## Questão 97
 
 - Idioma: geral
-- Palavras: 146
+- Palavras: 178
 - Tem imagem: não
 
 ### Texto extraído
@@ -592,35 +406,10 @@ D	 Destilação fracionada.
 E
 E	 Separação magnética.
 
-### Texto contado
-
-O urânio é empregado como fonte de energia em
-reatores nucleares. Para tanto, o seu mineral deve
-ser refinado, convertido a hexafluoreto de urânio e
-posteriormente enriquecido, para aumentar de 0,7% a 3%
-a abundância de um isótopo específico — o urânio-235.
-Uma das formas de enriquecimento utiliza a pequena
-diferença de massa entre os hexafluoretos de urânio-235 e
-de urânio-238 para separá-los por efusão, precedida pela
-vaporização. Esses vapores devem efundir repetidamente
-milhares de vezes através de barreiras porosas formadas por
-telas com grande número de pequenos orifícios. No entanto,
-devido à complexidade e à grande quantidade de energia
-envolvida, cientistas e engenheiros continuam a pesquisar
-procedimentos alternativos de enriquecimento.
-Considerando a diferença de massa mencionada entre os
-dois isótopos, que tipo de procedimento alternativo ao da
-efusão pode ser empregado para tal finalidade?
-Peneiração.
-Centrifugação.
-Extração por solvente.
-Destilação fracionada.
-Separação magnética.
-
 ## Questão 98
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -654,34 +443,10 @@ E
 E	 expressão do gene responsável pela produção da
 enzima normal.
 
-### Texto contado
-
-A Agência Nacional de Vigilância Sanitária (Anvisa)
-aprovou um produto de terapia gênica no país, indicado
-para o tratamento da distrofia hereditária da retina. O
-procedimento é recomendado para crianças acima de
-12 meses e adultos com perda de visão causada pela
-mutação do gene humano RPE65. O produto, elaborado
-por engenharia genética, é composto por um vírus, no qual
-foi inserida uma cópia do gene normal humano RPE65
-para corrigir o funcionamento das células da retina.
-O sucesso dessa terapia advém do fato de que o produto
-favorecerá a
-correção do código genético para a tradução da
-proteína.
-alteração do RNA ribossômico ligado à síntese da
-proteína.
-produção de mutações benéficas para a correção do
-problema.
-liberação imediata da proteína normal na região
-ocular humana.
-expressão do gene responsável pela produção da
-enzima normal.
-
 ## Questão 99
 
 - Idioma: geral
-- Palavras: 158
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -716,36 +481,10 @@ E	 diminuem a relação de competição entre os
 polinizadores e facilitam a ação de dispersores de
 sementes de espécies nativas.
 
-### Texto contado
-
-A extinção de espécies é uma ameaça real que
-afeta diversas regiões do país. A introdução de espécies
-exóticas pode ser considerada um fator maximizador
-desse processo. A jaqueira (Artocarpus heterophyllus),
-por exemplo, é uma árvore originária da Índia e de
-regiões do Sudeste Asiático que foi introduzida ainda na
-era colonial e se aclimatou muito bem em praticamente
-todo o território nacional.
-Casos como o dessa árvore podem provocar a redução
-da biodiversidade, pois elas
-ocupam áreas de vegetação nativa e substituem
-parcialmente a flora original.
-estimulam a competição por seus frutos entre animais
-típicos da região e eliminam as espécies perdedoras.
-alteram os nichos e aumentam o número de
-possibilidades de relações entre os seres vivos
-daquele ambiente.
-apresentam alta taxa de reprodução e se mantêm
-com um número de indivíduos superior à capacidade
-suporte do ambiente.
-diminuem a relação de competição entre os
-polinizadores e facilitam a ação de dispersores de
-sementes de espécies nativas.
-
 ## Questão 100
 
 - Idioma: geral
-- Palavras: 137
+- Palavras: 149
 - Tem imagem: não
 
 ### Texto extraído
@@ -776,32 +515,10 @@ D	 4,50 m.
 E
 E	 5,00 m.
 
-### Texto contado
-
-Em um dia de calor intenso, dois colegas estão
-a brincar com a água da mangueira. Um deles quer
-saber até que altura o jato de água alcança, a partir da
-saída de água, quando a mangueira está posicionada
-totalmente na direção vertical. O outro colega propõe
-então o seguinte experimento: eles posicionarem a saída
-de água da mangueira na direção horizontal, a 1 m de
-altura em relação ao chão, e então medirem a distância
-horizontal entre a mangueira e o local onde a água
-atinge o chão. A medida dessa distância foi de 3 m,
-e a partir disso eles calcularam o alcance vertical do
-jato de água. Considere a aceleração da gravidade de
-10 m s-2.
-O resultado que eles obtiveram foi de
-1,50 m.
-2,25 m.
-4,00 m.
-4,50 m.
-5,00 m.
-
 ## Questão 101
 
 - Idioma: geral
-- Palavras: 191
+- Palavras: 215
 - Tem imagem: sim
 
 ### Texto extraído
@@ -853,52 +570,10 @@ D	 SP79
 E
 E	 SP80
 
-### Texto contado
-
-O etanol é um combustível produzido a partir da
-fermentação da sacarose presente no caldo de cana-
--de-açúcar. Um dos fatores que afeta a produção desse
-álcool é o grau de deterioração da sacarose, que se inicia
-após o corte, por causa da ação de microrganismos. Foram
-analisadas cinco amostras de diferentes tipos de cana-de-
--açúcar e cada uma recebeu um código de identificação.
-No quadro são apresentados os dados de concentração de
-sacarose e de microrganismos presentes nessas amostras.
-Amostra de cana-de-açúcar
-RB72 RB84 RB92 SP79 SP80
-Concentração inicial
-de sacarose (g L-1)
-13,0
-18,0
-16,0
-14,0
-17,0
-Concentração de
-microrganismos
-(mg L-1)
-0,7
-0,8
-0,6
-0,5
-0,9
-Pretende-se escolher o tipo de cana-de-açúcar que
-conterá o maior teor de sacarose 10 horas após o corte
-e que, consequentemente, produzirá a maior quantidade
-de etanol por fermentação. Considere que existe uma
-redução de aproximadamente 50% da concentração
-de sacarose nesse tempo, para cada 1,0 mg L−1 de
-microrganismos presentes na cana-de-açúcar.
-Qual tipo de cana-de-açúcar deve ser escolhido?
-RB72
-RB84
-RB92
-SP79
-SP80
-
 ## Questão 102
 
 - Idioma: geral
-- Palavras: 132
+- Palavras: 144
 - Tem imagem: não
 
 ### Texto extraído
@@ -928,31 +603,10 @@ E
 E	 obter moléculas de cDNA viral por meio da transcrição
 reversa.
 
-### Texto contado
-
-Entre as diversas técnicas para diagnóstico da
-covid-19, destaca-se o teste genético. Considerando as
-diferentes variantes e cargas virais, um exemplo é a PCR,
-reação efetuada por uma enzima do tipo polimerase.
-Essa técnica permite identificar, com confiabilidade, o
-material genético do SARS-CoV-2, um vírus de RNA.
-Para comprovação da infecção por esse coronavírus, são
-coletadas amostras de secreções do indivíduo. Uma etapa
-que antecede a reação de PCR precisa ser realizada para
-permitir a amplificação do material genético do vírus.
-Essa etapa deve ser realizada para
-concentrar o RNA viral para otimizar a técnica.
-identificar nas amostras anticorpos anti-SARS-CoV-2.
-proliferar o vírus em culturas, aumentando a carga viral.
-purificar ácidos nucleicos virais, facilitando a ação da
-enzima.
-obter moléculas de cDNA viral por meio da transcrição
-reversa.
-
 ## Questão 103
 
 - Idioma: geral
-- Palavras: 211
+- Palavras: 183
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1041,140 +695,10 @@ f e
 
 N
 
-### Texto contado
-
-Tribologia é o estudo da interação entre duas
-superfícies em contato, como desgaste e atrito, sendo
-de extrema importância na avaliação de diferentes
-produtos e de bens de consumo em geral. Para testar
-a conformidade de uma muleta, realiza-se um ensaio
-tribológico, pressionando-a verticalmente contra o piso
-com uma força
-
-F, conforme ilustra a imagem, em que CM
-representa o centro de massa da muleta.
-CM
-
-F
-Mantendo-se a força
-
-F paralela à muleta, varia-se
-lentamente o ângulo entre a muleta e a vertical, até o máximo
-ângulo imediatamente anterior ao de escorregamento,
-denominado ângulo crítico. Esse ângulo também pode ser
-calculado a partir da identificação dos pontos de aplicação,
-da direção e do sentido das forças peso
-
-P
-, normal 
-N
-e
-de atrito estático 
-e
-.
-O esquema que representa corretamente todas as forças
-que atuam sobre a muleta quando ela atinge o ângulo
-crítico é:
-A
-CM
-
-F
-
-P
-
-f e
-
-N
-B
-CM
-
-F
-
-N
-
-P
-
-f e
-C
-CM
-
-F
-
-P
-
-f e
-
-N
-D
-CM
-
-F
-
-P
-
-f e
-
-N
-E
-CM
-
-F
-
-P
-
-f e
-
-N
-CM
-
-F
-
-P
-
-f e
-
-N
-CM
-
-F
-
-N
-
-P
-
-f e
-CM
-
-F
-
-P
-
-f e
-
-N
-CM
-
-F
-
-P
-
-f e
-
-N
-CM
-
-F
-
-P
-
-f e
-
-N
-
 ## Questão 104
 
 - Idioma: geral
-- Palavras: 110
+- Palavras: 122
 - Tem imagem: não
 
 ### Texto extraído
@@ -1204,31 +728,10 @@ D	 atividade anaeróbica da musculatura.
 E
 E	 taxa de transporte de oxigênio pelo sangue.
 
-### Texto contado
-
-Diversas substâncias são empregadas com a intenção
-de incrementar o desempenho esportivo de atletas de
-alto nível. O chamado doping sanguíneo, por exemplo,
-pela utilização da eritropoietina, é proibido pelas principais
-federações de esportes no mundo. A eritropoietina é um
-hormônio produzido pelos rins e fígado e sua principal ação
-é regular o processo de eritropoiese. Seu uso administrado
-intravenosamente em quantidades superiores àquelas
-presentes naturalmente no organismo permite que o
-indivíduo aumente a sua capacidade de realização de
-exercícios físicos.
-Esse tipo de doping está diretamente relacionado ao
-aumento da
-frequência cardíaca.
-capacidade pulmonar.
-massa muscular do indivíduo.
-atividade anaeróbica da musculatura.
-taxa de transporte de oxigênio pelo sangue.
-
 ## Questão 105
 
 - Idioma: geral
-- Palavras: 216
+- Palavras: 228
 - Tem imagem: não
 
 ### Texto extraído
@@ -1265,38 +768,10 @@ E	 A força é maior na colisão com a barreira de blocos, e
 a energia dissipada é maior na colisão com a barreira
 de blocos.
 
-### Texto contado
-
-Em um autódromo, os carros podem derrapar em
-uma curva e bater na parede de proteção. Para diminuir
-o impacto de uma batida, pode-se colocar na parede
-uma barreira de pneus, isso faz com que a colisão
-seja mais demorada e o carro retorne com velocidade
-reduzida. Outra opção é colocar uma barreira de blocos
-de um material que se deforma, tornando-a tão demorada
-quanto a colisão com os pneus, mas que não permite a
-volta do carro após a colisão.
-Comparando as duas situações, como ficam a força média
-exercida sobre o carro e a energia mecânica dissipada?
-A força é maior na colisão com a barreira de pneus, e
-a energia dissipada é maior na colisão com a barreira
-de blocos.
-A força é maior na colisão com a barreira de blocos, e
-a energia dissipada é maior na colisão com a barreira
-de pneus.
-A força é maior na colisão com a barreira de blocos, e
-a energia dissipada é a mesma nas duas situações.
-A força é maior na colisão com a barreira de pneus, e
-a energia dissipada é maior na colisão com a barreira
-de pneus.
-A força é maior na colisão com a barreira de blocos, e
-a energia dissipada é maior na colisão com a barreira
-de blocos.
-
 ## Questão 106
 
 - Idioma: geral
-- Palavras: 177
+- Palavras: 169
 - Tem imagem: não
 
 ### Texto extraído
@@ -1381,98 +856,10 @@ NH3
 +
 COOH
 
-### Texto contado
-
-A penicilamina é um medicamento de uso oral
-utilizado no tratamento de várias doenças. Esse
-composto é excretado na urina, cujo pH se situa entre
-5 e 7. A penicilamina, cuja fórmula estrutural plana está
-apresentada, possui três grupos funcionais que podem
-ser ionizados:
-•	 carboxila: —COOH, cujo pKa é igual a 1,8;
-•	 amino: —NH2, que pode ser convertido em
-amínio (—NH3
-+, cujo pKa é igual a 7,9);
-•	 tiol: —SH, cujo pKa é igual a 10,5.
-Sabe-se que pKa = −log Ka.
-S
-H
-C
-C
-CH3
-CH3
-NH2
-H
-COOH
-Penicilamina
-Qual
-estrutura
-derivada
-da
-penicilamina
-é
-predominantemente encontrada na urina?
-A
-C
-C
-CH3
-CH3
-NH2
-H
-−S
-COO
-−
-B
-C
-C
-CH3
-CH3
-NH2
-H
-−S
-COOH
-C
-S
-H
-C
-C
-CH3
-CH3 H
-NH3
-+
-COO
-−
-D
-C
-C
-CH3
-CH3 H
-−S
-COOH
-NH3
-+
-E
-S
-H
-C
-C
-CH3
-CH3 H
-NH3
-+
-COOH
-CH3
-CH3 H
-NH3
-+
-COOH
-S
-H
-
 ## Questão 107
 
 - Idioma: geral
-- Palavras: 133
+- Palavras: 158
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1558,86 +945,10 @@ D	 mudar a constante de equilíbrio da reação.
 E
 E	 formar ligações de hidrogênio com o polissacarídeo.
 
-### Texto contado
-
-A biomassa celulósica pode ser utilizada para a produção de etanol de segunda geração. Entretanto, é necessário
-que os polissacarídeos sejam convertidos em mono e dissacarídeos, processo que pode ser conduzido em meio
-ácido, conforme mostra o esquema:
-O
-OH
-O
-H
-O
-O
-OH
-O
-OH
-OH
-O
-H
-O
-OH
-O
-H
-O
-+
-O
-OH
-O
-OH
-OH
-O
-H
-H
-O
-H
-O
-OH
-OH
-O
-H
-O
-OH
-O
-H
-O
-OH
-H
-O
-H
-O
-OH
-O
-H
-O+
-O
-OH
-H
-H
-O
-OH
-O
-H
-OH
-O
-OH
-H
-+
-+
-H
-+
-+
-Nessa conversão de polissacarídeos, a função do íon H+ é
-dissolver os reagentes.
-deslocar o equilíbrio químico.
-aumentar a velocidade da reação.
-mudar a constante de equilíbrio da reação.
-formar ligações de hidrogênio com o polissacarídeo.
-
 ## Questão 108
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 133
 - Tem imagem: não
 
 ### Texto extraído
@@ -1677,41 +988,10 @@ D	 4,8 g L−1
 E
 E	 9,6 g L−1
 
-### Texto contado
-
-O ácido tartárico é o principal ácido do vinho e está diretamente relacionado com sua qualidade. Na avaliação de
-um vinho branco em produção, uma analista neutralizou uma alíquota de 25,0 mL do vinho com NaOH a 0,10 mol L−1,
-consumindo um volume igual a 8,0 mL dessa base. A reação para esse processo de titulação é representada pela
-equação química:
-O
-H
-O
-OH
-O
-OH
-OH
-O
-OH
-O
-OH
-ONa
-NaO
-  2 NaOH
-  2 H2O
-Ácido tartárico
-(massa molar: 150 g mol
-1)
-A concentração de ácido tartárico no vinho analisado é mais próxima de:
-1,8 g L−1
-2,4 g L−1
-3,6 g L−1
-4,8 g L−1
-9,6 g L−1
-
 ## Questão 109
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 111
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1747,37 +1027,10 @@ D	 0,4 µg.
 E
 E	 0,2 µg.
 
-### Texto contado
-
-O elemento iodo (I) tem função biológica e é acumulado
-na tireoide. Nos acidentes nucleares de Chernobyl e
-Fukushima, ocorreu a liberação para a atmosfera do
-radioisótopo
-131I, responsável por enfermidades nas
-pessoas que foram expostas a ele. O decaimento de uma
-massa de 12 microgramas do isótopo 131I foi monitorado
-por 14 dias, conforme o quadro.
-Tempo (dia)
-Massa residual de 131I (µg)
-12,0
-10,1
-8,5
-7,8
-7,2
-6,0
-3,6
-Após o período de 40 dias, a massa residual desse
-isótopo é mais próxima de
-2,4 µg.
-1,5 µg.
-0,8 µg.
-0,4 µg.
-0,2 µg.
-
 ## Questão 110
 
 - Idioma: geral
-- Palavras: 225
+- Palavras: 237
 - Tem imagem: não
 
 ### Texto extraído
@@ -1822,46 +1075,10 @@ E
 E	 o ambiente induz modificação na produção do número
 de gametas femininos.
 
-### Texto contado
-
-Desde a proposição da teoria de seleção natural
-por Darwin, os seres vivos nunca mais foram olhados
-da mesma forma. No que diz respeito à reprodução de
-anfíbios anuros, os cientistas já descreveram diferentes
-padrões reprodutivos, como os exemplificados a seguir:
-Espécie 1 – As fêmeas produzem cerca de
-5 000 gametas, que são fecundados na água, em
-lagoas temporárias de estação chuvosa. Todo o
-desenvolvimento embrionário, do ovo à metamorfose,
-ocorre, nesse ambiente, independente dos pais.
-Espécie 2 – As fêmeas produzem aproximadamente
-200 gametas, que são depositados em poças próximas a
-corpos-d’água. Os embriões são vigiados pelos machos
-durante boa parte do seu desenvolvimento.
-Espécie 3 – As fêmeas produzem por volta de
-20 gametas, que são fecundados sobre a superfície das
-folhas de plantas cujos galhos estão dispostos acima da
-superfície de corpos-d’água e aí se desenvolvem até
-a eclosão.
-Espécie 4 – As fêmeas produzem poucos gametas
-que, quando fecundados, são “abocanhados” pelos
-machos. Os embriões se desenvolvem no interior do
-saco vocal do macho até a metamorfose, quando saem
-através da boca do pai.
-Os padrões descritos evidenciam que
-as fêmeas influenciam o comportamento dos machos.
-o cuidado parental é necessário para o desenvolvimento.
-o grau de evolução determina o comportamento
-reprodutivo.
-o sucesso reprodutivo pode ser garantido por
-estratégias diferentes.
-o ambiente induz modificação na produção do número
-de gametas femininos.
-
 ## Questão 111
 
 - Idioma: geral
-- Palavras: 133
+- Palavras: 157
 - Tem imagem: sim
 
 ### Texto extraído
@@ -1911,50 +1128,10 @@ D	 Polo Sul.
 E
 E	 Equador.
 
-### Texto contado
-
-O eixo de rotação da Terra apresenta uma inclinação
-em relação ao plano de sua órbita em torno do Sol,
-interferindo na duração do dia e da noite ao longo do ano.
-Incidência direta
-ao meio-dia
-Polo Norte
-Trópico de
-Câncer
-Equador
-Trópico de
-Capricórnio
-Círculo Polar
-Antártico
-Polo Sul
-Círculo Polar
-Ártico
-Terra em 21 de dezembro
-DIA
-NOITE
-Uma pessoa instala em sua residência uma placa
-fotovoltaica, que transforma energia solar em elétrica.
-Ela monitora a energia total produzida por essa placa
-em 4 dias do ano, ensolarados e sem nuvens, e lança os
-resultados no gráfico.
-Energia
-Dia
-10/01
-10/04
-10/07
-10/10
-Próximo a que região se situa a residência onde as placas
-foram instaladas?
-Trópico de Capricórnio.
-Trópico de Câncer.
-Polo Norte.
-Polo Sul.
-Equador.
-
 ## Questão 112
 
 - Idioma: geral
-- Palavras: 119
+- Palavras: 131
 - Tem imagem: não
 
 ### Texto extraído
@@ -1988,35 +1165,10 @@ D	 450 N
 E
 E	 900 N
 
-### Texto contado
-
-Um pai faz um balanço utilizando dois segmentos
-paralelos e iguais da mesma corda para fixar uma tábua a
-uma barra horizontal. Por segurança, opta por um tipo de
-corda cuja tensão de ruptura seja 25% superior à tensão
-máxima calculada nas seguintes condições:
-•	 O ângulo máximo atingido pelo balanço em relação
-à vertical é igual a 90°;
-•	 Os filhos utilizarão o balanço até que tenham uma
-massa de 24 kg.
-Além disso, ele aproxima o movimento do balanço
-para o movimento circular uniforme, considera que a
-aceleração da gravidade é igual a 10
-m
-s
-e despreza
-forças dissipativas.
-Qual é a tensão de ruptura da corda escolhida?
-120 N
-300 N
-360 N
-450 N
-900 N
-
 ## Questão 113
 
 - Idioma: geral
-- Palavras: 183
+- Palavras: 220
 - Tem imagem: não
 
 ### Texto extraído
@@ -2055,38 +1207,10 @@ E
 E	 galvanização, que usa outros metais de menor
 potencial de redução.
 
-### Texto contado
-
-A nanotecnologia é responsável pelo aprimoramento
-de diversos materiais, incluindo os que são impactados
-com a presença de poluentes e da umidade na atmosfera,
-causadores de corrosão. O processo de corrosão é
-espontâneo e provoca a deterioração de metais como
-o ferro, que, em presença de oxigênio e água, sofre
-oxidação, conforme ilustra a equação química:
-4 Fe (s) + 2 H2O (l) + 3 O2 (g)  →  2 Fe2O3⋅H2O (s)
-Uma forma de garantir a durabilidade da estrutura
-metálica e a sua resistência à umidade consiste na
-deposição de filmes finos nanocerâmicos à base de
-zircônia (ZrO2) e alumina (Al2O3) sobre a superfície do
-objeto que se deseja proteger.
-Essa nanotecnologia aplicada na proteção contra a
-corrosão se baseia no(a)
-proteção catódica, que utiliza um metal fortemente
-redutor.
-uso de metais de sacrifício, que se oxidam no lugar
-do ferro.
-passivação do ferro, que fica revestido pelo seu
-próprio óxido.
-efeito de barreira, que impede o contato com o agente
-oxidante.
-galvanização, que usa outros metais de menor
-potencial de redução.
-
 ## Questão 114
 
 - Idioma: geral
-- Palavras: 115
+- Palavras: 127
 - Tem imagem: não
 
 ### Texto extraído
@@ -2116,31 +1240,10 @@ E
 E	 murchamento da célula com expulsão do pigmento
 do vacúolo.
 
-### Texto contado
-
-As células da epiderme da folha da Tradescantia
-pallida purpurea, uma herbácea popularmente conhecida
-como trapoeraba-roxa, contém um vacúolo onde se
-encontra um pigmento que dá a coloração arroxeada a
-esse tecido. Em um experimento, um corte da epiderme
-de uma folha da trapoeraba-roxa foi imerso em ambiente
-hipotônico e, logo em seguida, foi colocado em uma
-lâmina e observado em microscópio óptico.
-Durante a observação desse corte, foi possível identificar o(a)
-acúmulo do solvente com fragmentação da organela.
-rompimento da membrana celular com liberação do
-citosol.
-aumento do vacúolo com diluição do pigmento no seu
-interior.
-quebra da parede celular com extravasamento do
-pigmento.
-murchamento da célula com expulsão do pigmento
-do vacúolo.
-
 ## Questão 115
 
 - Idioma: geral
-- Palavras: 177
+- Palavras: 207
 - Tem imagem: não
 
 ### Texto extraído
@@ -2189,48 +1292,10 @@ D	 5,3.
 E
 E	 13,1.
 
-### Texto contado
-
-A variação da incidência de radiação solar sobre
-a superfície da Terra resulta em uma variação de
-temperatura ao longo de um dia denominada amplitude
-térmica. Edificações e pavimentações realizadas nas
-áreas urbanas contribuem para alterar as amplitudes
-térmicas dessas regiões, em comparação com regiões que
-mantêm suas características naturais, com presença de
-vegetação e água, já que o calor específico do concreto é
-inferior ao da água. Assim, parte da avaliação do impacto
-ambiental que a presença de concreto proporciona às
-áreas urbanas consiste em considerar a substituição
-da área concretada por um mesmo volume de água e
-comparar as variações de temperatura devido à absorção
-da radiação solar nas duas situações (concretada e
-alagada). Desprezando os efeitos da evaporação e
-considerando que toda a radiação é absorvida, essa
-avaliação pode ser realizada com os seguintes dados:
-Densidade kg
-m3
-Calor específi co
-J
-g C
-Água
-1 000
-4,2
-Concreto
-2 500
-0,8
-A razão entre as variações de temperatura nas áreas
-concretada e alagada é mais próxima de
-1,0.
-2,1.
-2,5.
-5,3.
-13,1.
-
 ## Questão 116
 
 - Idioma: geral
-- Palavras: 145
+- Palavras: 157
 - Tem imagem: não
 
 ### Texto extraído
@@ -2276,47 +1341,10 @@ D	 10 A
 E
 E	 5 A
 
-### Texto contado
-
-O manual de uma ducha elétrica informa que seus três
-níveis de aquecimento (morno, quente e superquente)
-apresentam as seguintes variações de temperatura da
-água em função de sua vazão:
-Vazão
-L
-min
-T
-C
-(
-)
-Morno
-Quente
-Superquente
-Utiliza-se um disjuntor para proteger o circuito dessa
-ducha contra sobrecargas elétricas em qualquer nível de
-aquecimento. Por padrão, o disjuntor é especificado pela
-corrente nominal igual ao múltiplo de 5 A imediatamente
-superior à corrente máxima do circuito. Considere que a
-ducha deve ser ligada em 220 V e que toda a energia é
-dissipada através da resistência do chuveiro e convertida
-em energia térmica transferida para a água, que apresenta
-calor específico de 4,2
-J
-g C
-e densidade de 1 000 g
-L .
-O disjuntor adequado para a proteção dessa ducha é
-especificado por:
-60 A
-30 A
-20 A
-10 A
-5 A
-
 ## Questão 117
 
 - Idioma: geral
-- Palavras: 58
+- Palavras: 70
 - Tem imagem: não
 
 ### Texto extraído
@@ -2342,27 +1370,10 @@ D	 CO
 E
 E	 Cl2
 
-### Texto contado
-
-Um grupo de alunos realizou um experimento para
-observar algumas propriedades dos ácidos, adicionando
-um pedaço de mármore (CaCO3) a uma solução aquosa
-de ácido clorídrico (HCl), observando a liberação de um
-gás e o aumento da temperatura.
-Gás
-Ácido
-Mármore
-O gás obtido no experimento é o:
-H2
-O2
-CO2
-CO
-Cl2
-
 ## Questão 118
 
 - Idioma: geral
-- Palavras: 122
+- Palavras: 164
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2403,39 +1414,10 @@ D	 Somatotrofina.
 E
 E	 Hormônio folículo estimulante.
 
-### Texto contado
-
-Em 2002, foi publicado um artigo científico que
-relacionava alterações na produção de hormônios sexuais
-de sapos machos expostos à atrazina, um herbicida, com
-o desenvolvimento anômalo de seus caracteres sexuais
-primários e secundários. Entre os animais sujeitos à
-contaminação, observaram-se casos de hermafroditismo
-e desmasculinização da laringe. O estudo em questão
-comparou a concentração de um hormônio específico
-no sangue de machos expostos ao agrotóxico com a de
-outros machos e fêmeas que não o foram (controles).
-Os resultados podem ser vistos na figura.
-Machos
-controle
-Concentração do hormônio (ng mL−1)
-Machos
-expostos
-à atrazina
-Fêmeas
-controle
-Com base nas informações do texto, qual é o hormônio
-cujas concentrações estão representadas na figura?
-Estrogênio.
-Feromônio.
-Testosterona.
-Somatotrofina.
-Hormônio folículo estimulante.
-
 ## Questão 119
 
 - Idioma: geral
-- Palavras: 102
+- Palavras: 114
 - Tem imagem: não
 
 ### Texto extraído
@@ -2458,24 +1440,10 @@ D	 1,00 A
 E
 E	 1,33 A
 
-### Texto contado
-
-Uma lanterna funciona com três pilhas de resistência interna igual a 0,5 Ω cada, ligadas em série. Quando
-posicionadas corretamente, devem acender a lâmpada incandescente de especificações 4,5 W e 4,5 V. Cada pilha na
-posição correta gera uma f.e.m. (força eletromotriz) de 1,5 V. Uma pessoa, ao trocar as pilhas da lanterna, comete o
-equívoco de inverter a posição de uma das pilhas. Considere que as pilhas mantêm contato independentemente da
-posição.
-Com esse equívoco, qual é a intensidade de corrente que passa pela lâmpada ao se ligar a lanterna?
-0,25 A
-0,33 A
-0,75 A
-1,00 A
-1,33 A
-
 ## Questão 120
 
 - Idioma: geral
-- Palavras: 104
+- Palavras: 116
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2509,35 +1477,10 @@ D	 diminuição da concentração do substrato.
 E
 E	 modificação da estrutura tridimensional da enzima.
 
-### Texto contado
-
-Em uma aula prática de bioquímica, para medir a atividade catalítica da enzima catalase, foram realizados seis
-ensaios independentes, nas mesmas condições, variando-se apenas a temperatura. A catalase decompõe o peróxido
-de hidrogênio (H2O2), produzindo água e oxigênio. Os resultados dos ensaios estão apresentados no quadro.
-Ensaio
-Temperatura (°C)
-Resultado
-Decomposição de H2O2
-10 12
-mol
-min
-8,0
-10,5
-9,5
-5,0
-3,6
-3,1
-Os diferentes resultados dos ensaios justificam-se pelo(a)
-variação do pH do meio.
-aumento da energia de ativação.
-consumo da enzima durante o ensaio.
-diminuição da concentração do substrato.
-modificação da estrutura tridimensional da enzima.
-
 ## Questão 121
 
 - Idioma: geral
-- Palavras: 113
+- Palavras: 125
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2571,35 +1514,10 @@ D	 4
 E
 E	 5
 
-### Texto contado
-
-Antimicrobianos são substâncias naturais ou sintéticas que têm capacidade de matar ou inibir o crescimento de
-microrganismos. A tabela apresenta uma lista de antimicrobianos hipotéticos, bem como suas ações e efeitos sobre
-o metabolismo microbiano.
-Antimicrobiano
-Ação
-Efeito
-Une-se aos ribossomos
-Impede a síntese proteica
-Une-se aos microtúbulos
-Impede a segregação das cromátides
-Une-se aos fosfolipídeos da membrana plasmática Reduz a permeabilidade da membrana plasmática
-Interfere na síntese de timina
-Inibe a síntese de DNA
-Interfere na síntese de uracila
-Impede a síntese de RNA
-Qual dos antimicrobianos deve ser utilizado para curar uma infecção causada por um fungo sem afetar as bactérias
-da microbiota normal do organismo?
-1
-2
-3
-4
-5
-
 ## Questão 122
 
 - Idioma: geral
-- Palavras: 152
+- Palavras: 194
 - Tem imagem: não
 
 ### Texto extraído
@@ -2635,34 +1553,10 @@ E
 E	 regular a oscilação da pressão arterial, característica
 dos quadros de hipertensão.
 
-### Texto contado
-
-O veneno da cascavel pode causar hemorragia com
-risco de morte a quem é picado pela serpente. No entanto,
-pesquisadores do Brasil e da Bélgica desenvolveram uma
-molécula de interesse farmacêutico, a PEG-collineína-1,
-a partir de uma proteína encontrada no veneno dessa
-cobra, capaz de modular a coagulação sanguínea.
-Embora a técnica não seja nova, foi a primeira vez que
-o método foi usado a partir de uma toxina animal na sua
-forma recombinante, ou seja, produzida em laboratório
-por um fungo geneticamente modificado.
-Esse novo medicamento apresenta potencial aplicação para
-impedir a formação de trombos, típicos em alguns
-casos de acidente vascular cerebral.
-tratar consequências da anemia profunda, em razão da
-perda de grande volume de sangue.
-evitar a manifestação de urticárias, comumente
-relacionadas a processos alérgicos.
-reduzir o inchaço dos linfonodos, parte da resposta
-imunitária de diferentes infecções.
-regular a oscilação da pressão arterial, característica
-dos quadros de hipertensão.
-
 ## Questão 123
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 178
 - Tem imagem: não
 
 ### Texto extraído
@@ -2696,33 +1590,10 @@ D	 Eles passariam a precessionar mais rapidamente.
 E
 E	 Eles manteriam suas órbitas inalteradas.
 
-### Texto contado
-
-Um Buraco Negro é um corpo celeste que possui uma
-grande quantidade de matéria concentrada em uma pequena
-região do espaço, de modo que sua força gravitacional é
-tão grande que qualquer partícula fica aprisionada em sua
-superfície, inclusive a luz. O raio dessa região caracteriza
-uma superfície-limite, chamada de horizonte de eventos,
-da qual nada consegue escapar. Considere que o Sol foi
-instantaneamente substituído por um Buraco Negro com
-a mesma massa solar, de modo que o seu horizonte de
-eventos seja de aproximadamente 3,0 km.
-Após a substituição descrita, o que aconteceria aos
-planetas do Sistema Solar?
-Eles se moveriam em órbitas espirais, aproximando-se
-sucessivamente do Buraco Negro.
-Eles oscilariam aleatoriamente em torno de suas
-órbitas elípticas originais.
-Eles se moveriam em direção ao centro do Buraco
-Negro.
-Eles passariam a precessionar mais rapidamente.
-Eles manteriam suas órbitas inalteradas.
-
 ## Questão 124
 
 - Idioma: geral
-- Palavras: 118
+- Palavras: 156
 - Tem imagem: não
 
 ### Texto extraído
@@ -2755,32 +1626,10 @@ D	 ácido.
 E
 E	 base.
 
-### Texto contado
-
-Durante o ano de 2020, impulsionado pela necessidade
-de respostas rápidas e eficientes para desinfectar ambientes
-de possíveis contaminações com o SARS-CoV-2, causador
-da covid-19, diversas alternativas foram buscadas para
-os procedimentos de descontaminação de materiais e
-ambientes. Entre elas, o uso de ozônio em meio aquoso
-como agente sanitizante para pulverização em humanos
-e equipamentos de proteção em câmaras ou túneis,
-higienização de automóveis e de ambientes fechados e
-descontaminação de trajes. No entanto, pouca atenção foi
-dada à toxicidade do ozônio, à formação de subprodutos, ao
-nível de concentração segura e às precauções necessárias.
-O grande risco envolvido no emprego indiscriminado
-dessa substância deve-se à sua ação química como
-catalisador.
-oxidante.
-redutor.
-ácido.
-base.
-
 ## Questão 125
 
 - Idioma: geral
-- Palavras: 84
+- Palavras: 96
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2814,35 +1663,10 @@ D	 penetrância incompleta.
 E
 E	 expressividade variável.
 
-### Texto contado
-
-Na figura está representado o mosaicismo em função
-da inativação aleatória de um dos cromossomos X, que
-ocorre em todas as mulheres sem alterações patológicas.
-Gameta
-masculino
-(22+X)
-Gameta
-feminino
-(22+X)
-Zigoto (44+XX)
-Blástula (44+XX)
-Células com cromossomo X paterno inativado
-Células com cromossomo X materno inativado
-Amostras de células corporais
-Entre mulheres heterozigotas para doenças determinadas
-por genes recessivos ligados ao sexo, essa inativação
-tem como consequência a ocorrência de
-pleiotropia.
-mutação gênica.
-interação gênica.
-penetrância incompleta.
-expressividade variável.
-
 ## Questão 126
 
 - Idioma: geral
-- Palavras: 72
+- Palavras: 84
 - Tem imagem: não
 
 ### Texto extraído
@@ -2868,27 +1692,10 @@ D	 Desinfecção.
 E
 E	 Fluoretação.
 
-### Texto contado
-
-A água bruta coletada de mananciais apresenta
-alto índice de sólidos suspensos, o que a deixa com
-um aspecto turvo. Para se obter uma água límpida e
-potável, ela deve passar por um processo de purificação
-numa estação de tratamento de água. Nesse processo,
-as principais etapas são, nesta ordem: coagulação,
-decantação, filtração, desinfecção e fluoretação.
-Qual é a etapa de retirada de grande parte desses
-sólidos?
-Coagulação.
-Decantação.
-Filtração.
-Desinfecção.
-Fluoretação.
-
 ## Questão 127
 
 - Idioma: geral
-- Palavras: 63
+- Palavras: 89
 - Tem imagem: não
 
 ### Texto extraído
@@ -2914,26 +1721,10 @@ D	 Oxidação do piruvato.
 E
 E	 Fosforilação oxidativa.
 
-### Texto contado
-
-Os ursos, por não apresentarem uma hibernação
-verdadeira, acordam por causa da presença de
-termogenina, uma proteína mitocondrial que impede a
-chegada dos prótons até a ATP sintetase, gerando calor.
-Esse calor é importante para aquecer o organismo,
-permitindo seu despertar.
-Em qual etapa do metabolismo energético celular a
-termogenina interfere?
-Glicólise.
-Fermentação lática.
-Ciclo do ácido cítrico.
-Oxidação do piruvato.
-Fosforilação oxidativa.
-
 ## Questão 128
 
 - Idioma: geral
-- Palavras: 172
+- Palavras: 184
 - Tem imagem: sim
 
 ### Texto extraído
@@ -2976,44 +1767,10 @@ D	 3, 1, 2.
 E
 E	 3, 2, 1.
 
-### Texto contado
-
-A fim de classificar as melhores rotas em um aplicativo
-de trânsito, um pesquisador propõe um modelo com
-base em circuitos elétricos. Nesse modelo, a corrente
-representa o número de carros que passam por um ponto
-da pista no intervalo de 1 s. A diferença de potencial (d.d.p.)
-corresponde à quantidade de energia por carro necessária
-para o deslocamento de 1 m. De forma análoga à lei de
-Ohm, cada via é classificada pela sua resistência, sendo
-a de maior resistência a mais congestionada. O aplicativo
-mostra as rotas em ordem crescente, ou seja, da rota de
-menor para a de maior resistência.
-Como teste para o sistema, são utilizadas três
-possíveis vias para uma viagem de A até B, com os
-valores de d.d.p. e corrente conforme a tabela.
-Rota
-d.d.p.
-J
-carro m
-Corrente
-carro
-s
-510
-608
-575
-Nesse teste, a ordenação das rotas indicadas pelo
-aplicativo será:
-1, 2, 3.
-1, 3, 2.
-2, 1, 3.
-3, 1, 2.
-3, 2, 1.
-
 ## Questão 129
 
 - Idioma: geral
-- Palavras: 106
+- Palavras: 129
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3067,54 +1824,10 @@ E
 E	 NO3
 −
 
-### Texto contado
-
-O esquema representa o ciclo do nitrogênio:
-Plantas
-Assimilação
-Bactérias
-nitrificantes
-Nitrificação
-Amonificação
-Bactérias fixadoras
-de N2 no solo
-Bactérias nitrificantes
-Bactérias fixa-
-doras de N2 nos
-nódulos de raízes
-de leguminosas
-Bactérias
-desnitri-
-ficantes
-(fungos e bactérias
-aeróbicas e anaeróbicas)
-Decompositores
-Amônia e Amônio
-(NH3)
-(NH4
-+)
-Nitritos (NO2
-−)
-Nitratos (NO3
-−)
-A chuva ácida interfere no ciclo do nitrogênio,
-principalmente, por proporcionar uma diminuição do pH
-do solo e da atmosfera, alterando a concentração dos
-compostos presentes nesse ciclo.
-Em um solo de menor pH, será favorecida a formação de:
-N2
-NH3
-NH4
-+
-NO2
-−
-NO3
-−
-
 ## Questão 130
 
 - Idioma: geral
-- Palavras: 99
+- Palavras: 111
 - Tem imagem: não
 
 ### Texto extraído
@@ -3140,27 +1853,10 @@ E
 E	 fazer uma pequena distinção de cores em ambientes
 iluminados.
 
-### Texto contado
-
-No processo de captação da luz pelo olho para a
-formação de imagens estão envolvidas duas estruturas
-celulares: os cones e os bastonetes. Os cones são sensíveis
-à energia dos fótons, e os bastonetes, à quantidade de
-fótons incidentes. A energia dos fótons que compõem
-os raios luminosos está associada à sua frequência, e a
-intensidade, ao número de fótons incidentes.
-Um animal que tem bastonetes mais sensíveis irá
-apresentar daltonismo.
-perceber cores fora do espectro do visível.
-enxergar bem em ambientes mal iluminados.
-necessitar de mais luminosidade para enxergar.
-fazer uma pequena distinção de cores em ambientes
-iluminados.
-
 ## Questão 131
 
 - Idioma: geral
-- Palavras: 183
+- Palavras: 210
 - Tem imagem: não
 
 ### Texto extraído
@@ -3220,60 +1916,10 @@ D	 átomos de oxigênio.
 E
 E	 carbonos assimétricos.
 
-### Texto contado
-
-De modo geral, a palavra “aromático” invoca associações agradáveis, como cheiro de café fresco ou de um pão doce de
-canela. Associações similares ocorriam no passado da história da química orgânica, quando os compostos ditos “aromáticos”
-apresentavam um odor agradável e foram isolados de óleos naturais. À medida que as estruturas desses compostos eram
-elucidadas, foi se descobrindo que vários deles continham uma unidade estrutural específica. Os compostos aromáticos
-que continham essa unidade estrutural tornaram-se parte de uma grande família, muito mais com base em suas estruturas
-eletrônicas do que nos seus cheiros, como as substâncias a seguir, encontradas em óleos vegetais.
-H
-O
-O
-CH3
-O
-OH
-CH3
-O
-C
-H3
-H
-O
-OH
-O
-CH3
-CH2
-O
-H
-O
-C
-H3
-H
-O
-Benzaldeído
-(no óleo de amêndoas)
-Salicilato de metila
-(no óleo de gaultéria)
-Anetol
-(no óleo de anis)
-Vanilina
-(no óleo de baunilha)
-Eugenol
-(no óleo de cravos)
-Cinamaldeído
-(no óleo de canela)
-A característica estrutural dessa família de compostos é a presença de
-ramificações.
-insaturações.
-anel benzênico.
-átomos de oxigênio.
-carbonos assimétricos.
-
 ## Questão 132
 
 - Idioma: geral
-- Palavras: 141
+- Palavras: 179
 - Tem imagem: não
 
 ### Texto extraído
@@ -3298,25 +1944,10 @@ D	 competição do vírus e da bactéria no hospedeiro.
 E
 E	 inserção de material genético do vírus na bactéria.
 
-### Texto contado
-
-Os resultados de um ensaio clínico randomizado na Indonésia apontaram uma redução de 77% dos casos de
-dengue nas áreas que receberam o mosquito Aedes aegypti infectado com a bactéria Wolbachia. Trata-se da mesma
-técnica utilizada no Brasil pelo Método Wolbachia, iniciativa conduzida pela Fundação Oswaldo Cruz — Fiocruz. Essa
-bactéria induz a redução da carga viral no mosquito e, consequentemente, o número de casos de dengue na área,
-sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus
-também precisa entrar nas células para se reproduzir, ambos necessitarão de recursos comuns.
-Essa tecnologia utilizada no combate à dengue consiste na
-predação do vírus pela bactéria.
-esterilização de mosquitos infectados.
-alteração no genótipo do mosquito pela bactéria.
-competição do vírus e da bactéria no hospedeiro.
-inserção de material genético do vírus na bactéria.
-
 ## Questão 133
 
 - Idioma: geral
-- Palavras: 146
+- Palavras: 170
 - Tem imagem: não
 
 ### Texto extraído
@@ -3350,34 +1981,10 @@ D	 Apresentação de antígeno específico.
 E
 E	 Desencadeamento de processo anti-inflamatório.
 
-### Texto contado
-
-O protozoário Trypanosoma cruzi, causador da
-doença de Chagas, pode ser a nova arma da medicina
-contra o câncer. Pesquisadores brasileiros conseguiram
-criar uma vacina contra a doença usando uma variação
-do protozoário incapaz de desencadear a patologia (não
-patogênico). Para isso, realizaram uma modificação
-genética criando um T. cruzi capaz de produzir também
-moléculas fabricadas pelas células tumorais. Quando
-o organismo inicia o combate ao protozoário, entra em
-contato também com a molécula tumoral, que passa a ser
-vista também pelo sistema imune como um indicador de
-células do protozoário. Depois de induzidas as defesas,
-estas passam a destruir todas as células com a molécula
-tumoral, como se lutassem apenas contra o protozoário.
-Qual o mecanismo utilizado no experimento para enganar
-as células de defesa, fazendo com que ataquem o tumor?
-Autoimunidade.
-Hipersensibilidade.
-Ativação da resposta inata.
-Apresentação de antígeno específico.
-Desencadeamento de processo anti-inflamatório.
-
 ## Questão 134
 
 - Idioma: geral
-- Palavras: 150
+- Palavras: 162
 - Tem imagem: não
 
 ### Texto extraído
@@ -3429,53 +2036,10 @@ D	 5 240.
 E
 E	 100.
 
-### Texto contado
-
-O sinal sonoro oriundo da queda de um grande bloco
-de gelo de uma geleira é detectado por dois dispositivos
-situados em um barco, sendo que o detector A está
-imerso em água e o B, na proa da embarcação. Sabe-se
-que a velocidade do som na água é de 1 540 m
-s
-e no ar
-é de 340 m
-s
-.
-A
-B
-L
-Os gráficos indicam, em tempo real, o sinal sonoro
-detectado pelos dois dispositivos, os quais foram ligados
-simultaneamente em um instante anterior à queda do
-bloco de gelo. Ao comparar pontos correspondentes
-desse sinal em cada dispositivo, é possível obter
-informações sobre a onda sonora.
-Tempo (s)
-Tempo (s)
-208
-220
-232
-244
-208
-220
-232
-244
-A
-Sinal
-Sinal
-B
-A distância L, em metro, entre o barco e a geleira é mais
-próxima de
-339 000.
-78 900.
-14 400.
-5 240.
-100.
-
 ## Questão 135
 
 - Idioma: geral
-- Palavras: 111
+- Palavras: 146
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3507,31 +2071,10 @@ D	 Reflexão.
 E
 E	 Refração.
 
-### Texto contado
-
-Em 2002, um mecânico da cidade mineira de
-Uberaba (MG) teve uma ideia para economizar o
-consumo de energia elétrica e iluminar a própria casa
-num dia de sol. Para isso, ele utilizou garrafas plásticas
-PET com água e cloro, conforme ilustram as figuras.
-Cada garrafa foi fixada ao telhado de sua casa em um
-buraco com diâmetro igual ao da garrafa, muito maior
-que o comprimento de onda da luz. Nos últimos dois
-anos, sua ideia já alcançou diversas partes do mundo
-e deve atingir a marca de 1 milhão de casas utilizando
-a “luz engarrafada”.
-Que fenômeno óptico explica o funcionamento da “luz
-engarrafada”?
-Difração.
-Absorção.
-Polarização.
-Reflexão.
-Refração.
-
 ## Questão 136
 
 - Idioma: geral
-- Palavras: 112
+- Palavras: 124
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3563,33 +2106,10 @@ D	 4
 E
 E	 5
 
-### Texto contado
-
-Uma máquina em operação tem sua temperatura
-T monitorada por meio de um registro gráfico, ao longo do
-tempo t. Essa máquina possui um pistão cuja velocidade
-V  varia com a temperatura  T da máquina, de acordo
-com a expressão V = T 2 − 4. Após a máquina funcionar
-durante o intervalo de tempo de 10 horas, o seu operador
-analisa o registro gráfico, apresentado na figura, para
-avaliar a necessidade de eventuais ajustes, sabendo que
-a máquina apresenta falhas de funcionamento quando a
-velocidade do pistão se anula.
-T (ºC)
-−2
-t (h)
-Quantas vezes a velocidade do pistão se anulou durante
-as 10 horas de funcionamento?
-1
-2
-3
-4
-5
-
 ## Questão 137
 
 - Idioma: geral
-- Palavras: 78
+- Palavras: 90
 - Tem imagem: não
 
 ### Texto extraído
@@ -3616,28 +2136,10 @@ D	 44
 E
 E	 52
 
-### Texto contado
-
-A World Series é a decisão do campeonato
-norte-americano de beisebol. Os dois times que chegam
-a essa fase jogam, entre si, até sete partidas. O primeiro
-desses times que completar quatro vitórias é declarado
-campeão.
-Considere que, em todas as partidas, a probabilidade
-de qualquer um dos dois times vencer é sempre 1
-2 .
-Qual é a probabilidade de o time campeão ser aquele que
-venceu a primeira partida da World Series?
-35
-40
-42
-44
-52
-
 ## Questão 138
 
 - Idioma: geral
-- Palavras: 82
+- Palavras: 94
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3663,27 +2165,10 @@ D	 3,0
 E
 E	 5,5
 
-### Texto contado
-
-O gráfico apresenta os totais de receitas e despesas
-de uma empresa, expressos em milhão de reais, no
-decorrer dos meses de um determinado ano. A empresa
-obtém lucro quando a diferença entre receita e despesa é
-positiva e tem prejuízo quando essa diferença é negativa.
-Jan.  Fev.  Mar.  Abr.  Maio  Jun.  Jul.   Ago.  Set.  Out.  Nov.  Dez.
-Receitas             Despesas
-Qual é a mediana, em milhão de reais, dos valores dos
-lucros apurados pela empresa nesse ano?
-1,5
-2,0
-2,9
-3,0
-5,5
-
 ## Questão 139
 
 - Idioma: geral
-- Palavras: 136
+- Palavras: 148
 - Tem imagem: não
 
 ### Texto extraído
@@ -3715,33 +2200,10 @@ D	 2,00 e 0,90.
 E
 E	 2,00 e 1,00.
 
-### Texto contado
-
-Um casal está reformando a cozinha de casa e
-decidiu comprar um refrigerador novo. Observando a
-planta da nova cozinha, desenhada na escala de 1 : 50,
-notaram que o espaço destinado ao refrigerador tinha
-3,8 cm de altura e 1,6 cm de largura. Eles sabem que
-os fabricantes de refrigeradores indicam que, para um
-bom funcionamento e fácil manejo na limpeza, esses
-eletrodomésticos devem ser colocados em espaços que
-permitam uma distância de, pelo menos, 10 cm de outros
-móveis ou paredes, tanto na parte superior quanto nas
-laterais. O casal comprou um refrigerador que caberia
-no local a ele destinado na nova cozinha, seguindo as
-instruções do fabricante.
-Esse refrigerador tem altura e largura máximas, em
-metro, respectivamente, iguais a
-1,80 e 0,60.
-1,80 e 0,70.
-1,90 e 0,80.
-2,00 e 0,90.
-2,00 e 1,00.
-
 ## Questão 140
 
 - Idioma: geral
-- Palavras: 172
+- Palavras: 184
 - Tem imagem: não
 
 ### Texto extraído
@@ -3778,38 +2240,10 @@ D	 48.
 E
 E	 64.
 
-### Texto contado
-
-Foram convidadas 32 equipes para um torneio de
-futebol, que foram divididas em 8 grupos com 4 equipes,
-sendo que, dentro de um grupo, cada equipe disputa uma
-única partida contra cada uma das demais equipes de
-seu grupo. A primeira e a segunda colocadas de cada
-grupo seguem para realizar as 8 partidas da próxima
-fase do torneio, chamada oitavas de final. Os vencedores
-das partidas das oitavas de final seguem para jogar
-as 4 partidas das quartas de final. Os vencedores das
-quartas de final disputam as 2 partidas das semifinais, e
-os vencedores avançam para a grande final, que define a
-campeã do torneio.
-Pelas regras do torneio, cada equipe deve ter um
-período de descanso de, no mínimo, 3 dias entre dois
-jogos por ela disputados, ou seja, se um time disputar
-uma partida, por exemplo, num domingo, só poderá
-disputar a partida seguinte a partir da quinta-feira da
-mesma semana.
-O número mínimo de dias necessários para a realização
-desse torneio é
-22.
-25.
-28.
-48.
-64.
-
 ## Questão 141
 
 - Idioma: geral
-- Palavras: 215
+- Palavras: 213
 - Tem imagem: sim
 
 ### Texto extraído
@@ -3865,65 +2299,10 @@ E
 E
 46 45
 
-### Texto contado
-
-Em um jogo de bingo, as cartelas contêm
-16 quadrículas dispostas em linhas e colunas. Cada
-quadrícula tem impresso um número, dentre os inteiros
-de 1 a 50, sem repetição de número. Na primeira rodada,
-um número é sorteado, aleatoriamente, dentre os 50
-possíveis. Em todas as rodadas, o número sorteado
-é descartado e não participa dos sorteios das rodadas
-seguintes. Caso o jogador tenha em sua cartela o número
-sorteado, ele o assinala na cartela. Ganha o jogador que
-primeiro
-conseguir
-preencher
-quatro
-quadrículas
-que formam uma linha, uma coluna ou uma diagonal,
-conforme os tipos de situações ilustradas na Figura 1.
-Preenchimento
-em linha
-Preenchimento
-em coluna
-Preenchimento
-em diagonal
-O jogo inicia e, nas quatro primeiras rodadas, foram
-sorteados os seguintes números: 03, 27, 07 e 48. Ao
-final da quarta rodada, somente Pedro possuía uma
-cartela que continha esses quatro números sorteados,
-sendo que todos os demais jogadores conseguiram
-assinalar, no máximo, um desses números em suas
-cartelas. Observe na Figura 2 o cartão de Pedro após as
-quatro primeiras rodadas.
-A probabilidade de Pedro ganhar o jogo em uma das duas
-próximas rodadas é
-A
-A
-+
-B
-B
-46 45
-C
-C
-46 45
-D
-D
-46 45
-E
-E
-46 45
-+
-46 45
-46 45
-46 45
-46 45
-
 ## Questão 142
 
 - Idioma: geral
-- Palavras: 103
+- Palavras: 115
 - Tem imagem: não
 
 ### Texto extraído
@@ -3952,30 +2331,10 @@ D	 18.
 E
 E	 24.
 
-### Texto contado
-
-Uma montadora de automóveis divulgou que oferta a
-seus clientes mais de 1 000 configurações diferentes de
-carro, variando o modelo, a motorização, os opcionais e
-a cor do veículo. Atualmente, ela oferece 7 modelos de
-carros com 2 tipos de motores: 1.0 e 1.6. Já em relação
-aos opcionais, existem 3 escolhas possíveis: central
-multimídia, rodas de liga leve e bancos de couro, podendo
-o cliente optar por incluir um, dois, três ou nenhum dos
-opcionais disponíveis.
-Para ser fiel à divulgação feita, a quantidade mínima
-de cores que a montadora deverá disponibilizar a seus
-clientes é
-8.
-9.
-11.
-18.
-24.
-
 ## Questão 143
 
 - Idioma: geral
-- Palavras: 80
+- Palavras: 86
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4003,32 +2362,10 @@ D
 E
 E
 
-### Texto contado
-
-Dentre as diversas planificações possíveis para o
-cubo, uma delas é a que se encontra apresentada na
-Figura 1.
-Em um cubo, foram pintados, em três de suas faces,
-quadrados de cor cinza escura, que ocupam um quarto
-dessas faces, tendo esses três quadrados um vértice em
-comum, conforme ilustrado na Figura 2.
-A planificação do cubo da Figura 2, conforme o tipo de
-planificação apresentada na Figura 1, é
-A
-A
-B
-B
-C
-C
-D
-D
-E
-E
-
 ## Questão 144
 
 - Idioma: geral
-- Palavras: 147
+- Palavras: 159
 - Tem imagem: não
 
 ### Texto extraído
@@ -4067,40 +2404,10 @@ D	 8
 E
 E	 9
 
-### Texto contado
-
-Cada número que identifica uma agência bancária tem
-quatro dígitos: N1, N2, N3, N4 mais um dígito verificador N5.
-N1 N2 N3
-N4
-N5
-Todos
-esses
-dígitos
-são
-números
-naturais
-pertencentes ao conjunto {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
-Para a determinação de N5, primeiramente multiplica-se
-ordenadamente os quatro primeiros dígitos do número
-da agência por 5, 4, 3 e 2, respectivamente, somam-se
-os resultados e obtém-se S = 5 N1 + 4 N2 + 3 N3 + 2 N4.
-Posteriormente, encontra-se o resto da divisão de
-S por 11, denotando por R esse resto. Dessa forma, N5 é
-a diferença 11 − R.
-Considere o número de uma agência bancária cujos
-quatro primeiros dígitos são 0100.
-Qual é o dígito verificador N5 dessa agência bancária?
-0
-6
-7
-8
-9
-
 ## Questão 145
 
 - Idioma: geral
-- Palavras: 146
+- Palavras: 158
 - Tem imagem: não
 
 ### Texto extraído
@@ -4132,33 +2439,10 @@ D	 300 000.
 E
 E	 400 000.
 
-### Texto contado
-
-O pacote básico de um jogo para smartphone, que
-é vendido a R$ 50,00, contém 2 000 gemas e 100 000
-moedas de ouro, que são itens utilizáveis nesse jogo.
-A empresa que comercializa esse jogo decidiu criar
-um pacote especial que será vendido a R$ 100,00 e que
-se diferenciará do pacote básico por apresentar maiores
-quantidades de gemas e moedas de ouro. Para estimular
-as vendas desse novo pacote, a empresa decidiu inserir
-nele 6 000 gemas a mais, em relação ao que o cliente
-teria caso optasse por comprar, com a mesma quantia,
-dois pacotes básicos.
-A quantidade de moedas de ouro que a empresa deverá
-inserir ao pacote especial, para que seja mantida a mesma
-proporção existente entre as quantidades de gemas e de
-moedas de ouro contidas no pacote básico, é
-50 000.
-100 000.
-200 000.
-300 000.
-400 000.
-
 ## Questão 146
 
 - Idioma: geral
-- Palavras: 126
+- Palavras: 138
 - Tem imagem: não
 
 ### Texto extraído
@@ -4189,32 +2473,10 @@ D	 15.
 E
 E	 16.
 
-### Texto contado
-
-Um parque tem dois circuitos de tamanhos
-diferentes para corridas. Um corredor treina nesse
-parque e, no primeiro dia, inicia seu treino percorrendo
-3 voltas em torno do circuito maior e 2 voltas em torno
-do menor, perfazendo um total de 1 800 m. Em seguida,
-dando continuidade a seu treino, corre mais 2 voltas
-em torno do circuito maior e 1 volta em torno do menor,
-percorrendo mais 1 100 m.
-No segundo dia, ele pretende percorrer 5 000 m nos
-circuitos do parque, fazendo um número inteiro de voltas
-em torno deles e de modo que o número de voltas seja o
-maior possível.
-A soma do número de voltas em torno dos dois circuitos,
-no segundo dia, será
-10.
-13.
-14.
-15.
-16.
-
 ## Questão 147
 
 - Idioma: geral
-- Palavras: 324
+- Palavras: 336
 - Tem imagem: não
 
 ### Texto extraído
@@ -4274,61 +2536,10 @@ D	 muito bom.
 E
 E	 excelente.
 
-### Texto contado
-
-Uma equipe de marketing digital foi contratada para
-aumentar as vendas de um produto ofertado em um site
-de comércio eletrônico. Para isso, elaborou um anúncio
-que, quando o cliente clica sobre ele, é direcionado
-para a página de vendas do produto. Esse anúncio foi
-divulgado em duas redes sociais, A e B, e foram obtidos
-os seguintes resultados:
-•	 rede social A: o anúncio foi visualizado por
-3 000 pessoas; 10% delas clicaram sobre o anúncio
-e foram redirecionadas para o site; 3% das que
-clicaram sobre o anúncio compraram o produto.
-O investimento feito para a publicação do anúncio
-nessa rede foi de R$ 100,00;
-•	 rede social B: o anúncio foi visualizado por
-1 000 pessoas; 30% delas clicaram sobre o anúncio
-e foram redirecionadas para o site; 2% das que
-clicaram sobre o anúncio compraram o produto.
-O investimento feito para a publicação do anúncio
-nessa rede foi de R$ 200,00.
-Por experiência, o pessoal da equipe de marketing
-considera que a quantidade de novas pessoas que verão
-o anúncio é diretamente proporcional ao investimento
-realizado, e que a quantidade de pessoas que comprarão
-o produto também se manterá proporcional à quantidade
-de pessoas que clicarão sobre o anúncio.
-O responsável pelo produto decidiu, então, investir
-mais R$ 300,00 em cada uma das duas redes sociais
-para a divulgação desse anúncio e obteve, de fato, o
-aumento proporcional esperado na quantidade de clientes
-que compraram esse produto. Para classificar o aumento
-obtido na quantidade (Q) de compradores desse produto,
-em consequência dessa segunda divulgação, em relação
-aos resultados observados na primeira divulgação, o
-responsável pelo produto adotou o seguinte critério:
-•	 Q ≤ 60%: não satisfatório;
-•	 60% < Q ≤ 100%: regular;
-•	 100% < Q ≤ 150%: bom;
-•	 150% < Q ≤ 190%: muito bom;
-•	 190% < Q ≤ 200%: excelente.
-O aumento na quantidade de compradores, em
-consequência dessa segunda divulgação, em relação
-ao que foi registrado com a primeira divulgação, foi
-classificado como
-não satisfatório.
-regular.
-bom.
-muito bom.
-excelente.
-
 ## Questão 148
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 129
 - Tem imagem: não
 
 ### Texto extraído
@@ -4364,28 +2575,10 @@ D	 LE = 4LF
 E
 E	 LE = 8LF
 
-### Texto contado
-
-A luminosidade L de uma estrela está relacionada com
-o raio R e com a temperatura T dessa estrela segundo a
-Considere duas estrelas E e F, sendo que a estrela E
-tem metade do raio da estrela F e o dobro da temperatura
-de F.
-Indique por LE e LF suas respectivas luminosidades.
-A relação entre as luminosidades dessas duas estrelas é
-dada por
-L
-L
-L
-L
-LE = LF
-LE = 4LF
-LE = 8LF
-
 ## Questão 149
 
 - Idioma: geral
-- Palavras: 92
+- Palavras: 104
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4420,36 +2613,10 @@ D	 2,1.
 E
 E	 2,5.
 
-### Texto contado
-
-Uma das informações que pode auxiliar no
-dimensionamento do número de pediatras que devem
-atender em uma Unidade Básica de Saúde (UBS) é
-o número que representa a mediana da quantidade
-de crianças por família existente na região sob sua
-responsabilidade. O quadro mostra a distribuição das
-frequências do número de crianças por família na região
-de responsabilidade de uma UBS.
-Número de crianças
-por família
-Frequência
-100
-400
-200
-150
-100
-O número que representa a mediana da quantidade de
-crianças por família nessa região é
-1,0.
-1,5.
-1,9.
-2,1.
-2,5.
-
 ## Questão 150
 
 - Idioma: geral
-- Palavras: 210
+- Palavras: 222
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4495,47 +2662,10 @@ D	 apenas nos ginásios I, II, III e IV.
 E
 E	 em todos os ginásios.
 
-### Texto contado
-
-Em jogos de voleibol, um saque é invalidado se a bola
-atingir o teto do ginásio onde ocorre o jogo. Um jogador de
-uma equipe tem um saque que atinge uma grande altura.
-Seu recorde foi quando a batida do saque se iniciou a
-uma altura de 1,5 m do piso da quadra, e a trajetória da
-bola foi descrita pela parábola y
-x
-x
-12 , em
-que y  representa a altura da bola em relação ao eixo
-x  (das abscissas) que está localizado a 1,5 m do piso
-da quadra, como representado na figura. Suponha que
-em todas as partidas algum saque desse jogador atinja a
-mesma altura do seu recorde.
-1,5 m
-1,5 m
-1,5 m
-y
-x
-A equipe desse jogador participou de um torneio de
-voleibol no qual jogou cinco partidas, cada uma delas
-em um ginásio diferente.  As alturas dos tetos desses
-ginásios, em relação aos pisos das quadras, são:
-•	 ginásio I: 17 m;
-•	 ginásio II: 18 m;
-•	 ginásio III: 19 m;
-•	 ginásio IV: 21 m;
-•	 ginásio V: 40 m.
-O saque desse atleta foi invalidado
-apenas no ginásio I.
-apenas nos ginásios I e II.
-apenas nos ginásios I, II e III.
-apenas nos ginásios I, II, III e IV.
-em todos os ginásios.
-
 ## Questão 151
 
 - Idioma: geral
-- Palavras: 155
+- Palavras: 167
 - Tem imagem: não
 
 ### Texto extraído
@@ -4560,26 +2690,10 @@ D	 mais de 60 e menos de 70 minutos.
 E
 E	 70 minutos ou mais.
 
-### Texto contado
-
-Um médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente.
-Ele observou que a perda média de massa dessas pessoas para cada hora de atividade física era de 1,5 kg. Sabendo
-que a massa de 1 L de água é de 1 kg, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da
-atividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física,
-para evitar desidratação.
-Seguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após
-terminar seus exercícios físicos.
-Para que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou
-30 minutos ou menos.
-mais de 35 e menos de 45 minutos.
-mais de 45 e menos de 55 minutos.
-mais de 60 e menos de 70 minutos.
-70 minutos ou mais.
-
 ## Questão 152
 
 - Idioma: geral
-- Palavras: 253
+- Palavras: 276
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4632,53 +2746,10 @@ D	 29
 E
 E	 35
 
-### Texto contado
-
-Em uma sala de cinema, para garantir que os espectadores vejam toda a imagem projetada na tela, a disposição
-das poltronas deve obedecer à norma técnica da Associação Brasileira de Normas Técnicas (ABNT), que faz as
-seguintes indicações:
-•	 Distância mínima (Dmín) entre a tela de projeção e o encosto da poltrona da primeira fileira deve ser de, pelo
-menos, 60% da largura (L) da tela.
-•	 Distância máxima (Dmáx) entre a tela de projeção e o encosto da poltrona da última fileira deve ser o dobro da
-largura (L) da tela, sendo aceitável uma distância de até 2,9 vezes a largura (L) da tela.
-Para o espaçamento entre as fileiras de poltronas, é considerada a distância de 1 metro entre os encostos de
-poltronas em duas fileiras consecutivas.
-Uma sala de cinema, cuja largura da tela mede 12 m, está montada em conformidade com as normas da ABNT e
-tem suas dimensões especificadas na figura.
-D
-2L
-=
-máx
-L
-Tela
-Área de instalação
-de novas poltronas
-D
-0,6L
-mín=
-D
-2,9L
-aceitável=
-1 m
-1 m
-Fileira
-Fileira
-Fileira
-Pretende-se ampliar essa sala, mantendo-se na mesma posição a tela e todas as poltronas já instaladas,
-ampliando-se ao máximo a sala para os fundos (área de instalação de novas poltronas), respeitando-se o limite
-aceitável da norma da ABNT. A intenção é aumentar, ao máximo, a quantidade de poltronas da sala, instalando-se
-novas unidades, iguais às já instaladas.
-Quantas fileiras de poltronas a sala comportará após essa ampliação?
-26
-27
-28
-29
-35
-
 ## Questão 153
 
 - Idioma: geral
-- Palavras: 104
+- Palavras: 116
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4708,31 +2779,10 @@ D	 6,48.
 E
 E	 7,20.
 
-### Texto contado
-
-Uma empresa produz e vende um tipo de chocolate,
-maciço, em formato de cone circular reto com as medidas
-do diâmetro da base e da altura iguais a 8 cm e 10 cm,
-respectivamente, como apresenta a figura.
-8 cm
-10 cm
-Devido a um aumento de preço dos ingredientes
-utilizados na produção desse chocolate, a empresa
-decide produzir esse mesmo tipo de chocolate com um
-volume 19% menor, no mesmo formato de cone circular
-reto com altura de 10 cm.
-Para isso, a empresa produzirá esses novos chocolates
-com medida do raio da base, em centímetro, igual a
-1,52.
-3,24.
-3,60.
-6,48.
-7,20.
-
 ## Questão 154
 
 - Idioma: geral
-- Palavras: 77
+- Palavras: 120
 - Tem imagem: não
 
 ### Texto extraído
@@ -4760,26 +2810,10 @@ D	 441 343.
 E
 E	 448 568.
 
-### Texto contado
-
-Em janeiro de 2013, foram declaradas 1 794 272
-admissões e 1 765 372 desligamentos no Brasil, ou seja,
-foram criadas 28 900 vagas de emprego, segundo dados
-do Cadastro Geral de Empregados e Desempregados
-(Caged), divulgados pelo Ministério do Trabalho e
-Emprego (MTE). Segundo o Caged, o número de vagas
-De acordo com as informações dadas, o número de
-vagas criadas em janeiro de 2012 foi
-16 514.
-86 700.
-115 600.
-441 343.
-448 568.
-
 ## Questão 155
 
 - Idioma: geral
-- Palavras: 180
+- Palavras: 192
 - Tem imagem: não
 
 ### Texto extraído
@@ -4837,59 +2871,10 @@ E	 9
 !
 !
 
-### Texto contado
-
-Um prédio, com 9 andares e 8 apartamentos de
-2 quartos por andar, está com todos os seus apartamentos
-à venda. Os apartamentos são identificados por números
-formados por dois algarismos, sendo que a dezena indica
-o andar onde se encontra o apartamento, e a unidade,
-um algarismo de 1 a 8, que diferencia os apartamentos
-de um mesmo andar. Quanto à incidência de sol
-nos quartos desses apartamentos, constatam-se as
-seguintes características, em função de seus números de
-identificação:
-•	 naqueles que finalizam em 1 ou 2, ambos os quartos
-recebem sol apenas na parte da manhã;
-•	 naqueles que finalizam em 3, 4, 5 ou 6, apenas um
-dos quartos recebe sol na parte da manhã;
-•	 naqueles que finalizam em 7 ou 8, ambos os quartos
-recebem sol apenas na parte da tarde.
-Uma
-pessoa
-pretende
-comprar
-desses
-apartamentos em um mesmo andar, mas quer que, em
-ambos, pelo menos um dos quartos receba sol na parte
-da manhã.
-De quantas maneiras diferentes essa pessoa poderá
-escolher 2 desses apartamentos para compra nas
-condições desejadas?
-9
-!
-!
-9
-!
-!
-!
-9
-!
-!
-!
-9
-!
-!
-!
-9
-!
-!
-!
-
 ## Questão 156
 
 - Idioma: geral
-- Palavras: 153
+- Palavras: 165
 - Tem imagem: sim
 
 ### Texto extraído
@@ -4924,36 +2909,10 @@ C
 D
 E
 
-### Texto contado
-
-O professor de artes orientou seus estudantes a realizarem a seguinte sequência de atividades:
-•	 Dobrar uma folha de papel em formato quadrado duas vezes, em sequência, ao longo das linhas tracejadas,
-conforme ilustrado nas figuras 1 e 2, para obter o papel dobrado, conforme Figura 3.
-O
-O
-
-
-•	 Em seguida, no papel dobrado da Figura 3, considerar o ponto R, sobre o segmento OM, sendo M o ponto
-médio do lado do quadrado original, de modo que OR = 1
-4 OM, traçar um arco de circunferência de raio
-medindo 1
-2 OM com centro no ponto R, obtendo a Figura 4. Por último, recortar o papel ao longo do arco
-de circunferência e excluir a parte que contém o setor circular, obtendo o papel dobrado, conforme Figura 5.
-R
-O
-M
-⇒
-Após desdobrado o papel que restou na Figura 5, a figura plana que os estudantes obterão será
-A
-B
-C
-D
-E
-
 ## Questão 157
 
 - Idioma: geral
-- Palavras: 142
+- Palavras: 154
 - Tem imagem: não
 
 ### Texto extraído
@@ -5000,48 +2959,10 @@ q
 se
 se
 
-### Texto contado
-
-O funcionário de uma loja tem seu salário mensal formado por uma parcela fixa de 675 reais mais uma comissão
-que depende da quantidade de peças vendidas por ele no mês. O cálculo do valor dessa comissão é feito de acordo
-com estes critérios:
-•	 até a quinquagésima peça vendida, paga-se 5 reais por peça;
-•	 a partir da quinquagésima primeira peça vendida, o valor pago é de 7 reais por peça.
-Represente por q a quantidade de peças vendidas no mês por esse funcionário, e por S(q) o seu salário mensal,
-em real, nesse mês.
-A expressão algébrica que descreve S(q) em função de q é
-S(q) = 675 + 12q
-S(q) = 325 + 12q
-S(q) = 675 + 7q
-S q
-q
-q
-q
-q
-( )
-,
-,
-625
-925
-se
-se
-S q
-q
-q
-q
-q
-( )
-,
-,
-625
-575
-se
-se
-
 ## Questão 158
 
 - Idioma: geral
-- Palavras: 177
+- Palavras: 189
 - Tem imagem: não
 
 ### Texto extraído
@@ -5072,32 +2993,10 @@ D	 IV.
 E
 E	 V.
 
-### Texto contado
-
-Ao analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de
-pessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por p(t) = −t 2 + 10t + 24, sendo t um número
-natural, variando de 1 a 12, que representa os meses do ano, e p(t) a quantidade de pessoas infectadas no mês t do
-ano. Para tentar diminuir o número de infectados no próximo ano, a Secretaria Municipal de Saúde decidiu intensificar
-a propaganda oficial sobre os cuidados com a epidemia. Foram apresentadas cinco propostas (I, II, III, IV e V),
-com diferentes períodos de intensificação das propagandas:
-•	 I: 1 ≤ t ≤ 2;
-•	 II: 3 ≤ t ≤ 4;
-•	 III: 5 ≤ t ≤ 6;
-•	 IV: 7 ≤ t ≤ 9;
-•	 V: 10 ≤ t ≤ 12.
-A sugestão dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o
-mês em que, segundo o modelo, há a maior quantidade de infectados. A sugestão foi aceita.
-A proposta escolhida foi a
-I.
-II.
-III.
-IV.
-V.
-
 ## Questão 159
 
 - Idioma: geral
-- Palavras: 148
+- Palavras: 160
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5119,23 +3018,10 @@ D	 R  R  T5  R  T1  R  R.
 E
 E	 R  T5  R  T1  R  R  T2.
 
-### Texto contado
-
-Um atleta iniciou seu treinamento visando as competições de fim de ano. Seu treinamento consiste em cinco tipos
-diferentes de treinos: treino T1, treino T2, treino T3, treino T4 e treino T5. A sequência dos treinamentos deve seguir esta ordem:
-A letra R significa repouso. Após completar a sequência de treinamentos, o atleta começa novamente a sequência a
-partir do treino T1 e segue a ordem descrita. Após 24 semanas completas de treinamento, se dará o início das competições.
-A sequência de treinamentos que o atleta realizará na 24ª semana de treinos é
-T3  R  T4  R  R  T5  R.
-R  T3  R  T4  R  R  T5.
-R  T4  R  R  T5  R  T1.
-R  R  T5  R  T1  R  R.
-R  T5  R  T1  R  R  T2.
-
 ## Questão 160
 
 - Idioma: geral
-- Palavras: 144
+- Palavras: 146
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5163,34 +3049,10 @@ C
 D
 E
 
-### Texto contado
-
-Um robô, que tem um ímã em sua base, se desloca
-sobre a superfície externa de um cubo metálico, ao longo de
-segmentos de reta cujas extremidades são pontos médios de
-arestas e centros de faces. Ele inicia seu deslocamento no
-ponto P, centro da face superior do cubo, segue para o centro
-da próxima face, converte à esquerda e segue para o centro da
-face seguinte, converte à direita e continua sua movimentação,
-sempre alternando entre conversões à esquerda e à direita
-quando alcança o centro de uma face. O robô só termina sua
-movimentação quando retorna ao ponto P. A figura apresenta
-os deslocamentos iniciais desse robô.
-P
-A projeção ortogonal do trajeto descrito por esse robô
-sobre o plano da base, após terminada sua movimentação,
-visualizada da posição em que se está enxergando esse
-cubo, é
-A
-B
-C
-D
-E
-
 ## Questão 161
 
 - Idioma: geral
-- Palavras: 98
+- Palavras: 110
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5230,41 +3092,10 @@ D	 133,60.
 E
 E	 534,40.
 
-### Texto contado
-
-Uma empresa de engenharia projetou uma casa com
-a forma de um retângulo para um de seus clientes. Esse
-cliente solicitou a inclusão de uma varanda em forma
-de L. A figura apresenta a planta baixa desenhada pela
-empresa, já com a varanda incluída, cujas medidas,
-indicadas em centímetro, representam os valores das
-dimensões da varanda na escala de 1 : 50.
-16 cm
-ESCALA 1 : 50
-SALA
-QUARTO
-SUÍTE
-BANHO
-SOCIAL
-BANHO
-SUÍTE
-COZINHA
-VARANDA
-QUARTO
-4 cm
-18,4 cm
-5 cm
-A medida real da área da varanda, em metro quadrado, é
-33,40.
-66,80.
-89,24.
-133,60.
-534,40.
-
 ## Questão 162
 
 - Idioma: geral
-- Palavras: 135
+- Palavras: 147
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5299,36 +3130,10 @@ D	 18 000
 E
 E	 29 000
 
-### Texto contado
-
-Uma loja de roupas fixou uma meta de vendas de
-77 000 reais para um determinado mês de 30 dias.
-O gráfico mostra o volume de vendas dessa loja, em real,
-nos dez primeiros dias do mês e entre o dia dez e o dia
-vinte desse mês, nos seus dois únicos setores (infantil e
-adulto). Suponha que a variação no volume de vendas,
-para o período registrado, tenha se dado de forma linear,
-como mostrado no gráfico, e que essa tendência se
-mantenha a mesma para os próximos dez dias.
-18 000
-8 000
-7 000
-15 000
-Adulto
-Dias
-Infantil
-Ao final do trigésimo dia, quanto faltará no volume de vendas,
-em real, para que a meta fixada para o mês seja alcançada?
-5 000
-7 000
-11 000
-18 000
-29 000
-
 ## Questão 163
 
 - Idioma: geral
-- Palavras: 128
+- Palavras: 140
 - Tem imagem: não
 
 ### Texto extraído
@@ -5361,34 +3166,10 @@ D	 30,0.
 E
 E	 37,5.
 
-### Texto contado
-
-Em uma universidade, atuam professores que estão
-enquadrados funcionalmente pela sua maior titulação:
-mestre ou doutor. Nela há, atualmente, 60 mestres e
-40 doutores. Os salários mensais dos professores mestres
-e dos doutores são, respectivamente, R$ 8 000,00 e
-R$ 12 000,00.
-A diretoria da instituição pretende proporcionar um
-aumento salarial diferenciado para o ano seguinte, de tal
-forma que o salário médio mensal dos professores dessa
-instituição não ultrapasse R$ 12 240,00. A universidade já
-estabeleceu que o aumento salarial será de 25% para os
-mestres e precisa ainda definir o percentual de reajuste
-para os doutores.
-Mantido o número atual de professores com suas atuais
-titulações, o aumento salarial, em porcentagem, a ser
-concedido aos doutores deverá ser de, no máximo,
-14,4.
-20,7.
-22,0.
-30,0.
-37,5.
-
 ## Questão 164
 
 - Idioma: geral
-- Palavras: 62
+- Palavras: 74
 - Tem imagem: não
 
 ### Texto extraído
@@ -5412,25 +3193,10 @@ D	 6,000.
 E
 E	 12,000.
 
-### Texto contado
-
-Um borrifador de atuação automática libera, a cada
-acionamento, uma mesma quantidade de inseticida.
-O recipiente desse produto, quando cheio, contém 360 mL
-de inseticida, que duram 60 dias se o borrifador permanecer
-ligado ininterruptamente e for acionado a cada 48 minutos.
-A quantidade de inseticida que é liberada a cada
-acionamento do borrifador, em mililitro, é
-0,125.
-0,200.
-4,800.
-6,000.
-12,000.
-
 ## Questão 165
 
 - Idioma: geral
-- Palavras: 105
+- Palavras: 117
 - Tem imagem: não
 
 ### Texto extraído
@@ -5457,28 +3223,10 @@ D	 13 322,5
 E
 E	 53 290,0
 
-### Texto contado
-
-Definem-se o dia e o ano de um planeta de um sistema solar
-como sendo, respectivamente, o tempo que o planeta leva para
-dar 1 volta completa em torno de seu próprio eixo de rotação e o
-tempo para dar 1 volta completa em torno de seu Sol.
-Suponha que exista um planeta Z, em algum sistema
-solar, onde um dia corresponda a 73 dias terrestres e
-que 2 de seus anos correspondam a 1 ano terrestre.
-Considere que 1 ano terrestre tem 365 de seus dias.
-No planeta Z, seu ano corresponderia a quantos de seus
-dias?
-2,5
-10,0
-730,0
-13 322,5
-53 290,0
-
 ## Questão 166
 
 - Idioma: geral
-- Palavras: 101
+- Palavras: 113
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5509,32 +3257,10 @@ D	 3
 E
 E	 4
 
-### Texto contado
-
-Em uma competição de velocidade, diz-se que há uma
-ultrapassagem quando um veículo que está atrás de outro
-passa à sua frente, com ambos se deslocando no mesmo
-sentido. Considere uma competição automobilística entre
-cinco carros em uma pista com 100 m de comprimento,
-onde todos largam no mesmo instante e da mesma linha.
-O gráfico mostra a variação da distância percorrida por cada
-veículo, em função do tempo, durante toda a competição.
-100
-Distância (m)
-Tempo (s)
-Qual o número de ultrapassagens, após o início da
-competição, efetuadas pelo veículo que chegou em
-último lugar?
-0
-1
-2
-3
-4
-
 ## Questão 167
 
 - Idioma: geral
-- Palavras: 131
+- Palavras: 143
 - Tem imagem: não
 
 ### Texto extraído
@@ -5564,31 +3290,10 @@ D	 R$ 42,00 maior.
 E
 E	 R$ 80,00 maior.
 
-### Texto contado
-
-Em uma loja, o preço promocional de uma geladeira
-é de R$ 1 000,00 para pagamento somente em dinheiro.
-Seu preço normal, fora da promoção, é 10% maior. Para
-pagamento feito com o cartão de crédito da loja, é dado
-um desconto de 2% sobre o preço normal.
-Uma cliente decidiu comprar essa geladeira, optando
-pelo pagamento com o cartão de crédito da loja. Ela
-calculou que o valor a ser pago seria o preço promocional
-acrescido de 8%. Ao ser informada pela loja do valor a
-pagar, segundo sua opção, percebeu uma diferença entre
-seu cálculo e o valor que lhe foi apresentado.
-O valor apresentado pela loja, comparado ao valor
-calculado pela cliente, foi
-R$ 2,00 menor.
-R$ 100,00 menor.
-R$ 200,00 menor.
-R$ 42,00 maior.
-R$ 80,00 maior.
-
 ## Questão 168
 
 - Idioma: geral
-- Palavras: 114
+- Palavras: 126
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5621,34 +3326,10 @@ D	 EFDFEEDDFFE.
 E
 E	 EFDFEEEDFFE.
 
-### Texto contado
-
-Uma pessoa precisa se deslocar de automóvel do
-ponto P para o ponto Q, indicados na figura, na qual as
-linhas verticais e horizontais simbolizam ruas.
-P
-Q
-Por causa do sentido de tráfego nessas ruas, o
-caminho poligonal destacado é a possibilidade mais
-curta de efetuar esse deslocamento. Para descrevê-lo,
-deve-se especificar qual o sentido a ser tomado em cada
-cruzamento de ruas, em relação à direção de deslocamento
-do automóvel, que se movimentará continuamente.
-Para isso, empregam-se as letras E, F e D para indicar
-“vire à esquerda”, “siga em frente” e “vire à direita”,
-respectivamente.
-A sequência de letras que descreve o caminho poligonal
-destacado é
-DDEFDDEEFFD.
-DFEFDDDEFFD.
-DFEFDDEEFFD.
-EFDFEEDDFFE.
-EFDFEEEDFFE.
-
 ## Questão 169
 
 - Idioma: geral
-- Palavras: 148
+- Palavras: 160
 - Tem imagem: não
 
 ### Texto extraído
@@ -5688,41 +3369,10 @@ D	 IV.
 E
 E	 V.
 
-### Texto contado
-
-Uma
-loja
-comercializa
-cinco
-modelos
-de
-caixas-d’água (I, II, III, IV e V), todos em formato
-de cilindro reto de base circular. Os modelos II, III, IV e V
-têm as especificações de suas dimensões dadas em
-relação às dimensões do modelo I, cuja profundidade é P
-e área da base é Ab, como segue:
-•	 modelo II: o dobro da profundidade e a metade da
-área da base do modelo I;
-•	 modelo III: o dobro da profundidade e a metade do
-raio da base do modelo I;
-•	 modelo IV: a metade da profundidade e o dobro da
-área da base do modelo I;
-•	 modelo V: a metade da profundidade e o dobro do
-raio da base do modelo I.
-Uma pessoa pretende comprar nessa loja o modelo
-de caixa-d’água que ofereça a maior capacidade
-volumétrica.
-O modelo escolhido deve ser o
-I.
-II.
-III.
-IV.
-V.
-
 ## Questão 170
 
 - Idioma: geral
-- Palavras: 120
+- Palavras: 132
 - Tem imagem: não
 
 ### Texto extraído
@@ -5773,52 +3423,10 @@ D	 2011
 E
 E	 2013
 
-### Texto contado
-
-No período de 2005 a 2013, o valor de venda dos
-imóveis em uma cidade apresentou alta, o que resultou
-no aumento dos aluguéis. Os gráficos apresentam a
-evolução desses valores, para um mesmo imóvel, no
-mercado imobiliário dessa cidade.
-630
-960
-1 350
-1 800
-3 240
-Valor mensal do aluguel (R$)
-2005
-2007
-2009
-2011
-2013
-Ano
-120
-270
-450
-540
-Valor de mercado do imóvel
-(milhar de R$)
-2005
-2007
-2009
-2011
-2013
-Ano
-A rentabilidade do aluguel de um imóvel é calculada
-pela razão entre o valor mensal de aluguel e o valor de
-mercado desse imóvel.
-Com base nos dados fornecidos, em que ano a
-rentabilidade do aluguel foi maior?
-2005
-2007
-2009
-2011
-2013
-
 ## Questão 171
 
 - Idioma: geral
-- Palavras: 121
+- Palavras: 133
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5857,40 +3465,10 @@ D	 IV.
 E
 E	 V.
 
-### Texto contado
-
-Nos cinco jogos finais da última temporada, com
-uma média de 18 pontos por jogo, um jogador foi eleito o
-melhor do campeonato de basquete. Na atual temporada,
-cinco jogadores têm a chance de igualar ou melhorar
-essa média. No quadro estão registradas as pontuações
-desses cinco jogadores nos quatro primeiros jogos das
-finais deste ano.
-Jogadores
-Jogo 1
-Jogo 2
-Jogo 3
-Jogo 4
-I
-II
-III
-IV
-V
-O quinto e último jogo será realizado para decidir a
-equipe campeã e qual o melhor jogador da temporada.
-O jogador que precisa fazer a menor quantidade de
-pontos no quinto jogo, para igualar a média de pontos do
-melhor jogador da temporada passada, é o
-I.
-II.
-III.
-IV.
-V.
-
 ## Questão 172
 
 - Idioma: geral
-- Palavras: 152
+- Palavras: 164
 - Tem imagem: não
 
 ### Texto extraído
@@ -5926,37 +3504,10 @@ D	 IV.
 E
 E	 V.
 
-### Texto contado
-
-Um casal planeja construir em sua chácara uma
-piscina com o formato de um paralelepípedo reto
-retângulo com capacidade para 90 000 L de água.
-O casal contratou uma empresa de construções que
-apresentou cinco projetos com diferentes combinações
-nas dimensões internas de profundidade, largura
-e comprimento. A piscina a ser construída terá
-revestimento interno em suas paredes e fundo com uma
-mesma cerâmica, e o casal irá escolher o projeto que
-exija a menor área de revestimento.
-As dimensões internas de profundidade, largura
-e comprimento, respectivamente, para cada um dos
-projetos, são:
-•	 projeto I: 1,8 m, 2,0 m e 25,0 m;
-•	 projeto II: 2,0 m, 5,0 m e 9,0 m;
-•	 projeto III: 1,0 m, 6,0 m e 15,0 m;
-•	 projeto IV: 1,5 m, 15,0 m e 4,0 m;
-•	 projeto V: 2,5 m, 3,0 m e 12,0 m.
-O projeto que o casal deverá escolher será o
-I.
-II.
-III.
-IV.
-V.
-
 ## Questão 173
 
 - Idioma: geral
-- Palavras: 76
+- Palavras: 88
 - Tem imagem: sim
 
 ### Texto extraído
@@ -5992,37 +3543,10 @@ D	 1 235
 E
 E	 7 200
 
-### Texto contado
-
-Uma instituição de ensino superior ofereceu vagas
-em um processo seletivo de acesso a seus cursos.
-Finalizadas as inscrições, foi divulgada a relação do
-número de candidatos por vaga em cada um dos cursos
-oferecidos. Esses dados são apresentados no quadro.
-Curso
-Número
-de vagas
-oferecidas
-Número
-de candidatos
-por vaga
-Administração
-Engenharia Elétrica
-História
-Letras
-Pedagogia
-Qual foi o número total de candidatos inscritos nesse
-processo seletivo?
-200
-400
-1 200
-1 235
-7 200
-
 ## Questão 174
 
 - Idioma: geral
-- Palavras: 117
+- Palavras: 129
 - Tem imagem: não
 
 ### Texto extraído
@@ -6052,31 +3576,10 @@ D	 4 800
 E
 E	 6 400
 
-### Texto contado
-
-Peças metálicas de aeronaves abandonadas em
-aeroportos serão recicladas. Uma dessas peças é
-maciça e tem o formato cilíndrico, com a medida do raio
-da base igual a 4 cm e a da altura igual a 50 cm. Ela será
-derretida, e o volume de metal resultante será utilizado
-para a fabricação de esferas maciças com diâmetro de
-1 cm, a serem usadas para confeccionar rolamentos.
-Para estimar a quantidade de esferas que poderão ser
-produzidas a partir de cada uma das peças cilíndricas,
-admite-se que não ocorre perda de material durante o
-processo de derretimento.
-Quantas dessas esferas poderão ser obtidas a partir de
-cada peça cilíndrica?
-800
-1 200
-2 400
-4 800
-6 400
-
 ## Questão 175
 
 - Idioma: geral
-- Palavras: 56
+- Palavras: 68
 - Tem imagem: não
 
 ### Texto extraído
@@ -6099,24 +3602,10 @@ D	 135 000 000,00.
 E
 E	 1 350 000 000,00.
 
-### Texto contado
-
-Ao escutar a notícia de que um filme recém-lançado
-arrecadou, no primeiro mês de lançamento, R$ 1,35 bilhão
-em bilheteria, um estudante escreveu corretamente o
-número que representa essa quantia, com todos os seus
-algarismos.
-O número escrito pelo estudante foi
-135 000,00.
-1 350 000,00.
-13 500 000,00.
-135 000 000,00.
-1 350 000 000,00.
-
 ## Questão 176
 
 - Idioma: geral
-- Palavras: 181
+- Palavras: 193
 - Tem imagem: sim
 
 ### Texto extraído
@@ -6163,48 +3652,10 @@ D	 IV
 E
 E	 V
 
-### Texto contado
-
-O governo de um estado pretende realizar uma
-obra de infraestrutura para auxiliar na integração e
-no processo de escoamento da produção agrícola
-de duas cidades. O projeto consiste na interligação
-direta das cidades A e B com a Rodovia 003, pela
-construção das Rodovias 001 e 002. As duas rodovias
-serão construídas em linha reta e deverão se conectar
-à Rodovia 003 em um mesmo ponto, conforme
-esboço apresentado na figura, na qual estão também
-indicadas as posições das cidades A e B, considerando
-o eixo x posicionado sobre a Rodovia 003, e cinco
-localizações sugeridas para o ponto de conexão entre
-as três rodovias.
-10 15 20 25 30 35 40 45 50 55
-x (km)
-y (km)
-Cidade A
-Cidade B
-Rodovia 003
-Rodovia 001
-Rodovia 002
-I
-II
-III IV
-V
-Pretende-se que a distância percorrida entre as duas
-cidades, pelas Rodovias 001 e 002, passando pelo ponto
-de conexão, seja a menor possível.
-Dadas as exigências do projeto, qual das localizações
-sugeridas deve ser a escolhida para o ponto de conexão?
-I
-II
-III
-IV
-V
-
 ## Questão 177
 
 - Idioma: geral
-- Palavras: 95
+- Palavras: 107
 - Tem imagem: sim
 
 ### Texto extraído
@@ -6255,52 +3706,10 @@ D	 IV.
 E
 E	 V.
 
-### Texto contado
-
-Uma pessoa precisa contratar um operário para
-fazer um serviço em sua casa. Para isso, ela postou um
-anúncio em uma rede social.
-Cinco pessoas responderam informando preços por
-hora trabalhada, gasto diário com transporte e tempo
-necessário para conclusão do serviço, conforme valores
-apresentados no quadro.
-Operário
-Preço por
-hora
-(real)
-Preço do
-transporte
-(real)
-Tempo até
-conclusão
-(hora)
-I
-120
-0,00
-II
-180
-0,00
-III
-170
-20,00
-IV
-110
-10,00
-V
-110
-0,00
-Se a pessoa pretende gastar o mínimo possível com essa
-contratação, irá contratar o operário
-I.
-II.
-III.
-IV.
-V.
-
 ## Questão 178
 
 - Idioma: geral
-- Palavras: 88
+- Palavras: 100
 - Tem imagem: não
 
 ### Texto extraído
@@ -6328,29 +3737,10 @@ D	 12
 E
 E	 24
 
-### Texto contado
-
-Uma cozinheira produz docinhos especiais por
-encomenda. Usando uma receita-base de massa, ela
-prepara uma porção, com a qual produz 50 docinhos
-maciços de formato esférico, com 2 cm de diâmetro.
-Um cliente encomenda 150 desses docinhos, mas pede
-que cada um tenha formato esférico com 4 cm de diâmetro.
-A cozinheira pretende preparar o número exato de
-porções da receita-base de massa necessário para
-produzir os docinhos dessa encomenda.
-Quantas porções da receita-base de massa ela deve
-preparar para atender esse cliente?
-2
-3
-6
-12
-24
-
 ## Questão 179
 
 - Idioma: geral
-- Palavras: 132
+- Palavras: 159
 - Tem imagem: sim
 
 ### Texto extraído
@@ -6394,69 +3784,15 @@ D	 75,23.
 E
 E	 78,49.
 
-### Texto contado
-
-A esperança de vida ao nascer é o número médio
-de anos que um indivíduo tende a viver a partir de seu
-nascimento, considerando dados da população. No Brasil,
-esse número vem aumentando consideravelmente, como
-mostra o gráfico.
-Esperança de vida ao nascer
-2008
-72,78
-73,09
-73,4
-73,67
-73,95
-74,23
-2009
-2010
-2011
-Pode-se observar que a esperança de vida ao nascer
-em 2012 foi exatamente a média das registradas nos
-anos de 2011 e 2013. Suponha que esse fato também
-ocorreu com a esperança de vida ao nascer em 2013, em
-relação às esperanças de vida de 2012 e de 2014.
-Caso a suposição feita tenha sido confirmada, a
-esperança de vida ao nascer no Brasil no ano de 2014
-terá sido, em ano, igual a
-74,23.
-74,51.
-75,07.
-75,23.
-78,49.
-
 ## Questão 180
 
 - Idioma: geral
-- Palavras: 78
+- Palavras: 80
 - Tem imagem: sim
 
 ### Texto extraído
 
 QUESTÃO 180
-Na figura estão destacadas duas trajetórias sobre a
-superfície do globo terrestre, descritas ao se percorrer
-parte dos meridianos 1, 2 e da Linha do Equador, sendo
-que os meridianos 1 e 2 estão contidos em planos
-perpendiculares entre si. O plano α é paralelo ao que
-contém a Linha do Equador.
-Meridiano 2
-Meridiano 1
-Linha do Equador
-α
-N
-S
-A vista superior da projeção ortogonal sobre o plano α
-dessas duas trajetórias é
-A
-B
-C
-D
-E
-
-### Texto contado
-
 Na figura estão destacadas duas trajetórias sobre a
 superfície do globo terrestre, descritas ao se percorrer
 parte dos meridianos 1, 2 e da Linha do Equador, sendo
