@@ -1,0 +1,132 @@
+{
+  "descricao": "Análise de formalidade das questões do ENEM usando XLM-RoBERTa (s-nlp/xlmr_formality_classifier)",
+  "modelo": "s-nlp/xlmr_formality_classifier",
+  "explicacao_scores": {
+    "formal_score": "Probabilidade (0.0 a 1.0) de o texto ser classificado como formal",
+    "informal_score": "Probabilidade (0.0 a 1.0) de o texto ser classificado como informal",
+    "classificacao": "Classe com maior probabilidade (formal ou informal)"
+  },
+  "total_provas_analisadas": 12,
+  "resumo_por_prova": [
+    {
+      "prova": "enem2020Dia1RegularAzul.json",
+      "total_questoes": 95,
+      "questoes_formais": 93,
+      "questoes_informais": 2,
+      "percentual_formal": 97.89,
+      "percentual_informal": 2.11,
+      "media_score_formal": 0.9779,
+      "media_score_informal": 0.0221
+    },
+    {
+      "prova": "enem2020Dia2RegularAzul.json",
+      "total_questoes": 90,
+      "questoes_formais": 90,
+      "questoes_informais": 0,
+      "percentual_formal": 100.0,
+      "percentual_informal": 0.0,
+      "media_score_formal": 0.9985,
+      "media_score_informal": 0.0015
+    },
+    {
+      "prova": "enem2021Dia1RegularAzul.json",
+      "total_questoes": 95,
+      "questoes_formais": 0,
+      "questoes_informais": 95,
+      "percentual_formal": 0.0,
+      "percentual_informal": 100.0,
+      "media_score_formal": 0.0211,
+      "media_score_informal": 0.9789
+    },
+    {
+      "prova": "enem2021Dia2RegularAzul.json",
+      "total_questoes": 90,
+      "questoes_formais": 65,
+      "questoes_informais": 25,
+      "percentual_formal": 72.22,
+      "percentual_informal": 27.78,
+      "media_score_formal": 0.7043,
+      "media_score_informal": 0.2957
+    },
+    {
+      "prova": "enem2022Dia1RegularAzul.json",
+      "total_questoes": 95,
+      "questoes_formais": 88,
+      "questoes_informais": 7,
+      "percentual_formal": 92.63,
+      "percentual_informal": 7.37,
+      "media_score_formal": 0.9296,
+      "media_score_informal": 0.0704
+    },
+    {
+      "prova": "enem2022Dia2RegularAzul.json",
+      "total_questoes": 90,
+      "questoes_formais": 90,
+      "questoes_informais": 0,
+      "percentual_formal": 100.0,
+      "percentual_informal": 0.0,
+      "media_score_formal": 0.9984,
+      "media_score_informal": 0.0016
+    },
+    {
+      "prova": "enem2023Dia1RegularAzul.json",
+      "total_questoes": 95,
+      "questoes_formais": 94,
+      "questoes_informais": 1,
+      "percentual_formal": 98.95,
+      "percentual_informal": 1.05,
+      "media_score_formal": 0.9866,
+      "media_score_informal": 0.0134
+    },
+    {
+      "prova": "enem2023Dia2RegularAzul.json",
+      "total_questoes": 90,
+      "questoes_formais": 90,
+      "questoes_informais": 0,
+      "percentual_formal": 100.0,
+      "percentual_informal": 0.0,
+      "media_score_formal": 0.9985,
+      "media_score_informal": 0.0015
+    },
+    {
+      "prova": "enem2024Dia1RegularAzul.json",
+      "total_questoes": 95,
+      "questoes_formais": 93,
+      "questoes_informais": 2,
+      "percentual_formal": 97.89,
+      "percentual_informal": 2.11,
+      "media_score_formal": 0.9809,
+      "media_score_informal": 0.0191
+    },
+    {
+      "prova": "enem2024Dia2RegularAzul.json",
+      "total_questoes": 90,
+      "questoes_formais": 89,
+      "questoes_informais": 1,
+      "percentual_formal": 98.89,
+      "percentual_informal": 1.11,
+      "media_score_formal": 0.9876,
+      "media_score_informal": 0.0124
+    },
+    {
+      "prova": "enem2025Dia1RegularAzul.json",
+      "total_questoes": 95,
+      "questoes_formais": 94,
+      "questoes_informais": 1,
+      "percentual_formal": 98.95,
+      "percentual_informal": 1.05,
+      "media_score_formal": 0.9865,
+      "media_score_informal": 0.0135
+    },
+    {
+      "prova": "enem2025Dia2RegularAzul.json",
+      "total_questoes": 90,
+      "questoes_formais": 90,
+      "questoes_informais": 0,
+      "percentual_formal": 100.0,
+      "percentual_informal": 0.0,
+      "media_score_formal": 0.9985,
+      "media_score_informal": 0.0015
+    }
+  ]
+}

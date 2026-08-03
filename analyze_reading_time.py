@@ -146,8 +146,11 @@ def analisar_prova(caminho):
     leitura_total_min = sum(q["tempo_leitura_min"] for q in questoes)
     resolucao_total_min = disponivel_min - leitura_total_min
 
+    # Tempo médio de leitura por questão 
     leitura_media = leitura_total_min / total_questoes if total_questoes else 0
+    # Tempo médio de resolução por questão
     resolucao_media = resolucao_total_min / total_questoes if total_questoes else 0
+    # Tempo total médio por questão
     tempo_medio_total = disponivel_min / total_questoes if total_questoes else 0
     pct_leitura = (leitura_total_min / disponivel_min) * 100 if disponivel_min else 0
     pct_resolucao = 100.0 - pct_leitura

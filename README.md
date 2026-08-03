@@ -9,3 +9,6 @@ correlações observadas no ENEM, estima seu nível potencial de dificuldade.
 
 Organização interna (monday): https://rafaelaaltheman2005s-team.monday.com/boards/18399149251
 
+# implementação da de detecção de quantidade de palavra e presença de imagens:
+
+- instalar Tesseract pelo terminal

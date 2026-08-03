@@ -121,7 +121,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 75
+      "quantidade_palavras": 75,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 2,
@@ -150,7 +153,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 71
+      "quantidade_palavras": 71,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 3,
@@ -179,7 +185,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 238
+      "quantidade_palavras": 238,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 4,
@@ -208,7 +217,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 140
+      "quantidade_palavras": 140,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 5,
@@ -237,7 +249,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 275
+      "quantidade_palavras": 275,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 1,
@@ -266,7 +281,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 199
+      "quantidade_palavras": 199,
+      "formal_score": 0.0248,
+      "informal_score": 0.9752,
+      "classificacao_formalidade": "informal"
     },
     {
       "questao": 2,
@@ -295,7 +313,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 321
+      "quantidade_palavras": 321,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 3,
@@ -324,7 +345,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 319
+      "quantidade_palavras": 319,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 4,
@@ -353,7 +377,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 168
+      "quantidade_palavras": 168,
+      "formal_score": 0.9974,
+      "informal_score": 0.0026,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 5,
@@ -382,7 +409,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 232
+      "quantidade_palavras": 232,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 6,
@@ -411,7 +441,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 356
+      "quantidade_palavras": 356,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 7,
@@ -440,7 +473,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 63
+      "quantidade_palavras": 63,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 8,
@@ -469,7 +505,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 234
+      "quantidade_palavras": 234,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 9,
@@ -498,7 +537,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 212
+      "quantidade_palavras": 212,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 10,
@@ -527,7 +569,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 206
+      "quantidade_palavras": 206,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 11,
@@ -556,7 +601,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 182
+      "quantidade_palavras": 182,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 12,
@@ -585,7 +633,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 319
+      "quantidade_palavras": 319,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 13,
@@ -614,7 +665,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 200
+      "quantidade_palavras": 200,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 14,
@@ -643,7 +697,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 205
+      "quantidade_palavras": 205,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 15,
@@ -672,7 +729,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 219
+      "quantidade_palavras": 219,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 16,
@@ -701,7 +761,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 296
+      "quantidade_palavras": 296,
+      "formal_score": 0.9985,
+      "informal_score": 0.0015,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 17,
@@ -730,7 +793,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 239
+      "quantidade_palavras": 239,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 18,
@@ -759,7 +825,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 168
+      "quantidade_palavras": 168,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 19,
@@ -788,7 +857,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 181
+      "quantidade_palavras": 181,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 20,
@@ -817,7 +889,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 203
+      "quantidade_palavras": 203,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 21,
@@ -846,7 +921,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 304
+      "quantidade_palavras": 304,
+      "formal_score": 0.9987,
+      "informal_score": 0.0013,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 22,
@@ -875,7 +953,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 84
+      "quantidade_palavras": 84,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 23,
@@ -904,7 +985,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 205
+      "quantidade_palavras": 205,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 24,
@@ -933,7 +1017,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 162
+      "quantidade_palavras": 162,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 25,
@@ -962,7 +1049,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 112
+      "quantidade_palavras": 112,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 26,
@@ -991,7 +1081,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 122
+      "quantidade_palavras": 122,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 27,
@@ -1020,7 +1113,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 198
+      "quantidade_palavras": 198,
+      "formal_score": 0.9987,
+      "informal_score": 0.0013,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 28,
@@ -1049,7 +1145,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 226
+      "quantidade_palavras": 226,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 29,
@@ -1078,7 +1177,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 158
+      "quantidade_palavras": 158,
+      "formal_score": 0.9968,
+      "informal_score": 0.0032,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 30,
@@ -1107,7 +1209,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 114
+      "quantidade_palavras": 114,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 31,
@@ -1136,7 +1241,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 275
+      "quantidade_palavras": 275,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 32,
@@ -1165,7 +1273,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 206
+      "quantidade_palavras": 206,
+      "formal_score": 0.9985,
+      "informal_score": 0.0015,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 33,
@@ -1194,7 +1305,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 202
+      "quantidade_palavras": 202,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 34,
@@ -1223,7 +1337,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 198
+      "quantidade_palavras": 198,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 35,
@@ -1252,7 +1369,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 216
+      "quantidade_palavras": 216,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 36,
@@ -1281,7 +1401,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 145
+      "quantidade_palavras": 145,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 37,
@@ -1310,7 +1433,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 261
+      "quantidade_palavras": 261,
+      "formal_score": 0.9987,
+      "informal_score": 0.0013,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 38,
@@ -1339,7 +1465,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 296
+      "quantidade_palavras": 296,
+      "formal_score": 0.9985,
+      "informal_score": 0.0015,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 39,
@@ -1368,7 +1497,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 134
+      "quantidade_palavras": 134,
+      "formal_score": 0.9985,
+      "informal_score": 0.0015,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 40,
@@ -1397,7 +1529,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 199
+      "quantidade_palavras": 199,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 41,
@@ -1426,7 +1561,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 181
+      "quantidade_palavras": 181,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 42,
@@ -1455,7 +1593,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 194
+      "quantidade_palavras": 194,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 43,
@@ -1484,7 +1625,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 177
+      "quantidade_palavras": 177,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 44,
@@ -1513,7 +1657,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 68
+      "quantidade_palavras": 68,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 45,
@@ -1542,7 +1689,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 931
+      "quantidade_palavras": 931,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 46,
@@ -1571,7 +1721,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 170
+      "quantidade_palavras": 170,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 47,
@@ -1600,7 +1753,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 161
+      "quantidade_palavras": 161,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 48,
@@ -1629,7 +1785,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 162
+      "quantidade_palavras": 162,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 49,
@@ -1658,7 +1817,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 183
+      "quantidade_palavras": 183,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 50,
@@ -1687,7 +1849,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 103
+      "quantidade_palavras": 103,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 51,
@@ -1716,7 +1881,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 86
+      "quantidade_palavras": 86,
+      "formal_score": 0.0066,
+      "informal_score": 0.9934,
+      "classificacao_formalidade": "informal"
     },
     {
       "questao": 52,
@@ -1745,7 +1913,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 158
+      "quantidade_palavras": 158,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 53,
@@ -1774,7 +1945,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 163
+      "quantidade_palavras": 163,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 54,
@@ -1803,7 +1977,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 137
+      "quantidade_palavras": 137,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 55,
@@ -1832,7 +2009,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 158
+      "quantidade_palavras": 158,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 56,
@@ -1861,7 +2041,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 99
+      "quantidade_palavras": 99,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 57,
@@ -1890,7 +2073,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 150
+      "quantidade_palavras": 150,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 58,
@@ -1919,7 +2105,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 109
+      "quantidade_palavras": 109,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 59,
@@ -1948,7 +2137,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 117
+      "quantidade_palavras": 117,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 60,
@@ -1977,7 +2169,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 148
+      "quantidade_palavras": 148,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 61,
@@ -2006,7 +2201,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 130
+      "quantidade_palavras": 130,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 62,
@@ -2035,7 +2233,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 162
+      "quantidade_palavras": 162,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 63,
@@ -2064,7 +2265,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 188
+      "quantidade_palavras": 188,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 64,
@@ -2093,7 +2297,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 162
+      "quantidade_palavras": 162,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 65,
@@ -2122,7 +2329,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 126
+      "quantidade_palavras": 126,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 66,
@@ -2151,7 +2361,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 107
+      "quantidade_palavras": 107,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 67,
@@ -2180,7 +2393,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 57
+      "quantidade_palavras": 57,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 68,
@@ -2209,7 +2425,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 137
+      "quantidade_palavras": 137,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 69,
@@ -2238,7 +2457,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 129
+      "quantidade_palavras": 129,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 70,
@@ -2267,7 +2489,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 128
+      "quantidade_palavras": 128,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 71,
@@ -2296,7 +2521,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 133
+      "quantidade_palavras": 133,
+      "formal_score": 0.9983,
+      "informal_score": 0.0017,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 72,
@@ -2325,7 +2553,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 105
+      "quantidade_palavras": 105,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 73,
@@ -2354,7 +2585,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 121
+      "quantidade_palavras": 121,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 74,
@@ -2383,7 +2617,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 155
+      "quantidade_palavras": 155,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 75,
@@ -2412,7 +2649,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 123
+      "quantidade_palavras": 123,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 76,
@@ -2441,7 +2681,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 134
+      "quantidade_palavras": 134,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 77,
@@ -2470,7 +2713,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 148
+      "quantidade_palavras": 148,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 78,
@@ -2499,7 +2745,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 98
+      "quantidade_palavras": 98,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 79,
@@ -2528,7 +2777,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 143
+      "quantidade_palavras": 143,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 80,
@@ -2557,7 +2809,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 143
+      "quantidade_palavras": 143,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 81,
@@ -2586,7 +2841,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 136
+      "quantidade_palavras": 136,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 82,
@@ -2615,7 +2873,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 151
+      "quantidade_palavras": 151,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 83,
@@ -2644,7 +2905,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 140
+      "quantidade_palavras": 140,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 84,
@@ -2673,7 +2937,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 94
+      "quantidade_palavras": 94,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 85,
@@ -2702,7 +2969,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 191
+      "quantidade_palavras": 191,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 86,
@@ -2731,7 +3001,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 154
+      "quantidade_palavras": 154,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 87,
@@ -2760,7 +3033,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 106
+      "quantidade_palavras": 106,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 88,
@@ -2789,7 +3065,10 @@
         }
       ],
       "tem_imagem": true,
-      "quantidade_palavras": 144
+      "quantidade_palavras": 144,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 89,
@@ -2818,7 +3097,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 140
+      "quantidade_palavras": 140,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     },
     {
       "questao": 90,
@@ -2847,7 +3129,10 @@
         }
       ],
       "tem_imagem": false,
-      "quantidade_palavras": 242
+      "quantidade_palavras": 242,
+      "formal_score": 0.9986,
+      "informal_score": 0.0014,
+      "classificacao_formalidade": "formal"
     }
   ]
 }
