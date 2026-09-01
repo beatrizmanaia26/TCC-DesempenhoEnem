@@ -1,0 +1,977 @@
+\documentclass[a4paper,10pt, twocolumn]{article}
+\usepackage[a4paper,top=2cm,bottom=3cm,left=2cm,right=2cm,footskip=0.8cm]{geometry}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}    % Para personalizar legendas, opcional
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{}
+\usepackage{multicol}
+\usepackage{titlesec}     % Para personalizar \section
+\usepackage[style=ieee, sorting=nty, language=portuguese]{biblatex}
+\definecolor{grayFEI}{HTML}{7F7F7F}
+\usepackage{paracol} % no preâmbulo
+\usepackage{indentfirst}  % Indenta o primeiro parágrafo
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning}
+\setlength{\parindent}{2em}  % Aumenta a indentação para 2em (pode ser ajustado
+\titlespacing*{\section}{0pt}{*0}{0pt}
+\usepackage{ragged2e}
+\usepackage[table]{xcolor}
+\usepackage{subcaption}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{placeins}
+\usepackage{booktabs}
+%-------------------------- ESTILOS NÃO ALTERAR ------------------------------------------------%
+% Estilo para legendas de figura e tabela
+\captionsetup[figure]{
+  labelfont={color=azulFEI, bf, small, sf}, % "Figura" azul, negrito, Arial-like
+  textfont={small, sf},                    % Texto da legenda em Arial-like
+  font=footnotesize,                       % Tamanho aproximado de 9pt
+  labelsep=period,                         % "Figura 1." e não "Figura 1:"
+  name=Figura,                             % Tradução para "Figura"
+  justification=raggedright,              % Alinhado à esquerda
+  singlelinecheck=false                   % Garante alinhamento mesmo em uma linha
+}
+
+\captionsetup[table]{
+  labelfont={color=azulFEI, bf, small, sf},
+  textfont={small, sf},
+  font=footnotesize,
+  labelsep=period,
+  name=Tabela,
+  justification=raggedright,
+  singlelinecheck=false
+}
+
+% Formatação section e subsection
+\titleformat{\subsection}
+  {\color{grayFEI}\normalfont\fontfamily{phv}\selectfont\itshape\fontsize{10}{12}\selectfont}
+  {\thesubsection.}{0.2em}{}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+
+\titleformat{\section}
+  {\color{azulFEI}\normalfont\fontfamily{phv}\selectfont\bfseries\fontsize{11}{13}\selectfont} % Fonte Helvetica, tamanho 11pt, negrito
+  {\thesection.}{0.2em}{}
+\renewcommand{\thesection}{\Roman{section}} 
+\titlespacing*{\section}
+{0pt}{10pt}{0pt}
+
+%Formatação Título
+\newcommand{\inovatitle}[1]{%
+  \noindent{\fontsize{18}{20}{\helvet{\textbf{\textcolor{azulFEI}{#1}}}}}\vspace{25pt}
+}
+
+%Formatação Autores
+\newcommand{\autores}[1]{
+  \helvet{\fontsize{11}{20}\selectfont\textbf{\textit{#1}}}
+}
+\newcommand{\orientador}[1]{
+  \helvet{\fontsize{11}{20}\selectfont\textbf{\textit{#1}}}
+}
+\newcommand{\filiacao}[1]{
+  \helvet{\fontsize{10}{20}\selectfont{\textit{#1}}}
+}
+\newcommand{\email}[1]{
+  \helvet{\fontsize{10}{20}\selectfont{\textit{#1}}\newline}
+}
+\newcommand{\resumo}[1]{%
+\vspace{15pt}
+  \noindent
+  {\helvet{\fontsize{12}{20}\selectfont\textbf{\textcolor{azulFEI}{Resumo:}}}} %
+  \justifying #1 %
+  \newline
+}
+
+\newcommand{\keyword}[1]{
+  \noindent\helvet{\fontsize{12}{20}\selectfont\textbf{\textcolor{azulFEI}{Palavras-chaves:}}} #1  \vspace{25pt}
+}
+
+\renewcommand{\thetable}{\Roman{table}}
+
+
+% Define a cor azul específica (exemplo: azul FEI)
+\definecolor{azulFEI}{HTML}{0070C0} % substitua pelo código que quiser
+
+%Formatação Cabeçalho e rodapé
+\setlength{\headsep}{1cm}
+\newcommand{\helvet}[1]{{\fontfamily{phv}\selectfont #1}}
+\pagestyle{fancy}
+\fancyhead{} % limpa cabeçalho
+\renewcommand{\headrulewidth}{0.3pt} % ← ATIVA a linha (espessura ajustável)
+\setlength\headheight{1.2cm}
+\lhead{\includegraphics[width=4.97cm, height=1cm]{logoinova.png}}
+\rhead{\helvet{2º semestre/2026}}
+
+\fancyfoot{} % limpa rodapé
+\lfoot{
+  \fontfamily{phv}\fontsize{8}{10}\selectfont
+  Anais dos Trabalhos de Conclusão de Curso do Centro Universitário FEI, São Bernardo do Campo – SP\\
+  \vspace{-4pt}\rule{\textwidth}{1pt} % ← linha abaixo do texto do rodapé
+}
+\rfoot{\fontfamily{phv}\fontsize{8}{10}\selectfont \thepage}
+
+%-------------------------------- FIM ESTILOS ---------------------------------------------------%
+
+%Adicionar a bibliografia
+\addbibresource{referencias.bib}
+ 
+
+\begin{document}
+
+\setlength{\columnsep}{20pt}
+\twocolumn[%
+\begin{@twocolumnfalse}
+
+\raggedright{
+
+
+
+\inovatitle{Estrutura e formatação das provas o ENEM: Impacto no desempenho geral dos participantes}
+
+
+\autores{Beatriz Manaia Lourenço Berto$^1$, Luana Bortko Rodrigues$^1$, Nuno Martins Guilhermino da Silva$^1$}
+
+\filiacao{$^1$ Ciência da Computação - campus São Bernardo do Campo}
+
+\email{unifbberto@fei.edu.br, uniflurodrigues@fei.edu.br, unifnsilva@fei.edu.br}
+
+\orientador{Orientador: Charles Henrique Porto Ferreira}
+
+\filiacao{Departamento de Ciência da Computação, Centro Universitário FEI}
+
+\email{cferreira@fei.edu.br}
+
+}
+
+\resumo{O Exame Nacional do Ensino Médio (ENEM) destaca-se entre os exames de larga escala no Brasil por ser uma das principais portas de entrada para o ensino superior. Dessa forma, compreender como a estrutura da prova influencia o desempenho dos candidatos é fundamental tanto para orientar os estudos dos participantes quanto para fornecer subsídios a docentes na elaboração de avaliações mais equilibradas. Este trabalho investigou a correlação entre características estruturais das questões como: ordem de apresentação das questões na prova; nível de formalidade; análise do tempo médio de resolução; quantidade de caracter por prova; presença de imagens; e construção dos distratores e o desempenho dos candidatos nas edições do ENEM de 2020 a 2025, com exceção de 2021, devido a inconsistências na extração dos dados das provas, considerando o recorte geográfico do estado de São Paulo. Foram utilizadas técnicas de estatística descritiva e inferencial, análise baseada na Teoria de Resposta ao Item (TRI), modelo de classificação de texto baseado em Transformer para a estimativa de formalidade, e extração automatizada de elementos textuais e visuais. Com base nos padrões identificados,foi desenvolvida uma aplicação, a partir do \textit{upload} de uma prova de mesmo formato do ENEM, analisa suas características estruturais e, utilizando as correlações observadas no ENEM, retorna as métricas e suas respectivas influências no desempenho do estudante. O sistema permite ao professor verificar, por exemplo, se o excesso de texto ou a baixa formalidade tende a tornar a prova mais difícil, auxiliando na decisão de ajustar ou não o formato da avaliação. Dessa forma, o estudo contribui com evidências sobre o impacto do formato na performance e oferece uma ferramenta prática para a melhoria de processos avaliativos.}
+
+\keyword{ENEM, formato da prova, correlação formato e desempnho, desempenho dos candidatos }
+
+\end{@twocolumnfalse}
+]
+
+\section{Introdução}
+
+Exames padronizados são amplamente utilizados para avaliar habilidades e conhecimentos em diferentes contextos, especialmente em processos educacionais e seletivos. Sua aplicação em larga escala permite comparar candidatos de maneira uniforme, tornando-os instrumentos centrais na tomada de decisão em cenários de alto impacto.
+
+No contexto brasileiro, o Exame Nacional do Ensino Médio (ENEM)\footnote{O ENEM é aplicado ao longo de 2 domingos. Ele contém 180 questões separadas em 4 categorias: Ciências Humanas e suas Tecnologias, Linguagens e suas Tecnologias, Matemática e suas Tecnologias e Ciência da Natureza e suas Tecnologias, além de uma redação.} se destaca como um dos principais mecanismos de avaliação educacional. A partir do ano de 2009, o exame se tornou um meio de ingresso ao ensino superior, por meio do Sistema de Seleção Unificada (Sisu), a prova foi alterada para conter 180 questões objetivas e uma redação \cite{Inep_2020}. Ademais, a pontuação obtida pelos candidatos também é utilizada como critério para a concessão de programas de acesso e permanência estudantil, como o Programa Universidade para Todos (ProUni) e o Fundo de Financiamento Estudantil (FIES). Além disso, o exame também desempenha um papel na avaliação da qualidade do ensino médio no país.
+
+A nota do ENEM é definida por um sistema distinto da Teoria Clássica dos Testes (TCT), no qual a pontuação é baseada apenas no número de acertos do candidato \cite{sousa_teoria_2020}. No exame, utiliza-se a Teoria de Resposta ao Item (TRI), que considera parâmetros como a dificuldade, a discriminação e a probabilidade de acerto ao acaso para determinar a contribuição de cada questão na nota final \cite{inep2021enem}. Nesse modelo, diferentes itens possuem pesos distintos, tornando a pontuação do candidato sensível às características das questões que compõem a prova. 
+
+Diante da amplitude de suas aplicações e do número expressivo de participantes, torna-se fundamental que o exame seja capaz de medir as habilidades dos candidatos, minimizando a influência de fatores que não estejam diretamente relacionados ao conhecimento avaliado.
+
+Porém, nem sempre é garantida a avaliação precisa das competências e habilidades de cada candidato. A forma como a informação é apresentada ao candidato é um fator influente do seu resultado. De acordo com estudos como \textcite{Pullishery2020,2018,silva2019desempenho}, o uso de textos longos aumenta o grau de dificuldade da questão. Além disso, a linguagem que é utilizada dentro do enunciado, como voz passiva ou ativa, também demonstrou impacto na performance geral \cite{correia2004complexidade,Marcom2016}. Entre outros aspectos, foram feitos estudos que demonstram a importância de características como a ordem na qual as questões são exibidas para os candidatos \cite{Barichello2022,Anaya2023} e o formato que as alternativas são apresentados aos candidatos \cite{Marcom2016,lopes2015estudo,Caldwell2013}. Isso demonstra que a maneira como as informações são apresentadas ao candidato pode influenciar a avaliação de suas competências. Portanto, torna-se essencial investigar como a formatação das questões impacta o desempenho dos candidatos, caminho que este trabalho se propõe a seguir.
+
+Historicamente, estudos sobre a formatação da prova do ENEM são escassos, não recebendo a mesma atenção que outros fatores influentes, como o perfil socioeconômico dos candidatos, revisado por \textcite{Dutra2023}. Ademais, as pesquisas relacionadas frequentemente possuem abordagens e motivações diferentes, analisando itens de provas específicas prioritariamente para revelar limitações do ensino básico nas escolas brasileiras \cite{Cestaro2020, lopes2015estudo}. Consequentemente, há uma carência de investigações atualizadas que isolem o impacto das características estruturais dos itens no desempenho dos alunos.
+
+Diante dessa lacuna, este trabalho teve como objetivo analisar como características estruturais dos itens do ENEM, como extensão do enunciado, uso de elementos visuais, nível de formalidade, construção de distratores, análise do tempo médio de resolução e ordem de apresentação das questões, influenciam o desempenho dos participantes, a fim de identificar padrões que contribuem para a compreensão do impacto do formato do exame na avaliação das competências dos candidatos e, a partir dos resultados observados, desenvolvemos uma aplicação que analisa o PDF de uma prova enviada e retorna as métricas e suas respectivas influências no desempenho do estudante.
+  %------------------------------------------------------------------------------------------------------%
+\section{Trabalhos Relacionados}
+
+A literatura em avaliação educacional tem investigado diferentes fatores associados ao desempenho de estudantes em exames padronizados de larga escala. No contexto brasileiro, estudos relacionados ao ENEM concentram-se predominantemente em análises de desempenho geral, indicadores socioeconômicos e resultados educacionais. Entretanto, observa-se que ainda são relativamente limitadas as investigações que abordam de forma sistemática características estruturais do formato da prova, tais como a ordem das questões, a construção linguística dos enunciados, o uso de elementos visuais e a elaboração de distratores, e seus possíveis impactos no desempenho dos participantes. Essa lacuna evidencia a necessidade de ampliar a análise do exame para além do conteúdo avaliado, incorporando também aspectos relacionados ao formato das avaliações. Assim, esta seção apresenta os principais trabalhos relacionados identificados na literatura, organizados conforme diferentes dimensões do formato das provas analisadas, sendo elas: a ordem das questões e o desempenho, a construção linguística das questões, a estrutura textual e viausal dos itens e os distratores e alternativas, além de uma seção para síntese e lacunas encontradas na literatura 
+
+\subsection{Ordem das questões e desempenho}
+
+A ordem de apresentação das questões em avaliações educacionais tem sido apontada como um possível fator capaz de influenciar o desempenho dos estudantes ao longo da realização da prova. Em exames extensos, o tempo de exposição à avaliação pode impactar processos cognitivos dos participantes, fazendo com que o momento em que um item é respondido passe a exercer influência sobre a probabilidade de acerto \cite{Barichello2022}. Nesse sentido, investigar a existência desse fenômeno torna-se relevante para compreender até que ponto o desempenho observado reflete exclusivamente o conhecimento do participante.
+
+Um dos principais estudos que investigam a influência da formatação da prova no desempenho dos estudantes é apresentado por \textcite{Barichello2022}, que analisaram evidências do efeito da ordem das questões no ENEM. Os autores utilizaram microdados disponibilizados pelo INEP, considerando uma amostra de mais de 4,4 milhões de participantes, e desenvolveram um indicador denominado Efeito Fadiga (EF) para mensurar a variação do índice de acertos de uma mesma questão em diferentes posições ao longo da prova. Os resultados obtidos confirmaram a presença do efeito fadiga no ENEM 2016, evidenciando que a probabilidade de acerto diminui significativamente quando uma questão é apresentada em posições mais avançadas do exame, com reduções que chegaram a aproximadamente 18 pontos percentuais. O impacto foi observado em todos os níveis de desempenho, sendo mais evidente entre estudantes de desempenho intermediário e em questões de dificuldade média, nas quais a demanda cognitiva é suficiente para sofrer influência do cansaço acumulado. 
+
+Resultados semelhantes também foram observados em \textcite{Anaya2023}, em que analisaram como diferentes sequências de apresentação, variando entre questões mais fáceis e mais difíceis, afetam o comportamento e o desempenho dos participantes em avaliações. Utilizando dados provenientes de experimentos controlados em plataforma online, com aproximadamente 19 mil participantes, os autores compararam diferentes configurações de prova, incluindo ordens crescente (fácil–difícil) e decrescente (difícil–fácil) de dificuldade. Os resultados indicaram que avaliações iniciadas com questões mais fáceis apresentaram menores taxas de desistência, maior confiança percebida pelos participantes e maior número de respostas corretas.
+
+Além do experimento controlado, \textcite{Anaya2023} também analisaram dados de larga escala provenientes das edições de 2009, 2012 e 2015 do \textit{Programme for International Student Assessment} (PISA), totalizando cerca de 600 mil avaliações. A análise evidenciou que o desempenho em uma seção da prova tende a ser influenciado pela dificuldade da seção imediatamente anterior, indicando a existência de efeitos de sequência capazes de alterar o engajamento cognitivo dos estudantes. Embora os experimentos tenham sido conduzidos em ambientes de menor pressão avaliativa, os autores argumentam que tais efeitos podem ser ainda mais evidenciados em exames de alto impacto, nos quais fatores psicológicos e emocionais desempenham papel relevante.
+
+Em conjunto, esses resultados reforçam a hipótese de que o desempenho em avaliações não depende exclusivamente do conhecimento do participante, mas também da organização estrutural da prova, sugerindo que tanto a posição temporal quanto a progressão de dificuldade das questões podem influenciar os resultados observados. Para ampliar essa compreensão, este trabalho insere essa análise especificamente no contexto do ENEM, avaliando como a estrutura de apresentação das questões impacta empiricamente o desempenho dos candidatos.
+
+\subsection{Construção linguística das questões}
+
+A construção linguística dos enunciados constitui um fator relevante na compreensão das questões e, consequentemente, no desempenho dos estudantes em avaliações educacionais. Diferentes escolhas sintáticas podem alterar a carga cognitiva necessária para interpretar o problema proposto, influenciando não apenas a leitura do enunciado, mas também a execução da tarefa avaliativa \cite{correia2004complexidade,Caldwell2013}.
+
+Nesse contexto, o estudo de \textcite{correia2004complexidade} investigou o impacto da estrutura sintática na compreensão de exercícios matemáticos, comparando enunciados formulados em voz ativa, voz passiva perifrástica verbal e voz passiva de clítico. A pesquisa foi conduzida com estudantes do quarto, sexto e nono anos do ensino fundamental, além de professores, permitindo observar o efeito da maturidade linguística sobre o desempenho. Os resultados indicaram que enunciados redigidos em voz ativa apresentaram maiores índices de acerto tanto em questões matemáticas quanto em testes de interpretação textual, além de menor tempo médio de resolução. Os autores argumentam que dificuldades de interpretação linguística podem atuar como barreiras adicionais à resolução matemática, evidenciando que parte do insucesso escolar pode estar associada à forma como os problemas são apresentados.
+
+Evidências adicionais são observadas em estudos que investigam diretrizes de elaboração de itens de múltipla escolha. \textcite{Caldwell2013} analisaram o impacto de diferentes formatos de questões, incluindo o uso de construções negativas nos enunciados, no desempenho de estudantes de um curso de Farmácia. A comparação entre versões equivalentes de uma mesma avaliação indicou que itens formulados sem estruturas negativas apresentaram desempenho numericamente superior; entretanto, essa diferença não foi estatisticamente significativa. Os dados sugerem que determinadas escolhas linguísticas podem influenciar a interpretação das questões, embora nem sempre produzam efeitos mensuráveis de forma consistente no desempenho dos participantes.
+
+Tais estudos sugerem que o desempenho em avaliações pode ser influenciado não apenas pelo domínio conceitual do estudante, mas também por características linguísticas dos enunciados, indicando a importância de considerar aspectos sintáticos e semânticos no formato de provas educacionais.
+
+\subsection{Estrutura textual e visual dos itens avaliativos}
+
+A estrutura de apresentação dos itens avaliativos constitui um elemento central no formato de exames educacionais, uma vez que o desempenho dos participantes pode ser influenciado não apenas pelo domínio conceitual do conteúdo, mas também pela forma como a informação é organizada e apresentada. Em avaliações de larga escala, características como extensão textual, complexidade linguística e uso de recursos visuais podem modificar a carga cognitiva exigida do estudante, afetando processos de leitura, interpretação e tomada de decisão durante a resolução das questões. \cite{Pullishery2020,2018,silva2019desempenho,Cestaro2020,goncalves2014questoes,lopes2015estudo}
+
+Análises empíricas sobre a extensão textual dos enunciados são apresentadas por \textcite{Pullishery2020}, que investigaram 624 questões de múltipla escolha aplicadas em avaliações de Odontologia. Os autores classificaram os itens conforme o número de palavras e observaram associação estatisticamente significativa entre maior volume textual e aumento da dificuldade das questões ($p = 0{,}039$). Os resultados indicaram menor proporção de itens considerados fáceis entre aqueles com enunciados mais longos, sugerindo que a demanda adicional de leitura pode impactar o desempenho independentemente do conhecimento específico avaliado. Contudo, os autores ressaltam possíveis fatores de confusão, como níveis de ansiedade dos participantes e a aplicação da avaliação em língua não nativa.
+
+Uma perspectiva distinta é apresentada por \textcite{2018}, ao analisarem o impacto do tamanho textual em itens do exame coreano CSAT. O estudo identificou que textos mais extensos favoreceram o desempenho apenas em questões dissertativas e entre estudantes com níveis intermediário e avançado de proficiência em língua inglesa, enquanto não foram observadas diferenças relevantes em itens de múltipla escolha. Esses achados indicam que o efeito da extensão dos enunciados não é uniforme, podendo variar conforme o formato da avaliação e as características linguísticas dos participantes.
+
+No contexto brasileiro, \textcite{silva2019desempenho} observaram, na prova de Linguagens do ENEM, que questões com maior demanda de leitura apresentaram índices mais elevados de erro, enquanto itens com suporte visual ou menor quantidade de texto obtiveram desempenho superior. Os autores associam esse resultado a limitações na automaticidade da leitura e na velocidade de processamento textual, fatores que podem restringir a capacidade dos estudantes de mobilizar conhecimentos mesmo quando dominam o conteúdo conceitual.
+
+A influência do formato visual dos itens também é evidenciada por \textcite{Cestaro2020}, que analisaram questões da área de Ciências da Natureza do ENEM aplicadas entre 2012 e 2016. Os resultados indicaram que itens que incorporavam gráficos, imagens ou tabelas apresentaram médias de acerto superiores às observadas em questões predominantemente textuais. Paralelamente, enunciados extensos e o uso de linguagem científica mais complexa estiveram associados a maiores índices de erro, sugerindo que tanto a carga textual quanto o grau de familiaridade dos estudantes com a linguagem científica desempenham papel relevante no desempenho. O estudo ainda aponta que dificuldades na compreensão conceitual básica e na interpretação das informações apresentadas constituem fatores centrais para o baixo rendimento em tópicos considerados mais complexos.
+
+Além disso, essa influência pode ser observada em \textcite{lindner_how_2018}, no qual os autores realizaram um experimento com estudantes do 5º e do 6º ano na Alemanha, utilizando 48 questões em duas versões: uma contendo uma imagem de apoio e outra sem imagem. Cada participante recebeu um caderno de prova diferente, de modo que não respondesse às duas versões da mesma questão. Os resultados evidenciaram uma redução no grau de dificuldade das questões que continham imagens, independentemente de elas serem relevantes para a resolução da questão. Além disso, foi observado um maior nível de prazer e motivação dos alunos quando lhes eram apresentadas questões com imagens. 
+
+Evidencias semelhantes são observadas em análises de questões de Física do ENEM realizadas por \textcite{goncalves2014questoes}, que identificaram elevada contextualização e extensos textos-base nos itens avaliativos. Segundo os autores, a combinação entre enunciados longos e tempo limitado de prova pode contribuir para a redução das taxas de acerto, especialmente em questões que demandam raciocínio quantitativo ou integração de múltiplos conceitos.
+
+Complementando essa discussão, \textcite{lopes2015estudo} analisaram questões de Física da prova de Ciências da Natureza do ENEM por meio de análises estatísticas baseadas na Teoria da Resposta ao Item e na Teoria Clássica dos Testes. Os autores observaram desempenho geral reduzido dos participantes, especialmente em itens que exigiam maior nível de raciocínio cognitivo e integração conceitual. Os resultados indicam que dificuldades de desempenho não decorrem exclusivamente do formato textual ou visual das questões, mas também do grau de complexidade conceitual exigido e do alinhamento entre os conteúdos avaliados e o currículo escolar.
+
+De modo geral, a literatura indica que o desempenho em avaliações educacionais é influenciado não apenas pelo domínio do conteúdo disciplinar, mas também pelo design multimodal dos itens, envolvendo simultaneamente aspectos textuais, linguísticos e visuais. Parte dos estudos aponta que enunciados extensos e linguisticamente complexos tendem a aumentar a carga cognitiva e dificultar a interpretação, enquanto o uso adequado de recursos visuais pode favorecer a organização da informação e apoiar a compreensão dos participantes. Contudo, resultados divergentes também são observados, sugerindo que o impacto desses elementos não é uniforme, podendo variar conforme o formato da questão, o nível de proficiência dos estudantes e as demandas cognitivas envolvidas. Assim, a eficácia avaliativa parece depender do equilíbrio entre texto, linguagem, recursos gráficos e complexidade cognitiva, evidenciando que o formato de apresentação das questões constitui um fator relevante, porém contextual, para a interpretação dos resultados em exames de larga escala. 
+
+Entretanto, a partir dessas evidências, nota-se uma lacuna de escopo na literatura sobre o ENEM, havendo uma escassez de análises que investiguem o impacto da estrutura no contexto geral da prova, correlacionando esses fatores em todas as suas seções.
+
+\subsection{Distratores e alternativas}
+
+A análise dos distratores em itens de múltipla escolha constitui uma estratégia relevante para compreender não apenas o desempenho dos estudantes, mas também os processos cognitivos subjacentes às respostas incorretas. Diferentemente da simples avaliação das taxas de acerto, o estudo das alternativas erradas permite identificar concepções alternativas, dificuldades conceituais persistentes e estratégias intuitivas de resolução utilizadas pelos participantes.
+\cite{Marcom2016,lopes2015estudo}
+Sob esse olhar, \textcite{Marcom2016} investigaram os distratores de questões de Física do ENEM aplicadas entre 2009 e 2012, utilizando microdados do INEP referentes a mais de três milhões de concluintes do ensino médio da rede pública. A análise das frequências de escolha das alternativas evidenciou que os erros dos estudantes não ocorreram de maneira aleatória, mas seguiram padrões recorrentes associados a dificuldades conceituais específicas. Entre os principais fatores identificados destacam-se o uso incorreto de unidades de medida, a aplicação inadequada de fórmulas físicas, raciocínios intuitivos baseados em experiências cotidianas e concepções não científicas sobre fenômenos físicos. Os autores também observaram dificuldades relevantes na interpretação de gráficos e representações visuais, indicando que determinados distratores funcionam como indicadores diagnósticos das formas de pensamento mobilizadas pelos estudantes.
+
+No mesmo conjunto de investigações, \textcite{lopes2015estudo} evidenciaram, a partir da análise das alternativas incorretas, padrões recorrentes de erro entre os participantes do ENEM. Os distratores mais selecionados estiveram associados a interpretações simplificadas dos fenômenos físicos, como o tratamento de sistemas extensos como partículas pontuais, o uso inadequado de relações matemáticas e dificuldades na articulação entre conceitos físicos distintos. Esses resultados reforçam que as respostas incorretas não ocorrem de forma aleatória, mas refletem limitações conceituais estruturais e modos específicos de raciocínio mobilizados pelos estudantes.
+
+Complementarmente, \textcite{Caldwell2013} observaram que a presença da opção “Nenhuma das anteriores” produziu diferenças estatisticamente significativas na dificuldade dos itens, favorecendo versões que não incluíam essa alternativa. Adicionalmente, os autores compararam questões com três e quatro distratores, bem como diferentes configurações estruturais das respostas, verificando apenas variações não conclusivas nesses casos. Esses resultados reforçam a interpretação de que os distratores não atuam apenas como respostas incorretas, mas como componentes ativos do processo avaliativo, capazes de influenciar o comportamento de escolha dos respondentes.
+
+Em síntese, a literatura aponta que a análise dos distratores constitui uma ferramenta essencial para a compreensão do desempenho em exames de larga escala, uma vez que evidencia padrões sistemáticos de erro, concepções alternativas persistentes e efeitos decorrentes do próprio formato das questões. Assim, os resultados reforçam que avaliações educacionais eficazes dependem não apenas da seleção adequada dos conteúdos, mas também da elaboração criteriosa das alternativas de resposta, capazes de discriminar níveis de compreensão sem introduzir vieses interpretativos indevidos.
+
+
+\subsection{Síntese e lacunas da literatura}
+
+A literatura analisada evidencia que o desempenho dos estudantes em exames de larga escala, particularmente no ENEM, não depende exclusivamente do domínio conceitual dos conteúdos avaliados, mas também das características estruturais dos próprios itens. Os estudos de \textcite{Pullishery2020,silva2019desempenho,goncalves2014questoes,Cestaro2020} apontam que fatores como extensão dos enunciados, complexidade linguística e uso de recursos visuais influenciam significativamente a interpretação das questões e os índices de acerto, indicando que aspectos relacionados ao formato e à linguagem das avaliações exercem papel relevante no desempenho dos participantes.
+
+Adicionalmente, as investigações de \cite{Caldwell2013,correia2004complexidade} baseadas na análise psicométrica e na análise de distratores demonstram que os padrões de resposta dos estudantes refletem não apenas lacunas conceituais, mas também efeitos decorrentes do design avaliativo, incluindo a organização das alternativas, a forma de apresentação das informações e as demandas cognitivas impostas pela leitura e interpretação dos itens. Nesse sentido, os erros observados frequentemente estão associados a estratégias intuitivas de resolução, dificuldades de interpretação e interações entre texto, representação visual e estrutura das alternativas.
+
+Apesar desses avanços, observa-se que muitos estudos concentram-se predominantemente na análise do conteúdo disciplinar cobrado ou no desempenho global por área do conhecimento, enquanto ainda são relativamente escassas investigações que examinem de forma integrada o papel da linguagem e do formato dos itens como elementos centrais do processo avaliativo. Em particular, permanece limitada a compreensão de como características estruturais, como extensão textual, multimodalidade e construção dos distratores atuam conjuntamente na configuração da dificuldade das questões.
+
+Dessa forma, identifica-se como lacuna na literatura a necessidade de abordagens que priorizem a análise do formato dos itens avaliativos, considerando o desempenho dos estudantes a partir das condições de apresentação das questões e não apenas do conteúdo avaliado. Nesse contexto, o presente estudo busca investigar como elementos de formato, linguagem e estrutura das questões contribuem para a interpretação e o desempenho em itens do ENEM.
+
+%-----------------------------------------------------------------------------------------------------%
+\section{Conceitos}
+Nesta seção serão apresentados os conceitos fundamentais utilizados no desenvolvimento deste trabalho, incluindo definições, princípios de funcionamento e aplicações das técnicas adotadas. Também serão discutidos os motivos que justificam a escolha dos métodos empregados, bem como suas contribuições para a análise proposta, permitindo estabelecer a base teórica necessária para a compreensão das etapas metodológicas descritas posteriormente.
+
+% CONCEITOS: Como funcionam as coisas?Por que escolhi, por que vou fazer de um jeito e não de outro? (ex: o que é wordbed, como funciona?O que eh bert, pq escolhemos esses -conceitos que nao explicamos (DEFINIÇÃO EXPLICAÇÃO DE CONCEITOS QUE UTILIZAREMOS)%
+
+\subsection{Análise comparativa do desempenho entre provas}
+
+\subsubsection{Métricas estatísticas descritivas e inferenciais}
+
+\label{sec:metricas-descritivas-inferenciais}
+
+A seleção das métricas estatísticas adotadas neste trabalho foi definida a partir dos objetivos da pesquisa e com base em métodos amplamente empregados em estudos de análise de desempenho educacional e estatística aplicada \cite{estatistica_descritiva_inferencial,field2018discovering,cohen1988statistical}. A escolha das métricas considerou três necessidades principais do estudo: (i) descrever o comportamento dos dados analisados; (ii) comparar diferentes grupos de candidatos, considerando anos, áreas do conhecimento e versões de prova; e (iii) verificar se as diferenças observadas apresentam relevância estatística.
+
+Para atender a essas necessidades, foram adotadas métricas de estatística descritiva para caracterizar a distribuição das notas e identificar padrões nos dados, bem como métricas de estatística inferencial para avaliar diferenças estatísticas entre grupos analisados. Adicionalmente, foi incluída a medida de tamanho de efeito \textit{Cohen's d}, permitindo complementar a interpretação dos resultados por meio da análise da magnitude prática das diferenças observadas \cite{cohen1988statistical}.
+
+\paragraph{Estatística Descritiva}
+\mbox{}\\
+Considerando a necessidade de caracterizar diferentes aspectos das notas dos candidatos, incluindo tendência central, dispersão e distribuição do desempenho, foram consideradas as seguintes métricas, que foram resumidas na Tabela ~\ref{tab:metricas}:
+
+\begin{table}[ht]
+\centering
+
+
+\begin{tabular}{ll}
+\hline
+\textbf{Característica} & \textbf{Métrica} \\
+\hline
+Tendência central & Média aritmética, Mediana \\
+Dispersão & Desvio padrão \\
+Posição dos dados & Quartis e Percentis \\
+Variabilidade relativa & Coeficiente de variação \\
+\hline
+\end{tabular}
+\caption{Resumo das características estatísticas analisadas}
+\label{tab:metricas}
+\end{table}
+
+\begin{itemize}
+
+\item \textbf{Média aritmética}: corresponde ao valor médio do conjunto de dados, sendo utilizada para representar o desempenho geral dos grupos analisados. Entretanto, por ser sensível à presença de valores extremos, sua utilização foi realizada em conjunto com a mediana, permitindo verificar se o valor médio representa adequadamente o comportamento das notas \cite{labone_estatistica}.
+
+\begin{equation}
+\bar{x}=
+\frac{\sum_{i=1}^{n}x_i}{n}
+\end{equation}
+
+em que $\bar{x}$ representa a média aritmética, $x_i$ corresponde a cada observação do conjunto de dados e $n$ representa o número total de observações \cite{labone_estatistica}.
+
+\item \textbf{Mediana}: corresponde ao valor central dos dados ordenados, dividindo a distribuição em duas partes iguais. Sua utilização ocorreu como medida complementar à média, reduzindo possíveis distorções associadas à presença de valores extremos \cite{labone_estatistica}.
+
+\begin{equation}
+Md=
+\begin{cases}
+x_{\left(\frac{n+1}{2}\right)},
+& \text{se } n \text{ for ímpar}
+\\
+\\
+\frac{x_{\left(\frac{n}{2}\right)}
++x_{\left(\frac{n}{2}+1\right)}}{2},
+& \text{se } n \text{ for par}
+\end{cases}
+\end{equation}
+
+em que $n$ representa o número total de observações e $x$ corresponde aos valores ordenados do conjunto de dados \cite{labone_estatistica}.
+
+\item \textbf{Desvio padrão}: representa o grau de dispersão das observações em relação à média, indicando o quanto os valores tendem a se afastar do desempenho médio do grupo. Sua utilização ocorreu devido à necessidade de identificar diferenças na variabilidade das notas entre os grupos analisados \cite{labone_estatistica}.
+
+\begin{equation}
+s=
+\sqrt{
+\frac{
+\sum_{i=1}^{n}
+(x_i-\bar{x})^2
+}
+{n-1}
+}
+\end{equation}
+
+em que $s$ representa o desvio padrão, $x_i$ corresponde a cada observação, $\bar{x}$ representa a média do conjunto de dados e $n$ corresponde ao número total de observações \cite{labone_estatistica}.
+
+\item \textbf{Quartis e percentis}: correspondem a medidas que dividem a distribuição dos dados em partes ordenadas, permitindo identificar a posição relativa dos candidatos dentro do conjunto analisado. Sua utilização ocorreu devido à limitação das medidas centrais em representar toda a distribuição dos dados, permitindo analisar o comportamento de candidatos com diferentes níveis de desempenho \cite{labone_estatistica}.
+
+\begin{equation}
+P_k=
+\frac{k(n+1)}{100}
+\end{equation}
+
+em que $k$ representa o percentil desejado e $n$ corresponde ao número total deF observações. A expressão determina a posição do percentil no conjunto ordenado de dados \cite{labone_estatistica}.
+
+\item \textbf{Coeficiente de variação}: corresponde a uma medida de dispersão relativa obtida pela relação entre o desvio padrão e a média. Sua utilização complementa a interpretação do desvio padrão, permitindo comparar a variabilidade entre grupos com médias distintas \cite{labone_estatistica}.
+
+\begin{equation}
+CV=
+\frac{s}{\bar{x}}
+\times100
+\end{equation}
+
+em que $s$ corresponde ao desvio padrão e $\bar{x}$ representa a média do conjunto analisado \cite{labone_estatistica}.
+
+\end{itemize}
+
+\paragraph{Estatística Inferencial}
+\mbox{}\\
+
+A estatística inferencial permite avaliar se diferenças observadas entre grupos apresentam significância estatística. Considerando a necessidade de comparação entre múltiplos grupos e de avaliação da magnitude prática das diferenças observadas, foram consideradas as seguintes métricas \cite{field2018discovering,cohen1988statistical}:
+
+\begin{itemize}
+
+\item \textbf{Análise de Variância (ANOVA)}: utilizada para comparar simultaneamente médias entre múltiplos grupos, sendo adequada ao contexto deste estudo devido à necessidade de comparação entre diferentes anos, áreas do conhecimento e versões de prova. Sua utilização evita a realização de múltiplos testes independentes, reduzindo a probabilidade de erros estatísticos \cite{field2018discovering}.
+
+\begin{equation}
+F=
+\frac{MQ_{entre}}
+{MQ_{dentro}}
+\end{equation}
+
+em que $MQ_{entre}$ representa a média quadrática entre grupos e $MQ_{dentro}$ representa a média quadrática dentro dos grupos \cite{libretexts_anova}.
+
+\item \textbf{Tamanho de efeito (\textit{Cohen's d})}: corresponde a uma medida padronizada utilizada para avaliar a magnitude das diferenças observadas entre grupos comparados, complementando a análise de significância estatística. Sua escolha ocorreu devido à adequação ao contexto deste estudo, que utiliza grandes volumes de dados provenientes dos microdados do ENEM e realiza comparações entre diferentes grupos. Além disso, permite interpretar a magnitude das diferenças observadas de forma padronizada \cite{cohen1988statistical}.
+
+\begin{equation}
+d=
+\frac{\bar{x}_1-\bar{x}_2}
+{s_p}
+\end{equation}
+
+em que $\bar{x}_1$ e $\bar{x}_2$ representam as médias dos grupos comparados e $s_p$ corresponde ao desvio padrão combinado dos grupos analisados \cite{jim_cohensd}.
+
+\end{itemize}
+
+\subsection{Análise das variações estruturais entre provas} 
+\subsubsection{Modelo da Teoria de Resposta ao Item (TRI)}
+\label{sec:tri}
+
+O ENEM utiliza a Teoria de Resposta ao Item (TRI) como modelo estatístico para estimar a proficiência dos participantes a partir das respostas apresentadas nas provas objetivas \cite{inep2021enem}. Diferentemente de métodos baseados apenas na quantidade total de acertos, a TRI considera características individuais de cada questão, permitindo uma avaliação mais precisa do desempenho dos candidatos e maior comparabilidade entre diferentes versões de prova.
+
+No ENEM, a TRI é operacionalizada por meio do modelo logístico de três parâmetros (Three Parameter Logistic Model -- 3PL), no qual a probabilidade de acerto de um item é estimada em função da proficiência do participante e das características associadas à questão \cite{sousa_teoria_2020,inep2021enem}. Entre esses parâmetros destacam-se a discriminação do item, relacionada à capacidade da questão em diferenciar participantes com diferentes níveis de habilidade; a dificuldade, associada ao nível de proficiência necessário para responder corretamente à questão; e o parâmetro de acerto ao acaso, relacionado à probabilidade de o participante acertar uma questão por tentativa ou chute.
+
+Esse modelo é representado pela Equação \ref{eq:tri}:
+
+\begin{equation}
+P(\theta)=c+(1-c)\frac{1}{1+e^{-a(\theta-b)}}
+\label{eq:tri}
+\end{equation}
+
+em que:
+
+\begin{itemize}
+\item $\theta$ representa a proficiência ou habilidade estimada do participante;
+\item $a$ corresponde ao parâmetro de discriminação do item;
+\item $b$ representa o parâmetro de dificuldade da questão;
+\item $c$ corresponde ao parâmetro de acerto ao acaso;
+\item $e$ representa a constante matemática associada à função exponencial.
+\end{itemize}
+
+A partir dessa formulação, a nota do participante não é calculada apenas pelo número total de acertos, mas pela combinação entre as respostas apresentadas e a probabilidade esperada de acerto para cada item. O processo consiste em estimar iterativamente o valor de proficiência ($\theta$) que melhor explica o conjunto de respostas do participante. Assim, padrões considerados mais coerentes, como o acerto de itens fáceis e intermediários acompanhado de maior frequência de acertos em itens difíceis, tendem a resultar em estimativas mais elevadas de proficiência. Em contrapartida, padrões inconsistentes, como o erro em itens considerados fáceis combinado ao acerto de itens difíceis, podem indicar respostas ao acaso, produzindo estimativas menores \cite{inep2021enem}.
+
+Como consequência, participantes com a mesma quantidade de acertos podem obter notas distintas. Espera-se, por exemplo, que candidatos com maior proficiência apresentem maior probabilidade de acerto em questões difíceis e menor probabilidade de erro em questões fáceis.
+
+Além disso, a TRI permite estabelecer classificações fundamentadas no nível de dificuldade das questões, possibilitando a análise da distribuição desses itens ao longo das provas. Nesse contexto, cada questão pode ser associada a uma faixa estimada de habilidade necessária para que um participante apresente alta probabilidade de acerto. Consequentemente, a dificuldade dos itens deixa de ser interpretada apenas pela frequência observada de respostas corretas, passando a considerar também o comportamento esperado de candidatos com diferentes níveis de habilidade. Essa abordagem possibilita compreender como questões consideradas fáceis, intermediárias ou difíceis podem estar organizadas ao longo do exame.
+
+Adicionalmente, a TRI permite analisar a relação entre a taxa de acerto das questões e a proficiência estimada dos participantes. Enquanto a taxa de acerto representa empiricamente a proporção de candidatos que responderam corretamente a determinado item, a TRI interpreta esse desempenho considerando as características da questão e o nível de habilidade requerido para seu acerto. Assim, itens com menores taxas de acerto tendem a estar associados a maiores níveis de dificuldade, embora essa relação também dependa da coerência das respostas apresentadas pelos participantes. A análise conjunta entre taxa de acerto e parâmetros estimados pela TRI possibilita uma compreensão mais precisa do comportamento das questões e do desempenho dos participantes no ENEM.
+
+\subsection{Comparação entre alternativas}
+\subsubsection{\textit{Word Embedding}}
+Modelos de aprendizado de máquina não processam texto em linguagem natural diretamente, sendo necessária a conversão das palavras e sentenças em representações numéricas. Uma das abordagens mais utilizadas para essa finalidade é o uso de \textit{word embeddings}, técnica que representa palavras ou trechos de texto como vetores em um espaço multidimensional. \cite{jm3}
+
+Nessa representação vetorial, palavras ou sentenças semanticamente semelhantes tendem a ocupar posições próximas no espaço vetorial, enquanto elementos semanticamente distintos tendem a apresentar maior distância entre si. Dessa forma, os embeddings permitem que modelos computacionais capturem relações semânticas presentes no texto, indo além da simples comparação lexical. \cite{jm3}
+
+No presente trabalho, os embeddings das alternativas das questões serão gerados utilizando o modelo Sentence-BERT(SBERT) \cite{reimers_sentence-bert_2019}. A partir dessas representações vetoriais, será calculada a similaridade entre as alternativas por meio da distância de cosseno, possibilitando analisar o grau de proximidade semântica entre distratores e alternativas corretas.
+
+\subsubsection{\textit{Linear Logistic Test Model(LLTM)}}
+A dificuldade de um item pode ser analisada por diferentes modelos psicométricos. Entre eles, destaca-se o \textit{Linear Logistic Test Model} (LLTM), uma extensão do modelo de Rasch que permite representar a dificuldade de uma questão como resultado de características estruturais previamente definidas. \cite{fischer_linear_1973}
+
+Diferentemente do modelo de Rasch tradicional, no qual cada item possui um parâmetro de dificuldade estimado individualmente, o LLTM modela essa dificuldade a partir da combinação linear de fatores associados ao item. Dessa forma, características específicas da questão podem ser utilizadas para investigar sua influência sobre o nível de dificuldade observado.
+
+O modelo é representado da seguinte maneira:
+
+\[
+P(X_{vi} = 1 \mid \theta_v, \beta_i) =
+\frac{\exp(\theta_v - \beta_i)}
+{1 + \exp(\theta_v - \beta_i)}
+\]
+
+Sendo $X_{vi}$ o resultado do participante $v$, com habilidade $\theta_v$, ao responder o item $i$, de dificuldade $\beta_i$.
+
+Para o cálculo de $\beta_i$, é utilizado o seguinte modelo:
+
+\[
+\beta_i = \sum_{m=1}^{M} q_{im}\eta_m + c
+\]
+
+Em que $q_{im}$ representa o peso da característica $m$ no item $i$, enquanto $\eta_m$ corresponde ao parâmetro estimado associado a essa característica, indicando sua contribuição para a dificuldade do item. o $c$ representa uma constante de normalização. 
+
+Neste trabalho, o LLTM será utilizado para analisar a influência da ordem das alternativas sobre a dificuldade das questões. Para isso, serão comparadas diferentes versões da prova, considerando a distribuição das respostas dos participantes em cada configuração de alternativas.
+
+\subsubsection{Classificação de Formalidade Textual}
+
+\paragraph{Arquitetura Transformer}
+\label{sec:Transformer}
+A arquitetura Transformer \cite{vaswani2017attention} constitui a base dos modelos de Processamento de Linguagem Natural (PLN) de estado da arte. Diferentemente de arquiteturas recorrentes tradicionais, que processam o texto sequencialmente palavra por palavra, o Transformer utiliza mecanismos de autoatenção (\textit{self-attention}) que permitem ao modelo ponderar a relevância de cada palavra em relação a todas as demais palavras da sequência de entrada simultaneamente. Essa abordagem possibilita a captura de dependências contextuais de longo alcance e o processamento paralelo do texto, resultando em representações linguísticas mais ricas e em maior eficiência computacional durante o treinamento \cite{jm3}.
+
+\paragraph{Ajuste Fino (\textit{Fine-Tuning})}
+\label{sec:fine-tuned}
+O ajuste fino (\textit{fine-tuning}) é uma técnica de aprendizado por transferência (\textit{transfer learning}) na qual um modelo pré-treinado em grandes volumes de dados não rotulados é posteriormente adaptado para uma tarefa específica utilizando um conjunto menor de dados rotulados \cite{jm3}. Nesse processo, os pesos do modelo pré-treinado são utilizados como ponto de partida e ajustados durante o treinamento supervisionado na tarefa-alvo, aproveitando o conhecimento linguístico previamente adquirido. Essa abordagem permite obter desempenho elevado mesmo com conjuntos de dados de treinamento relativamente pequenos para a tarefa específica.
+
+No contexto da classificação de formalidade, o ajuste fino permite que um modelo como o XLM-R, que já possui conhecimento geral sobre a estrutura de 100 idiomas, seja especializado para distinguir textos formais de informais. O modelo ajustado aprende a identificar padrões linguísticos associados à formalidade, como complexidade sintática, escolha lexical e presença de marcas de oralidade, a partir de exemplos rotulados, sem necessidade de definição explícita de regras \cite{dementieva2023detecting}.
+  %------------------------------------------------------------------------------------------------------%
+\section{Metodologia}
+
+Para a validação da proposta deste projeto, foram selecionadas provas do ENEM, considerando um recorte temporal e geográfico correspondente ao período de 2020 a 2025, com exceção de 2021, devido a inconsistências na extração dos dados das provas, no estado de São Paulo. Foram incluídas provas de diferentes versões (cores), abrangendo exclusivamente a aplicação regular do exame, uma vez que a versão destinada a Pessoas Privadas de Liberdade (PPL) apresenta diferenças estruturais em relação à aplicação padrão, o que poderia comprometer a comparabilidade dos dados e a consistência das análises.
+
+A consideração das diferentes versões de prova na aplicação regular justifica-se pelo fato de que essas variações apresentam características estruturais relevantes para o presente estudo, como a ordem das questões e alternativas, bem como a disposição de imagens. Por sua vez, a adoção desse recorte temporal e geográfico foi feito devido à necessidade de analisar provas mais recentes e possibilitar comparações ao longo dos anos, além de buscar minimizar a influência de disparidades socioeconômicas amplamente discutidas na literatura (\textcite{Dutra2023}) como fatores que afetam o desempenho no ENEM. Adicionalmente, a definição do período a partir de 2020 considera a reformulação estrutural do exame ocorrida em 2009 \cite{Inep_2020}, garantindo maior consistência na análise ao focar em versões mais recentes e metodologicamente comparáveis da prova.
+
+Para cada prova, foram analisadas variáveis relacionadas à ordem das questões, ao nível de formalidade, à quantidade de caracter por prova, à presença de imagens, à construção dos distratores, à análise do tempo médio de resolução e à ordem de apresentação das questões com o objetivo de verificar seu impacto no desempenho dos candidatos. Um resumo das características e seus métodos são mostrados na Tabela ~\ref{tab:tabela}.
+
+\begin{table}[htb]
+\centering
+\footnotesize
+
+\begin{tabular}{ll}
+\hline
+\textbf{Característica} & \textbf{Abordagem} \\
+\hline
+Quantidade de palavras/caracter & \textit{PyMuPDF}\\
+Identificação de imagens & \textit{PyMuPDF} \\
+variações estruturais entre provas & Comparação entre provas \\
+Eficácia de distratores & S-BERT \\
+Formalidade & XLM-roBERTa \\
+Tempo médio de leitura & Contagem de caractéres\\
+\hline
+\end{tabular}
+\caption{Resumo das características analisadas nas provas do ENEM}
+\label{tab:tabela}
+\end{table}
+
+Com base nas variáveis analisadas, buscou-se determinar quais elementos estruturais da prova exerceram impacto significativo no desempenho dos candidatos. Adicionalmente, a partir dos resultados obtidos na análise do ENEM, na etapa de visualização analítica dos resultados, buscou-se ampliar a compreensão sobre como o formato de outras avaliações poderia influenciar o desempenho de estudantes em diferentes contextos.
+
+Para a operacionalização dessa análise, a metodologia foi estruturada em quatro etapas principais, conforme ilustrado na Figura ~\ref{fig:fluxograma-estrutura-tcc}
+
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[scale=0.2]{fluxograma.jpeg}
+    \caption{Fluxograma de desenvolvimento do Trabalho de Conclusão de Curso}
+    \label{fig:fluxograma-estrutura-tcc}
+\end{figure*}
+
+
+\subsection{Materiais}
+Nesta seção são apresentados os recursos utilizados no desenvolvimento deste trabalho, incluindo a base de dados, as bibliotecas computacionais e demais ferramentas empregadas na implementação da metodologia.
+
+\subsubsection{Base de dados}
+\label{sec:procedimento-extracao-analise-dados}
+Nesta etapa, são descritos os conjuntos de dados das provas do ENEM, os quais serão utilizados na análise de correlação entre o formato das questões e o desempenho dos candidatos.
+\paragraph{Obtenção da base de dados}
+\mbox{}\\
+
+As provas do ENEM referentes ao período determinado, juntamente com seus respectivos gabaritos, foram obtidas por meio de download a partir da fonte oficial \cite{inep_provas_gabaritos}, contemplando todas as versões disponíveis.
+
+Adicionalmente, foram coletados os microdados do ENEM para o mesmo período \cite{inep_microdados_enem}.%TODO: LU e NUNO validar se faz sentido ja que vcs que estao usando microdados
+
+
+%----TODO: lu ajustar
+\paragraph{Variáveis selecionadas dos microdados}
+\mbox{}\\
+
+Dentre as variáveis relevantes fornecidas pelos microdados do ENEM para a análise do desempenho dos candidatos, destacam-se as informações de localização, ano de realização da prova e as notas por área de conhecimento. No entanto, esses dados não apresentam diretamente métricas consolidadas de desempenho para recortes específicos, como região, ano ou versão de prova.
+
+Serão utilizadas as variáveis  \texttt{SG\_UF\_RESIDENCIA} e \texttt{NU\_ANO}, para o recorte geográfico e temporal, respectivamente. Além disso, serão consideradas variáveis de notas por área do conhecimento, como  \texttt{NU\_NOTA\_CN} (Ciências da Natureza), \texttt{NU\_NOTA\_CH}  (Ciências Humanas), \texttt{NU\_NOTA\_LC} (Linguagens) e \texttt{NU\_NOTA\_MT} (Matemática).
+
+Adicionalmente, aplicaremos a variável \texttt{TP\_COR\_PROVA\_*}, que permite a identificação das diferentes versões de prova, possibilitando análises comparativas entre elas. Por fim, a variável \texttt{TP\_PRESENCA\_*} será empregada para garantir que apenas participantes presentes nas provas sejam considerados na análise, evitando distorções nos resultados.
+
+Aqui está a subseção melhorada, organizada por finalidade e incluindo as bibliotecas de ML que você realmente usa:
+
+\subsubsection{Bibliotecas e ferramentas externas}
+
+Para a implementação das etapas de extração, processamento e análise dos dados, foram utilizadas bibliotecas externas da linguagem Python, organizadas conforme suas finalidades:
+
+\begin{itemize}
+    \item \textbf{Extração de dados dos PDFs}: \textit{PyMuPDF} — utilizada para a extração dos blocos textuais e gráficos presentes nos arquivos PDF das provas, incluindo suas respectivas posições nas páginas, permitindo a identificação de questões, textos de apoio e imagens.
+    
+    \item \textbf{Classificação de formalidade}: \textit{Transformers} e \textit{PyTorch} — utilizadas para o carregamento e a inferência do modelo XLM-RoBERTa ajustado para classificação de formalidade textual.
+    
+    \item \textbf{Análise estatística}: \textit{SciPy} e \textit{Statsmodels} — utilizadas para a realização de testes estatísticos (ANOVA, teste t, correlações) e modelagem dos dados.
+    
+    \item \textbf{Manipulação e visualização de dados}: \textit{Pandas}, \textit{NumPy} e \textit{Matplotlib} — utilizadas para organização dos dados em estruturas tabulares, operações numéricas e geração de gráficos e visualizações.
+\end{itemize}
+
+%--------
+
+% TODO: justificar escolha das bibliotecas após consolidar testes
+\subsubsection{Outras ferramentas}
+Além disso, para a análise de aspectos como a semelhança semântica dos distratores e a classificação de formalidade na escrita dos enunciados, foram utilizados modelos baseados em Transformer: o SentenceBERT (S-BERT) \cite{reimers_sentence-bert_2019} para o cálculo de similaridade semântica entre alternativas, e o XLM-RoBERTa \cite{conneau2020unsupervised}, ajustado para classificação de formalidade \cite{dementieva2023detecting}, para a detecção do grau de formalidade das questões.
+
+O S-BERT foi escolhido pela sua velocidade para análise de um grande volume de frases, além de sua acurácia superior em testes padronizados em comparação com outros modelos, como o BERT e RoBERTA. \cite{reimers_sentence-bert_2019}
+
+Para a classificação de formalidade, foi utilizado o modelo XLM-RoBERTa \cite{conneau2020unsupervised} ajustado (\textit{fine-tuned}) especificamente para detecção do grau de formalidade \cite{dementieva2023detecting}. A escolha desse modelo justifica-se por sua capacidade multilíngue, abrangendo os idiomas presentes nas questões do ENEM (português, inglês e espanhol), e por oferecer classificação determinística e reprodutível.
+
+\subsection{Métodos}
+Nesta seção serão apresentados os métodos que serão aplicados durante esta análise.
+
+\subsubsection{Análise da posição das questões nas provas}
+\label{sec:analise-posicao-questoes}
+%TODO: LU TERA QUE CORRIGIR COM BASE NOQ FEZ
+
+Será conduzida uma análise sobre o impacto da ordem das questões no desempenho dos candidatos, utilizando os passos descritos na Figura ~\ref{fig:fluxograma-posicao-questoes} para estruturar as fases necessárias da análise.
+
+\begin{figure*}[htb]
+    \centering
+    \includegraphics[width=0.6\linewidth]{fluxogramaPosicao.jpeg}
+    \caption{Fluxograma de Análise da posição das questões nas provas}
+    \label{fig:fluxograma-posicao-questoes}
+\end{figure*}
+
+
+\paragraph{Análise comparativa do desempenho entre provas}
+\mbox{}\\
+
+Inicialmente, serão utilizadas métricas descritivas, conforme são descritas na seção de conceitos, no tópico ~\ref{sec:metricas-descritivas-inferenciais}, como média, mediana, desvio padrão, quartis, percentis e coeficiente de variação, permitindo a avaliação das variações de desempenho entre diferentes versões de prova, anos e áreas de conhecimento.
+
+A média e a mediana será empregada para realizar comparações iniciais de desempenho entre os diferentes grupos analisados, enquanto o desvio padrão, permitirá identificar situações em que versões de prova apresentem médias semelhantes, mas níveis distintos de dispersão no desempenho dos candidatos.
+
+Os quartis e percentis serão utilizados para analisar a distribuição do desempenho entre diferentes grupos de candidatos.
+
+Além disso, será empregado o coeficiente de variação, uma vez que o desvio padrão representa uma medida absoluta de dispersão e pode dificultar comparações entre grupos com médias distintas. Assim, o coeficiente de variação permitirá comparar a dispersão relativa das notas entre grupos, possibilitando identificar versões de prova ou áreas de conhecimento com maior inconsistência ou variabilidade proporcional no desempenho dos candidatos.
+
+Por sua vez, as métricas inferenciais aplicadas, conforme descritas na
+subseção~\ref{sec:metricas-descritivas-inferenciais} da seção de conceitos, serão a Análise de Variância (ANOVA) e a medida de tamanho de efeito \textit{Cohen's d}.
+
+Essas comparações serão realizadas entre diferentes versões de prova dentro do mesmo ano, bem como entre áreas de conhecimento pertencentes ao mesmo ano e versão de prova.
+
+A partir dessas análises, busca-se verificar a existência de diferenças no desempenho dos candidatos entre os diferentes recortes considerados, avaliando tanto a significância estatística quanto a magnitude dessas variações.
+
+Para o processamento e análise dos microdados, serão utilizadas bibliotecas da linguagem Python, como \texttt{Pandas} e \texttt{NumPy}, responsáveis pela manipulação, organização e processamento numérico dos dados. Para a realização das análises estatísticas inferenciais, incluindo testes de comparação entre grupos, serão empregadas bibliotecas como \texttt{SciPy} e \texttt{Statsmodels}. Adicionalmente, a biblioteca \texttt{Matplotlib} será utilizada para a geração de representações gráficas dos resultados obtidos.
+
+\paragraph{Análise das variações estruturais entre provas}
+\mbox{}\\
+Será realizada uma análise detalhada das variações estruturais entre as diferentes versões de prova, com o objetivo de investigar possíveis fatores associados às discrepâncias de desempenho identificadas nas etapas anteriores.
+
+Para a realização dessa análise, serão comparadas as estruturas das provas entre diferentes versões do ENEM, considerando tanto o conjunto completo das áreas de conhecimento quanto análises específicas por área. Essa etapa contemplará principalmente três aspectos estruturais: (i) a ordem de apresentação das questões, (ii) a disposição das alternativas de resposta e (iii) a organização da dificuldade das questões ao longo da prova, considerando classificações fundamentadas no modelo da TRI, apresentado na subseção ~\ref{sec:tri} de conceitos.
+
+As variações estruturais serão quantificadas por meio da comparação entre a posição original das questões em uma prova de referência e suas respectivas posições nas demais versões, permitindo avaliar o grau de reorganização entre os diferentes cadernos de prova.
+
+Será considerado como mudança estrutural significativa o caso em que mais de 50\% das questões apresentarem alteração de posição ou reorganização em relação à prova de referência.
+
+\subsubsection{Extração do texto e detecção de imagem por prova} 
+\label{sec:qtd-palavras-imagens}
+
+Para a extração e análise textual das provas do ENEM, foi desenvolvido um sistema em Python utilizando a biblioteca \textit{PyMuPDF}, responsável pela leitura dos arquivos PDF. O sistema identifica automaticamente cada questão a partir dos marcadores "Questão XX" e gera, para cada uma delas, um registro contendo o número da questão, o texto extraído, a indicação de presença de imagens, a quantidade de palavras e um identificador de idioma para as questões de língua estrangeira. Esse identificador é utilizado apenas para distinguir as versões de inglês e espanhol das questões de 1 a 5, conforme a estrutura da prova.
+
+A contagem de palavras é realizada sobre o texto completo extraído de cada questão, incluindo título, texto-base, enunciado, referências e alternativas. Para essa etapa, é utilizada uma expressão regular capaz de reconhecer palavras com acentuação, números, porcentagens e formatos numéricos recorrentes nas provas.
+
+Além das questões, o sistema também extrai os textos introdutórios presentes na prova, incluindo a capa, as instruções gerais e os cabeçalhos que antecedem grupos de questões, como "Questões de 01 a 45", "Questões de 46 a 90" e os títulos das áreas do conhecimento. Esses textos são armazenados separadamente das questões, permitindo sua utilização em análises específicas quando necessário.
+
+Como os PDFs do ENEM apresentam diferenças de estrutura entre os anos, foi implementado um procedimento específico para a primeira página da prova. Quando a extração textual nativa do PDF produz resultados incompletos, é aplicado o Optical Character Recognition(OCR) utilizando o software Tesseract, ferramenta de reconhecimento óptico de caracteres responsável por converter imagens contendo texto em texto editável. O resultado do OCR é utilizado apenas quando apresenta maior quantidade de texto reconhecido em relação à extração convencional. Esse procedimento é empregado exclusivamente na capa das provas, não sendo aplicado às imagens presentes nas questões. Dessa forma, os textos contidos nessas imagens não são considerados na contagem de palavras, sendo registrada apenas a presença da imagem para utilização nas análises posteriores.
+
+%Os arquivos PDF das provas do ENEM de 2021 demandaram um tratamento adicional devido à menor qualidade da extração textual. Nesses arquivos, foi desenvolvido um pós-processamento específico para remover ruídos, reconstruir automaticamente as alternativas e aplicar correções pontuais em questões nas quais a segmentação automática não foi realizada corretamente. Ao final desse processo, todas as provas passam a apresentar a mesma estrutura de saída, composta por uma lista de textos introdutórios e uma lista de questões contendo seus respectivos metadados.
+
+Por fim, os resultados obtidos foram submetidos a uma verificação manual para confirmar a correta identificação das questões, das alternativas, dos textos introdutórios, da presença de imagens e da contagem de palavras. Foram observadas pequenas imperfeições em alguns trechos extraídos por OCR, principalmente na capa das provas, porém esses casos foram pouco frequentes e não comprometeram a consistência dos dados utilizados nas análises subsequentes.
+
+\subsubsection{Classificação do grau de formalidade nas questões}
+\label{sec:classificacao-formalidade}
+
+Devido à diversidade de gêneros textuais presentes no ENEM, não há um padrão único e rígido de formalidade textual \cite{Ciapuscio2005,INEP_ENEM_Matriz}. Dessa forma, optou-se pela utilização do XLM-RoBERTa para a detecção do grau de formalidade nas questões do ENEM, tendo em vista que, de acordo com o estudo de \textcite{dementieva2023detecting}, que apresenta a primeira avaliação sistemática de métodos de detecção de formalidade baseados em técnicas de aprendizado de máquina estatísticas, neurais e baseadas em Transformers, os classificadores baseados em Transformer ~\ref{sec:Transformer}  apresentam maior estabilidade na transferência de conhecimento entre idiomas (transferência translingual), sendo o XLM-R a abordagem mais adequada para cenários multilíngues como o do ENEM, que contém questões em português, inglês e espanhol.
+A escolha de um modelo \textit{fine-tuned}
+ ~\ref{sec:fine-tuned} especializado justifica-se por oferecer maior precisão na tarefa específica de classificação de formalidade, uma vez que foi treinado com dados rotulados para essa finalidade, internalizando padrões linguísticos como complexidade sintática, escolha lexical e marcas de oralidade a partir de milhares de exemplos. Além disso, a saída do modelo é determinística para uma mesma entrada, garantindo reprodutibilidade dos resultados, e seu custo computacional reduzido permite o processamento local de grandes volumes de questões.
+
+O modelo utilizado, \texttt{s-nlp/xlmr\_formality\_classifier}\footnote{Disponível em: \url{https://huggingface.co/s-nlp/xlmr_formality_classifier}}, é uma versão do XLM-RoBERTa ajustada (\textit{fine-tuned}) especificamente para classificação de formalidade utilizando os conjuntos de dados GYAFC \cite{rao2018dear} e X-FORMAL \cite{briakou2021ola}. O GYAFC contém 104.365 pares de textos formais e informais em inglês, enquanto o X-FORMAL estende essa base para português brasileiro, francês e italiano por meio de tradução. O modelo recebe como entrada o texto bruto de cada questão e produz probabilidades de classificação formal e informal, sem necessidade de pré-processamento manual, uma vez que o tokenizador SentencePiece do XLM-R realiza internamente operações de limpeza textual, decomposição NFKC para padronização de caracteres e segmentação em subpalavras.
+
+O processo de classificação é realizado conforme as seguintes etapas:
+
+\begin{enumerate}
+    \item \textbf{Extração do texto}: para cada questão do ENEM, é extraído o campo textual completo, incluindo enunciado, texto de apoio e alternativas, conforme estruturado nos arquivos JSON previamente gerados na etapa de extração de dados.
+    
+    \item \textbf{Tokenização}: o texto é processado pelo tokenizador SentencePiece do XLM-R, que realiza automaticamente a segmentação em subpalavras. O texto tokenizado é limitado a 512 tokens, correspondente ao comprimento máximo de entrada aceito pelo modelo.
+    
+    \item \textbf{Inferência}: o texto tokenizado é submetido ao modelo de classificação, que produz \textit{logits} (valores brutos) para cada classe. Esses valores são convertidos em probabilidades por meio da função \textit{softmax}, resultando em um \textit{score} de formalidade (probabilidade de ser formal, entre 0,0 e 1,0) e um \textit{score} de informalidade (probabilidade de ser informal, entre 0,0 e 1,0) para cada questão.
+    
+    \item \textbf{Classificação}: cada questão é classificada como "formal" ou "informal" com base na classe de maior probabilidade. Adicionalmente, os \textit{scores} numéricos são preservados para permitir análises mais granulares do grau de formalidade.
+\end{enumerate}
+
+O processamento é realizado em lotes (\textit{batches}) de 8 questões para otimização do uso de memória, e a inferência é executada sem cálculo de gradientes, garantindo eficiência computacional. Os resultados são armazenados diretamente nos arquivos JSON de cada prova, adicionando os campos \texttt{formal\_score}, \texttt{informal\_score} e \texttt{classificacao\_formalidade} a cada questão.
+
+Cabe ressaltar que o conjunto de dados de treinamento em português (X-FORMAL) foi construído por meio de tradução do conjunto em inglês (GYAFC), o que constitui uma limitação reconhecida, uma vez que padrões de formalidade podem variar entre idiomas e não serem integralmente preservados pela tradução. Além disso, a acurácia reportada por \textcite{dementieva2023detecting} para o português é de 76,2\% e para o inglês de 85,2\%. Contudo, essas limitações não invalidam a abordagem, sendo documentadas como ressalvas metodológicas. Os resultados obtidos nos experimentos com as questões do ENEM podem apresentar desempenho distinto do reportado na literatura, dado que refletem as características específicas dos textos analisados e não necessariamente a mesma base de dados utilizada pelos autores do estudo original.
+
+Vale ressaltar que o XLM-RoBERTa possui base de dados de treinamento para inglês e português e, dentre os modelos avaliados por \textcite{dementieva2023detecting}, apresenta o melhor desempenho na classificação de formalidade em idiomas não vistos durante o treinamento (transferência translingual), com acurácia multilíngue de 79,4\%. Essa característica é relevante para o presente trabalho, uma vez que o ENEM contém questões em espanhol, idioma para o qual o modelo não foi explicitamente treinado na tarefa de formalidade, mas que é suportado pelo pré-treinamento multilíngue do XLM-R em 100 idiomas.
+
+A imagem ~\ref{fig:fluxograma-XLM-R} apresenta o fluxograma das etapas utilizadas na implementação dessa abordagem.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\linewidth]{fluxogramaXLM-R.jpeg}
+    \caption{Fluxograma das etapas de implementação do XLM-R para classificação do grau de formalidade}
+    \label{fig:fluxograma-XLM-R} 
+\end{figure}
+
+\subsubsection{Avaliação da eficácia das alternativas como distratores}
+\label{sec:eficacia-distratores}
+
+%TODO, NUNO: verificar se explicou opcoes de distratores e mencionou qual foi o esoclhido entre eles Distratores: da p analisa no enunciado e na alternativa (pq analisar um ou outro????) Ent em distratores temos q falar as opções q temos, qual usaremos se vai ser ditrator no enunciado u nas alternativas é como faze isso… Ex alunos erra mais se tem mais similares entre as alternativa errada e a correta. Ou quanto alternativas n tem similaridade? 3 casos: 1 n são similares,2 erradas são similares entre si aí vai na errada? APAGAR DEPOIS DE ARRUMAR!!!
+
+Nesta etapa, foram analisados diferentes aspectos relacionados aos distratores das questões. Neste trabalho, consideram-se como distratores todas as alternativas incorretas de cada item. O objetivo dessa análise é investigar a eficácia dos distratores e o papel desempenhado por eles na estrutura do exame. Para isso, foram avaliadas: (i) a similaridade entre cada distrator e a alternativa correta; (ii) a similaridade entre os próprios distratores de uma mesma questão; e (iii) a correlação dessas relações de similaridade no desempenho dos participantes, especialmente em cenários nos quais distratores semanticamente próximos entre si, mas distintos da alternativa correta, possam induzir o candidato ao erro.
+
+Para realizar essa análise, foi utilizado o modelo \textit{Bidirectional Encoder Representations from Transformers} (BERT), mais especificamente o \textit{Sentence-BERT}(SBERT),versão do modelo treinada para a extração de frases completas para comparação \cite{reimers_sentence-bert_2019}. Para este trabalho, foi utilizado o modelo e5-large-matryoshka-sts-pt\footnote{Disponível em: https://huggingface.co/iara-project/e5-large-matryoshka-sts-pt}, escolhido por conta de ser um dos melhores modelos no quesito de análise de frases em português no \textit{benchmark} de português para modelos de similaridade semântica, o MTEB-PT \cite{okamura_beyond_2026}. Além disso, ele também é um modelo multilingual, assim também levando em consideração as questões que venham a ter alternativas escritas em inglês ou em espanhol. Os cadernos de cada edição foram considerados separadamente.
+
+Para o recolhimento das informações, as alternativas foram transformadas em arquivos CSV com auxílio da LLM Claude, com o modelo Sonnet 5, através de um prompt e validado manualmente. Além disso, inseriram-se em arquivos CSV as respostas dos participantes para cada área/caderno de prova por filtramento da planilha de resultados dos microdados de cada edição. Utilizaram-se as colunas \texttt{TX\_RESPOSTAS\_CH*}, \texttt{TX\_RESPOSTAS\_LC*}, \texttt{TX\_RESPOSTAS\_MT*} e \texttt{TX\_RESPOSTAS\_CN*}. Para análise das questões de língua estrangeira, foram separadas em colunas diferentes as respostas de participantes que responderam questões em inglês e em espanhol.
+
+Após isso, analisaram-se as porcentagens de escolha de cada alternativa a partir dos arquivos através de um script que lia cada arquivo CSV e contabilizava a resposta de cada participante para as questões. Questões em branco e anuladas foram separadas, já que são registradas dentro dos microdados. A porcentagem de escolha para cada questão e caderno foi inserida dentro de um arquivo CSV, sendo classificados por questão, área e cor do caderno. 
+
+O texto de cada alternativa foi convertido em representações vetoriais (\textit{embeddings}) por meio do modelo. Em seguida, foi calculada a similaridade entre os vetores utilizando um script que verifica a similaridade de cosseno, permitindo mensurar o grau de proximidade semântica entre as alternativas de cada questão. Para identificar a correlação entre a similaridade e os erros, foram utilizados os arquivos de similaridade semântica e de taxa de escolha de alternativas para comparação entre a alternativa correta e o distrator mais similar por meio de um script.
+
+
+Cabe destacar que a similaridade calculada pelo modelo corresponde à proximidade semântica entre as alternativas, não contemplando, necessariamente, diferenças estruturais ou erros conceituais específicos de determinadas áreas do conhecimento. Dessa forma, essa métrica será utilizada como uma aproximação da similaridade entre os distratores, sendo suas limitações consideradas na interpretação dos resultados.
+
+Além disso, será analisada a correlação entre a ordem das alternativas e a dificuldade das questões. Para isso, serão comparadas diferentes versões da prova e a distribuição das respostas em cada uma delas. A análise será conduzida utilizando o \textit{Linear Logistic Test Model} (LLTM), com auxílio do pacote eRm para a linguagem R, replicando parcialmente a metodologia empregada por \textcite{hohensinn_does_nodate}.
+
+\subsubsection{Análise da relação entre tempo médio de leitura das questões e tempo de resolução da prova}
+\label{sec:tempo-leitura}
+
+Nesta etapa avaliamos a distribuição do tempo de prova entre leitura e resolução das questões, bem como o tempo efetivamente disponível para resolução. Essa avaliação foi distribuída em duas categorias de análise da prova, com o objetivo de verificar se a leitura de todo o conteúdo textual do caderno, incluindo informações complementares como instruções e divisões de seção, impacta de forma relevante o tempo disponível para resolução.
+
+Na primeira categoria, foram considerados apenas os caracteres presentes nos enunciados das questões e em suas respectivas alternativas, representando o conteúdo textual diretamente associado à resolução dos itens. Na segunda categoria, foram adicionados os caracteres dos textos introdutórios do caderno de provas, incluindo a capa com orientações gerais, as divisões de cada seção e demais textos estruturais presentes no caderno. Dessa forma, a comparação entre as duas análises permite avaliar o impacto do volume total de informação textual disponibilizada ao candidato sobre o tempo efetivamente destinado à resolução das questões.
+
+Para isso, utilizamos como parâmetros a velocidade média de leitura, o tempo oficial de realização das provas do ENEM e o tempo estimado destinado à redação, cujos valores são formalizados adiante.
+
+A partir desses parâmetros, o código previamente desenvolvido foi adaptado para extrair automaticamente a quantidade de texto da prova, agora mensurada em número de caracteres. Para a primeira categoria, o programa percorre cada questão do caderno e contabiliza os caracteres efetivos (excluindo espaços, tabulações e quebras de linha) presentes no campo textual do enunciado, incluindo textos-base e comandos da questão, bem como o texto de cada uma das cinco alternativas de resposta. Já para a segunda categoria, o programa examina os textos introdutórios extraídos do caderno, como capa com instruções, títulos de seção e indicações de intervalo de questões, e contabiliza seus caracteres efetivos, somando-os ao total obtido na primeira categoria. Em ambos os casos, os textos analisados correspondem aos dados estruturados em formato JSON, obtidos na etapa de extração descrita na subseção ~\ref{sec:qtd-palavras-imagens} da metodologia.
+
+Com base nesses valores, estima-se o tempo de leitura considerando a velocidade média adotada. Em seguida, calcula-se o tempo total de leitura da prova e, por diferença em relação ao tempo total disponível, obtém-se o tempo efetivamente destinado à resolução das questões, tanto de forma agregada quanto em média por questão. Esse cálculo é realizado separadamente para cada uma das duas categorias descritas, permitindo a comparação direta entre os cenários.
+
+Vale ressaltar que, para os fins desta análise, foram desconsiderados:
+\begin{enumerate}
+    \item O conteúdo presente em imagens;
+    \item O tempo despendido para interpretação de figuras.
+\end{enumerate}
+
+A seguir são apresentadas as definições formais e fórmulas utilizadas em cada etapa do cálculo, bem como a descrição de cada saída produzida pelo programa.
+
+\paragraph{Parâmetros adotados}
+\mbox{}\\
+
+Os parâmetros fixos utilizados na análise são:
+
+\begin{itemize}
+    \item Velocidade média de leitura ($v$): 1100 caracteres por minuto \cite{Messias2008};
+    \item Tempo total da prova ($T_{\text{prova}}$): 330 minutos (5h30min) no Dia 1 e 300 minutos (5h00min) no Dia 2 \cite{inep_enem_servico};
+    \item Tempo estimado para redação ($T_{\text{red}}$): 75 minutos (1h15min), aplicável apenas ao Dia 1 \cite{brasil_escola_redacao_enem}.
+\end{itemize}
+
+O tempo efetivamente disponível para a resolução das questões é obtido descontando-se o tempo de redação:
+
+\begin{equation}
+T_{\text{disp}} = T_{\text{prova}} - T_{\text{red}}
+\label{eq:tempo_disponivel}
+\end{equation}
+
+em que $T_{\text{red}} = 75$ min para o Dia 1 e $T_{\text{red}} = 0$ para o Dia 2. Essa é a primeira saída do programa: o \textbf{tempo disponível para questões}.
+
+\paragraph{Contagem de caracteres efetivos por questão}
+\mbox{}\\
+
+Para cada questão $i$ ($i = 1, 2, \ldots, N$, sendo $N$ o número total de questões), define-se o número de caracteres efetivos $C_i$ como a quantidade de caracteres presentes no texto do enunciado e nas cinco alternativas de resposta, excluindo-se espaços, tabulações e quebras de linha:
+
+\begin{equation}
+C_i = \sum_{\substack{c \,\in\, \text{texto}_i \\ c \,\notin\, \{\text{espaço}, \text{tab}, \text{quebra}\}}} 1
+\label{eq:caracteres_questao}
+\end{equation}
+
+O \textbf{total de caracteres das questões} é dado pela soma:
+
+\begin{equation}
+C_{\text{quest}} = \sum_{i=1}^{N} C_i
+\label{eq:total_caracteres_questoes}
+\end{equation}
+
+\paragraph{Tempo de leitura por questão}
+\mbox{}\\
+
+O \textbf{tempo de leitura estimado para cada questão} $i$ é calculado dividindo-se seus caracteres pela velocidade de leitura:
+
+\begin{equation}
+t_{\text{leit},i} = \frac{C_i}{v}
+\label{eq:tempo_leitura_questao}
+\end{equation}
+
+em que $v = 1100$ caracteres/min. Essa métrica é reportada individualmente para cada questão na tabela de saída do programa.
+
+\paragraph{Tempo total de leitura da prova (Categoria 1 — apenas questões)}
+\mbox{}\\
+
+O \textbf{tempo total de leitura} corresponde à soma dos tempos individuais:
+
+\begin{equation}
+T_{\text{leit}} = \sum_{i=1}^{N} t_{\text{leit},i} = \frac{C_{\text{quest}}}{v}
+\label{eq:tempo_leitura_total}
+\end{equation}
+
+\paragraph{Tempo total de resolução da prova}
+\mbox{}\\
+
+O \textbf{tempo efetivamente destinado à resolução} das questões é obtido por diferença entre o tempo disponível e o tempo de leitura:
+
+\begin{equation}
+T_{\text{res}} = T_{\text{disp}} - T_{\text{leit}}
+\label{eq:tempo_resolucao_total}
+\end{equation}
+
+\paragraph{Percentual do tempo destinado à leitura e à resolução}
+\mbox{}\\
+
+O programa reporta a \textbf{proporção do tempo gasta em leitura} em relação ao tempo total disponível:
+
+\begin{equation}
+\%_{\text{leit}} = \frac{T_{\text{leit}}}{T_{\text{disp}}} \times 100
+\label{eq:pct_leitura}
+\end{equation}
+
+E a \textbf{proporção do tempo destinada à resolução}:
+
+\begin{equation}
+\%_{\text{res}} = 100 - \%_{\text{leit}} = \frac{T_{\text{res}}}{T_{\text{disp}}} \times 100
+\label{eq:pct_resolucao}
+\end{equation}
+
+\paragraph{Tempo médio de leitura por questão}
+\mbox{}\\
+
+O \textbf{tempo médio de leitura por questão} é obtido dividindo-se o tempo total de leitura pelo número de questões:
+
+\begin{equation}
+\bar{t}_{\text{leit}} = \frac{T_{\text{leit}}}{N}
+\label{eq:leitura_media_questao}
+\end{equation}
+
+\paragraph{Tempo médio de resolução por questão}
+\mbox{}\\
+
+O \textbf{tempo médio disponível para resolver cada questão} é calculado como o tempo total de resolução dividido pelo número de questões:
+
+\begin{equation}
+\bar{t}_{\text{res}} = \frac{T_{\text{res}}}{N} = \frac{T_{\text{disp}} - T_{\text{leit}}}{N}
+\label{eq:resolucao_media_questao}
+\end{equation}
+
+Ou seja, subtrai-se o tempo total de leitura do tempo disponível da prova e divide-se pela quantidade de questões.
+
+\paragraph{Tempo total médio por questão (leitura + resolução)}
+\mbox{}\\
+
+O \textbf{tempo total médio por questão}, que engloba tanto a leitura quanto a resolução, é simplesmente o tempo disponível dividido pelo número de questões:
+
+\begin{equation}
+\bar{t}_{\text{total}} = \frac{T_{\text{disp}}}{N} = \bar{t}_{\text{leit}} + \bar{t}_{\text{res}}
+\label{eq:tempo_medio_total_questao}
+\end{equation}
+
+% ============================================================================
+\paragraph{Categoria 2 — Caderno completo (questões + textos introdutórios)}
+\mbox{}\\
+
+Na segunda categoria, são adicionados os caracteres dos textos introdutórios do caderno de provas (capa com orientações gerais, divisões de seção e demais textos estruturais). Seja $C_{\text{intro}}$ o total de caracteres efetivos dos textos introdutórios:
+
+\begin{equation}
+C_{\text{intro}} = \sum_{\substack{c \,\in\, \text{textos introdutórios} \\ c \,\notin\, \{\text{espaço}, \text{tab}, \text{quebra}\}}} 1
+\label{eq:caracteres_intro}
+\end{equation}
+
+O \textbf{total de caracteres do caderno completo} é:
+
+\begin{equation}
+C_{\text{total}} = C_{\text{quest}} + C_{\text{intro}}
+\label{eq:total_caracteres_completo}
+\end{equation}
+
+O \textbf{tempo de leitura dos textos introdutórios}:
+
+\begin{equation}
+T_{\text{leit,intro}} = \frac{C_{\text{intro}}}{v}
+\label{eq:tempo_leitura_intro}
+\end{equation}
+
+O \textbf{tempo total de leitura do caderno completo}:
+
+\begin{equation}
+T_{\text{leit}}^{*} = T_{\text{leit}} + T_{\text{leit,intro}} = \frac{C_{\text{total}}}{v}
+\label{eq:tempo_leitura_completo}
+\end{equation}
+
+O \textbf{tempo de resolução no cenário completo}:
+
+\begin{equation}
+T_{\text{res}}^{*} = T_{\text{disp}} - T_{\text{leit}}^{*}
+\label{eq:tempo_resolucao_completo}
+\end{equation}
+
+Os percentuais e médias por questão seguem as mesmas fórmulas da Categoria 1, substituindo $T_{\text{leit}}$ por $T_{\text{leit}}^{*}$:
+
+\begin{equation}
+\%_{\text{leit}}^{*} = \frac{T_{\text{leit}}^{*}}{T_{\text{disp}}} \times 100
+\label{eq:pct_leitura_completo}
+\end{equation}
+
+\begin{equation}
+\bar{t}_{\text{leit}}^{*} = \frac{T_{\text{leit}}^{*}}{N}
+\label{eq:leitura_media_completo}
+\end{equation}
+
+\begin{equation}
+\bar{t}_{\text{res}}^{*} = \frac{T_{\text{res}}^{*}}{N} = \frac{T_{\text{disp}} - T_{\text{leit}}^{*}}{N}
+\label{eq:resolucao_media_completo}
+\end{equation}
+
+% ============================================================================
+\paragraph{Resumo das saídas do programa}
+\mbox{}\\
+
+A Tabela~\ref{tab:saidas_tempo} sintetiza todas as métricas calculadas e reportadas pelo programa para cada prova analisada, organizadas por categoria.
+
+\begin{table*}[htb]
+\centering
+\caption{Métricas de saída do programa de análise de tempo de leitura}
+\label{tab:saidas_tempo}
+\scriptsize
+\begin{tabular}{lll}
+\toprule 
+\multicolumn{1}{c}{\textbf{Saída do programa}} & \multicolumn{1}{c}{\textbf{Fórmula}} & \multicolumn{1}{c}{\textbf{Descrição}} \\
+\midrule
+\multicolumn{3}{c}{\textbf{Parâmetros}} \\
+\midrule
+Tempo total da prova & $T_{\text{prova}}$ & 5h30 (Dia 1) ou 5h (Dia 2) \\
+Tempo redação & $T_{\text{red}}$ & 1h15 (apenas Dia 1) \\
+Tempo disponível para questões & $T_{\text{disp}} = T_{\text{prova}} - T_{\text{red}}$ & Tempo efetivo para questões \\
+\midrule
+\multicolumn{3}{c}{\textbf{Categoria 1 — Apenas questões (enunciado + alternativas)}} \\
+\midrule
+Total de caracteres & $C_{\text{quest}} = \sum_{i=1}^{N} C_i$ & Soma dos caracteres efetivos de todas as questões \\
+Tempo de leitura total & $T_{\text{leit}} = C_{\text{quest}} / v$ & Tempo estimado para ler todas as questões \\
+Tempo de leitura total (\%) & $\%_{\text{leit}} = (T_{\text{leit}} / T_{\text{disp}}) \times 100$ & Proporção do tempo gasta em leitura \\
+Tempo de resolução total & $T_{\text{res}} = T_{\text{disp}} - T_{\text{leit}}$ & Tempo restante para resolver as questões \\
+Tempo de resolução total (\%) & $\%_{\text{res}} = 100 - \%_{\text{leit}}$ & Proporção do tempo para resolução \\
+Leitura média por questão & $\bar{t}_{\text{leit}} = T_{\text{leit}} / N$ & Tempo médio de leitura por questão \\
+Resolução média por questão & $\bar{t}_{\text{res}} = (T_{\text{disp}} - T_{\text{leit}}) / N$ & Tempo médio de resolução por questão \\
+Tempo total médio por questão & $\bar{t}_{\text{total}} = T_{\text{disp}} / N$ & Tempo médio total (leitura + resolução) por questão \\
+\midrule
+\multicolumn{3}{c}{\textbf{Categoria 2 — Caderno completo (questões + textos introdutórios)}} \\
+\midrule
+Caracteres dos textos introdutórios & $C_{\text{intro}}$ & Caracteres efetivos dos textos estruturais \\
+Tempo leitura dos textos introdutórios & $T_{\text{leit,intro}} = C_{\text{intro}} / v$ & Tempo para ler textos introdutórios \\
+Total de caracteres (completo) & $C_{\text{total}} = C_{\text{quest}} + C_{\text{intro}}$ & Caracteres do caderno completo \\
+Tempo de leitura total & $T_{\text{leit}}^{*} = C_{\text{total}} / v$ & Tempo de leitura do caderno completo \\
+Tempo de leitura total (\%) & $\%_{\text{leit}}^{*} = (T_{\text{leit}}^{*} / T_{\text{disp}}) \times 100$ & Proporção do tempo gasta em leitura \\
+Tempo de resolução total & $T_{\text{res}}^{*} = T_{\text{disp}} - T_{\text{leit}}^{*}$ & Tempo restante para resolver \\
+Leitura média por questão & $\bar{t}_{\text{leit}}^{*} = T_{\text{leit}}^{*} / N$ & Tempo médio de leitura por questão \\
+Resolução média por questão & $\bar{t}_{\text{res}}^{*} = (T_{\text{disp}} - T_{\text{leit}}^{*}) / N$ & Tempo médio de resolução por questão \\
+\midrule
+\multicolumn{3}{c}{\textbf{Por questão individual (tabela detalhada)}} \\
+\midrule
+Caracteres da questão $i$ & $C_i$ & Caracteres efetivos (enunciado + alternativas) \\
+Tempo de leitura da questão $i$ & $t_{\text{leit},i} = C_i / v$ & Tempo estimado de leitura individual \\
+\bottomrule 
+\end{tabular}
+\end{table*}
+
+\subsection{Avaliação do impacto de variáveis estruturais das questões no desempenho dos candidatos no ENEM}
+\label{sec:avaliacao-impacto-variaveis}
+Esta subseção corresponde à etapa final da pesquisa, na qual são consolidadas as análises das variáveis estruturais previamente investigadas.
+
+Para analisar o impacto das variáveis estruturais será calculado a taxa de acerto de cada questão com base na proporção de candidatos que responderam corretamente a cada item em relação ao total de participantes considerados, sendo utilizada como uma medida empírica de dificuldade das questões.
+
+Para isso, serão utilizadas variáveis provenientes dos microdados do ENEM, incluindo as respostas dos candidatos (\texttt{TX\_RESPOSTAS\_*}) e os respectivos gabaritos oficiais (\texttt{TX\_GABARITO\_*}), possibilitando a identificação de acertos por questão. As respostas serão previamente submetidas a um processo de limpeza, no qual serão desconsideradas aquelas em branco, anuladas ou com marcações inválidas, de forma que apenas respostas válidas (alternativas A a E) sejam utilizadas na análise.
+
+%Além disso, serão empregadas variáveis de filtragem, como \texttt{NU\_ANO} e  \texttt{SG\_RESIDENCIA}, para a definição do recorte temporal e geográfico, bem como a variável \texttt{TP\_PRESENCA\_*}, a fim de garantir que apenas participantes presentes nas provas sejam considerados na análise.
+
+A partir dessa estimativa, os resultados obtidos serão comparados com as variáveis estruturais descritas anteriormente nesta seção. O objetivo dessa análise é investigar a existência de associações entre tais fatores e o desempenho dos candidatos.
+
+As taxas de acerto por questão também serão analisadas em conjunto com as notas baseadas na TRI (subseção~\ref{sec:tri} de conceitos), permitindo uma análise complementar entre o desempenho observado dos candidatos e a proficiência estimada dos participantes.
+
+Ressalta-se que as variáveis estruturais não serão interpretadas como determinantes diretas da dificuldade, mas como fatores potencialmente associados ao desempenho. Nesse sentido, serão aplicadas métricas estatísticas de correlação para avaliar a intensidade dessas associações, sendo a escolha do coeficiente mais adequado (como Pearson ou Spearman) definida com base nas características dos dados analisados, considerando aspectos como distribuição, presença de outliers e natureza das variáveis.
+
+Por fim, também serão consideradas combinações entre variáveis estruturais, visando identificar possíveis efeitos conjuntos sobre o desempenho dos candidatos, permitindo a identificação de padrões que indiquem o impacto dessas variáveis na prova.
+
+\subsection{Visualização analítica dos resultados obtidos} 
+
+A etapa de visualização dos dados corresponde ao desenvolvimento de um Minimum Viable Product (MVP), que representa a interface visual dos resultados deste trabalho, permitindo a análise de provas de múltipla escolha do mesmo formato das provas do ENEM. Nesse contexto, busca-se viabilizar a aplicação e a expansão dos conceitos analisados no ENEM para outras avaliações.
+
+Para seu desenvolvimento, foram reutilizados os programas criados para a análise do formato do ENEM, apresentados nas subseções ~\ref{sec:procedimento-extracao-analise-dados} , ~\ref{sec:tempo-leitura}, ~\ref{sec:eficacia-distratores}, ~\ref{sec:classificacao-formalidade}, ~\ref{sec:analise-posicao-questoes}, ~\ref{sec:qtd-palavras-imagens} e ~\ref{sec:avaliacao-impacto-variaveis}.
+Esses programas sofreram adaptações conforme a identificacamos as necessidade de transformas os parâmetros \textit{hard-coded} em \textit{inputs} do usuário.
+
+A Figura ~\ref{fig:fluxograma-mvp} mostra um fluxograma que apresenta o funcionamento do MVP, destacando a relação entre as entradas, as etapas de processamento e a geração dos resultados.
+
+\begin{figure*}[htb]
+    \centering
+     \includegraphics[scale=0.15]{fluxogramaMVP.jpeg}
+    \caption{Fluxograma da prototipação do MVP}
+    \label{fig:fluxograma-mvp}
+\end{figure*}
+Para a obtenção desses resultados, serão utilizadas as mesmas variáveis estruturais empregadas na análise do ENEM, agora aplicadas à prova fornecida como entrada no sistema.
+
+\subsubsection{Resultados esperados}
+\mbox{}\\ 
+Nesta seção são apresentados os resultados esperados a partir do desenvolvimento e da aplicação do MVP proposto. Busca-se demonstrar as informações e análises que serão geradas pelo sistema, evidenciando como os dados extraídos e processados poderão contribuir para a interpretação de características estruturais das avaliações e sua possível relação com o desempenho dos participantes.
+
+\paragraph{Visualizações gráficas}
+\mbox{}\\
+
+A saída gráfica do MVP será composta pela visualização de métricas relacionadas à prova analisada. Serão utilizados gráficos de pizza para representar a proporção de questões com imagens e gráficos, bem como a distribuição estimada entre o tempo de leitura e resolução da prova. O grau de formalidade das questões será apresentado por meio de gráfico de colunas. Além disso, serão exibidos indicadores relacionados aos padrões de distratores presentes nas alternativas.
+%(DUVIDA NUNO: nao sei escrever com mais clareza que info será essa dos distratores, dps que nuno escrever a parte dele eu melhoro)%
+
+\paragraph{Análise de correlação entre variáveis estruturais e desempenho}
+\mbox{}\\
+
+Com base na análise realizada na subseção ~\ref{sec:avaliacao-impacto-variaveis}, e nas métricas obtidas nas demais seções, serão identificadas associações estatísticas entre características estruturais da prova e o desempenho dos candidatos no ENEM.
+
+A partir desses resultados, o MVP utilizará as mesmas variáveis estruturais extraídas de uma prova fornecida como entrada, e retornará as métricas e suas respectivas influências no desempenho do estudante.
+
+Ressalta-se que essa estimativa não corresponde a uma previsão direta do desempenho dos candidatos, mas sim a uma inferência baseada em padrões observados no ENEM, permitindo identificar indícios de maior ou menor complexidade das questões.
+
+Para essa previsão, o sistema considerará combinações entre as variáveis estruturais, possibilitando uma análise mais abrangente dos fatores que podem estar associados ao desempenho.
+
+Dessa forma, o MVP poderá fornecer subsídios para que professores e elaboradores de provas avaliem características estruturais de suas avaliações, contribuindo para ajustes que tornem o nível de dificuldade mais adequado aos objetivos propostos.
+
+O código-fonte completo do projeto, incluindo os \textit{scripts} de extração, análise, dados processados e MVP, está disponível publicamente no repositório GitHub do projeto\footnote{\url{https://github.com/beatrizmanaia26/TCC-DesempenhoEnem}}.
+%------------------------------------------------------------------------------------------------------5
+\section{Resultados e discussões}  %TODO: CORRIGIR!!!!!!!!!!
+Atualmente, encontra-se em desenvolvimento a implementação de um código responsável pela leitura de provas do ENEM, as quais apresentam delimitações estruturais bem definidas para identificação das questões, geralmente indicadas pela expressão “QUESTÃO (número)”. A partir dessa estrutura, utiliza-se a biblioteca \textit{pdfplumber} para identificar a quantidade de questões e calcular métricas como o número de palavras por item.
+
+Entretanto, o código ainda se encontra em fase de consolidação e aprimoramento, uma vez que, nos testes realizados até o momento, nem todos os casos retornam resultados precisos, especialmente em situações que envolvem variações de formatação nos documentos analisados.
+
+\section{Referências}
+\printbibliography[heading=none]
+\end{document}
