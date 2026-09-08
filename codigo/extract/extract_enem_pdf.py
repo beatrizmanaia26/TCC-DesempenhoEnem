@@ -670,14 +670,14 @@ def main() -> None:
         "input",
         type=Path,
         nargs="?",
-        default=Path("enems"),
-        help="PDF ou pasta com PDFs. Padrão: enems",
+        default=Path("../../documentacao/enems"),
+        help="PDF ou pasta com PDFs. Padrão: ../../documentacao/enems",
     )
     parser.add_argument(
         "--out-dir",
         type=Path,
-        default=Path("extracted"),
-        help="Diretório de saída. Padrão: extracted",
+        default=Path("../../dados/enems_json_md"),
+        help="Diretório de saída. Padrão: ../../dados/enems_json_md",
     )
     args = parser.parse_args()
 

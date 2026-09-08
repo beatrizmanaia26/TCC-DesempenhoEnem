@@ -1,5 +1,34 @@
 #!/usr/bin/env python3
 """
+Script de Análise de Tempo de Leitura do ENEM
+
+Este script foi atualizado para funcionar com a nova estrutura de pastas.
+
+COMO USAR:
+
+1. Rodar de qualquer lugar (com paths padrão):
+   cd /Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem/codigo/analise
+   python3 analyze_reading_time.py
+
+2. Rodar com caminho customizado:
+   python3 analyze_reading_time.py /caminho/para/enems_json_md --out-dir /caminho/para/output
+
+3. Rodar silenciosamente:
+   python3 analyze_reading_time.py -s
+
+PATHS PADRÃO:
+- Input:  ../../dados/enems_json_md
+- Output: ../../outputs/tempo_leitura
+
+REQUISITOS:
+- Python 3.7+
+- Nenhuma biblioteca externa (usa apenas stdlib: json, pathlib, argparse)
+
+OUTPUTS:
+- JSON com análise detalhada por questão
+- Markdown com resumo formatado
+- Arquivo de comparativo entre ENEMs
+
 Análise da relação entre tempo médio de leitura das questões e tempo de resolução da prova.
 
 Referências:
@@ -14,6 +43,7 @@ Referências:
 import argparse
 import json
 from pathlib import Path
+
 
 VELOCIDADE_LEITURA_CPM = 1100  # caracteres/min (Messias et al., 2008)
 
@@ -430,12 +460,12 @@ def main():
         description="Analisa tempo de leitura vs. resolução das provas do ENEM.",
     )
     parser.add_argument(
-        "input", nargs="?", default="enems_json_md",
-        help="JSON ou diretório com JSONs extraídos (padrão: enems_json_md)",
+        "input", nargs="?", default="../../dados/enems_json_md",
+        help="JSON ou diretório com JSONs extraídos (padrão: ../../dados/enems_json_md)",
     )
     parser.add_argument(
-        "--out-dir", default="analise_tempo",
-        help="Diretório de saída (padrão: analise_tempo)",
+        "--out-dir", default="../../outputs/tempo_leitura",
+        help="Diretório de saída (padrão: ../../outputs/tempo_leitura)",
     )
     parser.add_argument(
         "--silencioso", "-s", action="store_true",

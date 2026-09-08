@@ -1,4 +1,35 @@
 """
+Script de Análise de Formalismo do ENEM
+
+Este script foi atualizado para funcionar com a nova estrutura de pastas.
+
+COMO USAR:
+
+1. Rodar de qualquer lugar (com paths padrão):
+   cd /Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem/codigo/analise
+   python3 analyze_formality.py
+
+PATHS PADRÃO:
+- Input:  ../../dados/enems_json_md
+- Output: Modifica os JSONs originais adicionando campos de formalidade
+
+REQUISITOS:
+- Python 3.7+
+- torch (pip install torch)
+- transformers (pip install transformers)
+
+INSTALAÇÃO DE DEPENDÊNCIAS:
+pip install torch transformers
+
+OUTPUTS:
+Os seguintes campos são adicionados em cada questão dos JSONs originais:
+- formal_score (0.0 a 1.0): probabilidade de ser formal
+- informal_score (0.0 a 1.0): probabilidade de ser informal
+- classificacao_formalidade: "formal" ou "informal" (baseado no maior score)
+
+MODELO UTILIZADO:
+- s-nlp/xlmr_formality_classifier (XLM-RoBERTa para classificação multilíngue)
+
 Análise de Formalismo de Questões do ENEM usando XLM-RoBERTa
 Utiliza o modelo 's-nlp/xlmr_formality_classifier' para classificar
 o texto de cada questão do ENEM como formal ou informal.
@@ -19,6 +50,7 @@ from pathlib import Path
 
 import torch
 from transformers import XLMRobertaTokenizerFast, XLMRobertaForSequenceClassification
+
 
 
 def load_model():
@@ -232,8 +264,8 @@ def process_enem_json_inplace(json_path, tokenizer, model):
 def main():
     """Função principal que processa todos os JSONs do ENEM e adiciona formalidade diretamente neles."""
     
-    # Diretório base dos JSONs
-    base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "enems_json_md")
+    # Diretório base dos JSONs 
+    base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../dados/enems_json_md")
     
     # Encontrar todos os arquivos JSON
     json_files = sorted(glob.glob(os.path.join(base_dir, "*", "*.json")))
