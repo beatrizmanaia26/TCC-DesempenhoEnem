@@ -584,7 +584,7 @@ def gerar_metricas_questao(df_combinado: pd.DataFrame) -> pd.DataFrame:
     Usa caracteres INDIVIDUAIS de cada questão, não o total da prova
     """
     df_questoes = cast(pd.DataFrame, df_combinado[[
-        'ano', 'dia', 'area', 'co_prova ', 'posicao',
+        'ano', 'dia', 'area', 'co_prova', 'posicao',
         'caracteres_questao_individual',
         'porcentagem_acerto_questao', 'dificuldade_tri'
     ]].copy())
@@ -788,7 +788,7 @@ def _construir_entrada_tipo_1_3(tipo_label, area, r_valor, pval_valor, qtd_valor
     elif not p_sig:
         conclusao = f'Não significativo (p={pval_valor:.4f})'
     else:
-        conclusao = 'Não impacta significativamente'
+        conclusao = 'Impacta significativamente'
     
     ref_dados = f"r={r_valor:.3f}, p={pval_valor:.4f}, n={qtd_valor}" if tem_r and tem_p else "Dados insuficientes"
     
