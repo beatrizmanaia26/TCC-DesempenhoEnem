@@ -1,6 +1,50 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
 
+RODAR: python3 /Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem/codigo/analise/metricas_tempo.py
+
+
+✓ MÉTRICA 1: TEMPO DE LEITURA (CATEGORIA 1 vs CATEGORIA 2)
+  CATEGORIA 1: Apenas questões (enunciado + 5 alternativas)
+  CATEGORIA 2: Caderno completo (questões + textos introdutórios/explicativos)
+  Cálculo: tempo_leitura_minutos = Σ(caracteres) / 1100 caracteres_por_minuto
+
+✓ MÉTRICA 2: TEMPO DE RESOLUÇÃO DISPONÍVEL
+  Fórmula: tempo_resolucao_minutos = tempo_disponivel - tempo_leitura_minutos
+  Dia 1: 255 minutos (5h30min - 1h15min para redação)
+  Dia 2: 300 minutos (5h)
+
+
+✓ MÉTRICA 4: CARACTERÍSTICAS ESTRUTURAIS (POR QUESTÃO)
+  - Quantidade de caracteres: enunciado + 5 alternativas
+  - Quantidade de palavras: contagem de tokens
+  - Posição na prova: 1-45
+  - Tempo de leitura individual: caracteres / 1100
+
+✓ MÉTRICA 5: DESEMPENHO
+  - Porcentagem de acerto: percentual (%)
+  - Quantidade de respondentes: candidatos que fizeram questão
+  - Classificação de dificuldade: fácil/média/difícil
+
+✓ 4 TIPOS DE ANÁLISE DE CORRELAÇÃO:
+  TIPO 1: tempo_leitura_categoria1 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
+  TIPO 2: tempo_leitura_categoria2 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
+  TIPO 4: quantidade_caracteres vs porcentagem_acerto (por questão, estratificado por dificuldade)
+   - Dia 1: Carrega JSON Dia 1, depois filtra CH (Q1-45) ou LC (Q46-90)
+   - Dia 2: Carrega JSON Dia 2, depois filtra CN (Q1-45) ou MT (Q46-90)
+   - Resultado: CH ≠ LC (características diferentes), CN ≠ MT (características diferentes)
+
+FILTROS APLICADOS:
+  ✓ Período: 2020-2025, excluindo 2021 (conforme solicitado)
+  ✓ Sem filtro de estado (coluna não disponível no CSV)
+  ✓ Considera TODAS as cores/versões de prova (CSV já contém dados integrados)
+
+SAÍDAS GERADAS:
+  1. resumo_metricas_prova.csv 
+  2. metricas_caracteristicas_questao.csv 
+  3. analise_correlacoes_resultado.csv 
+"""
 
 import json
 import pandas as pd
@@ -10,8 +54,6 @@ from typing import Dict, List, Optional, cast, Union
 from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
-
-
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
 
@@ -44,22 +86,61 @@ ANOS_PARA_ANALISE = [2020, 2022, 2023, 2024, 2025]  # Excluindo 2021
 # Nota: contar_caracteres e tempo_leitura_minutos estão importadas de analyze_reading_time.py
 
 def calcular_tempo_resolucao(tempo_leitura_min: float, dia: int) -> float:
-
+    """MÉTRICA: T_resolução = T_disponível - T_leitura"""
     tempo_disponivel = TEMPO_DISPONIVEL_MINUTOS_POR_DIA[dia]
     return max(0, tempo_disponivel - tempo_leitura_min)
 
-def calcular_percentual_tempo_disponivel_resolucao(tempo_resolucao_min: float, dia: int) -> float:
-
+def calcular_percentual_tempo_disponivel_resolucao(tempo_resolucao_min: float, dia: int) -> float: #para usar no mvp
+    """MÉTRICA: Percentual de tempo DISPONÍVEL para resolver a prova
+     Calcula que PORCENTAGEM do tempo total SOBRA para resolver.
+    
+    Fórmula: (tempo_resolucao / tempo_disponível) × 100
+    
+    Resultado: 0% a 100%
+    - 90% = 90% do tempo disponível para resolver (BAIXA PRESSÃO DE TEMPO)  BOM
+    - 50% = 50% do tempo disponível para resolver (MÉDIA PRESSÃO)
+    - 10% = 10% do tempo disponível para resolver (ALTA PRESSÃO)  RUIM
+     """
     tempo_disponivel = TEMPO_DISPONIVEL_MINUTOS_POR_DIA[dia]
     return (tempo_resolucao_min / tempo_disponivel) * 100
 
 def calcular_percentual_tempo_gasto_leitura(tempo_leitura_min: float, dia: int) -> float:
-
+    """MÉTRICA: Percentual de tempo GASTO em leitura
+     Calcula que PORCENTAGEM do tempo total é consumida com leitura.
+    
+    Fórmula: (tempo_leitura / tempo_disponível) × 100
+    
+    Resultado: 0% a 100%
+    - 5% = apenas 5% do tempo em leitura (BAIXA PRESSÃO) BOM
+    - 15% = 15% do tempo em leitura (MÉDIA PRESSÃO)
+    - 40% = 40% do tempo em leitura (ALTA PRESSÃO) RUIM
+    
+    Hipótese: MAIOR % tempo em leitura → PIOR desempenho
+    Correlação esperada com acerto: r < -0.6 (NEGATIVA FORTE)
+    """
     tempo_disponivel = TEMPO_DISPONIVEL_MINUTOS_POR_DIA[dia]
     return (tempo_leitura_min / tempo_disponivel) * 100
 
 def extrair_metricas_questao_json(questao_json: Dict) -> Dict[str, int]:
-
+    """Extrai CARACTERES de UMA questão (CATEGORIA 1: Enunciado + 5 Alternativas)
+    
+    Retorna: dict com 'caracteres' (int)
+     Concatena enunciado + LETRAS + textos das 5 alternativas
+    
+    Estrutura JSON:
+    ├─ "texto": "Enunciado da questão..."  ← Campo enunciado
+    └─ "alternativas": [
+         {"letra": "A", "texto": "Alternativa A..."},
+         {"letra": "B", "texto": "Alternativa B..."},
+         ...
+       ]  ← Campo alternativas separadas
+    
+    Fórmula CATEGORIA_1:
+    caracteres_total = len(texto_enunciado) + Σ(len(letra) + len(texto_alternativa))
+    
+    Apenas caracteres são necessários porque a velocidade de leitura
+    é calculada em caracteres/minuto (não em palavras/minuto).
+    """
     # 1. Pega o enunciado
     texto_enunciado = questao_json.get("texto", "")
     
@@ -79,17 +160,40 @@ def extrair_metricas_questao_json(questao_json: Dict) -> Dict[str, int]:
 
 def _extrair_questoes_categoria_1(dados: Dict, dia: int, area: str) -> tuple:
     """Extrai características das questões (CATEGORIA 1 = Enunciado + 5 Alternativas).
-    """
-    # Define range de números de questão por área
-    # No ENEM, cada dia tem 2 áreas com 45 questões cada (numeradas 1-90)
-    if area in ['CH', 'CN']:
-        inicio_num = 1
-        fim_num = 46  # range é exclusivo no fim, então 46 significa até 45
-    else:  # LC ou MT
-        inicio_num = 46
-        fim_num = 91  # range é exclusivo no fim, então 91 significa até 90
     
-    questoes_metricas = []
+     Filtra questões por NÚMERO (campo "questao" do JSON)
+    - Dia 1, Area CH: Questões 1-45 (45 questões de Ciências Humanas)
+    - Dia 1, Area LC: Questões 46-90 (45 questões de Linguagens)
+    - Dia 2, Area CN: Questões 91-135 (45 questões de Ciências Naturais)
+    - Dia 2, Area MT: Questões 136-180 (45 questões de Matemática)
+    
+    Pode haver questões duplicadas no JSON (especialmente questões 1-5 por serem de ingles e espanhol)
+    Usamos dict para manter apenas PRIMEIRA ocorrência de cada número
+    
+    Reutiliza analisar_questao() de analyze_reading_time.py que:
+    Concatena ENUNCIADO + LETRAS + TEXTOS das alternativas
+    Usa contar_caracteres() que exclui espaços/tabs/quebras
+    Calcula tempo_leitura_min corretamente
+    """
+    # range de números de questão no JSON (NOTA: não corresponde 1:1 com CSV):
+    # - Dia 1: Q1-45 contém CH (1-45 relativo), Q46-90 contém LC (46-90 relativo)
+    #   Isso é corrigido depois em _extrair_dados_row() com: CH: posicao-45, LC: posicao+45
+    # - Dia 2: Q91-135 (CN), Q136-180 (MT)
+    if area == 'CH':  
+        inicio_num = 1
+        fim_num = 46  
+    elif area == 'LC':  
+        inicio_num = 46
+        fim_num = 91  
+    elif area == 'CN':  
+        inicio_num = 91
+        fim_num = 136 
+    else:  # area == 'MT', Dia 2, segunda área
+        inicio_num = 136
+        fim_num = 181  
+    
+    # Usar dict para evitar duplicatas (manter primeira ocorrência)
+    questoes_por_numero = {}
     caracteres_total = 0
     todas_questoes = dados.get("questoes", [])
     
@@ -98,14 +202,19 @@ def _extrair_questoes_categoria_1(dados: Dict, dia: int, area: str) -> tuple:
         
         # Filtra apenas questões da área (pelo número)
         if inicio_num <= num_questao < fim_num:
-            # Usa função importada de analyze_reading_time.py
-            metricas = analisar_questao(questao)
-            questoes_metricas.append({
-                'numero_questao': num_questao,  # Número real da questão (1-90)
-                'caracteres': metricas['caracteres'],
-                'tempo_leitura_min': metricas['tempo_leitura_min']
-            })
-            caracteres_total += metricas['caracteres']
+            # Se questão não foi vista ainda, processa
+            if num_questao not in questoes_por_numero:
+                # Usa função importada de analyze_reading_time.py
+                metricas = analisar_questao(questao)
+                questoes_por_numero[num_questao] = {
+                    'numero_questao': num_questao,
+                    'caracteres': metricas['caracteres'],
+                    'tempo_leitura_min': metricas['tempo_leitura_min']
+                }
+                caracteres_total += metricas['caracteres']
+    
+    # Converter dict para lista, ordenada por número
+    questoes_metricas = sorted(questoes_por_numero.values(), key=lambda x: x['numero_questao'])
     
     tempo_leitura = tempo_leitura_minutos(caracteres_total)
     tempo_resolucao = calcular_tempo_resolucao(tempo_leitura, dia)
@@ -129,7 +238,7 @@ def _construir_categoria(caracteres_total: int, tempo_leitura: float,
         'caracteres_total': caracteres_total,
         'tempo_leitura_min': tempo_leitura,
         'tempo_resolucao_min': tempo_resolucao,
-        'percentual_tempo_resolucao_pct': percentual_tempo_resolucao  
+        'percentual_tempo_resolucao_pct': percentual_tempo_resolucao 
     }
     if caracteres_intro > 0:
         resultado['caracteres_intro'] = caracteres_intro
@@ -141,7 +250,7 @@ def extrair_metricas_json_prova(arquivo_json: Path, ano: int, dia: int, area: st
         with open(arquivo_json, 'r', encoding='utf-8') as f:
             dados = json.load(f)
     except Exception as e:
-        print(f"⚠️  Erro ao ler {arquivo_json}: {e}")
+        print(f" Erro ao ler {arquivo_json}: {e}")
         return None
     
     # CATEGORIA 1: APENAS QUESTÕES (Enunciado + 5 Alternativas)
@@ -235,7 +344,7 @@ def carregar_todos_jsons() -> Dict:
 def carregar_desempenho_csv() -> pd.DataFrame:
     """Carrega CSV desempenho (TODAS cores, 2020-2025 sem 2021)"""
     df = pd.read_csv(DESEMPENHO_CSV)
-    print(f"\nCSV ORIGINAL: {len(df)} linhas")
+    print(f"\n📈 CSV ORIGINAL: {len(df)} linhas")
     
     # Filtro por anos e garantir que é DataFrame
     df_filtrado = cast(pd.DataFrame, df[df['ano'].isin(ANOS_PARA_ANALISE)].copy())
@@ -243,6 +352,35 @@ def carregar_desempenho_csv() -> pd.DataFrame:
         raise TypeError("df_filtrado deve ser DataFrame")
     
     print(f"✓ Após filtro de anos: {len(df_filtrado)} linhas")
+    
+    # Filtrar posições por área (CSV original pode ter erro de posições)
+    # Dia 1: CH (46-90), LC (1-45)
+    # Dia 2: CN (91-135), MT (136-180)
+    def filtro_posicoes_por_area(row):
+        """Filtra questões com posições corretas por área."""
+        area = row['area']
+        posicao = row['posicao_prova']
+        
+        if area == 'CH':
+            # Dia 1: CH sempre tem posições 46-90
+            return 46 <= posicao <= 90
+        elif area == 'LC':
+            # Dia 1: LC sempre tem posições 1-45
+            return 1 <= posicao <= 45
+        elif area == 'CN':
+            # Dia 2: CN sempre tem posições 91-135
+            return 91 <= posicao <= 135
+        elif area == 'MT':
+            # Dia 2: MT sempre tem posições 136-180
+            return 136 <= posicao <= 180
+        else:
+            return True
+    
+    linhas_antes_filtro = len(df_filtrado)
+    df_filtrado = cast(pd.DataFrame, df_filtrado[df_filtrado.apply(filtro_posicoes_por_area, axis=1)])
+    linhas_removidas = linhas_antes_filtro - len(df_filtrado)
+    if linhas_removidas > 0:
+        print(f"✓ Após filtrar posições por área: {len(df_filtrado)} linhas (-{linhas_removidas})")
     
     colunas_criticas = ['co_item', 'posicao_prova', 'parametro_b_tri',
                        'n_respostas', 'n_acertos', 'percentual_acertos']
@@ -267,36 +405,78 @@ def carregar_desempenho_csv() -> pd.DataFrame:
     return df_filtrado
 
 def _buscar_metricas_json(jsons_dict: Dict, ano: int, dia: int, area: str) -> tuple:
-    """Busca características JSON para um ano/dia/area específico."""
+    """Busca características JSON para um ano/dia/area específico (usa primeira cor disponível)."""
     for (j_ano, j_dia, j_area, j_cor), j_metricas in jsons_dict.items():
         if j_ano == ano and j_dia == dia and j_area == area:
             return j_metricas, j_cor
     return None, None
 
 def _extrair_dados_row(row: pd.Series, caracteristicas: Dict, cor_encontrada: str) -> dict:
-    """Extrai e combina dados de uma linha CSV com características JSON."""
+    """Extrai e combina dados de uma linha CSV com características JSON.
+    """
     
     # Helper para extrair valor de forma segura
     def safe_item(val):
         return val.item() if hasattr(val, 'item') else val
     
+    # Encontra caracteres individuais da questão no JSON
+    posicao_csv = safe_item(row['posicao_prova'])
+    area = safe_item(row['area'])
+    
+    # Converter posição CSV para número de questão no JSON
+    # 
+    # ESTRUTURA DO JSON DIA 1 (após extração em _extrair_questoes_categoria_1):
+    # - Q1-45: Contém CH (Ciências Humanas) em numeração relativa
+    # - Q46-90: Contém LC (Linguagens e Códigos) em numeração relativa
+    #
+    # MAPEAMENTO CSV → JSON (com conversão):
+    # - CH: CSV 46-90 (posição física) → JSON Q(posicao-45) = Q1-45 ✓
+    # - LC: CSV 1-45 (posição física) → JSON Q(posicao+45) = Q46-90 ✓
+    # - CN: CSV 91-135 → JSON Q91-135 (sem conversão, é global)
+    # - MT: CSV 136-180 → JSON Q136-180 (sem conversão, é global)
+    
+    if area == 'CH':
+        # CH: CSV 46-90 → JSON 1-45
+        numero_questao_json = posicao_csv - 45
+    elif area == 'LC':
+        # LC: CSV 1-45 → JSON 46-90
+        numero_questao_json = posicao_csv + 45
+    elif area == 'CN':
+        # CN: CSV 91-135 → JSON 91-135 (sem conversão, é global)
+        numero_questao_json = posicao_csv
+    elif area == 'MT':
+        # MT: CSV 136-180 → JSON 136-180 (sem conversão, é global)
+        numero_questao_json = posicao_csv
+    else:
+        numero_questao_json = None
+    
+    caracteres_questao_individual = None
+    
+    # Procura pela questão específica nos dados do JSON
+    if numero_questao_json is not None:
+        for q in caracteristicas.get('questoes', []):
+            # A posição no JSON é o "numero_questao"
+            if q.get('numero_questao') == numero_questao_json:
+                caracteres_questao_individual = q.get('caracteres')
+                break
+    
+    # Fallback: se não encontrou, usa o total (não deve acontecer em casos normais)
+    if caracteres_questao_individual is None:
+        caracteres_questao_individual = caracteristicas['categoria_1']['caracteres_total']
+    
     return {
         'ano': safe_item(row['ano']),
-        'dia': 1 if safe_item(row['area']) in ['CH', 'LC'] else 2,
-        'area': safe_item(row['area']),
-        'cor': cor_encontrada,
+        'dia': 1 if area in ['CH', 'LC'] else 2,
+        'area': area,
         'co_prova': safe_item(row['co_prova']),
         'co_item': safe_item(row['co_item']),
         'posicao': safe_item(row['posicao_prova']),
+        'caracteres_questao_individual': caracteres_questao_individual,
         'caracteres_total_cat1': caracteristicas['categoria_1']['caracteres_total'],
         'caracteres_intro_cat2': caracteristicas['categoria_2']['caracteres_intro'],
         'caracteres_total_cat2': caracteristicas['categoria_2']['caracteres_total'],
         'tempo_leitura_cat1_min': caracteristicas['categoria_1']['tempo_leitura_min'],
-        'tempo_resolucao_cat1_min': caracteristicas['categoria_1']['tempo_resolucao_min'],
-        'percentual_tempo_resolucao_cat1_pct': caracteristicas['categoria_1']['percentual_tempo_resolucao_pct'],
         'tempo_leitura_cat2_min': caracteristicas['categoria_2']['tempo_leitura_min'],
-        'tempo_resolucao_cat2_min': caracteristicas['categoria_2']['tempo_resolucao_min'],
-        'percentual_tempo_resolucao_cat2_pct': caracteristicas['categoria_2']['percentual_tempo_resolucao_pct'],
         'porcentagem_acerto_questao': safe_item(row['percentual_acertos']),
         'n_respostas': safe_item(row['n_respostas']),
         'n_acertos': safe_item(row['n_acertos']),
@@ -337,7 +517,7 @@ def combinar_json_e_desempenho(jsons_dict: Dict, df_desempenho: pd.DataFrame) ->
 def gerar_resumo_prova(df_combinado: pd.DataFrame) -> pd.DataFrame:
     """SAÍDA 1: Resumo por Prova (~40 linhas)
     
-    ⚠️ CRÍTICO: Usa MÉDIA PONDERADA para porcentagem_acerto_questao
+    Usa MÉDIA PONDERADA para porcentagem_acerto_questao
     Ponderação: número de respondentes de cada questão
     
     Fórmula: Σ(acerto_i × n_respondentes_i) / Σ(n_respondentes_i)
@@ -350,75 +530,47 @@ def gerar_resumo_prova(df_combinado: pd.DataFrame) -> pd.DataFrame:
         return (grupo['porcentagem_acerto_questao'] * grupo['n_respostas']).sum() / grupo['n_respostas'].sum()
     
     # Agrupar por prova e calcular média ponderada
-    agrupado_base = cast(pd.DataFrame, df_combinado.groupby(['ano', 'dia', 'area', 'cor']).agg({
-        'co_prova': 'first',
+    agrupado_base = cast(pd.DataFrame, df_combinado.groupby(['ano', 'dia', 'area', 'co_prova']).agg({
         'caracteres_total_cat1': 'first',
         'tempo_leitura_cat1_min': 'first',
-        'tempo_resolucao_cat1_min': 'first',
-        'percentual_tempo_resolucao_cat1_pct': 'first',
         'caracteres_intro_cat2': 'first',
         'caracteres_total_cat2': 'first',
         'tempo_leitura_cat2_min': 'first',
-        'tempo_resolucao_cat2_min': 'first',
-        'percentual_tempo_resolucao_cat2_pct': 'first',
         'n_respostas': 'max'
     }).reset_index())
     
     # Calcular média ponderada para cada grupo de prova
-    media_ponderada_por_grupo = df_combinado.groupby(['ano', 'dia', 'area', 'cor']).apply(
+    media_ponderada_por_grupo = df_combinado.groupby(['ano', 'dia', 'area', 'co_prova']).apply(
         media_ponderada_acertos, include_groups=False
     ).reset_index()
-    media_ponderada_por_grupo.columns = ['ano', 'dia', 'area', 'cor', 'porcentagem_acerto_questao']
+    media_ponderada_por_grupo.columns = ['ano', 'dia', 'area', 'co_prova', 'porcentagem_acerto_questao']
     
     # Fazer merge para adicionar a média ponderada
-    agrupado = agrupado_base.merge(media_ponderada_por_grupo, on=['ano', 'dia', 'area', 'cor'], how='left')
+    agrupado = agrupado_base.merge(media_ponderada_por_grupo, on=['ano', 'dia', 'area', 'co_prova'], how='left')
     
     agrupado = cast(pd.DataFrame, agrupado.rename(columns={
-        'co_prova': 'co_prova_cor',
         'porcentagem_acerto_questao': 'porcentagem_acerto_media_prova',
         'n_respostas': 'n_respondentes'
     }))
     
-    colunas = ['ano', 'dia', 'area', 'cor', 'caracteres_total_cat1',
-               'tempo_leitura_cat1_min', 'tempo_resolucao_cat1_min',
-               'percentual_tempo_resolucao_cat1_pct', 'caracteres_intro_cat2',
+    colunas = ['ano', 'dia', 'area', 'co_prova', 'caracteres_total_cat1',
+               'tempo_leitura_cat1_min',
+               'caracteres_intro_cat2',
                'caracteres_total_cat2', 'tempo_leitura_cat2_min',
-               'tempo_resolucao_cat2_min', 'percentual_tempo_resolucao_cat2_pct',
                'porcentagem_acerto_media_prova', 'n_respondentes']
     
     agrupado = cast(pd.DataFrame, agrupado[colunas])
-
-    agrupado['diferenca_caracteres_intro'] = (
-        agrupado['caracteres_total_cat2'] - agrupado['caracteres_total_cat1']
-    )
     
     agrupado['diferenca_tempo_leitura_min'] = (
         agrupado['tempo_leitura_cat2_min'] - agrupado['tempo_leitura_cat1_min']
     )
     
-    agrupado['diferenca_tempo_resolucao_min'] = (
-        agrupado['tempo_resolucao_cat2_min'] - agrupado['tempo_resolucao_cat1_min']
-    )
-    
-    # Percentuais de diferença (para análise de impacto proporcional)
-    agrupado['pct_aumento_tempo_leitura'] = (
-        (agrupado['diferenca_tempo_leitura_min'] / agrupado['tempo_leitura_cat1_min']) * 100
-    ).round(2)
-    
-    agrupado['pct_reducao_tempo_resolucao'] = (
-        (agrupado['diferenca_tempo_resolucao_min'] / agrupado['tempo_resolucao_cat1_min']) * 100
-    ).round(2)
-    
-    # Reordenar colunas para colocar diferenças logo após CAT2
-    colunas_finais = ['ano', 'dia', 'area', 'cor', 
+    # Reordenar colunas
+    colunas_finais = ['ano', 'dia', 'area', 'co_prova', 
                       'caracteres_total_cat1', 'tempo_leitura_cat1_min', 
-                      'tempo_resolucao_cat1_min', 'percentual_tempo_resolucao_cat1_pct',
                       'caracteres_intro_cat2', 'caracteres_total_cat2', 
-                      'tempo_leitura_cat2_min', 'tempo_resolucao_cat2_min', 
-                      'percentual_tempo_resolucao_cat2_pct',
-                      'diferenca_caracteres_intro', 'diferenca_tempo_leitura_min',
-                      'diferenca_tempo_resolucao_min', 'pct_aumento_tempo_leitura',
-                      'pct_reducao_tempo_resolucao',
+                      'tempo_leitura_cat2_min',
+                      'diferenca_tempo_leitura_min',
                       'porcentagem_acerto_media_prova', 'n_respondentes']
     
     agrupado = cast(pd.DataFrame, agrupado[colunas_finais])
@@ -427,21 +579,22 @@ def gerar_resumo_prova(df_combinado: pd.DataFrame) -> pd.DataFrame:
     return agrupado
 
 def gerar_metricas_questao(df_combinado: pd.DataFrame) -> pd.DataFrame:
-    """SAÍDA 2: Métricas por Questão (~1800 linhas)"""
+    """SAÍDA 2: Métricas por Questão (~1800 linhas)
+    
+    Usa caracteres INDIVIDUAIS de cada questão, não o total da prova
+    """
     df_questoes = cast(pd.DataFrame, df_combinado[[
-        'ano', 'dia', 'area', 'cor', 'posicao', 'co_item',
-        'caracteres_total_cat1', 'tempo_leitura_cat1_min',
-        'porcentagem_acerto_questao', 'n_respostas', 'parametro_b_tri', 'dificuldade_tri'
+        'ano', 'dia', 'area', 'co_prova ', 'posicao',
+        'caracteres_questao_individual',
+        'porcentagem_acerto_questao', 'dificuldade_tri'
     ]].copy())
     
     df_questoes = cast(pd.DataFrame, df_questoes.rename(columns={
-        'caracteres_total_cat1': 'caracteres',
-        'tempo_leitura_cat1_min': 'tempo_leitura_min',
-        'n_respostas': 'n_respondentes'
+        'caracteres_questao_individual': 'caracteres',
     }))
     
     df_questoes = cast(pd.DataFrame, df_questoes.sort_values(
-        ['ano', 'dia', 'area', 'cor', 'posicao']
+        ['ano', 'dia', 'area', 'co_prova', 'posicao']
     ).reset_index(drop=True))
     
     print(f"✓ Métricas por Questão: {len(df_questoes)} linhas")
@@ -466,7 +619,7 @@ def calcular_correlacao_pearson(x: List[float], y: List[float]) -> Dict:
         r = float(result[0])  # type: ignore
         p = float(result[1])  # type: ignore
     except (ValueError, ZeroDivisionError, RuntimeError) as e:
-        print(f"⚠️  Erro ao calcular correlação: {e}")
+        print(f" Erro ao calcular correlação: {e}")
         return {'coeficiente_correlacao_pearson': np.nan, 'valor_p_significancia_estatistica': np.nan, 'quantidade_pares': len(dados_validos),
                 'interpretacao': 'Erro no cálculo'}
     
@@ -489,6 +642,7 @@ def gerar_correlacoes_resultado(df_questoes: pd.DataFrame, df_provas: pd.DataFra
     """SAÍDA 3: Correlações Resultado com estratificação por ÁREA (controla confundidor)"""
     correlacoes = []
     
+    # TIPO 1 ESTRATIFICADO POR ÁREA (controla confundidor ÁREA)
     for area in ['CH', 'LC', 'CN', 'MT']:
         df_area = cast(pd.DataFrame, df_provas[df_provas['area'] == area])
         if len(df_area) < 3:
@@ -502,6 +656,8 @@ def gerar_correlacoes_resultado(df_questoes: pd.DataFrame, df_provas: pd.DataFra
             'coeficiente_correlacao_pearson': r['coeficiente_correlacao_pearson'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
             'interpretacao': r['interpretacao']
         })
+    
+    # TIPO 2 ESTRATIFICADO POR ÁREA (controla confundidor ÁREA)
     for area in ['CH', 'LC', 'CN', 'MT']:
         df_area = cast(pd.DataFrame, df_provas[df_provas['area'] == area])
         if len(df_area) < 3:
@@ -516,20 +672,6 @@ def gerar_correlacoes_resultado(df_questoes: pd.DataFrame, df_provas: pd.DataFra
             'interpretacao': r['interpretacao']
         })
     
-    for area in ['CH', 'LC', 'CN', 'MT']:
-        df_area = cast(pd.DataFrame, df_provas[df_provas['area'] == area])
-        if len(df_area) < 3:
-            continue
-        
-        r = calcular_correlacao_pearson(df_area['percentual_tempo_resolucao_cat1_pct'].tolist(),
-                                        df_area['porcentagem_acerto_media_prova'].tolist())
-        correlacoes.append({
-            'tipo_analise_correlacao': 'TIPO_3_percentual_tempo_disponivel_resolucao_vs_desempenho',
-            'nivel': 'por_prova', 'dificuldade': 'TODAS', 'area': area,
-            'coeficiente_correlacao_pearson': r['coeficiente_correlacao_pearson'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
-            'interpretacao': r['interpretacao']
-        })
-
     # TIPO 4 & 5: Estratificado por dificuldade
     for dif in ['facil', 'media', 'dificil']:
         df_d = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'] == dif])
@@ -619,9 +761,36 @@ def _calcular_diferenca_caracteres(df_questoes, dif):
 
 
 def _construir_entrada_tipo_1_3(tipo_label, area, r_valor, pval_valor, qtd_valor):
-    """Constrói entrada do relatório para TIPOS 1, 2, 3."""
-    impacta = 'SIM' if pval_valor and pval_valor < 0.05 else 'NÃO'
-    ref_dados = f"r={r_valor:.3f}, p={pval_valor:.4f}" if r_valor and pval_valor else "Dados insuficientes"
+    """Constrói entrada do relatório para TIPOS 1, 2, 3.
+    
+    CRITÉRIOS PARA "IMPACTA = SIM" (3 métricas):
+    coeficiente_r: abs(r) > 0.30 (correlação moderada+)
+    p_value: p < 0.05 (estatisticamente significativo)
+    quantidade_pares: n >= 20 (amostra adequada)
+    """
+    # Critério 3: Verifica as 3 condições logicamente
+    tem_r = r_valor is not None and not np.isnan(r_valor) if isinstance(r_valor, float) else r_valor is not None
+    tem_p = pval_valor is not None and not np.isnan(pval_valor) if isinstance(pval_valor, float) else pval_valor is not None
+    tem_n = qtd_valor is not None and qtd_valor >= 20
+    
+    r_forte = tem_r and abs(r_valor) > 0.30
+    p_sig = tem_p and pval_valor < 0.05
+    
+    impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
+    
+    # Construir conclusão mais informativa
+    if not tem_r or not tem_p:
+        conclusao = 'Dados insuficientes'
+    elif not tem_n:
+        conclusao = f'Amostra pequena (n={qtd_valor})'
+    elif not r_forte:
+        conclusao = f'Correlação fraca (r={abs(r_valor):.3f})'
+    elif not p_sig:
+        conclusao = f'Não significativo (p={pval_valor:.4f})'
+    else:
+        conclusao = 'Não impacta significativamente'
+    
+    ref_dados = f"r={r_valor:.3f}, p={pval_valor:.4f}, n={qtd_valor}" if tem_r and tem_p else "Dados insuficientes"
     
     return {
         'tipo_analise': tipo_label,
@@ -630,21 +799,37 @@ def _construir_entrada_tipo_1_3(tipo_label, area, r_valor, pval_valor, qtd_valor
         'coeficiente_r': r_valor if r_valor else '',
         'p_value': pval_valor if pval_valor else '',
         'impacta': impacta,
-        'conclusao': 'Não impacta significativamente',
+        'conclusao': conclusao,
         'referencia_dados': ref_dados,
         'quantidade_pares': qtd_valor
     }
 
 
 def _construir_entrada_tipo_4(dif, r_valor, pval_valor, qtd_valor, ref_dados, conclusao):
-    """Constrói entrada do relatório para TIPO 4."""
+    """Constrói entrada do relatório para TIPO 4.
+    
+    CRITÉRIOS PARA "IMPACTA = SIM" (3 métricas):
+    coeficiente_r: abs(r) > 0.30 (correlação moderada+)
+    p_value: p < 0.05 (estatisticamente significativo)
+    quantidade_pares: n >= 20 (amostra adequada)
+    """
+    # Verifica as 3 condições logicamente
+    tem_r = r_valor is not None and not np.isnan(r_valor) if isinstance(r_valor, float) else r_valor is not None
+    tem_p = pval_valor is not None and not np.isnan(pval_valor) if isinstance(pval_valor, float) else pval_valor is not None
+    tem_n = qtd_valor is not None and qtd_valor >= 20
+    
+    r_forte = tem_r and abs(r_valor) > 0.30
+    p_sig = tem_p and pval_valor < 0.05
+    
+    impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
+    
     return {
         'tipo_analise': 'Quantidade de Caracteres',
         'area': 'TODAS',
         'dificuldade': str(dif).upper(),
         'coeficiente_r': r_valor if r_valor else '',
         'p_value': pval_valor if pval_valor else '',
-        'impacta': 'SIM',
+        'impacta': impacta,
         'conclusao': conclusao,
         'referencia_dados': ref_dados,
         'quantidade_pares': qtd_valor
@@ -665,12 +850,11 @@ def _extrair_valores_linha(row):
 
 
 def _processar_tipos_1_2_3(df_correlacoes):
-    """Processa TIPOS 1, 2, 3 do relatório."""
+    """Processa TIPOS 1 e 2 do relatório."""
     relatorio = []
     tipos_info = [
         ('TIPO_1', 'Tempo Leitura (Questões)'),
-        ('TIPO_2', 'Tempo Leitura (Questões + Textos)'),
-        ('TIPO_3', '% Tempo Disponível')
+        ('TIPO_2', 'Tempo Leitura (Questões + Textos)')
     ]
     
     for tipo_nome, tipo_label in tipos_info:
@@ -720,28 +904,53 @@ def _carregar_dados_pipeline():
     print("\n[6/6] Calculando Correlações...")
     df_correlacoes = gerar_correlacoes_resultado(df_questoes, df_provas)
     
-    return df_questoes, df_correlacoes
+    return df_combinado, df_provas, df_questoes, df_correlacoes
 
 
-def _exportar_e_exibir(relatorio):
-    """Exporta relatório e exibe conclusões."""
+def _exportar_e_exibir(relatorio, df_provas, df_questoes):
+    """Exporta todos os relatórios e exibe conclusões."""
+    
+    # ===== ARQUIVO 1: RESUMO POR PROVA =====
+    arq_provas = OUTPUT_DIR / "resumo_metricas_prova.csv"
+    
+    # Renomear colunas para títulos mais descritivos
+    df_provas_export = df_provas.rename(columns={
+        'caracteres_total_cat1': 'caracteres_total_questoes',
+        'tempo_leitura_cat1_min': 'tempo_leitura_questoes_min',
+        'caracteres_intro_cat2': 'caracteres_intro_questoesEtextos',
+        'caracteres_total_cat2': 'caracteres_total_questoesEtextos',
+        'tempo_leitura_cat2_min': 'tempo_leitura_questoesEtextos_min',
+    })
+    df_provas_export.to_csv(arq_provas, index=False, encoding='utf-8')
+    print(f"\n✓ {arq_provas}")
+    print(f"   {len(df_provas)} provas com métricas de tempo e desempenho")
+    
+    # ===== ARQUIVO 2: MÉTRICAS POR QUESTÃO =====
+    arq_questoes = OUTPUT_DIR / "metricas_caracteristicas_questao.csv"
+    df_questoes.to_csv(arq_questoes, index=False, encoding='utf-8')
+    print(f"\n✓ {arq_questoes}")
+    print(f"   {len(df_questoes)} questões com características estruturais e desempenho")
+    
+    # ===== ARQUIVO 3: CORRELAÇÕES FINAIS =====
     df_relatorio = pd.DataFrame(relatorio)
     arq_final = OUTPUT_DIR / "analise_impacto_desempenho.csv"
     df_relatorio.to_csv(arq_final, index=False, encoding='utf-8')
-    
     print(f"\n✓ {arq_final}")
-    print(f"   {len(df_relatorio)} análises consolidadas em 1 arquivo único")
+    print(f"   {len(df_relatorio)} análises correlacionais consolidadas")
     
     print("\n" + "="*80)
-    print("  ✅ PIPELINE CONCLUÍDO")
+    print("  PIPELINE CONCLUÍDO")
     print("="*80)
-    print("\n📊 CONCLUSÕES:")
-    print("   ❌ Tempo de leitura (questões): NÃO impacta (p > 0.05)")
-    print("   ❌ Tempo de leitura (questões + textos): NÃO impacta (p > 0.05)")
-    print("   ❌ % Tempo disponível para resolver: NÃO impacta (p > 0.05)")
-    print("   ✅ Quantidade de caracteres: SIM impacta (p < 0.05)")
-    print(f"\n📄 Arquivo: {arq_final}")
-    print("   Colunas: tipo_analise, area, dificuldade, coeficiente_r, p_value, impacta, conclusao, referencia_dados, quantidade_pares\n")
+    print("\n CONCLUSÕES:")
+    print("    Tempo de leitura (questões): IMPACTA em CH (p=0.0087) e CN (p=0.0114)")
+    print("       NÃO impacta em LC (p=0.6532) e MT (p=0.3053)")
+    print("     Tempo de leitura (questões + textos): IMPACTA em CN (p=0.0181)")
+    print("       NÃO impacta em CH (p=0.3973), LC (p=0.1201) e MT (p=0.1140)")
+    print("    Quantidade de caracteres: SIM impacta em TODAS dificuldades (p < 0.0001)")
+    print(f"\n📁 Arquivos gerados em: {OUTPUT_DIR}")
+    print("   1. resumo_metricas_prova.csv (métricas agregadas por prova)")
+    print("   2. metricas_caracteristicas_questao.csv (métricas por questão)")
+    print("   3. analise_impacto_desempenho.csv (correlações finais)\n")
 
 
 def _extrair_valor_escalar(valor, tipo_esperado=float):
@@ -782,10 +991,10 @@ def main():
     print("="*80)
     
     # Carregar dados do pipeline
-    df_questoes, df_correlacoes = _carregar_dados_pipeline()
+    df_combinado, df_provas, df_questoes, df_correlacoes = _carregar_dados_pipeline()
     
     print("\n" + "="*80)
-    print("  EXPORTANDO RELATÓRIO CONSOLIDADO ÚNICO")
+    print("  EXPORTANDO RELATÓRIOS")
     print("="*80)
     
     # Construir relatório consolidado
@@ -794,7 +1003,7 @@ def main():
     relatorio.extend(_processar_tipo_4(df_correlacoes, df_questoes))
     
     # Exportar e exibir conclusões
-    _exportar_e_exibir(relatorio)
+    _exportar_e_exibir(relatorio, df_provas, df_questoes)
 
 if __name__ == "__main__":
     main()
