@@ -1,12 +1,12 @@
 tipo_analise,area,dificuldade,coeficiente_r,p_value,impacta,conclusao,referencia_dados,quantidade_pares
-Tempo Leitura (Questões),CH,TODAS,0.4447756801822838,0.049417965018367996,SIM,Impacta significativamente,"r=0.445, p=0.0494, n=20",20
-Tempo Leitura (Questões),LC,TODAS,0.10706986163573984,0.6532190492957357,NÃO,Correlação fraca (r=0.107),"r=0.107, p=0.6532, n=20",20
+Tempo Leitura (Questões),CH,TODAS,0.9287566719694824,3.460733481458368e-09,SIM,Impacta significativamente,"r=0.929, p=0.0000, n=20",20
+Tempo Leitura (Questões),LC,TODAS,0.69325376552826,0.0007010850418362391,SIM,Impacta significativamente,"r=0.693, p=0.0007, n=20",20
 Tempo Leitura (Questões),CN,TODAS,-0.5532379652565375,0.011396445139407787,SIM,Impacta significativamente,"r=-0.553, p=0.0114, n=20",20
 Tempo Leitura (Questões),MT,TODAS,0.2413589150323714,0.3052942579149516,NÃO,Correlação fraca (r=0.241),"r=0.241, p=0.3053, n=20",20
-Tempo Leitura (Questões + Textos),CH,TODAS,0.16958411868173545,0.47474922809253667,NÃO,Correlação fraca (r=0.170),"r=0.170, p=0.4747, n=20",20
-Tempo Leitura (Questões + Textos),LC,TODAS,0.35894956029870473,0.120128931006107,NÃO,Não significativo (p=0.1201),"r=0.359, p=0.1201, n=20",20
+Tempo Leitura (Questões + Textos),CH,TODAS,0.8946079313742364,1.0335072637402211e-07,SIM,Impacta significativamente,"r=0.895, p=0.0000, n=20",20
+Tempo Leitura (Questões + Textos),LC,TODAS,0.6783359686823537,0.001010673522092799,SIM,Impacta significativamente,"r=0.678, p=0.0010, n=20",20
 Tempo Leitura (Questões + Textos),CN,TODAS,-0.5224099247743331,0.01812652494909363,SIM,Impacta significativamente,"r=-0.522, p=0.0181, n=20",20
 Tempo Leitura (Questões + Textos),MT,TODAS,0.36458499864554494,0.11400341545970649,NÃO,Não significativo (p=0.1140),"r=0.365, p=0.1140, n=20",20
-Quantidade de Caracteres,TODAS,FACIL,0.15809640616059775,2.4239620978699493e-08,NÃO,Questões com MAIS caracteres acertam MAIS (+6.7%),Menos: 55.3% | Mais: 62.0% (+6.7%),1232
-Quantidade de Caracteres,TODAS,MEDIA,0.23209729557147957,2.19582006627841e-16,NÃO,Questões com MAIS caracteres acertam MAIS (+8.1%),Menos: 34.7% | Mais: 42.8% (+8.1%),1220
-Quantidade de Caracteres,TODAS,DIFICIL,0.19511653091667852,1.375668966426257e-11,NÃO,Questões com MAIS caracteres acertam MAIS (+4.4%),Menos: 24.3% | Mais: 28.7% (+4.4%),1180
+Quantidade de Caracteres,TODAS,FACIL,0.6564470902174233,9.322297136675851e-153,SIM,Questões com MAIS caracteres acertam MAIS (+19.7%),Menos: 49.4% | Mais: 69.1% (+19.7%),1232
+Quantidade de Caracteres,TODAS,MEDIA,0.7308973104779393,2.6434432800819854e-204,SIM,Questões com MAIS caracteres acertam MAIS (+16.9%),Menos: 30.7% | Mais: 47.6% (+16.9%),1220
+Quantidade de Caracteres,TODAS,DIFICIL,0.4243471841795935,8.938184042331116e-53,SIM,Questões com MAIS caracteres acertam MAIS (+7.6%),Menos: 22.9% | Mais: 30.5% (+7.6%),1180

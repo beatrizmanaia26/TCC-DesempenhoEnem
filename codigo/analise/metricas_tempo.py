@@ -31,7 +31,7 @@ RODAR: python3 /Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem/codigo/
   TIPO 1: tempo_leitura_categoria1 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
   TIPO 2: tempo_leitura_categoria2 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
   TIPO 4: quantidade_caracteres vs porcentagem_acerto (por questão, estratificado por dificuldade)
-   - Dia 1: Carrega JSON Dia 1, depois filtra CH (Q1-45) ou LC (Q46-90)
+   - Dia 1: Carrega JSON Dia 1, depois filtra LC (Q1-45) ou CH (Q46-90)
    - Dia 2: Carrega JSON Dia 2, depois filtra CN (Q1-45) ou MT (Q46-90)
    - Resultado: CH ≠ LC (características diferentes), CN ≠ MT (características diferentes)
 
@@ -176,15 +176,15 @@ def _extrair_questoes_categoria_1(dados: Dict, dia: int, area: str) -> tuple:
     Calcula tempo_leitura_min corretamente
     """
     # range de números de questão no JSON (NOTA: não corresponde 1:1 com CSV):
-    # - Dia 1: Q1-45 contém CH (1-45 relativo), Q46-90 contém LC (46-90 relativo)
+    # - Dia 1: Q1-45 contém LC (1-45 relativo), Q46-90 contém CH (46-90 relativo)
     #   Isso é corrigido depois em _extrair_dados_row() com: CH: posicao-45, LC: posicao+45
     # - Dia 2: Q91-135 (CN), Q136-180 (MT)
     if area == 'CH':  
-        inicio_num = 1
-        fim_num = 46  
-    elif area == 'LC':  
         inicio_num = 46
         fim_num = 91  
+    elif area == 'LC':  
+        inicio_num = 1
+        fim_num = 46  
     elif area == 'CN':  
         inicio_num = 91
         fim_num = 136 
@@ -426,8 +426,8 @@ def _extrair_dados_row(row: pd.Series, caracteristicas: Dict, cor_encontrada: st
     # Converter posição CSV para número de questão no JSON
     # 
     # ESTRUTURA DO JSON DIA 1 (após extração em _extrair_questoes_categoria_1):
-    # - Q1-45: Contém CH (Ciências Humanas) em numeração relativa
-    # - Q46-90: Contém LC (Linguagens e Códigos) em numeração relativa
+    # - Q1-45: Contém LC (Linguagens e Códigos) em numeração relativa
+    # - Q46-90: Contém CH (Ciências Humanas) em numeração relativa
     #
     # MAPEAMENTO CSV → JSON (com conversão):
     # - CH: CSV 46-90 (posição física) → JSON Q(posicao-45) = Q1-45 ✓
