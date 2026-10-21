@@ -27,7 +27,7 @@ RODAR: python3 /Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem/codigo/
   - Quantidade de respondentes: candidatos que fizeram questão
   - Classificação de dificuldade: fácil/média/difícil
 
-✓ 4 TIPOS DE ANÁLISE DE CORRELAÇÃO:
+✓ 4 TIPOS DE ANÁLISE DE CORRELAÇÃO (SPEARMAN - correlação por ranks não-paramétrica):
   TIPO 1: tempo_leitura_categoria1 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
   TIPO 2: tempo_leitura_categoria2 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
   TIPO 4: quantidade_caracteres vs porcentagem_acerto (por questão, estratificado por dificuldade)
@@ -45,6 +45,7 @@ SAÍDAS GERADAS:
   2. metricas_caracteristicas_questao.csv 
   3. analise_correlacoes_resultado.csv 
 """
+
 
 import json
 import pandas as pd
@@ -600,41 +601,42 @@ def gerar_metricas_questao(df_combinado: pd.DataFrame) -> pd.DataFrame:
     print(f"✓ Métricas por Questão: {len(df_questoes)} linhas")
     return df_questoes
 
-def calcular_correlacao_pearson(x: List[float], y: List[float]) -> Dict:
-    """Calcula correlação de Pearson entre X e Y"""
+def calcular_correlacao_spearman(x: List[float], y: List[float]) -> Dict:
+    """Calcula correlação de Spearman entre X e Y (correlação não-paramétrica por ranks)"""
     dados_validos = [(xi, yi) for xi, yi in zip(x, y)
                     if pd.notna(xi) and pd.notna(yi) and
                     not np.isinf(xi) and not np.isinf(yi)]
     
     if len(dados_validos) < 3:
-        return {'coeficiente_correlacao_pearson': np.nan, 'valor_p_significancia_estatistica': np.nan, 'quantidade_pares': len(dados_validos),
+        return {'coeficiente_correlacao_spearman': np.nan, 'valor_p_significancia_estatistica': np.nan, 'quantidade_pares': len(dados_validos),
                 'interpretacao': 'Dados insuficientes'}
     
     x_v = [d[0] for d in dados_validos]
     y_v = [d[1] for d in dados_validos]
     
     try:
-        result = stats.pearsonr(x_v, y_v)
-        # Usar indexação de tupla - PearsonRResult suporta __getitem__
-        r = float(result[0])  # type: ignore
+        result = stats.spearmanr(x_v, y_v)
+        # Usar indexação de tupla - SpearmanRResult suporta __getitem__
+        rho = float(result[0])  # type: ignore
         p = float(result[1])  # type: ignore
     except (ValueError, ZeroDivisionError, RuntimeError) as e:
         print(f" Erro ao calcular correlação: {e}")
-        return {'coeficiente_correlacao_pearson': np.nan, 'valor_p_significancia_estatistica': np.nan, 'quantidade_pares': len(dados_validos),
+        return {'coeficiente_correlacao_spearman': np.nan, 'valor_p_significancia_estatistica': np.nan, 'quantidade_pares': len(dados_validos),
                 'interpretacao': 'Erro no cálculo'}
     
-    abs_r = abs(r)
-    if abs_r < 0.2: intens = "muito fraca"
-    elif abs_r < 0.4: intens = "fraca"
-    elif abs_r < 0.6: intens = "moderada"
-    elif abs_r < 0.8: intens = "forte"
+    abs_rho = abs(rho)
+    # Classificação conforme critérios de Guilford/Mukaka (estatística convencional)
+    if abs_rho < 0.20: intens = "muito fraca / desprezível"
+    elif abs_rho < 0.40: intens = "fraca"
+    elif abs_rho < 0.70: intens = "moderada"
+    elif abs_rho < 0.90: intens = "forte"
     else: intens = "muito forte"
     
-    direcao = "positiva" if r > 0 else "negativa"
+    direcao = "positiva" if rho > 0 else "negativa"
     signif = "sig(p<0.05)" if p < 0.05 else "n_sig"
     
     return {
-        'coeficiente_correlacao_pearson': r, 'valor_p_significancia_estatistica': p, 'quantidade_pares': len(dados_validos),
+        'coeficiente_correlacao_spearman': rho, 'valor_p_significancia_estatistica': p, 'quantidade_pares': len(dados_validos),
         'interpretacao': f"{intens} {direcao}, {signif}"
     }
 
@@ -648,12 +650,12 @@ def gerar_correlacoes_resultado(df_questoes: pd.DataFrame, df_provas: pd.DataFra
         if len(df_area) < 3:
             continue
         
-        r = calcular_correlacao_pearson(df_area['tempo_leitura_cat1_min'].tolist(),
+        r = calcular_correlacao_spearman(df_area['tempo_leitura_cat1_min'].tolist(),
                                         df_area['porcentagem_acerto_media_prova'].tolist())
         correlacoes.append({
             'tipo_analise_correlacao': 'TIPO_1_tempo_leitura_categoria1_vs_desempenho',
             'nivel': 'por_prova', 'dificuldade': 'TODAS', 'area': area,
-            'coeficiente_correlacao_pearson': r['coeficiente_correlacao_pearson'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
+            'coeficiente_correlacao_spearman': r['coeficiente_correlacao_spearman'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
             'interpretacao': r['interpretacao']
         })
     
@@ -663,12 +665,12 @@ def gerar_correlacoes_resultado(df_questoes: pd.DataFrame, df_provas: pd.DataFra
         if len(df_area) < 3:
             continue
         
-        r = calcular_correlacao_pearson(df_area['tempo_leitura_cat2_min'].tolist(),
+        r = calcular_correlacao_spearman(df_area['tempo_leitura_cat2_min'].tolist(),
                                         df_area['porcentagem_acerto_media_prova'].tolist())
         correlacoes.append({
             'tipo_analise_correlacao': 'TIPO_2_tempo_leitura_categoria2_vs_desempenho',
             'nivel': 'por_prova', 'dificuldade': 'TODAS', 'area': area,
-            'coeficiente_correlacao_pearson': r['coeficiente_correlacao_pearson'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
+            'coeficiente_correlacao_spearman': r['coeficiente_correlacao_spearman'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
             'interpretacao': r['interpretacao']
         })
     
@@ -680,12 +682,12 @@ def gerar_correlacoes_resultado(df_questoes: pd.DataFrame, df_provas: pd.DataFra
         
         # TIPO 4: Caracteres vs Taxa_acerto
         # (Caracteres é proxy para complexidade da questão que impacta tempo de leitura)
-        r = calcular_correlacao_pearson(df_d['caracteres'].tolist(),
+        r = calcular_correlacao_spearman(df_d['caracteres'].tolist(),
                                        df_d['porcentagem_acerto_questao'].tolist())
         correlacoes.append({
             'tipo_analise_correlacao': 'TIPO_4_quantidade_caracteres_vs_desempenho',
             'nivel': 'por_questao', 'dificuldade': dif, 'area': 'TODAS',
-            'coeficiente_correlacao_pearson': r['coeficiente_correlacao_pearson'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
+            'coeficiente_correlacao_spearman': r['coeficiente_correlacao_spearman'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
             'interpretacao': r['interpretacao']
         })
     
@@ -742,12 +744,13 @@ def _extract_from_array(valor, tipo_esperado):
     return None
 
 
-def _calcular_diferenca_caracteres(df_questoes, dif):
-    """Calcula diferença de acerto entre questões com menos vs mais caracteres."""
+def _calcular_diferenca_caracteres(df_questoes, dif, impacta):
+    """Calcula diferença de acerto entre questões com menos vs mais caracteres.
+    """
     df_dif = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'] == dif])
     
     if len(df_dif) == 0:
-        return "Dados insuficientes", "Impacta significativamente"
+        return "Dados insuficientes", "Dados insuficientes"
     
     mediana = df_dif['caracteres'].median()
     menos = df_dif[df_dif['caracteres'] <= mediana]['porcentagem_acerto_questao'].mean()
@@ -755,7 +758,12 @@ def _calcular_diferenca_caracteres(df_questoes, dif):
     diff = mais - menos
     
     ref_dados = f"Menos: {menos:.1f}% | Mais: {mais:.1f}% (+{diff:.1f}%)"
-    conclusao = f"Questões com MAIS caracteres acertam MAIS (+{diff:.1f}%)"
+    
+    # Conclusão diferenciada baseada se IMPACTA ou não
+    if impacta == 'SIM':
+        conclusao = f"Correlação FORTE: Questões com MAIS caracteres acertam MAIS (+{diff:.1f}%)"
+    else:
+        conclusao = f"Correlação MODERADA: Diferença de +{diff:.1f}% (não atinge força >0.70)"
     
     return ref_dados, conclusao
 
@@ -764,7 +772,7 @@ def _construir_entrada_tipo_1_3(tipo_label, area, r_valor, pval_valor, qtd_valor
     """Constrói entrada do relatório para TIPOS 1, 2, 3.
     
     CRITÉRIOS PARA "IMPACTA = SIM" (3 métricas):
-    coeficiente_r: abs(r) > 0.30 (correlação moderada+)
+    coeficiente_r: abs(r) > 0.70 (correlação FORTE conforme Guilford/Mukaka)
     p_value: p < 0.05 (estatisticamente significativo)
     quantidade_pares: n >= 20 (amostra adequada)
     """
@@ -773,7 +781,7 @@ def _construir_entrada_tipo_1_3(tipo_label, area, r_valor, pval_valor, qtd_valor
     tem_p = pval_valor is not None and not np.isnan(pval_valor) if isinstance(pval_valor, float) else pval_valor is not None
     tem_n = qtd_valor is not None and qtd_valor >= 20
     
-    r_forte = tem_r and abs(r_valor) > 0.30
+    r_forte = tem_r and abs(r_valor) > 0.70
     p_sig = tem_p and pval_valor < 0.05
     
     impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
@@ -784,7 +792,7 @@ def _construir_entrada_tipo_1_3(tipo_label, area, r_valor, pval_valor, qtd_valor
     elif not tem_n:
         conclusao = f'Amostra pequena (n={qtd_valor})'
     elif not r_forte:
-        conclusao = f'Correlação fraca (r={abs(r_valor):.3f})'
+        conclusao = f'Correlação não é forte o suficiente (r={abs(r_valor):.3f}, precisa >0.70)'
     elif not p_sig:
         conclusao = f'Não significativo (p={pval_valor:.4f})'
     else:
@@ -809,7 +817,7 @@ def _construir_entrada_tipo_4(dif, r_valor, pval_valor, qtd_valor, ref_dados, co
     """Constrói entrada do relatório para TIPO 4.
     
     CRITÉRIOS PARA "IMPACTA = SIM" (3 métricas):
-    coeficiente_r: abs(r) > 0.30 (correlação moderada+)
+    coeficiente_r: abs(r) > 0.70 (correlação FORTE conforme Guilford/Mukaka)
     p_value: p < 0.05 (estatisticamente significativo)
     quantidade_pares: n >= 20 (amostra adequada)
     """
@@ -818,7 +826,7 @@ def _construir_entrada_tipo_4(dif, r_valor, pval_valor, qtd_valor, ref_dados, co
     tem_p = pval_valor is not None and not np.isnan(pval_valor) if isinstance(pval_valor, float) else pval_valor is not None
     tem_n = qtd_valor is not None and qtd_valor >= 20
     
-    r_forte = tem_r and abs(r_valor) > 0.30
+    r_forte = tem_r and abs(r_valor) > 0.70
     p_sig = tem_p and pval_valor < 0.05
     
     impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
@@ -838,7 +846,7 @@ def _construir_entrada_tipo_4(dif, r_valor, pval_valor, qtd_valor, ref_dados, co
 
 def _extrair_valores_linha(row):
     """Extrai valores escalares de uma linha do DataFrame."""
-    r_val = row.get('coeficiente_correlacao_pearson')
+    r_val = row.get('coeficiente_correlacao_spearman')
     pval = row.get('valor_p_significancia_estatistica')
     qtd = row.get('quantidade_pares')
     
@@ -875,7 +883,15 @@ def _processar_tipo_4(df_correlacoes, df_questoes):
     for _, row in df_tipo4.iterrows():
         dif = row['dificuldade']
         r_valor, pval_valor, qtd_valor = _extrair_valores_linha(row)
-        ref_dados, conclusao = _calcular_diferenca_caracteres(df_questoes, dif)
+        # Calcular impacta baseado no critério r_forte > 0.70
+        tem_r = r_valor is not None and not np.isnan(r_valor) if isinstance(r_valor, float) else r_valor is not None
+        tem_p = pval_valor is not None and not np.isnan(pval_valor) if isinstance(pval_valor, float) else pval_valor is not None
+        tem_n = qtd_valor is not None and qtd_valor >= 20
+        r_forte = tem_r and abs(r_valor) > 0.70
+        p_sig = tem_p and pval_valor < 0.05
+        impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
+        
+        ref_dados, conclusao = _calcular_diferenca_caracteres(df_questoes, dif, impacta)
         entrada = _construir_entrada_tipo_4(dif, r_valor, pval_valor, qtd_valor, ref_dados, conclusao)
         relatorio.append(entrada)
     
@@ -910,7 +926,7 @@ def _carregar_dados_pipeline():
 def _exportar_e_exibir(relatorio, df_provas, df_questoes):
     """Exporta todos os relatórios e exibe conclusões."""
     
-    # ===== ARQUIVO 1: RESUMO POR PROVA =====
+    #ARQUIVO 1: RESUMO POR PROVA
     arq_provas = OUTPUT_DIR / "resumo_metricas_prova.csv"
     
     # Renomear colunas para títulos mais descritivos
@@ -925,29 +941,26 @@ def _exportar_e_exibir(relatorio, df_provas, df_questoes):
     print(f"\n✓ {arq_provas}")
     print(f"   {len(df_provas)} provas com métricas de tempo e desempenho")
     
-    # ===== ARQUIVO 2: MÉTRICAS POR QUESTÃO =====
+    # ARQUIVO 2: MÉTRICAS POR QUESTÃO
     arq_questoes = OUTPUT_DIR / "metricas_caracteristicas_questao.csv"
     df_questoes.to_csv(arq_questoes, index=False, encoding='utf-8')
     print(f"\n✓ {arq_questoes}")
     print(f"   {len(df_questoes)} questões com características estruturais e desempenho")
     
-    # ===== ARQUIVO 3: CORRELAÇÕES FINAIS =====
+    # ARQUIVO 3: CORRELAÇÕES FINAIS 
     df_relatorio = pd.DataFrame(relatorio)
     arq_final = OUTPUT_DIR / "analise_impacto_desempenho.csv"
     df_relatorio.to_csv(arq_final, index=False, encoding='utf-8')
     print(f"\n✓ {arq_final}")
     print(f"   {len(df_relatorio)} análises correlacionais consolidadas")
-    
-    print("\n" + "="*80)
     print("  PIPELINE CONCLUÍDO")
-    print("="*80)
     print("\n CONCLUSÕES:")
     print("    Tempo de leitura (questões): IMPACTA em CH (p=0.0087) e CN (p=0.0114)")
     print("       NÃO impacta em LC (p=0.6532) e MT (p=0.3053)")
     print("     Tempo de leitura (questões + textos): IMPACTA em CN (p=0.0181)")
     print("       NÃO impacta em CH (p=0.3973), LC (p=0.1201) e MT (p=0.1140)")
     print("    Quantidade de caracteres: SIM impacta em TODAS dificuldades (p < 0.0001)")
-    print(f"\n📁 Arquivos gerados em: {OUTPUT_DIR}")
+    print(f"\n Arquivos gerados em: {OUTPUT_DIR}")
     print("   1. resumo_metricas_prova.csv (métricas agregadas por prova)")
     print("   2. metricas_caracteristicas_questao.csv (métricas por questão)")
     print("   3. analise_impacto_desempenho.csv (correlações finais)\n")
@@ -955,12 +968,6 @@ def _exportar_e_exibir(relatorio, df_provas, df_questoes):
 
 def _extrair_valor_escalar(valor, tipo_esperado=float):
     """Extrai valor escalar de forma segura, evitando problemas com Series/NDArray.
-    
-    Trata:
-    - floats/ints nativos
-    - numpy scalars
-    - pandas Series (extrai com .item())
-    - NaN/None
     """
     # Casos nulos e booleanos
     if valor is None or isinstance(valor, (bool, np.bool_)):
@@ -985,17 +992,12 @@ def _extrair_valor_escalar(valor, tipo_esperado=float):
 
 
 def main():
-    """PIPELINE COMPLETO"""
-    print("\n" + "="*80)
     print("  GERADOR DE MÉTRICAS: IMPACTO DO TEMPO NO DESEMPENHO ENEM")
-    print("="*80)
     
     # Carregar dados do pipeline
     df_combinado, df_provas, df_questoes, df_correlacoes = _carregar_dados_pipeline()
     
-    print("\n" + "="*80)
     print("  EXPORTANDO RELATÓRIOS")
-    print("="*80)
     
     # Construir relatório consolidado
     relatorio = []

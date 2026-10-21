@@ -1,12 +1,12 @@
 tipo_analise,area,dificuldade,coeficiente_r,p_value,impacta,conclusao,referencia_dados,quantidade_pares
-Tempo Leitura (Questões),CH,TODAS,0.9287566719694824,3.460733481458368e-09,SIM,Impacta significativamente,"r=0.929, p=0.0000, n=20",20
-Tempo Leitura (Questões),LC,TODAS,0.69325376552826,0.0007010850418362391,SIM,Impacta significativamente,"r=0.693, p=0.0007, n=20",20
-Tempo Leitura (Questões),CN,TODAS,-0.5532379652565375,0.011396445139407787,SIM,Impacta significativamente,"r=-0.553, p=0.0114, n=20",20
-Tempo Leitura (Questões),MT,TODAS,0.2413589150323714,0.3052942579149516,NÃO,Correlação fraca (r=0.241),"r=0.241, p=0.3053, n=20",20
-Tempo Leitura (Questões + Textos),CH,TODAS,0.8946079313742364,1.0335072637402211e-07,SIM,Impacta significativamente,"r=0.895, p=0.0000, n=20",20
-Tempo Leitura (Questões + Textos),LC,TODAS,0.6783359686823537,0.001010673522092799,SIM,Impacta significativamente,"r=0.678, p=0.0010, n=20",20
-Tempo Leitura (Questões + Textos),CN,TODAS,-0.5224099247743331,0.01812652494909363,SIM,Impacta significativamente,"r=-0.522, p=0.0181, n=20",20
-Tempo Leitura (Questões + Textos),MT,TODAS,0.36458499864554494,0.11400341545970649,NÃO,Não significativo (p=0.1140),"r=0.365, p=0.1140, n=20",20
-Quantidade de Caracteres,TODAS,FACIL,0.6564470902174233,9.322297136675851e-153,SIM,Questões com MAIS caracteres acertam MAIS (+19.7%),Menos: 49.4% | Mais: 69.1% (+19.7%),1232
-Quantidade de Caracteres,TODAS,MEDIA,0.7308973104779393,2.6434432800819854e-204,SIM,Questões com MAIS caracteres acertam MAIS (+16.9%),Menos: 30.7% | Mais: 47.6% (+16.9%),1220
-Quantidade de Caracteres,TODAS,DIFICIL,0.4243471841795935,8.938184042331116e-53,SIM,Questões com MAIS caracteres acertam MAIS (+7.6%),Menos: 22.9% | Mais: 30.5% (+7.6%),1180
+Tempo Leitura (Questões),CH,TODAS,0.7848183545407562,4.172515849509076e-05,SIM,Impacta significativamente,"r=0.785, p=0.0000, n=20",20
+Tempo Leitura (Questões),LC,TODAS,0.29430688295278357,0.20782999457290782,NÃO,"Correlação não é forte o suficiente (r=0.294, precisa >0.70)","r=0.294, p=0.2078, n=20",20
+Tempo Leitura (Questões),CN,TODAS,-0.5886137659055671,0.006328311141702892,NÃO,"Correlação não é forte o suficiente (r=0.589, precisa >0.70)","r=-0.589, p=0.0063, n=20",20
+Tempo Leitura (Questões),MT,TODAS,0.09810229431759453,0.6807261370914789,NÃO,"Correlação não é forte o suficiente (r=0.098, precisa >0.70)","r=0.098, p=0.6807, n=20",20
+Tempo Leitura (Questões + Textos),CH,TODAS,0.8829206488583509,2.5480424471635225e-07,SIM,Impacta significativamente,"r=0.883, p=0.0000, n=20",20
+Tempo Leitura (Questões + Textos),LC,TODAS,0.29430688295278357,0.20782999457290782,NÃO,"Correlação não é forte o suficiente (r=0.294, precisa >0.70)","r=0.294, p=0.2078, n=20",20
+Tempo Leitura (Questões + Textos),CN,TODAS,-0.5886137659055671,0.006328311141702892,NÃO,"Correlação não é forte o suficiente (r=0.589, precisa >0.70)","r=-0.589, p=0.0063, n=20",20
+Tempo Leitura (Questões + Textos),MT,TODAS,0.3678836036909795,0.11052394280205596,NÃO,"Correlação não é forte o suficiente (r=0.368, precisa >0.70)","r=0.368, p=0.1105, n=20",20
+Quantidade de Caracteres,TODAS,FACIL,0.6185470341957774,5.797575750455241e-131,NÃO,"Correlação MODERADA: Diferença de +19.7% (não atinge força >0.70)",Menos: 49.4% | Mais: 69.1% (+19.7%),1232
+Quantidade de Caracteres,TODAS,MEDIA,0.7017923382099738,1.307668932015924e-181,SIM,"Correlação FORTE: Questões com MAIS caracteres acertam MAIS (+16.9%)",Menos: 30.7% | Mais: 47.6% (+16.9%),1220
+Quantidade de Caracteres,TODAS,DIFICIL,0.39465853640541243,2.8702310730306563e-45,NÃO,"Correlação MODERADA: Diferença de +7.6% (não atinge força >0.70)",Menos: 22.9% | Mais: 30.5% (+7.6%),1180
