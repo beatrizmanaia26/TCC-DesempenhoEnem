@@ -1,11 +1,10 @@
 <template>
-    coloca html com chamadas de vue
+  <AnalysisPage />
 </template>
 
-<script>
-
+<script setup>
+import AnalysisPage from '@/views/AnalysisPage.vue'
 </script>
 
-<style>
-
+<style scoped>
 </style>

@@ -1,0 +1,4 @@
+
+export const DEFAULT_READING_SPEED = 1100
+
+export const MAX_EXAM_DURATION_HOURS = 6
