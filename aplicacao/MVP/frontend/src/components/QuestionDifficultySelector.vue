@@ -5,7 +5,6 @@
         <h3>Dificuldade das Questões</h3>
         <p class="subtitle">Informe o nível de dificuldade de cada questão</p>
       </div>
-      <button type="button" v-if="showEditButton" @click="$emit('edit-questions')" class="btn-edit-qty" title="Editar quantidade">✎</button>
     </div>
 
     <div class="questions-grid">
@@ -143,16 +142,18 @@ const previousGroup = () => {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2rem;
   gap: 1rem;
+  position: relative;
 }
 
 .header-left {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  text-align: center;
 }
 
 .header h3 {
@@ -176,6 +177,9 @@ const previousGroup = () => {
   font-size: 1.1rem;
   transition: all 0.3s;
   flex-shrink: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .btn-edit-qty:hover {
@@ -224,32 +228,32 @@ const previousGroup = () => {
 }
 
 .btn-difficulty:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #0070C0;
+  color: #0070C0;
 }
 
 .btn-difficulty.active {
-  color: #667eea;
-  border-color: #667eea;
+  color: #0070C0;
+  border-color: #0070C0;
   background: white;
 }
 
 .btn-difficulty.active.btn-easy {
   background: white;
-  border-color: #10b981;
-  color: #10b981;
+  border-color: #059669;
+  color: #059669;
 }
 
 .btn-difficulty.active.btn-medium {
   background: white;
-  border-color: #f59e0b;
-  color: #f59e0b;
+  border-color: #d97706;
+  color: #d97706;
 }
 
 .btn-difficulty.active.btn-hard {
   background: white;
-  border-color: #ef4444;
-  color: #ef4444;
+  border-color: #dc2626;
+  color: #dc2626;
 }
 
 .navigation {
@@ -272,8 +276,8 @@ const previousGroup = () => {
 }
 
 .btn-nav:hover:not(:disabled) {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #0070C0;
+  color: #0070C0;
   background: #f9f9f9;
 }
 
@@ -294,7 +298,7 @@ const previousGroup = () => {
 
 .progress {
   height: 100%;
-  background: linear-gradient(90deg, #10b981 0%, #667eea 50%, #ef4444 100%);
+  background: linear-gradient(90deg, #10b981 0%, #0070C0 50%, #ef4444 100%);
   transition: width 0.3s ease;
 }
 

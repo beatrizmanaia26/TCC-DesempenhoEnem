@@ -1,0 +1,122 @@
+/* ========================================
+   PALETA DE CORES - DesemProv
+   ======================================== */
+
+:root {
+  /* Cores Primarias */
+  --color-primary-blue: #0070C0;        /* Azul FEI - Background navbar, botoes primarios */
+  --color-primary-white: #FFFFFF;       /* Branco - Primeira metade do nome (desem) */
+  --color-primary-mint: #10B981;        /* Verde Menta - Segunda metade (prov), indicadores positivos */
+  
+  /* Cores Secundarias */
+  --color-secondary-blue-light: #93C5FD; /* Azul Claro Pastel - Subtitulo */
+  --color-secondary-mint-highlight: #34D399; /* Verde Menta Destaque - Item ativo, hover */
+  
+  /* Cores Neutras */
+  --color-neutral-off-white: #E2E8F0;   /* Off-white - Links inativos */
+  --color-neutral-gray-dark: #1F2937;   /* Cinza escuro - Textos principais */
+  --color-neutral-gray-light: #F3F4F6;  /* Cinza claro - Backgrounds alternativos */
+  
+  /* Cores de Status */
+  --color-success: #10B981;             /* Verde - Sucesso */
+  --color-warning: #F59E0B;             /* Ambar - Aviso */
+  --color-error: #EF4444;               /* Vermelho - Erro */
+  --color-info: #0070C0;                /* Azul - Informacao */
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   COMPONENTES GLOBAIS
+   ======================================== */
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-primary-blue);
+}
+
+.logo-desem {
+  color: var(--color-primary-white);
+}
+
+.logo-prov {
+  color: var(--color-primary-mint);
+}
+
+.logo-subtitulo {
+  color: var(--color-secondary-blue-light);
+}
+
+.nav-link {
+  color: var(--color-neutral-off-white);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-secondary-mint-highlight);
+  border-bottom-color: var(--color-secondary-mint-highlight);
+}
+
+/* Botoes */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary-blue) 0%, #0056A0 100%);
+  color: var(--color-primary-white);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(0, 112, 192, 0.4);
+}
+
+.btn-success {
+  background-color: var(--color-success);
+  color: var(--color-primary-white);
+}
+
+.btn-warning {
+  background-color: var(--color-warning);
+  color: var(--color-primary-white);
+}
+
+.btn-error {
+  background-color: var(--color-error);
+  color: var(--color-primary-white);
+}
+
+/* Inputs & Forms */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 112, 192, 0.1);
+  outline: none;
+}
+
+/* Indicadores */
+.badge-success {
+  background-color: var(--color-success);
+  color: var(--color-primary-white);
+}
+
+.badge-warning {
+  background-color: var(--color-warning);
+  color: var(--color-primary-white);
+}
+
+.badge-error {
+  background-color: var(--color-error);
+  color: var(--color-primary-white);
+}
+
+/* Links */
+a {
+  color: var(--color-primary-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-secondary-mint-highlight);
+}

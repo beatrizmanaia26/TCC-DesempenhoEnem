@@ -3,11 +3,12 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const multer = require('multer')
-const path = require('path')
-const fs = require('fs')
-const { spawn } = require('child_process')
+const path = require('node:path')
+const fs = require('node:fs')
+const { spawn } = require('node:child_process')
 const { v4: uuidv4 } = require('uuid')
 
+// Framework Express para criar servidor HTTP
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -29,19 +30,24 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage,
-  limits: { fileSize: 100 * 1024 * 1024 },
+  limits: { fileSize: 100 * 1024 * 1024, contentLength: 100 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
     const allowedTypes = ['application/pdf', 'application/json']
     if (allowedTypes.includes(file.mimetype)) {
       cb(null, true)
     } else {
-      cb(new Error('Apenas arquivos PDF e JSON são permitidos'))
+      cb(new Error('Apenas arquivos PDF e JSON sao permitidos'))
     }
   }
 })
 
 // Middlewares
-app.use(cors())
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || '*',
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}))
 app.use(express.json())
 
 // Rota de teste
@@ -60,9 +66,9 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
     const analysisId = uuidv4()
     const filePath = req.file.path
 
-    console.log(`[${analysisId}] Iniciando análise de: ${req.file.originalname}`)
+    console.log(`[${analysisId}] Iniciando analise de: ${req.file.originalname}`)
 
-    // Executar script Python
+    // Executar script Python (use caminho absoluto para garantir funcionamento)
     const pythonScript = path.join(__dirname, '../python/cli_analyzer.py')
     const analysisType = config.analysisType || 'all'
 

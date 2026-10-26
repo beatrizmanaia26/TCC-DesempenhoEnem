@@ -2,7 +2,7 @@
   <div class="about-container">
     <header class="about-header">
       <button @click="goHome" class="btn-back">← Voltar</button>
-      <h1>Sobre o Sistema</h1>
+      <h1>Sobre o Sistema RESUMO TCC</h1>
     </header>
 
     <main class="about-content">
@@ -50,6 +50,11 @@
           <li><strong>Análise:</strong> Python + ......</li>
         </ul>
       </section>
+       <section class="about-section">
+        <h2>TCC link pro tcc </h2>
+        <ul class="tech-list">
+          <li><strong>FALAR DE MAIS COMO FIZEMOS CAD AANALISE TIPO EXPLICA COMOFIZEMOS ANALISE DA IMG, OQ CONSIDERAMOS.. OU DEIXA ISSO SO P TCC? OQ TRAZER PRA CA?:</strong> Vue 3 + Vite</li>        </ul>
+      </section>
     </main>
   </div>
 </template>
@@ -63,7 +68,7 @@ const goHome = () => router.push('/')
 <style scoped>
 .about-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
   padding: 2rem;
 }
 
@@ -73,9 +78,9 @@ const goHome = () => router.push('/')
 }
 
 .btn-back {
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
-  border: 2px solid white;
+  border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   cursor: pointer;
@@ -86,11 +91,12 @@ const goHome = () => router.push('/')
 }
 
 .btn-back:hover {
-  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 112, 192, 0.4);
 }
 
 .about-header h1 {
-  color: white;
+  color: #0070C0;
   font-size: 2.5rem;
   margin: 0;
   font-weight: 700;
@@ -113,7 +119,7 @@ const goHome = () => router.push('/')
   color: #333;
   font-size: 1.8rem;
   margin: 0 0 1.5rem 0;
-  border-bottom: 3px solid #667eea;
+  border-bottom: 3px solid #0070C0;
   padding-bottom: 0.5rem;
 }
 
@@ -131,7 +137,7 @@ const goHome = () => router.push('/')
 
 .analysis-item {
   background: #f9f9f9;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #0070C0;
   padding: 1.5rem;
   border-radius: 6px;
 }
@@ -160,7 +166,7 @@ const goHome = () => router.push('/')
   padding: 0.75rem;
   background: #f9f9f9;
   border-radius: 6px;
-  border-left: 3px solid #667eea;
+  border-left: 3px solid #0070C0;
 }
 
 @media (max-width: 768px) {

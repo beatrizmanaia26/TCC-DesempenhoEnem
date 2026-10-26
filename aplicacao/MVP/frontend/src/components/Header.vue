@@ -1,14 +1,19 @@
 <template>
   <header class="header">
     <div class="header-content">
-      <router-link to="/" class="logo">
-        <span class="logo-icon">logo e add logo no google</span>
-        <span class="logo-text"> ou outro nome ver cm lu e nuno</span>
+      <router-link to="/" class="logo-container">
+        <img src="@/assets/images/logo.svg" alt="DesemProv Logo" class="logo-icon" />
+        <div class="logo-text-group">
+          <div class="logo-title">
+            <span class="logo-desem">desem</span><span class="logo-prov">prov</span>
+          </div>
+          <div class="logo-subtitulo">Análise Estrutural de Provas</div>
+        </div>
       </router-link>
       <nav class="nav">
-        <router-link to="/" class="nav-link">Análise</router-link>
-        <router-link to="/enem" class="nav-link">ENEM</router-link>
-        <router-link to="/about" class="nav-link">Sobre</router-link>
+        <router-link to="/" class="nav-link" active-class="active">Análise</router-link>
+        <router-link to="/enem" class="nav-link" active-class="active">ENEM</router-link>
+        <router-link to="/about" class="nav-link" active-class="active">Sobre</router-link>
       </nav>
     </div>
   </header>
@@ -18,8 +23,10 @@
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #0070C0;
   color: white;
   padding: 1rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -36,23 +43,61 @@
   align-items: center;
 }
 
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   text-decoration: none;
   color: white;
-  font-weight: 700;
-  font-size: 1.3rem;
   transition: opacity 0.3s ease;
 }
 
-.logo:hover {
+.logo-container:hover {
   opacity: 0.8;
 }
 
 .logo-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.logo-title {
+  display: flex;
+  gap: 0.3rem;
+  align-items: baseline;
+}
+
+.logo-desem {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 400;
   font-size: 1.5rem;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+}
+
+.logo-prov {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #10B981;
+  letter-spacing: -0.5px;
+}
+
+.logo-subtitulo {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #93C5FD;
 }
 
 .nav {
@@ -61,18 +106,22 @@
 }
 
 .nav-link {
-  color: white;
+  color: #E2E8F0;
   text-decoration: none;
   font-weight: 600;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
 }
 
-.nav-link:hover,
-.nav-link.router-link-active {
-  opacity: 0.8;
-  border-bottom-color: white;
+.nav-link:hover {
+  color: #34D399;
+  border-bottom-color: #34D399;
+}
+
+.nav-link.active {
+  color: #34D399;
+  border-bottom-color: #34D399;
 }
 
 @media (max-width: 768px) {
@@ -84,6 +133,18 @@
   .nav {
     width: 100%;
     justify-content: center;
+  }
+
+  .logo-desem {
+    font-size: 1.2rem;
+  }
+
+  .logo-prov {
+    font-size: 1.4rem;
+  }
+
+  .logo-subtitulo {
+    font-size: 0.55rem;
   }
 }
 </style>

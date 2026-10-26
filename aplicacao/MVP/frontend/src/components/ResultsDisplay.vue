@@ -112,7 +112,7 @@ const props = defineProps({
 .card-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #667eea;
+  color: #0070C0;
 }
 
 .actions-section {
@@ -135,13 +135,13 @@ const props = defineProps({
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 112, 192, 0.5);
 }
 
 .btn-secondary {

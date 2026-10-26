@@ -2,7 +2,7 @@
   <div class="enem-container">
     <div class="container">
       <h1 class="page-title"> Análises do ENEM</h1>
-      <p class="page-subtitle">Explore as análises detalhadas das provas do ENEM disponíveis</p>
+      <p class="page-subtitle">Explore as análises detalhadas das provas do ENEM disponíveis para identificar quais das caracteristicas esturturais consdieradas (formalismo, iame, distrator...pode ter tido mais influencia.. )</p>
 
       <!-- GRID DE ANOS -->
       <div class="years-grid">
@@ -17,9 +17,8 @@
           <p class="year-label">ENEM {{ year }}</p>
         </div>
 
-        <!-- CARD ADICIONAR OUTRO ENEM -->
-        <div class="year-card add-card" @click="showUploadModal = true">
-          <div class="year-number add-icon">➕</div>
+        <div class="year-card" v-if="false" style="display: none;">
+          <div class="year-number">➕</div>
           <p class="year-label">Outro ENEM</p>
           <p class="add-description">Adicionar PDF</p>
         </div>
@@ -48,51 +47,9 @@
         <p>Selecione um ano para ver as análises disponíveis</p>
       </div>
 
-      <!-- MODAL UPLOAD OUTRO ENEM -->
-      <div v-if="showUploadModal" class="modal-overlay" @click="showUploadModal = false">
-        <div class="modal-content" @click.stop>
-          <div class="modal-header">
-            <h3>📋 Adicionar Outro ENEM</h3>
-            <button @click="showUploadModal = false" class="modal-close">✕</button>
-          </div>
-          <div class="modal-body">
-            <p>Faça upload de um PDF de prova ENEM do INEP para análise</p>
-
-            <div class="upload-section">
-              <input
-                type="file"
-                ref="fileInput"
-                accept=".pdf"
-                @change="handleFileSelect"
-                style="display: none"
-              />
-              <button @click="$refs.fileInput.click()" class="btn-upload-file">
-               Selecionar PDF
-              </button>
-              <p v-if="selectedFile" class="file-selected">
-                ✓ {{ selectedFile.name }}
-              </p>
-            </div>
-
-            <div class="form-group">
-              <label for="enem-year">Ano do ENEM</label> ACHAM Q FAZEMOS ALGUMA VALIDACAO P VER SE EH ENEM MSM E SE FOR SALVAMOS NO RPEOSITORIO REAL E ADD OS NOVOS ENEMS PRA RECALCULCAR AS ANALISES E ADD COMO CAIXA PRA OUTRAS PESSOAS Q RODAREM JA TEREM OQ OUTROS ADD?
-              <input
-                v-model="newEnemYear"
-                id="enem-year"
-                type="number"
-                placeholder="Ex: 2021"
-                min="2000"
-                max="2030"
-              />
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button @click="showUploadModal = false" class="btn-secondary">Cancelar</button>
-            <button @click="uploadNewEnem" class="btn-primary" :disabled="!selectedFile || !newEnemYear">
-              Adicionar e Analisar
-            </button>
-          </div>
-        </div>
+      <!-- Modal desativado para upload de novos ENEM -->
+      <div v-if="false" style="display: none;">
+        <!-- Será implementado futuramente -->
       </div>
     </div>
   </div>
@@ -107,37 +64,37 @@ const selectedYear = ref(null)
 const analysisTypes = [
   {
     id: 'position',
-    icon: '📍',
+    icon: '.',
     title: 'Posição das Questões',
     description: 'Análise da distribuição espacial das questões ao longo da prova'
   },
   {
     id: 'image',
-    icon: '🖼️',
+    icon: '.',
     title: 'Presença de Imagens',
     description: 'Análise quantitativa e qualitativa das imagens utilizadas'
   },
   {
     id: 'formality',
-    icon: '📝',
+    icon: '.',
     title: 'Formalismo',
     description: 'Análise do nível de formalidade da linguagem utilizada'
   },
   {
     id: 'reading-time',
-    icon: '⏱️',
+    icon: '.',
     title: 'Tempo de Prova',
     description: 'Estimativa de tempo necessário para resolver cada questão'
   },
   {
     id: 'word-count',
-    icon: '📄',
+    icon: '.',
     title: 'Tamanho das Questões',
     description: 'Análise da quantidade de palavras por questão'
   },
   {
     id: 'distractors',
-    icon: '🎯',
+    icon: '.',
     title: 'Distratores',
     description: 'Análise da qualidade e similaridade dos distratores'
   }
@@ -187,7 +144,7 @@ const uploadNewEnem = () => {
 <style scoped>
 .enem-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
   padding: 3rem 2rem;
 }
 
@@ -197,7 +154,7 @@ const uploadNewEnem = () => {
 }
 
 .page-title {
-  color: white;
+  color: #0070C0;
   font-size: 2.5rem;
   margin: 0 0 0.5rem 0;
   font-weight: 700;
@@ -205,7 +162,7 @@ const uploadNewEnem = () => {
 }
 
 .page-subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: #0070C0;
   font-size: 1.1rem;
   text-align: center;
   margin-bottom: 3rem;
@@ -235,7 +192,7 @@ const uploadNewEnem = () => {
 }
 
 .year-card.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
   border-color: white;
 }
@@ -287,7 +244,7 @@ const uploadNewEnem = () => {
 }
 
 .analysis-card:hover {
-  border-color: #667eea;
+  border-color: #0070C0;
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
   transform: translateY(-5px);
 }
@@ -311,7 +268,7 @@ const uploadNewEnem = () => {
 }
 
 .btn-view {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -339,7 +296,7 @@ const uploadNewEnem = () => {
 /* ADD CARD STYLES */
 .add-card {
   background: #f0f4ff;
-  border: 2px dashed #667eea;
+  border: 2px dashed #0070C0;
   opacity: 0.8;
   transition: all 0.3s ease;
 }
@@ -347,7 +304,7 @@ const uploadNewEnem = () => {
 .add-card:hover {
   opacity: 1;
   background: #e8ebff;
-  border-color: #764ba2;
+  border-color: #0056A0;
   transform: scale(1.05);
 }
 
@@ -357,7 +314,7 @@ const uploadNewEnem = () => {
 
 .add-description {
   font-size: 0.85rem;
-  color: #667eea;
+  color: #0070C0;
   margin: 0;
   margin-top: 0.25rem;
 }
@@ -425,7 +382,7 @@ const uploadNewEnem = () => {
 }
 
 .btn-upload-file {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -438,7 +395,7 @@ const uploadNewEnem = () => {
 
 .btn-upload-file:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 112, 192, 0.5);
 }
 
 .file-selected {
@@ -470,7 +427,7 @@ const uploadNewEnem = () => {
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #0070C0;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
@@ -498,7 +455,7 @@ const uploadNewEnem = () => {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;

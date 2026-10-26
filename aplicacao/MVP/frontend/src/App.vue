@@ -1,5 +1,6 @@
 <script setup>
 import Header from '@/components/Header.vue'
+import '@/styles/colors.css'
 </script>
 
 <template>

@@ -2,7 +2,15 @@
   <div class="file-upload">
     <div class="upload-area" @drop="handleDrop" @dragover.prevent @dragenter.prevent @dragleave="isDragging = false"
       :class="{ 'is-dragging': isDragging }">
-      <input type="file" ref="fileInput" accept=".pdf,.json" @change="handleFileChange" style="display: none" />
+      <label for="file-input" class="sr-only">Selecione um arquivo PDF ou JSON para analise</label>
+      <input 
+        id="file-input"
+        type="file" 
+        ref="fileInput" 
+        accept=".pdf,.json" 
+        @change="handleFileChange" 
+        style="display: none" 
+      />
 
       <div class="upload-content">
         <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -135,7 +143,7 @@ const removeFile = () => {
 }
 
 .upload-area {
-  border: 2px dashed #667eea;
+  border: 2px dashed #0070C0;
   border-radius: 12px;
   padding: 3rem 2rem;
   text-align: center;
@@ -145,12 +153,12 @@ const removeFile = () => {
 }
 
 .upload-area:hover {
-  border-color: #764ba2;
+  border-color: #0056A0;
   background: #f0f2ff;
 }
 
 .upload-area.is-dragging {
-  border-color: #764ba2;
+  border-color: #0056A0;
   background: #e8ebff;
   transform: scale(1.02);
 }
@@ -158,7 +166,7 @@ const removeFile = () => {
 .upload-icon {
   width: 48px;
   height: 48px;
-  color: #667eea;
+  color: #0070C0;
   margin-bottom: 1rem;
 }
 
@@ -174,7 +182,7 @@ const removeFile = () => {
 }
 
 .btn-upload {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
   padding: 0.75rem 2rem;
   border: none;
@@ -188,7 +196,7 @@ const removeFile = () => {
 
 .btn-upload:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 112, 192, 0.5);
 }
 
 .file-info {
@@ -332,7 +340,7 @@ const removeFile = () => {
 }
 
 .btn-confirm {
-  background: #667eea;
+  background: #0070C0;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -343,7 +351,20 @@ const removeFile = () => {
 }
 
 .btn-confirm:hover {
-  background: #764ba2;
+  background: #0056A0;
   transform: translateY(-2px);
+}
+
+/* Screen reader only: oculta visualmente mas mantem acessivel para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 </style>

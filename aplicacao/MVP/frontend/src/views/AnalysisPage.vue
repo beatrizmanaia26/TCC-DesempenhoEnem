@@ -75,10 +75,10 @@ const errorMessage = ref('')
 // Local refs para sincronizar com store
 const localSelectedFile = ref(null)
 
-// Resetar store ao montar para evitar dados antigos dispararem análise
+// Ao montar: limpar apenas os RESULTADOS, não o arquivo/formulário
 onMounted(() => {
   store.clearResults()
-  store.resetFileAndForm()
+  // NÃO limpar o arquivo e formulário - permitir que persista ao navegar
 })
 
 // Sincronizar com store
@@ -143,13 +143,13 @@ const handleReset = () => {
 <style scoped>
 .analysis-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
   padding: 2rem;
 }
 
 .header {
   text-align: center;
-  color: white;
+  color: #0070C0;
   margin-bottom: 2rem;
 }
 
@@ -205,7 +205,7 @@ const handleReset = () => {
   width: 50px;
   height: 50px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #667eea;
+  border-top: 4px solid #0070C0;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 1rem;
@@ -242,7 +242,7 @@ const handleReset = () => {
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #0070C0 0%, #10B981 100%);
   transition: width 0.3s ease;
 }
 
@@ -291,13 +291,13 @@ const handleReset = () => {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 112, 192, 0.5);
 }
 
 .btn-secondary {

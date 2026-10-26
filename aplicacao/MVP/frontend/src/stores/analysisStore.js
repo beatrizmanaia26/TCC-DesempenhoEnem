@@ -12,10 +12,19 @@ export const useAnalysisStore = defineStore('analysis', () => {
   const selectedFile = ref(null)
   const totalQuestions = ref(0)
   const formData = ref({
+    analysisType: 'all',
+    hours: 0,
+    minutes: 0,
+    readingSpeedMode: 'default',
+    customReadingSpeed: null,
     useDifficultyAnalysis: false,
+    questionDifficulties: {},
+    includeStudentMetrics: false,
+    studentCount: 0,
+    studentMetricsQuestionCount: 0,
+    studentMetricsAccuracy: {},
     readingTimeAnalysis: false,
     distractorsAnalysis: false,
-    questionDifficulties: {},
     estimatedReadingTime: 0
   })
 
@@ -59,10 +68,19 @@ export const useAnalysisStore = defineStore('analysis', () => {
     selectedFile.value = null
     totalQuestions.value = 0
     formData.value = {
+      analysisType: 'all',
+      hours: 0,
+      minutes: 0,
+      readingSpeedMode: 'default',
+      customReadingSpeed: null,
       useDifficultyAnalysis: false,
+      questionDifficulties: {},
+      includeStudentMetrics: false,
+      studentCount: 0,
+      studentMetricsQuestionCount: 0,
+      studentMetricsAccuracy: {},
       readingTimeAnalysis: false,
       distractorsAnalysis: false,
-      questionDifficulties: {},
       estimatedReadingTime: 0
     }
   }
