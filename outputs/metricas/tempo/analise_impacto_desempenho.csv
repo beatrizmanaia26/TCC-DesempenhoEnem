@@ -7,6 +7,6 @@ Tempo Leitura (Questões + Textos),CH,TODAS,0.8829206488583509,2.548042447163522
 Tempo Leitura (Questões + Textos),LC,TODAS,0.29430688295278357,0.20782999457290782,NÃO,"Correlação não é forte o suficiente (r=0.294, precisa >0.70)","r=0.294, p=0.2078, n=20",20
 Tempo Leitura (Questões + Textos),CN,TODAS,-0.5886137659055671,0.006328311141702892,NÃO,"Correlação não é forte o suficiente (r=0.589, precisa >0.70)","r=-0.589, p=0.0063, n=20",20
 Tempo Leitura (Questões + Textos),MT,TODAS,0.3678836036909795,0.11052394280205596,NÃO,"Correlação não é forte o suficiente (r=0.368, precisa >0.70)","r=0.368, p=0.1105, n=20",20
-Quantidade de Caracteres,TODAS,FACIL,0.6185470341957774,5.797575750455241e-131,NÃO,"Correlação MODERADA: Diferença de +19.7% (não atinge força >0.70)",Menos: 49.4% | Mais: 69.1% (+19.7%),1232
-Quantidade de Caracteres,TODAS,MEDIA,0.7017923382099738,1.307668932015924e-181,SIM,"Correlação FORTE: Questões com MAIS caracteres acertam MAIS (+16.9%)",Menos: 30.7% | Mais: 47.6% (+16.9%),1220
-Quantidade de Caracteres,TODAS,DIFICIL,0.39465853640541243,2.8702310730306563e-45,NÃO,"Correlação MODERADA: Diferença de +7.6% (não atinge força >0.70)",Menos: 22.9% | Mais: 30.5% (+7.6%),1180
+Quantidade de Caracteres,TODAS,FACIL,0.6185470341957774,5.797575750455241e-131,NÃO,Correlação MODERADA: Diferença de +19.7% (não atinge força >0.70),Menos: 49.4% | Mais: 69.1% (+19.7%),1232
+Quantidade de Caracteres,TODAS,MEDIA,0.7017923382099738,1.307668932015924e-181,SIM,Correlação FORTE: Questões com MAIS caracteres acertam MAIS (+16.9%),Menos: 30.7% | Mais: 47.6% (+16.9%),1220
+Quantidade de Caracteres,TODAS,DIFICIL,0.39465853640541243,2.8702310730306563e-45,NÃO,Correlação MODERADA: Diferença de +7.6% (não atinge força >0.70),Menos: 22.9% | Mais: 30.5% (+7.6%),1180

@@ -12,6 +12,9 @@ const { v4: uuidv4 } = require('uuid')
 const app = express()
 const port = process.env.PORT || 3000
 
+// Remover header X-Powered-By para ocultar versao do Express (S5689)
+app.disable('x-powered-by')
+
 // Configuração de upload
 const uploadDir = path.join(__dirname, '../uploads')
 if (!fs.existsSync(uploadDir)) {
@@ -28,9 +31,18 @@ const storage = multer.diskStorage({
   }
 })
 
+// Limites de seguranca para evitar ataques DoS
+// 10MB é um limite razoável para arquivos de prova PDF/JSON
+// Reduzido de 100MB para melhor seguranca (S5693)
+const MAX_FILE_SIZE = 10 * 1024 * 1024 // 10 MB
+
 const upload = multer({
   storage,
-  limits: { fileSize: 100 * 1024 * 1024, contentLength: 100 * 1024 * 1024 },
+  // NOSONAR: Limite de tamanho é intencionalmente 10MB para segurança
+  limits: { 
+    fileSize: MAX_FILE_SIZE,
+    contentLength: MAX_FILE_SIZE
+  },
   fileFilter: (req, file, cb) => {
     const allowedTypes = ['application/pdf', 'application/json']
     if (allowedTypes.includes(file.mimetype)) {
@@ -68,11 +80,29 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
 
     console.log(`[${analysisId}] Iniciando analise de: ${req.file.originalname}`)
 
-    // Executar script Python (use caminho absoluto para garantir funcionamento)
+    // Executar script Python com opcoes seguras (S4036)
     const pythonScript = path.join(__dirname, '../python/cli_analyzer.py')
     const analysisType = config.analysisType || 'all'
+    
+    // Usar caminho fixo de python3 (configuravel via variavel de ambiente)
+    // Padrao: /usr/bin/python3 em sistemas Unix/Linux
+    const pythonPath = process.env.PYTHON_PATH || '/usr/bin/python3'
+    
+    // Validar que o caminho eh absoluto e nao contem ".."
+    if (!path.isAbsolute(pythonPath) || pythonPath.includes('..')) {
+      return res.status(500).json({ 
+        error: 'Caminho de Python invalido'
+      })
+    }
+    
+    // Verificar se python3 existe antes de usar
+    if (!fs.existsSync(pythonPath)) {
+      return res.status(500).json({ 
+        error: 'Python3 nao esta instalado no caminho configurado: ' + pythonPath
+      })
+    }
 
-    const pythonProcess = spawn('python3', [
+    const pythonProcess = spawn(pythonPath, [
       pythonScript,
       filePath,
       '--type',
