@@ -26,7 +26,27 @@
 
       <!-- ANÁLISES DISPONÍVEIS -->
       <div v-if="selectedYear" class="analyses-section">
-        <h2>Análises disponíveis para {{ selectedYear }}</h2>
+        <div class="analyses-header">
+          <h2>Análises disponíveis para {{ selectedYear }}</h2>
+          <div class="filter-wrapper">
+            <button class="filter-btn" @click="showFilterMenu = !showFilterMenu">
+              <FilterIcon />
+              Filtro
+            </button>
+            <div v-if="showFilterMenu" class="filter-menu">
+              <div class="filter-option" v-for="option in filterOptions" :key="option.id">
+                <input 
+                  type="checkbox" 
+                  :id="option.id"
+                  :checked="isFilterSelected(option.id)"
+                  @change="toggleFilter(option.id)"
+                />
+                <label :for="option.id">{{ option.label }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ProvaInfoDisplay :ano="selectedYear" />
         <div class="analyses-grid">
           <div
             v-for="analysis in analysisTypes"
@@ -57,9 +77,22 @@
 
 <script setup>
 import { ref } from 'vue'
+import FilterIcon from '@/components/icons/FilterIcon.vue'
+import ProvaInfoDisplay from '@/components/ProvaInfoDisplay.vue'
 
 const availableYears = [2025, 2024, 2023, 2022, 2020]
 const selectedYear = ref(null)
+const showFilterMenu = ref(false)
+
+const filterOptions = [
+  { id: 'image', label: 'Análise da Presença de Imagens' },
+  { id: 'formality', label: 'Análise do Formalismo' },
+  { id: 'reading-time', label: 'Análise do Tempo de Prova' },
+  { id: 'word-count', label: 'Análise do Tamanho das Questões' },
+  { id: 'distractors', label: 'Análise de Distratores' },
+  { id: 'position', label: 'Posição das Questões' }
+]
+const selectedFilters = ref(new Set())
 
 const analysisTypes = [
   {
@@ -102,6 +135,19 @@ const analysisTypes = [
 
 const selectYear = (year) => {
   selectedYear.value = year
+  showFilterMenu.value = false
+}
+
+const toggleFilter = (filterId) => {
+  if (selectedFilters.value.has(filterId)) {
+    selectedFilters.value.delete(filterId)
+  } else {
+    selectedFilters.value.add(filterId)
+  }
+}
+
+const isFilterSelected = (filterId) => {
+  return selectedFilters.value.has(filterId)
 }
 
 const viewAnalysis = (analysis) => {
@@ -474,6 +520,94 @@ const uploadNewEnem = () => {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+
+/* FILTER STYLES */
+.analyses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.analyses-header h2 {
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-wrapper {
+  position: relative;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #0070C0;
+  border: 2px solid #0070C0;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  background: #f0f7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 112, 192, 0.2);
+}
+
+.filter-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-width: 280px;
+  z-index: 100;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.filter-option:hover {
+  background: #f5f5f5;
+}
+
+.filter-option input[type="checkbox"] {
+  margin-right: 0.75rem;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #0070C0;
+}
+
+.filter-option label {
+  cursor: pointer;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  flex: 1;
+}
+
 
 @media (max-width: 768px) {
   .page-title {

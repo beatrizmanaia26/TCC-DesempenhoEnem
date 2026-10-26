@@ -208,7 +208,7 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useAnalysisStore } from '@/stores/analysisStore'
-import InfoIcon from '@/components/InfoIcon.vue'
+import InfoIcon from '@/components/icons/InfoIcon.vue'
 import QuestionDifficultySelector from '@/components/QuestionDifficultySelector.vue'
 import QuestionAccuracySelector from '@/components/QuestionAccuracySelector.vue'
 import { DEFAULT_READING_SPEED, MAX_EXAM_DURATION_HOURS } from '@/constants/analysisConfig'
