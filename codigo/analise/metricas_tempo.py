@@ -32,7 +32,7 @@ RODAR: python3 /Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem/codigo/
   TIPO 2: tempo_leitura_categoria2 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
   TIPO 4: quantidade_caracteres vs porcentagem_acerto (por questão, estratificado por dificuldade)
    - Dia 1: Carrega JSON Dia 1, depois filtra LC (Q1-45) ou CH (Q46-90)
-   - Dia 2: Carrega JSON Dia 2, depois filtra CN (Q1-45) ou MT (Q46-90)
+   - Dia 2: Carrega JSON Dia 2, depois filtra CN (Q91-135) ou MT (Q136-180)
    - Resultado: CH ≠ LC (características diferentes), CN ≠ MT (características diferentes)
 
 FILTROS APLICADOS:
@@ -51,35 +51,41 @@ import json
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from typing import Dict, List, Optional, cast, Union
+from typing import Any, Dict, List, Optional, Tuple, cast, Union
 from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
 import sys
-sys.path.insert(0, str(Path(__file__).parent))
-
-# Importar as funções já corretas do analyze_reading_time.py
-from analyze_reading_time import (
+# Raiz do repositório no sys.path: permite rodar como script OU como módulo (-m)
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+# Importar as funções já corretas do analyze_reading_time.py (pacote a partir da raiz do repo)
+from codigo.analise.analyze_reading_time import (
     contar_caracteres,
     tempo_leitura_minutos,
     analisar_questao,
     analisar_textos_introdutorios,
-    VELOCIDADE_LEITURA_CPM,
-    TEMPO_TOTAL_PROVA,
-    TEMPO_REDACAO
+    TEMPO_DISPONIVEL_MINUTOS_POR_DIA
 )
 
 REPO_ROOT = Path("/Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem")
 DADOS_JSON_DIR = REPO_ROOT / "dados" / "enems_json_md"
 DESEMPENHO_CSV = REPO_ROOT / "outputs" / "ordem" / "desempenho_questoes_por_prova.csv"
+
+# Cor de referência: o texto das questões vem só do JSON Azul. Todos os cadernos
+# de um ano têm as mesmas questões em ordem diferente; o item é ligado ao texto
+# pelo co_item e pela posição que ele ocupa no caderno Azul.
+COR_REFERENCIA = "Azul"
+
+# Código co_prova do caderno Azul por ano e área (mesmos códigos de tabela_base.py)
+CODIGOS_AZUIS = {
+    2020: {"CN": 597, "CH": 567, "LC": 577, "MT": 587},
+    2022: {"CN": 1085, "CH": 1055, "LC": 1065, "MT": 1075},
+    2023: {"CN": 1221, "CH": 1191, "LC": 1201, "MT": 1211},
+    2024: {"CN": 1419, "CH": 1383, "LC": 1395, "MT": 1407},
+    2025: {"CN": 1483, "CH": 1447, "LC": 1459, "MT": 1471},
+}
 OUTPUT_DIR = REPO_ROOT / "outputs" / "metricas" / "tempo"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-# Constantes adicionais específicas de metricas_tempo.py
-TEMPO_DISPONIVEL_MINUTOS_POR_DIA = {
-    1: 255,  # Dia 1 (CH, LC): 255 minutos (desconta 75 min de redação de 330 min)
-    2: 300   # Dia 2 (CN, MT): 300 minutos completos
-}
 
 # Anos incluídos na análise
 ANOS_PARA_ANALISE = [2020, 2022, 2023, 2024, 2025]  # Excluindo 2021
@@ -122,7 +128,7 @@ def calcular_percentual_tempo_gasto_leitura(tempo_leitura_min: float, dia: int) 
     tempo_disponivel = TEMPO_DISPONIVEL_MINUTOS_POR_DIA[dia]
     return (tempo_leitura_min / tempo_disponivel) * 100
 
-def extrair_metricas_questao_json(questao_json: Dict) -> Dict[str, int]:
+def extrair_metricas_questao_json(questao_json: Dict[str, Any]) -> Dict[str, int]:
     """Extrai CARACTERES de UMA questão (CATEGORIA 1: Enunciado + 5 Alternativas)
     
     Retorna: dict com 'caracteres' (int)
@@ -159,12 +165,12 @@ def extrair_metricas_questao_json(questao_json: Dict) -> Dict[str, int]:
         'caracteres': contar_caracteres(texto_completo)
     }
 
-def _extrair_questoes_categoria_1(dados: Dict, dia: int, area: str) -> tuple:
+def _extrair_questoes_categoria_1(dados: Dict[str, Any], dia: int, area: str) -> Tuple[Any, ...]:
     """Extrai características das questões (CATEGORIA 1 = Enunciado + 5 Alternativas).
     
      Filtra questões por NÚMERO (campo "questao" do JSON)
-    - Dia 1, Area CH: Questões 1-45 (45 questões de Ciências Humanas)
-    - Dia 1, Area LC: Questões 46-90 (45 questões de Linguagens)
+    - Dia 1, Area LC: Questões 1-45 (45 questões de Linguagens)
+    - Dia 1, Area CH: Questões 46-90 (45 questões de Ciências Humanas)
     - Dia 2, Area CN: Questões 91-135 (45 questões de Ciências Naturais)
     - Dia 2, Area MT: Questões 136-180 (45 questões de Matemática)
     
@@ -176,9 +182,8 @@ def _extrair_questoes_categoria_1(dados: Dict, dia: int, area: str) -> tuple:
     Usa contar_caracteres() que exclui espaços/tabs/quebras
     Calcula tempo_leitura_min corretamente
     """
-    # range de números de questão no JSON (NOTA: não corresponde 1:1 com CSV):
-    # - Dia 1: Q1-45 contém LC (1-45 relativo), Q46-90 contém CH (46-90 relativo)
-    #   Isso é corrigido depois em _extrair_dados_row() com: CH: posicao-45, LC: posicao+45
+    # range de números de questão no JSON (numeração absoluta = posição na prova):
+    # - Dia 1: Q1-45 (LC), Q46-90 (CH)
     # - Dia 2: Q91-135 (CN), Q136-180 (MT)
     if area == 'CH':  
         inicio_num = 46
@@ -225,7 +230,7 @@ def _extrair_questoes_categoria_1(dados: Dict, dia: int, area: str) -> tuple:
 
 def _construir_categoria(caracteres_total: int, tempo_leitura: float, 
                          tempo_resolucao: float, percentual_tempo_resolucao: float,
-                         caracteres_intro: int = 0) -> Dict:
+                         caracteres_intro: int = 0) -> Dict[str, Any]:
     """Constrói dict de categoria com métricas.
     
     Parâmetros:
@@ -245,7 +250,28 @@ def _construir_categoria(caracteres_total: int, tempo_leitura: float,
         resultado['caracteres_intro'] = caracteres_intro
     return resultado
 
-def extrair_metricas_json_prova(arquivo_json: Path, ano: int, dia: int, area: str) -> Optional[Dict]:
+def _normalizar_idioma(valor) -> str:
+    """Padroniza o idioma: 'Inglês' -> 'inglês'; vazio/NaN (questão comum) -> 'geral'."""
+    if valor is None or pd.isna(valor):
+        return 'geral'
+    return str(valor).strip().lower()
+
+
+def _caracteres_por_item(dados: Dict[str, Any]) -> Dict[Tuple[Any, str], int]:
+    """Caracteres de cada questão do JSON, indexados por (número, idioma).
+
+    Diferente de _extrair_questoes_categoria_1 (que guarda só a primeira versão
+    de cada número), aqui as questões 1-5 de inglês e de espanhol ficam separadas.
+    """
+    por_item: Dict[Tuple[Any, str], int] = {}
+    for questao in dados.get('questoes', []):
+        chave = (questao.get('questao', 0), _normalizar_idioma(questao.get('idioma', 'geral')))
+        if chave not in por_item:
+            por_item[chave] = cast(int, analisar_questao(questao)['caracteres'])
+    return por_item
+
+
+def extrair_metricas_json_prova(arquivo_json: Path, ano: int, dia: int, area: str) -> Optional[Dict[str, Any]]:
     """Extrai CATEGORIA 1 (Enunciado + Alternativas) + CATEGORIA 2 (Caderno Completo)"""
     try:
         with open(arquivo_json, 'r', encoding='utf-8') as f:
@@ -267,7 +293,7 @@ def extrair_metricas_json_prova(arquivo_json: Path, ano: int, dia: int, area: st
     tempo_res_cat2 = calcular_tempo_resolucao(tempo_leitura_cat2, dia)
     percentual_tempo_cat2 = calcular_percentual_tempo_disponivel_resolucao(tempo_res_cat2, dia)
     
-    categoria_2 = _construir_categoria(char_cat2, tempo_leitura_cat2, tempo_res_cat2, percentual_tempo_cat2, caracteres_intro)
+    categoria_2 = _construir_categoria(char_cat2, tempo_leitura_cat2, tempo_res_cat2, percentual_tempo_cat2, cast(int, caracteres_intro))
     
     return {
         'ano': ano,
@@ -275,11 +301,12 @@ def extrair_metricas_json_prova(arquivo_json: Path, ano: int, dia: int, area: st
         'area': area,
         'questoes': questoes,
         'categoria_1': categoria_1,
-        'categoria_2': categoria_2
+        'categoria_2': categoria_2,
+        'caracteres_por_item': _caracteres_por_item(dados)
     }
 
 
-def _parse_pasta_json(nome_pasta: str) -> Optional[Dict]:
+def _parse_pasta_json(nome_pasta: str) -> Optional[Dict[str, Any]]:
     """
     Faz parse do nome da pasta JSON.
     Retorna dict com ano, dia, cor ou None se inválido.
@@ -298,7 +325,7 @@ def _parse_pasta_json(nome_pasta: str) -> Optional[Dict]:
         return None
 
 def _processar_json_por_area(arquivo_json: Path, ano: int, dia: int, 
-                              areas_dia: List[str], resultado: Dict, 
+                              areas_dia: List[str], resultado: Dict[Any, Any], 
                               nome_pasta: str, cor: str) -> None:
     """Processa arquivo JSON para cada área do dia."""
     for area in areas_dia:
@@ -308,7 +335,7 @@ def _processar_json_por_area(arquivo_json: Path, ano: int, dia: int,
             resultado[chave] = metricas
             print(f"✓ {nome_pasta} → {area}")
 
-def carregar_todos_jsons() -> Dict:
+def carregar_todos_jsons() -> Dict[Any, Any]:
     """Carrega características de TODAS as provas (JSON)"""
     resultado = {}
     
@@ -389,8 +416,9 @@ def carregar_desempenho_csv() -> pd.DataFrame:
     print(f"✓ Após remover NULLs: {len(df_filtrado)} linhas")
     
     if 'dificuldade_tri' not in df_filtrado.columns:
+        # Nulos de parametro_b_tri já foram removidos por dropna acima,
+        # então aqui b_tri nunca é nulo.
         def classificar_dificuldade(b_tri):
-            if pd.isna(b_tri): return 'media'
             if b_tri < 0: return 'facil'
             elif b_tri < 1.5: return 'media'
             else: return 'dificil'
@@ -405,65 +433,37 @@ def carregar_desempenho_csv() -> pd.DataFrame:
     
     return df_filtrado
 
-def _buscar_metricas_json(jsons_dict: Dict, ano: int, dia: int, area: str) -> tuple:
-    """Busca características JSON para um ano/dia/area específico (usa primeira cor disponível)."""
-    for (j_ano, j_dia, j_area, j_cor), j_metricas in jsons_dict.items():
-        if j_ano == ano and j_dia == dia and j_area == area:
-            return j_metricas, j_cor
-    return None, None
+def _buscar_metricas_json(jsons_dict: Dict[Any, Any], ano: int, dia: int, area: str) -> Tuple[Any, ...]:
+    """Busca características do caderno Azul (cor de referência) para ano/dia/area."""
+    metricas = jsons_dict.get((ano, dia, area, COR_REFERENCIA))
+    if metricas is None:
+        return None, None
+    return metricas, COR_REFERENCIA
 
-def _extrair_dados_row(row: pd.Series, caracteristicas: Dict, cor_encontrada: str) -> dict:
-    """Extrai e combina dados de uma linha CSV com características JSON.
+def _extrair_dados_row(row: pd.Series, caracteristicas: Dict[str, Any], cor_encontrada: str,
+                       posicao_azul: int, idioma: str) -> Dict[str, Any]:
+    """Extrai e combina dados de uma linha CSV com características do JSON Azul.
+
+    posicao_azul: posição que o item (co_item) ocupa no caderno Azul. É ela
+    que indica a questão do JSON, e não a posição do caderno desta linha.
+    idioma: 'inglês', 'espanhol' ou 'geral' (LC; questões 1-5 têm duas versões).
     """
     
     # Helper para extrair valor de forma segura
     def safe_item(val):
         return val.item() if hasattr(val, 'item') else val
     
-    # Encontra caracteres individuais da questão no JSON
-    posicao_csv = safe_item(row['posicao_prova'])
     area = safe_item(row['area'])
     
-    # Converter posição CSV para número de questão no JSON
-    # 
-    # ESTRUTURA DO JSON DIA 1 (após extração em _extrair_questoes_categoria_1):
-    # - Q1-45: Contém LC (Linguagens e Códigos) em numeração relativa
-    # - Q46-90: Contém CH (Ciências Humanas) em numeração relativa
-    #
-    # MAPEAMENTO CSV → JSON (com conversão):
-    # - CH: CSV 46-90 (posição física) → JSON Q(posicao-45) = Q1-45 ✓
-    # - LC: CSV 1-45 (posição física) → JSON Q(posicao+45) = Q46-90 ✓
-    # - CN: CSV 91-135 → JSON Q91-135 (sem conversão, é global)
-    # - MT: CSV 136-180 → JSON Q136-180 (sem conversão, é global)
-    
-    if area == 'CH':
-        # CH: CSV 46-90 → JSON 1-45
-        numero_questao_json = posicao_csv - 45
-    elif area == 'LC':
-        # LC: CSV 1-45 → JSON 46-90
-        numero_questao_json = posicao_csv + 45
-    elif area == 'CN':
-        # CN: CSV 91-135 → JSON 91-135 (sem conversão, é global)
-        numero_questao_json = posicao_csv
-    elif area == 'MT':
-        # MT: CSV 136-180 → JSON 136-180 (sem conversão, é global)
-        numero_questao_json = posicao_csv
-    else:
-        numero_questao_json = None
-    
-    caracteres_questao_individual = None
-    
-    # Procura pela questão específica nos dados do JSON
-    if numero_questao_json is not None:
-        for q in caracteristicas.get('questoes', []):
-            # A posição no JSON é o "numero_questao"
-            if q.get('numero_questao') == numero_questao_json:
-                caracteres_questao_individual = q.get('caracteres')
-                break
-    
-    # Fallback: se não encontrou, usa o total (não deve acontecer em casos normais)
+    # Caracteres da questão (número do Azul + idioma), lidos do JSON Azul.
+    # Não há fallback: se a questão não existir no Azul, é erro de dados.
+    chave_item = (posicao_azul, idioma)
+    caracteres_questao_individual = caracteristicas['caracteres_por_item'].get(chave_item)
     if caracteres_questao_individual is None:
-        caracteres_questao_individual = caracteristicas['categoria_1']['caracteres_total']
+        raise ValueError(
+            f"Questão {chave_item} não encontrada no JSON Azul "
+            f"(ano={safe_item(row['ano'])}, área={area}, co_item={safe_item(row['co_item'])})."
+        )
     
     return {
         'ano': safe_item(row['ano']),
@@ -472,6 +472,7 @@ def _extrair_dados_row(row: pd.Series, caracteristicas: Dict, cor_encontrada: st
         'co_prova': safe_item(row['co_prova']),
         'co_item': safe_item(row['co_item']),
         'posicao': safe_item(row['posicao_prova']),
+        'posicao_azul': posicao_azul,
         'caracteres_questao_individual': caracteres_questao_individual,
         'caracteres_total_cat1': caracteristicas['categoria_1']['caracteres_total'],
         'caracteres_intro_cat2': caracteristicas['categoria_2']['caracteres_intro'],
@@ -485,24 +486,29 @@ def _extrair_dados_row(row: pd.Series, caracteristicas: Dict, cor_encontrada: st
         'dificuldade_tri': safe_item(row['dificuldade_tri'])
     }
 
-def combinar_json_e_desempenho(jsons_dict: Dict, df_desempenho: pd.DataFrame) -> pd.DataFrame:
-    """Combina características (JSON) com desempenho (CSV)"""
+def combinar_json_e_desempenho(jsons_dict: Dict[Any, Any], df_desempenho: pd.DataFrame) -> pd.DataFrame:
+    """Combina características (JSON Azul) com desempenho (CSV).
+
+    Cada linha do CSV é um item em um caderno (co_prova). O texto vem do JSON
+    Azul, na posição que o mesmo co_item ocupa no caderno Azul. Assim, uma
+    questão que é a 1 no Azul e a 4 no Rosa recebe o mesmo texto nas duas.
+    """
+    # Posição de cada item no caderno Azul: (ano, área, co_item) -> posição
+    posicoes_azul: Dict[Tuple[Any, ...], int] = {}
+    for _, row_any in df_desempenho.iterrows():
+        row = cast(Any, row_any)
+        ano_row = int(row['ano'])
+        area_row = str(row['area'])
+        if int(row['co_prova']) == CODIGOS_AZUIS[ano_row][area_row]:
+            posicoes_azul[(ano_row, area_row, int(row['co_item']))] = int(row['posicao_prova'])
+    
     dados_combinados = []
+    sem_posicao_azul = 0
     
-    # Helper functions para conversão segura de tipos
-    def safe_int(val) -> int:
-        if hasattr(val, 'item'):
-            return int(val.item())
-        return int(val)
-    
-    def safe_str(val) -> str:
-        if hasattr(val, 'item'):
-            return str(val.item())
-        return str(val)
-    
-    for idx, row in df_desempenho.iterrows():
-        ano: int = safe_int(row['ano'])
-        area: str = safe_str(row['area'])
+    for _, row_any in df_desempenho.iterrows():
+        row = cast(Any, row_any)
+        ano: int = int(row['ano'])
+        area: str = str(row['area'])
         dia: int = 1 if area in ['CH', 'LC'] else 2
         
         caracteristicas, cor_encontrada = _buscar_metricas_json(jsons_dict, ano, dia, area)
@@ -510,7 +516,18 @@ def combinar_json_e_desempenho(jsons_dict: Dict, df_desempenho: pd.DataFrame) ->
         if caracteristicas is None:
             continue
         
-        dados_combinados.append(_extrair_dados_row(row, caracteristicas, cor_encontrada))
+        posicao_azul = posicoes_azul.get((ano, area, int(row['co_item'])))
+        if posicao_azul is None:
+            sem_posicao_azul += 1
+            continue
+        
+        idioma = _normalizar_idioma(row.get('lingua_estrangeira'))
+        dados_combinados.append(
+            _extrair_dados_row(row, caracteristicas, cor_encontrada, posicao_azul, idioma)
+        )
+    
+    if sem_posicao_azul:
+        print(f"  {sem_posicao_azul} linhas sem item no caderno Azul (ignoradas)")
     
     return pd.DataFrame(dados_combinados)
 
@@ -601,7 +618,7 @@ def gerar_metricas_questao(df_combinado: pd.DataFrame) -> pd.DataFrame:
     print(f"✓ Métricas por Questão: {len(df_questoes)} linhas")
     return df_questoes
 
-def calcular_correlacao_spearman(x: List[float], y: List[float]) -> Dict:
+def calcular_correlacao_spearman(x: List[float], y: List[float]) -> Dict[str, Any]:
     """Calcula correlação de Spearman entre X e Y (correlação não-paramétrica por ranks)"""
     dados_validos = [(xi, yi) for xi, yi in zip(x, y)
                     if pd.notna(xi) and pd.notna(yi) and
@@ -617,8 +634,8 @@ def calcular_correlacao_spearman(x: List[float], y: List[float]) -> Dict:
     try:
         result = stats.spearmanr(x_v, y_v)
         # Usar indexação de tupla - SpearmanRResult suporta __getitem__
-        rho = float(result[0])  # type: ignore
-        p = float(result[1])  # type: ignore
+        rho = float(cast(Any, result[0]))
+        p = float(cast(Any, result[1]))
     except (ValueError, ZeroDivisionError, RuntimeError) as e:
         print(f" Erro ao calcular correlação: {e}")
         return {'coeficiente_correlacao_spearman': np.nan, 'valor_p_significancia_estatistica': np.nan, 'quantidade_pares': len(dados_validos),
@@ -744,7 +761,21 @@ def _extract_from_array(valor, tipo_esperado):
     return None
 
 
-def _calcular_diferenca_caracteres(df_questoes, dif, impacta):
+def _intensidade_correlacao(r_valor):
+    """Rótulo de intensidade pela magnitude de |rho| (escala fixa do TCC)."""
+    abs_rho = abs(r_valor)
+    if abs_rho < 0.20:
+        return "muito fraca / desprezível"
+    elif abs_rho < 0.40:
+        return "fraca"
+    elif abs_rho < 0.70:
+        return "moderada"
+    elif abs_rho < 0.90:
+        return "forte"
+    return "muito forte"
+
+
+def _calcular_diferenca_caracteres(df_questoes, dif, impacta, r_valor):
     """Calcula diferença de acerto entre questões com menos vs mais caracteres.
     """
     df_dif = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'] == dif])
@@ -759,11 +790,10 @@ def _calcular_diferenca_caracteres(df_questoes, dif, impacta):
     
     ref_dados = f"Menos: {menos:.1f}% | Mais: {mais:.1f}% (+{diff:.1f}%)"
     
-    # Conclusão diferenciada baseada se IMPACTA ou não
-    if impacta == 'SIM':
-        conclusao = f"Correlação FORTE: Questões com MAIS caracteres acertam MAIS (+{diff:.1f}%)"
-    else:
-        conclusao = f"Correlação MODERADA: Diferença de +{diff:.1f}% (não atinge força >0.70)"
+    sentido = "positiva" if r_valor > 0 else "negativa"
+    intensidade = _intensidade_correlacao(r_valor)
+    conclusao = (f"Correlação {sentido} {intensidade} (rho={r_valor:.3f}); "
+                 f"diferença entre metades por caracteres: {diff:+.1f} p.p.")
     
     return ref_dados, conclusao
 
@@ -792,7 +822,9 @@ def _construir_entrada_tipo_1_3(tipo_label, area, r_valor, pval_valor, qtd_valor
     elif not tem_n:
         conclusao = f'Amostra pequena (n={qtd_valor})'
     elif not r_forte:
-        conclusao = f'Correlação não é forte o suficiente (r={abs(r_valor):.3f}, precisa >0.70)'
+        sentido = 'positiva' if r_valor > 0 else 'negativa'
+        conclusao = (f'Correlação {sentido} {_intensidade_correlacao(r_valor)} '
+                     f'(r={r_valor:.3f}); não atinge o critério de |r| > 0,70')
     elif not p_sig:
         conclusao = f'Não significativo (p={pval_valor:.4f})'
     else:
@@ -891,7 +923,7 @@ def _processar_tipo_4(df_correlacoes, df_questoes):
         p_sig = tem_p and pval_valor < 0.05
         impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
         
-        ref_dados, conclusao = _calcular_diferenca_caracteres(df_questoes, dif, impacta)
+        ref_dados, conclusao = _calcular_diferenca_caracteres(df_questoes, dif, impacta, r_valor)
         entrada = _construir_entrada_tipo_4(dif, r_valor, pval_valor, qtd_valor, ref_dados, conclusao)
         relatorio.append(entrada)
     
@@ -954,12 +986,6 @@ def _exportar_e_exibir(relatorio, df_provas, df_questoes):
     print(f"\n✓ {arq_final}")
     print(f"   {len(df_relatorio)} análises correlacionais consolidadas")
     print("  PIPELINE CONCLUÍDO")
-    print("\n CONCLUSÕES:")
-    print("    Tempo de leitura (questões): IMPACTA em CH (p=0.0087) e CN (p=0.0114)")
-    print("       NÃO impacta em LC (p=0.6532) e MT (p=0.3053)")
-    print("     Tempo de leitura (questões + textos): IMPACTA em CN (p=0.0181)")
-    print("       NÃO impacta em CH (p=0.3973), LC (p=0.1201) e MT (p=0.1140)")
-    print("    Quantidade de caracteres: SIM impacta em TODAS dificuldades (p < 0.0001)")
     print(f"\n Arquivos gerados em: {OUTPUT_DIR}")
     print("   1. resumo_metricas_prova.csv (métricas agregadas por prova)")
     print("   2. metricas_caracteristicas_questao.csv (métricas por questão)")
@@ -991,6 +1017,54 @@ def _extrair_valor_escalar(valor, tipo_esperado=float):
 
 
 
+def gerar_questoes_grafico() -> pd.DataFrame:
+    """Gera tabela de TODAS as entradas de questão do JSON (sem deduplicar).
+
+    Usada pelo gráfico 'quanto tempo demora para ler cada questão'.
+    As questões 1-5 aparecem duas vezes quando existem versões em inglês e espanhol
+    (campo 'idioma'), para que o eixo X mostre 1,1,2,2,...,5,5,6,...,180.
+    """
+    linhas = []
+    for pasta_json in sorted(DADOS_JSON_DIR.iterdir()):
+        if not pasta_json.is_dir():
+            continue
+        info = _parse_pasta_json(pasta_json.name)
+        if not info:
+            continue
+        arquivo_json = pasta_json / f"{pasta_json.name}.json"
+        if not arquivo_json.exists():
+            continue
+
+        with open(arquivo_json, 'r', encoding='utf-8') as f:
+            dados = json.load(f)
+
+        for questao in dados.get("questoes", []):
+            num_questao = questao.get("questao", 0)
+            metricas = analisar_questao(questao)
+            linhas.append({
+                'ano': info['ano'],
+                'dia': info['dia'],
+                'posicao_prova': num_questao,
+                'idioma': questao.get('idioma', 'geral'),
+                'caracteres': metricas['caracteres'],
+                'tempo_leitura_min': metricas['tempo_leitura_min'],
+            })
+
+    df = pd.DataFrame(linhas)
+    df = df.sort_values(by=['ano', 'dia', 'posicao_prova', 'idioma']).reset_index(drop=True)
+    return df
+
+
+def _exportar_questoes_grafico():
+    """Exporta CSV com todas as entradas de questão (para o gráfico de tempo por questão)."""
+    arq_grafico = OUTPUT_DIR / "tempo_leitura_questoes_grafico.csv"
+    df_grafico = gerar_questoes_grafico()
+    df_grafico.to_csv(arq_grafico, index=False, encoding='utf-8')
+    print(f"\n✓ {arq_grafico}")
+    print(f"   {len(df_grafico)} entradas de questão (inclui duplicatas de idioma)")
+
+
+
 def main():
     print("  GERADOR DE MÉTRICAS: IMPACTO DO TEMPO NO DESEMPENHO ENEM")
     
@@ -1006,6 +1080,9 @@ def main():
     
     # Exportar e exibir conclusões
     _exportar_e_exibir(relatorio, df_provas, df_questoes)
+
+    # Exportar entradas por questão para o gráfico de tempo de leitura
+    _exportar_questoes_grafico()
 
 if __name__ == "__main__":
     main()

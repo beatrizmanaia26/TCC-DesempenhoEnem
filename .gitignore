@@ -18,11 +18,7 @@ codigo/analise/__pycache__/
 *.pyc
 *.pyo
 
-# Local configuration files (do not commit)
-aplicacao/MVP/backend/config/enemConstants.py
-aplicacao/MVP/frontend/src/config/enemConstants.js
-aplicacao/MVP/backend/.env.example
-aplicacao/MVP/backend/SECURITY.md
-COMO_RODAR.md
-ENGENHARIA_USABILIDADE.md
-outputs/metricas/tempo/DOCUMENTACAO_ANALYZE_READING_TIME.md
+
+
+
+

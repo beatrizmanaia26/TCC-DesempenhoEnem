@@ -1,32 +1,26 @@
 <template>
   <div class="prova-info">
     <div class="info-item">
-      <div class="info-label">
-        <strong>Duração total da prova:</strong>
-      </div>
+      <div class="info-label">Duração total da prova:</div>
       <div class="info-value">
         {{ provaInfo.duracao_total }}
-        <span class="info-details">(Dia 1: {{ provaInfo.duracao_dia1 }} | Dia 2: {{ provaInfo.duracao_dia2 }})</span>
+        <span class="info-day-info">(Dia 1: {{ provaInfo.duracao_dia1 }} | Dia 2: {{ provaInfo.duracao_dia2 }})</span>
       </div>
     </div>
 
     <div class="info-item">
-      <div class="info-label">
-        <strong>Quantidade total de questões:</strong>
-      </div>
+      <div class="info-label">Quantidade total de questões:</div>
       <div class="info-value">
         {{ provaInfo.questoes_total }} questões
-        <span class="info-details">(Dia 1: {{ provaInfo.questoes_dia1 }} | Dia 2: {{ provaInfo.questoes_dia2 }})</span>
+        <span class="info-day-info">(Dia 1: {{ provaInfo.questoes_dia1 }} | Dia 2: {{ provaInfo.questoes_dia2 }})</span>
       </div>
     </div>
 
     <div class="info-item">
-      <div class="info-label">
-        <strong>Velocidade de leitura considerada:</strong>
-      </div>
+      <div class="info-label">Velocidade de leitura considerada:</div>
       <div class="info-value">
         {{ provaInfo.velocidade_leitura }} caracteres/minuto
-        <span class="info-details">(Referência: Messias et al., 2008)</span>
+        <span class="info-reference">(Referência: Messias et al., 2008)</span>
       </div>
     </div>
   </div>
@@ -58,26 +52,19 @@ const provaInfo = computed(() => {
 
 <style scoped>
 .prova-info {
-  background: linear-gradient(135deg, #f8fafb 0%, #f0f4f8 100%);
-  border: 1px solid #e0e8f0;
-  border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   margin: 1.5rem 0;
-  box-shadow: 0 2px 8px rgba(0, 112, 192, 0.08);
 }
 
 .info-item {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #e0e8f0;
+  padding: 0;
 }
 
 .info-item:last-child {
   margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
 }
 
 .info-label {
@@ -89,31 +76,46 @@ const provaInfo = computed(() => {
 
 .info-value {
   flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem;
   color: #0070C0;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
-.info-details {
-  display: block;
+.info-day-info {
   color: #666;
   font-size: 0.85rem;
   font-weight: 400;
-  margin-top: 0.25rem;
+  margin: 0;
+}
+
+.info-reference {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
   .prova-info {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   .info-item {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.25rem;
+    align-items: flex-start;
   }
 
   .info-label {
     min-width: auto;
+  }
+
+  .info-value {
+    flex-direction: column;
+    gap: 0.15rem;
   }
 }
 </style>

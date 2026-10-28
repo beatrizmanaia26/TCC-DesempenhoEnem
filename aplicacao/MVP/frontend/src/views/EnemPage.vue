@@ -47,19 +47,8 @@
           </div>
         </div>
         <ProvaInfoDisplay :ano="selectedYear" />
-        <div class="analyses-grid">
-          <div
-            v-for="analysis in analysisTypes"
-            :key="analysis.id"
-            class="analysis-card"
-            @click="viewAnalysis(analysis)"
-          >
-            <div class="analysis-icon">{{ analysis.icon }}</div>
-            <h3>{{ analysis.title }}</h3>
-            <p>{{ analysis.description }}</p>
-            <button class="btn-view">Ver Análise →</button>
-          </div>
-        </div>
+        <ResumoTempoProva :ano="selectedYear" />
+        <GraficoTempoLeitura :ano="selectedYear" />
       </div>
 
       <!-- PLACEHOLDER SE NENHUM ANO SELECIONADO -->
@@ -79,6 +68,8 @@
 import { ref } from 'vue'
 import FilterIcon from '@/components/icons/FilterIcon.vue'
 import ProvaInfoDisplay from '@/components/ProvaInfoDisplay.vue'
+import GraficoTempoLeitura from '@/components/GraficoTempoLeitura.vue'
+import ResumoTempoProva from '@/components/ResumoTempoProva.vue'
 
 const availableYears = [2025, 2024, 2023, 2022, 2020]
 const selectedYear = ref(null)
@@ -93,45 +84,6 @@ const filterOptions = [
   { id: 'position', label: 'Posição das Questões' }
 ]
 const selectedFilters = ref(new Set())
-
-const analysisTypes = [
-  {
-    id: 'position',
-    icon: '.',
-    title: 'Posição das Questões',
-    description: 'Análise da distribuição espacial das questões ao longo da prova'
-  },
-  {
-    id: 'image',
-    icon: '.',
-    title: 'Presença de Imagens',
-    description: 'Análise quantitativa e qualitativa das imagens utilizadas'
-  },
-  {
-    id: 'formality',
-    icon: '.',
-    title: 'Formalismo',
-    description: 'Análise do nível de formalidade da linguagem utilizada'
-  },
-  {
-    id: 'reading-time',
-    icon: '.',
-    title: 'Tempo de Prova',
-    description: 'Estimativa de tempo necessário para resolver cada questão'
-  },
-  {
-    id: 'word-count',
-    icon: '.',
-    title: 'Tamanho das Questões',
-    description: 'Análise da quantidade de palavras por questão'
-  },
-  {
-    id: 'distractors',
-    icon: '.',
-    title: 'Distratores',
-    description: 'Análise da qualidade e similaridade dos distratores'
-  }
-]
 
 const selectYear = (year) => {
   selectedYear.value = year
@@ -148,11 +100,6 @@ const toggleFilter = (filterId) => {
 
 const isFilterSelected = (filterId) => {
   return selectedFilters.value.has(filterId)
-}
-
-const viewAnalysis = (analysis) => {
-  console.log(`Viewing ${analysis.title} for year ${selectedYear.value}`)
-  // TODO: Navegar para página de resultados
 }
 
 // Modal upload
@@ -271,62 +218,6 @@ const uploadNewEnem = () => {
   font-size: 1.8rem;
   margin: 0 0 2rem 0;
   text-align: center;
-}
-
-.analyses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.analysis-card {
-  background: #f9f9f9;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.analysis-card:hover {
-  border-color: #0070C0;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
-  transform: translateY(-5px);
-}
-
-.analysis-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.analysis-card h3 {
-  color: #333;
-  font-size: 1.2rem;
-  margin: 1rem 0 0.5rem 0;
-}
-
-.analysis-card p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-.btn-view {
-  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-view:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
 }
 
 .placeholder {
@@ -620,10 +511,6 @@ const uploadNewEnem = () => {
 
   .years-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-
-  .analyses-grid {
-    grid-template-columns: 1fr;
   }
 }
 </style>

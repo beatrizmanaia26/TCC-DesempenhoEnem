@@ -6,6 +6,18 @@ export const ENEM_CONSTANTS = {
   // Referência: Messias et al., 2008
   VELOCIDADE_LEITURA_CPM: 1100,
 
+  // Tempo total da prova por dia (em minutos)
+  // Dia 1 (CH, LC): 5h30min (330 min)
+  // Dia 2 (CN, MT): 5h (300 min)
+  TEMPO_TOTAL_PROVA: {
+    1: 330,  // Dia 1: 5h30min
+    2: 300   // Dia 2: 5h00min
+  },
+
+  // Tempo reservado para redação (apenas no Dia 1)
+  // 1h15min (75 minutos)
+  TEMPO_REDACAO: 75,
+
   // Tempo disponível por dia (em minutos)
   // Dia 1 (CH, LC): 330 min - 75 min redação = 255 min
   // Dia 2 (CN, MT): 300 min completos
@@ -83,14 +95,19 @@ export function obterInfoProva(ano) {
     return null
   }
 
-  const dia1 = ENEM_CONSTANTS.TEMPO_DISPONIVEL_MINUTOS_POR_DIA[1]
-  const dia2 = ENEM_CONSTANTS.TEMPO_DISPONIVEL_MINUTOS_POR_DIA[2]
-  const duracao_total = dia1 + dia2
+  const dia1Total = ENEM_CONSTANTS.TEMPO_TOTAL_PROVA[1]
+  const dia2Total = ENEM_CONSTANTS.TEMPO_TOTAL_PROVA[2]
+  const duraçaoTotal = dia1Total + dia2Total
+
+  const dia1Disponivel = ENEM_CONSTANTS.TEMPO_DISPONIVEL_MINUTOS_POR_DIA[1]
+  const dia2Disponivel = ENEM_CONSTANTS.TEMPO_DISPONIVEL_MINUTOS_POR_DIA[2]
 
   return {
-    duracao_total: formatarDuracao(duracao_total),
-    duracao_dia1: formatarDuracao(dia1),
-    duracao_dia2: formatarDuracao(dia2),
+    duracao_total: formatarDuracao(duraçaoTotal),
+    duracao_dia1: formatarDuracao(dia1Total),
+    duracao_dia2: formatarDuracao(dia2Total),
+    tempo_disponivel_dia1: formatarDuracao(dia1Disponivel),
+    tempo_disponivel_dia2: formatarDuracao(dia2Disponivel),
     questoes_total: dadosAno.questoes_total,
     questoes_dia1: dadosAno.questoes_dia1,
     questoes_dia2: dadosAno.questoes_dia2,

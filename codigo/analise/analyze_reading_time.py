@@ -41,18 +41,30 @@ Referências:
 """
 
 import json
+import sys
 from pathlib import Path
+import importlib.util
+from typing import Dict
 
+# Importar constantes centralizadas do backend usando importlib
+backend_config_path = Path(__file__).parent.parent.parent / "aplicacao" / "MVP" / "backend" / "config" / "enemConstants.py"
+spec = importlib.util.spec_from_file_location("enemConstants", backend_config_path)
+if spec and spec.loader:
+    enemConstants = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(enemConstants)
+else:
+    raise ImportError(f"Não foi possível carregar: {backend_config_path}")
 
-VELOCIDADE_LEITURA_CPM = 1100  # caracteres/min (Messias et al., 2008)
+# Type hints para constantes importadas
+VELOCIDADE_LEITURA_CPM: int = enemConstants.VELOCIDADE_LEITURA_CPM
+TEMPO_TOTAL_PROVA: Dict[int, int] = enemConstants.TEMPO_TOTAL_PROVA
+TEMPO_REDACAO: int = enemConstants.TEMPO_REDACAO
 
-TEMPO_TOTAL_PROVA = {
-    1: 330,  # Dia 1: 5h30min
-    2: 300,  # Dia 2: 5h00min
+# Derivar TEMPO_DISPONIVEL_MINUTOS_POR_DIA a partir das constantes importadas
+TEMPO_DISPONIVEL_MINUTOS_POR_DIA: Dict[int, int] = {
+    1: TEMPO_TOTAL_PROVA[1] - TEMPO_REDACAO,  # Dia 1: 330 - 75 = 255 minutos
+    2: TEMPO_TOTAL_PROVA[2]  # Dia 2: 300 minutos
 }
-
-TEMPO_REDACAO = 75  # 1h15min (só no Dia 1)
-
 
 #Conta caracteres efetivos (exclui espaços, tabs e quebras de linha).
 def contar_caracteres(texto):
