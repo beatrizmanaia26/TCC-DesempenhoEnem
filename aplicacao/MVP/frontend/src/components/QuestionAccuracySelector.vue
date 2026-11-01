@@ -17,17 +17,22 @@
           <input
             :id="`accuracy-input-${q.id}`"
             :value="accuracies[q.id] || 0"
-            @input="setAccuracy(q.id, $event.target.value)"
+            @input="setAccuracy(q.id, $event.target.value, $event)"
             type="number"
             min="0"
-            max="10000"
+            :max="limiteAcertos ?? 10000"
             placeholder="0"
             class="input-accuracy"
+            :class="{ 'input-invalid': ultrapassaLimite(q.id) }"
             :aria-label="`Acertos para Questao ${q.id}`"
           />
         </div>
       </div>
     </div>
+
+    <p v-if="possuiAcertoAcimaDoLimite" class="error-message" role="alert">
+      O número de acertos de cada questão não pode ser maior que o número de pessoas que realizaram a avaliação ({{ limiteAcertos }}).
+    </p>
 
     <div class="navigation">
       <button
@@ -70,6 +75,11 @@ const props = defineProps({
   modelValue: {
     type: Object,
     default: () => ({})
+  },
+  // Número de pessoas que realizaram a avaliação: nenhuma questão pode ter mais acertos que isso
+  maxAccuracy: {
+    type: Number,
+    default: null
   }
 })
 
@@ -77,6 +87,16 @@ const emit = defineEmits(['update:modelValue'])
 
 const currentGroup = ref(1)
 const accuracies = ref({ ...props.modelValue })
+
+const limiteAcertos = computed(() => (props.maxAccuracy > 0 ? props.maxAccuracy : null))
+
+const ultrapassaLimite = (questionId) => {
+  return limiteAcertos.value !== null && Number(accuracies.value[questionId] || 0) > limiteAcertos.value
+}
+
+const possuiAcertoAcimaDoLimite = computed(() => {
+  return Object.keys(accuracies.value).some((questionId) => ultrapassaLimite(questionId))
+})
 
 const totalGroups = computed(() => {
   return Math.ceil(props.totalQuestions / props.questionsPerGroup)
@@ -99,9 +119,21 @@ const progressPercentage = computed(() => {
   return (answered / props.totalQuestions) * 100
 })
 
-const setAccuracy = (questionId, value) => {
-  const numValue = Number.parseInt(value) || 0
+const setAccuracy = (questionId, value, event) => {
+  let numValue = Math.max(Number.parseInt(value) || 0, 0)
+
+  // Limita o valor ao número de pessoas que realizaram a avaliação
+  if (limiteAcertos.value !== null && numValue > limiteAcertos.value) {
+    numValue = limiteAcertos.value
+  }
+
   accuracies.value[questionId] = numValue
+
+  // Atualiza o próprio input, pois o Vue não re-renderiza se o valor do model não mudou
+  if (event && event.target) {
+    event.target.value = String(numValue)
+  }
+
   emit('update:modelValue', accuracies.value)
 }
 
@@ -203,6 +235,18 @@ const previousGroup = () => {
   outline: none;
   border-color: #0070C0;
   box-shadow: 0 0 0 3px rgba(0, 112, 192, 0.1);
+}
+
+.input-accuracy.input-invalid {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 1rem;
 }
 
 /* Screen reader only: oculta visualmente mas mantém acessivel para leitores de tela */

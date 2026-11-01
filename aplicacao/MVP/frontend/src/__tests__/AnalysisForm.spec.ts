@@ -94,5 +94,64 @@ describe('AnalysisForm - seleção múltipla de tipos de análise', () => {
 
     expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeDefined()
   })
+describe('AnalysisForm - acertos por questão não podem exceder o número de pessoas', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('bloqueia a análise quando o número de pessoas é reduzido abaixo de acertos já informados', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(1)
+    await wrapper.find('#metrics-yes').setValue(true)
+    await wrapper.find('#student-count').setValue(10)
+    await wrapper.find('#metrics-question-count').setValue(3)
+
+    await wrapper.find('#accuracy-input-2').setValue('10')
+    expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeUndefined()
+
+    await wrapper.find('#student-count').setValue(5)
+
+    expect(wrapper.find('[role="alert"]').exists()).toBe(true)
+    expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeDefined()
+  })
+
+  it('habilita a análise quando todos os acertos são iguais ao número de pessoas', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(1)
+    await wrapper.find('#metrics-yes').setValue(true)
+    await wrapper.find('#student-count').setValue(10)
+    await wrapper.find('#metrics-question-count').setValue(3)
+
+    for (const numero of [1, 2, 3]) {
+      await wrapper.find(`#accuracy-input-${numero}`).setValue('10')
+    }
+
+    expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeUndefined()
+  })
+
+  it('limita o valor digitado ao número de pessoas e mostra o aviso ao reduzir o total', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(1)
+    await wrapper.find('#metrics-yes').setValue(true)
+    await wrapper.find('#student-count').setValue(10)
+    await wrapper.find('#metrics-question-count').setValue(3)
+
+    await wrapper.find('#accuracy-input-1').setValue('25')
+    expect((wrapper.find('#accuracy-input-1').element as HTMLInputElement).value).toBe('10')
+    expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeUndefined()
+
+    await wrapper.find('#student-count').setValue(5)
+
+    expect(wrapper.find('[role="alert"]').exists()).toBe(true)
+    expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeDefined()
+
+    await wrapper.find('#accuracy-input-1').setValue('8')
+
+    expect((wrapper.find('#accuracy-input-1').element as HTMLInputElement).value).toBe('5')
+    expect(wrapper.find('[role="alert"]').exists()).toBe(false)
+    expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeUndefined()
+  })
+})
+
 
 })

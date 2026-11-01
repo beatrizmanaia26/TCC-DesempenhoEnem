@@ -205,6 +205,7 @@
       <QuestionAccuracySelector
         v-if="formData.studentMetricsQuestionCount > 0 && formData.includeStudentMetrics"
         :total-questions="formData.studentMetricsQuestionCount"
+        :max-accuracy="formData.studentCount || null"
         :model-value="formData.studentMetricsAccuracy"
         @update:model-value="formData.studentMetricsAccuracy = { ...formData.studentMetricsAccuracy, ...$event }"
       />
@@ -455,11 +456,13 @@ const isFormValid = computed(() => {
       formData.value.studentMetricsQuestionCount && formData.value.studentMetricsQuestionCount > 0
 
     // Acertos por questão: questão sem valor gravado conta como 0 (é o que o campo mostra)
+    // Nenhuma questão pode ter mais acertos do que o número de pessoas que realizaram a avaliação
     if (metricsValid) {
       const numeroDeQuestoes = Number(formData.value.studentMetricsQuestionCount)
+      const numeroDeEstudantes = Number(formData.value.studentCount)
       const todosValidos = Array.from({ length: numeroDeQuestoes }, (_, indice) => indice + 1).every((numero) => {
         const acertos = Number(formData.value.studentMetricsAccuracy[numero] ?? 0)
-        return Number.isInteger(acertos) && acertos >= 0
+        return Number.isInteger(acertos) && acertos >= 0 && acertos <= numeroDeEstudantes
       })
 
       if (!todosValidos) return false
