@@ -159,6 +159,48 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
   }
 })
 
+// Extrai questões de um PDF e devolve a lista em JSON
+app.post('/api/extract', upload.single('file'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ error: 'Nenhum arquivo foi enviado' })
+  }
+
+  if (path.extname(req.file.originalname).toLowerCase() !== '.pdf') {
+    fs.unlink(req.file.path, () => {})
+    return res.status(400).json({ error: 'Envie um arquivo PDF' })
+  }
+
+  const pythonPath = process.env.PYTHON_PATH || 'python3'
+  const pythonScript = path.join(__dirname, '../../../codigo/extract/extracao_enem.py')
+  const pythonProcess = spawn(pythonPath, [pythonScript, req.file.path, '--stdout-json'])
+  let output = ''
+  let errorOutput = ''
+
+  pythonProcess.stdout.on('data', (data) => { output += data.toString() })
+  pythonProcess.stderr.on('data', (data) => { errorOutput += data.toString() })
+  pythonProcess.on('error', (error) => {
+    fs.unlink(req.file.path, () => {})
+    res.status(500).json({ error: `Não foi possível iniciar o Python: ${error.message}` })
+  })
+  pythonProcess.on('close', (code) => {
+    fs.unlink(req.file.path, () => {})
+    if (res.headersSent) return
+    if (code !== 0) {
+      return res.status(500).json({ error: 'Falha ao extrair o PDF', details: errorOutput.trim() })
+    }
+    try {
+      const extracted = JSON.parse(output)
+      res.json({
+        fileName: req.file.originalname,
+        questions: extracted.questoes,
+        textos_introdutorios: extracted.textos_introdutorios
+      })
+    } catch (error) {
+      res.status(500).json({ error: `Resposta inválida do extrator: ${error.message}` })
+    }
+  })
+})
+
 // Rota para recuperar histórico de análises
 app.get('/api/analyses', (req, res) => {
   res.json({

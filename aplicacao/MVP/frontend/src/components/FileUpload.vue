@@ -2,12 +2,12 @@
   <div class="file-upload">
     <div class="upload-area" @drop="handleDrop" @dragover.prevent @dragenter.prevent @dragleave="isDragging = false"
       :class="{ 'is-dragging': isDragging }">
-      <label for="file-input" class="sr-only">Selecione um arquivo PDF ou JSON para analise</label>
+      <label for="file-input" class="sr-only">Selecione um arquivo PDF para extração</label>
       <input 
         id="file-input"
         type="file" 
         ref="fileInput" 
-        accept=".pdf,.json" 
+        accept=".pdf"
         @change="handleFileChange" 
         style="display: none" 
       />
@@ -20,7 +20,7 @@
         </svg>
 
         <h3>Selecione ou arraste um arquivo</h3>
-        <p>Formato aceito: PDF de até xxxx </p>
+        <p>Formato aceito: PDF de até 10 MB</p>
         <button @click="triggerFileInput" class="btn btn-upload">Escolher arquivo</button>
       </div>
 

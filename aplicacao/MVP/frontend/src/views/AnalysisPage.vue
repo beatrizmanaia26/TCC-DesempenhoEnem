@@ -8,7 +8,8 @@
     <main class="main-content">
       <!-- SEÇÃO 1: UPLOAD -->
       <section class="section upload-section" v-if="!isAnalyzing && !hasResults">
-        <FileUpload @file-selected="handleFileSelected" />
+        <FileUpload :key="uploadKey" @file-selected="handleFileSelected" />
+        <p v-if="isExtracting" class="extraction-status">Lendo o PDF para preparar os dados da análise...</p>
       </section>
 
       <!-- SEÇÃO 2: FORMULÁRIO DE ANÁLISE -->
@@ -18,7 +19,7 @@
           :total-questions="totalQuestions"
           @analyze="handleAnalyze"
           @cancel="handleCancel"
-          :is-loading="isAnalyzing"
+          :is-loading="isFormLoading"
         />
       </section>
 
@@ -46,9 +47,9 @@
       <!-- SEÇÃO 5: ERRO -->
       <section class="section error-section" v-if="errorMessage">
         <div class="error-box">
-          <h3>⚠️ Erro na análise</h3>
+          <h3>⚠️ Erro ao preparar a análise</h3>
           <p>{{ errorMessage }}</p>
-          <button @click="handleReset" class="btn btn-primary">Tentar novamente</button>
+          <button @click="retryExtraction" class="btn btn-primary">Tentar novamente</button>
         </div>
       </section>
     </main>
@@ -57,20 +58,26 @@
 
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { useAnalysisStore } from '@/stores/analysisStore'
 import FileUpload from '@/components/FileUpload.vue'
 import AnalysisForm from '@/components/AnalysisForm.vue'
 import ResultsDisplay from '@/components/ResultsDisplay.vue'
-import { uploadAndAnalyze } from '@/services/analysisApi'
+import { extractExamPdf } from '@/services/analysisApi'
 
 // Store
 const store = useAnalysisStore()
+const router = useRouter()
 
 // Estado local
 const isAnalyzing = ref(false)
+const isExtracting = ref(false)
 const analysisProgress = ref('Iniciando...')
 const progressPercentage = ref(0)
 const errorMessage = ref('')
+const extractionResults = ref(null)
+const uploadKey = ref(0)
+let extractionRequestId = 0
 
 // Local refs para sincronizar com store
 const localSelectedFile = ref(null)
@@ -79,6 +86,9 @@ const localSelectedFile = ref(null)
 onMounted(() => {
   store.clearResults()
   // NÃO limpar o arquivo e formulário - permitir que persista ao navegar
+  if (store.selectedFile) {
+    prepareExtraction(store.selectedFile)
+  }
 })
 
 // Sincronizar com store
@@ -91,52 +101,130 @@ const selectedFile = computed(() => localSelectedFile.value)
 const totalQuestions = computed(() => store.totalQuestions)
 const hasResults = computed(() => store.results !== null)
 const analysisResults = computed(() => store.results)
+const isFormLoading = computed(() => isExtracting.value || isAnalyzing.value
+  || !extractionResults.value || extractionResults.value.questions.length === 0)
 
 // Handlers
 const handleFileSelected = (file) => {
+  extractionRequestId += 1
   store.setSelectedFile(file)
   store.setTotalQuestions(0)
+  extractionResults.value = null
   errorMessage.value = ''
+  store.setAnalysisPayload(null)
+  if (file) {
+    prepareExtraction(file)
+  } else {
+    isExtracting.value = false
+  }
 }
 
-const handleAnalyze = async (analysisConfig) => {
+const prepareExtraction = async (file) => {
+  const requestId = ++extractionRequestId
+  isExtracting.value = true
+  errorMessage.value = ''
+
+  try {
+    const extracted = await extractExamPdf(file)
+    if (requestId !== extractionRequestId) return
+    // O idioma é omitido no JSON do site, que trabalha com uma única prova.
+    const questions = extracted.questions.map(({ idioma, ...question }) => question)
+    extractionResults.value = {
+      fileName: extracted.fileName,
+      questions,
+      textos_introdutorios: extracted.textos_introdutorios ?? []
+    }
+    store.setTotalQuestions(questions.length)
+  } catch (error) {
+    if (requestId !== extractionRequestId) return
+    errorMessage.value = error.message || 'Erro ao ler o PDF.'
+  } finally {
+    if (requestId === extractionRequestId) isExtracting.value = false
+  }
+}
+
+const handleAnalyze = async (formValues) => {
+  if (!extractionResults.value || isExtracting.value) return
   isAnalyzing.value = true
   errorMessage.value = ''
   progressPercentage.value = 0
-  analysisProgress.value = 'Preparando arquivo...'
+  analysisProgress.value = 'Preparando os dados da prova...'
 
   try {
     progressPercentage.value = 25
-    analysisProgress.value = 'Enviando arquivo...'
+    analysisProgress.value = 'Organizando questões e parâmetros...'
 
-    const results = await uploadAndAnalyze(selectedFile.value, analysisConfig)
+    // O submit do AnalysisForm salva o estado no Pinia antes de emitir o evento.
+    // `hours`/`minutes` guardam a duração; `analysisType` escolhe o recorte;
+    // `readingSpeedMode`/`customReadingSpeed` definem a velocidade de leitura.
+    // `useDifficultyAnalysis`/`questionDifficulties` e os campos de estudantes
+    // enriquecem as questões no JSON final.
+    const analysisConfig = {
+      ...store.formData,
+      ...formValues,
+      useDifficultyAnalysis: store.formData.useDifficultyAnalysis
+    }
+
+    // Os seletores usam a posição sequencial da questão na lista extraída (1, 2, 3...).
+    const questions = extractionResults.value.questions.map((question, index) => {
+      const formIndex = String(index + 1)
+      const enrichedQuestion = { ...question }
+      if (analysisConfig.useDifficultyAnalysis) {
+        enrichedQuestion.dificuldade = analysisConfig.questionDifficulties?.[formIndex] ?? null
+      }
+      if (analysisConfig.includeStudentMetrics) {
+        const correctCount = Number(analysisConfig.studentMetricsAccuracy?.[formIndex] || 0)
+        enrichedQuestion.acertos = correctCount
+        enrichedQuestion.total_estudantes = Number(analysisConfig.studentCount || 0)
+        enrichedQuestion.taxa_acerto_percentual = analysisConfig.studentCount
+          ? Number(((correctCount / analysisConfig.studentCount) * 100).toFixed(2))
+          : null
+      }
+      return enrichedQuestion
+    })
 
     progressPercentage.value = 75
-    analysisProgress.value = 'Processando resultados...'
-
-    // Use actions
-    store.setResults(results)
+    analysisProgress.value = 'Abrindo a tela de resultados...'
     store.setAnalysisConfig(analysisConfig)
+    // analysisPayload reúne nome, textos introdutórios, questões enriquecidas e inputs.
+    store.setAnalysisPayload({
+      fileName: extractionResults.value.fileName,
+      textos_introdutorios: extractionResults.value.textos_introdutorios,
+      questions,
+      config: analysisConfig
+    })
 
     progressPercentage.value = 100
     analysisProgress.value = 'Concluído!'
-
-    selectedFile.value = null
+    await router.push({ name: 'analysis-results' })
   } catch (error) {
-    console.error('Erro na análise:', error)
-    errorMessage.value = error.message || 'Erro ao analisar arquivo. Tente novamente.'
-  } finally {
+    console.error('Erro ao preparar análise:', error)
+    errorMessage.value = error.message || 'Não foi possível abrir os resultados.'
     isAnalyzing.value = false
+  } finally {
+    if (router.currentRoute.value.name !== 'analysis-results') isAnalyzing.value = false
   }
 }
 
 const handleCancel = () => {
+  extractionRequestId += 1
+  isExtracting.value = false
   store.resetFileAndForm()
+  extractionResults.value = null
+  errorMessage.value = ''
+  uploadKey.value += 1
 }
 
 const handleReset = () => {
   store.clearResults()
   store.resetFileAndForm()
+  extractionResults.value = null
+  errorMessage.value = ''
+  uploadKey.value += 1
+}
+
+const retryExtraction = () => {
+  if (selectedFile.value) prepareExtraction(selectedFile.value)
 }
 </script>
 
@@ -168,6 +256,11 @@ const handleReset = () => {
 .main-content {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.extraction-status {
+  margin-top: 1rem;
+  color: #0070C0;
 }
 
 .section {
@@ -331,4 +424,3 @@ const handleReset = () => {
   }
 }
 </style>
-

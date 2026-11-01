@@ -4,6 +4,9 @@ import { ref } from 'vue'
 export const useAnalysisStore = defineStore('analysis', () => {
   // State
   const results = ref(null)
+  // Dados levados à tela de resultados: { fileName, questions, config }.
+  // `questions` é a lista JSON extraída/enriquecida; `config` guarda os inputs.
+  const analysisPayload = ref(null)
   const analysisConfig = ref(null)
   const analysisHistory = ref([])
   const currentAnalysisId = ref(null)
@@ -51,6 +54,10 @@ export const useAnalysisStore = defineStore('analysis', () => {
     analysisConfig.value = config
   }
 
+  function setAnalysisPayload(payload) {
+    analysisPayload.value = payload
+  }
+
   // NOVO: Ações para persistir arquivo e formulário
   function setSelectedFile(file) {
     selectedFile.value = file
@@ -67,6 +74,7 @@ export const useAnalysisStore = defineStore('analysis', () => {
   function resetFileAndForm() {
     selectedFile.value = null
     totalQuestions.value = 0
+    analysisPayload.value = null
     formData.value = {
       analysisType: 'all',
       hours: 0,
@@ -87,6 +95,7 @@ export const useAnalysisStore = defineStore('analysis', () => {
 
   function clearResults() {
     results.value = null
+    analysisPayload.value = null
     analysisConfig.value = null
     currentAnalysisId.value = null
   }
@@ -109,6 +118,7 @@ export const useAnalysisStore = defineStore('analysis', () => {
   return {
     // State
     results,
+    analysisPayload,
     analysisConfig,
     analysisHistory,
     currentAnalysisId,
@@ -121,6 +131,7 @@ export const useAnalysisStore = defineStore('analysis', () => {
     // Actions
     setResults,
     setAnalysisConfig,
+    setAnalysisPayload,
     setSelectedFile,
     setTotalQuestions,
     setFormData,

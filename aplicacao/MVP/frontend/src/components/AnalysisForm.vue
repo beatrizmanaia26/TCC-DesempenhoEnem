@@ -227,6 +227,11 @@ const useDifficultyAnalysis = ref(false)
 const manualTotalQuestions = ref(0)
 const manualStudentMetricsQuestions = ref(0)
 
+// Inicia a parte do input das questões com a qtde detectada no pdf
+watch(() => props.totalQuestions, (total) => {
+  manualTotalQuestions.value = total || 0
+}, { immediate: true })
+
 // Sincronizar quantidade de questoes entre dificuldade e metricas
 // Se uma esta preenchida, usa a mesma para a outra
 const questionCountForDifficulty = computed(() => {

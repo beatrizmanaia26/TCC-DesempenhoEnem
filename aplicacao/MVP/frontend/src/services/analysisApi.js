@@ -10,6 +10,20 @@ const apiClient = axios.create({
   }
 })
 
+// Parte da extração do pdf
+export const extractExamPdf = async (file) => {
+  const formData = new FormData()
+  formData.append('file', file)
+  try {
+    const response = await apiClient.post('/extract', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    })
+    return response.data
+  } catch (error) {
+    throw new Error(error.response?.data?.error || error.message || 'Erro ao ler o PDF')
+  }
+}
+
 /**
  * Faz upload de arquivo e inicia análise
  */
@@ -58,4 +72,3 @@ export const listAnalyses = async () => {
 }
 
 export default apiClient
-

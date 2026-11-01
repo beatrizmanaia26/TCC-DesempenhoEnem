@@ -506,6 +506,33 @@ def split_questions(blocks: list[StreamBlock]) -> list[Question]:
     return questions
 
 
+def extract_introductory_texts(blocks: list[StreamBlock]) -> list[dict]:
+    """Retorna o texto textual anterior à primeira questão encontrada no PDF."""
+    intro_lines = []
+    found_question = False
+
+    for block in blocks:
+        if block.kind != "text":
+            continue
+        for line in block.text.splitlines():
+            if QUESTION_RE.search(line):
+                found_question = True
+                break
+            if line.strip():
+                intro_lines.append(line.strip())
+        if found_question:
+            break
+
+    text = "\n".join(intro_lines).strip()
+    if not text:
+        return []
+    return [{
+        "id": 1,
+        "texto": text,
+        "quantidade_palavras": len(WORD_RE.findall(text)),
+    }]
+
+
 def mark_language_options(questions: list[Question]) -> None:
     option_counts = {number: 0 for number in range(1, 6)}
     for question in questions:
@@ -595,31 +622,6 @@ def question_summary(question: Question) -> dict:
     }
 
 
-def write_md(path: Path, stats: list[dict]) -> None:
-    lines = ["# Questões extraídas", ""]
-    for item in stats:
-        image_status = "sim" if item["tem_imagem"] else "não"
-        lines.extend(
-            [
-                f"## Questão {item['questao']}",
-                "",
-                f"- Idioma: {item['idioma']}",
-                f"- Palavras: {item['quantidade_palavras']}",
-                f"- Tem imagem: {image_status}",
-                "",
-                "### Texto extraído",
-                "",
-                item["texto"],
-                "",
-                "### Texto contado",
-                "",
-                item["texto_contado"] or "_Nenhum texto contado._",
-                "",
-            ]
-        )
-    path.write_text("\n".join(lines), encoding="utf-8")
-
-
 def discover_pdfs(input_path: Path) -> list[Path]:
     if input_path.is_dir():
         return sorted(input_path.rglob("*.pdf"))
@@ -627,23 +629,40 @@ def discover_pdfs(input_path: Path) -> list[Path]:
 
 
 def extract_pdfs(pdf_paths: list[Path], output_stem: str, out_dir: Path) -> int:
+    summaries = extract_pdf_data(pdf_paths)
+
+    (out_dir / f"{output_stem}.json").write_text(
+        json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+    print(f"{output_stem}: {len(summaries)} questões")
+    print(f"  JSON: {out_dir / f'{output_stem}.json'}")
+    return len(summaries)
+
+
+def extract_pdf_data(pdf_paths: list[Path]) -> list[dict]:
     blocks = []
     for pdf_path in pdf_paths:
         blocks.extend(extract_blocks(pdf_path))
     questions = split_questions(blocks)
     mark_language_options(questions)
     redistribute_shared_texts(questions)
-    summaries = [question_summary(question) for question in questions]
+    return [question_summary(question) for question in questions]
 
-    write_md(out_dir / f"{output_stem}.md", summaries)
-    (out_dir / f"{output_stem}.json").write_text(
-        json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
 
-    print(f"{output_stem}: {len(summaries)} questões")
-    print(f"  MD:   {out_dir / f'{output_stem}.md'}")
-    print(f"  JSON: {out_dir / f'{output_stem}.json'}")
-    return len(summaries)
+def extract_pdf_document(pdf_paths: list[Path]) -> dict:
+    """Formato completo usado pelo site e pelas análises de leitura."""
+    blocks = []
+    for pdf_path in pdf_paths:
+        blocks.extend(extract_blocks(pdf_path))
+    introductory_texts = extract_introductory_texts(blocks)
+    questions = split_questions(blocks)
+    mark_language_options(questions)
+    redistribute_shared_texts(questions)
+    return {
+        "textos_introdutorios": introductory_texts,
+        "questoes": [question_summary(question) for question in questions],
+    }
 
 
 def extraction_groups(input_path: Path) -> list[tuple[str, Path, list[Path]]]:
@@ -679,7 +698,18 @@ def main() -> None:
         default=Path("../../dados/enems_json_md"),
         help="Diretório de saída. Padrão: ../../dados/enems_json_md",
     )
+    parser.add_argument(
+        "--stdout-json",
+        action="store_true",
+        help="Imprime somente o JSON extraído (uso pelo backend).",
+    )
     args = parser.parse_args()
+
+    if args.stdout_json:
+        if args.input.is_dir():
+            parser.error("--stdout-json aceita somente um arquivo PDF")
+        print(json.dumps(extract_pdf_document([args.input]), ensure_ascii=False))
+        return
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     groups = extraction_groups(args.input)
@@ -696,7 +726,7 @@ def main() -> None:
         total += extract_pdfs(pdfs, output_stem, pdf_out_dir)
 
     print(f"Total de PDFs: {total_pdfs}")
-    print(f"Total de arquivos de saída: {len(groups) * 2}")
+    print(f"Total de arquivos JSON: {len(groups)}")
     print(f"Total de questões: {total}")
 
 
