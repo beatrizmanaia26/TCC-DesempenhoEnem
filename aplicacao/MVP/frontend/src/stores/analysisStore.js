@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import { TODOS_TIPOS_ANALISE } from '@/constants/analysisConfig'
 
 export const useAnalysisStore = defineStore('analysis', () => {
   // State
@@ -15,7 +16,7 @@ export const useAnalysisStore = defineStore('analysis', () => {
   const selectedFile = ref(null)
   const totalQuestions = ref(0)
   const formData = ref({
-    analysisType: 'all',
+    analysisTypes: [...TODOS_TIPOS_ANALISE],
     hours: 0,
     minutes: 0,
     readingSpeedMode: 'default',
@@ -76,7 +77,7 @@ export const useAnalysisStore = defineStore('analysis', () => {
     totalQuestions.value = 0
     analysisPayload.value = null
     formData.value = {
-      analysisType: 'all',
+      analysisTypes: [...TODOS_TIPOS_ANALISE],
       hours: 0,
       minutes: 0,
       readingSpeedMode: 'default',

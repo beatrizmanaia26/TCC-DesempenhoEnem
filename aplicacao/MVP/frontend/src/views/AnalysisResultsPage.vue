@@ -78,7 +78,7 @@
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAnalysisStore } from '@/stores/analysisStore'
-import { DEFAULT_READING_SPEED } from '@/constants/analysisConfig'
+import { DEFAULT_READING_SPEED, TODOS_TIPOS_ANALISE } from '@/constants/analysisConfig'
 
 const store = useAnalysisStore()
 const router = useRouter()
@@ -146,7 +146,13 @@ const analysisTypeLabels = {
   'word-count': 'Tamanho das questões',
   distractors: 'Distratores'
 }
-const analysisTypeLabel = computed(() => analysisTypeLabels[config.value.analysisType] || 'Análise')
+const analysisTypeLabel = computed(() => {
+  const tipos = config.value.analysisTypes ?? []
+  const todos = tipos.includes('all') || tipos.length === TODOS_TIPOS_ANALISE.length
+  if (todos) return analysisTypeLabels.all
+  const nomes = tipos.map((tipo) => analysisTypeLabels[tipo]).filter(Boolean)
+  return nomes.length ? nomes.join(', ') : 'Análise'
+})
 
 const formatMinutes = (minutes) => {
   const safeMinutes = Number(minutes) || 0

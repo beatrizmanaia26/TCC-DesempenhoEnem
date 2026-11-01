@@ -10,14 +10,39 @@
             Escolha qual tipo de análise deseja realizar
             <span class="required">*</span>
           </label>
-          <select v-model="formData.analysisType" id="analysisType" required>
-            <option value="all">✓ Análise Completa</option>
-            <option value="image">Análise da Presença de Imagens</option>
-            <option value="formality">Análise do Formalismo</option>
-            <option value="reading-time">Análise do Tempo de Prova</option>
-            <option value="word-count">Análise do Tamanho das Questões</option>
-            <option value="distractors">Análise de Distratores</option>
-          </select>
+          <div class="analysis-type-dropdown" ref="dropdownTiposRef">
+            <button
+              type="button"
+              id="analysisType"
+              class="analysis-type-trigger"
+              aria-haspopup="true"
+              :aria-expanded="menuTiposAberto ? 'true' : 'false'"
+              @click="menuTiposAberto = !menuTiposAberto"
+            >
+              {{ resumoTiposAnalise }}
+            </button>
+            <div v-if="menuTiposAberto" class="analysis-type-menu">
+              <div class="analysis-type-option analysis-type-todos">
+                <input
+                  type="checkbox"
+                  id="analysis-type-selecionar-tudo"
+                  :checked="todosTiposSelecionados"
+                  :indeterminate.prop="algunsTiposSelecionados"
+                  @change="alternarTodosTipos"
+                />
+                <label for="analysis-type-selecionar-tudo">Selecionar tudo</label>
+              </div>
+              <div class="analysis-type-option" v-for="opcao in ANALYSIS_TYPE_OPTIONS" :key="opcao.value">
+                <input
+                  type="checkbox"
+                  :id="'analysis-type-' + opcao.value"
+                  :value="opcao.value"
+                  v-model="formData.analysisTypes"
+                />
+                <label :for="'analysis-type-' + opcao.value">{{ opcao.label }}</label>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
@@ -206,12 +231,17 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useAnalysisStore } from '@/stores/analysisStore'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import QuestionDifficultySelector from '@/components/QuestionDifficultySelector.vue'
 import QuestionAccuracySelector from '@/components/QuestionAccuracySelector.vue'
-import { DEFAULT_READING_SPEED, MAX_EXAM_DURATION_HOURS } from '@/constants/analysisConfig'
+import {
+  ANALYSIS_TYPE_OPTIONS,
+  DEFAULT_READING_SPEED,
+  MAX_EXAM_DURATION_HOURS,
+  TODOS_TIPOS_ANALISE
+} from '@/constants/analysisConfig'
 
 const store = useAnalysisStore()
 
@@ -226,6 +256,37 @@ const emit = defineEmits(['analyze', 'cancel'])
 const useDifficultyAnalysis = ref(false)
 const manualTotalQuestions = ref(0)
 const manualStudentMetricsQuestions = ref(0)
+
+// Dropdown de tipos de análise (seleção múltipla, no mesmo padrão do filtro da página do ENEM)
+const menuTiposAberto = ref(false)
+const dropdownTiposRef = ref(null)
+
+const todosTiposSelecionados = computed(() => formData.value.analysisTypes.length === TODOS_TIPOS_ANALISE.length)
+const algunsTiposSelecionados = computed(() => formData.value.analysisTypes.length > 0 && !todosTiposSelecionados.value)
+
+const resumoTiposAnalise = computed(() => {
+  const quantidade = formData.value.analysisTypes.length
+  if (quantidade === 0) return 'Selecione ao menos um tipo de análise'
+  if (todosTiposSelecionados.value) return 'Análise Completa'
+  if (quantidade === 1) {
+    return ANALYSIS_TYPE_OPTIONS.find((opcao) => opcao.value === formData.value.analysisTypes[0]).label
+  }
+  return `${quantidade} tipos de análise selecionados`
+})
+
+const alternarTodosTipos = () => {
+  formData.value.analysisTypes = todosTiposSelecionados.value ? [] : [...TODOS_TIPOS_ANALISE]
+}
+
+// Fecha o menu ao clicar fora dele
+const fecharMenuTiposAoClicarFora = (event) => {
+  if (dropdownTiposRef.value && !dropdownTiposRef.value.contains(event.target)) {
+    menuTiposAberto.value = false
+  }
+}
+
+onMounted(() => document.addEventListener('click', fecharMenuTiposAoClicarFora))
+onUnmounted(() => document.removeEventListener('click', fecharMenuTiposAoClicarFora))
 
 // Inicia a parte do input das questões com a qtde detectada no pdf
 watch(() => props.totalQuestions, (total) => {
@@ -248,7 +309,7 @@ const showDurationWarning = computed(() => {
 })
 
 const formData = ref({
-  analysisType: 'all',
+  analysisTypes: [...TODOS_TIPOS_ANALISE],
   hours: 0,
   minutes: 0,
   readingSpeedMode: 'default',
@@ -265,7 +326,7 @@ onMounted(() => {
   // Se store tem dados, carrega; se não, usa defaults
   if (store.formData && Object.keys(store.formData).length > 0) {
     formData.value = {
-      analysisType: store.formData.analysisType || 'all',
+      analysisTypes: store.formData.analysisTypes ? [...store.formData.analysisTypes] : [...TODOS_TIPOS_ANALISE],
       hours: store.formData.hours || 0,
       minutes: store.formData.minutes || 0,
       readingSpeedMode: store.formData.readingSpeedMode || 'default',
@@ -280,7 +341,7 @@ onMounted(() => {
   } else {
     // Primeira vez: usa defaults (NAO salva automaticamente)
     formData.value = {
-      analysisType: 'all',
+      analysisTypes: [...TODOS_TIPOS_ANALISE],
       hours: 0,
       minutes: 0,
       readingSpeedMode: 'default',
@@ -368,7 +429,7 @@ const formattedDuration = computed(() => {
 const isFormValid = computed(() => {
   // Validação apenas dos campos obrigatórios: tipo, duração e tempo de leitura
   const baseValid =
-    formData.value.analysisType &&
+    formData.value.analysisTypes.length > 0 &&
     formData.value.hours !== null &&
     formData.value.hours >= 0 &&
     formData.value.minutes !== null &&
@@ -393,15 +454,15 @@ const isFormValid = computed(() => {
       formData.value.studentCount && formData.value.studentCount > 0 &&
       formData.value.studentMetricsQuestionCount && formData.value.studentMetricsQuestionCount > 0
 
-    // Se tambem ativar metricas, precisa preencher acertos de TODAS as questoes
+    // Acertos por questão: questão sem valor gravado conta como 0 (é o que o campo mostra)
     if (metricsValid) {
-      const accuracyAnsweredCount = Object.keys(formData.value.studentMetricsAccuracy).filter(
-        key => formData.value.studentMetricsAccuracy[key] !== undefined && formData.value.studentMetricsAccuracy[key] !== ''
-      ).length
+      const numeroDeQuestoes = Number(formData.value.studentMetricsQuestionCount)
+      const todosValidos = Array.from({ length: numeroDeQuestoes }, (_, indice) => indice + 1).every((numero) => {
+        const acertos = Number(formData.value.studentMetricsAccuracy[numero] ?? 0)
+        return Number.isInteger(acertos) && acertos >= 0
+      })
 
-      const allAccuracyAnswered = accuracyAnsweredCount === formData.value.studentMetricsQuestionCount
-
-      if (!allAccuracyAnswered) return false
+      if (!todosValidos) return false
     }
 
     return baseValid && metricsValid
@@ -486,18 +547,84 @@ form {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-#analysisType {
+.analysis-type-dropdown {
+  position: relative;
   margin-top: 1.25rem;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  appearance: none;
-  -webkit-appearance: none;
+}
+
+.analysis-type-trigger {
+  width: 100%;
+  padding: 0.6rem 3.5rem 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: left;
+  color: #333;
   background-color: white;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23333' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1.5rem center;
-  padding-right: 3.5rem;
   cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.analysis-type-trigger:focus {
+  outline: none;
+  border-color: #0070C0;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.analysis-type-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  z-index: 100;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.analysis-type-option {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.analysis-type-option:hover {
+  background: #f5f5f5;
+}
+
+.analysis-type-option input[type='checkbox'] {
+  margin-right: 0.75rem;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #0070C0;
+}
+
+.analysis-type-option label {
+  cursor: pointer;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+.analysis-type-todos {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .info-icon {

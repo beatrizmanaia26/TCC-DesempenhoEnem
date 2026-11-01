@@ -82,7 +82,17 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
 
     // Executar script Python com opcoes seguras (S4036)
     const pythonScript = path.join(__dirname, '../python/cli_analyzer.py')
-    const analysisType = config.analysisType || 'all'
+    const analysisTypes = Array.isArray(config.analysisTypes) && config.analysisTypes.length > 0
+      ? config.analysisTypes
+      : ['all']
+    // Mantém a ordem canônica e impede valores desconhecidos de chegarem ao script Python
+    const tiposValidos = ['image', 'formality', 'reading-time', 'word-count', 'distractors']
+    const tiposSelecionados = analysisTypes.includes('all')
+      ? tiposValidos
+      : tiposValidos.filter((tipo) => analysisTypes.includes(tipo))
+    if (tiposSelecionados.length === 0) {
+      return res.status(400).json({ error: 'Selecione ao menos um tipo de análise' })
+    }
     
     // Usar caminho fixo de python3 (configuravel via variavel de ambiente)
     // Padrao: /usr/bin/python3 em sistemas Unix/Linux
@@ -106,7 +116,7 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
       pythonScript,
       filePath,
       '--type',
-      analysisType,
+      tiposSelecionados.length === tiposValidos.length ? 'all' : tiposSelecionados.join(','),
       '--output-format',
       'json'
     ])
