@@ -10,7 +10,7 @@ const { v4: uuidv4 } = require('uuid')
 
 // Framework Express para criar servidor HTTP
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 
 // Remover header X-Powered-By para ocultar versao do Express (S5689)
 app.disable('x-powered-by')
