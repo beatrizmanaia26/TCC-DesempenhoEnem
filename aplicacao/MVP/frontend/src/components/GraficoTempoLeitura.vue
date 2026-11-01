@@ -1,91 +1,110 @@
 <template>
   <div class="grafico-tempo">
     <div class="grafico-cabecalho">
-      <h3 class="grafico-titulo">Tempo gasto para ler cada questão da prova Azul</h3>
-      <InfoIcon warning tooltip="Informação a ser adicionada" />
-    </div>
-    <p class="grafico-subtitulo">
-      Caderno Azul. Tempo estimado de leitura (minutos) por questão, considerando {{ velocidade }} caracteres/minuto. A parte cinza é o que sobra do tempo igual por questão (restante do dia ÷ número de questões); a linha vertical escura marca esse tempo igual.
-    </p>
-
-    <div class="filter-wrapper">
-      <button type="button" class="filter-btn" @click="alternarMenuFiltro">
-        <FilterIcon />
-        Filtro
-      </button>
-      <div v-if="mostrarFiltro" class="filter-menu">
-        <div class="filter-secao">
-          <p class="filter-titulo">DIA</p>
-          <div class="filter-lista">
-            <div class="filter-option" v-for="opcao in opcoesDia" :key="`dia-${opcao.valor}`">
-              <input
-                type="radio"
-                name="filtro-dia"
-                :id="`dia-${opcao.valor}`"
-                :checked="rascunhoDia === opcao.valor"
-                @change="rascunhoDia = opcao.valor"
-              />
-              <label :for="`dia-${opcao.valor}`">{{ opcao.rotulo }}</label>
+      <h3 class="grafico-titulo">{{ TEXTO_TEMPO_LEITURA.titulo }}</h3>
+      <InfoIcon
+        warning
+        :tooltip="tooltipGrafico"
+      />
+      <div class="filter-wrapper">
+        <button type="button" class="filter-btn" @click="alternarMenuFiltro">
+          <FilterIcon />
+          Filtro
+        </button>
+        <div v-if="mostrarFiltro" class="filter-menu">
+          <div class="filter-secao">
+            <p class="filter-titulo">DIA</p>
+            <div class="filter-lista">
+              <div class="filter-option" v-for="opcao in opcoesDia" :key="`dia-${opcao.valor}`">
+                <input
+                  type="radio"
+                  name="filtro-dia"
+                  :id="`dia-${opcao.valor}`"
+                  :checked="rascunhoDia === opcao.valor"
+                  @change="rascunhoDia = opcao.valor"
+                />
+                <label :for="`dia-${opcao.valor}`">{{ opcao.rotulo }}</label>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="filter-secao">
-          <p class="filter-titulo">ÁREA</p>
-          <div class="filter-lista">
-            <div class="filter-option" v-for="opcao in opcoesArea" :key="`area-${opcao.valor}`">
-              <input
-                type="checkbox"
-                :id="`area-${opcao.valor}`"
-                :checked="rascunhoAreas.includes(opcao.valor)"
-                @change="alternarArea(opcao.valor)"
-              />
-              <label :for="`area-${opcao.valor}`">{{ opcao.rotulo }}</label>
+          <div class="filter-secao">
+            <p class="filter-titulo">ÁREA</p>
+            <div class="filter-lista">
+              <div class="filter-option" v-for="opcao in opcoesArea" :key="`area-${opcao.valor}`">
+                <input
+                  type="checkbox"
+                  :id="`area-${opcao.valor}`"
+                  :checked="rascunhoAreas.includes(opcao.valor)"
+                  @change="alternarArea(opcao.valor)"
+                />
+                <label :for="`area-${opcao.valor}`">{{ opcao.rotulo }}</label>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="filter-secao">
-          <p class="filter-titulo">TEMPO</p>
-          <div class="filter-lista">
-            <div class="filter-option" v-for="opcao in opcoesTempo" :key="`tempo-${opcao.valor}`">
-              <input
-                type="radio"
-                name="filtro-tempo"
-                :id="`tempo-${opcao.valor}`"
-                :checked="rascunhoTempo === opcao.valor"
-                @change="rascunhoTempo = opcao.valor"
-              />
-              <label :for="`tempo-${opcao.valor}`">{{ opcao.rotulo }}</label>
-              <InfoIcon v-if="opcao.dica" warning :tooltip="opcao.dica" />
+          <div class="filter-secao">
+            <p class="filter-titulo">COR</p>
+            <div class="filter-lista">
+              <div class="filter-option" v-for="opcao in opcoesCor" :key="`cor-${opcao.valor}`">
+                <input
+                  type="radio"
+                  name="filtro-cor"
+                  :id="`cor-${opcao.valor}`"
+                  :checked="rascunhoCor === opcao.valor"
+                  @change="rascunhoCor = opcao.valor"
+                />
+                <label :for="`cor-${opcao.valor}`">{{ opcao.rotulo }}</label>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="filter-secao">
-          <p class="filter-titulo filter-titulo-com-aviso">
-            DIFICULDADE
-            <InfoIcon v-if="itensSemDificuldade > 0" warning :tooltip="textoAvisoDificuldade" />
-          </p>
-          <div class="filter-lista">
-            <div class="filter-option" v-for="opcao in opcoesDificuldade" :key="`dificuldade-${opcao.valor}`">
-              <input
-                type="radio"
-                name="filtro-dificuldade"
-                :id="`dificuldade-${opcao.valor}`"
-                :checked="rascunhoDificuldade === opcao.valor"
-                @change="rascunhoDificuldade = opcao.valor"
-              />
-              <label :for="`dificuldade-${opcao.valor}`">{{ opcao.rotulo }}</label>
+          <div class="filter-secao">
+            <p class="filter-titulo">MÉTRICAS</p>
+            <div class="filter-lista">
+              <div class="filter-option" v-for="opcao in opcoesTempo" :key="`tempo-${opcao.valor}`">
+                <input
+                  type="radio"
+                  name="filtro-tempo"
+                  :id="`tempo-${opcao.valor}`"
+                  :checked="rascunhoTempo === opcao.valor"
+                  @change="rascunhoTempo = opcao.valor"
+                />
+                <label :for="`tempo-${opcao.valor}`">{{ opcao.rotulo }}</label>
+                <InfoIcon v-if="opcao.dica" warning :tooltip="opcao.dica" />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="filter-rodape">
-          <button type="button" class="filter-aplicar" @click="aplicarFiltro">Aplicar</button>
+          <div class="filter-secao">
+            <p class="filter-titulo filter-titulo-com-aviso">
+              DIFICULDADE
+              <InfoIcon v-if="itensSemDificuldade > 0" warning :tooltip="textoAvisoDificuldade" />
+            </p>
+            <div class="filter-lista">
+              <div class="filter-option" v-for="opcao in opcoesDificuldade" :key="`dificuldade-${opcao.valor}`">
+                <input
+                  type="radio"
+                  name="filtro-dificuldade"
+                  :id="`dificuldade-${opcao.valor}`"
+                  :checked="rascunhoDificuldade === opcao.valor"
+                  @change="rascunhoDificuldade = opcao.valor"
+                />
+                <label :for="`dificuldade-${opcao.valor}`">{{ opcao.rotulo }}</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-rodape">
+            <button type="button" class="filter-aplicar" @click="aplicarFiltro">Aplicar</button>
+          </div>
         </div>
       </div>
     </div>
+    <p class="grafico-subtitulo">
+      {{ TEXTO_TEMPO_LEITURA.subtitulo }}
+    </p>
+
 
     <div v-if="dica" class="dica-flutuante" :style="{ left: `${dica.x}px`, top: `${dica.y}px` }">{{ dica.texto }}</div>
 
@@ -99,7 +118,7 @@
 
       <div class="grafico-dias">
         <div v-for="grupo in grupos" :key="grupo.dia" class="grafico-dia">
-          <h4 class="grafico-dia-titulo">Dia {{ grupo.dia }} ({{ grupo.total }} {{ grupo.total === 1 ? 'questão' : 'questões' }})</h4>
+          <h4 class="grafico-dia-titulo">Dia {{ grupo.dia }} ({{ grupo.questoes.length }} {{ grupo.questoes.length === 1 ? 'questão' : 'questões' }})</h4>
 
           <div class="barras">
             <div
@@ -108,7 +127,7 @@
               class="barra-linha"
               :title="`${questao.rotulo}: ${questao.caracteres} caracteres, ${questao.tempo_leitura_minutos.toFixed(2)} min`"
             >
-              <span class="barra-rotulo">{{ questao.rotulo }}</span>
+              <span class="barra-rotulo">{{ rotuloQuestao(questao) }}</span>
               <div
                 class="barra-trilho"
                 @mouseenter="mostrarDica($event, questao)"
@@ -137,6 +156,9 @@
 import { ref, computed, watch } from 'vue'
 import http from '@/services/http.js'
 import { ENEM_CONSTANTS } from '@/config/enemConstants.js'
+import { TEXTO_TEMPO_LEITURA, DICA_OUTLIERS_TEMPO, DICA_DESVIO_TEMPO } from '@/config/textosAnalises.js'
+import { filtrarTempoLeitura } from '@/services/filtrosAnalise.js'
+import { opcoesCorDoAno } from '@/config/coresProva.js'
 import FilterIcon from '@/components/icons/FilterIcon.vue'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 
@@ -148,6 +170,8 @@ const props = defineProps({
 })
 
 const velocidade = ENEM_CONSTANTS.VELOCIDADE_LEITURA_CPM
+
+const tooltipGrafico = TEXTO_TEMPO_LEITURA.explicacao.join('\n')
 const questoes = ref([])
 const restantePorDia = ref({})
 const carregando = ref(false)
@@ -160,12 +184,19 @@ const filtroDia = ref('todos')
 const filtroAreas = ref([])
 const filtroTempo = ref('padrao')
 const filtroDificuldade = ref('todas')
+const filtroCor = ref('Azul')
 
 // Rascunho: muda enquanto o usuário marca as opções e só vira aplicado no botão Aplicar
 const rascunhoDia = ref('todos')
 const rascunhoAreas = ref([])
 const rascunhoTempo = ref('padrao')
 const rascunhoDificuldade = ref('todas')
+const rascunhoCor = ref('Azul')
+
+// Cores de prova de cada ano, na ordem dos códigos (Azul, Amarelo, Branco/Cinza, Rosa/Verde).
+// Em 2024 e 2025 a quarta cor é Verde, no lugar de Rosa.
+// Cores de prova: estado e opções. As opções vêm de src/config/coresProva.js e mudam com o dia do rascunho.
+const opcoesCor = computed(() => opcoesCorDoAno(props.ano, rascunhoDia.value))
 
 const opcoesDia = [
   { valor: 'todos', rotulo: 'Todos os dias' },
@@ -195,8 +226,8 @@ const opcoesArea = computed(() =>
 
 // Ao trocar de dia no rascunho, descarta as áreas marcadas que não existem mais no filtro
 watch(rascunhoDia, () => {
-  const validas = opcoesArea.value.map((opcao) => opcao.valor)
-  rascunhoAreas.value = rascunhoAreas.value.filter((area) => validas.includes(area))
+  const validas = new Set(opcoesArea.value.map((opcao) => opcao.valor))
+  rascunhoAreas.value = rascunhoAreas.value.filter((area) => validas.has(area))
 })
 
 // Quantidade de itens (por posição) sem parâmetro b do TRI neste ano
@@ -210,42 +241,57 @@ const textoAvisoDificuldade = computed(() => {
 })
 
 // Abrir o menu copia o aplicado para o rascunho; fechar sem aplicar descarta as mudanças
+// Filtro aplicado, usado pela exportação para gerar o mesmo recorte da tela
+defineExpose({
+  obterFiltros: () => ({
+    dia: filtroDia.value,
+    areas: [...filtroAreas.value],
+    tempo: filtroTempo.value,
+    dificuldade: filtroDificuldade.value,
+    cor: filtroCor.value
+  })
+})
+
 const alternarMenuFiltro = () => {
   if (!mostrarFiltro.value) {
     rascunhoDia.value = filtroDia.value
     rascunhoAreas.value = [...filtroAreas.value]
     rascunhoTempo.value = filtroTempo.value
     rascunhoDificuldade.value = filtroDificuldade.value
+    rascunhoCor.value = filtroCor.value
   }
   mostrarFiltro.value = !mostrarFiltro.value
 }
 
 const aplicarFiltro = () => {
+  const corMudou = rascunhoCor.value !== filtroCor.value
   filtroDia.value = rascunhoDia.value
   filtroAreas.value = [...rascunhoAreas.value]
   filtroTempo.value = rascunhoTempo.value
   filtroDificuldade.value = rascunhoDificuldade.value
+  // Se a cor não existe no dia aplicado, volta para Azul (ex.: Branco só existe no Dia 1)
+  const existe = opcoesCorDoAno(props.ano, filtroDia.value).some((opcao) => opcao.valor === rascunhoCor.value)
+  filtroCor.value = existe ? rascunhoCor.value : 'Azul'
   mostrarFiltro.value = false
+  // A cor muda o caderno das questões, então os dados são buscados de novo
+  if (corMudou) carregarQuestoes(props.ano)
 }
 
 const opcoesTempo = [
   { valor: 'padrao', rotulo: 'Ordem da prova' },
   { valor: 'menor', rotulo: 'Menor tempo' },
   { valor: 'maior', rotulo: 'Maior tempo' },
-  {
-    valor: 'media',
-    rotulo: 'Acima da média',
-    dica: 'Mostra as questões com tempo de leitura maior que a média dos tempos das questões filtradas.'
-  },
+  { valor: 'media', rotulo: 'Acima da média' },
+  { valor: 'abaixo', rotulo: 'Abaixo da média' },
   {
     valor: 'outlier',
     rotulo: 'Outliers',
-    dica: 'Mostra as questões com tempo menor que Q1 − 1,5 × IQR ou maior que Q3 + 1,5 × IQR, onde Q1 e Q3 são o 1º e o 3º quartil e IQR = Q3 − Q1.'
+    dica: DICA_OUTLIERS_TEMPO
   },
   {
     valor: 'desvio',
     rotulo: 'Fora do desvio padrão',
-    dica: 'Mostra as questões cujo tempo de leitura está a mais de 1 desvio padrão da média (|tempo − média| > desvio padrão).'
+    dica: DICA_DESVIO_TEMPO
   }
 ]
 
@@ -256,6 +302,9 @@ const alternarArea = (area) => {
 }
 
 // Tempo igual por questão do dia: restante do dia ÷ número de questões distintas (Q1 em PT e EN conta uma vez)
+// Q1 a Q5 têm versão em inglês e espanhol: o idioma aparece no rótulo para diferenciar as barras
+const rotuloQuestao = (questao) => (questao.idioma === 'geral' ? questao.rotulo : `${questao.rotulo} (${questao.idioma})`)
+
 const questoesDistintasDoDia = (dia) => new Set(questoes.value.filter((q) => q.dia === dia).map((q) => q.posicao)).size
 
 // Quantas posições do dia aparecem duas vezes (espanhol e inglês)
@@ -276,10 +325,8 @@ const restantePorQuestao = (questao) => Math.max(0, tempoIgualDia(questao.dia) -
 
 const textoDicaTempoIgual = (dia) => {
   const duplicadas = duplicadasDoDia(dia)
-  const extra =
-    duplicadas > 0
-      ? ` Esse tempo considera ${duplicadas} ${duplicadas === 1 ? 'questão' : 'questões'} de inglês ou espanhol, não ambas.`
-      : ''
+  const palavraQuestao = duplicadas === 1 ? 'questão' : 'questões'
+  const extra = duplicadas > 0 ? ` Esse tempo considera ${duplicadas} ${palavraQuestao} de inglês ou espanhol, não ambas.` : ''
   return `Tempo para resolver cada questão: ${tempoIgualDia(dia).toFixed(2)} min (restante do dia ÷ ${questoesDistintasDoDia(dia)} questões).${extra}`
 }
 
@@ -301,12 +348,12 @@ const ocultarDica = () => {
   dica.value = null
 }
 
-const carregarQuestoes = async (ano) => {
+const carregarQuestoes = async (ano, cor = filtroCor.value) => {
   carregando.value = true
   erro.value = ''
   try {
     const [questoesResposta, resumoResposta] = await Promise.all([
-      http.get('/metricas/tempo-leitura-questoes', { params: { ano } }),
+      http.get('/metricas/tempo-leitura-questoes', { params: { ano, cor } }),
       http.get('/metricas/tempo-resumo', { params: { ano } })
     ])
     questoes.value = questoesResposta.data.questoes
@@ -322,57 +369,23 @@ const carregarQuestoes = async (ano) => {
   }
 }
 
-watch(() => props.ano, carregarQuestoes, { immediate: true })
+watch(() => props.ano, (ano) => {
+  // Cores mudam de um ano para outro; se a cor não existe no novo ano, volta para o Azul
+  if (!opcoesCorDoAno(ano).some((opcao) => opcao.valor === filtroCor.value)) {
+    filtroCor.value = 'Azul'
+    rascunhoCor.value = 'Azul'
+  }
+  carregarQuestoes(ano)
+}, { immediate: true })
 
 // Questões após os filtros de dificuldade, área e tempo (o filtro de dia é aplicado nos grupos)
-const questoesFiltradas = computed(() => {
-  let lista = questoes.value
-
-  if (filtroDificuldade.value !== 'todas') {
-    lista = lista.filter((questao) => questao.dificuldade === filtroDificuldade.value)
-  }
-
-  if (filtroAreas.value.length > 0) {
-    lista = lista.filter((questao) => filtroAreas.value.includes(questao.area))
-  }
-
-  const tempos = lista.map((questao) => questao.tempo_leitura_minutos)
-  if (tempos.length === 0) return lista
-
-  const media = tempos.reduce((soma, t) => soma + t, 0) / tempos.length
-  const desvio = Math.sqrt(tempos.reduce((soma, t) => soma + (t - media) ** 2, 0) / tempos.length)
-  const [q1, q3] = [quartil(tempos, 0.25), quartil(tempos, 0.75)]
-  const iqr = q3 - q1
-
-  switch (filtroTempo.value) {
-    case 'menor':
-      return [...lista].sort((a, b) => a.tempo_leitura_minutos - b.tempo_leitura_minutos)
-    case 'maior':
-      return [...lista].sort((a, b) => b.tempo_leitura_minutos - a.tempo_leitura_minutos)
-    case 'media':
-      return lista.filter((questao) => questao.tempo_leitura_minutos > media)
-    case 'outlier':
-      return lista.filter(
-        (questao) =>
-          questao.tempo_leitura_minutos < q1 - 1.5 * iqr || questao.tempo_leitura_minutos > q3 + 1.5 * iqr
-      )
-    case 'desvio':
-      return lista.filter((questao) => Math.abs(questao.tempo_leitura_minutos - media) > desvio)
-    default:
-      return lista
-  }
-})
-
-// Quartil por interpolação linear entre os valores ordenados
-const quartil = (valores, p) => {
-  const ordenados = [...valores].sort((a, b) => a - b)
-  const pos = (ordenados.length - 1) * p
-  const base = Math.floor(pos)
-  const resto = pos - base
-  return ordenados[base + 1] !== undefined
-    ? ordenados[base] + resto * (ordenados[base + 1] - ordenados[base])
-    : ordenados[base]
-}
+const questoesFiltradas = computed(() =>
+  filtrarTempoLeitura(questoes.value, {
+    dificuldade: filtroDificuldade.value,
+    areas: filtroAreas.value,
+    tempo: filtroTempo.value
+  })
+)
 
 // Um grupo por dia da prova, com as questões já filtradas e o total de posições distintas
 const grupos = computed(() =>
@@ -440,7 +453,7 @@ const larguraBarra = (tempo) => {
 .filter-wrapper {
   position: relative;
   display: inline-block;
-  margin-bottom: 1.25rem;
+  margin-left: auto;
 }
 
 .filter-btn {
@@ -454,7 +467,7 @@ const larguraBarra = (tempo) => {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   white-space: nowrap;
 }
 
@@ -465,7 +478,7 @@ const larguraBarra = (tempo) => {
 .filter-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -474,12 +487,6 @@ const larguraBarra = (tempo) => {
   margin-top: 0.5rem;
   min-width: 280px;
   z-index: 100;
-}
-
-/* Cada seção mostra no máximo 3 opções e rola sozinha, para o menu não crescer */
-.filter-lista {
-  max-height: 7.5rem;
-  overflow-y: auto;
 }
 
 .filter-secao + .filter-secao {
@@ -502,11 +509,18 @@ const larguraBarra = (tempo) => {
   gap: 0.25rem;
 }
 
+.filter-lista {
+  /* 2 opções visíveis por seção (cada .filter-option tem 2.25rem); o restante rola */
+  max-height: 4.5rem;
+  overflow-y: auto;
+}
+
 .filter-option {
   display: flex;
   align-items: center;
-  padding: 0.5rem 0.75rem;
-  margin: 0.15rem 0;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  margin: 0;
   border-radius: 4px;
   transition: background 0.2s ease;
 }
@@ -537,20 +551,6 @@ const larguraBarra = (tempo) => {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #e0e0e0;
-}
-
-/* O menu tem overflow com rolagem, então o tooltip do ícone abre para a esquerda para não ser cortado */
-.filter-option :deep(.tooltip) {
-  left: auto;
-  right: 0;
-  transform: none;
-  width: 250px;
-}
-
-.filter-option :deep(.tooltip::after) {
-  left: auto;
-  right: 8px;
-  transform: none;
 }
 
 .filter-aplicar {
@@ -595,7 +595,8 @@ const larguraBarra = (tempo) => {
 }
 
 .barra-rotulo {
-  min-width: 36px;
+  min-width: 105px;
+  white-space: nowrap;
   text-align: right;
   color: #333;
   font-weight: 600;
@@ -660,7 +661,8 @@ const larguraBarra = (tempo) => {
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
   font-size: 0.8rem;
-  white-space: nowrap;
+  width: 260px;
+  white-space: normal;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 

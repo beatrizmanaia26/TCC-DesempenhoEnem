@@ -4,7 +4,7 @@
       <div class="info-label">Duração total da prova:</div>
       <div class="info-value">
         {{ provaInfo.duracao_total }}
-        <span class="info-day-info">(Dia 1: {{ provaInfo.duracao_dia1 }} | Dia 2: {{ provaInfo.duracao_dia2 }})</span>
+        <span class="info-day-info">(Dia 1: {{ provaInfo.duracao_dia1 }}({{ provaInfo.duracao_dia1_min }} min) | Dia 2: {{ provaInfo.duracao_dia2 }}({{ provaInfo.duracao_dia2_min }} min))</span>
       </div>
     </div>
 
@@ -68,7 +68,7 @@ const provaInfo = computed(() => {
 }
 
 .info-label {
-  min-width: 200px;
+  min-width: auto;
   color: #333;
   font-size: 0.95rem;
   font-weight: 600;

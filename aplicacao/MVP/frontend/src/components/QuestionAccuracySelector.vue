@@ -192,7 +192,7 @@ const previousGroup = () => {
   color: #333;
   font-weight: 500;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .input-accuracy:hover {
@@ -234,7 +234,7 @@ const previousGroup = () => {
   color: #333;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 .btn-nav:hover:not(:disabled) {

@@ -42,13 +42,13 @@
 
       <!-- SEGUNDA LINHA: TEMPO DE LEITURA + DIFICULDADE -->
       <div class="form-row">
-        <div class="form-group">
+        <div class="form-group reading-time-column">
           <label for="reading-time-group">
             Tempo de Leitura
             <span class="required">*</span>
             <div class="tooltip-wrapper">
               <InfoIcon fill="#0070C0" class="info-icon" />
-              <span class="tooltip-text">TEMPO CALCULADO COM BASE EM PESQUISA</span>
+              <span class="tooltip-text">Informe o tempo de leitura específico de seus alunos caso tenha essa informação. Caso contrário, utilize o tempo padrão de 1.100 caracteres por minuto, obtido em pesquisa com indivíduos jovens de 19 a 35 anos (Messias et al., 2008)</span>
             </div>
           </label>
           <div class="reading-speed-container" id="reading-time-group">
@@ -62,27 +62,27 @@
                 <label for="speed-custom">Personalizado</label>
               </div>
             </div>
-            <input 
-              v-if="formData.readingSpeedMode === 'custom'" 
+            <input
+              v-if="formData.readingSpeedMode === 'custom'"
               id="custom-reading-speed"
-              v-model.number="formData.customReadingSpeed" 
-              type="number" 
-              placeholder="Digite a velocidade de leitura em caracteres/minuto" 
-              min="100" 
-              max="2000" 
+              v-model.number="formData.customReadingSpeed"
+              type="number"
+              placeholder="Digite a velocidade de leitura em caracteres/minuto"
+              min="100"
+              max="2000"
               class="custom-input"
-              aria-label="Velocidade customizada de leitura em caracteres por minuto" 
+              aria-label="Velocidade customizada de leitura em caracteres por minuto"
             />
           </div>
         </div>
 
         <div class="form-group difficulty-column">
           <label for="difficulty-group">
-            Deseja utilizar a dificuldade das questões para a análise?
+            Deseja usar a dificuldade das questões para a análise?
             <span class="required">*</span>
             <div class="tooltip-wrapper">
               <InfoIcon fill="#ffc107" class="warning-icon" />
-              <span class="tooltip-text">É IMPORTANTE PRAS ANÁLISES compeltar...</span>
+              <span class="tooltip-text">Informar a dificuldade de cada questão permite comparar os fatores da prova (tempo de leitura, formalismo, imagens, tamanho do texto, distratores e posição) entre questões fáceis, médias e difíceis. Um mesmo fator pode pesar de forma diferente em cada nível, então essa informação torna a análise mais precisa.</span>
             </div>
           </label>
           <div class="radio-group inline" id="difficulty-group">
@@ -129,8 +129,8 @@
         <div class="form-group difficulty-column">
           <label for="metrics-group">
             Deseja incluir métricas reais dos estudantes?
-            <InfoIcon 
-            :tooltip="'As metricas dos estudantes ajudam a correlacionar dificuldade com desempenho real. Forneca a quantidade de pessoas que realizaram a prova e seus acertos por questao.'"
+            <InfoIcon
+            :tooltip="'As métricas dos estudantes ajudam a correlacionar a dificuldade da questão com o desempenho real. Fornece a quantidade de participantes e os acertos por questão, quando essas informações estiverem disponíveis.'"
             :warning="true"
           />
           </label>
@@ -235,11 +235,11 @@ watch(() => props.totalQuestions, (total) => {
 // Sincronizar quantidade de questoes entre dificuldade e metricas
 // Se uma esta preenchida, usa a mesma para a outra
 const questionCountForDifficulty = computed(() => {
-  return manualTotalQuestions.value > 0 ? manualTotalQuestions.value : 0
+  return Math.max(Number(manualTotalQuestions.value) || 0, 0)
 })
 
 const questionCountForMetrics = computed(() => {
-  return formData.value.studentMetricsQuestionCount > 0 ? formData.value.studentMetricsQuestionCount : 0
+  return Math.max(Number(formData.value.studentMetricsQuestionCount) || 0, 0)
 })
 
 const showDurationWarning = computed(() => {
@@ -486,6 +486,20 @@ form {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
+#analysisType {
+  margin-top: 1.25rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23333' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.5rem center;
+  padding-right: 3.5rem;
+  cursor: pointer;
+}
+
 .info-icon {
   width: 18px;
   height: 18px;
@@ -499,7 +513,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
 }
 
 .speed-options-row {
@@ -528,11 +542,11 @@ form {
   font-size: 0.9rem;
 }
 
-.custom-input {
-  padding: 0.75rem !important;
-  border: 1px solid #ddd !important;
-  border-radius: 6px !important;
-  font-size: 1rem !important;
+.form-group .reading-speed-container .custom-input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
   margin-top: 0.5rem;
 }
 
@@ -556,10 +570,10 @@ form {
   margin: 0;
 }
 
-.time-group input {
-  padding: 0.6rem 0.5rem !important;
-  border: 1px solid #ddd !important;
-  border-radius: 4px !important;
+.form-group .time-input-container .time-group input {
+  padding: 0.6rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   text-align: center;
   font-weight: 600;
 }
@@ -595,13 +609,6 @@ form {
 
 .warning-box strong {
   font-weight: 600;
-}
-
-.difficulty-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
 }
 
 .difficulty-header {
@@ -713,7 +720,8 @@ form {
   opacity: 1;
 }
 
-.difficulty-column {
+.difficulty-column,
+.reading-time-column {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -738,28 +746,18 @@ form {
   max-width: 100%;
 }
 
-.question-count-input {
-  padding: 0.6rem 0.75rem !important;
-  border: 1px solid #ddd !important;
-  border-radius: 6px !important;
-  font-size: 0.95rem !important;
-  width: 100px !important;
+.form-group .difficulty-step-inline .question-count-input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100px;
 }
 
-.question-count-input:focus {
-  border-color: #0070C0 !important;
+.form-group .difficulty-step-inline .question-count-input:focus {
+  border-color: #0070C0;
   outline: none;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-}
-
-/* Estilizar o QuestionDifficultySelector fullwidth */
-:deep(.difficulty-section) {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  width: 100% !important;
 }
 
 .btn-edit-questions {
@@ -769,7 +767,7 @@ form {
   padding: 0.4rem 0.6rem;
   cursor: pointer;
   font-size: 1.1rem;
-  transition: all 0.3s;
+  transition: color 0.3s ease, background-color 0.3s ease;
   margin-left: 0.5rem;
 }
 
@@ -779,12 +777,12 @@ form {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   font-weight: 600;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #047857 100%);
   color: white;
   flex: 1;
 }

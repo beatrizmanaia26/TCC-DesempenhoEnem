@@ -78,7 +78,7 @@ const goHome = () => router.push('/')
 }
 
 .btn-back {
-  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #047857 100%);
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -86,13 +86,18 @@ const goHome = () => router.push('/')
   cursor: pointer;
   font-weight: 600;
   margin-bottom: 1rem;
-  transition: all 0.3s ease;
   font-size: 0.95rem;
 }
 
 .btn-back:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 112, 192, 0.4);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-back {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 }
 
 .about-header h1 {

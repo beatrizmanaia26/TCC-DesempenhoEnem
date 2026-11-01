@@ -1,39 +1,26 @@
-/* ========================================
-   PALETA DE CORES - DesemProv
-   ======================================== */
-
 :root {
-  /* Cores Primarias */
-  --color-primary-blue: #0070C0;        /* Azul FEI - Background navbar, botoes primarios */
-  --color-primary-white: #FFFFFF;       /* Branco - Primeira metade do nome (desem) */
-  --color-primary-mint: #10B981;        /* Verde Menta - Segunda metade (prov), indicadores positivos */
-  
-  /* Cores Secundarias */
-  --color-secondary-blue-light: #93C5FD; /* Azul Claro Pastel - Subtitulo */
-  --color-secondary-mint-highlight: #34D399; /* Verde Menta Destaque - Item ativo, hover */
-  
-  /* Cores Neutras */
-  --color-neutral-off-white: #E2E8F0;   /* Off-white - Links inativos */
-  --color-neutral-gray-dark: #1F2937;   /* Cinza escuro - Textos principais */
-  --color-neutral-gray-light: #F3F4F6;  /* Cinza claro - Backgrounds alternativos */
-  
-  /* Cores de Status */
-  --color-success: #10B981;             /* Verde - Sucesso */
-  --color-warning: #F59E0B;             /* Ambar - Aviso */
-  --color-error: #EF4444;               /* Vermelho - Erro */
-  --color-info: #0070C0;                /* Azul - Informacao */
-  
-  /* Sombras */
+  --color-primary-blue: #0070C0;
+  --color-primary-white: #FFFFFF;
+  --color-primary-mint: #10B981;
+
+  --color-secondary-blue-light: #93C5FD;
+  --color-secondary-mint-highlight: #34D399;
+
+  --color-neutral-off-white: #E2E8F0;
+  --color-neutral-gray-dark: #1F2937;
+  --color-neutral-gray-light: #F3F4F6;
+  --color-neutral-gray-muted: #6B7280;
+
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #0070C0;
+
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* ========================================
-   COMPONENTES GLOBAIS
-   ======================================== */
-
-/* Navbar */
 .navbar {
   background-color: var(--color-primary-blue);
 }
@@ -60,7 +47,6 @@
   border-bottom-color: var(--color-secondary-mint-highlight);
 }
 
-/* Botoes */
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary-blue) 0%, #0056A0 100%);
   color: var(--color-primary-white);
@@ -85,7 +71,6 @@
   color: var(--color-primary-white);
 }
 
-/* Inputs & Forms */
 input:focus,
 select:focus,
 textarea:focus {
@@ -94,7 +79,6 @@ textarea:focus {
   outline: none;
 }
 
-/* Indicadores */
 .badge-success {
   background-color: var(--color-success);
   color: var(--color-primary-white);
@@ -110,7 +94,6 @@ textarea:focus {
   color: var(--color-primary-white);
 }
 
-/* Links */
 a {
   color: var(--color-primary-blue);
   text-decoration: none;

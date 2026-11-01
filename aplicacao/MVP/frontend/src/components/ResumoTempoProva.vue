@@ -1,11 +1,14 @@
 <template>
   <div class="resumo-tempo">
     <div class="resumo-cabecalho">
-      <h3 class="resumo-titulo">Como o tempo da prova é usado</h3>
-      <InfoIcon warning tooltip="Informação a ser adicionada" />
+      <h3 class="resumo-titulo">{{ TEXTO_RESUMO_TEMPO.titulo }}</h3>
+      <InfoIcon
+        warning
+        :tooltip="tooltipTempo"
+      />
     </div>
     <p class="resumo-subtitulo">
-      Tempo total disponível: {{ dadosFiltrados.total.toFixed(2) }} min. Leitura das questões e dos textos introdutórios, e o restante.
+      {{ TEXTO_RESUMO_TEMPO.subtitulo }}
     </p>
 
     <div class="filter-wrapper">
@@ -58,6 +61,7 @@ import { computed, ref, watch } from 'vue'
 import http from '../services/http.js'
 import FilterIcon from './icons/FilterIcon.vue'
 import InfoIcon from './icons/InfoIcon.vue'
+import { TEXTO_RESUMO_TEMPO } from '../config/textosAnalises.js'
 
 const props = defineProps({
   ano: {
@@ -71,6 +75,8 @@ const CORES = {
   textos: '#10B981',
   restante: '#CBD5E1'
 }
+
+const tooltipTempo = TEXTO_RESUMO_TEMPO.explicacao.join('\n')
 
 const opcoesDia = [
   { valor: 'todos', rotulo: 'Todos os dias' },
@@ -169,6 +175,11 @@ async function carregar(ano) {
 watch(() => props.ano, carregar, { immediate: true })
 
 // Ao abrir o menu, o rascunho volta a refletir o filtro aplicado
+// Dia aplicado, usado pela exportação para gerar o mesmo recorte da tela
+defineExpose({
+  obterFiltros: () => ({ dia: diaSelecionado.value })
+})
+
 function alternarMenuFiltro() {
   mostrarFiltro.value = !mostrarFiltro.value
   rascunhoDia.value = diaSelecionado.value

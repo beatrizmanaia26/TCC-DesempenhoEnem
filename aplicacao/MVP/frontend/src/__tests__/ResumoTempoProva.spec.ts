@@ -42,7 +42,7 @@ describe('ResumoTempoProva', () => {
     await flushPromises()
 
     expect(http.get).toHaveBeenCalledWith('/metricas/tempo-resumo', { params: { ano: 2024 } })
-    expect(wrapper.text()).toContain('Tempo total disponível: 555.00 min')
+    expect(wrapper.text()).toContain('Distribuição do tempo entre leitura e resolução das questões objetivas (por dia ou total).')
     expect(wrapper.findAll('.pizza path')).toHaveLength(3)
     expect(wrapper.text()).toContain('150.00 min')
     expect(wrapper.text()).toContain('3.00 min')
@@ -58,7 +58,7 @@ describe('ResumoTempoProva', () => {
     await wrapper.find('#resumo-dia-1').trigger('change')
     await wrapper.find('.filter-aplicar').trigger('click')
 
-    expect(wrapper.text()).toContain('Tempo total disponível: 255.00 min')
+    expect(wrapper.text()).toContain('Distribuição do tempo entre leitura e resolução das questões objetivas (por dia ou total).')
     expect(wrapper.text()).toContain('100.00 min')
     expect(wrapper.text()).toContain('153.00 min')
     expect(wrapper.text()).not.toContain('555.00')
@@ -73,7 +73,7 @@ describe('ResumoTempoProva', () => {
     await wrapper.find('#resumo-dia-2').trigger('change')
     await wrapper.find('.filter-btn').trigger('click')
 
-    expect(wrapper.text()).toContain('Tempo total disponível: 555.00 min')
+    expect(wrapper.text()).toContain('Distribuição do tempo entre leitura e resolução das questões objetivas (por dia ou total).')
 
     await wrapper.find('.filter-btn').trigger('click')
     expect((wrapper.find('#resumo-dia-todos').element as HTMLInputElement).checked).toBe(true)

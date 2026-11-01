@@ -130,12 +130,12 @@ const props = defineProps({
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   flex: 1;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #047857 100%);
   color: white;
 }
 

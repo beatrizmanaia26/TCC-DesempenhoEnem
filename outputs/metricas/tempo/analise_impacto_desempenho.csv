@@ -1,12 +1,21 @@
-tipo_analise,area,dificuldade,coeficiente_r,p_value,impacta,conclusao,referencia_dados,quantidade_pares
-Tempo Leitura (Questões),CH,TODAS,0.7848183545407562,4.172515849509076e-05,SIM,Impacta significativamente,"r=0.785, p=0.0000, n=20",20
-Tempo Leitura (Questões),LC,TODAS,0.29430688295278357,0.20782999457290782,NÃO,"Correlação positiva fraca (r=0.294); não atinge o critério de |r| > 0,70","r=0.294, p=0.2078, n=20",20
-Tempo Leitura (Questões),CN,TODAS,-0.5886137659055671,0.006328311141702892,NÃO,"Correlação negativa moderada (r=-0.589); não atinge o critério de |r| > 0,70","r=-0.589, p=0.0063, n=20",20
-Tempo Leitura (Questões),MT,TODAS,0.09810229431759453,0.6807261370914789,NÃO,"Correlação positiva muito fraca / desprezível (r=0.098); não atinge o critério de |r| > 0,70","r=0.098, p=0.6807, n=20",20
-Tempo Leitura (Questões + Textos),CH,TODAS,0.8829206488583509,2.5480424471635225e-07,SIM,Impacta significativamente,"r=0.883, p=0.0000, n=20",20
-Tempo Leitura (Questões + Textos),LC,TODAS,0.29430688295278357,0.20782999457290782,NÃO,"Correlação positiva fraca (r=0.294); não atinge o critério de |r| > 0,70","r=0.294, p=0.2078, n=20",20
-Tempo Leitura (Questões + Textos),CN,TODAS,-0.5886137659055671,0.006328311141702892,NÃO,"Correlação negativa moderada (r=-0.589); não atinge o critério de |r| > 0,70","r=-0.589, p=0.0063, n=20",20
-Tempo Leitura (Questões + Textos),MT,TODAS,0.3678836036909795,0.11052394280205596,NÃO,"Correlação positiva fraca (r=0.368); não atinge o critério de |r| > 0,70","r=0.368, p=0.1105, n=20",20
-Quantidade de Caracteres,TODAS,FACIL,0.3258404475887288,7.280459766237779e-32,NÃO,Correlação positiva fraca (rho=0.326); diferença entre metades por caracteres: +8.2 p.p.,Menos: 54.6% | Mais: 62.7% (+8.2%),1232
-Quantidade de Caracteres,TODAS,MEDIA,0.5381711079517216,1.5207539813774601e-92,NÃO,Correlação positiva moderada (rho=0.538); diferença entre metades por caracteres: +10.8 p.p.,Menos: 33.4% | Mais: 44.2% (+10.8%),1220
-Quantidade de Caracteres,TODAS,DIFICIL,0.29639380166911455,2.3436570126880557e-25,NÃO,Correlação positiva fraca (rho=0.296); diferença entre metades por caracteres: +4.7 p.p.,Menos: 24.2% | Mais: 28.9% (+4.7%),1180
+tipo_analise,area,ano,dificuldade,coeficiente_r,p_value,p_value_bruto,quantidade_pares,interpretacao
+TIPO_1_caracteres_questao_vs_acerto,CH,2020,TODAS,-0.25290688112801046,1.0,0.09564521773911304,45,fraca
+TIPO_1_caracteres_questao_vs_acerto,LC,2020,TODAS,-0.3071788715486194,0.5509724513774311,0.029698515074246288,50,fraca
+TIPO_1_caracteres_questao_vs_acerto,CN,2020,TODAS,0.04735729386892177,1.0,0.7613119344032798,44,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,MT,2020,TODAS,0.0987384596151527,1.0,0.5205739713014349,44,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CH,2022,TODAS,-0.019566506399929212,1.0,0.896155192240388,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,LC,2022,TODAS,-0.22642143706475942,1.0,0.11134443277836108,50,fraca
+TIPO_1_caracteres_questao_vs_acerto,CN,2022,TODAS,0.21055405540125846,1.0,0.1641917904104795,45,fraca
+TIPO_1_caracteres_questao_vs_acerto,MT,2022,TODAS,-0.27907960128676157,1.0,0.06759662016899155,44,fraca
+TIPO_1_caracteres_questao_vs_acerto,CH,2023,TODAS,-0.24825405407249665,1.0,0.10029498525073746,45,fraca
+TIPO_1_caracteres_questao_vs_acerto,LC,2023,TODAS,-0.08864558575390041,1.0,0.5414729263536823,50,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CN,2023,TODAS,-0.000658783227736417,1.0,0.9967501624918754,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,MT,2023,TODAS,-0.3164240075382491,0.591570421478926,0.03479826008699565,45,fraca
+TIPO_1_caracteres_questao_vs_acerto,CH,2024,TODAS,-0.17417654808959157,1.0,0.2502374881255937,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,LC,2024,TODAS,-0.1796921895401383,1.0,0.2087395630218489,50,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CN,2024,TODAS,0.3694985731178008,0.26298685065746713,0.013149342532873356,44,fraca
+TIPO_1_caracteres_questao_vs_acerto,MT,2024,TODAS,-0.05632967712060103,1.0,0.7135143242837858,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CH,2025,TODAS,-0.02015810276679842,1.0,0.8968051597420129,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,LC,2025,TODAS,-0.3083387357127814,0.5509724513774311,0.028998550072496375,50,fraca
+TIPO_1_caracteres_questao_vs_acerto,CN,2025,TODAS,-0.07052250075505889,1.0,0.6528673566321684,43,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,MT,2025,TODAS,0.04947320204628957,1.0,0.7473126343682815,44,muito fraca / desprezível

@@ -1,5 +1,5 @@
 <template>
-  <span class="info-icon-wrapper">
+  <span ref="wrapper" class="info-icon-wrapper" @mouseenter="posicionarTooltip">
     <svg 
       width="16" 
       height="16" 
@@ -28,13 +28,15 @@
         fill="currentColor"
       />
     </svg>
-    <div v-if="tooltip" class="tooltip">
+    <div v-if="tooltip" ref="tooltipRef" class="tooltip" :style="estiloTooltip">
       {{ tooltip }}
     </div>
   </span>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 defineProps({
   fill: {
     type: String,
@@ -52,6 +54,30 @@ defineProps({
 
 const isWarning = () => {
   return warning
+}
+
+// O tooltip é position: fixed para não ser cortado por áreas com rolagem (ex.: lista do filtro).
+// Por isso sua posição é calculada a partir do ícone, sempre acima dele e dentro da tela.
+const MARGEM_TELA = 8
+const wrapper = ref(null)
+const tooltipRef = ref(null)
+const estiloTooltip = ref({})
+
+function posicionarTooltip() {
+  if (!wrapper.value) return
+  const ancora = wrapper.value.getBoundingClientRect()
+  const larguraTooltip = tooltipRef.value?.offsetWidth ?? 250
+  const metade = larguraTooltip / 2
+  const centro = ancora.left + ancora.width / 2
+  const esquerda = Math.min(Math.max(centro, metade + MARGEM_TELA), window.innerWidth - metade - MARGEM_TELA)
+  // A seta continua apontando para o centro do ícone, mesmo quando o tooltip é deslocado para caber na tela
+  const posicaoSeta = centro - (esquerda - metade)
+  estiloTooltip.value = {
+    top: `${ancora.top - 8}px`,
+    left: `${esquerda}px`,
+    transform: 'translate(-50%, -100%)',
+    '--seta-x': `${posicaoSeta}px`,
+  }
 }
 </script>
 
@@ -79,16 +105,16 @@ const isWarning = () => {
 }
 
 .tooltip {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -100%);
   background: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 0.75rem 1rem;
   border-radius: 6px;
   font-size: 0.85rem;
-  white-space: normal;
+  white-space: pre-line;
   width: 250px;
   margin-bottom: 0.5rem;
   opacity: 0;
@@ -104,7 +130,7 @@ const isWarning = () => {
   content: '';
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: var(--seta-x, 50%);
   transform: translateX(-50%);
   border: 6px solid transparent;
   border-top-color: rgba(0, 0, 0, 0.9);
@@ -122,3 +148,4 @@ const isWarning = () => {
   }
 }
 </style>
+

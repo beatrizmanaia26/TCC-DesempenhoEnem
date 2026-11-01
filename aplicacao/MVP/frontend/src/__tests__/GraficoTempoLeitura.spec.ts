@@ -39,8 +39,8 @@ describe('GraficoTempoLeitura', () => {
     const wrapper = mount(GraficoTempoLeitura, { props: { ano: 2024 } })
     await flushPromises()
 
-    expect(http.get).toHaveBeenCalledWith('/metricas/tempo-leitura-questoes', { params: { ano: 2024 } })
-    expect(wrapper.text()).toContain('Tempo gasto para ler cada questão da prova')
+    expect(http.get).toHaveBeenCalledWith('/metricas/tempo-leitura-questoes', { params: { ano: 2024, cor: 'Azul' } })
+    expect(wrapper.text()).toContain('Comparativo do tempo de leitura individual de cada questão frente ao tempo médio de resolução por item.')
     expect(wrapper.text()).toContain('Dia 1 (2 questões)')
     expect(wrapper.text()).toContain('Dia 2 (1 questão)')
     expect(wrapper.findAll('.barra-linha')).toHaveLength(3)
@@ -171,9 +171,8 @@ describe('GraficoTempoLeitura', () => {
     await wrapper.find('.filter-btn').trigger('click')
 
     const icones = wrapper.findAll('.filter-menu .info-icon-wrapper')
-    expect(icones).toHaveLength(3)
+    expect(icones).toHaveLength(2)
     expect(icones.map((icone) => icone.find('.tooltip').text())).toEqual([
-      expect.stringContaining('maior que a média'),
       expect.stringContaining('Q1 − 1,5 × IQR'),
       expect.stringContaining('1 desvio padrão')
     ])
@@ -262,6 +261,43 @@ describe('GraficoTempoLeitura', () => {
 
     expect(wrapper.findAll('.barra-linha')).toHaveLength(1)
     expect(wrapper.find('.barra-rotulo').text()).toBe('Q1')
+  })
+
+  it('mostra as cores do ano e busca a cor escolhida só ao clicar em Aplicar', async () => {
+    vi.mocked(http.get).mockImplementation(async (url: string) => {
+      if (url === '/metricas/tempo-resumo') return { data: { dias: [] } }
+      return { data: { questoes: [questao(1, 1, 1100)] } }
+    })
+
+    const wrapper = mount(GraficoTempoLeitura, { props: { ano: 2024 } })
+    await flushPromises()
+    await wrapper.find('.filter-btn').trigger('click')
+
+    expect(wrapper.find('.filter-menu').text()).toContain('COR')
+    expect(wrapper.find('label[for="cor-Verde"]').text()).toBe('Verde')
+    expect(wrapper.find('#cor-Rosa').exists()).toBe(false)
+
+    await wrapper.find('#cor-Amarelo').setValue(true)
+    expect(http.get).toHaveBeenCalledTimes(2)
+
+    await wrapper.find('.filter-aplicar').trigger('click')
+    await flushPromises()
+
+    expect(http.get).toHaveBeenCalledWith('/metricas/tempo-leitura-questoes', { params: { ano: 2024, cor: 'Amarelo' } })
+  })
+
+  it('mostra o rótulo Rosa/Verde nas cores de 2020 a 2023', async () => {
+    vi.mocked(http.get).mockImplementation(async (url: string) => {
+      if (url === '/metricas/tempo-resumo') return { data: { dias: [] } }
+      return { data: { questoes: [questao(1, 1, 1100)] } }
+    })
+
+    const wrapper = mount(GraficoTempoLeitura, { props: { ano: 2023 } })
+    await flushPromises()
+    await wrapper.find('.filter-btn').trigger('click')
+
+    expect(wrapper.find('label[for="cor-Rosa"]').text()).toBe('Rosa')
+    expect(wrapper.find('#cor-Verde').exists()).toBe(false)
   })
 
   it('mostra o aviso de itens sem parâmetro b na dificuldade', async () => {

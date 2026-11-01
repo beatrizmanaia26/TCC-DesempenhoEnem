@@ -1,8 +1,43 @@
 <template>
   <div class="enem-container">
     <div class="container">
-      <h1 class="page-title"> Análises do ENEM</h1>
-      <p class="page-subtitle">Explore as análises detalhadas das provas do ENEM disponíveis para identificar quais das caracteristicas esturturais consdieradas (formalismo, iame, distrator...pode ter tido mais influencia.. )</p>
+      <div class="cabecalho-pagina">
+        <div class="topo-acoes" ref="menuExportarRef">
+          <button
+            type="button"
+            class="btn-exportar"
+            :disabled="!selectedYear || exportando"
+            :aria-expanded="menuExportarAberto ? 'true' : 'false'"
+            aria-haspopup="menu"
+            :title="selectedYear ? 'Exportar os dados do ENEM ' + selectedYear : 'Selecione um ano para exportar'"
+            @click="menuExportarAberto = !menuExportarAberto"
+          >
+            <svg class="icone-exportar" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            {{ exportando ? 'Exportando...' : 'Exportar' }}
+          </button>
+          <ul v-if="menuExportarAberto" class="menu-exportar" role="menu">
+            <li v-for="opcao in opcoesExportacao" :key="opcao.formato" role="none">
+              <button type="button" class="item-exportar" role="menuitem" @click="escolherExportacao(opcao.formato)">
+                <ArquivoIcon :formato="opcao.formato" class="icone-arquivo" />
+                Exportar em {{ opcao.nome }}
+              </button>
+            </li>
+          </ul>
+        </div>
+        <h1 class="page-title">
+
+          Análises do ENEM
+          <InfoIcon
+            warning
+            :tooltip="'O ENEM 2021 não está nas análises porque os dados não puderam ser extraídos: o arquivo da prova estava corrompido.'"
+          />
+        </h1>
+      </div>
+      <p class="page-subtitle">Explore as análises estruturais das provas do ENEM para identificar o impacto de fatores como tempo, formalismo, presença de imagens, tamanho do texto, distratores e posição das questões no desempenho do exame.</p>
 
       <!-- GRID DE ANOS -->
       <div class="years-grid">
@@ -29,11 +64,21 @@
         <div class="analyses-header">
           <h2>Análises disponíveis para {{ selectedYear }}</h2>
           <div class="filter-wrapper">
-            <button class="filter-btn" @click="showFilterMenu = !showFilterMenu">
+            <button class="filter-btn" @click="alternarMenuFiltro">
               <FilterIcon />
               Filtro
             </button>
             <div v-if="showFilterMenu" class="filter-menu">
+              <div class="filter-option filter-todos">
+                <input
+                  type="checkbox"
+                  id="filter-selecionar-tudo"
+                  :checked="todasMarcadas"
+                  :indeterminate.prop="algumaMarcada"
+                  @change="alternarTodosFiltros"
+                />
+                <label for="filter-selecionar-tudo">Selecionar tudo</label>
+              </div>
               <div class="filter-option" v-for="option in filterOptions" :key="option.id">
                 <input 
                   type="checkbox" 
@@ -43,12 +88,27 @@
                 />
                 <label :for="option.id">{{ option.label }}</label>
               </div>
+              <div class="filter-rodape">
+                <button type="button" class="filter-aplicar" @click="aplicarFiltros">Aplicar</button>
+              </div>
             </div>
           </div>
         </div>
         <ProvaInfoDisplay :ano="selectedYear" />
-        <ResumoTempoProva :ano="selectedYear" />
-        <GraficoTempoLeitura :ano="selectedYear" />
+        <template v-if="selectedFilters.has('reading-time')">
+          <ResumoTempoProva ref="resumoRef" :ano="selectedYear" />
+          <GraficoTempoLeitura ref="graficoTempoRef" :ano="selectedYear" />
+        </template>
+        <template v-if="selectedFilters.has('word-count')">
+          <PalavrasQuestoesGrafico ref="graficoPalavrasRef" :ano="selectedYear" />
+          <MapaCalorCorrelacoes />
+          <CorrelacaoDificuldadeMapa />
+          <CorrelacaoMetadesCaracteres :ano="selectedYear" />
+          <!-- ========GRAFICO DISPERSAO_ITENS - uso na página -->
+          <CorrelacaoDispersaoItens :ano="selectedYear" />
+          <!-- =======grafico DISPERSAO_ITENS -->
+          <CorrelacaoDificuldadeColunas :ano="selectedYear" />
+        </template>
       </div>
 
       <!-- PLACEHOLDER SE NENHUM ANO SELECIONADO -->
@@ -65,11 +125,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { exportarAnalises, analisesSelecionadas } from '@/services/exportacaoEnem.js'
 import FilterIcon from '@/components/icons/FilterIcon.vue'
 import ProvaInfoDisplay from '@/components/ProvaInfoDisplay.vue'
 import GraficoTempoLeitura from '@/components/GraficoTempoLeitura.vue'
 import ResumoTempoProva from '@/components/ResumoTempoProva.vue'
+import MapaCalorCorrelacoes from '@/components/MapaCalorCorrelacoes.vue'
+import CorrelacaoDificuldadeMapa from '@/components/CorrelacaoDificuldadeMapa.vue'
+import CorrelacaoDificuldadeColunas from '@/components/CorrelacaoDificuldadeColunas.vue'
+import CorrelacaoMetadesCaracteres from '@/components/CorrelacaoMetadesCaracteres.vue'
+// ========GRAFICO DISPERSAO_ITENS - import
+import CorrelacaoDispersaoItens from '@/components/CorrelacaoDispersaoItens.vue'
+// =======grafico DISPERSAO_ITENS
+import PalavrasQuestoesGrafico from '@/components/PalavrasQuestoesGrafico.vue'
+import InfoIcon from '@/components/icons/InfoIcon.vue'
+import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
+import http from '@/services/http.js'
 
 const availableYears = [2025, 2024, 2023, 2022, 2020]
 const selectedYear = ref(null)
@@ -83,23 +155,113 @@ const filterOptions = [
   { id: 'distractors', label: 'Análise de Distratores' },
   { id: 'position', label: 'Posição das Questões' }
 ]
-const selectedFilters = ref(new Set())
+// Todas as análises marcadas: é o padrão ao escolher um ano
+const todasAnalises = filterOptions.map((option) => option.id)
 
+// Filtros aplicados (valem só depois de clicar em Aplicar)
+const selectedFilters = ref(new Set(todasAnalises))
+// Rascunho: muda enquanto o usuário marca as opções
+const rascunhoFiltros = ref(new Set(todasAnalises))
+
+// Ao escolher um ano, todas as análises ficam selecionadas e aplicadas
 const selectYear = (year) => {
   selectedYear.value = year
+  selectedFilters.value = new Set(todasAnalises)
+  rascunhoFiltros.value = new Set(todasAnalises)
   showFilterMenu.value = false
 }
 
+// Abrir o menu copia o aplicado para o rascunho; fechar sem aplicar descarta as mudanças
+const alternarMenuFiltro = () => {
+  if (!showFilterMenu.value) {
+    rascunhoFiltros.value = new Set(selectedFilters.value)
+  }
+  showFilterMenu.value = !showFilterMenu.value
+}
+
+const aplicarFiltros = () => {
+  selectedFilters.value = new Set(rascunhoFiltros.value)
+  showFilterMenu.value = false
+}
+
+// Estado do "Selecionar tudo" no rascunho: marcado, parcial (traço) ou desmarcado
+const todasMarcadas = computed(() => rascunhoFiltros.value.size === todasAnalises.length)
+const algumaMarcada = computed(() => rascunhoFiltros.value.size > 0 && !todasMarcadas.value)
+
+// Se estiver tudo marcado, desmarca tudo; caso contrário, marca tudo. Só vale após Aplicar
+const alternarTodosFiltros = () => {
+  rascunhoFiltros.value = todasMarcadas.value ? new Set() : new Set(todasAnalises)
+}
+
 const toggleFilter = (filterId) => {
-  if (selectedFilters.value.has(filterId)) {
-    selectedFilters.value.delete(filterId)
+  if (rascunhoFiltros.value.has(filterId)) {
+    rascunhoFiltros.value.delete(filterId)
   } else {
-    selectedFilters.value.add(filterId)
+    rascunhoFiltros.value.add(filterId)
   }
 }
 
 const isFilterSelected = (filterId) => {
-  return selectedFilters.value.has(filterId)
+  return rascunhoFiltros.value.has(filterId)
+}
+
+// Exportar: junta os dados que a tela ja mostra para o ano selecionado
+const exportando = ref(false)
+const menuExportarAberto = ref(false)
+const menuExportarRef = ref(null)
+const resumoRef = ref(null)
+const graficoTempoRef = ref(null)
+const graficoPalavrasRef = ref(null)
+
+const opcoesExportacao = [
+  { formato: 'pdf', rotulo: 'PDF', nome: 'PDF' },
+  { formato: 'xlsx', rotulo: 'XLS', nome: 'Excel' },
+  { formato: 'csv', rotulo: 'CSV', nome: 'CSV' }
+]
+
+// Fecha o menu ao clicar fora dele
+const fecharMenuAoClicarFora = (evento) => {
+  if (menuExportarRef.value && !menuExportarRef.value.contains(evento.target)) {
+    menuExportarAberto.value = false
+  }
+}
+
+onMounted(() => document.addEventListener('click', fecharMenuAoClicarFora))
+onBeforeUnmount(() => document.removeEventListener('click', fecharMenuAoClicarFora))
+
+const escolherExportacao = async (formato) => {
+  menuExportarAberto.value = false
+  if (!selectedYear.value || exportando.value) return
+  exportando.value = true
+  try {
+    const ano = selectedYear.value
+    const [resumo, tempo, palavras] = await Promise.all([
+      http.get('/metricas/tempo-resumo', { params: { ano } }),
+      http.get('/metricas/tempo-leitura-questoes', { params: { ano } }),
+      http.get('/metricas/palavras-questoes', { params: { ano } })
+    ])
+
+    await exportarAnalises(
+      formato,
+      ano,
+      {
+        resumo: resumo.data,
+        tempo: tempo.data,
+        palavras: palavras.data
+      },
+      {
+        resumo: resumoRef.value?.obterFiltros(),
+        tempo: graficoTempoRef.value?.obterFiltros(),
+        palavras: graficoPalavrasRef.value?.obterFiltros()
+      },
+      analisesSelecionadas(selectedFilters.value)
+    )
+  } catch (erro) {
+    console.error('Erro ao exportar dados:', erro)
+    alert('Não foi possível exportar os dados deste ano. Tente novamente.')
+  } finally {
+    exportando.value = false
+  }
 }
 
 // Modal upload
@@ -146,6 +308,105 @@ const uploadNewEnem = () => {
   margin: 0 auto;
 }
 
+.cabecalho-pagina {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cabecalho-pagina .page-title {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+}
+
+.topo-acoes {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 3;
+  grid-row: 1;
+  position: relative;
+}
+
+.btn-exportar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #0070C0;
+  border: 2px solid #0070C0;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-exportar:hover:not(:disabled) {
+  background: #0070C0;
+  color: white;
+}
+
+.topo-acoes {
+  position: relative;
+}
+
+.menu-exportar {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  min-width: 240px;
+  background: white;
+  border: 2px solid #0070C0;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.item-exportar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: #0070C0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.item-exportar:hover,
+.item-exportar:focus-visible {
+  background: #E0F2FE;
+  outline: none;
+}
+
+.icone-arquivo {
+  flex-shrink: 0;
+}
+
+.btn-exportar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.icone-exportar {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .page-title {
   color: #0070C0;
   font-size: 2.5rem;
@@ -174,7 +435,7 @@ const uploadNewEnem = () => {
   padding: 1.5rem;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 3px solid transparent;
 }
@@ -185,7 +446,7 @@ const uploadNewEnem = () => {
 }
 
 .year-card.active {
-  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #047857 100%);
   color: white;
   border-color: white;
 }
@@ -225,7 +486,7 @@ const uploadNewEnem = () => {
   border-radius: 12px;
   padding: 3rem;
   text-align: center;
-  color: #999;
+  color: var(--color-neutral-gray-muted);
   font-size: 1.1rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
@@ -235,7 +496,7 @@ const uploadNewEnem = () => {
   background: #f0f4ff;
   border: 2px dashed #0070C0;
   opacity: 0.8;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .add-card:hover {
@@ -319,20 +580,25 @@ const uploadNewEnem = () => {
 }
 
 .btn-upload-file {
-  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #047857 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
   width: 100%;
 }
 
 .btn-upload-file:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 112, 192, 0.5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-upload-file {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 }
 
 .file-selected {
@@ -384,7 +650,7 @@ const uploadNewEnem = () => {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .btn-secondary:hover {
@@ -392,14 +658,13 @@ const uploadNewEnem = () => {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
+  background: linear-gradient(135deg, #0070C0 0%, #047857 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -410,6 +675,12 @@ const uploadNewEnem = () => {
 .btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-primary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 }
 
 
@@ -444,7 +715,7 @@ const uploadNewEnem = () => {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   white-space: nowrap;
 }
 
@@ -452,6 +723,12 @@ const uploadNewEnem = () => {
   background: #f0f7ff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 112, 192, 0.2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .filter-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
 }
 
 .filter-menu {
@@ -499,8 +776,53 @@ const uploadNewEnem = () => {
   flex: 1;
 }
 
+.filter-rodape {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.filter-aplicar {
+  background: #0070C0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.filter-aplicar:hover {
+  background: #005a9e;
+}
+
+.filter-todos {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
 
 @media (max-width: 768px) {
+  .cabecalho-pagina {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecalho-pagina .page-title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .topo-acoes {
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+    margin: 0.5rem 0 1rem;
+  }
+
   .page-title {
     font-size: 1.8rem;
   }

@@ -109,7 +109,7 @@
   color: #E2E8F0;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
 }

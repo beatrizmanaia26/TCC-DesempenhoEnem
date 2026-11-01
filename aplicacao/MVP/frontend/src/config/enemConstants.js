@@ -106,6 +106,8 @@ export function obterInfoProva(ano) {
     duracao_total: formatarDuracao(duraçaoTotal),
     duracao_dia1: formatarDuracao(dia1Total),
     duracao_dia2: formatarDuracao(dia2Total),
+    duracao_dia1_min: dia1Total,
+    duracao_dia2_min: dia2Total,
     tempo_disponivel_dia1: formatarDuracao(dia1Disponivel),
     tempo_disponivel_dia2: formatarDuracao(dia2Disponivel),
     questoes_total: dadosAno.questoes_total,

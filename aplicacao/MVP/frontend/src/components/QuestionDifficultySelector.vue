@@ -175,7 +175,7 @@ const previousGroup = () => {
   padding: 0.4rem 0.6rem;
   cursor: pointer;
   font-size: 1.1rem;
-  transition: all 0.3s;
+  transition: color 0.3s ease;
   flex-shrink: 0;
   position: absolute;
   right: 0;
@@ -223,7 +223,7 @@ const previousGroup = () => {
   color: #666;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
   font-size: 0.8rem;
 }
 
@@ -240,14 +240,14 @@ const previousGroup = () => {
 
 .btn-difficulty.active.btn-easy {
   background: white;
-  border-color: #059669;
-  color: #059669;
+  border-color: #047857;
+  color: #047857;
 }
 
 .btn-difficulty.active.btn-medium {
   background: white;
-  border-color: #d97706;
-  color: #d97706;
+  border-color: #b45309;
+  color: #b45309;
 }
 
 .btn-difficulty.active.btn-hard {
@@ -272,7 +272,7 @@ const previousGroup = () => {
   color: #333;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 .btn-nav:hover:not(:disabled) {

@@ -304,7 +304,100 @@ function carregarQuestoesTempo() {
   return questoesTempoCache
 }
 
-// Retorna o tempo de leitura de cada questão de um ano (ambos os dias)
+// Cores de caderno por ano e dia, na ordem dos códigos (Azul, Amarelo, Branco/Cinza, Rosa/Verde).
+// Os códigos são os de CODIGOS_REGULARES em tabela_base.py. Em 2024 e 2025 a última cor é verde.
+const CORES_POR_ANO = {
+  2020: ['Azul', 'Amarelo', 'Branco', 'Rosa'],
+  2022: ['Azul', 'Amarelo', 'Branco', 'Rosa'],
+  2023: ['Azul', 'Amarelo', 'Branco', 'Rosa'],
+  2024: ['Azul', 'Amarelo', 'Branco', 'Verde'],
+  2025: ['Azul', 'Amarelo', 'Branco', 'Verde']
+}
+
+// Nome usado na API para a cor 'Branco' (o frontend envia Branco; aceita também Cinza)
+function normalizarCor(cor) {
+  return cor === 'Cinza' ? 'Branco' : cor
+}
+
+// Primeiro código de cada área (o Azul); as cores seguem na ordem dos códigos seguintes
+const CODIGO_AZUL_POR_ANO = {
+  2020: { CN: 597, CH: 567, LC: 577, MT: 587 },
+  2022: { CN: 1085, CH: 1055, LC: 1065, MT: 1075 },
+  2023: { CN: 1221, CH: 1191, LC: 1201, MT: 1211 },
+  2024: { CN: 1419, CH: 1383, LC: 1395, MT: 1407 },
+  2025: { CN: 1483, CH: 1447, LC: 1459, MT: 1471 }
+}
+
+// Código (co_prova) de cada cor, por área, no ano informado
+function codigoDaCor(ano, area, cor) {
+  const indiceCor = CORES_POR_ANO[ano]?.indexOf(normalizarCor(cor)) ?? -1
+  if (indiceCor < 0) return null
+  return CODIGO_AZUL_POR_ANO[ano][area] + indiceCor
+}
+
+// Tempo de leitura das questões de todas as cores, a partir do tamanho em caracteres de cada item.
+// Cada linha de metricas_caracteristicas_questao.csv é um item de um caderno (co_prova).
+const CARACTERISTICAS_QUESTAO_CSV = path.join(__dirname, '../../../outputs/metricas/tempo/metricas_caracteristicas_questao.csv')
+let caracteristicasQuestaoCache = null
+
+function carregarCaracteristicasQuestao() {
+  if (caracteristicasQuestaoCache) {
+    return caracteristicasQuestaoCache
+  }
+
+  const linhas = fs.readFileSync(CARACTERISTICAS_QUESTAO_CSV, 'utf-8').replace(/^\uFEFF/, '').trim().split(/\r?\n/)
+  const cabecalho = linhas.shift().split(',')
+  const indice = Object.fromEntries(cabecalho.map((nome, i) => [nome, i]))
+
+  caracteristicasQuestaoCache = linhas.map((linha) => {
+    const colunas = linha.split(',')
+    const posicao = Number(colunas[indice.posicao])
+    const caracteres = Number(colunas[indice.caracteres])
+
+    return {
+      ano: Number(colunas[indice.ano]),
+      dia: Number(colunas[indice.dia]),
+      area: colunas[indice.area],
+      co_prova: Number(colunas[indice.co_prova]),
+      co_item: Number(colunas[indice.co_item]),
+      posicao,
+      rotulo: `Q${posicao}`,
+      caracteres,
+      tempo_leitura_minutos: Math.round((caracteres / VELOCIDADE_LEITURA_CPM) * 100) / 100,
+      dificuldade_tri: colunas[indice.dificuldade_tri] || null
+    }
+  })
+
+  return caracteristicasQuestaoCache
+}
+
+// Idioma de Q1 a Q5 de cada item (co_item), lido do gráfico Azul. Nas outras questões o idioma é 'geral'.
+// O co_item é o mesmo em todas as cores, então o idioma vale para qualquer caderno.
+let idiomaPorCoItemCache = null
+
+function carregarIdiomaPorCoItem() {
+  if (idiomaPorCoItemCache) {
+    return idiomaPorCoItemCache
+  }
+
+  const caracteristicas = carregarCaracteristicasQuestao()
+  const questoesAzul = caracteristicas.filter((questao) => CODIGO_AZUL_POR_ANO[questao.ano] && questao.co_prova === CODIGO_AZUL_POR_ANO[questao.ano][questao.area])
+  const linhasAzulGrafico = carregarQuestoesTempo()
+
+  idiomaPorCoItemCache = new Map()
+  questoesAzul.forEach((questao) => {
+    if (questao.posicao > 5) return
+    const correspondente = linhasAzulGrafico.find(
+      (linha) => linha.ano === questao.ano && linha.dia === questao.dia && linha.posicao === questao.posicao && linha.caracteres === questao.caracteres
+    )
+    if (correspondente && correspondente.idioma !== 'geral') {
+      idiomaPorCoItemCache.set(questao.co_item, correspondente.idioma)
+    }
+  })
+
+  return idiomaPorCoItemCache
+}
+
 app.get('/api/metricas/tempo-leitura-questoes', (req, res) => {
   try {
     const ano = Number(req.query.ano)
@@ -312,10 +405,30 @@ app.get('/api/metricas/tempo-leitura-questoes', (req, res) => {
       return res.status(400).json({ error: 'Parâmetro "ano" é obrigatório' })
     }
 
+    // Sem o parâmetro cor, usa o Azul, como antes
+    const cor = req.query.cor ?? 'Azul'
+    const areas = Object.keys(CODIGO_AZUL_POR_ANO[ano] ?? {})
+    const codigosDaCor = new Set(areas.map((area) => codigoDaCor(ano, area, cor)))
+    if (codigosDaCor.size === 0 || codigosDaCor.has(null)) {
+      return res.status(400).json({ error: `Cor "${cor}" não existe no ano ${ano}` })
+    }
+
     const dificuldades = carregarDificuldadesAzul()
-    const questoes = carregarQuestoesTempo()
-      .filter((questao) => questao.ano === ano)
-      .sort((a, b) => a.dia - b.dia || a.posicao - b.posicao || a.idioma.localeCompare(b.idioma))
+    const idiomas = carregarIdiomaPorCoItem()
+    const questoes = carregarCaracteristicasQuestao()
+      .filter((questao) => questao.ano === ano && codigosDaCor.has(questao.co_prova))
+      .map((questao) => ({
+        ano: questao.ano,
+        dia: questao.dia,
+        posicao: questao.posicao,
+        idioma: idiomas.get(questao.co_item) ?? 'geral',
+        co_item: questao.co_item,
+        area: questao.area,
+        rotulo: questao.rotulo,
+        caracteres: questao.caracteres,
+        tempo_leitura_minutos: questao.tempo_leitura_minutos
+      }))
+      .sort((a, b) => a.dia - b.dia || a.posicao - b.posicao || a.co_item - b.co_item)
       .map((questao) => ({
         ...questao,
         dificuldade: dificuldades.get(`${ano}-${questao.posicao}`) ?? null
@@ -327,6 +440,7 @@ app.get('/api/metricas/tempo-leitura-questoes', (req, res) => {
 
     res.json({
       ano,
+      cor,
       total_questoes: questoes.length,
       questoes
     })
@@ -419,6 +533,406 @@ app.get('/api/metricas/tempo-resumo', (req, res) => {
     res.status(500).json({ error: error.message })
   }
 })
+
+// Quantidade de palavras do enunciado e das alternativas de cada questão, lidas dos JSONs de dados/enems_json_md.
+// O campo quantidade_palavras conta só o texto da questão, sem as alternativas.
+// As alternativas são contadas a partir do campo "texto" de cada item (a letra não entra na contagem).
+const PASTA_JSON_PROVAS = path.join(__dirname, '../../../dados/enems_json_md')
+const palavrasQuestoesCache = new Map()
+
+function contarPalavrasAlternativas(alternativas = []) {
+  return alternativas.reduce((total, alternativa) => {
+    const texto = String(alternativa?.texto ?? '').trim()
+    return total + (texto ? texto.split(/\s+/).length : 0)
+  }, 0)
+}
+
+function carregarPalavrasQuestoes(ano) {
+  if (palavrasQuestoesCache.has(ano)) {
+    return palavrasQuestoesCache.get(ano)
+  }
+
+  const questoes = [1, 2].flatMap((dia) => {
+    const nomePasta = `enem${ano}Dia${dia}RegularAzul`
+    const arquivo = path.join(PASTA_JSON_PROVAS, nomePasta, `${nomePasta}.json`)
+    if (!fs.existsSync(arquivo)) {
+      return []
+    }
+
+    const prova = JSON.parse(fs.readFileSync(arquivo, 'utf-8'))
+    return (prova.questoes ?? []).map((questao) => {
+      const posicao = Number(questao.questao)
+      return {
+        ano,
+        dia,
+        posicao,
+        idioma: questao.idioma ?? 'geral',
+        area: areaDaPosicao(posicao),
+        rotulo: `Q${posicao}`,
+        palavras: Number(questao.quantidade_palavras ?? 0),
+        palavrasAlternativas: contarPalavrasAlternativas(questao.alternativas)
+      }
+    })
+  })
+
+  // Só guarda no cache anos com dados, para não acumular entradas vazias
+  if (questoes.length > 0) {
+    palavrasQuestoesCache.set(ano, questoes)
+  }
+  return questoes
+}
+
+// Questões de uma cor com o texto do Azul. Cada linha da cor (posição X, co_item K) recebe as palavras
+// da questão Azul de mesmo co_item (posição Y). Assim a barra mostra o texto da questão K, na posição da cor.
+function questoesDaCorPorCoItem(ano, cor, questoesAzul) {
+  const caracteristicas = carregarCaracteristicasQuestao().filter((questao) => questao.ano === ano)
+  const codigosDaCor = new Set(['LC', 'CH', 'CN', 'MT'].map((area) => codigoDaCor(ano, area, cor)))
+
+  // Questão Azul de cada co_item (com as palavras da posição Azul). Cada co_item tem uma linha Azul própria,
+  // então o texto sai do Azul do mesmo item, sem pegar a primeira questão da mesma posição.
+  const idiomas = carregarIdiomaPorCoItem()
+  const azulPorCoItem = new Map()
+  caracteristicas
+    .filter((questao) => CODIGO_AZUL_POR_ANO[ano] && questao.co_prova === CODIGO_AZUL_POR_ANO[ano][questao.area])
+    .forEach((questao) => {
+      const idioma = idiomas.get(questao.co_item) ?? 'geral'
+      const azul = questoesAzul.find((q) => q.dia === questao.dia && q.posicao === questao.posicao && q.idioma === idioma)
+      if (azul) azulPorCoItem.set(questao.co_item, azul)
+    })
+
+  // Uma barra por linha da cor: palavras do Azul do mesmo co_item, na posição da cor
+  return caracteristicas
+    .filter((questao) => codigosDaCor.has(questao.co_prova))
+    .map((questao) => {
+      const azul = azulPorCoItem.get(questao.co_item)
+      if (!azul) return null
+      return { ...azul, dia: questao.dia, posicao: questao.posicao, rotulo: `Q${questao.posicao}`, area: questao.area }
+    })
+    .filter((questao) => questao !== null)
+}
+
+// Anos incluídos no projeto (2021 excluído por falhas na extração, como em metricas_tempo.py)
+const ANOS_PALAVRAS_QUESTOES = new Set([2020, 2022, 2023, 2024, 2025])
+
+// Retorna a quantidade de palavras do enunciado de cada questão de um ano (ambos os dias)
+app.get('/api/metricas/palavras-questoes', (req, res) => {
+  try {
+    const ano = Number(req.query.ano)
+    if (!Number.isInteger(ano)) {
+      return res.status(400).json({ error: 'Parâmetro "ano" é obrigatório' })
+    }
+
+    // Sem o parâmetro cor, usa o Azul, como antes
+    const cor = req.query.cor ?? 'Azul'
+    const areas = Object.keys(CODIGO_AZUL_POR_ANO[ano] ?? {})
+    if (!ANOS_PALAVRAS_QUESTOES.has(ano) || areas.some((area) => codigoDaCor(ano, area, cor) === null)) {
+      return res.status(400).json({ error: `Cor "${cor}" não existe no ano ${ano}` })
+    }
+
+    // Texto da questão de cada posição da cor: o mesmo co_item existe no Azul em outra posição, então pega as palavras do Azul
+    const questoesAzul = carregarPalavrasQuestoes(ano)
+    const questoesDaCor = cor === 'Azul' ? questoesAzul : questoesDaCorPorCoItem(ano, cor, questoesAzul)
+
+    const questoes = questoesDaCor
+      .slice()
+      .sort((a, b) => a.dia - b.dia || a.posicao - b.posicao || a.idioma.localeCompare(b.idioma))
+
+    if (questoes.length === 0) {
+      return res.status(404).json({ error: `Sem dados para o ano ${ano}` })
+    }
+
+    res.json({
+      ano,
+      cor,
+      total_questoes: questoes.length,
+      questoes
+    })
+  } catch (error) {
+    console.error('Erro ao carregar quantidade de palavras das questões:', error)
+    res.status(500).json({ error: error.message })
+  }
+})
+
+// Correlações de Spearman entre caracteres da questão e % de acerto.
+// CSV gerado por codigo/analise/metricas_tempo.py. Uma linha por área e ano (20 testes).
+const ANALISE_IMPACTO_CSV = path.join(__dirname, '../../../outputs/metricas/tempo/analise_impacto_desempenho.csv')
+const TIPO_CORRELACAO_CARACTERES = 'TIPO_1_caracteres_questao_vs_acerto'
+let correlacoesTempoCache = null
+
+// Converte campo vazio do CSV em null; senão em número
+function numeroOuNulo(valor) {
+  return valor === undefined || valor === '' ? null : Number(valor)
+}
+
+// Separa uma linha CSV respeitando campos entre aspas (ex.: "r=0.785, p=0.0000, n=20")
+function separarLinhaCsv(linha) {
+  const colunas = []
+  let atual = ''
+  let entreAspas = false
+
+  for (const caractere of linha) {
+    if (caractere === '"') {
+      entreAspas = !entreAspas
+    } else if (caractere === ',' && !entreAspas) {
+      colunas.push(atual)
+      atual = ''
+    } else {
+      atual += caractere
+    }
+  }
+  colunas.push(atual)
+  return colunas
+}
+
+// Carrega o CSV uma única vez. Mantém só a análise de caracteres (tipo 1).
+function carregarCorrelacoesTempo() {
+  if (correlacoesTempoCache) {
+    return correlacoesTempoCache
+  }
+
+  const linhas = fs.readFileSync(ANALISE_IMPACTO_CSV, 'utf-8').trim().split(/\r?\n/)
+  const cabecalho = separarLinhaCsv(linhas.shift())
+  const indice = Object.fromEntries(cabecalho.map((nome, i) => [nome, i]))
+
+  correlacoesTempoCache = linhas
+    .map(separarLinhaCsv)
+    .filter((colunas) => colunas[indice.tipo_analise] === TIPO_CORRELACAO_CARACTERES)
+    .map((colunas) => ({
+      area: colunas[indice.area],
+      ano: numeroOuNulo(colunas[indice.ano]),
+      r: Number(colunas[indice.coeficiente_r]),
+      p: Number(colunas[indice.p_value]),
+      n: Number(colunas[indice.quantidade_pares])
+    }))
+
+  return correlacoesTempoCache
+}
+
+// Retorna as correlações de caracteres da questão com o acerto (uma célula por área e ano)
+app.get('/api/metricas/correlacoes-tempo', (req, res) => {
+  try {
+    res.json({ celulas: carregarCorrelacoesTempo() })
+  } catch (error) {
+    console.error('Erro ao carregar correlações de tempo:', error)
+    res.status(500).json({ error: error.message })
+  }
+})
+
+// Correlação de caracteres × acerto por nível de dificuldade (fácil, média, difícil)
+const ANALISE_DIFICULDADE_CSV = path.join(__dirname, '../../../outputs/metricas/tempo/analise_correlacao_dificuldade.csv')
+const TIPO_CORRELACAO_DIFICULDADE = 'TIPO_2_caracteres_questao_vs_acerto_por_dificuldade'
+const TIPO_CORRELACAO_DIFICULDADE_ANO_AREA = 'TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade'
+let correlacoesDificuldadeCache = null
+
+function carregarCorrelacoesDificuldade() {
+  if (correlacoesDificuldadeCache) {
+    return correlacoesDificuldadeCache
+  }
+
+  const linhas = fs.readFileSync(ANALISE_DIFICULDADE_CSV, 'utf-8').trim().split(/\r?\n/)
+  const cabecalho = separarLinhaCsv(linhas.shift())
+  const indice = Object.fromEntries(cabecalho.map((nome, i) => [nome, i]))
+  const registros = linhas.map(separarLinhaCsv)
+
+  // Uma barra por nível (agregado de todos os anos e áreas)
+  const niveis = registros
+    .filter((colunas) => colunas[indice.tipo_analise] === TIPO_CORRELACAO_DIFICULDADE)
+    .map((colunas) => ({
+      dificuldade: colunas[indice.dificuldade],
+      r: Number(colunas[indice.coeficiente_r]),
+      p: Number(colunas[indice.p_value]),
+      n: Number(colunas[indice.quantidade_pares])
+    }))
+
+  // Uma célula por ano × área × nível (mapa de calor)
+  const celulas = registros
+    .filter((colunas) => colunas[indice.tipo_analise] === TIPO_CORRELACAO_DIFICULDADE_ANO_AREA)
+    .map((colunas) => ({
+      ano: Number(colunas[indice.ano]),
+      area: colunas[indice.area],
+      dificuldade: colunas[indice.dificuldade],
+      r: Number(colunas[indice.coeficiente_r]),
+      p: Number(colunas[indice.p_value]),
+      n: Number(colunas[indice.quantidade_pares])
+    }))
+
+  correlacoesDificuldadeCache = { niveis, celulas }
+  return correlacoesDificuldadeCache
+}
+
+// Retorna a correlação de caracteres × acerto por dificuldade (barras por nível e células ano × área × nível)
+app.get('/api/metricas/correlacoes-dificuldade', (req, res) => {
+  try {
+    res.json(carregarCorrelacoesDificuldade())
+  } catch (error) {
+    console.error('Erro ao carregar correlações por dificuldade:', error)
+    res.status(500).json({ error: error.message })
+  }
+})
+
+// Correlação por dificuldade com filtros de dia e área (uma linha por nível e combinação de filtro)
+const ANALISE_DIFICULDADE_FILTROS_CSV = path.join(__dirname, '../../../outputs/metricas/tempo/retornoMVP_analise_correlacao_dificuldade_filtros.csv')
+const TIPO_CORRELACAO_DIFICULDADE_FILTROS = 'TIPO_4_caracteres_questao_vs_acerto_filtro_dia_area_dificuldade'
+let correlacoesDificuldadeFiltrosCache = null
+
+function carregarCorrelacoesDificuldadeFiltros() {
+  if (correlacoesDificuldadeFiltrosCache) {
+    return correlacoesDificuldadeFiltrosCache
+  }
+
+  const linhas = fs.readFileSync(ANALISE_DIFICULDADE_FILTROS_CSV, 'utf-8').trim().split(/\r?\n/)
+  const cabecalho = separarLinhaCsv(linhas.shift())
+  const indice = Object.fromEntries(cabecalho.map((nome, i) => [nome, i]))
+
+  correlacoesDificuldadeFiltrosCache = linhas
+    .map(separarLinhaCsv)
+    .filter((colunas) => colunas[indice.tipo_analise] === TIPO_CORRELACAO_DIFICULDADE_FILTROS)
+    .map((colunas) => ({
+      ano: Number(colunas[indice.ano]),
+      dia: colunas[indice.dia],
+      areas: colunas[indice.areas].split(';'),
+      dificuldade: colunas[indice.dificuldade],
+      r: Number(colunas[indice.coeficiente_r]),
+      p: Number(colunas[indice.p_value]),
+      n: Number(colunas[indice.quantidade_pares])
+    }))
+
+  return correlacoesDificuldadeFiltrosCache
+}
+
+// Linhas de correlação por dificuldade de um ano (um registro por nível e combinação de dia × áreas)
+app.get('/api/metricas/correlacoes-dificuldade-filtros', (req, res) => {
+  const ano = Number(req.query.ano)
+  if (!Number.isInteger(ano)) {
+    return res.status(400).json({ error: 'Informe o ano (parâmetro ano)' })
+  }
+
+  try {
+    const linhas = carregarCorrelacoesDificuldadeFiltros().filter((linha) => linha.ano === ano)
+    res.json({ linhas })
+  } catch (error) {
+    console.error('Erro ao carregar correlações por dificuldade com filtros:', error)
+    res.status(500).json({ error: error.message })
+  }
+})
+
+// Acerto médio por metade de caracteres (menos = <= mediana do nível; mais = > mediana)
+const ANALISE_METADES_CSV = path.join(__dirname, '../../../outputs/metricas/tempo/retornoMVP_analise_metades_caracteres_filtros.csv')
+const TIPO_METADES_CARACTERES = 'TIPO_5_acerto_metades_caracteres_filtro_dia_area_dificuldade'
+let metadesCaracteresCache = null
+
+function carregarMetadesCaracteres() {
+  if (metadesCaracteresCache) {
+    return metadesCaracteresCache
+  }
+
+  const linhas = fs.readFileSync(ANALISE_METADES_CSV, 'utf-8').trim().split(/\r?\n/)
+  const cabecalho = separarLinhaCsv(linhas.shift())
+  const indice = Object.fromEntries(cabecalho.map((nome, i) => [nome, i]))
+
+  metadesCaracteresCache = linhas
+    .map(separarLinhaCsv)
+    .filter((colunas) => colunas[indice.tipo_analise] === TIPO_METADES_CARACTERES)
+    .map((colunas) => ({
+      ano: Number(colunas[indice.ano]),
+      dia: colunas[indice.dia],
+      areas: colunas[indice.areas].split(';'),
+      dificuldade: colunas[indice.dificuldade],
+      metade: colunas[indice.metade],
+      mediana: Number(colunas[indice.mediana_caracteres]),
+      caracteresMedio: Number(colunas[indice.caracteres_medio]),
+      acertoMedio: Number(colunas[indice.acerto_medio]),
+      quantidadeItens: Number(colunas[indice.quantidade_itens])
+    }))
+
+  return metadesCaracteresCache
+}
+
+// Linhas de acerto por metade de caracteres de um ano (um registro por nível, metade e combinação de dia × áreas)
+app.get('/api/metricas/metades-caracteres', (req, res) => {
+  const ano = Number(req.query.ano)
+  if (!Number.isInteger(ano)) {
+    return res.status(400).json({ error: 'Informe o ano (parâmetro ano)' })
+  }
+
+  try {
+    const linhas = carregarMetadesCaracteres().filter((linha) => linha.ano === ano)
+    res.json({ linhas })
+  } catch (error) {
+    console.error('Erro ao carregar acerto por metade de caracteres:', error)
+    res.status(500).json({ error: error.message })
+  }
+})
+
+// ====grafico dispersao itens - rota /api/metricas/dispersao-itens (pontos por item e retas com IC 95%)
+const ANALISE_DISPERSAO_PONTOS_CSV = path.join(__dirname, '../../../outputs/metricas/tempo/retornoMVP_dispersao_itens.csv')
+const ANALISE_DISPERSAO_RETAS_CSV = path.join(__dirname, '../../../outputs/metricas/tempo/retornoMVP_dispersao_itens_retas.csv')
+const TIPO_DISPERSAO_RETA = 'TIPO_6_dispersao_itens_reta_filtro_dia_area'
+let dispersaoItensCache = null
+
+// Lê um CSV com cabeçalho e devolve um objeto por linha (valores como texto)
+function lerCsvComCabecalho(caminho) {
+  const linhas = fs.readFileSync(caminho, 'utf-8').trim().split(/\r?\n/)
+  const cabecalho = separarLinhaCsv(linhas.shift())
+  return linhas.map((linha) => {
+    const colunas = separarLinhaCsv(linha)
+    return Object.fromEntries(cabecalho.map((nome, i) => [nome, colunas[i]]))
+  })
+}
+
+function carregarDispersaoItens() {
+  if (dispersaoItensCache) {
+    return dispersaoItensCache
+  }
+
+  const pontos = lerCsvComCabecalho(ANALISE_DISPERSAO_PONTOS_CSV).map((linha) => ({
+    ano: Number(linha.ano),
+    area: linha.area,
+    coItem: linha.co_item,
+    dificuldade: linha.dificuldade,
+    caracteres: Number(linha.caracteres),
+    acerto: Number(linha.acerto)
+  }))
+
+  const retas = lerCsvComCabecalho(ANALISE_DISPERSAO_RETAS_CSV)
+    .filter((linha) => linha.tipo_analise === TIPO_DISPERSAO_RETA)
+    .map((linha) => ({
+      ano: Number(linha.ano),
+      dia: linha.dia,
+      areas: linha.areas.split(';'),
+      caracteres: Number(linha.caracteres),
+      acertoPrevisto: Number(linha.acerto_previsto),
+      icInferior: Number(linha.ic_inferior),
+      icSuperior: Number(linha.ic_superior),
+      inclinacao: Number(linha.inclinacao),
+      r: Number(linha.r_pearson),
+      p: Number(linha.p_valor_t),
+      quantidadeItens: Number(linha.quantidade_itens)
+    }))
+
+  dispersaoItensCache = { pontos, retas }
+  return dispersaoItensCache
+}
+
+// Pontos (um por item) e linhas da reta com IC 95% de um ano
+app.get('/api/metricas/dispersao-itens', (req, res) => {
+  const ano = Number(req.query.ano)
+  if (!Number.isInteger(ano)) {
+    return res.status(400).json({ error: 'Informe o ano (parâmetro ano)' })
+  }
+
+  try {
+    const { pontos, retas } = carregarDispersaoItens()
+    res.json({
+      pontos: pontos.filter((ponto) => ponto.ano === ano),
+      retas: retas.filter((reta) => reta.ano === ano)
+    })
+  } catch (error) {
+    console.error('Erro ao carregar dispersão de itens:', error)
+    res.status(500).json({ error: error.message })
+  }
+})
+// ====fim grafico dispersao itens
 
 // Tratamento de erro 404
 app.use((req, res) => {

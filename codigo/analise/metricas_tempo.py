@@ -1,57 +1,42 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Métricas de tempo de leitura e correlação entre caracteres da questão e acerto (ENEM 2020-2025, sem 2021).
 
 RODAR: python3 /Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem/codigo/analise/metricas_tempo.py
 
+SAÍDAS GERADAS:
+  1. resumo_metricas_prova.csv: minutos de leitura por prova (descritivo, sem correlação).
+  2. metricas_caracteristicas_questao.csv: caracteres e tempo de leitura por questão e caderno.
+  3. analise_impacto_desempenho.csv: correlação de Spearman entre caracteres da questão e
+     percentual de acerto, por ano × área (20 testes).
 
-✓ MÉTRICA 1: TEMPO DE LEITURA (CATEGORIA 1 vs CATEGORIA 2)
-  CATEGORIA 1: Apenas questões (enunciado + 5 alternativas)
-  CATEGORIA 2: Caderno completo (questões + textos introdutórios/explicativos)
-  Cálculo: tempo_leitura_minutos = Σ(caracteres) / 1100 caracteres_por_minuto
+TEMPO DE LEITURA:
+  tempo_leitura_minutos = caracteres / 1100 (caracteres por minuto).
+  Categoria 1: questões (enunciado + alternativas). Categoria 2: questões + textos introdutórios.
 
-✓ MÉTRICA 2: TEMPO DE RESOLUÇÃO DISPONÍVEL
-  Fórmula: tempo_resolucao_minutos = tempo_disponivel - tempo_leitura_minutos
-  Dia 1: 255 minutos (5h30min - 1h15min para redação)
-  Dia 2: 300 minutos (5h)
-
-
-✓ MÉTRICA 4: CARACTERÍSTICAS ESTRUTURAIS (POR QUESTÃO)
-  - Quantidade de caracteres: enunciado + 5 alternativas
-  - Quantidade de palavras: contagem de tokens
-  - Posição na prova: 1-45
-  - Tempo de leitura individual: caracteres / 1100
-
-✓ MÉTRICA 5: DESEMPENHO
-  - Porcentagem de acerto: percentual (%)
-  - Quantidade de respondentes: candidatos que fizeram questão
-  - Classificação de dificuldade: fácil/média/difícil
-
-✓ 4 TIPOS DE ANÁLISE DE CORRELAÇÃO (SPEARMAN - correlação por ranks não-paramétrica):
-  TIPO 1: tempo_leitura_categoria1 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
-  TIPO 2: tempo_leitura_categoria2 vs porcentagem_acerto (por prova, POR ÁREA)  ESTRATIFICADO
-  TIPO 4: quantidade_caracteres vs porcentagem_acerto (por questão, estratificado por dificuldade)
-   - Dia 1: Carrega JSON Dia 1, depois filtra LC (Q1-45) ou CH (Q46-90)
-   - Dia 2: Carrega JSON Dia 2, depois filtra CN (Q91-135) ou MT (Q136-180)
-   - Resultado: CH ≠ LC (características diferentes), CN ≠ MT (características diferentes)
+CORRELAÇÃO (SPEARMAN), UMA LINHA POR ANO × ÁREA:
+  Unidade = item (co_item). x = caracteres da questão (enunciado + alternativas).
+  y = acerto do item = total de acertos / total de respondentes dos 4 cadernos.
+  p por sorteio (20 mil permutações, semente 42); p_value ajustado por Holm sobre os 20 testes.
+  Cada linha traz coeficiente_r, p_value (Holm), p_value_bruto e interpretacao (rótulo de |r|).
+  Não há correlação separada para o tempo: o tempo é caracteres / 1100 / tempo disponível do dia,
+  então a ordem dos itens é a mesma e o resultado seria idêntico ao de caracteres.
+  Para "o tempo é suficiente?", ver os minutos por prova em resumo_metricas_prova.csv.
 
 FILTROS APLICADOS:
   ✓ Período: 2020-2025, excluindo 2021 (conforme solicitado)
   ✓ Sem filtro de estado (coluna não disponível no CSV)
   ✓ Considera TODAS as cores/versões de prova (CSV já contém dados integrados)
-
-SAÍDAS GERADAS:
-  1. resumo_metricas_prova.csv 
-  2. metricas_caracteristicas_questao.csv 
-  3. analise_correlacoes_resultado.csv 
 """
 
 
+import itertools
 import json
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple, cast, Union
+from typing import Any, Dict, List, Optional, Tuple, cast
 from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
@@ -60,14 +45,13 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 # Importar as funções já corretas do analyze_reading_time.py (pacote a partir da raiz do repo)
 from codigo.analise.analyze_reading_time import (
-    contar_caracteres,
     tempo_leitura_minutos,
     analisar_questao,
     analisar_textos_introdutorios,
     TEMPO_DISPONIVEL_MINUTOS_POR_DIA
 )
 
-REPO_ROOT = Path("/Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem")
+REPO_ROOT = Path(__file__).resolve().parents[2]
 DADOS_JSON_DIR = REPO_ROOT / "dados" / "enems_json_md"
 DESEMPENHO_CSV = REPO_ROOT / "outputs" / "ordem" / "desempenho_questoes_por_prova.csv"
 
@@ -90,7 +74,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # Anos incluídos na análise
 ANOS_PARA_ANALISE = [2020, 2022, 2023, 2024, 2025]  # Excluindo 2021
 
-# Nota: contar_caracteres e tempo_leitura_minutos estão importadas de analyze_reading_time.py
+# Nota: tempo_leitura_minutos e analisar_questao são importadas de analyze_reading_time.py
 
 def calcular_tempo_resolucao(tempo_leitura_min: float, dia: int) -> float:
     """MÉTRICA: T_resolução = T_disponível - T_leitura"""
@@ -111,60 +95,6 @@ def calcular_percentual_tempo_disponivel_resolucao(tempo_resolucao_min: float, d
     tempo_disponivel = TEMPO_DISPONIVEL_MINUTOS_POR_DIA[dia]
     return (tempo_resolucao_min / tempo_disponivel) * 100
 
-def calcular_percentual_tempo_gasto_leitura(tempo_leitura_min: float, dia: int) -> float:
-    """MÉTRICA: Percentual de tempo GASTO em leitura
-     Calcula que PORCENTAGEM do tempo total é consumida com leitura.
-    
-    Fórmula: (tempo_leitura / tempo_disponível) × 100
-    
-    Resultado: 0% a 100%
-    - 5% = apenas 5% do tempo em leitura (BAIXA PRESSÃO) BOM
-    - 15% = 15% do tempo em leitura (MÉDIA PRESSÃO)
-    - 40% = 40% do tempo em leitura (ALTA PRESSÃO) RUIM
-    
-    Hipótese: MAIOR % tempo em leitura → PIOR desempenho
-    Correlação esperada com acerto: r < -0.6 (NEGATIVA FORTE)
-    """
-    tempo_disponivel = TEMPO_DISPONIVEL_MINUTOS_POR_DIA[dia]
-    return (tempo_leitura_min / tempo_disponivel) * 100
-
-def extrair_metricas_questao_json(questao_json: Dict[str, Any]) -> Dict[str, int]:
-    """Extrai CARACTERES de UMA questão (CATEGORIA 1: Enunciado + 5 Alternativas)
-    
-    Retorna: dict com 'caracteres' (int)
-     Concatena enunciado + LETRAS + textos das 5 alternativas
-    
-    Estrutura JSON:
-    ├─ "texto": "Enunciado da questão..."  ← Campo enunciado
-    └─ "alternativas": [
-         {"letra": "A", "texto": "Alternativa A..."},
-         {"letra": "B", "texto": "Alternativa B..."},
-         ...
-       ]  ← Campo alternativas separadas
-    
-    Fórmula CATEGORIA_1:
-    caracteres_total = len(texto_enunciado) + Σ(len(letra) + len(texto_alternativa))
-    
-    Apenas caracteres são necessários porque a velocidade de leitura
-    é calculada em caracteres/minuto (não em palavras/minuto).
-    """
-    # 1. Pega o enunciado
-    texto_enunciado = questao_json.get("texto", "")
-    
-    # 2. Pega as alternativas (LETRA + TEXTO) e concatena
-    alternativas = questao_json.get("alternativas", [])
-    texto_alternativas = ""
-    for alt in alternativas:
-        texto_alternativas += alt.get("letra", "")      # Inclui LETRA (A, B, C, D, E)
-        texto_alternativas += " " + alt.get("texto", "")
-    
-    # 3. Junta enunciado + alternativas
-    texto_completo = texto_enunciado + " " + texto_alternativas
-    
-    return {
-        'caracteres': contar_caracteres(texto_completo)
-    }
-
 def _extrair_questoes_categoria_1(dados: Dict[str, Any], dia: int, area: str) -> Tuple[Any, ...]:
     """Extrai características das questões (CATEGORIA 1 = Enunciado + 5 Alternativas).
     
@@ -179,7 +109,7 @@ def _extrair_questoes_categoria_1(dados: Dict[str, Any], dia: int, area: str) ->
     
     Reutiliza analisar_questao() de analyze_reading_time.py que:
     Concatena ENUNCIADO + LETRAS + TEXTOS das alternativas
-    Usa contar_caracteres() que exclui espaços/tabs/quebras
+    Os caracteres são calculados por analisar_questao()
     Calcula tempo_leitura_min corretamente
     """
     # range de números de questão no JSON (numeração absoluta = posição na prova):
@@ -410,15 +340,17 @@ def carregar_desempenho_csv() -> pd.DataFrame:
     if linhas_removidas > 0:
         print(f"✓ Após filtrar posições por área: {len(df_filtrado)} linhas (-{linhas_removidas})")
     
-    colunas_criticas = ['co_item', 'posicao_prova', 'parametro_b_tri',
+    # parametro_b_tri não é obrigatório: a correlação usa só caracteres e acerto.
+    # Questões sem b (o ENEM não calculou) permanecem na análise.
+    colunas_criticas = ['co_item', 'posicao_prova',
                        'n_respostas', 'n_acertos', 'percentual_acertos']
     df_filtrado = df_filtrado.dropna(subset=colunas_criticas)
     print(f"✓ Após remover NULLs: {len(df_filtrado)} linhas")
     
     if 'dificuldade_tri' not in df_filtrado.columns:
-        # Nulos de parametro_b_tri já foram removidos por dropna acima,
-        # então aqui b_tri nunca é nulo.
+        # Sem b (não calculado pelo ENEM), a dificuldade fica vazia.
         def classificar_dificuldade(b_tri):
+            if pd.isna(b_tri): return None
             if b_tri < 0: return 'facil'
             elif b_tri < 1.5: return 'media'
             else: return 'dificil'
@@ -533,7 +465,7 @@ def combinar_json_e_desempenho(jsons_dict: Dict[Any, Any], df_desempenho: pd.Dat
 
 
 def gerar_resumo_prova(df_combinado: pd.DataFrame) -> pd.DataFrame:
-    """SAÍDA 1: Resumo por Prova (~40 linhas)
+    """SAÍDA 1: Resumo por Prova (40 provas × 4 cores = 80 linhas)
     
     Usa MÉDIA PONDERADA para porcentagem_acerto_questao
     Ponderação: número de respondentes de cada questão
@@ -597,14 +529,14 @@ def gerar_resumo_prova(df_combinado: pd.DataFrame) -> pd.DataFrame:
     return agrupado
 
 def gerar_metricas_questao(df_combinado: pd.DataFrame) -> pd.DataFrame:
-    """SAÍDA 2: Métricas por Questão (~1800 linhas)
+    """SAÍDA 2: Métricas por Questão (1 linha por caderno: 908 itens × 4 cores = 3632 linhas)
     
     Usa caracteres INDIVIDUAIS de cada questão, não o total da prova
     """
     df_questoes = cast(pd.DataFrame, df_combinado[[
-        'ano', 'dia', 'area', 'co_prova', 'posicao',
+        'ano', 'dia', 'area', 'co_prova', 'co_item', 'posicao',
         'caracteres_questao_individual',
-        'porcentagem_acerto_questao', 'dificuldade_tri'
+        'porcentagem_acerto_questao', 'n_acertos', 'n_respostas', 'dificuldade_tri'
     ]].copy())
     
     df_questoes = cast(pd.DataFrame, df_questoes.rename(columns={
@@ -618,147 +550,418 @@ def gerar_metricas_questao(df_combinado: pd.DataFrame) -> pd.DataFrame:
     print(f"✓ Métricas por Questão: {len(df_questoes)} linhas")
     return df_questoes
 
-def calcular_correlacao_spearman(x: List[float], y: List[float]) -> Dict[str, Any]:
-    """Calcula correlação de Spearman entre X e Y (correlação não-paramétrica por ranks)"""
-    dados_validos = [(xi, yi) for xi, yi in zip(x, y)
-                    if pd.notna(xi) and pd.notna(yi) and
-                    not np.isinf(xi) and not np.isinf(yi)]
-    
-    if len(dados_validos) < 3:
-        return {'coeficiente_correlacao_spearman': np.nan, 'valor_p_significancia_estatistica': np.nan, 'quantidade_pares': len(dados_validos),
-                'interpretacao': 'Dados insuficientes'}
-    
-    x_v = [d[0] for d in dados_validos]
-    y_v = [d[1] for d in dados_validos]
-    
-    try:
-        result = stats.spearmanr(x_v, y_v)
-        # Usar indexação de tupla - SpearmanRResult suporta __getitem__
-        rho = float(cast(Any, result[0]))
-        p = float(cast(Any, result[1]))
-    except (ValueError, ZeroDivisionError, RuntimeError) as e:
-        print(f" Erro ao calcular correlação: {e}")
-        return {'coeficiente_correlacao_spearman': np.nan, 'valor_p_significancia_estatistica': np.nan, 'quantidade_pares': len(dados_validos),
-                'interpretacao': 'Erro no cálculo'}
-    
-    abs_rho = abs(rho)
-    # Classificação conforme critérios de Guilford/Mukaka (estatística convencional)
-    if abs_rho < 0.20: intens = "muito fraca / desprezível"
-    elif abs_rho < 0.40: intens = "fraca"
-    elif abs_rho < 0.70: intens = "moderada"
-    elif abs_rho < 0.90: intens = "forte"
-    else: intens = "muito forte"
-    
-    direcao = "positiva" if rho > 0 else "negativa"
-    signif = "sig(p<0.05)" if p < 0.05 else "n_sig"
-    
-    return {
-        'coeficiente_correlacao_spearman': rho, 'valor_p_significancia_estatistica': p, 'quantidade_pares': len(dados_validos),
-        'interpretacao': f"{intens} {direcao}, {signif}"
-    }
+def ajustar_holm(p_values: List[float]) -> List[float]:
+    """Correção de Holm para múltiplos testes (controla o erro da família de testes)."""
+    if any(pd.isna(p) for p in p_values):
+        raise ValueError("p-values ausentes na correção de Holm")
+    m = len(p_values)
+    ordem = sorted(range(m), key=lambda i: p_values[i])
+    ajustados = [0.0] * m
+    maximo = 0.0
+    for posicao, i in enumerate(ordem):
+        maximo = max(maximo, min(1.0, (m - posicao) * p_values[i]))
+        ajustados[i] = maximo
+    return ajustados
 
-def gerar_correlacoes_resultado(df_questoes: pd.DataFrame, df_provas: pd.DataFrame) -> pd.DataFrame:
-    """SAÍDA 3: Correlações Resultado com estratificação por ÁREA (controla confundidor)"""
+
+def agregar_itens(df_questoes: pd.DataFrame) -> pd.DataFrame:
+    """Uma linha por item (ano, dia, área, co_item).
+
+    Os 4 cadernos do mesmo item têm o mesmo texto. O acerto do item é o total de
+    acertos dividido pelo total de respondentes dos cadernos (média ponderada).
+    """
+    df_itens = cast(pd.DataFrame, df_questoes.groupby(['ano', 'dia', 'area', 'co_item'], as_index=False).agg(
+        caracteres=('caracteres', 'first'),
+        caracteres_distintos=('caracteres', 'nunique'),
+        n_acertos=('n_acertos', 'sum'),
+        n_respostas=('n_respostas', 'sum')
+    ))
+    if (df_itens['caracteres_distintos'] > 1).any():
+        raise ValueError("Caracteres diferentes entre cadernos do mesmo item")
+    df_itens['acerto'] = df_itens['n_acertos'] / df_itens['n_respostas'] * 100
+    print(f"✓ Itens únicos: {len(df_itens)} (a partir de {len(df_questoes)} linhas de caderno)")
+    return df_itens.drop(columns=['caracteres_distintos'])
+
+
+def _p_sorteio(x: List[float], y: List[float], n_sim: int = 20000, semente: int = 42) -> Tuple[float, float]:
+    """Spearman e p bilateral por sorteio (permutação de y), para amostras de dezenas de itens.
+
+    Com 41 a 50 itens por área-ano, todas as permutações são inviáveis, então sorteia
+    n_sim permutações com semente fixa. p = (extremos + 1) / (n_sim + 1).
+    """
+    x_arr = np.asarray(x, dtype=float)
+    y_arr = np.asarray(y, dtype=float)
+    rho_obs = float(cast(Any, stats.spearmanr(x_arr, y_arr)).statistic)
+    ranks_x = stats.rankdata(x_arr)
+    ranks_y = stats.rankdata(y_arr)
+    rng = np.random.default_rng(semente)
+    extremos = 0
+    for _ in range(n_sim):
+        rho = float(np.corrcoef(ranks_x, rng.permutation(ranks_y))[0, 1])
+        if abs(rho) >= abs(rho_obs) - 1e-12:
+            extremos += 1
+    return rho_obs, (extremos + 1) / (n_sim + 1)
+
+
+def gerar_correlacoes_resultado(df_itens: pd.DataFrame) -> pd.DataFrame:
+    """SAÍDA 3: correlação entre caracteres da questão e acerto, por ano × área.
+
+    Unidade = item (co_item), com o acerto médio entre as cores. Cada ano × área
+    (5 anos × 4 áreas = 20 testes) usa todos os itens da área naquele ano.
+    p por sorteio (permutação); p ajustado por Holm sobre os 20 testes desta análise.
+    """
+    testes = []
+    for ano in sorted(df_itens['ano'].unique()):
+        for area in ['CH', 'LC', 'CN', 'MT']:
+            df_area = cast(pd.DataFrame, df_itens[(df_itens['ano'] == ano) & (df_itens['area'] == area)])
+            rho, p = _p_sorteio(df_area['caracteres'].tolist(), df_area['acerto'].tolist())
+            testes.append((int(ano), area, rho, p, len(df_area)))
+
+    p_holm = ajustar_holm([p for _, _, _, p, _ in testes])
+
     correlacoes = []
-    
-    # TIPO 1 ESTRATIFICADO POR ÁREA (controla confundidor ÁREA)
-    for area in ['CH', 'LC', 'CN', 'MT']:
-        df_area = cast(pd.DataFrame, df_provas[df_provas['area'] == area])
-        if len(df_area) < 3:
-            continue
-        
-        r = calcular_correlacao_spearman(df_area['tempo_leitura_cat1_min'].tolist(),
-                                        df_area['porcentagem_acerto_media_prova'].tolist())
+    for (ano, area, rho, p_bruto, n), p_ajustado in zip(testes, p_holm):
         correlacoes.append({
-            'tipo_analise_correlacao': 'TIPO_1_tempo_leitura_categoria1_vs_desempenho',
-            'nivel': 'por_prova', 'dificuldade': 'TODAS', 'area': area,
-            'coeficiente_correlacao_spearman': r['coeficiente_correlacao_spearman'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
-            'interpretacao': r['interpretacao']
+            'tipo_analise_correlacao': 'TIPO_1_caracteres_questao_vs_acerto',
+            'dificuldade': 'TODAS', 'area': area, 'ano': ano,
+            'coeficiente_correlacao_spearman': rho,
+            'valor_p_significancia_estatistica': p_ajustado,
+            'valor_p_bruto': p_bruto,
+            'quantidade_pares': n,
+            'interpretacao': _intensidade_correlacao(rho)
         })
-    
-    # TIPO 2 ESTRATIFICADO POR ÁREA (controla confundidor ÁREA)
-    for area in ['CH', 'LC', 'CN', 'MT']:
-        df_area = cast(pd.DataFrame, df_provas[df_provas['area'] == area])
-        if len(df_area) < 3:
-            continue
-        
-        r = calcular_correlacao_spearman(df_area['tempo_leitura_cat2_min'].tolist(),
-                                        df_area['porcentagem_acerto_media_prova'].tolist())
-        correlacoes.append({
-            'tipo_analise_correlacao': 'TIPO_2_tempo_leitura_categoria2_vs_desempenho',
-            'nivel': 'por_prova', 'dificuldade': 'TODAS', 'area': area,
-            'coeficiente_correlacao_spearman': r['coeficiente_correlacao_spearman'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
-            'interpretacao': r['interpretacao']
-        })
-    
-    # TIPO 4 & 5: Estratificado por dificuldade
-    for dif in ['facil', 'media', 'dificil']:
-        df_d = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'] == dif])
-        if len(df_d) < 3:
-            continue
-        
-        # TIPO 4: Caracteres vs Taxa_acerto
-        # (Caracteres é proxy para complexidade da questão que impacta tempo de leitura)
-        r = calcular_correlacao_spearman(df_d['caracteres'].tolist(),
-                                       df_d['porcentagem_acerto_questao'].tolist())
-        correlacoes.append({
-            'tipo_analise_correlacao': 'TIPO_4_quantidade_caracteres_vs_desempenho',
-            'nivel': 'por_questao', 'dificuldade': dif, 'area': 'TODAS',
-            'coeficiente_correlacao_spearman': r['coeficiente_correlacao_spearman'], 'valor_p_significancia_estatistica': r['valor_p_significancia_estatistica'], 'quantidade_pares': r['quantidade_pares'],
-            'interpretacao': r['interpretacao']
-        })
-    
+
     df_corr = pd.DataFrame(correlacoes)
-    print(f"✓ Correlações calculadas: {len(df_corr)} linhas (com estratificação por ÁREA)")
+    print(f"✓ Correlações por questão calculadas: {len(df_corr)} linhas (ano × área; sorteio; Holm sobre os 20 testes)")
     return df_corr
 
 
-def _is_nan(valor) -> bool:
-    """Verifica se um valor é NaN de forma segura."""
-    if not isinstance(valor, (float, np.floating)):
-        return False
-    try:
-        return np.isnan(valor)
-    except (TypeError, ValueError):
-        return False
 
 
-def _convert_to_type(valor, tipo_esperado):
-    """Converte valor para o tipo esperado."""
-    if tipo_esperado is None:
-        return valor
-    try:
-        return tipo_esperado(valor)
-    except (ValueError, TypeError):
+
+
+
+
+
+
+
+def gerar_correlacoes_por_dificuldade(df_questoes: pd.DataFrame) -> pd.DataFrame:
+    """SAÍDA 4: correlação entre caracteres da questão e acerto, por dificuldade (TRI) e por ano × área.
+
+    Unidade = item (ano, área, co_item). Acerto = total de acertos / total de respondentes dos
+    4 cadernos (mesma regra da SAÍDA 3). Itens sem dificuldade_tri (sem parâmetro b) ficam de fora.
+    Gera 3 linhas por nível (agregado de todos os anos e áreas, Holm sobre 3 testes) e
+    60 linhas ano × área × nível (Holm sobre 60 testes). Mesma escala de cores do mapa geral.
+    """
+    df_com_dificuldade = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'].notna()])
+    df_itens = cast(pd.DataFrame, df_com_dificuldade.groupby(
+        ['ano', 'area', 'co_item', 'dificuldade_tri'], as_index=False
+    ).agg(
+        caracteres=('caracteres', 'first'),
+        n_acertos=('n_acertos', 'sum'),
+        n_respostas=('n_respostas', 'sum')
+    ))
+    df_itens['acerto'] = df_itens['n_acertos'] / df_itens['n_respostas'] * 100
+
+    niveis = ['facil', 'media', 'dificil']
+    linhas = []
+
+    # Agregado por nível (3 testes)
+    testes_nivel = []
+    for nivel in niveis:
+        df_nivel = cast(pd.DataFrame, df_itens[df_itens['dificuldade_tri'] == nivel])
+        rho, p = _p_sorteio(df_nivel['caracteres'].tolist(), df_nivel['acerto'].tolist())
+        testes_nivel.append((nivel, rho, p, len(df_nivel)))
+    p_holm_nivel = ajustar_holm([p for _, _, p, _ in testes_nivel])
+    for (nivel, rho, p_bruto, n), p_ajustado in zip(testes_nivel, p_holm_nivel):
+        linhas.append({
+            'tipo_analise': 'TIPO_2_caracteres_questao_vs_acerto_por_dificuldade',
+            'area': 'TODAS', 'ano': 'TODOS',
+            'dificuldade': nivel,
+            'coeficiente_r': rho,
+            'p_value': p_ajustado,
+            'p_value_bruto': p_bruto,
+            'quantidade_pares': n,
+            'interpretacao': _intensidade_correlacao(rho)
+        })
+
+    # Ano × área × nível (60 testes)
+    testes_celula = []
+    for ano in sorted(df_itens['ano'].unique()):
+        for area in ['CH', 'LC', 'CN', 'MT']:
+            for nivel in niveis:
+                df_c = cast(pd.DataFrame, df_itens[
+                    (df_itens['ano'] == ano) & (df_itens['area'] == area) & (df_itens['dificuldade_tri'] == nivel)
+                ])
+                rho, p = _p_sorteio(df_c['caracteres'].tolist(), df_c['acerto'].tolist())
+                testes_celula.append((int(ano), area, nivel, rho, p, len(df_c)))
+    p_holm_celula = ajustar_holm([p for *_, p, _ in testes_celula])
+    for (ano, area, nivel, rho, p_bruto, n), p_ajustado in zip(testes_celula, p_holm_celula):
+        linhas.append({
+            'tipo_analise': 'TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade',
+            'area': area, 'ano': ano,
+            'dificuldade': nivel,
+            'coeficiente_r': rho,
+            'p_value': p_ajustado,
+            'p_value_bruto': p_bruto,
+            'quantidade_pares': n,
+            'interpretacao': _intensidade_correlacao(rho)
+        })
+
+    df_dif = pd.DataFrame(linhas)
+    arq = OUTPUT_DIR / "analise_correlacao_dificuldade.csv"
+    df_dif.to_csv(arq, index=False, encoding='utf-8')
+    print(f"\n✓ {arq}")
+    print(f"   {len(df_dif)} linhas: 3 por nível (Holm sobre 3) + 60 ano × área × nível (Holm sobre 60)")
+    return df_dif
+
+
+# Filtros do gráfico de colunas (dia e área). Cada área cai em um só dia da prova.
+AREAS_POR_DIA = {1: ['CH', 'LC'], 2: ['CN', 'MT']}
+ORDEM_AREAS = ['CH', 'LC', 'CN', 'MT']
+
+
+def _combinacoes_filtro_dia_area():
+    """Combinações de filtro: dia ('todos', 1 ou 2) × áreas marcadas (ao menos uma).
+
+    Dia 'todos' tem as 15 combinações de 4 áreas; Dia 1 e Dia 2 têm 3 cada (duas áreas por dia).
+    Sem área marcada na tela, o filtro usa todas as áreas do dia escolhido.
+    """
+    combinacoes = []
+    for dia in ['todos', 1, 2]:
+        areas_do_dia = ORDEM_AREAS if dia == 'todos' else AREAS_POR_DIA[dia]
+        for tamanho in range(1, len(areas_do_dia) + 1):
+            for areas in itertools.combinations(areas_do_dia, tamanho):
+                combinacoes.append((dia, list(areas)))
+    return combinacoes
+
+
+def gerar_correlacoes_filtros_dificuldade(df_questoes: pd.DataFrame) -> pd.DataFrame:
+    """SAÍDA 5: correlação por nível de dificuldade para cada ano e cada combinação de dia × áreas.
+
+    Mesma unidade e mesma regra de acerto da SAÍDA 4 (item = ano, área, co_item; 4 cadernos somados).
+    Cada combinação gera 3 linhas (um por nível), com Holm sobre os 3 níveis daquela combinação.
+    Alimenta o gráfico de colunas com filtros de dia e área (uma aba por ano).
+    """
+    df_com_dificuldade = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'].notna()])
+    df_itens = cast(pd.DataFrame, df_com_dificuldade.groupby(
+        ['ano', 'area', 'co_item', 'dificuldade_tri'], as_index=False
+    ).agg(
+        caracteres=('caracteres', 'first'),
+        n_acertos=('n_acertos', 'sum'),
+        n_respostas=('n_respostas', 'sum')
+    ))
+    df_itens['acerto'] = df_itens['n_acertos'] / df_itens['n_respostas'] * 100
+
+    niveis = ['facil', 'media', 'dificil']
+    combinacoes = _combinacoes_filtro_dia_area()
+    linhas = []
+
+    for ano in sorted(df_itens['ano'].unique()):
+        df_ano = cast(pd.DataFrame, df_itens[df_itens['ano'] == ano])
+        for dia, areas in combinacoes:
+            df_filtro = cast(pd.DataFrame, df_ano[df_ano['area'].isin(areas)])
+            testes = []
+            for nivel in niveis:
+                df_nivel = cast(pd.DataFrame, df_filtro[df_filtro['dificuldade_tri'] == nivel])
+                rho, p = _p_sorteio(df_nivel['caracteres'].tolist(), df_nivel['acerto'].tolist())
+                testes.append((nivel, rho, p, len(df_nivel)))
+            p_holm = ajustar_holm([p for _, _, p, _ in testes])
+            for (nivel, rho, p_bruto, n), p_ajustado in zip(testes, p_holm):
+                linhas.append({
+                    'tipo_analise': 'TIPO_4_caracteres_questao_vs_acerto_filtro_dia_area_dificuldade',
+                    'ano': int(ano),
+                    'dia': str(dia),
+                    'areas': ';'.join(areas),
+                    'dificuldade': nivel,
+                    'coeficiente_r': rho,
+                    'p_value': p_ajustado,
+                    'p_value_bruto': p_bruto,
+                    'quantidade_pares': n,
+                    'interpretacao': _intensidade_correlacao(rho)
+                })
+
+    df_filtros = pd.DataFrame(linhas)
+    arq = OUTPUT_DIR / "retornoMVP_analise_correlacao_dificuldade_filtros.csv"
+    df_filtros.to_csv(arq, index=False, encoding='utf-8')
+    print(f"\n✓ {arq}")
+    print(f"   {len(df_filtros)} linhas: {len(combinacoes)} filtros de dia × área por ano, 3 níveis cada (Holm sobre 3 por filtro)")
+    return df_filtros
+
+
+def _resumo_metades_caracteres(df_nivel):
+    """Média de acerto das metades de caracteres (<= mediana e > mediana) de um nível.
+
+    A mediana é calculada dentro do próprio nível e recorte, como no gráfico de referência.
+    Devolve None se não houver itens suficientes para as duas metades.
+    """
+    if len(df_nivel) < 2:
         return None
-
-
-def _extract_from_native(valor, tipo_esperado):
-    """Extrai valor de tipos nativos (int, float)."""
-    if _is_nan(valor):
+    mediana = float(df_nivel['caracteres'].median())
+    menos = df_nivel[df_nivel['caracteres'] <= mediana]
+    mais = df_nivel[df_nivel['caracteres'] > mediana]
+    if len(menos) == 0 or len(mais) == 0:
         return None
-    return _convert_to_type(valor, tipo_esperado)
+    return {
+        'mediana': mediana,
+        'menos': {'acerto': float(menos['acerto'].mean()), 'n': int(len(menos)),
+                  'caracteres_medio': float(menos['caracteres'].mean())},
+        'mais': {'acerto': float(mais['acerto'].mean()), 'n': int(len(mais)),
+                 'caracteres_medio': float(mais['caracteres'].mean())},
+    }
 
 
-def _extract_from_item_method(valor, tipo_esperado):
-    """Extrai valor usando .item() method (numpy scalars, pandas Series)."""
-    try:
-        item_val = valor.item()
-        if _is_nan(item_val):
-            return None
-        return _convert_to_type(item_val, tipo_esperado)
-    except (ValueError, TypeError, AttributeError):
+def gerar_metades_caracteres_filtros(df_questoes: pd.DataFrame) -> pd.DataFrame:
+    """SAÍDA 6: média de acerto das metades de caracteres por nível, para cada ano e combinação de dia × áreas.
+
+    Mesma unidade (item = ano, área, co_item) e mesma regra de acerto das SAÍDAS 4 e 5.
+    Para cada ano, filtro e nível: a mediana de caracteres é calculada dentro do recorte
+    e os itens são divididos em 'menos' (<= mediana) e 'mais' (> mediana).
+    Alimenta o gráfico de comparação da porcentagem de acerto por quantidade de caracteres.
+    """
+    df_com_dificuldade = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'].notna()])
+    df_itens = cast(pd.DataFrame, df_com_dificuldade.groupby(
+        ['ano', 'area', 'co_item', 'dificuldade_tri'], as_index=False
+    ).agg(
+        caracteres=('caracteres', 'first'),
+        n_acertos=('n_acertos', 'sum'),
+        n_respostas=('n_respostas', 'sum')
+    ))
+    df_itens['acerto'] = df_itens['n_acertos'] / df_itens['n_respostas'] * 100
+
+    niveis = ['facil', 'media', 'dificil']
+    combinacoes = _combinacoes_filtro_dia_area()
+    linhas = []
+
+    for ano in sorted(df_itens['ano'].unique()):
+        df_ano = cast(pd.DataFrame, df_itens[df_itens['ano'] == ano])
+        for dia, areas in combinacoes:
+            df_filtro = cast(pd.DataFrame, df_ano[df_ano['area'].isin(areas)])
+            for nivel in niveis:
+                df_nivel = cast(pd.DataFrame, df_filtro[df_filtro['dificuldade_tri'] == nivel])
+                resumo = _resumo_metades_caracteres(df_nivel)
+                if resumo is None:
+                    continue
+                for metade in ['menos', 'mais']:
+                    dados = resumo[metade]
+                    linhas.append({
+                        'tipo_analise': 'TIPO_5_acerto_metades_caracteres_filtro_dia_area_dificuldade',
+                        'ano': int(ano),
+                        'dia': str(dia),
+                        'areas': ';'.join(areas),
+                        'dificuldade': nivel,
+                        'metade': metade,
+                        'mediana_caracteres': resumo['mediana'],
+                        'caracteres_medio': dados['caracteres_medio'],
+                        'acerto_medio': dados['acerto'],
+                        'quantidade_itens': dados['n'],
+                    })
+
+    df_metades = pd.DataFrame(linhas)
+    arq = OUTPUT_DIR / "retornoMVP_analise_metades_caracteres_filtros.csv"
+    df_metades.to_csv(arq, index=False, encoding='utf-8')
+    print(f"\n✓ {arq}")
+    print(f"   {len(df_metades)} linhas: {len(combinacoes)} filtros de dia × área por ano, 3 níveis × 2 metades cada")
+    return df_metades
+
+
+
+#========GRAFICO DISPERSAO_ITENS - dispersão caracteres × acerto por item, com reta e IC 95% (gerador)
+def _reta_mqo_ic(x: np.ndarray, y: np.ndarray, grade: np.ndarray) -> Optional[Dict[str, Any]]:
+    """Reta de mínimos quadrados de y em x, com IC 95% da reta prevista na grade.
+
+    Modelo linear simples (IC pelo t de Student). Devolve None se há menos de 3 itens
+    ou se x não varia.
+    """
+    n = len(x)
+    if n < 3 or np.ptp(x) == 0:
         return None
+    b1, b0, r_valor, p_valor, _ = stats.linregress(x, y)
+    residuos = y - (b0 + b1 * x)
+    s2 = float(np.sum(residuos ** 2) / (n - 2))
+    sxx = float(np.sum((x - x.mean()) ** 2))
+    t_critico = stats.t.ppf(0.975, n - 2)
+    previsto = b0 + b1 * grade
+    erro_padrao = np.sqrt(s2 * (1 / n + (grade - x.mean()) ** 2 / sxx))
+    return {
+        'inclinacao': float(b1),
+        'intercepto': float(b0),
+        'r_pearson': float(r_valor),
+        'p_valor_t': float(p_valor),
+        'n': int(n),
+        'previsto': previsto,
+        'ic_inferior': previsto - t_critico * erro_padrao,
+        'ic_superior': previsto + t_critico * erro_padrao,
+    }
 
 
-def _extract_from_array(valor, tipo_esperado):
-    """Extrai valor de array-like com um elemento."""
-    try:
-        if hasattr(valor, '__len__') and len(valor) == 1:
-            return _extrair_valor_escalar(valor[0], tipo_esperado)
-    except (TypeError, IndexError):
-        pass
-    return None
+def gerar_grafico_retorno_dispersao_itens(df_questoes: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    """SAÍDA 7: um ponto por item (caracteres x acerto) e a reta de MQO com IC 95% por ano e filtro.
+
+    Mesma unidade (item = ano, área, co_item) e mesmo acerto das SAÍDAS 4 a 6.
+    Gera dois arquivos:
+      - retornoMVP_dispersao_itens.csv: um registro por item (ano, área, nível, caracteres, acerto).
+      - retornoMVP_dispersao_itens_retas.csv: reta e IC 95% por ano × filtro de dia × áreas.
+    O p da reta é do teste t paramétrico (não é o p por sorteio dos gráficos de r).
+    Itens sem nível TRI ficam de fora (10 itens).
+    """
+    df_com_dificuldade = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'].notna()])
+    df_itens = cast(pd.DataFrame, df_com_dificuldade.groupby(
+        ['ano', 'area', 'co_item', 'dificuldade_tri'], as_index=False
+    ).agg(
+        caracteres=('caracteres', 'first'),
+        n_acertos=('n_acertos', 'sum'),
+        n_respostas=('n_respostas', 'sum')
+    ))
+    df_itens['acerto'] = df_itens['n_acertos'] / df_itens['n_respostas'] * 100
+
+    df_pontos = df_itens.rename(columns={'dificuldade_tri': 'dificuldade'})[
+        ['ano', 'area', 'co_item', 'dificuldade', 'caracteres', 'acerto']
+    ].copy()
+    df_pontos['ano'] = df_pontos['ano'].astype(int)
+    arq_pontos = OUTPUT_DIR / "retornoMVP_dispersao_itens.csv"
+    df_pontos.to_csv(arq_pontos, index=False, encoding='utf-8')
+    print(f"\n✓ {arq_pontos}")
+    print(f"   {len(df_pontos)} itens")
+
+    combinacoes = _combinacoes_filtro_dia_area()
+    linhas = []
+    for ano in sorted(df_itens['ano'].unique()):
+        df_ano = cast(pd.DataFrame, df_itens[df_itens['ano'] == ano])
+        for dia, areas in combinacoes:
+            df_filtro = cast(pd.DataFrame, df_ano[df_ano['area'].isin(areas)])
+            if len(df_filtro) < 3:
+                continue
+            x = df_filtro['caracteres'].to_numpy(dtype=float)
+            y = df_filtro['acerto'].to_numpy(dtype=float)
+            grade = np.linspace(x.min(), x.max(), 50)
+            reta = _reta_mqo_ic(x, y, grade)
+            if reta is None:
+                continue
+            for i, cx in enumerate(grade):
+                linhas.append({
+                    'tipo_analise': 'TIPO_6_dispersao_itens_reta_filtro_dia_area',
+                    'ano': int(ano),
+                    'dia': str(dia),
+                    'areas': ';'.join(areas),
+                    'caracteres': float(cx),
+                    'acerto_previsto': float(reta['previsto'][i]),
+                    'ic_inferior': float(reta['ic_inferior'][i]),
+                    'ic_superior': float(reta['ic_superior'][i]),
+                    'inclinacao': reta['inclinacao'],
+                    'intercepto': reta['intercepto'],
+                    'r_pearson': reta['r_pearson'],
+                    'p_valor_t': reta['p_valor_t'],
+                    'quantidade_itens': reta['n'],
+                })
+
+    df_retas = pd.DataFrame(linhas)
+    arq_retas = OUTPUT_DIR / "retornoMVP_dispersao_itens_retas.csv"
+    df_retas.to_csv(arq_retas, index=False, encoding='utf-8')
+    print(f"✓ {arq_retas}")
+    print(f"   {len(df_retas)} linhas: 50 pontos de grade por reta")
+    return df_pontos, df_retas
+#=======grafico DISPERSAO_ITENS
 
 
 def _intensidade_correlacao(r_valor):
@@ -775,105 +978,11 @@ def _intensidade_correlacao(r_valor):
     return "muito forte"
 
 
-def _calcular_diferenca_caracteres(df_questoes, dif, impacta, r_valor):
-    """Calcula diferença de acerto entre questões com menos vs mais caracteres.
-    """
-    df_dif = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'] == dif])
-    
-    if len(df_dif) == 0:
-        return "Dados insuficientes", "Dados insuficientes"
-    
-    mediana = df_dif['caracteres'].median()
-    menos = df_dif[df_dif['caracteres'] <= mediana]['porcentagem_acerto_questao'].mean()
-    mais = df_dif[df_dif['caracteres'] > mediana]['porcentagem_acerto_questao'].mean()
-    diff = mais - menos
-    
-    ref_dados = f"Menos: {menos:.1f}% | Mais: {mais:.1f}% (+{diff:.1f}%)"
-    
-    sentido = "positiva" if r_valor > 0 else "negativa"
-    intensidade = _intensidade_correlacao(r_valor)
-    conclusao = (f"Correlação {sentido} {intensidade} (rho={r_valor:.3f}); "
-                 f"diferença entre metades por caracteres: {diff:+.1f} p.p.")
-    
-    return ref_dados, conclusao
-
-
-def _construir_entrada_tipo_1_3(tipo_label, area, r_valor, pval_valor, qtd_valor):
-    """Constrói entrada do relatório para TIPOS 1, 2, 3.
-    
-    CRITÉRIOS PARA "IMPACTA = SIM" (3 métricas):
-    coeficiente_r: abs(r) > 0.70 (correlação FORTE conforme Guilford/Mukaka)
-    p_value: p < 0.05 (estatisticamente significativo)
-    quantidade_pares: n >= 20 (amostra adequada)
-    """
-    # Critério 3: Verifica as 3 condições logicamente
-    tem_r = r_valor is not None and not np.isnan(r_valor) if isinstance(r_valor, float) else r_valor is not None
-    tem_p = pval_valor is not None and not np.isnan(pval_valor) if isinstance(pval_valor, float) else pval_valor is not None
-    tem_n = qtd_valor is not None and qtd_valor >= 20
-    
-    r_forte = tem_r and abs(r_valor) > 0.70
-    p_sig = tem_p and pval_valor < 0.05
-    
-    impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
-    
-    # Construir conclusão mais informativa
-    if not tem_r or not tem_p:
-        conclusao = 'Dados insuficientes'
-    elif not tem_n:
-        conclusao = f'Amostra pequena (n={qtd_valor})'
-    elif not r_forte:
-        sentido = 'positiva' if r_valor > 0 else 'negativa'
-        conclusao = (f'Correlação {sentido} {_intensidade_correlacao(r_valor)} '
-                     f'(r={r_valor:.3f}); não atinge o critério de |r| > 0,70')
-    elif not p_sig:
-        conclusao = f'Não significativo (p={pval_valor:.4f})'
-    else:
-        conclusao = 'Impacta significativamente'
-    
-    ref_dados = f"r={r_valor:.3f}, p={pval_valor:.4f}, n={qtd_valor}" if tem_r and tem_p else "Dados insuficientes"
-    
-    return {
-        'tipo_analise': tipo_label,
-        'area': area,
-        'dificuldade': 'TODAS',
-        'coeficiente_r': r_valor if r_valor else '',
-        'p_value': pval_valor if pval_valor else '',
-        'impacta': impacta,
-        'conclusao': conclusao,
-        'referencia_dados': ref_dados,
-        'quantidade_pares': qtd_valor
-    }
-
-
-def _construir_entrada_tipo_4(dif, r_valor, pval_valor, qtd_valor, ref_dados, conclusao):
-    """Constrói entrada do relatório para TIPO 4.
-    
-    CRITÉRIOS PARA "IMPACTA = SIM" (3 métricas):
-    coeficiente_r: abs(r) > 0.70 (correlação FORTE conforme Guilford/Mukaka)
-    p_value: p < 0.05 (estatisticamente significativo)
-    quantidade_pares: n >= 20 (amostra adequada)
-    """
-    # Verifica as 3 condições logicamente
-    tem_r = r_valor is not None and not np.isnan(r_valor) if isinstance(r_valor, float) else r_valor is not None
-    tem_p = pval_valor is not None and not np.isnan(pval_valor) if isinstance(pval_valor, float) else pval_valor is not None
-    tem_n = qtd_valor is not None and qtd_valor >= 20
-    
-    r_forte = tem_r and abs(r_valor) > 0.70
-    p_sig = tem_p and pval_valor < 0.05
-    
-    impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
-    
-    return {
-        'tipo_analise': 'Quantidade de Caracteres',
-        'area': 'TODAS',
-        'dificuldade': str(dif).upper(),
-        'coeficiente_r': r_valor if r_valor else '',
-        'p_value': pval_valor if pval_valor else '',
-        'impacta': impacta,
-        'conclusao': conclusao,
-        'referencia_dados': ref_dados,
-        'quantidade_pares': qtd_valor
-    }
+def _valor_numerico(valor, tipo):
+    """Converte para tipo (float ou int). Devolve None se o valor estiver ausente ou for NaN."""
+    if valor is None or pd.isna(valor):
+        return None
+    return tipo(valor)
 
 
 def _extrair_valores_linha(row):
@@ -882,51 +991,36 @@ def _extrair_valores_linha(row):
     pval = row.get('valor_p_significancia_estatistica')
     qtd = row.get('quantidade_pares')
     
-    r_valor = _extrair_valor_escalar(r_val, tipo_esperado=float)
-    pval_valor = _extrair_valor_escalar(pval, tipo_esperado=float)
-    qtd_valor = _extrair_valor_escalar(qtd, tipo_esperado=int) or 0
+    r_valor = _valor_numerico(r_val, float)
+    pval_valor = _valor_numerico(pval, float)
+    qtd_valor = _valor_numerico(qtd, int) or 0
     
     return r_valor, pval_valor, qtd_valor
 
 
-def _processar_tipos_1_2_3(df_correlacoes):
-    """Processa TIPOS 1 e 2 do relatório."""
-    relatorio = []
-    tipos_info = [
-        ('TIPO_1', 'Tempo Leitura (Questões)'),
-        ('TIPO_2', 'Tempo Leitura (Questões + Textos)')
-    ]
-    
-    for tipo_nome, tipo_label in tipos_info:
-        df_tipo = cast(pd.DataFrame, df_correlacoes[df_correlacoes['tipo_analise_correlacao'].str.contains(tipo_nome)])
-        for _, row in df_tipo.iterrows():
-            r_valor, pval_valor, qtd_valor = _extrair_valores_linha(row)
-            entrada = _construir_entrada_tipo_1_3(tipo_label, row['area'], r_valor, pval_valor, qtd_valor)
-            relatorio.append(entrada)
-    
-    return relatorio
+def _linha_relatorio(row, r_valor, p_holm, p_bruto, qtd_valor):
+    """Uma linha do CSV final. p_value é o ajustado por Holm; p_value_bruto é o do sorteio."""
+    ano_valor = row.get('ano')
+    return {
+        'tipo_analise': row['tipo_analise_correlacao'],
+        'area': row['area'],
+        'ano': '' if pd.isna(ano_valor) else int(ano_valor),
+        'dificuldade': 'TODAS',
+        'coeficiente_r': r_valor,
+        'p_value': p_holm,
+        'p_value_bruto': p_bruto,
+        'quantidade_pares': qtd_valor,
+        'interpretacao': row['interpretacao'],
+    }
 
 
-def _processar_tipo_4(df_correlacoes, df_questoes):
-    """Processa TIPO 4 do relatório."""
+def _processar_correlacoes(df_correlacoes):
+    """Monta o relatório: uma linha por análise (caracteres: ano × área; tempo: dia × ano)."""
     relatorio = []
-    df_tipo4 = cast(pd.DataFrame, df_correlacoes[df_correlacoes['tipo_analise_correlacao'].str.contains('TIPO_4')])
-    
-    for _, row in df_tipo4.iterrows():
-        dif = row['dificuldade']
-        r_valor, pval_valor, qtd_valor = _extrair_valores_linha(row)
-        # Calcular impacta baseado no critério r_forte > 0.70
-        tem_r = r_valor is not None and not np.isnan(r_valor) if isinstance(r_valor, float) else r_valor is not None
-        tem_p = pval_valor is not None and not np.isnan(pval_valor) if isinstance(pval_valor, float) else pval_valor is not None
-        tem_n = qtd_valor is not None and qtd_valor >= 20
-        r_forte = tem_r and abs(r_valor) > 0.70
-        p_sig = tem_p and pval_valor < 0.05
-        impacta = 'SIM' if (r_forte and p_sig and tem_n) else 'NÃO'
-        
-        ref_dados, conclusao = _calcular_diferenca_caracteres(df_questoes, dif, impacta, r_valor)
-        entrada = _construir_entrada_tipo_4(dif, r_valor, pval_valor, qtd_valor, ref_dados, conclusao)
-        relatorio.append(entrada)
-    
+    for _, row in df_correlacoes.iterrows():
+        r_valor, p_holm, qtd_valor = _extrair_valores_linha(row)
+        p_bruto = _valor_numerico(row.get('valor_p_bruto'), float)
+        relatorio.append(_linha_relatorio(row, r_valor, p_holm, p_bruto, qtd_valor))
     return relatorio
 
 
@@ -949,8 +1043,9 @@ def _carregar_dados_pipeline():
     print("\n[5/6] Gerando Métricas por Questão...")
     df_questoes = gerar_metricas_questao(df_combinado)
     
-    print("\n[6/6] Calculando Correlações...")
-    df_correlacoes = gerar_correlacoes_resultado(df_questoes, df_provas)
+    print("\n[6/6] Agregando itens e calculando correlações...")
+    df_itens = agregar_itens(df_questoes)
+    df_correlacoes = gerar_correlacoes_resultado(df_itens)
     
     return df_combinado, df_provas, df_questoes, df_correlacoes
 
@@ -992,28 +1087,6 @@ def _exportar_e_exibir(relatorio, df_provas, df_questoes):
     print("   3. analise_impacto_desempenho.csv (correlações finais)\n")
 
 
-def _extrair_valor_escalar(valor, tipo_esperado=float):
-    """Extrai valor escalar de forma segura, evitando problemas com Series/NDArray.
-    """
-    # Casos nulos e booleanos
-    if valor is None or isinstance(valor, (bool, np.bool_)):
-        return None
-    
-    # Tipos nativos (int, float)
-    if isinstance(valor, (int, float)):
-        return _extract_from_native(valor, tipo_esperado)
-    
-    # Numpy scalars ou pandas Series/Index com .item()
-    if isinstance(valor, np.generic) or (hasattr(valor, 'item') and callable(getattr(valor, 'item', None))):
-        return _extract_from_item_method(valor, tipo_esperado)
-    
-    # Array-like com um elemento
-    result = _extract_from_array(valor, tipo_esperado)
-    if result is not None:
-        return result
-    
-    # Fallback: tenta conversão direta
-    return _convert_to_type(valor, tipo_esperado)
 
 
 
@@ -1066,7 +1139,7 @@ def _exportar_questoes_grafico():
 
 
 def main():
-    print("  GERADOR DE MÉTRICAS: IMPACTO DO TEMPO NO DESEMPENHO ENEM")
+    print("  GERADOR DE MÉTRICAS: TEMPO DE LEITURA E CARACTERES × DESEMPENHO ENEM")
     
     # Carregar dados do pipeline
     df_combinado, df_provas, df_questoes, df_correlacoes = _carregar_dados_pipeline()
@@ -1074,12 +1147,23 @@ def main():
     print("  EXPORTANDO RELATÓRIOS")
     
     # Construir relatório consolidado
-    relatorio = []
-    relatorio.extend(_processar_tipos_1_2_3(df_correlacoes))
-    relatorio.extend(_processar_tipo_4(df_correlacoes, df_questoes))
+    relatorio = _processar_correlacoes(df_correlacoes)
     
     # Exportar e exibir conclusões
     _exportar_e_exibir(relatorio, df_provas, df_questoes)
+
+    # Correlação por nível de dificuldade (gráfico da análise do tamanho das questões)
+    gerar_correlacoes_por_dificuldade(df_questoes)
+
+    # Correlação por dificuldade com filtros de dia e área (gráfico de colunas, uma aba por ano)
+    gerar_correlacoes_filtros_dificuldade(df_questoes)
+
+    # Acerto por metade de caracteres e nível (gráfico de barras agrupadas, uma aba por ano)
+    gerar_metades_caracteres_filtros(df_questoes)
+
+    #========GRAFICO DISPERSAO_ITENS - chamada no main
+    gerar_grafico_retorno_dispersao_itens(df_questoes)
+    #=======grafico DISPERSAO_ITENS
 
     # Exportar entradas por questão para o gráfico de tempo de leitura
     _exportar_questoes_grafico()

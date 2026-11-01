@@ -3,13 +3,13 @@
     <div class="upload-area" @drop="handleDrop" @dragover.prevent @dragenter.prevent @dragleave="isDragging = false"
       :class="{ 'is-dragging': isDragging }">
       <label for="file-input" class="sr-only">Selecione um arquivo PDF para extração</label>
-      <input 
+      <input
         id="file-input"
-        type="file" 
-        ref="fileInput" 
+        type="file"
+        ref="fileInput"
         accept=".pdf"
-        @change="handleFileChange" 
-        style="display: none" 
+        @change="handleFileChange"
+        style="display: none"
       />
 
       <div class="upload-content">
