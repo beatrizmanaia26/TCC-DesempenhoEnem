@@ -1,5 +1,16 @@
 
-export const DEFAULT_READING_SPEED = 1100
+import { ENEM_CONSTANTS } from '../config/enemConstants.js'
+
+export const DEFAULT_READING_SPEED = ENEM_CONSTANTS.VELOCIDADE_LEITURA_CPM
+
+export function formatarPercentual(valor) {
+  const numero = Number(valor) || 0
+  if (numero === 0) return '0.0'
+  if (Math.abs(numero) >= 1) return numero.toFixed(1)
+
+  const casas = Math.min(6, Math.ceil(-Math.log10(Math.abs(numero))) + 1)
+  return numero.toFixed(casas)
+}
 
 export const MAX_EXAM_DURATION_HOURS = 6
 

@@ -6,36 +6,35 @@
         warning
         :tooltip="tooltipTempo"
       />
+      <div class="filter-wrapper">
+        <button type="button" class="filter-btn" @click="alternarMenuFiltro">
+          <FilterIcon />
+          Filtro
+        </button>
+        <div v-if="mostrarFiltro" class="filter-menu">
+          <div class="filter-secao">
+            <p class="filter-titulo">DIA</p>
+            <div class="filter-option" v-for="opcao in opcoesDia" :key="`dia-${opcao.valor}`">
+              <input
+                type="radio"
+                name="resumo-filtro-dia"
+                :id="`resumo-dia-${opcao.valor}`"
+                :checked="rascunhoDia === opcao.valor"
+                @change="rascunhoDia = opcao.valor"
+              />
+              <label :for="`resumo-dia-${opcao.valor}`">{{ opcao.rotulo }}</label>
+            </div>
+          </div>
+
+          <div class="filter-rodape">
+            <button type="button" class="filter-aplicar" @click="aplicarFiltro">Aplicar</button>
+          </div>
+        </div>
+      </div>
     </div>
     <p class="resumo-subtitulo">
       {{ TEXTO_RESUMO_TEMPO.subtitulo }}
     </p>
-
-    <div class="filter-wrapper">
-      <button type="button" class="filter-btn" @click="alternarMenuFiltro">
-        <FilterIcon />
-        Filtro
-      </button>
-      <div v-if="mostrarFiltro" class="filter-menu">
-        <div class="filter-secao">
-          <p class="filter-titulo">DIA</p>
-          <div class="filter-option" v-for="opcao in opcoesDia" :key="`dia-${opcao.valor}`">
-            <input
-              type="radio"
-              name="resumo-filtro-dia"
-              :id="`resumo-dia-${opcao.valor}`"
-              :checked="rascunhoDia === opcao.valor"
-              @change="rascunhoDia = opcao.valor"
-            />
-            <label :for="`resumo-dia-${opcao.valor}`">{{ opcao.rotulo }}</label>
-          </div>
-        </div>
-
-        <div class="filter-rodape">
-          <button type="button" class="filter-aplicar" @click="aplicarFiltro">Aplicar</button>
-        </div>
-      </div>
-    </div>
 
     <div v-if="carregando" class="resumo-status">Carregando dados de tempo...</div>
     <div v-else-if="erro" class="resumo-status resumo-erro">{{ erro }}</div>
@@ -49,7 +48,7 @@
         <li v-for="fatia in fatias" :key="fatia.chave">
           <span class="legenda-cor" :style="{ background: fatia.cor }"></span>
           <span class="legenda-rotulo">{{ fatia.rotulo }}</span>
-          <span class="legenda-valor">{{ fatia.valor.toFixed(2) }} min ({{ fatia.percentual.toFixed(1) }}%)</span>
+          <span class="legenda-valor">{{ fatia.valor.toFixed(2) }} min ({{ formatarPercentual(fatia.percentual) }}%)</span>
         </li>
       </ul>
     </div>
@@ -62,6 +61,7 @@ import http from '../services/http.js'
 import FilterIcon from './icons/FilterIcon.vue'
 import InfoIcon from './icons/InfoIcon.vue'
 import { TEXTO_RESUMO_TEMPO } from '../config/textosAnalises.js'
+import { formatarPercentual } from '../constants/analysisConfig.js'
 
 const props = defineProps({
   ano: {
@@ -206,6 +206,11 @@ function aplicarFiltro() {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.25rem;
+}
+
+.resumo-cabecalho .filter-wrapper {
+  margin-left: auto;
+  margin-bottom: 0;
 }
 
 .resumo-titulo {

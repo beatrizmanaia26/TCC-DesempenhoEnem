@@ -126,6 +126,7 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { exportarAnalises, analisesSelecionadas } from '@/services/exportacaoEnem.js'
+import { capturarCartoesCorrelacao } from '@/services/capturaCorrelacoes.js'
 import FilterIcon from '@/components/icons/FilterIcon.vue'
 import ProvaInfoDisplay from '@/components/ProvaInfoDisplay.vue'
 import GraficoTempoLeitura from '@/components/GraficoTempoLeitura.vue'
@@ -239,6 +240,9 @@ const escolherExportacao = async (formato) => {
       http.get('/metricas/palavras-questoes', { params: { ano } })
     ])
 
+    // Os cartões de correlação só são fotografados ao exportar PDF, na tela atual (filtro e página)
+    const cartoes = formato === 'pdf' ? await capturarCartoesCorrelacao() : []
+
     await exportarAnalises(
       formato,
       ano,
@@ -252,7 +256,8 @@ const escolherExportacao = async (formato) => {
         tempo: graficoTempoRef.value?.obterFiltros(),
         palavras: graficoPalavrasRef.value?.obterFiltros()
       },
-      analisesSelecionadas(selectedFilters.value)
+      analisesSelecionadas(selectedFilters.value),
+      cartoes
     )
   } catch (erro) {
     console.error('Erro ao exportar dados:', erro)

@@ -428,9 +428,35 @@ function desenharInfoProva(doc, ano, y) {
 // Todas as análises ligadas: default de gerarPdf e exportarAnalises (objeto congelado, não é alterado)
 const TODAS_AS_ANALISES = Object.freeze({ resumo: true, tempo: true, palavras: true })
 
+// Cartões de correlação capturados da tela (PNG), na ordem da página.
+// Cada imagem tem a mesma largura proporcional que o cartão tem na tela, encostada na margem esquerda.
+// Se for mais alta que a página, é reduzida para caber.
+function desenharCartoesImagem(doc, cartoes, y) {
+  const alturaMaxima = PDF_ALTURA_PAGINA - 2 * PDF_MARGEM - 10
+  let cursor = y
+  for (const cartao of cartoes) {
+    const escala = PDF_LARGURA_UTIL / cartao.larguraCartao
+    let largura = cartao.larguraTela * escala
+    let altura = cartao.alturaTela * escala
+    if (altura > alturaMaxima) {
+      const reducao = alturaMaxima / altura
+      altura = alturaMaxima
+      largura = largura * reducao
+    }
+    cursor = garantirEspaco(doc, cursor, altura + 10)
+    doc.setFont('helvetica', 'bold')
+    doc.setFontSize(11)
+    doc.setTextColor(...COR_AZUL)
+    doc.text(cartao.titulo, PDF_MARGEM, cursor)
+    doc.addImage(cartao.dataUrl, 'PNG', PDF_MARGEM, cursor + 4, largura, altura)
+    cursor += altura + 12
+  }
+  return cursor
+}
+
 // PDF: página 1 com o resumo (tabela e pizza), página 2 com o tempo de leitura, página 3 com as palavras.
 // 'analises' (de analisesSelecionadas) escolhe quais blocos entram
-export function gerarPdf(dados, ano, analises = TODAS_AS_ANALISES) {
+export function gerarPdf(dados, ano, analises = TODAS_AS_ANALISES, cartoes = []) {
   const doc = new jsPDF()
   const resumo = montarSecoes(dados)[0]
   const restantePorDia = Object.fromEntries((dados.resumo?.dias ?? []).map((dia) => [dia.dia, dia.tempo_restante_min]))
@@ -468,7 +494,12 @@ export function gerarPdf(dados, ano, analises = TODAS_AS_ANALISES) {
     cursor += 8
   }
   if (analises.palavras) {
-    desenharGraficoPalavras(doc, dados.palavras?.questoes ?? [], cursor)
+    cursor = desenharGraficoPalavras(doc, dados.palavras?.questoes ?? [], cursor)
+    cursor += 8
+  }
+  // Cartões de correlação capturados da tela, na ordem da página
+  if (cartoes.length) {
+    desenharCartoesImagem(doc, cartoes, cursor)
   }
   return doc
 }
@@ -520,7 +551,7 @@ export function analisesSelecionadas(selecionadas) {
 
 // Exporta as análises de um ano no formato escolhido: 'csv', 'xlsx' ou 'pdf'.
 // analises (de analisesSelecionadas) define quais seções entram no arquivo
-export async function exportarAnalises(formato, ano, dados, filtros, analises = TODAS_AS_ANALISES) {
+export async function exportarAnalises(formato, ano, dados, filtros, analises = TODAS_AS_ANALISES, cartoes = []) {
   const dadosFiltrados = aplicarFiltrosExportacao(dados, filtros)
   const secoes = montarSecoes(dadosFiltrados).filter((secao) => analises[secao.id])
   const cabecalho = montarCabecalhoTabular(ano)
@@ -535,7 +566,7 @@ export async function exportarAnalises(formato, ano, dados, filtros, analises = 
       'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     )
   } else if (formato === 'pdf') {
-    gerarPdf(dadosFiltrados, ano, analises).save(`${base}.pdf`)
+    gerarPdf(dadosFiltrados, ano, analises, cartoes).save(`${base}.pdf`)
   } else {
     throw new Error(`Formato de exportação desconhecido: ${formato}`)
   }

@@ -9,7 +9,7 @@
             <span class="card-value">{{ results.totalQuestions || 0 }}</span>
           </div>
           <div class="summary-card">
-            <span class="card-label">Questões com Imagem</span>
+            <span class="card-label">Questões com Imagem VAI MOSTRA EM TEXTO OU GRÁFICO??????????????</span>
             <span class="card-value">{{ results.questionsWithImages || 0 }}</span>
           </div>
           <div class="summary-card">

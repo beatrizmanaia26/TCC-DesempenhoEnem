@@ -58,6 +58,15 @@ describe('exportacaoEnem', () => {
     expect(documento.output('arraybuffer').byteLength).toBeGreaterThan(0)
   })
 
+  it('gera o PDF com os cartões de correlação capturados da tela, como imagem', () => {
+    // PNG 1x1 válido, só para o jsPDF desenhar a imagem
+    const png = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
+    const cartoes = [{ titulo: 'Dispersão: Caracteres da Questão × Acerto', dataUrl: png, larguraTela: 960, alturaTela: 400, larguraCartao: 960 }]
+    const bytes = new Uint8Array(gerarPdf(dados, 2025, undefined, cartoes).output('arraybuffer'))
+    const conteudo = new TextDecoder('latin1').decode(bytes)
+    expect(conteudo).toContain('/Subtype /Image')
+  })
+
   it('gera o PDF com o bloco de informações da prova, igual à tela', () => {
     const bytes = new Uint8Array(gerarPdf(dados, 2025).output('arraybuffer'))
     const conteudo = new TextDecoder('latin1').decode(bytes)

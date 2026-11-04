@@ -435,7 +435,8 @@ const isFormValid = computed(() => {
     formData.value.hours >= 0 &&
     formData.value.minutes !== null &&
     formData.value.minutes >= 0 &&
-    (formData.value.hours > 0 || formData.value.minutes > 0)
+    (formData.value.hours > 0 || formData.value.minutes > 0) &&
+    !showDurationWarning.value
 
   // Se ativar dificuldade, precisa preencher todas as questões
   if (useDifficultyAnalysis.value && manualTotalQuestions.value > 0) {

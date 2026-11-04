@@ -7,7 +7,7 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import fitz
+import pymupdf as fitz
 
 
 QUESTION_RE = re.compile(r"\bQuest[aã]o\s+(\d{1,3})\b", re.IGNORECASE)

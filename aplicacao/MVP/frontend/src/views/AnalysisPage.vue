@@ -13,7 +13,7 @@
       </section>
 
       <!-- SEÇÃO 2: FORMULÁRIO DE ANÁLISE -->
-      <section class="section form-section" v-if="selectedFile && !isAnalyzing && !hasResults">
+      <section class="section form-section" v-if="selectedFile && !isAnalyzing && !hasResults && totalQuestions > 0">
         <AnalysisForm
           :file="selectedFile"
           :total-questions="totalQuestions"
@@ -82,10 +82,13 @@ let extractionRequestId = 0
 // Local refs para sincronizar com store
 const localSelectedFile = ref(null)
 
-// Ao montar: limpar apenas os RESULTADOS, não o arquivo/formulário
+// Ao montar: se a análise já foi feita nesta sessão, volta direto para a página de resultados
+// (ex.: trocar de aba e voltar em "Análise"). Só lê o arquivo quando não há análise salva.
 onMounted(() => {
-  store.clearResults()
-  // NÃO limpar o arquivo e formulário - permitir que persista ao navegar
+  if (store.analysisPayload) {
+    router.replace({ name: 'analysis-results' })
+    return
+  }
   if (store.selectedFile) {
     prepareExtraction(store.selectedFile)
   }
@@ -101,8 +104,7 @@ const selectedFile = computed(() => localSelectedFile.value)
 const totalQuestions = computed(() => store.totalQuestions)
 const hasResults = computed(() => store.results !== null)
 const analysisResults = computed(() => store.results)
-const isFormLoading = computed(() => isExtracting.value || isAnalyzing.value
-  || !extractionResults.value || extractionResults.value.questions.length === 0)
+const isFormLoading = computed(() => isExtracting.value || isAnalyzing.value)
 
 // Handlers
 const handleFileSelected = (file) => {
@@ -128,7 +130,10 @@ const prepareExtraction = async (file) => {
     const extracted = await extractExamPdf(file)
     if (requestId !== extractionRequestId) return
     // O idioma é omitido no JSON do site, que trabalha com uma única prova.
-    const questions = extracted.questions.map(({ idioma, ...question }) => question)
+    const questions = (extracted.questions ?? []).map(({ idioma, ...question }) => question)
+    if (questions.length === 0) {
+      throw new Error('Nenhuma questão foi encontrada neste PDF. Envie a prova do ENEM em PDF (não o relatório de análises).')
+    }
     extractionResults.value = {
       fileName: extracted.fileName,
       questions,
