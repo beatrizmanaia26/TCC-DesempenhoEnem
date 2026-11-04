@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <p class="metades-subtitulo">{{ TEXTO_METADES_CARACTERES.subtitulo }}</p>
+    <p class="metades-subtitulo">{{ TEXTO_METADES_CARACTERES.subtitulo(ano) }}</p>
 
     <div v-if="carregando" class="metades-status">Carregando acertos por quantidade de caracteres...</div>
     <div v-else-if="erro" class="metades-status metades-erro">{{ erro }}</div>

@@ -3,7 +3,7 @@
   <div class="dispersao-itens">
     <div class="dispersao-cabecalho">
       <h3 class="dispersao-titulo">{{ TEXTO_DISPERSAO_ITENS.titulo }}</h3>
-      <InfoIcon warning :tooltip="tooltipDispersao" />
+      <InfoIcon warning :tooltip="tooltipDispersao" :largura="380" />
       <div class="filter-wrapper">
         <button type="button" class="filter-btn" @click="alternarMenuFiltro">
           <FilterIcon />
@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-    <p class="dispersao-subtitulo">{{ TEXTO_DISPERSAO_ITENS.subtitulo }}</p>
+    <p class="dispersao-subtitulo">{{ TEXTO_DISPERSAO_ITENS.subtitulo(ano) }}</p>
 
     <div v-if="carregando" class="dispersao-status">Carregando dispersão por item...</div>
     <div v-else-if="erro" class="dispersao-status dispersao-erro">{{ erro }}</div>
@@ -103,11 +103,16 @@
         <li v-for="nivel in NIVEIS" :key="nivel.chave">
           <span class="cor-nivel" :style="{ background: nivel.cor }"></span>{{ nivel.rotulo }}
         </li>
-        <li><span class="linha-reta"></span>Reta e faixa de IC 95%</li>
+        <li><span class="linha-reta"></span>Reta e faixa de Intervalo de Confiança (IC) 95%</li>
       </ul>
       <p v-if="resumoReta" class="dispersao-resumo">{{ resumoReta }}</p>
       <ul class="dispersao-notas">
-        <li v-for="(texto, indice) in TEXTO_DISPERSAO_ITENS.notas" :key="indice">{{ texto }}</li>
+        <li v-for="(texto, indice) in TEXTO_DISPERSAO_ITENS.notas" :key="indice">
+          <template v-for="(parte, i) in dividirComLinks(texto)" :key="i">
+            <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link">{{ parte.texto }}</a>
+            <template v-else>{{ parte.texto }}</template>
+          </template>
+        </li>
       </ul>
     </template>
   </div>
@@ -119,7 +124,21 @@ import { ref, computed, watch } from 'vue'
 import http from '../services/http.js'
 import InfoIcon from './icons/InfoIcon.vue'
 import FilterIcon from './icons/FilterIcon.vue'
-import { TEXTO_DISPERSAO_ITENS } from '../config/textosAnalises.js'
+import { TEXTO_DISPERSAO_ITENS, LINKS_TERMOS } from '../config/textosAnalises.js'
+
+// Separa o texto em partes: trechos comuns e trechos que são link (termo de LINKS_TERMOS)
+function dividirComLinks(texto) {
+  let partes = [{ texto, url: null }]
+  LINKS_TERMOS.forEach(({ termo, url }) => {
+    for (let i = 0; i < partes.length; i++) {
+      if (partes[i].url || !partes[i].texto.includes(termo)) continue
+      const [antes, ...depois] = partes[i].texto.split(termo)
+      const resto = depois.join(termo)
+      partes.splice(i, 1, { texto: antes, url: null }, { texto: termo, url }, { texto: resto, url: null })
+    }
+  })
+  return partes.filter((parte) => parte.texto !== '')
+}
 
 const props = defineProps({
   ano: {
@@ -205,14 +224,16 @@ const chaveFiltro = computed(() => {
 })
 
 // Layout do SVG (unidades do viewBox)
-const LARGURA = 760
+const LARGURA = 960
 const ALTURA = 380
 const MARGEM_ESQ = 60
 const MARGEM_DIR = 20
 const MARGEM_TOPO = 30
 const MARGEM_BASE = 50
 const MARCAS_Y = [0, 20, 40, 60, 80, 100]
-const PASSO_X = 200
+// Largura mínima por rótulo do eixo X (px), para os números não se encostarem
+const LARGURA_MINIMA_ROTULO_X = 45
+const PASSOS_X = [100, 200, 300, 400, 600, 800, 1000, 1200, 1600, 2000]
 
 const tooltipDispersao = TEXTO_DISPERSAO_ITENS.explicacao.join('\n')
 
@@ -240,9 +261,17 @@ const xMax = computed(() =>
   Math.ceil(Math.max(...pontosDoFiltro.value.map((ponto) => ponto.caracteres)) / 100) * 100
 )
 
+// Menor passo que deixa os rótulos com espaço suficiente
+const passoX = computed(() => {
+  const larguraUtil = LARGURA - MARGEM_ESQ - MARGEM_DIR
+  const maxMarcas = Math.floor(larguraUtil / LARGURA_MINIMA_ROTULO_X)
+  const alcance = xMax.value - xMin.value
+  return PASSOS_X.find((passo) => alcance / passo <= maxMarcas) ?? PASSOS_X[PASSOS_X.length - 1]
+})
+
 const marcasX = computed(() => {
   const marcas = []
-  for (let valor = xMin.value; valor <= xMax.value; valor += PASSO_X) {
+  for (let valor = xMin.value; valor <= xMax.value; valor += passoX.value) {
     marcas.push(valor)
   }
   return marcas
@@ -295,16 +324,28 @@ const faixaIc = computed(() => {
   return [...superior, ...inferior].join(' ')
 })
 
+// Formata número com pelo menos `casasMinimas` decimais. Se o valor for menor que essa precisão,
+// usa mais casas (até 2 algarismos significativos, no máximo 6), para não aparecer 0.00 ou -0.00
+function formatarNumero(valor, casasMinimas) {
+  const absoluto = Math.abs(valor)
+  let casas = casasMinimas
+  if (absoluto > 0 && absoluto < Math.pow(10, -casasMinimas)) {
+    casas = Math.min(Math.ceil(-Math.log10(absoluto)) + 1, 6)
+  }
+  const arredondado = Number(valor.toFixed(casas))
+  return (arredondado === 0 ? 0 : arredondado).toFixed(casas)
+}
+
 // Resumo da reta do filtro: inclinação em pontos percentuais por 100 caracteres, r e p (teste t)
 const resumoReta = computed(() => {
   const linha = linhasReta.value[0]
   if (!linha) {
     return ''
   }
-  const p = linha.p < 0.001 ? '< 0.001' : linha.p.toFixed(3)
+  const p = linha.p < 0.001 ? '< 0.001' : formatarNumero(linha.p, 3)
   return (
-    `Reta: a cada 100 caracteres a mais, o acerto muda ${(linha.inclinacao * 100).toFixed(2)} ` +
-    `pontos percentuais, em média (r de Pearson = ${linha.r.toFixed(2)}, p = ${p}, ` +
+    `Reta: a cada 100 caracteres a mais, o acerto muda ${formatarNumero(linha.inclinacao * 100, 2)} ` +
+    `pontos percentuais, em média (r de Pearson = ${formatarNumero(linha.r, 2)}, p = ${p}, ` +
     `n = ${linha.quantidadeItens} itens).`
   )
 })
@@ -371,7 +412,7 @@ watch(() => props.ano, carregar, { immediate: true })
 .grafico-dispersao {
   display: block;
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
   height: auto;
   margin: 0 auto;
 }

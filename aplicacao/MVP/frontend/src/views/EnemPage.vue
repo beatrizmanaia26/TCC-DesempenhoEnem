@@ -107,7 +107,6 @@
           <!-- ========GRAFICO DISPERSAO_ITENS - uso na página -->
           <CorrelacaoDispersaoItens :ano="selectedYear" />
           <!-- =======grafico DISPERSAO_ITENS -->
-          <CorrelacaoDificuldadeColunas :ano="selectedYear" />
         </template>
       </div>
 
@@ -133,7 +132,6 @@ import GraficoTempoLeitura from '@/components/GraficoTempoLeitura.vue'
 import ResumoTempoProva from '@/components/ResumoTempoProva.vue'
 import MapaCalorCorrelacoes from '@/components/MapaCalorCorrelacoes.vue'
 import CorrelacaoDificuldadeMapa from '@/components/CorrelacaoDificuldadeMapa.vue'
-import CorrelacaoDificuldadeColunas from '@/components/CorrelacaoDificuldadeColunas.vue'
 import CorrelacaoMetadesCaracteres from '@/components/CorrelacaoMetadesCaracteres.vue'
 // ========GRAFICO DISPERSAO_ITENS - import
 import CorrelacaoDispersaoItens from '@/components/CorrelacaoDispersaoItens.vue'

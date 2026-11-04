@@ -2,7 +2,7 @@
   <div class="correlacoes-tempo">
     <div class="correlacoes-cabecalho">
       <h3 class="correlacoes-titulo">{{ TEXTO_CORRELACOES_TEMPO.titulo }}</h3>
-      <InfoIcon warning :tooltip="tooltipCorrelacoes" />
+      <InfoIcon warning :tooltip="tooltipCorrelacoes" class="tooltip-largo" />
     </div>
     <p class="correlacoes-subtitulo">{{ TEXTO_CORRELACOES_TEMPO.subtitulo }}</p>
 
@@ -61,6 +61,14 @@
               <text
                 :x="celula.x + (TAM - GAP) / 2"
                 :y="celula.y + (TAM - GAP) / 2 + 14"
+                class="p-celula"
+                :fill="celula.corTexto"
+                text-anchor="middle"
+                dominant-baseline="middle"
+              >p bruto = {{ formatarP(celula.pBruto) }}</text>
+              <text
+                :x="celula.x + (TAM - GAP) / 2"
+                :y="celula.y + (TAM - GAP) / 2 + 32"
                 class="p-celula"
                 :fill="celula.corTexto"
                 text-anchor="middle"
@@ -238,6 +246,7 @@ function montarGrade(config) {
         vazia: false,
         r: registro.r,
         p: registro.p,
+        pBruto: registro.pBruto,
         cor: `rgb(${rgb.join(', ')})`,
         corTexto: corTextoPara(rgb)
       }
@@ -250,7 +259,7 @@ function montarGrade(config) {
 const grades = computed(() => [
   montarGrade({
     id: 'caracteres',
-    titulo: 'Caracteres da questão × acerto, por ano e área',
+    titulo: '',
     ariaLabel: 'Mapa de calor da correlação de Spearman entre caracteres da questão e acerto, por ano e área',
     colunas: AREAS.map((area) => ({ chave: area, rotulo: area })),
     linhas: ANOS.map((ano) => ({ chave: ano, rotulo: String(ano) })),
@@ -295,6 +304,17 @@ onMounted(carregar)
 .correlacoes-titulo {
   margin: 0;
   color: #333;
+}
+
+/* Tooltip deste gráfico mais largo, para caber o cálculo sem ficar alto demais */
+.tooltip-largo :deep(.tooltip) {
+  width: 420px;
+}
+
+@media (max-width: 768px) {
+  .tooltip-largo :deep(.tooltip) {
+    width: 300px;
+  }
 }
 
 .correlacoes-subtitulo {

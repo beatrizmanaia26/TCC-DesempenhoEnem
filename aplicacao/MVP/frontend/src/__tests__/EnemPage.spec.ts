@@ -10,7 +10,6 @@ vi.mock('../components/GraficoTempoLeitura.vue', () => ({ default: { template: '
 vi.mock('../components/ResumoTempoProva.vue', () => ({ default: { template: '<div class="resumo-stub" />' } }))
 vi.mock('../components/MapaCalorCorrelacoes.vue', () => ({ default: { template: '<div class="mapa-stub" />' } }))
 vi.mock('../components/CorrelacaoDificuldadeMapa.vue', () => ({ default: { template: '<div class="correlacao-mapa-stub" />' } }))
-vi.mock('../components/CorrelacaoDificuldadeColunas.vue', () => ({ default: { template: '<div class="correlacao-colunas-stub" />' } }))
 // ========GRAFICO DISPERSAO_ITENS - mock
 vi.mock('../components/CorrelacaoDispersaoItens.vue', () => ({ default: { template: '<div class="dispersao-stub" />' } }))
 // =======grafico DISPERSAO_ITENS

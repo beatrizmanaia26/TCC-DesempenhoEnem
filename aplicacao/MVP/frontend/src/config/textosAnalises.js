@@ -15,28 +15,43 @@ export const TEXTO_RESUMO_TEMPO = {
 }
 
 export const TEXTO_CORRELACOES_TEMPO = {
-  titulo: 'Correlação entre Caracteres da Questão e Desempenho',
-  subtitulo:
-    'Correlação de Spearman entre o número de caracteres da questão e o percentual de acerto. 918 itens das provas de 2020 a 2025 (sem 2021), por ano e área.',
+  titulo: 'Correlação entre Tamanho da Questão e Percentual de Acertos por Ano e Área',
+
   explicacao: [
-    'Cada item entra uma vez. O acerto do item é o total de acertos dividido pelo total de respondentes dos 4 cadernos em que ele aparece. Cada célula é um ano e uma área, com 43 a 50 itens.',
+    'Unidade de análise: cada item da prova em um ano e uma área. Cada item aparece nos cadernos de todas as cores, mas conta uma vez só.',
     '',
-    'Cada célula mostra r (de −1 a +1) e o p ajustado por Holm sobre os 20 testes.',
+    'Caracteres: número de caracteres do texto da questão. O texto é igual em todas as cores, então é lido do caderno Azul apenas como referência.',
     '',
-    'Cores: verde = correlação positiva; azul = correlação negativa; branco = próximo de zero.'
+    'Acerto do item (%) = total de acertos ÷ total de respondentes de todas as cores × 100.',
+    '',
+    'r (Spearman): correlação de postos entre caracteres e acerto, dentro de cada ano e área. Vai de −1 a +1.',
+    '',
+    'p: calculado por sorteio. São 20.000 permutações da ordem dos acertos, com semente 42. O p é a fração das permutações com r tão extremo quanto o observado.',
+    '',
+    'Holm: ajuste do p sobre os 20 testes (5 anos × 4 áreas). Ordena os p do menor para o maior e multiplica cada um por (20 − posição + 1), sem passar de 1.',
+    'Cerca de 1 em cada 20 resultados pareceria significativo por acaso. O Holm mantém em 5% a chance de qualquer falso positivo no conjunto.'
   ],
   // Notas exibidas abaixo do mapa. Os termos de LINKS_TERMOS viram links.
   notas: [
-    'Cada célula mostra a correlação de Spearman (r) e o valor de p ajustado (Holm).',
-    'Cores: verde = correlação positiva; azul = correlação negativa; branco = próximo de zero.',
-    'Valores de r próximos de zero indicam pouca associação entre caracteres e acerto. Nenhuma célula é significativa após a correção de Holm.'
+    'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm).',
+    'O r mostra a força  da relação, de −1 a 1. Quanto mais longe de 0, mais forte',
+    'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
+    'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
+    'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
+    'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
+    'p baixo: um r seria raro sem relação, há indício de relação.',
+    'p alto: um r seria comum sem relação. O resultado é compatível com ausência de relação.',
+    'p (Holm) ajusta o p bruto considerando todas as células, para que o risco de pelo menos um falso positivo fique em 5%. Só é tratado como significativo abaixo de 0,05.',
+    'p (Holm) alto, como 1.000, mostra que não há evidência suficiente de relação nessa célula. Isso não prova que a relação não existe.'
   ]
 }
 
 // Termos das notas que viram link para uma explicação externa (abre em nova aba)
 export const LINKS_TERMOS = [
   { termo: 'correlação de Spearman', url: 'https://pt.wikipedia.org/wiki/Coeficiente_de_correlação_de_postos_de_Spearman' },
-  { termo: 'valor de p', url: 'https://pt.wikipedia.org/wiki/Valor-p' }
+  { termo: 'Correlação de Pearson', url: 'https://pt.wikipedia.org/wiki/Coeficiente_de_correlação_de_Pearson' },
+  { termo: 'valor de p', url: 'https://pt.wikipedia.org/wiki/Valor-p' },
+  { termo: 'Holm', url: 'https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method' }
 ]
 
 export const TEXTO_TEMPO_LEITURA = {
@@ -54,21 +69,33 @@ export const TEXTO_TEMPO_LEITURA = {
 }
 
 export const TEXTO_MAPA_DIFICULDADE = {
-  titulo: 'Caracteres × Acerto por Ano, Área e Dificuldade',
-  subtitulo:
-    'Correlação de Spearman entre caracteres da questão e percentual de acerto, em cada nível de dificuldade TRI (fácil, média e difícil), por ano e área.',
+  titulo: 'Correlação entre Tamanho da Questão e Acertos por nível de dificuldade',
   explicacao: [
-    'Mesma unidade do gráfico de barras acima: cada item entra uma vez, na faixa de dificuldade do seu parâmetro b (TRI). Itens sem parâmetro b ficam fora.',
+    'Este gráfico considera só as questões de cada nível de dificuldade. A dificuldade vem da Teoria de Resposta ao Item (TRI), que estima quão difícil é cada questão para os candidatos. Questões sem essa estimativa ficam de fora.',
     '',
-    'Cada célula é um ano, uma área e um nível, com 13 a 17 itens. Cada célula mostra r e o p ajustado por Holm sobre os 60 testes.',
+    'Cada quadrado é um ano e uma área, dentro de um nível, com 13 a 17 questões. O r mostra a relação, de −1 a +1, entre o número de caracteres e o percentual de acerto.',
     '',
-    'Cores: verde = correlação positiva; azul = correlação negativa; branco = próximo de zero.'
+    'p bruto: sorteio com 20.000 embaralhamentos da ordem dos acertos (semente 42). p = (sorteios com r tão extremo quanto o observado + 1) ÷ (20.000 + 1).',
+    '',
+    'Holm: correção para os 60 testes (3 níveis × 5 anos × 4 áreas). Ordena os p brutos do menor para o maior e multiplica o 1º por 60, o 2º por 59, e assim por diante, sem passar de 1. Assim, a chance de pelo menos um falso positivo no conjunto fica em 5%.'
   ],
   notas: [
-    'Cada célula mostra a correlação de Spearman (r) e o valor de p ajustado (Holm sobre os 60 testes).',
-    'Com 13 a 17 itens por célula, cada r tem muita incerteza. Nenhuma das 60 células é significativa após a correção de Holm (menor p ajustado = 0,74).'
+    'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm).',
+    'O r mostra a força  da relação, de −1 a 1. Quanto mais longe de 0, mais forte',
+    'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
+    'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
+    'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
+    'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
+    'p baixo: um r seria raro sem relação, há indício de relação.',
+    'p alto: um r seria comum sem relação. O resultado é compatível com ausência de relação.',
+    'p (Holm) ajusta o p bruto considerando todas as células, para que o risco de pelo menos um falso positivo fique em 5%. Só é tratado como significativo abaixo de 0,05.',
+    'p (Holm) alto, como 1.000, mostra que não há evidência suficiente de relação nessa célula. Isso não prova que a relação não existe.',
   ]
 }
+
+// Conclusão geral dos três níveis, sempre visível acima do mapa
+export const FRASE_GERAL_DIFICULDADE =
+   'Compara o tamanho das questões com o percentual de acerto, separado por nível de dificuldade. Cada nível tem seu próprio mapa.'
 
 export const TEXTO_MAPA_DIFICULDADE_GRADE = [
   'Correlação de Spearman (r) entre o número de caracteres da questão e o percentual de acerto dos itens deste nível de dificuldade TRI, em cada ano e área.',
@@ -84,41 +111,25 @@ const FRASE_INCERTEZA_HOLM = 'Com 13 a 17 itens por célula, cada r tem muita in
 
 // Resultado de cada tabela (um por nível TRI), mostrado abaixo do título da grade
 export const TEXTO_RESULTADO_DIFICULDADE = {
-  facil: `Nas questões fáceis, o r vai de −0,52 a 0,45, e o sinal muda entre anos e áreas. Ou seja, a quantidade de caracteres não define o acerto nesse nível: a dificuldade das questões não necessariamente tem relação com o tamanho do texto. ${FRASE_INCERTEZA_HOLM}`,
-  media: `Nas questões médias, o r vai de −0,35 a 0,64. A célula de maior r (2020, MT, r = 0,64) é também a de menor p ajustado (0,74), então não sustenta conclusão. A dificuldade das questões não necessariamente tem relação com a quantidade de caracteres. ${FRASE_INCERTEZA_HOLM}`,
-  dificil: `Nas questões difíceis, o r vai de −0,65 a 0,30, com o sinal variando entre anos e áreas. Nem a célula de maior efeito negativo (2022, CN, r = −0,65) é significativa. A dificuldade das questões não necessariamente tem relação com a quantidade de caracteres. ${FRASE_INCERTEZA_HOLM}`
-}
-
-export const TEXTO_COLUNAS_DIFICULDADE = {
-  titulo: 'Correlação por Nível de Dificuldade',
-  subtitulo:
-    'Coeficiente de Spearman entre caracteres da questão e percentual de acerto, para cada nível de dificuldade TRI, no ano escolhido.',
-  explicacao: [
-    'Cada aba mostra um ano. Cada coluna é o r dos itens de um nível de dificuldade TRI. O filtro de dia e área recalcula as três colunas só com os itens do recorte escolhido.',
-    '',
-    'Itens sem parâmetro b (dificuldade TRI) ficam de fora. O p de cada coluna é ajustado por Holm sobre os 3 níveis do mesmo recorte. A escala vai de −1 a 1, a mesma do mapa de calor.'
-  ],
-  notas: [
-    'Cada coluna é o coeficiente de Spearman (r) dos itens de um nível, no recorte escolhido (ano, dia e áreas). O n abaixo de cada coluna mostra quantos itens entraram.',
-    'Cor: verde = correlação positiva (r ≥ 0), ou seja, itens com mais caracteres tendem a ter mais acerto. Azul = correlação negativa (r < 0), ou seja, itens com mais caracteres tendem a ter menos acerto. A altura da barra mostra a força.',
-    'Quanto menos itens no recorte, mais instável o r. Por isso um dia ou uma área isolada tem r com muito mais incerteza que o ano inteiro.',
-    'Leitura com cuidado: a dificuldade TRI é quase o próprio acerto (Spearman ≈ −0,89). Por isso a correlação dentro de cada nível não é independente do desfecho e não deve ser lida como efeito do tamanho do texto.'
-  ]
+  facil: `Nas questões fáceis, a maioria dos quadrados (14 de 20) tem r negativo, ou seja, questões mais longas tendem a acertar menos. Mas o sinal muda entre anos e áreas, e nenhum quadrado se sustenta na correção de Holm. Então o gráfico não mostra uma relação consistente nesse nível.`,
+  media: `Nas questões médias, o quadrado com a relação positiva mais forte é 2020 (MT). Ele não se sustenta quando todas as células são corrigidas juntas. Como nos outros níveis, o sinal varia entre anos e áreas, então não há uma relação consistente.`,
+  dificil: `Nas questões difíceis, o quadrado com a relação negativa mais forte é 2022 (CN). Ele também não se sustenta na correção. O sinal varia entre anos e áreas, então o gráfico não mostra uma relação consistente nesse nível.`
 }
 
 export const TEXTO_METADES_CARACTERES = {
   titulo: 'Acerto por Quantidade de Caracteres e Nível de Dificuldade',
-  subtitulo:
-    'Porcentagem média de acerto das questões com menos caracteres e das com mais caracteres, em cada nível de dificuldade TRI, no ano escolhido.',
+  // Recebe o ano da aba selecionada (ex.: 2025)
+  subtitulo: (ano) =>
+    `Em cada nível, as questões são divididas pela mediana de caracteres. Cada barra mostra o percentual médio de acerto de uma dessas metades no ano de ${ano}.`,
   explicacao: [
-    'Para cada nível, as questões são divididas pela mediana de caracteres do próprio nível e do recorte escolhido: menos caracteres = até a mediana; mais caracteres = acima dela.',
-    'Cada barra é a média de acerto das questões daquela metade. Passe o mouse sobre a barra para ver os caracteres médios, a faixa e o número de itens.',
+    'Para cada nível, as questões são divididas pela mediana de caracteres do próprio nível e do recorte escolhido.',
+    '',
+    'Cada barra é a média de acerto das questões daquela metade.',
+    '',
     'Filtro: a aba é o ano escolhido. Com Todos os dias, agrupa os itens dos dois dias; com Dia 1 ou Dia 2, usa só as áreas daquele dia.'
   ],
   notas: [
-    'Como ler: a diferença entre as duas barras de cada nível é a diferença de acerto (em pontos percentuais) entre questões mais curtas e mais longas. O mapa de calor mostra só a ordem (r); este gráfico mostra o tamanho da diferença.',
-    'Amostra: cada barra usa a metade dos itens do recorte. Em um ano só, com um dia ou uma área, sobram poucos itens por barra (a contagem aparece no tooltip). Diferenças pequenas nesses recortes podem ser ruído.',
-    'Leitura com cuidado: o nível TRI é definido pelo próprio acerto. Por isso as barras de cada nível já são parecidas entre si e a diferença dentro do nível não é um efeito independente do tamanho do texto.',
+    'O nível TRI é definido pelo próprio acerto, por isso as barras de cada nível já são parecidas entre si e a diferença dentro do nível não é um efeito independente do tamanho do texto.',
     'A mediana é recalculada dentro de cada nível e recorte, então a faixa de caracteres muda entre as abas. Compare as barras dentro do mesmo gráfico, não entre anos ou filtros diferentes.'
   ]
 }
@@ -126,19 +137,32 @@ export const TEXTO_METADES_CARACTERES = {
 // ====grafico dispersao itens - textos da dispersão caracteres × acerto por item
 export const TEXTO_DISPERSAO_ITENS = {
   titulo: 'Dispersão: Caracteres da Questão × Acerto',
-  subtitulo:
-    'Cada ponto é uma questão. A reta mostra a tendência geral entre o tamanho do texto e o acerto, no ano escolhido.',
+  // Recebe o ano da aba selecionada (ex.: 2025)
+  subtitulo: (ano) =>
+    `Cada ponto é uma questão, colorido pelo nível de dificuldade. A reta mostra a tendência geral entre o tamanho do texto e o acerto, no ano de ${ano}. A faixa em volta da reta é o intervalo de confiança de 95%.`,
   explicacao: [
-    'Para que serve: mostra a relação entre caracteres e acerto questão por questão, com uma reta que resume a tendência do recorte.',
-    'Cada ponto é um item. A cor mostra o nível de dificuldade TRI. Passe o mouse sobre o ponto para ver o item, os caracteres e o acerto.',
-    'A reta é a tendência geral do recorte, com todos os níveis juntos. A faixa azul é o intervalo de confiança de 95% da reta.',
-    'A reta dá a inclinação geral, mas não dá a diferença por nível. Para comparar níveis, veja o gráfico Acerto por Quantidade de Caracteres e Nível de Dificuldade.'
+    'Apenas questões com nível TRI definido são incluídos, os 10 itens sem nível TRI ficam de fora dos pontos e da reta.',
+    '',
+    'Cálculos:',
+    '• Unidade: item = ano, área e código do item. Cada item aparece em todos os cadernos, mas conta uma vez só.',
+    '• Caracteres: número de caracteres do enunciado e das alternativas (lido do caderno Azul, pois o texto é igual em todas as cores).',
+    '• Acerto (%) = total de acertos ÷ total de respondentes de todas as cores × 100.',
+    '• Nível TRI: fácil se b < 0; média se 0 ≤ b < 1,5; difícil se b ≥ 1,5 (b = parâmetro de dificuldade da TRI).',
+    '',
+    'Reta: regressão linear simples por mínimos quadrados, com caracteres como variável explicativa e acerto como variável resposta.',
+    '',
+    'Faixa: o IC de 95% usa a distribuição t de Student com n − 2 graus de liberdade.',
+    '',
+    'p da reta: teste t paramétrico, sem correção para vários testes.',
   ],
   notas: [
-    'Como ler: a inclinação mostra quantos pontos percentuais o acerto muda, em média, a cada 100 caracteres a mais. Uma reta quase horizontal indica que o tamanho do texto pouco muda o acerto no recorte.',
-    'Teste: o p da reta vem do teste t de um modelo linear simples. Não há correção para vários testes, diferente do mapa de calor, que usa sorteio e correção de Holm. Leia o p com cuidado.',
-    'Amostra: com um dia ou uma área, o número de itens cai e a faixa de IC fica mais larga. Os 10 itens sem nível TRI ficam de fora deste gráfico.',
-    'Leitura com cuidado: o nível TRI é definido pelo próprio acerto (Spearman ≈ −0,89). As cores mostram o nível, mas os pontos de cada cor não são um efeito independente do tamanho do texto.'
+    'Reta azul: ela cresce ou decresce conforme o tamanho da questão varia. A inclinação indica a variação média, em pontos percentuais, do acerto a cada 100 caracteres adicionais. Quando a reta é praticamente horizontal, a variação do tamanho do texto pouco altera o acerto neste recorte.',
+    'Correlação de Pearson (r) mostra a força e o sentido da relação linear. Quanto mais perto de +1 ou −1 mais forte é a relação.',
+    'O valor de p (p): mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
+    'p baixo: um r seria raro sem relação, há indício de relação.',
+    'p alto: um r seria comum sem relação. O resultado é compatível com ausência de relação.',
+    'O n é o número de itens do recorte: com poucos itens, relações fracas podem não ser detectadas. Esses valores mudam conforme o dia e as áreas escolhidos no filtro.',
+    'O nível TRI é definido pelo próprio acerto, então itens mais difíceis tendem a ter acerto menor. Por isso, as cores mostram o nível, mas a diferença entre os pontos de cada cor não é um efeito independente do tamanho do texto.'
   ]
 }
 // ====fim grafico dispersao itens

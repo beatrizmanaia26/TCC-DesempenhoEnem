@@ -28,7 +28,7 @@
         fill="currentColor"
       />
     </svg>
-    <div v-if="tooltip" ref="tooltipRef" class="tooltip" :style="estiloTooltip">
+    <div v-if="tooltip" ref="tooltipRef" class="tooltip" :style="{ ...estiloTooltip, '--largura-tooltip': largura + 'px' }">
       {{ tooltip }}
     </div>
   </span>
@@ -45,6 +45,10 @@ defineProps({
   tooltip: {
     type: String,
     default: '',
+  },
+  largura: {
+    type: Number,
+    default: 250,
   },
   warning: {
     type: Boolean,
@@ -115,7 +119,7 @@ function posicionarTooltip() {
   border-radius: 6px;
   font-size: 0.85rem;
   white-space: pre-line;
-  width: 250px;
+  width: var(--largura-tooltip, 250px);
   margin-bottom: 0.5rem;
   opacity: 0;
   visibility: hidden;

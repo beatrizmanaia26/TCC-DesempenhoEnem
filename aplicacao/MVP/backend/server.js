@@ -712,6 +712,7 @@ function carregarCorrelacoesTempo() {
       ano: numeroOuNulo(colunas[indice.ano]),
       r: Number(colunas[indice.coeficiente_r]),
       p: Number(colunas[indice.p_value]),
+      pBruto: Number(colunas[indice.p_value_bruto]),
       n: Number(colunas[indice.quantidade_pares])
     }))
 
@@ -751,6 +752,7 @@ function carregarCorrelacoesDificuldade() {
       dificuldade: colunas[indice.dificuldade],
       r: Number(colunas[indice.coeficiente_r]),
       p: Number(colunas[indice.p_value]),
+      pBruto: Number(colunas[indice.p_value_bruto]),
       n: Number(colunas[indice.quantidade_pares])
     }))
 
@@ -763,6 +765,7 @@ function carregarCorrelacoesDificuldade() {
       dificuldade: colunas[indice.dificuldade],
       r: Number(colunas[indice.coeficiente_r]),
       p: Number(colunas[indice.p_value]),
+      pBruto: Number(colunas[indice.p_value_bruto]),
       n: Number(colunas[indice.quantidade_pares])
     }))
 

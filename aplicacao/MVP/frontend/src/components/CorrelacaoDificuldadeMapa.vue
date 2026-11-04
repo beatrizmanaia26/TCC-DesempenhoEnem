@@ -2,7 +2,7 @@
   <div class="correlacao-dificuldade-mapa">
     <div class="correlacoes-cabecalho">
       <h3 class="correlacoes-titulo">{{ TEXTO_MAPA_DIFICULDADE.titulo }}</h3>
-      <InfoIcon warning :tooltip="tooltipMapa" />
+      <InfoIcon warning :tooltip="tooltipMapa" class="tooltip-largo" />
     </div>
     <p class="correlacoes-subtitulo">{{ TEXTO_MAPA_DIFICULDADE.subtitulo }}</p>
 
@@ -13,7 +13,6 @@
       <div v-for="grade in grades" :key="grade.id" class="grade-correlacao">
         <h4 class="grade-titulo">
           {{ grade.titulo }}
-          <InfoIcon warning :tooltip="grade.tooltip" />
         </h4>
         <p class="grade-resultado">{{ grade.resultado }}</p>
         <svg
@@ -69,6 +68,14 @@
                 :fill="celula.corTexto"
                 text-anchor="middle"
                 dominant-baseline="middle"
+              >p bruto = {{ formatarP(celula.pBruto) }}</text>
+              <text
+                :x="celula.x + (TAM - GAP) / 2"
+                :y="celula.y + (TAM - GAP) / 2 + 32"
+                class="p-celula"
+                :fill="celula.corTexto"
+                text-anchor="middle"
+                dominant-baseline="middle"
               >p (Holm) = {{ formatarP(celula.p) }}</text>
             </template>
             <text
@@ -118,8 +125,42 @@
     </div>
 
     <ul v-if="!carregando && !erro" class="correlacoes-legenda">
-      <li v-for="(texto, indice) in notas" :key="indice">{{ texto }}</li>
+      <li v-for="(texto, indice) in notas" :key="indice">
+        <template v-for="(parte, i) in dividirComLinks(texto)" :key="i">
+          <a
+            v-if="parte.url"
+            :href="parte.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="correlacoes-link"
+            >{{ parte.texto }}</a
+          >
+          <template v-else>{{ parte.texto }}</template>
+        </template>
+      </li>
     </ul>
+
+    <div v-if="!carregando && !erro" class="navigation">
+      <button
+        type="button"
+        class="btn-nav"
+        :disabled="indiceNivel === 0"
+        aria-label="Nível anterior"
+        @click="nivelAnterior"
+      >
+        ←
+      </button>
+      <span class="group-indicator">{{ indiceNivel + 1 }} / {{ NIVEIS.length }}</span>
+      <button
+        type="button"
+        class="btn-nav"
+        :disabled="indiceNivel === NIVEIS.length - 1"
+        aria-label="Próximo nível"
+        @click="proximoNivel"
+      >
+        →
+      </button>
+    </div>
   </div>
 </template>
 
@@ -129,8 +170,8 @@ import { computed, ref, onMounted } from 'vue'
 import http from '../services/http.js'
 import {
   TEXTO_MAPA_DIFICULDADE,
-  TEXTO_MAPA_DIFICULDADE_GRADE,
-  TEXTO_RESULTADO_DIFICULDADE
+  TEXTO_RESULTADO_DIFICULDADE,
+  LINKS_TERMOS
 } from '../config/textosAnalises.js'
 import InfoIcon from './icons/InfoIcon.vue'
 
@@ -140,7 +181,7 @@ const ANOS = [2020, 2022, 2023, 2024, 2025]
 const AREAS = ['CH', 'LC', 'CN', 'MT']
 const NIVEIS = [
   { chave: 'facil', rotulo: 'Fácil' },
-  { chave: 'media', rotulo: 'Média' },
+  { chave: 'media', rotulo: 'Médio' },
   { chave: 'dificil', rotulo: 'Difícil' }
 ]
 
@@ -163,9 +204,23 @@ const MARCAS_BARRA = [
 ]
 
 const tooltipMapa = TEXTO_MAPA_DIFICULDADE.explicacao.join('\n')
-const tooltipGrade = TEXTO_MAPA_DIFICULDADE_GRADE.filter((linha) => linha !== '').join('\n')
 
 const notas = TEXTO_MAPA_DIFICULDADE.notas
+
+// Separa o texto em partes: trechos comuns e trechos que são link (termo de LINKS_TERMOS)
+function dividirComLinks(texto) {
+  const partes = [{ texto, url: null }]
+  LINKS_TERMOS.forEach(({ termo, url }) => {
+    for (let i = 0; i < partes.length; i++) {
+      if (partes[i].url || !partes[i].texto.includes(termo)) continue
+      const [antes, ...depois] = partes[i].texto.split(termo)
+      const resto = depois.join(termo)
+      partes.splice(i, 1, { texto: antes, url: null }, { texto: termo, url }, { texto: resto, url: null })
+      i += 2
+    }
+  })
+  return partes.filter((parte) => parte.texto !== '')
+}
 
 const dados = ref([])
 const carregando = ref(false)
@@ -231,6 +286,7 @@ function montarGrade(nivel) {
         vazia: false,
         r: registro.r,
         p: registro.p,
+        pBruto: registro.pBruto,
         cor: `rgb(${rgb.join(', ')})`,
         corTexto: corTextoPara(rgb)
       }
@@ -239,8 +295,7 @@ function montarGrade(nivel) {
 
   return {
     id: nivel.chave,
-    titulo: `${nivel.rotulo}: caracteres da questão × acerto, por ano e área`,
-    tooltip: tooltipGrade,
+    titulo: `Nível de dificuldade: ${nivel.rotulo.toLowerCase()}`,
     resultado: TEXTO_RESULTADO_DIFICULDADE[nivel.chave],
 
     ariaLabel: `Mapa de calor da correlação de Spearman entre caracteres da questão e acerto, nível ${nivel.rotulo.toLowerCase()}, por ano e área`,
@@ -254,7 +309,19 @@ function montarGrade(nivel) {
   }
 }
 
-const grades = computed(() => NIVEIS.map(montarGrade))
+// Nível exibido, navegado com as setas (Fácil por padrão). A troca é imediata.
+const indiceNivel = ref(0)
+
+const nivelAnterior = () => {
+  if (indiceNivel.value > 0) indiceNivel.value--
+}
+
+const proximoNivel = () => {
+  if (indiceNivel.value < NIVEIS.length - 1) indiceNivel.value++
+}
+
+// Um único mapa: o do nível atual
+const grades = computed(() => [montarGrade(NIVEIS[indiceNivel.value])])
 
 async function carregar() {
   carregando.value = true
@@ -356,11 +423,64 @@ onMounted(carregar)
   fill: #000000;
 }
 
+/* Tooltip deste gráfico mais largo, para caber o cálculo sem ficar alto demais */
+.tooltip-largo :deep(.tooltip) {
+  width: 420px;
+}
+
+@media (max-width: 768px) {
+  .tooltip-largo :deep(.tooltip) {
+    width: 300px;
+  }
+}
+
+.correlacoes-link {
+  color: #0070c0;
+  text-decoration: underline;
+}
+
 .correlacoes-legenda {
   margin: 1rem 0 0;
   padding-left: 1.25rem;
   color: #666;
   font-size: 0.85rem;
+}
+
+/* Navegação entre níveis: mesmo estilo das setas de QuestionDifficultySelector.vue */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.btn-nav {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-nav:hover:not(:disabled) {
+  border-color: #0070C0;
+  color: #0070C0;
+  background: #f9f9f9;
+}
+
+.btn-nav:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.group-indicator {
+  color: #666;
+  font-weight: 600;
+  font-size: 1rem;
 }
 </style>
 
