@@ -16,6 +16,7 @@
           <button
             type="button"
             class="btn-exportar"
+            :disabled="!payload"
             :aria-expanded="menuExportarAberto ? 'true' : 'false'"
             aria-haspopup="menu"
             @click="menuExportarAberto = !menuExportarAberto"
@@ -42,7 +43,6 @@
 
     <section v-if="!payload" class="panel empty-state">
       <p>Não há dados de análise nesta sessão. Envie uma prova e preencha os parâmetros primeiro.</p>
-      <button class="button primary" @click="goToForm">Ir para o formulário</button>
     </section>
 
     <template v-else>
@@ -91,29 +91,45 @@
           <div class="info-label">Velocidade de leitura considerada:</div>
           <div class="info-value">
             {{ readingSpeed }} caracteres/minuto
-            <span class="info-reference">(Referência: Messias et al., 2008)</span>
+            <span v-if="readingSpeed === DEFAULT_READING_SPEED" class="info-reference">(Referência: Messias et al., 2008)</span>
           </div>
         </div>
-        <div class="tempo-bloco">
-        <div class="tempo-cabecalho">
-          <h2>Distribuição do Tempo de Prova</h2>
-          <InfoIcon warning :tooltip="tooltipTempo" />
+        <div v-if="temAnaliseTempo" class="analise-tempo-bloco">
+          <h2>Análise do Tempo de Prova</h2>
+          <div class="tempo-bloco">
+          <div class="tempo-cabecalho">
+            <h2>Distribuição do Tempo de Prova</h2>
+            <InfoIcon warning :tooltip="tooltipTempo" />
+          </div>
+          <p class="tempo-subtitulo">Distribuição do tempo entre leitura e resolução das questões objetivas</p>
+          <div v-if="timeDistribution.total > 0" class="tempo-conteudo">
+            <svg viewBox="0 0 200 200" class="pizza" role="img" aria-label="Distribuição do tempo da prova">
+              <path v-for="fatia in fatiasTempo" :key="fatia.chave" :d="fatia.caminho" :fill="fatia.cor" />
+            </svg>
+            <ul class="legenda">
+              <li v-for="fatia in fatiasTempo" :key="fatia.chave">
+                <span class="legenda-cor" :style="{ background: fatia.cor }"></span>
+                <span class="legenda-rotulo">{{ fatia.rotulo }}</span>
+                <span class="legenda-valor">{{ fatia.valor.toFixed(2) }} min ({{ formatarPercentual(fatia.percentual) }}%)</span>
+              </li>
+            </ul>
+          </div>
+          <p v-else>Informe a duração da prova para ver a distribuição do tempo.</p>
+          <div v-if="questions.length > 0" class="tempo-grafico-leitura">
+            <GraficoLeituraQuestoes
+              :itens="leituraPorQuestao"
+              :tempo-medio="tempoMedioPorQuestao"
+              :total-questoes="questions.length"
+              :tooltip="tooltipLeitura"
+            />
+          </div>
+          </div>
         </div>
-        <p class="tempo-subtitulo">Distribuição do tempo entre leitura e resolução das questões objetivas</p>
-        <div v-if="timeDistribution.total > 0" class="tempo-conteudo">
-          <svg viewBox="0 0 200 200" class="pizza" role="img" aria-label="Distribuição do tempo da prova">
-            <path v-for="fatia in fatiasTempo" :key="fatia.chave" :d="fatia.caminho" :fill="fatia.cor" />
-          </svg>
-          <ul class="legenda">
-            <li v-for="fatia in fatiasTempo" :key="fatia.chave">
-              <span class="legenda-cor" :style="{ background: fatia.cor }"></span>
-              <span class="legenda-rotulo">{{ fatia.rotulo }}</span>
-              <span class="legenda-valor">{{ fatia.valor.toFixed(2) }} min ({{ formatarPercentual(fatia.percentual) }}%)</span>
-            </li>
-          </ul>
-        </div>
-        <p v-else>Informe a duração da prova para ver a distribuição do tempo.</p>
-        </div>
+      </section>
+
+      <section v-if="temAnaliseTamanho" class="panel prova-palavras-panel">
+        <h2>Análise do Tamanho das Questões</h2>
+        <GraficoPalavrasProva :questoes="questoesPalavras" />
       </section>
 
       <section class="panel">
@@ -177,6 +193,8 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import FilterIcon from '@/components/icons/FilterIcon.vue'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
+import GraficoLeituraQuestoes from '@/components/GraficoLeituraQuestoes.vue'
+import GraficoPalavrasProva from '@/components/GraficoPalavrasProva.vue'
 import { useRouter } from 'vue-router'
 import { useAnalysisStore } from '@/stores/analysisStore'
 import { DEFAULT_READING_SPEED, TODOS_TIPOS_ANALISE, ANALYSIS_TYPE_OPTIONS, formatarPercentual } from '@/constants/analysisConfig'
@@ -232,6 +250,25 @@ const timeDistribution = computed(() => {
   const restante = Math.max(0, total - questoes - textos)
   return { total, questoes, textos, restante }
 })
+
+// Gráfico por questão: leitura de cada questão e tempo médio (restante ÷ nº de questões)
+const leituraPorQuestao = computed(() => questions.value.map((question) => ({
+  rotulo: `Q${question.questao}`,
+  caracteres: contarCaracteres(question.texto_contado),
+  minutos: contarCaracteres(question.texto_contado) / readingSpeed.value,
+  dificuldade: question.dificuldade ?? null
+})))
+const tempoMedioPorQuestao = computed(() => questions.value.length
+  ? timeDistribution.value.restante / questions.value.length
+  : 0)
+const tooltipLeitura = computed(() => [
+  'Compara o tempo de leitura de cada questão com o tempo médio de resolução. A linha preta marca esse tempo médio e a barra cinza mostra a margem restante para resolver o item.',
+  '',
+  'Cálculos:',
+  `• Leitura da questão = caracteres da questão ÷ ${readingSpeed.value} (enunciado e alternativas, sem espaços).`,
+  `• Tempo médio (linha preta) = tempo restante da prova ÷ ${questions.value.length} questões.`,
+  `• Margem (barra cinza até a linha preta) = máx(0, tempo médio − leitura da questão) (fatia do tempo restante dividida igualmente entre as ${questions.value.length} questões; zera se a leitura ultrapassar a linha preta).`
+].join('\n'))
 
 const difficultyLevels = [
   { key: 'facil', label: 'Fácil' },
@@ -291,6 +328,19 @@ const rascunhoFiltros = ref(new Set(analisesEscolhidas.value))
 const showFilterMenu = ref(false)
 
 const analisesAplicadas = computed(() => filterOptions.filter((option) => selectedFilters.value.has(option.id)))
+// Pizza e gráfico de leitura só aparecem quando 'Análise do Tempo de Prova' está aplicada no filtro
+const temAnaliseTempo = computed(() => selectedFilters.value.has('reading-time'))
+const temAnaliseTamanho = computed(() => selectedFilters.value.has('word-count'))
+// Palavras por questão: enunciado (quantidade_palavras) e alternativas (split por espaço, como no backend do ENEM)
+const contarPalavrasAlternativas = (alternativas = []) => alternativas.reduce((total, alternativa) => {
+  const texto = String(alternativa?.texto ?? '').trim()
+  return total + (texto ? texto.split(/\s+/).length : 0)
+}, 0)
+const questoesPalavras = computed(() => questions.value.map((question) => ({
+  rotulo: `Q${question.questao}`,
+  palavras: Number(question.quantidade_palavras) || 0,
+  palavrasAlternativas: contarPalavrasAlternativas(question.alternativas)
+})))
 const todasMarcadas = computed(() => rascunhoFiltros.value.size === todasAnalises.length)
 const algumaMarcada = computed(() => rascunhoFiltros.value.size > 0 && !todasMarcadas.value)
 
@@ -440,6 +490,8 @@ const goToForm = () => {
 .btn-voltar-topo:hover { opacity: .9; }
 .btn-exportar { display: inline-flex; align-items: center; gap: .5rem; background: white; color: #0070C0; border: 2px solid #0070C0; padding: .6rem 1.25rem; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color .3s ease, color .3s ease; }
 .btn-exportar:hover { background: #0070C0; color: white; }
+.btn-exportar:disabled { opacity: .5; cursor: not-allowed; background: white; color: #0070C0; }
+.btn-exportar:disabled:hover { background: white; color: #0070C0; }
 .menu-exportar { position: absolute; top: calc(100% + .5rem); right: 0; z-index: 10; list-style: none; margin: 0; padding: .5rem; min-width: 240px; background: white; border: 2px solid #0070C0; border-radius: 8px; box-shadow: 0 8px 25px rgba(0, 0, 0, .15); text-align: left; }
 .item-exportar { display: flex; align-items: center; gap: .75rem; width: 100%; padding: .6rem .75rem; background: none; border: none; border-radius: 6px; color: #0070C0; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; }
 .item-exportar:hover, .item-exportar:focus-visible { background: #E0F2FE; outline: none; }
@@ -471,7 +523,10 @@ const goToForm = () => {
 .filter-aplicar { background: #0070C0; color: white; border: none; padding: .5rem 1.25rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background .3s ease; }
 .filter-aplicar:hover { background: #005a9e; }
 .prova-info-panel { padding: 1.5rem 1.5rem 1.5rem; }
+.analise-tempo-bloco { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0; }
+.analise-tempo-bloco > h2 { margin: 0 0 1rem; color: #263238; font-size: 1.25rem; }
 .tempo-bloco { padding: 1.5rem; background: white; border-radius: 8px; margin: 1.5rem 0 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
+.tempo-grafico-leitura { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0; }
 .info-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; margin-bottom: 1rem; }
 .info-item:last-child { margin-bottom: 0; }
 .info-label { color: #333; font-size: .95rem; font-weight: 600; }
