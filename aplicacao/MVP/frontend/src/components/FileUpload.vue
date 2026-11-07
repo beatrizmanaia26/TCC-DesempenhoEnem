@@ -33,23 +33,20 @@
         </div>
       </div>
     </div>
-
-    <!-- Modal de Erro -->
-    <div v-if="showErrorModal" class="modal-overlay" @click="closeErrorModal">
-      <div class="modal-content" @click.stop>
-        <div class="modal-header">
-          <h3>Formato Inválido</h3>
-          <button @click="closeErrorModal" class="modal-close">✕</button>
-        </div>
-        <div class="modal-body">
+    <section class="error-section" v-if="showErrorModal">
+      <div class="error-box">
+        <h3>{{ errorType === 'size' ? 'Arquivo muito grande' : 'Formato Inválido' }}</h3>
+        <template v-if="errorType === 'size'">
+          <p>O arquivo <strong>"{{ invalidFileName }}"</strong> tem <strong>{{ formatFileSize(invalidFileSize) }}</strong>, acima do limite de <strong>10 MB</strong>.</p>
+          <p>Por favor, selecione um arquivo <strong>PDF</strong> de até 10 MB.</p>
+        </template>
+        <template v-else>
           <p>O arquivo <strong>"{{ invalidFileName }}"</strong> não é um PDF válido.</p>
           <p>Por favor, selecione apenas arquivos em formato <strong>PDF</strong>.</p>
-        </div>
-        <div class="modal-footer">
-          <button @click="closeErrorModal" class="btn-confirm">Entendido</button>
-        </div>
+        </template>
+        <button @click="closeErrorModal" class="btn btn-primary">Entendido</button>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -63,6 +60,11 @@ const selectedFile = ref(null)
 const isDragging = ref(false)
 const showErrorModal = ref(false)
 const invalidFileName = ref('')
+const invalidFileSize = ref(0)
+const errorType = ref('format')
+
+
+const MAX_FILE_SIZE = 10 * 1024 * 1024
 
 const emit = defineEmits(['file-selected'])
 
@@ -85,12 +87,7 @@ const triggerFileInput = () => {
 const handleFileChange = (event) => {
   const file = event.target.files[0]
   if (file) {
-    if (isValidFile(file)) {
-      selectedFile.value = file
-      emit('file-selected', file)
-    } else {
-      showError(file.name)
-    }
+    processFile(file)
   }
 }
 
@@ -99,12 +96,19 @@ const handleDrop = (event) => {
   isDragging.value = false
   const file = event.dataTransfer.files[0]
   if (file) {
-    if (isValidFile(file)) {
-      selectedFile.value = file
-      emit('file-selected', file)
-    } else {
-      showError(file.name)
-    }
+    processFile(file)
+  }
+}
+
+// Ponto único de validação para seleção e arrastar
+const processFile = (file) => {
+  if (!isValidFile(file)) {
+    showError(file, 'format')
+  } else if (!isWithinSizeLimit(file)) {
+    showError(file, 'size')
+  } else {
+    selectedFile.value = file
+    emit('file-selected', file)
   }
 }
 
@@ -113,14 +117,22 @@ const isValidFile = (file) => {
   return validTypes.includes(file.type)
 }
 
-const showError = (fileName) => {
-  invalidFileName.value = fileName
+const isWithinSizeLimit = (file) => {
+  return file.size <= MAX_FILE_SIZE
+}
+
+const showError = (file, type) => {
+  invalidFileName.value = file.name
+  invalidFileSize.value = file.size
+  errorType.value = type
   showErrorModal.value = true
 }
 
 const closeErrorModal = () => {
   showErrorModal.value = false
   invalidFileName.value = ''
+  invalidFileSize.value = 0
+  errorType.value = 'format'
 }
 
 const formatFileSize = (bytes) => {
@@ -248,111 +260,63 @@ const removeFile = () => {
   transform: scale(1.1);
 }
 
-/* MODAL STYLES */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.modal-content {
-  background: white;
+/* ERRO DE FORMATO INVÁLIDO (mesmo padrão visual do bloco "Erro ao preparar a análise") */
+.error-section {
+  margin-top: 1.5rem;
+  border: 2px solid #ff6b6b;
+  background: #fff5f5;
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  max-width: 400px;
-  width: 90%;
-  animation: slideUp 0.3s ease;
+  padding: 2rem;
+  animation: slideIn 0.3s ease-out;
 }
 
-@keyframes slideUp {
+@keyframes slideIn {
   from {
-    transform: translateY(30px);
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  border-bottom: 1px solid #e0e0e0;
+.error-box {
+  text-align: center;
 }
 
-.modal-header h3 {
-  margin: 0;
+.error-box h3 {
   color: #ff6b6b;
-  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #999;
-  transition: color 0.3s ease;
+.error-box p {
+  color: #d32f2f;
+  margin-bottom: 1.5rem;
 }
 
-.modal-close:hover {
-  color: #333;
+.error-box strong {
+  color: #d32f2f;
 }
 
-.modal-body {
-  padding: 1.5rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.modal-body p {
-  margin: 0.75rem 0;
-}
-
-.modal-body strong {
-  color: #333;
-}
-
-.modal-footer {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid #e0e0e0;
-  text-align: right;
-}
-
-.btn-confirm {
-  background: #0070C0;
-  color: white;
-  border: none;
+.btn {
   padding: 0.75rem 1.5rem;
+  border: none;
   border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   font-weight: 600;
-  transition: all 0.3s ease;
 }
 
-.btn-confirm:hover {
-  background: #0056A0;
+.btn-primary {
+  background: linear-gradient(135deg, #0070C0 0%, #047857 100%);
+  color: white;
+}
+
+.btn-primary:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 112, 192, 0.5);
 }
 
 /* Screen reader only: oculta visualmente mas mantem acessivel para leitores de tela */
