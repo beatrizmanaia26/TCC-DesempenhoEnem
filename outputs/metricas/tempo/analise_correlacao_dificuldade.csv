@@ -1,64 +1,64 @@
 tipo_analise,area,ano,dificuldade,coeficiente_r,p_value,p_value_bruto,quantidade_pares,interpretacao
-TIPO_2_caracteres_questao_vs_acerto_por_dificuldade,TODAS,TODOS,facil,0.3300747595060872,0.00014999250037498125,4.999750012499375e-05,308,fraca
-TIPO_2_caracteres_questao_vs_acerto_por_dificuldade,TODAS,TODOS,media,0.5422166947493261,0.00014999250037498125,4.999750012499375e-05,305,moderada
-TIPO_2_caracteres_questao_vs_acerto_por_dificuldade,TODAS,TODOS,dificil,0.29810517823510113,0.00014999250037498125,4.999750012499375e-05,295,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2020,facil,-0.010714285714285713,1.0,0.9735013249337533,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2020,media,-0.16785714285714282,1.0,0.5454227288635568,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2020,dificil,0.19839150013118906,1.0,0.4716264186790661,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2020,facil,-0.07843137254901962,1.0,0.7652117394130293,17,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2020,media,0.2573529411764706,1.0,0.31268436578171094,17,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2020,dificil,-0.3205882352941176,1.0,0.22608869556522174,16,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2020,facil,0.07857142857142857,1.0,0.7875606219689015,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2020,media,0.16428571428571426,1.0,0.55987200639968,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2020,dificil,0.015384615384615385,1.0,0.9632518374081296,14,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2020,facil,-0.1964285714285714,1.0,0.4846757662116894,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2020,media,0.6357142857142856,0.743962801859907,0.01239938003099845,15,moderada
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2020,dificil,0.26153846153846155,1.0,0.36343182840857957,14,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2022,facil,-0.3071428571428571,1.0,0.26028698565071745,15,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2022,media,0.3571428571428571,1.0,0.1880905954702265,15,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2022,dificil,0.15604395604395604,1.0,0.5903204839758012,14,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2022,facil,0.2132352941176471,1.0,0.41212939353032346,17,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2022,media,-0.35294117647058826,1.0,0.16534173291335433,17,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2022,dificil,0.11176470588235293,1.0,0.6815159242037898,16,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2022,facil,-0.09010989010989012,1.0,0.7619619019049048,14,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2022,media,0.6,1.0,0.025398730063496824,14,moderada
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2022,dificil,-0.6538461538461539,1.0,0.019099045047747613,13,moderada
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2022,facil,-0.33571428571428563,1.0,0.216039198040098,15,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2022,media,-0.14725274725274726,1.0,0.6138193090345483,14,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2022,dificil,-0.12087912087912088,1.0,0.6818659067046647,14,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2023,facil,-0.17889116280878825,1.0,0.5223738813059347,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2023,media,-0.1357142857142857,1.0,0.6347182640867957,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2023,dificil,-0.16428571428571426,1.0,0.5592720363981801,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2023,facil,-0.31617647058823534,1.0,0.21658917054147292,17,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2023,media,-0.009803921568627453,1.0,0.9730013499325034,17,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2023,dificil,-0.09705882352941177,1.0,0.7224638768061596,16,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2023,facil,-0.03214285714285714,1.0,0.911254437278136,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2023,media,0.075,1.0,0.7964101794910254,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2023,dificil,-0.3285714285714285,1.0,0.23138843057847108,15,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2023,facil,-0.16785714285714282,1.0,0.5512224388780561,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2023,media,-0.02857142857142857,1.0,0.9257537123143843,14,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2023,dificil,0.02857142857142857,1.0,0.9268536573171341,14,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2024,facil,-0.11071428571428568,1.0,0.6988150592470377,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2024,media,-0.175,1.0,0.5410729463526823,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2024,dificil,0.06071428571428571,1.0,0.8324583770811459,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2024,facil,-0.5220588235294118,1.0,0.03629818509074546,17,moderada
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2024,media,-0.15441176470588236,1.0,0.5555722213889306,17,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2024,dificil,-0.3,1.0,0.25958702064896755,16,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2024,facil,0.44999999999999996,1.0,0.09319534023298835,15,moderada
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2024,media,0.4107142857142856,1.0,0.13009349532523373,15,moderada
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2024,dificil,0.22637362637362637,1.0,0.43377831108444576,14,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2024,facil,0.11785714285714284,1.0,0.6735663216839158,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2024,media,0.3413763650906046,1.0,0.21048947552622368,15,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2024,dificil,-0.035714285714285705,1.0,0.9045547722613869,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2025,facil,0.049999999999999996,1.0,0.864606769661517,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2025,media,-0.2785714285714285,1.0,0.3177841107944603,15,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2025,dificil,-0.10714285714285714,1.0,0.7051147442627869,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2025,facil,-0.13235294117647062,1.0,0.6166691665416729,17,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2025,media,-0.2622549019607843,1.0,0.3111844407779611,17,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2025,dificil,-0.07058823529411765,1.0,0.792560371981401,16,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2025,facil,0.3802197802197802,1.0,0.1847907604619769,14,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2025,media,0.3362637362637363,1.0,0.24068796560171993,14,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2025,dificil,0.2967032967032967,1.0,0.2986350682465877,14,fraca
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2025,facil,-0.010714285714285713,1.0,0.9773011349432529,15,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2025,media,0.0857142857142857,1.0,0.7769611519424029,14,muito fraca / desprezível
-TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2025,dificil,-0.07692307692307693,1.0,0.7988600569971501,14,muito fraca / desprezível
+TIPO_2_caracteres_questao_vs_acerto_por_dificuldade,TODAS,TODOS,facil,0.2635760462010322,0.00014999250037498125,4.999750012499375e-05,308,fraca
+TIPO_2_caracteres_questao_vs_acerto_por_dificuldade,TODAS,TODOS,media,0.4750901039914153,0.00014999250037498125,4.999750012499375e-05,305,moderada
+TIPO_2_caracteres_questao_vs_acerto_por_dificuldade,TODAS,TODOS,dificil,0.2603006036744921,0.00014999250037498125,4.999750012499375e-05,295,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2020,facil,-0.11081327034354704,1.0,0.6909654517274136,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2020,media,-0.08928571428571427,1.0,0.7524623768811559,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2020,dificil,0.17857142857142855,1.0,0.5189240537973101,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2020,facil,-0.13725490196078433,1.0,0.6003699815009249,17,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2020,media,0.26960784313725494,1.0,0.29053547322633866,17,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2020,dificil,-0.2441176470588235,1.0,0.36118194090295486,16,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2020,facil,-0.06785714285714285,1.0,0.8095595220238988,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2020,media,0.2071428571428571,1.0,0.46332683365831706,15,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2020,dificil,0.0945054945054945,1.0,0.7538123093845308,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2020,facil,-0.09999999999999999,1.0,0.7248137593120344,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2020,media,0.7107142857142856,0.24598770061496927,0.004099795010249488,15,forte
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2020,dificil,0.221978021978022,1.0,0.4417279136043198,14,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2022,facil,-0.3,1.0,0.27068646567671617,15,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2022,media,0.36785714285714277,1.0,0.1767911604419779,15,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2022,dificil,0.08131868131868132,1.0,0.784110794460277,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2022,facil,0.19117647058823534,1.0,0.4645767711614419,17,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2022,media,-0.4093137254901961,1.0,0.10739463026848657,17,moderada
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2022,dificil,0.1411764705882353,1.0,0.6023698815059247,16,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2022,facil,-0.15604395604395604,1.0,0.5890205489725514,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2022,media,0.5252747252747253,1.0,0.056847157642117896,14,moderada
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2022,dificil,-0.5164835164835164,1.0,0.07534623268836559,13,moderada
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2022,facil,-0.3378017434666193,1.0,0.2120393980300985,15,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2022,media,-0.13406593406593406,1.0,0.6475176241187941,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2022,dificil,-0.11208791208791209,1.0,0.7048647567621619,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2023,facil,-0.25357142857142856,1.0,0.36188190590470476,15,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2023,media,-0.18214285714285713,1.0,0.52072396380181,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2023,dificil,-0.22142857142857136,1.0,0.42357882105894706,15,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2023,facil,-0.29675051561739,1.0,0.2432378381080946,17,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2023,media,-0.056372549019607844,1.0,0.8307084645767712,17,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2023,dificil,-0.0823529411764706,1.0,0.7626118694065297,16,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2023,facil,-0.16621990551532057,1.0,0.5561221938903055,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2023,media,0.12142857142857141,1.0,0.6710164491775411,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2023,dificil,-0.44999999999999996,1.0,0.09464526773661316,15,moderada
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2023,facil,-0.1805183920112621,1.0,0.5171241437928104,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2023,media,-0.04615384615384615,1.0,0.8803059847007649,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2023,dificil,0.01978021978021978,1.0,0.951552422378881,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2024,facil,-0.125,1.0,0.6582170891455428,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2024,media,-0.23571428571428568,1.0,0.40447977601119944,15,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2024,dificil,0.014285714285714282,1.0,0.9649017549122544,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2024,facil,-0.5294117647058825,1.0,0.031948402579871006,17,moderada
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2024,media,-0.17892156862745098,1.0,0.49237538123093844,17,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2024,dificil,-0.23823529411764705,1.0,0.3720813959302035,16,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2024,facil,0.46071428571428563,1.0,0.08529573521323934,15,moderada
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2024,media,0.3928571428571428,1.0,0.14664266786660668,15,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2024,dificil,0.33003320301041833,1.0,0.24778761061946902,14,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2024,facil,0.08928571428571427,1.0,0.7487625618719064,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2024,media,0.4057195543223416,1.0,0.13449327533623318,15,moderada
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2024,dificil,0.09999999999999999,1.0,0.7221138943052847,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2025,facil,0.06785714285714285,1.0,0.816609169541523,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2025,media,-0.16428571428571426,1.0,0.5643217839108045,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CH,2025,dificil,0.028571428571428564,1.0,0.9231038448077596,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2025,facil,-0.06127450980392158,1.0,0.8187590620468976,17,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2025,media,-0.24770084361451564,1.0,0.335683215839208,17,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,LC,2025,dificil,-0.14705882352941177,1.0,0.5851207439628019,16,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2025,facil,0.42857142857142855,1.0,0.1311934403279836,14,moderada
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2025,media,0.22637362637362637,1.0,0.43342832858357083,14,fraca
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,CN,2025,dificil,0.16483516483516483,1.0,0.5688215589220539,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2025,facil,0.049999999999999996,1.0,0.8618569071546422,15,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2025,media,0.09010989010989012,1.0,0.7661616919154042,14,muito fraca / desprezível
+TIPO_3_caracteres_questao_vs_acerto_ano_area_dificuldade,MT,2025,dificil,-0.032967032967032975,1.0,0.9163541822908855,14,muito fraca / desprezível

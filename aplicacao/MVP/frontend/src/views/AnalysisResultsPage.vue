@@ -132,6 +132,10 @@
         <GraficoPalavrasProva :questoes="questoesPalavras" />
       </section>
 
+      <section class="panel prova-correlacao-panel">
+        <CorrelacaoProvaGrafico :questoes="questoesCorrelacao" />
+      </section>
+
       <section class="panel">
         <h2>Análises disponíveis para {{ payload.fileName }}</h2>
         <dl class="config-grid">
@@ -195,6 +199,7 @@ import InfoIcon from '@/components/icons/InfoIcon.vue'
 import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
 import GraficoLeituraQuestoes from '@/components/GraficoLeituraQuestoes.vue'
 import GraficoPalavrasProva from '@/components/GraficoPalavrasProva.vue'
+import CorrelacaoProvaGrafico from '@/components/CorrelacaoProvaGrafico.vue'
 import { useRouter } from 'vue-router'
 import { useAnalysisStore } from '@/stores/analysisStore'
 import { DEFAULT_READING_SPEED, TODOS_TIPOS_ANALISE, ANALYSIS_TYPE_OPTIONS, formatarPercentual } from '@/constants/analysisConfig'
@@ -208,7 +213,7 @@ const router = useRouter()
  * - textos_introdutorios: textos que aparecem antes da primeira questão,
  *   cada um com id, texto e quantidade_palavras.
  * - questions: lista que é exposta como `questoes` no JSON, cada questão contém:
- *    questao, texto, texto_contado, alternativas, tem_imagem e quantidade_palavras.
+ *    questao, texto, alternativas, tem_imagem e quantidade_palavras.
  *    Se as opções forem usadas, também contém dificuldade e/ou acertos, total_estudantes e taxa_acerto_percentual.
  * - config: inputs originais do formulário: analysisType, hours, minutes,
  *   readingSpeedMode, customReadingSpeed, useDifficultyAnalysis,
@@ -224,7 +229,7 @@ const introductoryTexts = computed(() => payload.value?.textos_introdutorios ?? 
 const examJson = computed(() => ({ textos_introdutorios: introductoryTexts.value, questoes: questions.value }))
 const config = computed(() => payload.value?.config ?? {})
 
-// O JSON usa `quantidade_palavras`, `tem_imagem`, `texto_contado` e `alternativas`
+// O JSON usa `quantidade_palavras`, `tem_imagem`, `texto` e `alternativas`
 // do extrator; os demais cálculos usam os inputs salvos no campo `config`.
 const questionsWithImages = computed(() => questions.value.filter((question) => question.tem_imagem).length)
 const totalWords = computed(() => questions.value.reduce((sum, question) => sum + (Number(question.quantidade_palavras) || 0), 0))
@@ -234,10 +239,10 @@ const averageWords = computed(() => questions.value.length ? Math.round(totalWor
 const readingSpeed = computed(() => config.value.readingSpeedMode === 'custom'
   ? Number(config.value.customReadingSpeed) || DEFAULT_READING_SPEED
   : DEFAULT_READING_SPEED)
-// Caracteres lidos, sem espaços, tabs e quebras de linha (mesma regra de contar_caracteres do ENEM)
-const contarCaracteres = (texto) => (texto ?? '').replace(/[ \t\n\r]/g, '').length
+// Caracteres lidos, sem espaços, tabs, quebras de linha e \u00a0 (mesma regra de contar_caracteres do ENEM)
+const contarCaracteres = (texto) => (texto ?? '').replace(/[ \t\n\r\u00a0]/g, '').length
 const questionCharacters = computed(() => questions.value.reduce(
-  (sum, question) => sum + contarCaracteres(question.texto_contado), 0))
+  (sum, question) => sum + contarCaracteres(question.texto), 0))
 const introductoryCharacters = computed(() => introductoryTexts.value.reduce(
   (sum, texto) => sum + contarCaracteres(texto.texto), 0))
 const examDurationMinutes = computed(() => (Number(config.value.hours) || 0) * 60 + (Number(config.value.minutes) || 0))
@@ -254,8 +259,8 @@ const timeDistribution = computed(() => {
 // Gráfico por questão: leitura de cada questão e tempo médio (restante ÷ nº de questões)
 const leituraPorQuestao = computed(() => questions.value.map((question) => ({
   rotulo: `Q${question.questao}`,
-  caracteres: contarCaracteres(question.texto_contado),
-  minutos: contarCaracteres(question.texto_contado) / readingSpeed.value,
+  caracteres: contarCaracteres(question.texto),
+  minutos: contarCaracteres(question.texto) / readingSpeed.value,
   dificuldade: question.dificuldade ?? null
 })))
 const tempoMedioPorQuestao = computed(() => questions.value.length
@@ -331,15 +336,24 @@ const analisesAplicadas = computed(() => filterOptions.filter((option) => select
 // Pizza e gráfico de leitura só aparecem quando 'Análise do Tempo de Prova' está aplicada no filtro
 const temAnaliseTempo = computed(() => selectedFilters.value.has('reading-time'))
 const temAnaliseTamanho = computed(() => selectedFilters.value.has('word-count'))
-// Palavras por questão: enunciado (quantidade_palavras) e alternativas (split por espaço, como no backend do ENEM)
+// Palavras por questão: quantidade_palavras é o total da questão; o enunciado é o total menos as alternativas.
+// Cada alternativa conta a palavra da letra mais as palavras do texto, com a mesma regra da extração (WORD_RE), igual ao backend do ENEM.
+const WORD_RE = /\d+(?:[.,]\d+)*(?:%|[ºª])?|[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'][A-Za-zÀ-ÖØ-öø-ÿ]+)?/g
 const contarPalavrasAlternativas = (alternativas = []) => alternativas.reduce((total, alternativa) => {
-  const texto = String(alternativa?.texto ?? '').trim()
-  return total + (texto ? texto.split(/\s+/).length : 0)
+  const texto = `${alternativa?.letra ?? ''} ${alternativa?.texto ?? ''}`
+  return total + (texto.match(WORD_RE) ?? []).length
 }, 0)
 const questoesPalavras = computed(() => questions.value.map((question) => ({
   rotulo: `Q${question.questao}`,
-  palavras: Number(question.quantidade_palavras) || 0,
+  palavras: Math.max(0, (Number(question.quantidade_palavras) || 0) - contarPalavrasAlternativas(question.alternativas)),
   palavrasAlternativas: contarPalavrasAlternativas(question.alternativas)
+})))
+// Correlação da prova: tamanho em caracteres (mesma contagem do tempo de leitura) e acerto informado por questão
+const questoesCorrelacao = computed(() => questions.value.map((question) => ({
+  rotulo: `Q${question.questao}`,
+  caracteres: contarCaracteres(question.texto),
+  taxa_acerto_percentual: question.taxa_acerto_percentual ?? null,
+  dificuldade: question.dificuldade ?? null
 })))
 const todasMarcadas = computed(() => rascunhoFiltros.value.size === todasAnalises.length)
 const algumaMarcada = computed(() => rascunhoFiltros.value.size > 0 && !todasMarcadas.value)

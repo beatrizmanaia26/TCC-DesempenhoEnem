@@ -66,11 +66,11 @@ TEMPO_DISPONIVEL_MINUTOS_POR_DIA: Dict[int, int] = {
     2: TEMPO_TOTAL_PROVA[2]  # Dia 2: 300 minutos
 }
 
-#Conta caracteres efetivos (exclui espaços, tabs e quebras de linha).
+#Conta caracteres efetivos (exclui espaços, tabs, quebras de linha e espaço não separável \xa0).
 def contar_caracteres(texto):
     if not texto:
         return 0
-    return sum(1 for ch in texto if ch not in (" ", "\t", "\n", "\r"))
+    return sum(1 for ch in texto if ch not in (" ", "\t", "\n", "\r", "\xa0"))
 
 def tempo_leitura_minutos(caracteres):
     return caracteres / VELOCIDADE_LEITURA_CPM
@@ -102,20 +102,11 @@ def fmt_tempo(minutos):
         partes.append(f"{s}s")
     return " ".join(partes)
 
-#  Conta caracteres considerando: "texto" (campo principal da questão), "letra" de cada item em "alternativas" "texto" de cada item em "alternativas", exclui espaços, tabs e quebras de linha da contagem.
+#  Conta caracteres do campo "texto" da questão, que já contém o enunciado e as alternativas (com letras). Não soma "alternativas" de novo para evitar contagem duplicada. Exclui espaços, tabs e quebras de linha.
 def analisar_questao(dados_questao):
     texto = dados_questao.get("texto", "")
-    
-    alternativas = dados_questao.get("alternativas", [])
 
-    partes_alternativas = ""
-    for alt in alternativas:
-        partes_alternativas += alt.get("letra", "")
-        partes_alternativas += alt.get("texto", "")
-    
-    texto_final = texto + partes_alternativas
-    
-    chars = contar_caracteres(texto_final)
+    chars = contar_caracteres(texto)
     leitura_min = tempo_leitura_minutos(chars)
 
     return {

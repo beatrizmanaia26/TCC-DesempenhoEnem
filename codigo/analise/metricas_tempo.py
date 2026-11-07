@@ -3,7 +3,7 @@
 """
 Métricas de tempo de leitura e correlação entre caracteres da questão e acerto (ENEM 2020-2025, sem 2021).
 
-RODAR: python3 /Users/beatrizmanaia/Documents/FEI/TCC/TCC-DesempenhoEnem/codigo/analise/metricas_tempo.py
+RODAR: python3 "/Users/beatrizmanaia/Documents/FEI/TCC desemprov/TCC-DesempenhoEnem/codigo/analise/metricas_tempo.py"
 
 SAÍDAS GERADAS:
   1. resumo_metricas_prova.csv: minutos de leitura por prova (descritivo, sem correlação).
@@ -107,8 +107,9 @@ def _extrair_questoes_categoria_1(dados: Dict[str, Any], dia: int, area: str) ->
     Pode haver questões duplicadas no JSON (especialmente questões 1-5 por serem de ingles e espanhol)
     Usamos dict para manter apenas PRIMEIRA ocorrência de cada número
     
-    Reutiliza analisar_questao() de analyze_reading_time.py que:
-    Concatena ENUNCIADO + LETRAS + TEXTOS das alternativas
+    Reutiliza analisar_questao() de analyze_reading_time.py, que conta
+    apenas o campo "texto" da questão (enunciado + alternativas com letras,
+    já presentes nesse campo, sem somar as alternativas de novo).
     Os caracteres são calculados por analisar_questao()
     Calcula tempo_leitura_min corretamente
     """
@@ -293,7 +294,7 @@ def carregar_todos_jsons() -> Dict[Any, Any]:
         try:
             _processar_json_por_area(arquivo_json, ano, dia, areas_dia, resultado, nome_pasta, cor)
         except Exception as e:
-            print(f"⚠️  Erro em {nome_pasta}: {e}")
+            print(f" Erro em {nome_pasta}: {e}")
     
     return resultado
 
@@ -529,7 +530,7 @@ def gerar_resumo_prova(df_combinado: pd.DataFrame) -> pd.DataFrame:
     return agrupado
 
 def gerar_metricas_questao(df_combinado: pd.DataFrame) -> pd.DataFrame:
-    """SAÍDA 2: Métricas por Questão (1 linha por caderno: 908 itens × 4 cores = 3632 linhas)
+    """SAÍDA 2: Métricas por Questão (1 linha por caderno: 918 itens × 4 cores = 3672 linhas)
     
     Usa caracteres INDIVIDUAIS de cada questão, não o total da prova
     """

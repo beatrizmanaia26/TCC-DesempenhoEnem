@@ -155,3 +155,70 @@ describe('AnalysisForm - acertos por questão não podem exceder o número de pe
 
 
 })
+
+describe('AnalysisForm - quantidade de questões vem do PDF enviado', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('preenche o campo de questões das métricas dos estudantes com a quantidade extraída do PDF', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf, totalQuestions: 10 } })
+    await wrapper.find('#metrics-yes').setValue(true)
+
+    expect((wrapper.find('#metrics-question-count').element as HTMLInputElement).value).toBe('10')
+  })
+
+  it('mantém o campo de métricas vazio (0) quando não há quantidade extraída', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#metrics-yes').setValue(true)
+
+    expect((wrapper.find('#metrics-question-count').element as HTMLInputElement).value).toBe('0')
+  })
+})
+
+describe('AnalysisForm - aviso quando a quantidade de questões difere do PDF', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('mostra aviso no campo de dificuldade quando o valor difere do PDF', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf, totalQuestions: 10 } })
+    await wrapper.find('#difficulty-yes').setValue(true)
+    expect(wrapper.findAll('.question-count-warning')).toHaveLength(0)
+
+    await wrapper.find('#difficulty-question-count').setValue(12)
+
+    const avisos = wrapper.findAll('.question-count-warning')
+    expect(avisos).toHaveLength(1)
+    expect(avisos[0].text()).toContain('10 questões')
+    expect(avisos[0].text()).toContain('informou 12')
+  })
+
+  it('mostra aviso no campo das métricas quando o valor difere do PDF', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf, totalQuestions: 10 } })
+    await wrapper.find('#metrics-yes').setValue(true)
+    expect(wrapper.findAll('.question-count-warning')).toHaveLength(0)
+
+    await wrapper.find('#metrics-question-count').setValue(7)
+
+    expect(wrapper.findAll('.question-count-warning')).toHaveLength(1)
+    expect(wrapper.find('.question-count-warning').text()).toContain('informou 7')
+  })
+
+  it('não mostra aviso quando o valor é igual ao do PDF', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf, totalQuestions: 10 } })
+    await wrapper.find('#metrics-yes').setValue(true)
+    await wrapper.find('#metrics-question-count').setValue(10)
+
+    expect(wrapper.findAll('.question-count-warning')).toHaveLength(0)
+  })
+
+  it('não mostra aviso quando o PDF não tem quantidade detectada', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#metrics-yes').setValue(true)
+    await wrapper.find('#metrics-question-count').setValue(7)
+
+    expect(wrapper.findAll('.question-count-warning')).toHaveLength(0)
+  })
+})
+

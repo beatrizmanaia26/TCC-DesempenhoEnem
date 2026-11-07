@@ -545,15 +545,16 @@ app.get('/api/metricas/tempo-resumo', (req, res) => {
 })
 
 // Quantidade de palavras do enunciado e das alternativas de cada questão, lidas dos JSONs de dados/enems_json_md.
-// O campo quantidade_palavras conta só o texto da questão, sem as alternativas.
-// As alternativas são contadas a partir do campo "texto" de cada item (a letra não entra na contagem).
+// O campo quantidade_palavras é o total da questão. O enunciado é quantidade_palavras menos as palavras das alternativas.
+// Cada alternativa conta a palavra da letra mais as palavras do texto, com a mesma regra de palavras da extração (WORD_RE).
 const PASTA_JSON_PROVAS = path.join(__dirname, '../../../dados/enems_json_md')
 const palavrasQuestoesCache = new Map()
+const WORD_RE = /\d+(?:[.,]\d+)*(?:%|[ºª])?|[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'][A-Za-zÀ-ÖØ-öø-ÿ]+)?/g
 
 function contarPalavrasAlternativas(alternativas = []) {
   return alternativas.reduce((total, alternativa) => {
-    const texto = String(alternativa?.texto ?? '').trim()
-    return total + (texto ? texto.split(/\s+/).length : 0)
+    const texto = `${alternativa?.letra ?? ''} ${alternativa?.texto ?? ''}`
+    return total + (texto.match(WORD_RE) ?? []).length
   }, 0)
 }
 
@@ -579,7 +580,7 @@ function carregarPalavrasQuestoes(ano) {
         idioma: questao.idioma ?? 'geral',
         area: areaDaPosicao(posicao),
         rotulo: `Q${posicao}`,
-        palavras: Number(questao.quantidade_palavras ?? 0),
+        palavras: Math.max(0, Number(questao.quantidade_palavras ?? 0) - contarPalavrasAlternativas(questao.alternativas)),
         palavrasAlternativas: contarPalavrasAlternativas(questao.alternativas)
       }
     })

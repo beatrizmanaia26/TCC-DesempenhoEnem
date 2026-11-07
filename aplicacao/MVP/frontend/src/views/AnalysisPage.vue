@@ -47,7 +47,7 @@
       <!-- SEÇÃO 5: ERRO -->
       <section class="section error-section" v-if="errorMessage">
         <div class="error-box">
-          <h3>⚠️ Erro ao preparar a análise</h3>
+          <h3>Erro ao preparar a análise</h3>
           <p>{{ errorMessage }}</p>
           <button @click="retryExtraction" class="btn btn-primary">Tentar novamente</button>
         </div>

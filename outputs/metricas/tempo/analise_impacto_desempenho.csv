@@ -1,21 +1,21 @@
 tipo_analise,area,ano,dificuldade,coeficiente_r,p_value,p_value_bruto,quantidade_pares,interpretacao
-TIPO_1_caracteres_questao_vs_acerto,CH,2020,TODAS,-0.25290688112801046,1.0,0.09564521773911304,45,fraca
-TIPO_1_caracteres_questao_vs_acerto,LC,2020,TODAS,-0.3071788715486194,0.5509724513774311,0.029698515074246288,50,fraca
-TIPO_1_caracteres_questao_vs_acerto,CN,2020,TODAS,0.04735729386892177,1.0,0.7613119344032798,44,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,MT,2020,TODAS,0.0987384596151527,1.0,0.5205739713014349,44,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,CH,2022,TODAS,-0.019566506399929212,1.0,0.896155192240388,45,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,LC,2022,TODAS,-0.22642143706475942,1.0,0.11134443277836108,50,fraca
-TIPO_1_caracteres_questao_vs_acerto,CN,2022,TODAS,0.21055405540125846,1.0,0.1641917904104795,45,fraca
-TIPO_1_caracteres_questao_vs_acerto,MT,2022,TODAS,-0.27907960128676157,1.0,0.06759662016899155,44,fraca
-TIPO_1_caracteres_questao_vs_acerto,CH,2023,TODAS,-0.24825405407249665,1.0,0.10029498525073746,45,fraca
-TIPO_1_caracteres_questao_vs_acerto,LC,2023,TODAS,-0.08864558575390041,1.0,0.5414729263536823,50,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,CN,2023,TODAS,-0.000658783227736417,1.0,0.9967501624918754,45,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,MT,2023,TODAS,-0.3164240075382491,0.591570421478926,0.03479826008699565,45,fraca
-TIPO_1_caracteres_questao_vs_acerto,CH,2024,TODAS,-0.17417654808959157,1.0,0.2502374881255937,45,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,LC,2024,TODAS,-0.1796921895401383,1.0,0.2087395630218489,50,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,CN,2024,TODAS,0.3694985731178008,0.26298685065746713,0.013149342532873356,44,fraca
-TIPO_1_caracteres_questao_vs_acerto,MT,2024,TODAS,-0.05632967712060103,1.0,0.7135143242837858,45,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,CH,2025,TODAS,-0.02015810276679842,1.0,0.8968051597420129,45,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,LC,2025,TODAS,-0.3083387357127814,0.5509724513774311,0.028998550072496375,50,fraca
-TIPO_1_caracteres_questao_vs_acerto,CN,2025,TODAS,-0.07052250075505889,1.0,0.6528673566321684,43,muito fraca / desprezível
-TIPO_1_caracteres_questao_vs_acerto,MT,2025,TODAS,0.04947320204628957,1.0,0.7473126343682815,44,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CH,2020,TODAS,-0.19131695146597452,1.0,0.21048947552622368,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,LC,2020,TODAS,-0.3445941080010776,0.2973351332433378,0.015649217539123045,50,fraca
+TIPO_1_caracteres_questao_vs_acerto,CN,2020,TODAS,-0.11656095842142354,1.0,0.45062746862656866,44,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,MT,2020,TODAS,0.09055992112461834,1.0,0.5573221338933053,44,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CH,2022,TODAS,0.015744919142900365,1.0,0.9181040947952602,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,LC,2022,TODAS,-0.238378793974436,1.0,0.09379531023448827,50,fraca
+TIPO_1_caracteres_questao_vs_acerto,CN,2022,TODAS,0.23973911376882964,1.0,0.1111444427778611,45,fraca
+TIPO_1_caracteres_questao_vs_acerto,MT,2022,TODAS,-0.279663109009012,1.0,0.06624668766561671,44,fraca
+TIPO_1_caracteres_questao_vs_acerto,CH,2023,TODAS,-0.24321475625823447,1.0,0.10629468526573671,45,fraca
+TIPO_1_caracteres_questao_vs_acerto,LC,2023,TODAS,-0.07977139646719816,1.0,0.5827208639568021,50,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CN,2023,TODAS,-0.020224645091508002,1.0,0.8976051197440128,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,MT,2023,TODAS,-0.3389439706703865,0.4166791660416979,0.023148842557872105,45,fraca
+TIPO_1_caracteres_questao_vs_acerto,CH,2024,TODAS,-0.2286636583473103,1.0,0.12604369781510924,45,fraca
+TIPO_1_caracteres_questao_vs_acerto,LC,2024,TODAS,-0.12288410289503314,1.0,0.39248037598120095,50,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CN,2024,TODAS,0.38782198128309325,0.17499125043747812,0.008749562521873906,44,fraca
+TIPO_1_caracteres_questao_vs_acerto,MT,2024,TODAS,-0.03603662963219286,1.0,0.8119594020298985,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,CH,2025,TODAS,0.011925547847500126,1.0,0.9388530573471326,45,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,LC,2025,TODAS,-0.31851905216989246,0.4166791660416979,0.02384880755962202,50,fraca
+TIPO_1_caracteres_questao_vs_acerto,CN,2025,TODAS,-0.1777542857895684,1.0,0.2578871056447178,43,muito fraca / desprezível
+TIPO_1_caracteres_questao_vs_acerto,MT,2025,TODAS,0.039818175436116245,1.0,0.7948602569871507,44,muito fraca / desprezível

@@ -145,7 +145,7 @@ export const TEXTO_DISPERSAO_ITENS = {
     '',
     'Cálculos:',
     '• Unidade: item = ano, área e código do item. Cada item aparece em todos os cadernos, mas conta uma vez só.',
-    '• Caracteres: número de caracteres do enunciado e das alternativas (lido do caderno Azul, pois o texto é igual em todas as cores).',
+    '• Caracteres: número de caracteres de todo o texto da questão (cabeçalho, enunciado, fonte e alternativas, incluindo as letras), sem espaços, tabs ou quebras de linha. Lido do caderno Azul, pois o texto é igual em todas as cores.',
     '• Acerto (%) = total de acertos ÷ total de respondentes de todas as cores × 100.',
     '• Nível TRI: fácil se b < 0; média se 0 ≤ b < 1,5; difícil se b ≥ 1,5 (b = parâmetro de dificuldade da TRI).',
     '',

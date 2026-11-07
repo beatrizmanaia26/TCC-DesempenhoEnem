@@ -135,6 +135,9 @@
               placeholder="Ex: 45"
               class="question-count-input"
             />
+            <div v-if="difficultyQuestionCountWarning" class="warning-box question-count-warning" style="margin-top: 0.5rem;">
+              <strong>Atenção:</strong> a prova enviada tem {{ totalQuestions }} questões, mas você informou {{ manualTotalQuestions }}. Verifique se o valor está correto.
+            </div>
           </div>
         </div>
       </div>
@@ -197,6 +200,9 @@
               value="0"
               class="question-count-input"
             />
+            <div v-if="metricsQuestionCountWarning" class="warning-box question-count-warning" style="margin-top: 0.5rem;">
+              <strong>Atenção:</strong> a prova enviada tem {{ totalQuestions }} questões, mas você informou {{ formData.studentMetricsQuestionCount }}. Verifique se o valor está correto.
+            </div>
           </div>
         </div>
       </div>
@@ -213,7 +219,7 @@
       <!-- AVISO -->
       <div v-if="showDurationWarning" class="warning-section">
         <div class="warning-box">
-          ⚠️ <strong>Aviso:</strong> A duração da prova ({{ formattedDuration }}) excede {{ MAX_EXAM_DURATION_HOURS }}h.
+          <strong>Aviso:</strong> A duração da prova ({{ formattedDuration }}) excede {{ MAX_EXAM_DURATION_HOURS }}h.
           Recomendamos revisar o valor inserido.
         </div>
       </div>
@@ -304,6 +310,15 @@ const questionCountForMetrics = computed(() => {
   return Math.max(Number(formData.value.studentMetricsQuestionCount) || 0, 0)
 })
 
+const hasQuestionCountWarning = (typedCount) => {
+  const pdfCount = Number(props.totalQuestions) || 0
+  const typed = Number(typedCount) || 0
+  return pdfCount > 0 && typed > 0 && typed !== pdfCount
+}
+
+const difficultyQuestionCountWarning = computed(() => hasQuestionCountWarning(manualTotalQuestions.value))
+const metricsQuestionCountWarning = computed(() => hasQuestionCountWarning(formData.value.studentMetricsQuestionCount))
+
 const showDurationWarning = computed(() => {
   const totalMinutes = (formData.value.hours || 0) * 60 + (formData.value.minutes || 0)
   return totalMinutes > MAX_EXAM_DURATION_HOURS * 60
@@ -354,6 +369,10 @@ onMounted(() => {
       studentMetricsAccuracy: {}
     }
     useDifficultyAnalysis.value = false
+  }
+
+  if (!formData.value.studentMetricsQuestionCount && props.totalQuestions > 0) {
+    formData.value.studentMetricsQuestionCount = props.totalQuestions
   }
 })
 

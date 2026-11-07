@@ -41,6 +41,22 @@
             </div>
           </div>
 
+          <div class="filter-secao">
+            <p class="filter-titulo">DIFICULDADE</p>
+            <div class="filter-lista">
+              <div class="filter-option" v-for="opcao in opcoesDificuldade" :key="`dificuldade-dispersao-${opcao.valor}`">
+                <input
+                  type="radio"
+                  name="filtro-dificuldade-dispersao"
+                  :id="`dispersao-dificuldade-${opcao.valor}`"
+                  :checked="rascunhoDificuldade === opcao.valor"
+                  @change="rascunhoDificuldade = opcao.valor"
+                />
+                <label :for="`dispersao-dificuldade-${opcao.valor}`">{{ opcao.rotulo }}</label>
+              </div>
+            </div>
+          </div>
+
           <div class="filter-rodape">
             <button type="button" class="filter-aplicar" @click="aplicarFiltro">Aplicar</button>
           </div>
@@ -176,11 +192,19 @@ const opcoesDia = [
 // Filtros aplicados (usados no gráfico)
 const filtroDia = ref('todos')
 const filtroAreas = ref([])
+const filtroDificuldade = ref('todas')
 
 // Rascunho: muda enquanto o usuário marca as opções e só vira aplicado no botão Aplicar
 const mostrarFiltro = ref(false)
 const rascunhoDia = ref('todos')
 const rascunhoAreas = ref([])
+const rascunhoDificuldade = ref('todas')
+
+// Opções de dificuldade do filtro (mesmas chaves dos pontos do CSV: facil, media, dificil)
+const opcoesDificuldade = [
+  { valor: 'todas', rotulo: 'Todas' },
+  ...NIVEIS.map((nivel) => ({ valor: nivel.chave, rotulo: nivel.rotulo }))
+]
 
 // As áreas exibidas dependem do dia escolhido no rascunho
 const opcoesArea = computed(() =>
@@ -197,6 +221,7 @@ const alternarMenuFiltro = () => {
   if (!mostrarFiltro.value) {
     rascunhoDia.value = filtroDia.value
     rascunhoAreas.value = [...filtroAreas.value]
+    rascunhoDificuldade.value = filtroDificuldade.value
   }
   mostrarFiltro.value = !mostrarFiltro.value
 }
@@ -210,6 +235,7 @@ const alternarArea = (area) => {
 const aplicarFiltro = () => {
   filtroDia.value = rascunhoDia.value
   filtroAreas.value = [...rascunhoAreas.value]
+  filtroDificuldade.value = rascunhoDificuldade.value
   mostrarFiltro.value = false
 }
 
@@ -241,9 +267,13 @@ const dados = ref({ pontos: [], retas: [] })
 const carregando = ref(false)
 const erro = ref('')
 
-// Pontos do filtro: itens das áreas escolhidas (o dia já define quais áreas existem)
+// Pontos do filtro: itens das áreas escolhidas e da dificuldade escolhida (o dia já define quais áreas existem)
 const pontosDoFiltro = computed(() =>
-  dados.value.pontos.filter((ponto) => chaveFiltro.value.areas.split(';').includes(ponto.area))
+  dados.value.pontos.filter(
+    (ponto) =>
+      chaveFiltro.value.areas.split(';').includes(ponto.area) &&
+      (filtroDificuldade.value === 'todas' || ponto.dificuldade === filtroDificuldade.value)
+  )
 )
 
 // Linhas da reta do filtro (uma por ponto da grade), ordenadas por caracteres
