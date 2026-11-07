@@ -67,108 +67,6 @@ app.get('/api', (req, res) => {
   res.json({ mensagem: 'Backend está funcionando!' })
 })
 
-// Rota de upload e análise
-app.post('/api/upload', upload.single('file'), async (req, res) => {
-  try {
-    if (!req.file) {
-      return res.status(400).json({ error: 'Nenhum arquivo foi enviado' })
-    }
-
-    const config = JSON.parse(req.body.config || '{}')
-    const analysisId = uuidv4()
-    const filePath = req.file.path
-
-    console.log(`[${analysisId}] Iniciando analise de: ${req.file.originalname}`)
-
-    // Executar script Python com opcoes seguras (S4036)
-    const pythonScript = path.join(__dirname, '../python/cli_analyzer.py')
-    const analysisTypes = Array.isArray(config.analysisTypes) && config.analysisTypes.length > 0
-      ? config.analysisTypes
-      : ['all']
-    // Mantém a ordem canônica e impede valores desconhecidos de chegarem ao script Python
-    const tiposValidos = ['image', 'formality', 'reading-time', 'word-count', 'distractors']
-    const tiposSelecionados = analysisTypes.includes('all')
-      ? tiposValidos
-      : tiposValidos.filter((tipo) => analysisTypes.includes(tipo))
-    if (tiposSelecionados.length === 0) {
-      return res.status(400).json({ error: 'Selecione ao menos um tipo de análise' })
-    }
-    
-    // Usar caminho fixo de python3 (configuravel via variavel de ambiente)
-    // Padrao: /usr/bin/python3 em sistemas Unix/Linux
-    const pythonPath = process.env.PYTHON_PATH || '/usr/bin/python3'
-    
-    // Validar que o caminho eh absoluto e nao contem ".."
-    if (!path.isAbsolute(pythonPath) || pythonPath.includes('..')) {
-      return res.status(500).json({ 
-        error: 'Caminho de Python invalido'
-      })
-    }
-    
-    // Verificar se python3 existe antes de usar
-    if (!fs.existsSync(pythonPath)) {
-      return res.status(500).json({ 
-        error: 'Python3 nao esta instalado no caminho configurado: ' + pythonPath
-      })
-    }
-
-    const pythonProcess = spawn(pythonPath, [
-      pythonScript,
-      filePath,
-      '--type',
-      tiposSelecionados.length === tiposValidos.length ? 'all' : tiposSelecionados.join(','),
-      '--output-format',
-      'json'
-    ])
-
-    let pythonOutput = ''
-    let pythonError = ''
-
-    pythonProcess.stdout.on('data', (data) => {
-      pythonOutput += data.toString()
-      console.log(`[${analysisId}] Python: ${data.toString().trim()}`)
-    })
-
-    pythonProcess.stderr.on('data', (data) => {
-      pythonError += data.toString()
-      console.error(`[${analysisId}] Python Error: ${data.toString().trim()}`)
-    })
-
-    pythonProcess.on('close', (code) => {
-      // Limpar arquivo temporário
-      fs.unlink(filePath, (err) => {
-        if (err) console.error(`Erro ao deletar arquivo: ${err}`)
-      })
-
-      if (code !== 0) {
-        console.error(`[${analysisId}] Python process exited with code ${code}`)
-        return res.status(500).json({
-          error: 'Erro na análise',
-          details: pythonError
-        })
-      }
-
-      try {
-        const results = JSON.parse(pythonOutput)
-        results.id = analysisId
-        results.analyzedFile = req.file.originalname
-        results.timestamp = new Date().toISOString()
-
-        res.json(results)
-      } catch (parseError) {
-        console.error(`[${analysisId}] Erro ao parsear resultado: ${parseError}`)
-        res.status(500).json({
-          error: 'Erro ao processar resultado da análise',
-          details: parseError.message
-        })
-      }
-    })
-  } catch (error) {
-    console.error('Erro no upload:', error)
-    res.status(500).json({ error: error.message })
-  }
-})
-
 // Extrai questões de um PDF e devolve a lista em JSON
 app.post('/api/extract', upload.single('file'), (req, res) => {
   if (!req.file) {
@@ -208,22 +106,6 @@ app.post('/api/extract', upload.single('file'), (req, res) => {
     } catch (error) {
       res.status(500).json({ error: `Resposta inválida do extrator: ${error.message}` })
     }
-  })
-})
-
-// Rota para recuperar histórico de análises
-app.get('/api/analyses', (req, res) => {
-  res.json({
-    analyses: [],
-    message: 'Histórico de análises será implementado com banco de dados'
-  })
-})
-
-// Rota para recuperar resultado específico
-app.get('/api/results/:id', (req, res) => {
-  res.json({
-    error: 'Análise não encontrada',
-    id: req.params.id
   })
 })
 
