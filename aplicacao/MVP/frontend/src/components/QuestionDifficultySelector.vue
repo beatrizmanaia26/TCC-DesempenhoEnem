@@ -2,7 +2,10 @@
   <div class="difficulty-selector">
     <div class="header">
       <div class="header-left">
-        <h3>Dificuldade das Questões</h3>
+        <h3>
+          Dificuldade das Questões
+          <span class="counter">{{ answeredCount }}/{{ totalQuestions }} preenchidas</span>
+        </h3>
         <p class="subtitle">Informe o nível de dificuldade de cada questão</p>
       </div>
     </div>
@@ -108,9 +111,12 @@ const currentQuestions = computed(() => {
   return questions
 })
 
+const answeredCount = computed(() => {
+  return Object.keys(difficulties.value).filter(key => difficulties.value[key]).length
+})
+
 const progressPercentage = computed(() => {
-  const answered = Object.keys(difficulties.value).length
-  return (answered / props.totalQuestions) * 100
+  return (answeredCount.value / props.totalQuestions) * 100
 })
 
 const setDifficulty = (questionId, level) => {
@@ -160,6 +166,13 @@ const previousGroup = () => {
   color: #333;
   font-size: 1.2rem;
   margin: 0;
+}
+
+.counter {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-left: 0.5rem;
 }
 
 .subtitle {
