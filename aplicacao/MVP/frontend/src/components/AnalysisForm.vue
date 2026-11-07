@@ -90,11 +90,11 @@
             <input
               v-if="formData.readingSpeedMode === 'custom'"
               id="custom-reading-speed"
-              v-model.number="formData.customReadingSpeed"
-              type="number"
+              :value="formData.customReadingSpeed ?? ''"
+              @input="apenasDigitosVelocidade"
+              type="text"
+              inputmode="numeric"
               placeholder="Digite a velocidade de leitura em caracteres/minuto"
-              min="100"
-              max="2000"
               class="custom-input"
               aria-label="Velocidade customizada de leitura em caracteres por minuto"
             />
@@ -446,6 +446,18 @@ const formattedDuration = computed(() => {
   return '00'
 })
 
+const apenasDigitosVelocidade = (evento) => {
+  const campo = evento.target
+  const somenteDigitos = campo.value.replace(/\D/g, '')
+  formData.value.customReadingSpeed = somenteDigitos || null
+  campo.value = somenteDigitos
+}
+
+const customReadingSpeedValida = computed(() => {
+  const valor = String(formData.value.customReadingSpeed ?? '')
+  return /^\d+$/.test(valor) && Number(valor) > 0
+})
+
 const isFormValid = computed(() => {
   // Validação apenas dos campos obrigatórios: tipo, duração e tempo de leitura
   const baseValid =
@@ -455,7 +467,9 @@ const isFormValid = computed(() => {
     formData.value.minutes !== null &&
     formData.value.minutes >= 0 &&
     (formData.value.hours > 0 || formData.value.minutes > 0) &&
-    !showDurationWarning.value
+    !showDurationWarning.value &&
+    // Com "Personalizado", a velocidade precisa ser preenchida com um valor válido
+    (formData.value.readingSpeedMode !== 'custom' || customReadingSpeedValida.value)
 
   // Se ativar dificuldade, precisa preencher todas as questões
   if (useDifficultyAnalysis.value && manualTotalQuestions.value > 0) {
