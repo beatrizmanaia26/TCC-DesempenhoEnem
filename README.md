@@ -32,3 +32,5 @@ cd aplicacao/MVP/frontend
 npm i
 
 npm run dev
+
+- Se quiser usar um json ja feito para teste ir na pasta TCC-DesempenhoEnem/aplicacao/MVP/frontend/src/views/AnalysisPage.vue e mudar a variavel para true
