@@ -136,49 +136,20 @@
         <CorrelacaoProvaGrafico :questoes="questoesCorrelacao" />
       </section>
 
-      <section class="panel">
-        <h2>Análises disponíveis para {{ payload.fileName }}</h2>
-        <dl class="config-grid">
-          <div><dt>Questões extraídas</dt><dd>{{ questions.length }}</dd></div>
-          <div><dt>Questões com imagem</dt><dd>{{ questionsWithImages }}</dd></div>
-          <div><dt>Palavras extraídas</dt><dd>{{ totalWords }}</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Parâmetros usados</h2>
-        <dl class="config-grid">
-          <div><dt>Tipo de análise</dt><dd>{{ analysisTypeLabel }}</dd></div>
-          <div><dt>Duração informada</dt><dd>{{ formatMinutes(examDurationMinutes) }}</dd></div>
-          <div><dt>Velocidade de leitura</dt><dd>{{ readingSpeed }} caracteres/minuto</dd></div>
-          <div><dt>Dificuldade por questão</dt><dd>{{ config.useDifficultyAnalysis ? 'Incluída no JSON' : 'Não informada' }}</dd></div>
-          <div><dt>Métricas dos estudantes</dt><dd>{{ config.includeStudentMetrics ? `${config.studentCount} estudantes` : 'Não informadas' }}</dd></div>
-        </dl>
-      </section>
-
       <section v-for="analise in analisesAplicadas" :key="analise.id" class="panel">
-        <h2>{{ analise.label }}</h2>
+        <template v-if="analise.id === 'image'">
+          <AnaliseImagensProva
+            :titulo="analise.label"
+            :questoes="questions"
+          />
+        </template>
+        <h2 v-else>{{ analise.label }}</h2>
       </section>
       <section v-if="analisesAplicadas.length === 0" class="panel">
         <p>Nenhuma análise selecionada no filtro.</p>
       </section>
 
-
-      <section v-if="config.useDifficultyAnalysis" class="panel">
-        <h2>Distribuição de dificuldade</h2>
-        <div class="metrics-grid">
-          <article v-for="level in difficultyLevels" :key="level.key" class="metric-card">
-            <span>{{ level.label }}</span>
-            <strong>{{ difficultyCounts[level.key] }}</strong>
-          </article>
-        </div>
-      </section>
-
-      <section v-if="config.includeStudentMetrics" class="panel">
-        <h2>Desempenho informado dos estudantes</h2>
-        <p>{{ studentCorrectCount }} acertos registrados de {{ studentPossibleCount }} possíveis ({{ studentAccuracyPercent }}%).</p>
-      </section>
-
+    <!-- Json APAGAR DPS --->
       <section class="panel json-panel">
         <div class="json-heading">
           <div>
@@ -199,6 +170,7 @@ import InfoIcon from '@/components/icons/InfoIcon.vue'
 import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
 import GraficoLeituraQuestoes from '@/components/GraficoLeituraQuestoes.vue'
 import GraficoPalavrasProva from '@/components/GraficoPalavrasProva.vue'
+import AnaliseImagensProva from '@/components/AnaliseImagensProva.vue'
 import CorrelacaoProvaGrafico from '@/components/CorrelacaoProvaGrafico.vue'
 import { useRouter } from 'vue-router'
 import { useAnalysisStore } from '@/stores/analysisStore'
@@ -231,7 +203,6 @@ const config = computed(() => payload.value?.config ?? {})
 
 // O JSON usa `quantidade_palavras`, `tem_imagem`, `texto` e `alternativas`
 // do extrator; os demais cálculos usam os inputs salvos no campo `config`.
-const questionsWithImages = computed(() => questions.value.filter((question) => question.tem_imagem).length)
 const totalWords = computed(() => questions.value.reduce((sum, question) => sum + (Number(question.quantidade_palavras) || 0), 0))
 const questionsWithFiveAlternatives = computed(() => questions.value.filter((question) => question.alternativas?.length === 5).length)
 const averageWords = computed(() => questions.value.length ? Math.round(totalWords.value / questions.value.length) : 0)
@@ -284,7 +255,6 @@ const difficultyCounts = computed(() => Object.fromEntries(difficultyLevels.map(
   key,
   questions.value.filter((question) => question.dificuldade === key).length
 ])))
-
 // Acertos são valores por questão; o total possível usa o número de estudantes
 // e de questões informado pelo usuário, e a porcentagem é ponderada por questão.
 const studentCorrectCount = computed(() => Object.values(config.value.studentMetricsAccuracy ?? {})
