@@ -13,7 +13,7 @@
       />
 
       <div class="upload-content">
-        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" role="img" aria-label="Ícone de upload">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="17 8 12 3 7 8"></polyline>
           <line x1="12" y1="3" x2="12" y2="15"></line>
@@ -21,6 +21,10 @@
 
         <h3>Selecione ou arraste um arquivo</h3>
         <p>Formato aceito: PDF de até 10 MB</p>
+        <div class="upload-guidance">
+          <p>Envie uma prova com questões numeradas (ex.: “Questão 1”) e alternativas de A a E.</p>
+          <p>PDFs escaneados como imagem não são reconhecidos.</p>
+        </div>
         <button @click="triggerFileInput" class="btn btn-upload">Escolher arquivo</button>
       </div>
 
@@ -29,7 +33,7 @@
           <div class="file-details">
             <p class="file-name">{{ selectedFile.name }} <span class="file-size">{{ formatFileSize(selectedFile.size) }}</span></p>
           </div>
-          <button @click="removeFile" class="btn-delete" title="Remover arquivo">✕</button>
+          <button @click="removeFile" class="btn-delete" title="Remover arquivo" aria-label="Cancelar arquivo"><span aria-hidden="true">✕</span></button>
         </div>
       </div>
     </div>
@@ -191,6 +195,13 @@ const removeFile = () => {
 .upload-content p {
   color: #666;
   margin: 0.5rem 0;
+}
+
+.upload-guidance {
+  max-width: 680px;
+  margin: 1rem auto;
+  color: #555;
+  text-align: center;
 }
 
 .btn-upload {

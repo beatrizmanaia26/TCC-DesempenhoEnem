@@ -617,10 +617,9 @@ def question_summary(question: Question) -> dict:
         "questao": stats["question"],
         "idioma": stats["language"],
         "texto": stats["text"],
-        "texto_contado": stats["counted_text"],
         "alternativas": stats["alternatives"],
         "tem_imagem": stats["has_image"],
-        "quantidade_palavras": stats["word_count"],
+        "quantidade_palavras": len(WORD_RE.findall(stats["text"])),
     }
 
 

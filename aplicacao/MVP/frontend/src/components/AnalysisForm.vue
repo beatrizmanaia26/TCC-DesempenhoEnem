@@ -120,36 +120,15 @@
               <label for="difficulty-no">Não</label>
             </div>
           </div>
-
-          <!-- Aparecer embaixo quando selecionar "Sim" -->
-          <div v-if="useDifficultyAnalysis" class="difficulty-step-inline" style="margin-top: 1rem; padding-top: 1rem;">
-            <label for="difficulty-question-count">
-              Quantas questões tem a prova?
-            </label>
-            <input
-              id="difficulty-question-count"
-              v-model.number="manualTotalQuestions"
-              type="number"
-              min="1"
-              max="200"
-              placeholder="Ex: 45"
-              class="question-count-input"
-            />
-            <div v-if="difficultyQuestionCountWarning" class="warning-box question-count-warning" style="margin-top: 0.5rem;">
-              <strong>Atenção:</strong> a prova enviada tem {{ totalQuestions }} questões, mas você informou {{ manualTotalQuestions }}. Verifique se o valor está correto.
-            </div>
-          </div>
         </div>
       </div>
 
       <!-- Seletor de dificuldade para cada questão - FULLWIDTH -->
       <QuestionDifficultySelector
-        v-if="useDifficultyAnalysis && manualTotalQuestions > 0"
-        :total-questions="manualTotalQuestions"
+        v-if="useDifficultyAnalysis && totalQuestions > 0"
+        :total-questions="totalQuestions"
         :model-value="formData.questionDifficulties"
         @update:model-value="formData.questionDifficulties = { ...formData.questionDifficulties, ...$event }"
-        :show-edit-button="true"
-        @edit-questions="manualTotalQuestions = 0"
       />
 
       <!-- TERCEIRA LINHA: MÉTRICAS REAIS DOS ESTUDANTES -->
@@ -184,34 +163,18 @@
               type="number"
               min="1"
               max="10000"
-              value="0"
               class="question-count-input"
             />
 
-            <label style="margin-top: 1rem;" for="metrics-question-count">
-              Quantas questões tem a prova?
-            </label>
-            <input
-              id="metrics-question-count"
-              v-model.number="formData.studentMetricsQuestionCount"
-              type="number"
-              min="1"
-              max="200"
-              value="0"
-              class="question-count-input"
-            />
-            <div v-if="metricsQuestionCountWarning" class="warning-box question-count-warning" style="margin-top: 0.5rem;">
-              <strong>Atenção:</strong> a prova enviada tem {{ totalQuestions }} questões, mas você informou {{ formData.studentMetricsQuestionCount }}. Verifique se o valor está correto.
-            </div>
           </div>
         </div>
       </div>
 
       <!-- Seletor de acertos por questão - FULLWIDTH (para métricas dos estudantes) -->
       <QuestionAccuracySelector
-        v-if="formData.studentMetricsQuestionCount > 0 && formData.includeStudentMetrics"
-        :total-questions="formData.studentMetricsQuestionCount"
-        :max-accuracy="formData.studentCount || null"
+        v-if="totalQuestions > 0 && formData.includeStudentMetrics"
+        :total-questions="totalQuestions"
+        :max-accuracy="Math.max(Number(formData.studentCount) || 1, 1)"
         :model-value="formData.studentMetricsAccuracy"
         @update:model-value="formData.studentMetricsAccuracy = { ...formData.studentMetricsAccuracy, ...$event }"
       />
@@ -226,9 +189,10 @@
 
       <div class="form-actions" style="display: flex; justify-content: center; margin-top: 2rem;">
         <button type="submit" class="btn btn-primary" :disabled="isLoading || !isFormValid" style="padding: 1rem 3rem; font-size: 1.1rem; min-width: 300px;">
-          {{ isLoading ? 'Analisando...' : 'Iniciar Análise ver comentario no código (SE FALHAR A ANÁLISE POR FALHA AO CARREGAR BERT OU ROBERTA, DAR FEEDBACK CLARO SOBRE ESSAS FALHAS)' }}
+          {{ isLoading ? 'Analisando...' : 'Iniciar Análise' }}
         </button>
-        <!--
+        <!-
+        ver comentario no código (SE FALHAR A ANÁLISE POR FALHA AO CARREGAR BERT OU ROBERTA, DAR FEEDBACK CLARO SOBRE ESSAS FALHAS)
         1 usuário clica "Iniciar Análise",VERIFICAR se os modelos estão baixados,Verificar RAM e espaço disco ANTES de iniciar análise. Feedback claro: barra de progresso com % e tempo estimado durante download de modelos
         2 fazer funcionar offline após 1ª execução (modelos em cache);
         3 tipos de erro:RAM Insuficiente,Disco Cheio,Internet desconectou,Modelo corrompido,Versão PyTorch incompatível,Permissão negada	-->
@@ -261,8 +225,6 @@ const props = defineProps({
 const emit = defineEmits(['analyze', 'cancel'])
 
 const useDifficultyAnalysis = ref(false)
-const manualTotalQuestions = ref(0)
-const manualStudentMetricsQuestions = ref(0)
 
 // Dropdown de tipos de análise (seleção múltipla, no mesmo padrão do filtro da página do ENEM)
 const menuTiposAberto = ref(false)
@@ -295,30 +257,6 @@ const fecharMenuTiposAoClicarFora = (event) => {
 onMounted(() => document.addEventListener('click', fecharMenuTiposAoClicarFora))
 onUnmounted(() => document.removeEventListener('click', fecharMenuTiposAoClicarFora))
 
-// Inicia a parte do input das questões com a qtde detectada no pdf
-watch(() => props.totalQuestions, (total) => {
-  manualTotalQuestions.value = total || 0
-}, { immediate: true })
-
-// Sincronizar quantidade de questoes entre dificuldade e metricas
-// Se uma esta preenchida, usa a mesma para a outra
-const questionCountForDifficulty = computed(() => {
-  return Math.max(Number(manualTotalQuestions.value) || 0, 0)
-})
-
-const questionCountForMetrics = computed(() => {
-  return Math.max(Number(formData.value.studentMetricsQuestionCount) || 0, 0)
-})
-
-const hasQuestionCountWarning = (typedCount) => {
-  const pdfCount = Number(props.totalQuestions) || 0
-  const typed = Number(typedCount) || 0
-  return pdfCount > 0 && typed > 0 && typed !== pdfCount
-}
-
-const difficultyQuestionCountWarning = computed(() => hasQuestionCountWarning(manualTotalQuestions.value))
-const metricsQuestionCountWarning = computed(() => hasQuestionCountWarning(formData.value.studentMetricsQuestionCount))
-
 const showDurationWarning = computed(() => {
   const totalMinutes = (formData.value.hours || 0) * 60 + (formData.value.minutes || 0)
   return totalMinutes > MAX_EXAM_DURATION_HOURS * 60
@@ -332,7 +270,7 @@ const formData = ref({
   customReadingSpeed: null,
   questionDifficulties: {},
   includeStudentMetrics: false,
-  studentCount: 0,
+  studentCount: 1,
   studentMetricsQuestionCount: 0,
   studentMetricsAccuracy: {}
 })
@@ -349,7 +287,7 @@ onMounted(() => {
       customReadingSpeed: store.formData.customReadingSpeed || null,
       questionDifficulties: store.formData.questionDifficulties || {},
       includeStudentMetrics: store.formData.includeStudentMetrics !== undefined ? store.formData.includeStudentMetrics : false,
-      studentCount: store.formData.studentCount !== undefined && store.formData.studentCount !== null ? store.formData.studentCount : 0,
+      studentCount: store.formData.studentCount !== undefined && store.formData.studentCount !== null ? Math.max(Number(store.formData.studentCount) || 1, 1) : 1,
       studentMetricsQuestionCount: store.formData.studentMetricsQuestionCount !== undefined && store.formData.studentMetricsQuestionCount !== null ? store.formData.studentMetricsQuestionCount : 0,
       studentMetricsAccuracy: store.formData.studentMetricsAccuracy || {}
     }
@@ -364,44 +302,19 @@ onMounted(() => {
       customReadingSpeed: null,
       questionDifficulties: {},
       includeStudentMetrics: false,
-      studentCount: 0,
+      studentCount: 1,
       studentMetricsQuestionCount: 0,
       studentMetricsAccuracy: {}
     }
     useDifficultyAnalysis.value = false
   }
 
-  if (!formData.value.studentMetricsQuestionCount && props.totalQuestions > 0) {
-    formData.value.studentMetricsQuestionCount = props.totalQuestions
-  }
 })
 
-// Sincronizar quantidade de questoes bidirecionalmente
-// Sempre usa o maior valor entre os dois, ou se um esta preenchido e o outro vazio
-const totalQuestionsCount = computed({
-  get() {
-    return manualTotalQuestions.value || formData.value.studentMetricsQuestionCount || 0
-  },
-  set(newValue) {
-    // Atualiza ambos com o mesmo valor
-    manualTotalQuestions.value = newValue
-    formData.value.studentMetricsQuestionCount = newValue
-  }
-})
 
-// Watch para sincronizar quantidade de questoes da dificuldade para metricas
-watch(() => manualTotalQuestions.value, (newValue) => {
-  if (newValue > 0) {
-    formData.value.studentMetricsQuestionCount = newValue
-  }
-})
 
-// Watch para sincronizar quantidade de questoes das metricas para dificuldade
-watch(() => formData.value.studentMetricsQuestionCount, (newValue) => {
-  if (newValue > 0) {
-    manualTotalQuestions.value = newValue
-  }
-})
+
+
 
 // Debounce para auto-salvar dados do formulario no store
 let saveTimeout
@@ -429,10 +342,6 @@ watch(() => useDifficultyAnalysis.value, () => {
   autoSaveToStore()
 })
 
-// Watch para manualTotalQuestions tambem
-watch(() => manualTotalQuestions.value, () => {
-  autoSaveToStore()
-})
 
 const formattedDuration = computed(() => {
   const h = formData.value.hours || 0
@@ -472,13 +381,13 @@ const isFormValid = computed(() => {
     (formData.value.readingSpeedMode !== 'custom' || customReadingSpeedValida.value)
 
   // Se ativar dificuldade, precisa preencher todas as questões
-  if (useDifficultyAnalysis.value && manualTotalQuestions.value > 0) {
+  if (useDifficultyAnalysis.value && props.totalQuestions > 0) {
     // Conta quantas questões têm dificuldade preenchida
     const answeredCount = Object.keys(formData.value.questionDifficulties).filter(
       key => formData.value.questionDifficulties[key]
     ).length
 
-    const allAnswered = answeredCount === manualTotalQuestions.value
+    const allAnswered = answeredCount === props.totalQuestions
 
     if (!baseValid || !allAnswered) return false
   }
@@ -486,13 +395,13 @@ const isFormValid = computed(() => {
   // Se ativar metricas dos estudantes, precisa preencher os campos obrigatorios
   if (formData.value.includeStudentMetrics) {
     const metricsValid =
-      formData.value.studentCount && formData.value.studentCount > 0 &&
-      formData.value.studentMetricsQuestionCount && formData.value.studentMetricsQuestionCount > 0
+      Number.isInteger(Number(formData.value.studentCount)) && Number(formData.value.studentCount) >= 1 &&
+      props.totalQuestions > 0
 
     // Acertos por questão: questão sem valor gravado conta como 0 (é o que o campo mostra)
     // Nenhuma questão pode ter mais acertos do que o número de pessoas que realizaram a avaliação
     if (metricsValid) {
-      const numeroDeQuestoes = Number(formData.value.studentMetricsQuestionCount)
+      const numeroDeQuestoes = Number(props.totalQuestions)
       const numeroDeEstudantes = Number(formData.value.studentCount)
       const todosValidos = Array.from({ length: numeroDeQuestoes }, (_, indice) => indice + 1).every((numero) => {
         const acertos = Number(formData.value.studentMetricsAccuracy[numero] ?? 0)
