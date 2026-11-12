@@ -81,7 +81,9 @@ describe('CorrelacaoProvaGrafico (logística)', () => {
       props: { questoes: [questao('Q1', 100, 90), questao('Q2', 200, 70), questao('Q3', 300, 50), questao('Q4', 400, 30)] }
     })
     expect(wrapper.text()).toContain('Atenção:')
-    expect(wrapper.text()).toContain('razão de chances')
+    expect(wrapper.text()).toContain('Razão de chances')
+    expect(wrapper.findAll('strong').map((s) => s.text())).toContain('Curva azul:')
+    expect(wrapper.text()).not.toMatch(/\{(razao|phi|p|n)\}/)
     expect(wrapper.find('.grafico-correlacao').exists()).toBe(true)
     expect(wrapper.findAll('.ponto')).toHaveLength(4)
   })

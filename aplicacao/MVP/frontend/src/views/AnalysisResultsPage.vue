@@ -164,10 +164,6 @@
       <section v-for="analise in analisesAplicadas" :key="analise.id" class="panel">
         <h2>{{ analise.label }}</h2>
       </section>
-      <section v-if="analisesAplicadas.length === 0" class="panel">
-        <p>Nenhuma análise selecionada no filtro.</p>
-      </section>
-
 
       <section v-if="config.useDifficultyAnalysis" class="panel">
         <h2>Distribuição de dificuldade</h2>
@@ -536,16 +532,70 @@ const goToForm = () => {
 .legenda-valor { color: #666; margin-left: .5rem; }
 .duracao-linha { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
 .filter-wrapper { position: relative; display: inline-block; margin-left: auto; }
-.filter-menu { position: absolute; top: 100%; right: 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, .15); padding: 1rem; margin-top: .5rem; min-width: 280px; z-index: 100; max-height: 400px; overflow-y: auto; }
-.filter-option { display: flex; align-items: center; padding: .75rem; margin: .25rem 0; border-radius: 4px; transition: background .2s ease; }
+.filter-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-width: 280px;
+  z-index: 100;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.filter-option {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
 .filter-option:hover { background: #f5f5f5; }
-.filter-lista { max-height: 4.5rem; overflow-y: auto; /* 2 opções visíveis; o restante rola */ }
-.filter-lista .filter-option { height: 2.25rem; padding: 0 .75rem; margin: 0; }
-.filter-option input[type="checkbox"] { margin-right: .75rem; width: 16px; height: 16px; cursor: pointer; accent-color: #0070C0; }
-.filter-option label { cursor: pointer; margin: 0; font-size: .95rem; color: #333; flex: 1; }
-.filter-todos { padding-bottom: .5rem; margin-bottom: .5rem; border-bottom: 1px solid #e0e0e0; }
-.filter-rodape { display: flex; justify-content: flex-end; margin-top: .5rem; padding-top: .75rem; border-top: 1px solid #e0e0e0; }
-.filter-aplicar { background: #0070C0; color: white; border: none; padding: .5rem 1.25rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background .3s ease; }
+.filter-lista { max-height: none; overflow: visible; }
+.filter-option input[type="checkbox"] {
+  margin-right: 0.75rem;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #0070C0;
+}
+.filter-option label {
+  cursor: pointer;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  flex: 1;
+}
+.filter-todos {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.filter-rodape {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+}
+.filter-aplicar {
+  background: #0070C0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
 .filter-aplicar:hover { background: #005a9e; }
 .prova-info-panel { padding: 1.5rem 1.5rem 1.5rem; }
 .analise-tempo-bloco { margin: 0; }

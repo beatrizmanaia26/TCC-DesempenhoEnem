@@ -3,7 +3,7 @@
   <div class="correlacao-prova">
     <div class="correlacao-cabecalho">
       <h3 class="correlacao-titulo">Dispersão: Caracteres da Questão × Acerto</h3>
-      <InfoIcon warning :tooltip="tooltip" :largura="380" />
+      <InfoIcon warning :tooltip="tooltip" :largura="520" />
       <div class="filter-wrapper">
         <button type="button" class="filter-btn" @click="alternarMenuFiltro">
           <FilterIcon />
@@ -112,9 +112,8 @@
         <li><span class="linha-reta"></span>Curva logística e faixa de <a :href="URL_INTERVALO_CONFIANCA" target="_blank" rel="noopener noreferrer" class="link-conceito">Intervalo de Confiança</a> (IC) 95%</li>
       </ul>
 
-      <p class="correlacao-resumo"><template v-for="(parte, indice) in resumoPartes" :key="`resumo-${indice}`"><a v-if="typeof parte === 'object'" :href="parte.url" target="_blank" rel="noopener noreferrer" class="link-conceito">{{ parte.texto }}</a><template v-else>{{ parte }}</template></template></p>
       <ul class="correlacao-notas">
-        <li v-for="(partes, indice) in NOTAS_CORRELACAO" :key="indice"><template v-for="(parte, sub) in partes" :key="`nota-${indice}-${sub}`"><a v-if="typeof parte === 'object'" :href="parte.url" target="_blank" rel="noopener noreferrer" class="link-conceito">{{ parte.texto }}</a><template v-else>{{ parte }}</template></template></li>
+        <li v-for="(partes, indice) in notasProva" :key="indice"><template v-for="(parte, sub) in partes" :key="`nota-${indice}-${sub}`"><a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="link-conceito" :style="parte.negrito ? { fontWeight: 'bold' } : null">{{ parte.texto }}</a><strong v-else-if="parte.negrito">{{ parte.texto }}</strong><template v-else>{{ parte.texto }}</template></template></li>
       </ul>
     </template>
   </div>
@@ -125,13 +124,11 @@ import { computed, ref } from 'vue'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import FilterIcon from '@/components/icons/FilterIcon.vue'
 import { calcularLogisticaProva, MINIMO_QUESTOES } from '@/services/logisticaProva.js'
-import { URL_INTERVALO_CONFIANCA } from '@/config/textosAnalises.js'
+import { URL_INTERVALO_CONFIANCA, URL_CORRECAO_DISPERSAO } from '@/config/textosAnalises.js'
 
 // Fonte aberta sobre o modelo logístico usado na curva
 const URL_MODELO_LOGISTICO = 'https://pt.wikipedia.org/wiki/Regressão_logística'
-// Explicações externas dos termos do resumo e das notas (abrem em nova aba)
-const URL_TESTE_WALD = 'https://en.wikipedia.org/wiki/Wald_test'
-const URL_CORRECAO_DISPERSAO = 'https://en.wikipedia.org/wiki/Overdispersion'
+// Links externos dos termos das notas (abrem em nova aba)
 
 const LARGURA = 800
 const ALTURA = 460
@@ -265,17 +262,56 @@ const faixaIc = computed(() => {
   return [...superior, ...inferior].join(' ')
 })
 
-const resumoPartes = computed(() => {
+// Títulos das notas que ficam em negrito (só estes trechos). Os links vêm como objeto { texto, url }.
+const TITULOS_NEGRITO = ['Curva azul:', 'Faixa azul:', 'Pontos:', 'Razão de chances:', 'Correção de dispersão (φ):', 'Valor de p', 'p baixo:', 'p alto:', 'O n ']
+
+// Marca como negrito apenas o trecho inicial que bate com um título da lista
+function destacarTitulo(partes) {
+  const texto = partes.map((parte) => parte.texto).join('')
+  const titulo = TITULOS_NEGRITO.find((item) => texto.startsWith(item))
+  if (!titulo) return partes
+  const resultado = []
+  let restante = titulo.length
+  partes.forEach((parte) => {
+    if (restante <= 0) {
+      resultado.push(parte)
+      return
+    }
+    const tamanho = Math.min(restante, parte.texto.length)
+    resultado.push({ ...parte, texto: parte.texto.slice(0, tamanho), negrito: true })
+    if (tamanho < parte.texto.length) resultado.push({ ...parte, texto: parte.texto.slice(tamanho) })
+    restante -= tamanho
+  })
+  return resultado
+}
+
+// Padroniza as partes da nota (texto puro ou link) e aplica o negrito nos títulos
+function partesComTitulo(partes) {
+  return destacarTitulo(partes.map((parte) => (typeof parte === 'string' ? { texto: parte, url: null } : { ...parte, url: parte.url ?? null })))
+}
+
+// Notas do gráfico: mesmas explicações do gráfico de dispersão do ENEM, com os valores desta prova
+const notasProva = computed(() => {
   const r = resultado.value
-  if (!r) return []
-  const p = r.p < 0.001 ? '< 0,001' : formatarNumero(r.p, 3)
+  const razao = r ? formatarNumero(r.razaoChancesPor100, 2) : '—'
+  const phi = r ? formatarNumero(r.phi, 1) : '—'
+  const p = r ? (r.p < 0.001 ? '< 0,001' : formatarNumero(r.p, 3)) : '—'
+  const n = r ? String(r.n) : '—'
   return [
-    `Modelo logístico: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por ${formatarNumero(r.razaoChancesPor100, 2)} (razão de chances, p = ${p} pelo `,
-    { texto: 'teste de Wald', url: URL_TESTE_WALD },
-    ' com ',
-    { texto: 'correção de dispersão', url: URL_CORRECAO_DISPERSAO },
-    ` φ = ${formatarNumero(r.phi, 1)}, n = ${r.n} questões).`
-  ]
+    ['Curva azul: probabilidade de acerto prevista pelo modelo logístico para cada tamanho de questão. Ela cresce ou decresce conforme o tamanho varia e nunca passa de 0% nem de 100%. Quando a curva é quase plana, o tamanho do texto pouco altera o acerto nesta prova.'],
+    ['Faixa azul: representa a margem de erro da curva média. Quanto mais estreita a faixa, mais certeza temos sobre a curva. Quanto mais larga, menor a confiança, o que acontece quando há poucas questões ou muita variação entre elas.'],
+    ['Pontos: cada ponto é uma questão. Um ponto dentro da faixa azul teve acerto dentro da variação normal para o seu tamanho. Um ponto fora da faixa teve acerto bem diferente do previsto: nesse caso, o tamanho do texto não é o fator principal, e outros fatores pesam mais.'],
+    [`Razão de chances: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por ${razao} (valor desta prova). Valor abaixo de 1 indica que questões mais longas tendem a ter menos acerto; acima de 1, mais acerto. Quanto mais distante de 1, maior o efeito do tamanho do texto; quanto mais próximo de 1, menor o efeito, ou seja, o tamanho quase não altera o acerto.`],
+    [
+      { texto: 'Correção de dispersão', url: URL_CORRECAO_DISPERSAO },
+      ` (φ): mostra se as questões variam mais do que o modelo simples prevê. O valor esperado é 1. Com φ = ${phi}, a variação entre as questões é ${phi} vezes maior do que a esperada. Para compensar, o modelo aumenta o erro padrão deixando a faixa azul mais larga e o p mais alto. Quanto maior o φ, mais outros fatores, além do tamanho do texto, estão influenciando o acerto.`
+    ],
+    [`Valor de p = ${p}: indica se o tamanho da questão parece ter relação com o acerto nesta prova, ou se a diferença poderia ser coincidência. Quanto menor o número, mais forte é o indício de relação.`],
+    ['p baixo: um efeito desse tamanho seria raro sem relação, há indício de relação.'],
+    ['p alto: não há evidência suficiente de relação; um efeito desse tamanho seria comum sem relação.'],
+    [`O n = ${n} é o número de questões desta prova: com poucas questões, relações fracas podem não ser detectadas. Esses valores mudam conforme o filtro escolhido.`],
+    ['As questões são a unidade da análise, então o p responde à relação entre caracteres e acerto entre questões.']
+  ].map(partesComTitulo)
 })
 
 const tooltip = [
@@ -283,27 +319,15 @@ const tooltip = [
   '',
   'Como é calculado:',
   '• Tamanho da questão: quantidade de caracteres do texto inteiro (enunciado, fonte, alternativas), sem espaços nem quebras de linha.',
-  '• Curva: mostra a chance de acerto prevista para cada tamanho, com base nos acertos de cada questão.',
+  '• Curva: chance de acerto prevista para cada tamanho, com base nos acertos de cada questão. Os acertos e respostas de cada questão são usados como peso do modelo.',
   '• Faixa: a margem de incerteza da curva (95% de confiança). Fica sempre entre 0% e 100%.',
   '• Razão de chances: a cada 100 caracteres a mais, quanto a chance de acerto muda.',
   '• p: indica se o tamanho parece ter relação com o acerto ou se a diferença pode ser coincidência. Quanto menor, mais forte o indício.',
-  '• Cor: nível de dificuldade informado no formulário.'
+  '• Correção de dispersão (φ): compara a variação observada entre as questões com a variação prevista pelo modelo. Se a variação observada for menor, φ fica em 1 (sem correção).',
+  '• χ² = soma, para cada questão, de (acertos − respostas × probabilidade prevista)² ÷ (respostas × probabilidade × (1 − probabilidade)).',
+  '• φ = χ² ÷ (número de questões − 2). O erro padrão é multiplicado por √φ, então a faixa fica mais larga e o p mais alto quando φ > 1.',
+  '• Cor: nível de dificuldade informado no formulário. A cor só separa os pontos; a dificuldade não entra no cálculo da curva.'
 ].join('\n')
-
-
-// Notas explicativas do gráfico, adaptadas do gráfico de dispersão do ENEM para uma prova única
-const NOTAS_CORRELACAO = [
-  ['Curva azul: probabilidade de acerto prevista pelo modelo logístico para cada tamanho de questão. Ela cresce ou decresce conforme o tamanho varia e nunca passa de 0% nem de 100%. Quando a curva é quase plana, o tamanho do texto pouco altera o acerto nesta prova.'],
-  ['Razão de chances: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por esse valor. Valor abaixo de 1 indica que questões mais longas tendem a ter menos acerto; acima de 1, mais acerto.'],
-  ['Valor de p: indica se o tamanho da questão parece ter relação com o acerto nesta prova, ou se a diferença poderia ser coincidência. Quanto menor o número, mais forte é o indício de relação. Com poucas questões, esse número é pouco confiável.'],
-  ['p baixo: um efeito desse tamanho seria raro sem relação, há indício de relação.'],
-  ['p alto: não há evidência suficiente de relação; um efeito desse tamanho seria comum sem relação.'],
-  ['O n é o número de questões desta prova: com poucas questões, relações fracas podem não ser detectadas.'],
-  [
-    { texto: 'Correção de dispersão', url: URL_CORRECAO_DISPERSAO },
-    ' (φ): mede quanto as respostas variam entre as questões além do que o modelo simples prevê. φ = 1 significa que não há variação extra. Com φ = 4, por exemplo, a variação é 4 vezes maior, então os erros são multiplicados por √4 = 2, e a faixa e o p ficam mais conservadores. Com poucas questões, φ é uma estimativa instável.'
-  ]
-]
 </script>
 
 <style scoped>
@@ -420,13 +444,6 @@ const NOTAS_CORRELACAO = [
   height: 3px;
   background: #0070C0;
 }
-.correlacao-resumo {
-  margin: 0.75rem 0 0;
-  color: #333;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
 .cor-nivel {
   display: inline-block;
   width: 12px;

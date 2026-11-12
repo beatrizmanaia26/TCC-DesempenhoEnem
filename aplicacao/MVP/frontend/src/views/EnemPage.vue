@@ -758,6 +758,9 @@ const uploadNewEnem = () => {
 }
 
 .filter-rodape {
+  position: sticky;
+  bottom: 0;
+  background: white;
   display: flex;
   justify-content: flex-end;
   margin-top: 0.5rem;

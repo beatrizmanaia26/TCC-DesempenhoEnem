@@ -49,6 +49,8 @@ export const TEXTO_CORRELACOES_TEMPO = {
 
 // Explicação externa de intervalo de confiança (usada nos subtítulos, legendas e termos linkados)
 export const URL_INTERVALO_CONFIANCA = 'https://pt.wikipedia.org/wiki/Intervalo_de_confiança'
+// Referência da correção de dispersão (φ), usada nas notas da prova enviada e do ENEM
+export const URL_CORRECAO_DISPERSAO = 'https://en.wikipedia.org/wiki/Overdispersion'
 
 // Termos das notas que viram link para uma explicação externa (abre em nova aba)
 export const LINKS_TERMOS = [
@@ -58,7 +60,8 @@ export const LINKS_TERMOS = [
   { termo: 'Holm', url: 'https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method' },
   { termo: 't de Student', url: 'https://pt.wikipedia.org/wiki/Distribuição_t_de_Student' },
   { termo: 'intervalo de confiança', url: URL_INTERVALO_CONFIANCA },
-  { termo: 'Intervalo de Confiança', url: URL_INTERVALO_CONFIANCA }
+  { termo: 'Intervalo de Confiança', url: URL_INTERVALO_CONFIANCA },
+  { termo: 'Correção de dispersão', url: URL_CORRECAO_DISPERSAO }
 ]
 
 export const TEXTO_TEMPO_LEITURA = {
@@ -165,13 +168,16 @@ export const TEXTO_DISPERSAO_ITENS = {
   ],
   notas: [
     'Curva azul: probabilidade de acerto prevista pelo modelo logístico para cada tamanho de questão. Ela cresce ou decresce conforme o tamanho varia e nunca passa de 0% nem de 100%. Quando a curva é quase plana, o tamanho do texto pouco altera o acerto neste recorte.',
-    'Razão de chances: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por esse valor. Valor abaixo de 1 indica que questões mais longas tendem a ter menos acerto; acima de 1, mais acerto.',
-    'Valor de p: indica se o tamanho da questão parece ter relação com o acerto neste recorte, ou se a diferença poderia ser coincidência. Quanto menor o número, mais forte é o indício de relação.',
+    'Faixa azul: representa a margem de erro da curva média. Quanto mais estreita a faixa, mais certeza temos sobre a curva. Quanto mais larga, menor a confiança, o que acontece quando há poucas questões ou muita variação entre elas.',
+    'Pontos: cada ponto é uma questão. Um ponto dentro da faixa azul teve acerto dentro da variação normal para o seu tamanho. Um ponto fora da faixa teve acerto bem diferente do previsto: nesse caso, o tamanho do texto não é o fator principal, e outros fatores pesam mais.',
+    'Razão de chances: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por {razao} (valor do filtro escolhido). Valor abaixo de 1 indica que questões mais longas tendem a ter menos acerto; acima de 1, mais acerto. Quanto mais distante de 1, maior o efeito do tamanho do texto; quanto mais próximo de 1, menor o efeito, ou seja, o tamanho quase não altera o acerto.',
+    'Correção de dispersão (φ): mostra se as questões variam mais do que o modelo simples prevê. O valor esperado é 1. Com φ = {phi}, a variação entre as questões é {phi} vezes maior do que a esperada. Para compensar, o modelo aumenta o erro padrão deixando a faixa azul mais larga e o p mais alto. Quanto maior o φ, mais outros fatores, além do tamanho do texto, estão influenciando o acerto.',
+    'Valor de p = {p}: indica se o tamanho da questão parece ter relação com o acerto neste recorte, ou se a diferença poderia ser coincidência. Quanto menor o número, mais forte é o indício de relação.',
     'p baixo: um efeito desse tamanho seria raro sem relação, há indício de relação.',
     'p alto: não há evidência suficiente de relação; um efeito desse tamanho seria comum sem relação.',
-    'O n é o número de itens do recorte: com poucos itens, relações fracas podem não ser detectadas. Esses valores mudam conforme o dia e as áreas escolhidos no filtro.',
+    'O n = {n} é o número de itens do recorte: com poucos itens, relações fracas podem não ser detectadas. Esses valores mudam conforme o dia e as áreas escolhidos no filtro.',
     'O nível TRI é definido pelo próprio acerto, então itens mais difíceis tendem a ter acerto menor. Por isso, as cores mostram o nível, mas a diferença entre os pontos de cada cor não é um efeito independente do tamanho do texto.',
-    'Os itens são a unidade da análise, então o p responde à relação entre caracteres e acerto entre itens, não entre pessoas. As mesmas pessoas respondem vários itens, o que pode deixar o intervalo um pouco estreito.'
+    'Os itens são a unidade da análise, então o p responde à relação entre caracteres e acerto entre itens.'
   ]
 }
 // ====fim grafico dispersao itens

@@ -3,7 +3,7 @@
   <div class="dispersao-itens">
     <div class="dispersao-cabecalho">
       <h3 class="dispersao-titulo">{{ TEXTO_DISPERSAO_ITENS.titulo }}</h3>
-      <InfoIcon warning :tooltip="tooltipDispersao" :largura="380" />
+      <InfoIcon warning :tooltip="tooltipDispersao" :largura="520" />
       <div class="filter-wrapper">
         <button type="button" class="filter-btn" @click="alternarMenuFiltro">
           <FilterIcon />
@@ -129,11 +129,11 @@
           Curva logística e faixa de <a :href="URL_INTERVALO_CONFIANCA" target="_blank" rel="noopener noreferrer" class="correlacoes-link">Intervalo de Confiança</a> (IC) 95%
         </li>
       </ul>
-      <p v-if="resultado" class="dispersao-resumo"><template v-for="(parte, indice) in resumoPartes" :key="`resumo-${indice}`"><a v-if="typeof parte === 'object'" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link">{{ parte.texto }}</a><template v-else>{{ parte }}</template></template></p>
       <ul class="dispersao-notas">
-        <li v-for="(texto, indice) in TEXTO_DISPERSAO_ITENS.notas" :key="indice">
-          <template v-for="(parte, i) in dividirComLinks(texto)" :key="i">
-            <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link">{{ parte.texto }}</a>
+        <li v-for="(texto, indice) in notasDoFiltro" :key="indice">
+      <template v-for="(parte, i) in partesDaNota(texto)" :key="i">
+            <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link" :style="parte.negrito ? { fontWeight: 'bold' } : null">{{ parte.texto }}</a>
+            <strong v-else-if="parte.negrito">{{ parte.texto }}</strong>
             <template v-else>{{ parte.texto }}</template>
           </template>
         </li>
@@ -151,10 +151,8 @@ import FilterIcon from './icons/FilterIcon.vue'
 import { TEXTO_DISPERSAO_ITENS, LINKS_TERMOS, URL_INTERVALO_CONFIANCA } from '../config/textosAnalises.js'
 import { calcularLogisticaProva } from '../services/logisticaProva.js'
 
-// Links dos termos do resumo: mesmos da prova enviada (CorrelacaoProvaGrafico.vue)
+// Link do termo "Modelo logístico" usado nas explicações
 const URL_MODELO_LOGISTICO = 'https://pt.wikipedia.org/wiki/Regressão_logística'
-const URL_TESTE_WALD = 'https://en.wikipedia.org/wiki/Wald_test'
-const URL_CORRECAO_DISPERSAO = 'https://en.wikipedia.org/wiki/Overdispersion'
 
 // Separa o texto em partes: trechos comuns e trechos que são link (termo de LINKS_TERMOS)
 function dividirComLinks(texto) {
@@ -168,6 +166,33 @@ function dividirComLinks(texto) {
     }
   })
   return partes.filter((parte) => parte.texto !== '')
+}
+
+// Títulos das notas que ficam em negrito (só estes trechos, o restante da nota fica normal)
+const TITULOS_NEGRITO = ['Curva azul:', 'Faixa azul:', 'Pontos:', 'Razão de chances:', 'Correção de dispersão (φ):', 'Valor de p', 'p baixo:', 'p alto:', 'O n ']
+
+// Marca como negrito apenas o trecho inicial que bate com um título da lista (partes: [{ texto, url }])
+function destacarTitulo(partes) {
+  const texto = partes.map((parte) => parte.texto).join('')
+  const titulo = TITULOS_NEGRITO.find((item) => texto.startsWith(item))
+  if (!titulo) return partes
+  const resultado = []
+  let restante = titulo.length
+  partes.forEach((parte) => {
+    if (restante <= 0) {
+      resultado.push(parte)
+      return
+    }
+    const tamanho = Math.min(restante, parte.texto.length)
+    resultado.push({ ...parte, texto: parte.texto.slice(0, tamanho), negrito: true })
+    if (tamanho < parte.texto.length) resultado.push({ ...parte, texto: parte.texto.slice(tamanho) })
+    restante -= tamanho
+  })
+  return resultado
+}
+
+function partesDaNota(texto) {
+  return destacarTitulo(dividirComLinks(texto))
 }
 
 const props = defineProps({
@@ -395,18 +420,15 @@ function formatarNumero(valor, casasMinimas) {
   return (arredondado === 0 ? 0 : arredondado).toFixed(casas).replace('.', ',')
 }
 
-// Resumo do modelo do filtro: razão de chances por 100 caracteres, p (Wald), φ e n. Mesmo texto da prova.
-const resumoPartes = computed(() => {
-  const r = resultado.value
-  if (!r) return []
-  const p = r.p < 0.001 ? '< 0,001' : formatarNumero(r.p, 3)
-  return [
-    `Modelo logístico: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por ${formatarNumero(r.razaoChancesPor100, 2)} (razão de chances, p = ${p} pelo `,
-    { texto: 'teste de Wald', url: URL_TESTE_WALD },
-    ' com ',
-    { texto: 'correção de dispersão', url: URL_CORRECAO_DISPERSAO },
-    ` φ = ${formatarNumero(r.phi, 1)}, n = ${r.n} itens).`
-  ]
+// Notas do gráfico com a razão de chances, φ, p e n do filtro escolhido no lugar de {razao}, {phi}, {p} e {n}
+const notasDoFiltro = computed(() => {
+  const razao = resultado.value ? formatarNumero(resultado.value.razaoChancesPor100, 2) : '—'
+  const phi = resultado.value ? formatarNumero(resultado.value.phi, 1) : '—'
+  const p = resultado.value ? (resultado.value.p < 0.001 ? '< 0,001' : formatarNumero(resultado.value.p, 3)) : '—'
+  const n = resultado.value ? String(resultado.value.n) : '—'
+  return TEXTO_DISPERSAO_ITENS.notas.map((texto) =>
+    texto.replaceAll('{razao}', razao).replaceAll('{phi}', phi).replaceAll('{p}', p).replaceAll('{n}', n)
+  )
 })
 
 // Busca os pontos e as retas do ano escolhido
@@ -530,13 +552,6 @@ watch(() => props.ano, carregar, { immediate: true })
   width: 18px;
   height: 3px;
   background: #0070C0;
-}
-
-.dispersao-resumo {
-  margin: 0.75rem 0 0;
-  color: #333;
-  font-size: 0.9rem;
-  font-weight: 600;
 }
 
 .dispersao-notas {
