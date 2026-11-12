@@ -16,6 +16,7 @@ export const TEXTO_RESUMO_TEMPO = {
 
 export const TEXTO_CORRELACOES_TEMPO = {
   titulo: 'Correlação entre Tamanho da Questão e Percentual de Acertos por Ano e Área',
+  subtitulo: 'Correlação de Spearman entre os caracteres de cada questão e o percentual de acerto, por ano e área.',
 
   explicacao: [
     'Unidade de análise: cada item da prova em um ano e uma área. Cada item aparece nos cadernos de todas as cores, mas conta uma vez só.',
@@ -46,12 +47,18 @@ export const TEXTO_CORRELACOES_TEMPO = {
   ]
 }
 
+// Explicação externa de intervalo de confiança (usada nos subtítulos, legendas e termos linkados)
+export const URL_INTERVALO_CONFIANCA = 'https://pt.wikipedia.org/wiki/Intervalo_de_confiança'
+
 // Termos das notas que viram link para uma explicação externa (abre em nova aba)
 export const LINKS_TERMOS = [
   { termo: 'correlação de Spearman', url: 'https://pt.wikipedia.org/wiki/Coeficiente_de_correlação_de_postos_de_Spearman' },
   { termo: 'Correlação de Pearson', url: 'https://pt.wikipedia.org/wiki/Coeficiente_de_correlação_de_Pearson' },
   { termo: 'valor de p', url: 'https://pt.wikipedia.org/wiki/Valor-p' },
-  { termo: 'Holm', url: 'https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method' }
+  { termo: 'Holm', url: 'https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method' },
+  { termo: 't de Student', url: 'https://pt.wikipedia.org/wiki/Distribuição_t_de_Student' },
+  { termo: 'intervalo de confiança', url: URL_INTERVALO_CONFIANCA },
+  { termo: 'Intervalo de Confiança', url: URL_INTERVALO_CONFIANCA }
 ]
 
 export const TEXTO_TEMPO_LEITURA = {
@@ -70,6 +77,7 @@ export const TEXTO_TEMPO_LEITURA = {
 
 export const TEXTO_MAPA_DIFICULDADE = {
   titulo: 'Correlação entre Tamanho da Questão e Acertos por nível de dificuldade',
+  subtitulo: 'Correlação de Spearman entre os caracteres de cada questão e o percentual de acerto, separado por nível de dificuldade.',
   explicacao: [
     'Este gráfico considera só as questões de cada nível de dificuldade. A dificuldade vem da Teoria de Resposta ao Item (TRI), que estima quão difícil é cada questão para os candidatos. Questões sem essa estimativa ficam de fora.',
     '',
@@ -139,30 +147,31 @@ export const TEXTO_DISPERSAO_ITENS = {
   titulo: 'Dispersão: Caracteres da Questão × Acerto',
   // Recebe o ano da aba selecionada (ex.: 2025)
   subtitulo: (ano) =>
-    `Cada ponto é uma questão, colorido pelo nível de dificuldade. A reta mostra a tendência geral entre o tamanho do texto e o acerto, no ano de ${ano}. A faixa em volta da reta é o intervalo de confiança de 95%.`,
+    `Cada ponto é uma questão, colorido pelo nível de dificuldade. A curva mostra a probabilidade de acerto prevista pelo modelo logístico para cada tamanho de questão, no ano de ${ano}. A faixa em volta da curva é o intervalo de confiança de 95%, calculado na escala logística e sempre entre 0% e 100%.`,
   explicacao: [
-    'Apenas questões com nível TRI definido são incluídos, os 10 itens sem nível TRI ficam de fora dos pontos e da reta.',
+    'Apenas questões com nível TRI definido são incluídas. Os itens sem nível TRI ficam de fora dos pontos e da curva.',
     '',
     'Cálculos:',
     '• Unidade: item = ano, área e código do item. Cada item aparece em todos os cadernos, mas conta uma vez só.',
     '• Caracteres: número de caracteres de todo o texto da questão (cabeçalho, enunciado, fonte e alternativas, incluindo as letras), sem espaços, tabs ou quebras de linha. Lido do caderno Azul, pois o texto é igual em todas as cores.',
-    '• Acerto (%) = total de acertos ÷ total de respondentes de todas as cores × 100.',
+    '• Acertos e respostas: somados de todas as cores de cada item. Cada item pesa pelo número de respostas.',
     '• Nível TRI: fácil se b < 0; média se 0 ≤ b < 1,5; difícil se b ≥ 1,5 (b = parâmetro de dificuldade da TRI).',
     '',
-    'Reta: regressão linear simples por mínimos quadrados, com caracteres como variável explicativa e acerto como variável resposta.',
+    'Modelo: regressão logística binomial, com caracteres como variável explicativa e a proporção de acertos como resposta. É o mesmo modelo usado na dispersão da prova enviada.',
     '',
-    'Faixa: o IC de 95% usa a distribuição t de Student com n − 2 graus de liberdade.',
+    'Faixa: o IC de 95% é calculado na escala do logit e transformado em porcentagem, então fica sempre entre 0% e 100%.',
     '',
-    'p da reta: teste t paramétrico, sem correção para vários testes.',
+    'p: teste de Wald do coeficiente de caracteres, com correção de dispersão (φ) quando os acertos variam mais do que a binomial prevê. Sem correção para vários testes.'
   ],
   notas: [
-    'Reta azul: ela cresce ou decresce conforme o tamanho da questão varia. A inclinação indica a variação média, em pontos percentuais, do acerto a cada 100 caracteres adicionais. Quando a reta é praticamente horizontal, a variação do tamanho do texto pouco altera o acerto neste recorte.',
-    'Correlação de Pearson (r) mostra a força e o sentido da relação linear. Quanto mais perto de +1 ou −1 mais forte é a relação.',
-    'O valor de p (p): mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
-    'p baixo: um r seria raro sem relação, há indício de relação.',
-    'p alto: um r seria comum sem relação. O resultado é compatível com ausência de relação.',
+    'Curva azul: probabilidade de acerto prevista pelo modelo logístico para cada tamanho de questão. Ela cresce ou decresce conforme o tamanho varia e nunca passa de 0% nem de 100%. Quando a curva é quase plana, o tamanho do texto pouco altera o acerto neste recorte.',
+    'Razão de chances: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por esse valor. Valor abaixo de 1 indica que questões mais longas tendem a ter menos acerto; acima de 1, mais acerto.',
+    'Valor de p: indica se o tamanho da questão parece ter relação com o acerto neste recorte, ou se a diferença poderia ser coincidência. Quanto menor o número, mais forte é o indício de relação.',
+    'p baixo: um efeito desse tamanho seria raro sem relação, há indício de relação.',
+    'p alto: não há evidência suficiente de relação; um efeito desse tamanho seria comum sem relação.',
     'O n é o número de itens do recorte: com poucos itens, relações fracas podem não ser detectadas. Esses valores mudam conforme o dia e as áreas escolhidos no filtro.',
-    'O nível TRI é definido pelo próprio acerto, então itens mais difíceis tendem a ter acerto menor. Por isso, as cores mostram o nível, mas a diferença entre os pontos de cada cor não é um efeito independente do tamanho do texto.'
+    'O nível TRI é definido pelo próprio acerto, então itens mais difíceis tendem a ter acerto menor. Por isso, as cores mostram o nível, mas a diferença entre os pontos de cada cor não é um efeito independente do tamanho do texto.',
+    'Os itens são a unidade da análise, então o p responde à relação entre caracteres e acerto entre itens, não entre pessoas. As mesmas pessoas respondem vários itens, o que pode deixar o intervalo um pouco estreito.'
   ]
 }
 // ====fim grafico dispersao itens
@@ -185,12 +194,19 @@ export const TEXTO_PALAVRAS = {
 
 // Dicas dos filtros de métrica (aparecem ao lado da opção no menu Filtro)
 export const DICA_OUTLIERS_TEMPO =
-  'Mostra as questões com tempo menor que Q1 − 1,5 × IQR ou maior que Q3 + 1,5 × IQR, onde Q1 e Q3 são o 1º e o 3º quartil e IQR = Q3 − Q1.'
+  'Mostra as questões com tempo menor que 1º quartil − 1,5 × intervalo interquartil ou maior que 3º quartil + 1,5 × intervalo interquartil. O intervalo interquartil é a diferença entre o 3º e o 1º quartil.'
 export const DICA_DESVIO_TEMPO =
   'Mostra as questões cujo tempo de leitura está a mais de 1 desvio padrão da média (|tempo − média| > desvio padrão).'
 export const DICA_OUTLIERS_PALAVRAS =
-  'Mostra as questões com quantidade de palavras menor que Q1 − 1,5 × IQR ou maior que Q3 + 1,5 × IQR, onde Q1 e Q3 são o 1º e o 3º quartil e IQR = Q3 − Q1.'
+  'Mostra as questões com quantidade de palavras menor que 1º quartil − 1,5 × intervalo interquartil ou maior que 3º quartil + 1,5 × intervalo interquartil. O intervalo interquartil é a diferença entre o 3º e o 1º quartil.'
 export const DICA_DESVIO_PALAVRAS =
   'Mostra as questões com quantidade de palavras a mais de 1 desvio padrão da média (|palavras − média| > desvio padrão).'
 
 export const REFERENCIA_VELOCIDADE = 'Referência: Messias et al., 2008'
+export const REFERENCIA_VELOCIDADE_URL = 'https://doi.org/10.1590/S0004-27492008000400016'
+
+// O que conta como texto introdutório na legenda "Leitura dos textos introdutórios", conforme a origem da prova
+export const DICA_TEXTOS_INTRO_ENEM =
+  'Textos introdutórios do caderno oficial do ENEM: capa, instruções gerais e cabeçalhos de seção, como "Questões de 01 a 45". Não incluem enunciados nem alternativas. Esse tempo é contado uma vez por dia de prova.'
+export const DICA_TEXTOS_INTRO_PROVA_ENVIADA =
+  'Textos introdutórios da prova enviada: todo o texto do PDF que aparece antes da primeira questão, como capa, cabeçalho e instruções gerais. Não incluem enunciados nem alternativas.'

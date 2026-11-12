@@ -20,7 +20,7 @@
       <div class="info-label">Velocidade de leitura considerada:</div>
       <div class="info-value">
         {{ provaInfo.velocidade_leitura }} caracteres/minuto
-        <span class="info-reference">(Referência: Messias et al., 2008)</span>
+        <a :href="REFERENCIA_VELOCIDADE_URL" target="_blank" rel="noopener noreferrer" class="info-reference">(Referência: Messias et al., 2008)</a>
       </div>
     </div>
   </div>
@@ -29,6 +29,7 @@
 <script setup>
 import { computed } from 'vue'
 import { obterInfoProva } from '@/config/enemConstants.js'
+import { REFERENCIA_VELOCIDADE_URL } from '@/config/textosAnalises.js'
 
 const props = defineProps({
   ano: {
@@ -96,6 +97,14 @@ const provaInfo = computed(() => {
   color: #666;
   font-size: 0.85rem;
   font-weight: 400;
+}
+
+a.info-reference {
+  text-decoration: underline;
+}
+
+a.info-reference:hover {
+  color: #0070C0;
 }
 
 @media (max-width: 768px) {

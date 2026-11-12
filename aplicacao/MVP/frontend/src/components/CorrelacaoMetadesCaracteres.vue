@@ -102,10 +102,10 @@
       </g>
 
       <g class="legenda">
-        <rect :x="LARGURA - 260" :y="6" width="12" height="12" :fill="COR_MENOS" />
-        <text :x="LARGURA - 242" :y="16" class="rotulo-legenda">Menos caracteres (≤ mediana)</text>
-        <rect :x="LARGURA - 260" :y="24" width="12" height="12" :fill="COR_MAIS" />
-        <text :x="LARGURA - 242" :y="34" class="rotulo-legenda">Mais caracteres (&gt; mediana)</text>
+        <rect :x="LARGURA / 2 - 190" :y="8" width="12" height="12" :fill="COR_MENOS" />
+        <text :x="LARGURA / 2 - 174" :y="18" class="rotulo-legenda">Menos caracteres (≤ mediana)</text>
+        <rect :x="LARGURA / 2 + 10" :y="8" width="12" height="12" :fill="COR_MAIS" />
+        <text :x="LARGURA / 2 + 26" :y="18" class="rotulo-legenda">Mais caracteres (&gt; mediana)</text>
       </g>
     </svg>
 
@@ -207,10 +207,10 @@ const chaveFiltro = computed(() => {
 
 // Layout do SVG (unidades do viewBox)
 const LARGURA = 760
-const ALTURA = 360
+const ALTURA = 380
 const MARGEM_ESQ = 60
 const MARGEM_DIR = 20
-const MARGEM_TOPO = 40
+const MARGEM_TOPO = 60
 const MARGEM_BASE = 40
 const LARGURA_BARRA = 70
 const ESPACO_ENTRE_BARRAS = 8
@@ -389,24 +389,7 @@ watch(() => props.ano, carregar, { immediate: true })
   margin-left: auto;
 }
 
-.filter-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  color: #0070C0;
-  border: 2px solid #0070C0;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
 
-.filter-btn:hover {
-  background: #f0f7ff;
-}
 
 .filter-menu {
   position: absolute;

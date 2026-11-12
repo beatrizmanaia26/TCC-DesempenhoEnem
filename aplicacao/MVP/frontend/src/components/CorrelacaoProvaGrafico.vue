@@ -1,4 +1,4 @@
-<!-- ====grafico correlacao da prova enviada - dispersão caracteres × acerto por questão, com reta, IC 95% e cor por dificuldade -->
+<!-- ====grafico correlacao da prova enviada - dispersão caracteres × acerto por questão, com curva logística, IC 95% e cor por dificuldade -->
 <template>
   <div class="correlacao-prova">
     <div class="correlacao-cabecalho">
@@ -33,7 +33,7 @@
       </div>
     </div>
     <p class="correlacao-subtitulo">
-      Cada ponto é uma questão, colorido pelo nível de dificuldade (questões sem nível informado aparecem em cinza). A reta mostra a tendência geral entre o tamanho do texto e o acerto, da questão mais curta à mais longa desta prova. A faixa em volta da reta é o intervalo de confiança de 95%.
+      Cada ponto é uma questão, colorido pelo nível de dificuldade (questões sem nível informado aparecem em cinza). A curva mostra a probabilidade de acerto prevista pelo <a :href="URL_MODELO_LOGISTICO" target="_blank" rel="noopener noreferrer" class="link-modelo">modelo logístico</a> para cada tamanho de questão, da mais curta à mais longa desta prova. A faixa em volta da curva é o <a :href="URL_INTERVALO_CONFIANCA" target="_blank" rel="noopener noreferrer" class="link-conceito">intervalo de confiança</a> de 95%, calculado na escala logística e sempre entre 0% e 100%.
     </p>
 
     <p v-if="!resultado" class="correlacao-status">{{ mensagemSemResultado }}</p>
@@ -49,7 +49,7 @@
         class="grafico-correlacao"
         :viewBox="`0 0 ${LARGURA} ${ALTURA}`"
         role="img"
-        aria-label="Gráfico de dispersão do percentual de acerto pelo tamanho em caracteres de cada questão desta prova, colorido pelo nível de dificuldade, com reta e intervalo de confiança de 95%"
+        aria-label="Gráfico de dispersão do percentual de acerto pelo tamanho em caracteres de cada questão desta prova, colorido pelo nível de dificuldade, com a curva logística e o intervalo de confiança de 95%"
       >
         <line :x1="MARGEM_ESQ" :y1="yDe(0)" :x2="LARGURA - MARGEM_DIR" :y2="yDe(0)" class="eixo" />
         <line :x1="MARGEM_ESQ" :y1="yDe(0)" :x2="MARGEM_ESQ" :y2="yDe(100)" class="eixo" />
@@ -99,7 +99,7 @@
       </svg>
 
       <p v-if="temPontoSemDificuldade" class="correlacao-aviso-dificuldade" role="note">
-        A dificuldade não foi informada para todas as questões. Os pontos sem nível aparecem em cinza. Para colori-los por fácil, média e difícil, ative a análise de dificuldade no formulário.
+        A dificuldade não foi informada para todas as questões. Os pontos sem nível aparecem em cinza. Para colori-los por fácil, média e difícil, marque "Deseja usar a dificuldade das questões para a análise?" no formulário.
       </p>
 
       <ul class="correlacao-legenda">
@@ -109,12 +109,12 @@
         <li v-if="temPontoSemDificuldade">
           <span class="cor-nivel" :style="{ background: COR_SEM_NIVEL }"></span>Dificuldade não informada
         </li>
-        <li><span class="linha-reta"></span>Reta e faixa de Intervalo de Confiança (IC) 95%</li>
+        <li><span class="linha-reta"></span>Curva logística e faixa de <a :href="URL_INTERVALO_CONFIANCA" target="_blank" rel="noopener noreferrer" class="link-conceito">Intervalo de Confiança</a> (IC) 95%</li>
       </ul>
 
-      <p class="correlacao-resumo">{{ resumo }}</p>
+      <p class="correlacao-resumo"><template v-for="(parte, indice) in resumoPartes" :key="`resumo-${indice}`"><a v-if="typeof parte === 'object'" :href="parte.url" target="_blank" rel="noopener noreferrer" class="link-conceito">{{ parte.texto }}</a><template v-else>{{ parte }}</template></template></p>
       <ul class="correlacao-notas">
-        <li v-for="(texto, indice) in NOTAS_CORRELACAO" :key="indice">{{ texto }}</li>
+        <li v-for="(partes, indice) in NOTAS_CORRELACAO" :key="indice"><template v-for="(parte, sub) in partes" :key="`nota-${indice}-${sub}`"><a v-if="typeof parte === 'object'" :href="parte.url" target="_blank" rel="noopener noreferrer" class="link-conceito">{{ parte.texto }}</a><template v-else>{{ parte }}</template></template></li>
       </ul>
     </template>
   </div>
@@ -124,7 +124,14 @@
 import { computed, ref } from 'vue'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import FilterIcon from '@/components/icons/FilterIcon.vue'
-import { calcularCorrelacaoProva, retaComIntervalo, MINIMO_QUESTOES } from '@/services/correlacaoProva.js'
+import { calcularLogisticaProva, MINIMO_QUESTOES } from '@/services/logisticaProva.js'
+import { URL_INTERVALO_CONFIANCA } from '@/config/textosAnalises.js'
+
+// Fonte aberta sobre o modelo logístico usado na curva
+const URL_MODELO_LOGISTICO = 'https://pt.wikipedia.org/wiki/Regressão_logística'
+// Explicações externas dos termos do resumo e das notas (abrem em nova aba)
+const URL_TESTE_WALD = 'https://en.wikipedia.org/wiki/Wald_test'
+const URL_CORRECAO_DISPERSAO = 'https://en.wikipedia.org/wiki/Overdispersion'
 
 const LARGURA = 800
 const ALTURA = 460
@@ -185,6 +192,8 @@ const pontosInformados = computed(() => props.questoes
     rotulo: questao.rotulo,
     x: Number(questao.caracteres) || 0,
     y: Number(questao.taxa_acerto_percentual),
+    acertos: Number(questao.acertos),
+    total: Number(questao.total_estudantes),
     dificuldade: questao.dificuldade ?? null
   })))
 
@@ -193,9 +202,7 @@ const pontos = computed(() => filtroDificuldade.value === 'todas'
   ? pontosInformados.value
   : pontosInformados.value.filter((ponto) => ponto.dificuldade === filtroDificuldade.value))
 
-const resultado = computed(() => (pontos.value.length >= MINIMO_QUESTOES
-  ? calcularCorrelacaoProva(pontos.value)
-  : null))
+const resultado = computed(() => (pontos.value.length >= MINIMO_QUESTOES ? linhaReta.value : null))
 
 // Só aparece na legenda quando algum ponto plotado não tem dificuldade informada
 const temPontoSemDificuldade = computed(() =>
@@ -204,13 +211,13 @@ const temPontoSemDificuldade = computed(() =>
 
 const mensagemSemResultado = computed(() => {
   if (pontosInformados.value.length === 0) {
-    return 'Informe os acertos por questão (em "Deseja incluir métricas reais dos estudantes?") para ver a correlação desta prova.'
+    return 'Informe os acertos por questão (em "Deseja incluir métricas dos estudantes?") para ver a correlação desta prova.'
   }
   if (pontos.value.length < MINIMO_QUESTOES) {
     const escopo = filtroDificuldade.value === 'todas' ? '' : ' neste filtro'
     return `São necessárias pelo menos ${MINIMO_QUESTOES} questões com acerto informado${escopo} (há ${pontos.value.length}).`
   }
-  return 'A correlação não pode ser calculada: todas as questões têm o mesmo tamanho ou o mesmo percentual de acerto.'
+  return 'Não foi possível ajustar o modelo logístico com estes acertos (os dados não convergem ou o tamanho das questões não varia).'
 })
 
 const formatarNumero = (valor, casas) => valor.toFixed(casas).replace('.', ',')
@@ -241,12 +248,10 @@ const pontosSvg = computed(() => pontos.value.map((ponto) => ({
   tooltip: `${ponto.rotulo} · ${rotuloDoNivel(ponto.dificuldade)}\nCaracteres: ${Math.round(ponto.x)}\nAcerto: ${formatarNumero(ponto.y, 1)}%`
 })))
 
-// Reta e IC 95% do menor ao maior tamanho de questão, como o eixo X
+// Curva logística e IC 95% do menor ao maior tamanho de questão, como o eixo X
 const linhaReta = computed(() => {
-  if (!resultado.value) return null
-  const xs = pontos.value.map((ponto) => ponto.x)
   const grade = Array.from({ length: 21 }, (_, indice) => xMinimo.value + (amplitudeX.value / 20) * indice)
-  return retaComIntervalo(xs, pontos.value.map((ponto) => ponto.y), grade)
+  return calcularLogisticaProva(pontos.value, grade)
 })
 
 const pontosReta = computed(() => linhaReta.value
@@ -260,35 +265,44 @@ const faixaIc = computed(() => {
   return [...superior, ...inferior].join(' ')
 })
 
-const resumo = computed(() => {
+const resumoPartes = computed(() => {
   const r = resultado.value
-  if (!r) return ''
+  if (!r) return []
   const p = r.p < 0.001 ? '< 0,001' : formatarNumero(r.p, 3)
-  const inclinacaoPorCem = linhaReta.value.inclinacao * 100
-  return `Reta: a cada 100 caracteres a mais, o acerto muda ${formatarNumero(inclinacaoPorCem, 2)} pontos percentuais, em média ` +
-    `(r de Pearson = ${formatarNumero(r.r, 2)}, p = ${p}, n = ${r.n} questões).`
+  return [
+    `Modelo logístico: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por ${formatarNumero(r.razaoChancesPor100, 2)} (razão de chances, p = ${p} pelo `,
+    { texto: 'teste de Wald', url: URL_TESTE_WALD },
+    ' com ',
+    { texto: 'correção de dispersão', url: URL_CORRECAO_DISPERSAO },
+    ` φ = ${formatarNumero(r.phi, 1)}, n = ${r.n} questões).`
+  ]
 })
 
 const tooltip = [
   'Mostra se questões mais longas tendem a ter menor ou maior percentual de acerto nesta prova.',
   '',
-  'Cálculos:',
-  '• Tamanho da questão = caracteres de todo o texto da questão (cabeçalho, enunciado, fonte e alternativas, incluindo as letras), sem espaços, tabs ou quebras de linha.',
-  '• Reta = mínimos quadrados entre tamanho e acerto.',
-  '• Faixa = intervalo de confiança de 95% da reta (t de Student, n − 2 graus de liberdade).',
-  '• r = correlação de Pearson (relação linear entre tamanho e acerto).',
-  '• p = teste t bilateral do r, com n − 2 graus de liberdade (mesmo método do gráfico de dispersão do ENEM).',
-  '• Cor = nível de dificuldade informado no formulário.'
+  'Como é calculado:',
+  '• Tamanho da questão: quantidade de caracteres do texto inteiro (enunciado, fonte, alternativas), sem espaços nem quebras de linha.',
+  '• Curva: mostra a chance de acerto prevista para cada tamanho, com base nos acertos de cada questão.',
+  '• Faixa: a margem de incerteza da curva (95% de confiança). Fica sempre entre 0% e 100%.',
+  '• Razão de chances: a cada 100 caracteres a mais, quanto a chance de acerto muda.',
+  '• p: indica se o tamanho parece ter relação com o acerto ou se a diferença pode ser coincidência. Quanto menor, mais forte o indício.',
+  '• Cor: nível de dificuldade informado no formulário.'
 ].join('\n')
+
 
 // Notas explicativas do gráfico, adaptadas do gráfico de dispersão do ENEM para uma prova única
 const NOTAS_CORRELACAO = [
-  'Reta azul: ela cresce ou decresce conforme o tamanho da questão varia. A inclinação indica a variação média, em pontos percentuais, do acerto a cada 100 caracteres adicionais. Quando a reta é praticamente horizontal, a variação do tamanho do texto pouco altera o acerto nesta prova.',
-  'Correlação de Pearson (r) mostra a força e o sentido da relação linear. Quanto mais perto de +1 ou −1 mais forte é a relação.',
-  'O valor de p (p): mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
-  'p baixo: um r seria raro sem relação, há indício de relação.',
-  'p alto: não há evidência suficiente de relação; um r desse tamanho seria comum sem relação.',
-  'O n é o número de questões desta prova: com poucas questões, relações fracas podem não ser detectadas.'
+  ['Curva azul: probabilidade de acerto prevista pelo modelo logístico para cada tamanho de questão. Ela cresce ou decresce conforme o tamanho varia e nunca passa de 0% nem de 100%. Quando a curva é quase plana, o tamanho do texto pouco altera o acerto nesta prova.'],
+  ['Razão de chances: a cada 100 caracteres a mais, a chance de acerto (acertos ÷ erros) é multiplicada por esse valor. Valor abaixo de 1 indica que questões mais longas tendem a ter menos acerto; acima de 1, mais acerto.'],
+  ['Valor de p: indica se o tamanho da questão parece ter relação com o acerto nesta prova, ou se a diferença poderia ser coincidência. Quanto menor o número, mais forte é o indício de relação. Com poucas questões, esse número é pouco confiável.'],
+  ['p baixo: um efeito desse tamanho seria raro sem relação, há indício de relação.'],
+  ['p alto: não há evidência suficiente de relação; um efeito desse tamanho seria comum sem relação.'],
+  ['O n é o número de questões desta prova: com poucas questões, relações fracas podem não ser detectadas.'],
+  [
+    { texto: 'Correção de dispersão', url: URL_CORRECAO_DISPERSAO },
+    ' (φ): mede quanto as respostas variam entre as questões além do que o modelo simples prevê. φ = 1 significa que não há variação extra. Com φ = 4, por exemplo, a variação é 4 vezes maior, então os erros são multiplicados por √4 = 2, e a faixa e o p ficam mais conservadores. Com poucas questões, φ é uma estimativa instável.'
+  ]
 ]
 </script>
 
@@ -298,6 +312,11 @@ const NOTAS_CORRELACAO = [
   padding-top: 1.5rem;
   border-top: 1px solid #e0e0e0;
 }
+.link-modelo,
+.link-conceito { color: #0070C0; text-decoration: underline; }
+.link-modelo:hover,
+.link-conceito:hover { opacity: .8; }
+
 .correlacao-cabecalho {
   display: flex;
   align-items: center;
@@ -443,24 +462,7 @@ const NOTAS_CORRELACAO = [
   margin-left: auto;
 }
 
-.filter-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  color: #0070C0;
-  border: 2px solid #0070C0;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
 
-.filter-btn:hover {
-  background: #f0f7ff;
-}
 
 .filter-menu {
   position: absolute;
@@ -491,7 +493,9 @@ const NOTAS_CORRELACAO = [
 }
 
 .filter-lista {
-  /* Sem limite de altura: o menu da prova tem só 4 opções de dificuldade */
+  /* 2 opções visíveis por seção (cada .filter-option tem 2.25rem); o restante rola */
+  max-height: 4.5rem;
+  overflow-y: auto;
 }
 
 .filter-option {

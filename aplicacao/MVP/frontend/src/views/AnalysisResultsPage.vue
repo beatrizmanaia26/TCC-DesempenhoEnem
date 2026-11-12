@@ -68,14 +68,16 @@
                 />
                 <label for="filter-selecionar-tudo">Selecionar tudo</label>
               </div>
-              <div class="filter-option" v-for="option in opcoesFiltro" :key="option.id">
-                <input
-                  type="checkbox"
-                  :id="option.id"
-                  :checked="isFilterSelected(option.id)"
-                  @change="toggleFilter(option.id)"
-                />
-                <label :for="option.id">{{ option.label }}</label>
+              <div class="filter-lista">
+                <div class="filter-option" v-for="option in opcoesFiltro" :key="option.id">
+                  <input
+                    type="checkbox"
+                    :id="option.id"
+                    :checked="isFilterSelected(option.id)"
+                    @change="toggleFilter(option.id)"
+                  />
+                  <label :for="option.id">{{ option.label }}</label>
+                </div>
               </div>
               <div class="filter-rodape">
                 <button type="button" class="filter-aplicar" @click="aplicarFiltros">Aplicar</button>
@@ -91,10 +93,13 @@
           <div class="info-label">Velocidade de leitura considerada:</div>
           <div class="info-value">
             {{ readingSpeed }} caracteres/minuto
-            <span v-if="readingSpeed === DEFAULT_READING_SPEED" class="info-reference">(Referência: Messias et al., 2008)</span>
+            <a v-if="readingSpeed === DEFAULT_READING_SPEED" :href="REFERENCIA_VELOCIDADE_URL" target="_blank" rel="noopener noreferrer" class="info-reference">(Referência: Messias et al., 2008)</a>
           </div>
         </div>
-        <div v-if="temAnaliseTempo" class="analise-tempo-bloco">
+      </section>
+
+      <section v-if="temAnaliseTempo" class="panel prova-tempo-panel">
+        <div class="analise-tempo-bloco">
           <h2>Análise do Tempo de Prova</h2>
           <div class="tempo-bloco">
           <div class="tempo-cabecalho">
@@ -110,6 +115,7 @@
               <li v-for="fatia in fatiasTempo" :key="fatia.chave">
                 <span class="legenda-cor" :style="{ background: fatia.cor }"></span>
                 <span class="legenda-rotulo">{{ fatia.rotulo }}</span>
+                <InfoIcon v-if="fatia.dica" :tooltip="fatia.dica" :largura="320" />
                 <span class="legenda-valor">{{ fatia.valor.toFixed(2) }} min ({{ formatarPercentual(fatia.percentual) }}%)</span>
               </li>
             </ul>
@@ -130,9 +136,8 @@
       <section v-if="temAnaliseTamanho" class="panel prova-palavras-panel">
         <h2>Análise do Tamanho das Questões</h2>
         <GraficoPalavrasProva :questoes="questoesPalavras" />
-      </section>
-
-      <section class="panel prova-correlacao-panel">
+        <MapaCalorSpearmanProva :questoes="questoesCorrelacao" />
+        <CorrelacaoMetadesProva :questoes="questoesCorrelacao" />
         <CorrelacaoProvaGrafico :questoes="questoesCorrelacao" />
       </section>
 
@@ -200,9 +205,12 @@ import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
 import GraficoLeituraQuestoes from '@/components/GraficoLeituraQuestoes.vue'
 import GraficoPalavrasProva from '@/components/GraficoPalavrasProva.vue'
 import CorrelacaoProvaGrafico from '@/components/CorrelacaoProvaGrafico.vue'
+import CorrelacaoMetadesProva from '@/components/CorrelacaoMetadesProva.vue'
+import MapaCalorSpearmanProva from '@/components/MapaCalorSpearmanProva.vue'
 import { useRouter } from 'vue-router'
 import { useAnalysisStore } from '@/stores/analysisStore'
 import { DEFAULT_READING_SPEED, TODOS_TIPOS_ANALISE, ANALYSIS_TYPE_OPTIONS, formatarPercentual } from '@/constants/analysisConfig'
+import { REFERENCIA_VELOCIDADE_URL, DICA_TEXTOS_INTRO_PROVA_ENVIADA } from '@/config/textosAnalises.js'
 
 const store = useAnalysisStore()
 const router = useRouter()
@@ -289,8 +297,13 @@ const difficultyCounts = computed(() => Object.fromEntries(difficultyLevels.map(
 // e de questões informado pelo usuário, e a porcentagem é ponderada por questão.
 const studentCorrectCount = computed(() => Object.values(config.value.studentMetricsAccuracy ?? {})
   .reduce((sum, value) => sum + (Number(value) || 0), 0))
-const studentPossibleCount = computed(() => (Number(config.value.studentMetricsQuestionCount) || 0)
-  * (Number(config.value.studentCount) || 0))
+// Sem a configuração de estudantes/questões, o total possível soma o total_estudantes de cada questão
+const studentPossibleCount = computed(() => {
+  const configurado = (Number(config.value.studentMetricsQuestionCount) || 0)
+    * (Number(config.value.studentCount) || 0)
+  if (configurado > 0) return configurado
+  return questions.value.reduce((soma, question) => soma + (Number(question.total_estudantes) || 0), 0)
+})
 const studentAccuracyPercent = computed(() => studentPossibleCount.value
   ? ((studentCorrectCount.value / studentPossibleCount.value) * 100).toFixed(2)
   : '0.00')
@@ -353,6 +366,8 @@ const questoesCorrelacao = computed(() => questions.value.map((question) => ({
   rotulo: `Q${question.questao}`,
   caracteres: contarCaracteres(question.texto),
   taxa_acerto_percentual: question.taxa_acerto_percentual ?? null,
+  acertos: question.acertos ?? null,
+  total_estudantes: question.total_estudantes ?? null,
   dificuldade: question.dificuldade ?? null
 })))
 const todasMarcadas = computed(() => rascunhoFiltros.value.size === todasAnalises.length)
@@ -433,7 +448,7 @@ const fatiasTempo = computed(() => {
   const { total, questoes, textos, restante } = timeDistribution.value
   const itens = [
     { chave: 'questoes', rotulo: 'Leitura das questões', valor: questoes, cor: CORES_TEMPO.questoes },
-    { chave: 'textos', rotulo: 'Leitura dos textos introdutórios', valor: textos, cor: CORES_TEMPO.textos },
+    { chave: 'textos', rotulo: 'Leitura dos textos introdutórios', valor: textos, cor: CORES_TEMPO.textos, dica: DICA_TEXTOS_INTRO_PROVA_ENVIADA },
     { chave: 'restante', rotulo: 'Restante', valor: restante, cor: CORES_TEMPO.restante }
   ]
 
@@ -502,10 +517,6 @@ const goToForm = () => {
 .topo-acoes { position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; }
 .btn-voltar-topo { position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: linear-gradient(135deg, #0070C0, #10B981); color: white; border: none; padding: .6rem 1rem; border-radius: 6px; font-size: 1.25rem; font-weight: 600; line-height: 1; cursor: pointer; transition: opacity .3s ease; }
 .btn-voltar-topo:hover { opacity: .9; }
-.btn-exportar { display: inline-flex; align-items: center; gap: .5rem; background: white; color: #0070C0; border: 2px solid #0070C0; padding: .6rem 1.25rem; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color .3s ease, color .3s ease; }
-.btn-exportar:hover { background: #0070C0; color: white; }
-.btn-exportar:disabled { opacity: .5; cursor: not-allowed; background: white; color: #0070C0; }
-.btn-exportar:disabled:hover { background: white; color: #0070C0; }
 .menu-exportar { position: absolute; top: calc(100% + .5rem); right: 0; z-index: 10; list-style: none; margin: 0; padding: .5rem; min-width: 240px; background: white; border: 2px solid #0070C0; border-radius: 8px; box-shadow: 0 8px 25px rgba(0, 0, 0, .15); text-align: left; }
 .item-exportar { display: flex; align-items: center; gap: .75rem; width: 100%; padding: .6rem .75rem; background: none; border: none; border-radius: 6px; color: #0070C0; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; }
 .item-exportar:hover, .item-exportar:focus-visible { background: #E0F2FE; outline: none; }
@@ -525,11 +536,11 @@ const goToForm = () => {
 .legenda-valor { color: #666; margin-left: .5rem; }
 .duracao-linha { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
 .filter-wrapper { position: relative; display: inline-block; margin-left: auto; }
-.filter-btn { display: flex; align-items: center; gap: .5rem; background: white; color: #0070C0; border: 2px solid #0070C0; padding: .6rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background-color .3s ease; white-space: nowrap; }
-.filter-btn:hover { background: #f0f7ff; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 112, 192, .2); }
 .filter-menu { position: absolute; top: 100%; right: 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, .15); padding: 1rem; margin-top: .5rem; min-width: 280px; z-index: 100; max-height: 400px; overflow-y: auto; }
 .filter-option { display: flex; align-items: center; padding: .75rem; margin: .25rem 0; border-radius: 4px; transition: background .2s ease; }
 .filter-option:hover { background: #f5f5f5; }
+.filter-lista { max-height: 4.5rem; overflow-y: auto; /* 2 opções visíveis; o restante rola */ }
+.filter-lista .filter-option { height: 2.25rem; padding: 0 .75rem; margin: 0; }
 .filter-option input[type="checkbox"] { margin-right: .75rem; width: 16px; height: 16px; cursor: pointer; accent-color: #0070C0; }
 .filter-option label { cursor: pointer; margin: 0; font-size: .95rem; color: #333; flex: 1; }
 .filter-todos { padding-bottom: .5rem; margin-bottom: .5rem; border-bottom: 1px solid #e0e0e0; }
@@ -537,7 +548,7 @@ const goToForm = () => {
 .filter-aplicar { background: #0070C0; color: white; border: none; padding: .5rem 1.25rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background .3s ease; }
 .filter-aplicar:hover { background: #005a9e; }
 .prova-info-panel { padding: 1.5rem 1.5rem 1.5rem; }
-.analise-tempo-bloco { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0; }
+.analise-tempo-bloco { margin: 0; }
 .analise-tempo-bloco > h2 { margin: 0 0 1rem; color: #263238; font-size: 1.25rem; }
 .tempo-bloco { padding: 1.5rem; background: white; border-radius: 8px; margin: 1.5rem 0 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
 .tempo-grafico-leitura { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0; }
@@ -546,6 +557,8 @@ const goToForm = () => {
 .info-label { color: #333; font-size: .95rem; font-weight: 600; }
 .info-value { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem; color: #0070C0; font-size: .95rem; font-weight: 600; }
 .info-reference { color: #666; font-size: .85rem; font-weight: 400; }
+a.info-reference { text-decoration: underline; }
+a.info-reference:hover { color: #0070C0; }
 .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; }
 .metric-card { display: flex; flex-direction: column; gap: .5rem; padding: 1rem; border: 1px solid #e0e0e0; border-radius: 8px; }
 .metric-card span, dt { color: #667085; font-size: .9rem; }

@@ -103,3 +103,48 @@ a {
 a:hover {
   color: var(--color-secondary-mint-highlight);
 }
+
+/* Botões de ação compartilhados entre gráficos e telas */
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #0070C0;
+  border: 2px solid #0070C0;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  background: #f0f7ff;
+}
+
+.btn-exportar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #0070C0;
+  border: 2px solid #0070C0;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-exportar:hover:not(:disabled) {
+  background: #0070C0;
+  color: white;
+}
+
+.btn-exportar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

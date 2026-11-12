@@ -48,6 +48,7 @@
         <li v-for="fatia in fatias" :key="fatia.chave">
           <span class="legenda-cor" :style="{ background: fatia.cor }"></span>
           <span class="legenda-rotulo">{{ fatia.rotulo }}</span>
+          <InfoIcon v-if="fatia.dica" :tooltip="fatia.dica" :largura="320" />
           <span class="legenda-valor">{{ fatia.valor.toFixed(2) }} min ({{ formatarPercentual(fatia.percentual) }}%)</span>
         </li>
       </ul>
@@ -60,7 +61,7 @@ import { computed, ref, watch } from 'vue'
 import http from '../services/http.js'
 import FilterIcon from './icons/FilterIcon.vue'
 import InfoIcon from './icons/InfoIcon.vue'
-import { TEXTO_RESUMO_TEMPO } from '../config/textosAnalises.js'
+import { TEXTO_RESUMO_TEMPO, DICA_TEXTOS_INTRO_ENEM } from '../config/textosAnalises.js'
 import { formatarPercentual } from '../constants/analysisConfig.js'
 
 const props = defineProps({
@@ -139,7 +140,7 @@ const fatias = computed(() => {
 
   const itens = [
     { chave: 'questoes', rotulo: 'Leitura das questões', valor: questoes, cor: CORES.questoes },
-    { chave: 'textos', rotulo: 'Leitura dos textos introdutórios', valor: textos, cor: CORES.textos },
+    { chave: 'textos', rotulo: 'Leitura dos textos introdutórios', valor: textos, cor: CORES.textos, dica: DICA_TEXTOS_INTRO_ENEM },
     { chave: 'restante', rotulo: 'Restante', valor: restante, cor: CORES.restante }
   ]
 
@@ -285,23 +286,7 @@ function aplicarFiltro() {
   margin-bottom: 1rem;
 }
 
-.filter-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  color: #0070C0;
-  border: 2px solid #0070C0;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  white-space: nowrap;
-}
 
-.filter-btn:hover {
-  background: #f0f7ff;
-}
 
 .filter-menu {
   position: absolute;

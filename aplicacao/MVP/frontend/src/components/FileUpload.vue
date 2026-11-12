@@ -48,7 +48,7 @@
           <p>O arquivo <strong>"{{ invalidFileName }}"</strong> não é um PDF válido.</p>
           <p>Por favor, selecione apenas arquivos em formato <strong>PDF</strong>.</p>
         </template>
-        <button @click="closeErrorModal" class="btn btn-primary">Entendido</button>
+        <button @click="tentarNovamenteArquivo" class="btn btn-primary">Tentar novamente</button>
       </div>
     </section>
   </div>
@@ -85,8 +85,17 @@ watch(() => store.selectedFile, (newValue) => {
 }, { immediate: true })
 
 const triggerFileInput = () => {
+  // Limpa o valor para que o mesmo arquivo possa ser escolhido de novo após um erro
+  fileInput.value.value = ''
   fileInput.value.click()
 }
+
+const tentarNovamenteArquivo = () => {
+  closeErrorModal()
+  triggerFileInput()
+}
+
+defineExpose({ triggerFileInput })
 
 const handleFileChange = (event) => {
   const file = event.target.files[0]

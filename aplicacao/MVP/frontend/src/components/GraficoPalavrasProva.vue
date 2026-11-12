@@ -275,59 +275,70 @@ const larguraBarra = (palavras) => {
   margin-left: auto;
 }
 
-.filter-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  color: #0070C0;
-  border: 2px solid #0070C0;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  white-space: nowrap;
-}
 
-.filter-btn:hover {
-  background: #f0f7ff;
-}
 
 .filter-menu {
   position: absolute;
   top: 100%;
   right: 0;
-  z-index: 10;
-  min-width: 260px;
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  min-width: 280px;
+  z-index: 100;
 }
 
 .filter-secao + .filter-secao {
   margin-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
 }
 
 .filter-titulo {
-  margin: 0 0 0.5rem;
-  color: #0070C0;
+  margin: 0 0 0.25rem;
   font-size: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #555;
 }
 
 .filter-lista {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  /* 2 opções visíveis por seção (cada .filter-option tem 2.25rem); o restante rola */
+  max-height: 4.5rem;
+  overflow-y: auto;
 }
 
 .filter-option {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  margin: 0;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.filter-option:hover {
+  background: #f5f5f5;
+}
+
+.filter-option input {
+  margin-right: 0.75rem;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #0070C0;
+}
+
+.filter-option label {
+  cursor: pointer;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  flex: 1;
 }
 
 .filter-rodape {
@@ -346,9 +357,11 @@ const larguraBarra = (palavras) => {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
+  transition: background 0.3s ease;
 }
 
 .filter-aplicar:hover {
   background: #005a9e;
 }
+
 </style>

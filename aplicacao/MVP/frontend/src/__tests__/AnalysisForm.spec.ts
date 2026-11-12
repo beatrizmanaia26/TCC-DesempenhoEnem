@@ -222,3 +222,101 @@ describe('AnalysisForm - aviso quando a quantidade de questões difere do PDF', 
   })
 })
 
+
+
+describe('AnalysisForm - tempo de leitura personalizado', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('mantém a análise desabilitada ao escolher Personalizado sem preencher a velocidade', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(1)
+    await wrapper.find('#speed-custom').setValue(true)
+
+    expect(wrapper.find('#custom-reading-speed').exists()).toBe(true)
+    expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeDefined()
+  })
+
+  it('habilita a análise somente depois de digitar a velocidade personalizada', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(1)
+    await wrapper.find('#speed-custom').setValue(true)
+    await wrapper.find('#custom-reading-speed').setValue('1200')
+
+    expect(wrapper.find('button[type="submit"]').attributes('disabled')).toBeUndefined()
+  })
+
+  it('não aceita letras no campo de velocidade personalizada', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(1)
+    await wrapper.find('#speed-custom').setValue(true)
+    await wrapper.find('#custom-reading-speed').setValue('12a3')
+
+    expect((wrapper.find('#custom-reading-speed').element as HTMLInputElement).value).toBe('123')
+  })
+
+describe('AnalysisForm - campo de velocidade só aceita dígitos', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('apaga letras digitadas quando não há nenhum número', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#speed-custom').setValue(true)
+    await wrapper.find('#custom-reading-speed').setValue('aaaaa')
+
+    expect((wrapper.find('#custom-reading-speed').element as HTMLInputElement).value).toBe('')
+  })
+})
+
+})
+describe('AnalysisForm - duração máxima da prova de 6h', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('limita o campo de horas ao máximo de 6', () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+
+    expect(wrapper.find('#hours').attributes('max')).toBe('6')
+  })
+
+  it('ajusta a duração para 6h 0min quando o usuário informa 7 horas', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(7)
+
+    expect((wrapper.find('#hours').element as HTMLInputElement).value).toBe('6')
+    expect((wrapper.find('#minutes').element as HTMLInputElement).value).toBe('0')
+    expect(wrapper.find('.time-total').text()).toBe('6h')
+  })
+
+  it('ajusta para 6h 0min quando o total ultrapassa 6h com minutos', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(6)
+    await wrapper.find('#minutes').setValue(30)
+
+    expect((wrapper.find('#hours').element as HTMLInputElement).value).toBe('6')
+    expect((wrapper.find('#minutes').element as HTMLInputElement).value).toBe('0')
+  })
+
+  it('mantém valores válidos sem alteração', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(5)
+    await wrapper.find('#minutes').setValue(45)
+
+    expect((wrapper.find('#hours').element as HTMLInputElement).value).toBe('5')
+    expect((wrapper.find('#minutes').element as HTMLInputElement).value).toBe('45')
+  })
+
+  it('não mostra mais o aviso de duração excedida', async () => {
+    const wrapper = mount(AnalysisForm, { props: { file: arquivoPdf } })
+    await wrapper.find('#hours').setValue(6)
+    await wrapper.find('#minutes').setValue(0)
+
+    expect(wrapper.find('.warning-section').exists()).toBe(false)
+    expect(wrapper.text()).not.toContain('excede')
+  })
+})
+
+
