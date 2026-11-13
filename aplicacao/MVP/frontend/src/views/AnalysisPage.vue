@@ -7,8 +7,10 @@
 
     <main class="main-content">
       <!-- SEÇÃO 1: UPLOAD -->
+      
       <section class="section upload-section" v-if="!USAR_JSON_TESTE && !isAnalyzing && !hasResults">
-        <FileUpload :key="uploadKey" @file-selected="handleFileSelected" />
+        <FileUpload ref="fileUploadRef" :key="uploadKey" @file-selected="handleFileSelected" />
+
         <p v-if="isExtracting" class="extraction-status">Lendo o PDF para preparar os dados da análise...</p>
       </section>
       <section v-if="USAR_JSON_TESTE && isExtracting" class="section upload-section">
@@ -60,7 +62,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAnalysisStore } from '@/stores/analysisStore'
 import FileUpload from '@/components/FileUpload.vue'
@@ -84,6 +86,8 @@ const progressPercentage = ref(0)
 const errorMessage = ref('')
 const extractionResults = ref(null)
 const uploadKey = ref(0)
+const fileUploadRef = ref(null)
+const errorIsNetwork = ref(false)
 let extractionRequestId = 0
 
 // Local refs para sincronizar com store
@@ -140,6 +144,7 @@ const prepareExtraction = async (file) => {
   const requestId = ++extractionRequestId
   isExtracting.value = true
   errorMessage.value = ''
+  errorIsNetwork.value = false
 
   try {
     const extracted = USAR_JSON_TESTE
@@ -162,7 +167,10 @@ const prepareExtraction = async (file) => {
     store.setTotalQuestions(questions.length)
   } catch (error) {
     if (requestId !== extractionRequestId) return
+
     errorMessage.value = error.message || (USAR_JSON_TESTE ? 'Erro ao ler o JSON de teste.' : 'Erro ao ler o PDF.')
+    errorIsNetwork.value = Boolean(error.semResposta)
+
   } finally {
     if (requestId === extractionRequestId) isExtracting.value = false
   }
@@ -263,7 +271,20 @@ const handleReset = () => {
 }
 
 const retryExtraction = () => {
-  if (selectedFile.value) prepareExtraction(selectedFile.value)
+  // Erro de rede: refaz a análise com o mesmo arquivo
+  if (errorIsNetwork.value && selectedFile.value) {
+    prepareExtraction(selectedFile.value)
+    return
+  }
+  // Demais erros: descarta o arquivo atual e abre o explorador para escolher outro
+  extractionRequestId += 1
+  isExtracting.value = false
+  extractionResults.value = null
+  errorMessage.value = ''
+  errorIsNetwork.value = false
+  store.resetFileAndForm()
+  uploadKey.value += 1
+  nextTick(() => fileUploadRef.value?.triggerFileInput())
 }
 </script>
 

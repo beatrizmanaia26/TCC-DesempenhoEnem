@@ -232,24 +232,7 @@ const ocultarDica = () => {
   margin-left: auto;
 }
 
-.filter-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  color: #0070C0;
-  border: 2px solid #0070C0;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
 
-.filter-btn:hover {
-  background: #f0f7ff;
-}
 
 .filter-menu {
   position: absolute;
@@ -282,13 +265,21 @@ const ocultarDica = () => {
 .filter-lista {
   display: flex;
   flex-direction: column;
+  max-height: 7.5rem;
+  overflow-y: auto;
+}
+
+.filter-lista > .filter-option {
+  min-height: 2.5rem;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .filter-option {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.35rem 0.25rem;
+  padding: 0.5rem 0.25rem;
   border-radius: 4px;
 }
 

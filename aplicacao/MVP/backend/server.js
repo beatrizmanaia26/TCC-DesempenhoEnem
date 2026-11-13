@@ -787,7 +787,9 @@ function carregarDispersaoItens() {
     coItem: linha.co_item,
     dificuldade: linha.dificuldade,
     caracteres: Number(linha.caracteres),
-    acerto: Number(linha.acerto)
+    acerto: Number(linha.acerto),
+    acertos: Number(linha.n_acertos),
+    total: Number(linha.n_respostas)
   }))
 
   const retas = lerCsvComCabecalho(ANALISE_DISPERSAO_RETAS_CSV)
@@ -800,9 +802,9 @@ function carregarDispersaoItens() {
       acertoPrevisto: Number(linha.acerto_previsto),
       icInferior: Number(linha.ic_inferior),
       icSuperior: Number(linha.ic_superior),
-      inclinacao: Number(linha.inclinacao),
-      r: Number(linha.r_pearson),
-      p: Number(linha.p_valor_t),
+      razaoChancesPor100: Number(linha.razao_chances_por_100),
+      phi: Number(linha.phi),
+      p: Number(linha.p_wald),
       quantidadeItens: Number(linha.quantidade_itens)
     }))
 

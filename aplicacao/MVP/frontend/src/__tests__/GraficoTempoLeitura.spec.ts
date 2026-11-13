@@ -173,7 +173,7 @@ describe('GraficoTempoLeitura', () => {
     const icones = wrapper.findAll('.filter-menu .info-icon-wrapper')
     expect(icones).toHaveLength(2)
     expect(icones.map((icone) => icone.find('.tooltip').text())).toEqual([
-      expect.stringContaining('Q1 − 1,5 × IQR'),
+      expect.stringContaining('1º quartil − 1,5 × intervalo interquartil'),
       expect.stringContaining('1 desvio padrão')
     ])
   })

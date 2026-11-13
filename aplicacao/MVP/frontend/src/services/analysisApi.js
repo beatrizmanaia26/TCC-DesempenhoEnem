@@ -20,7 +20,10 @@ export const extractExamPdf = async (file) => {
     })
     return response.data
   } catch (error) {
-    throw new Error(error.response?.data?.error || error.message || 'Erro ao ler o PDF')
+    const erro = new Error(error.response?.data?.error || error.message || 'Erro ao ler o PDF')
+    // Sem resposta do servidor (rede indisponível, timeout): a análise pode ser refeita com o mesmo arquivo
+    erro.semResposta = !error.response
+    throw erro
   }
 }
 

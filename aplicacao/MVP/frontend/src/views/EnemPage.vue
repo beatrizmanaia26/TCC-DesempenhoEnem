@@ -332,25 +332,7 @@ const uploadNewEnem = () => {
   position: relative;
 }
 
-.btn-exportar {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  color: #0070C0;
-  border: 2px solid #0070C0;
-  padding: 0.6rem 1.25rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
-.btn-exportar:hover:not(:disabled) {
-  background: #0070C0;
-  color: white;
-}
 
 .topo-acoes {
   position: relative;
@@ -397,10 +379,6 @@ const uploadNewEnem = () => {
   flex-shrink: 0;
 }
 
-.btn-exportar:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
 
 .icone-exportar {
   width: 18px;
@@ -780,6 +758,9 @@ const uploadNewEnem = () => {
 }
 
 .filter-rodape {
+  position: sticky;
+  bottom: 0;
+  background: white;
   display: flex;
   justify-content: flex-end;
   margin-top: 0.5rem;

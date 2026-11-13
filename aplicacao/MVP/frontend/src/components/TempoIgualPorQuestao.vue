@@ -226,23 +226,7 @@ function aplicarFiltro() {
   margin-bottom: 1rem;
 }
 
-.filter-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  color: #0070C0;
-  border: 2px solid #0070C0;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  white-space: nowrap;
-}
 
-.filter-btn:hover {
-  background: #f0f7ff;
-}
 
 .filter-menu {
   position: absolute;

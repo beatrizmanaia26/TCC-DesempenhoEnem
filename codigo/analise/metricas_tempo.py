@@ -867,44 +867,102 @@ def gerar_metades_caracteres_filtros(df_questoes: pd.DataFrame) -> pd.DataFrame:
 
 
 
-#========GRAFICO DISPERSAO_ITENS - dispersão caracteres × acerto por item, com reta e IC 95% (gerador)
-def _reta_mqo_ic(x: np.ndarray, y: np.ndarray, grade: np.ndarray) -> Optional[Dict[str, Any]]:
-    """Reta de mínimos quadrados de y em x, com IC 95% da reta prevista na grade.
+#========GRAFICO DISPERSAO_ITENS - dispersão caracteres × acerto por item, com curva logística e IC 95% (gerador)
+_DISPERSAO_MINIMO_ITENS = 3
+_DISPERSAO_MAX_ITER = 50
+_Z_95 = float(stats.norm.ppf(0.975))
 
-    Modelo linear simples (IC pelo t de Student). Devolve None se há menos de 3 itens
-    ou se x não varia.
+
+def _ajustar_logistica_binomial(x: np.ndarray, acertos: np.ndarray, total: np.ndarray) -> Optional[Dict[str, Any]]:
+    """Regressão logística binomial (IRLS) de acertos/total em x padronizado.
+
+    Mesmo cálculo da logística da prova enviada (frontend/src/services/logisticaProva.js):
+    peso de cada item = número de respostas, IC no logit. Devolve None se não converge.
+    """
+    media_x = float(np.mean(x))
+    desvio = float(np.std(x))
+    if desvio == 0:
+        return None
+    z = (x - media_x) / desvio
+    X = np.column_stack([np.ones_like(z), z])
+    beta = np.zeros(2)
+    for _ in range(_DISPERSAO_MAX_ITER):
+        eta = X @ beta
+        mu = 1 / (1 + np.exp(-eta))
+        w = total * mu * (1 - mu)
+        if np.any(w <= 0):
+            return None
+        grad = X.T @ (acertos - total * mu)
+        info = X.T @ (X * w[:, None])
+        try:
+            passo = np.linalg.solve(info, grad)
+        except np.linalg.LinAlgError:
+            return None
+        beta = beta + passo
+        if np.max(np.abs(passo)) < 1e-10:
+            break
+    else:
+        return None
+    eta = X @ beta
+    mu = 1 / (1 + np.exp(-eta))
+    w = total * mu * (1 - mu)
+    info = X.T @ (X * w[:, None])
+    try:
+        cov = np.linalg.inv(info)
+    except np.linalg.LinAlgError:
+        return None
+    return {'b0': float(beta[0]), 'b1': float(beta[1]), 'media_x': media_x, 'desvio': desvio, 'cov': cov}
+
+
+def _logistica_dispersao_itens(x: np.ndarray, acertos: np.ndarray, total: np.ndarray, grade: np.ndarray) -> Optional[Dict[str, Any]]:
+    """Curva logística de acerto (%) com IC 95%, φ, razão de chances e p de Wald, na grade de caracteres.
+
+    Devolve None se há menos de 3 itens, se x não varia ou se o ajuste não converge.
     """
     n = len(x)
-    if n < 3 or np.ptp(x) == 0:
+    if n < _DISPERSAO_MINIMO_ITENS or np.ptp(x) == 0 or np.any(total <= 0) or np.any(acertos > total):
         return None
-    b1, b0, r_valor, p_valor, _ = stats.linregress(x, y)
-    residuos = y - (b0 + b1 * x)
-    s2 = float(np.sum(residuos ** 2) / (n - 2))
-    sxx = float(np.sum((x - x.mean()) ** 2))
-    t_critico = stats.t.ppf(0.975, n - 2)
-    previsto = b0 + b1 * grade
-    erro_padrao = np.sqrt(s2 * (1 / n + (grade - x.mean()) ** 2 / sxx))
+    ajuste = _ajustar_logistica_binomial(x, acertos, total)
+    if ajuste is None:
+        return None
+    b0, b1 = ajuste['b0'], ajuste['b1']
+    media_x, desvio, cov = ajuste['media_x'], ajuste['desvio'], ajuste['cov']
+
+    z_obs = (x - media_x) / desvio
+    mu_obs = 1 / (1 + np.exp(-(b0 + b1 * z_obs)))
+    qui_quadrado = float(np.sum((acertos - total * mu_obs) ** 2 / (total * mu_obs * (1 - mu_obs))))
+    phi = max(1.0, qui_quadrado / (n - 2)) if n > 2 else 1.0
+
+    z_grade = (grade - media_x) / desvio
+    eta = b0 + b1 * z_grade
+    erro_padrao = np.sqrt(phi * (cov[0, 0] + 2 * z_grade * cov[0, 1] + z_grade ** 2 * cov[1, 1]))
+    previsto = 100 / (1 + np.exp(-eta))
+    ic_inferior = 100 / (1 + np.exp(-(eta - _Z_95 * erro_padrao)))
+    ic_superior = 100 / (1 + np.exp(-(eta + _Z_95 * erro_padrao)))
+
+    wald = b1 / np.sqrt(phi * cov[1, 1])
+    p_wald = float(2 * (1 - stats.norm.cdf(abs(wald))))
     return {
-        'inclinacao': float(b1),
-        'intercepto': float(b0),
-        'r_pearson': float(r_valor),
-        'p_valor_t': float(p_valor),
+        'razao_chances_por_100': float(np.exp(100 * b1 / desvio)),
+        'p_wald': p_wald,
+        'phi': float(phi),
         'n': int(n),
         'previsto': previsto,
-        'ic_inferior': previsto - t_critico * erro_padrao,
-        'ic_superior': previsto + t_critico * erro_padrao,
+        'ic_inferior': ic_inferior,
+        'ic_superior': ic_superior,
     }
 
 
 def gerar_grafico_retorno_dispersao_itens(df_questoes: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
-    """SAÍDA 7: um ponto por item (caracteres x acerto) e a reta de MQO com IC 95% por ano e filtro.
+    """SAÍDA 7: um ponto por item (caracteres x acerto) e a curva logística com IC 95% por ano e filtro.
 
     Mesma unidade (item = ano, área, co_item) e mesmo acerto das SAÍDAS 4 a 6.
     Gera dois arquivos:
-      - retornoMVP_dispersao_itens.csv: um registro por item (ano, área, nível, caracteres, acerto).
-      - retornoMVP_dispersao_itens_retas.csv: reta e IC 95% por ano × filtro de dia × áreas.
-    O p da reta é do teste t paramétrico (não é o p por sorteio dos gráficos de r).
-    Itens sem nível TRI ficam de fora (10 itens).
+      - retornoMVP_dispersao_itens.csv: um registro por item (ano, área, nível, caracteres, acertos, respostas, acerto).
+      - retornoMVP_dispersao_itens_retas.csv: curva e IC 95% por ano × filtro de dia × áreas.
+    O modelo é a logística binomial da prova enviada (mesmo cálculo de frontend/src/services/logisticaProva.js):
+    peso de cada item = número de respostas, IC no logit, correção de dispersão φ e p pelo teste de Wald.
+    Itens sem nível TRI ficam de fora.
     """
     df_com_dificuldade = cast(pd.DataFrame, df_questoes[df_questoes['dificuldade_tri'].notna()])
     df_itens = cast(pd.DataFrame, df_com_dificuldade.groupby(
@@ -917,7 +975,7 @@ def gerar_grafico_retorno_dispersao_itens(df_questoes: pd.DataFrame) -> Tuple[pd
     df_itens['acerto'] = df_itens['n_acertos'] / df_itens['n_respostas'] * 100
 
     df_pontos = df_itens.rename(columns={'dificuldade_tri': 'dificuldade'})[
-        ['ano', 'area', 'co_item', 'dificuldade', 'caracteres', 'acerto']
+        ['ano', 'area', 'co_item', 'dificuldade', 'caracteres', 'n_acertos', 'n_respostas', 'acerto']
     ].copy()
     df_pontos['ano'] = df_pontos['ano'].astype(int)
     arq_pontos = OUTPUT_DIR / "retornoMVP_dispersao_itens.csv"
@@ -931,13 +989,14 @@ def gerar_grafico_retorno_dispersao_itens(df_questoes: pd.DataFrame) -> Tuple[pd
         df_ano = cast(pd.DataFrame, df_itens[df_itens['ano'] == ano])
         for dia, areas in combinacoes:
             df_filtro = cast(pd.DataFrame, df_ano[df_ano['area'].isin(areas)])
-            if len(df_filtro) < 3:
+            if len(df_filtro) < _DISPERSAO_MINIMO_ITENS:
                 continue
             x = df_filtro['caracteres'].to_numpy(dtype=float)
-            y = df_filtro['acerto'].to_numpy(dtype=float)
+            acertos = df_filtro['n_acertos'].to_numpy(dtype=float)
+            total = df_filtro['n_respostas'].to_numpy(dtype=float)
             grade = np.linspace(x.min(), x.max(), 50)
-            reta = _reta_mqo_ic(x, y, grade)
-            if reta is None:
+            curva = _logistica_dispersao_itens(x, acertos, total, grade)
+            if curva is None:
                 continue
             for i, cx in enumerate(grade):
                 linhas.append({
@@ -946,21 +1005,20 @@ def gerar_grafico_retorno_dispersao_itens(df_questoes: pd.DataFrame) -> Tuple[pd
                     'dia': str(dia),
                     'areas': ';'.join(areas),
                     'caracteres': float(cx),
-                    'acerto_previsto': float(reta['previsto'][i]),
-                    'ic_inferior': float(reta['ic_inferior'][i]),
-                    'ic_superior': float(reta['ic_superior'][i]),
-                    'inclinacao': reta['inclinacao'],
-                    'intercepto': reta['intercepto'],
-                    'r_pearson': reta['r_pearson'],
-                    'p_valor_t': reta['p_valor_t'],
-                    'quantidade_itens': reta['n'],
+                    'acerto_previsto': float(curva['previsto'][i]),
+                    'ic_inferior': float(curva['ic_inferior'][i]),
+                    'ic_superior': float(curva['ic_superior'][i]),
+                    'razao_chances_por_100': curva['razao_chances_por_100'],
+                    'phi': curva['phi'],
+                    'p_wald': curva['p_wald'],
+                    'quantidade_itens': curva['n'],
                 })
 
     df_retas = pd.DataFrame(linhas)
     arq_retas = OUTPUT_DIR / "retornoMVP_dispersao_itens_retas.csv"
     df_retas.to_csv(arq_retas, index=False, encoding='utf-8')
     print(f"✓ {arq_retas}")
-    print(f"   {len(df_retas)} linhas: 50 pontos de grade por reta")
+    print(f"   {len(df_retas)} linhas: 50 pontos de grade por curva")
     return df_pontos, df_retas
 #=======grafico DISPERSAO_ITENS
 

@@ -53,7 +53,7 @@
           <div class="time-input-container">
             <div class="time-group">
               <label for="hours">Horas</label>
-              <input v-model.number="formData.hours" id="hours" type="number" min="0" max="23" placeholder="00" />
+              <input v-model.number="formData.hours" id="hours" type="number" min="0" :max="MAX_EXAM_DURATION_HOURS" placeholder="00" />
             </div>
             <span class="time-separator">:</span>
             <div class="time-group">
@@ -73,7 +73,7 @@
             <span class="required">*</span>
             <div class="tooltip-wrapper">
               <InfoIcon fill="#0070C0" class="info-icon" />
-              <span class="tooltip-text">Informe o tempo de leitura específico de seus alunos caso tenha essa informação. Caso contrário, utilize o tempo padrão de 1.100 caracteres por minuto, obtido em pesquisa com indivíduos jovens de 19 a 35 anos (Messias et al., 2008)</span>
+              <span class="tooltip-text">Informe o tempo de leitura específico de seus alunos caso tenha essa informação. Caso contrário, utilize o tempo padrão de 1.100 caracteres por minuto, obtido em pesquisa com indivíduos jovens de 19 a 35 anos (<a :href="REFERENCIA_VELOCIDADE_URL" target="_blank" rel="noopener noreferrer" class="tooltip-link">Messias et al., 2008</a>)</span>
             </div>
           </label>
           <div class="reading-speed-container" id="reading-time-group">
@@ -135,7 +135,7 @@
       <div class="form-row">
         <div class="form-group difficulty-column">
           <label for="metrics-group">
-            Deseja incluir métricas reais dos estudantes?
+            Deseja incluir métricas dos estudantes?
             <InfoIcon
             :tooltip="'As métricas dos estudantes ajudam a correlacionar a dificuldade da questão com o desempenho real. Fornece a quantidade de participantes e os acertos por questão, quando essas informações estiverem disponíveis.'"
             :warning="true"
@@ -179,14 +179,6 @@
         @update:model-value="formData.studentMetricsAccuracy = { ...formData.studentMetricsAccuracy, ...$event }"
       />
 
-      <!-- AVISO -->
-      <div v-if="showDurationWarning" class="warning-section">
-        <div class="warning-box">
-          <strong>Aviso:</strong> A duração da prova ({{ formattedDuration }}) excede {{ MAX_EXAM_DURATION_HOURS }}h.
-          Recomendamos revisar o valor inserido.
-        </div>
-      </div>
-
       <div class="form-actions" style="display: flex; justify-content: center; margin-top: 2rem;">
         <button type="submit" class="btn btn-primary" :disabled="isLoading || !isFormValid" style="padding: 1rem 3rem; font-size: 1.1rem; min-width: 300px;">
           {{ isLoading ? 'Analisando...' : 'Iniciar Análise' }}
@@ -207,6 +199,7 @@ import { useAnalysisStore } from '@/stores/analysisStore'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import QuestionDifficultySelector from '@/components/QuestionDifficultySelector.vue'
 import QuestionAccuracySelector from '@/components/QuestionAccuracySelector.vue'
+import { REFERENCIA_VELOCIDADE_URL } from '@/config/textosAnalises.js'
 import {
   ANALYSIS_TYPE_OPTIONS,
   DEFAULT_READING_SPEED,
@@ -256,11 +249,6 @@ const fecharMenuTiposAoClicarFora = (event) => {
 
 onMounted(() => document.addEventListener('click', fecharMenuTiposAoClicarFora))
 onUnmounted(() => document.removeEventListener('click', fecharMenuTiposAoClicarFora))
-
-const showDurationWarning = computed(() => {
-  const totalMinutes = (formData.value.hours || 0) * 60 + (formData.value.minutes || 0)
-  return totalMinutes > MAX_EXAM_DURATION_HOURS * 60
-})
 
 const formData = ref({
   analysisTypes: [...TODOS_TIPOS_ANALISE],
@@ -342,6 +330,20 @@ watch(() => useDifficultyAnalysis.value, () => {
   autoSaveToStore()
 })
 
+// Limita a duração total da prova a MAX_EXAM_DURATION_HOURS.
+// Se ultrapassar, ajusta para o máximo (ex.: 6h 0min)
+const limitarDuracaoMaxima = () => {
+  const totalMinutos = (formData.value.hours || 0) * 60 + (formData.value.minutes || 0)
+  if (totalMinutos <= MAX_EXAM_DURATION_HOURS * 60) return
+  formData.value.hours = MAX_EXAM_DURATION_HOURS
+  formData.value.minutes = 0
+}
+
+watch(
+  () => [formData.value.hours, formData.value.minutes],
+  limitarDuracaoMaxima
+)
+
 
 const formattedDuration = computed(() => {
   const h = formData.value.hours || 0
@@ -376,7 +378,6 @@ const isFormValid = computed(() => {
     formData.value.minutes !== null &&
     formData.value.minutes >= 0 &&
     (formData.value.hours > 0 || formData.value.minutes > 0) &&
-    !showDurationWarning.value &&
     // Com "Personalizado", a velocidade precisa ser preenchida com um valor válido
     (formData.value.readingSpeedMode !== 'custom' || customReadingSpeedValida.value)
 
@@ -791,6 +792,21 @@ form {
 .tooltip-wrapper:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+/* Ponte invisível entre o ícone e o balão, para o mouse conseguir chegar ao link */
+.tooltip-text::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.tooltip-link {
+  color: #9fd3ff;
+  text-decoration: underline;
 }
 
 .difficulty-column,

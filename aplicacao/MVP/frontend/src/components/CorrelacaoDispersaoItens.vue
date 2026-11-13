@@ -3,7 +3,7 @@
   <div class="dispersao-itens">
     <div class="dispersao-cabecalho">
       <h3 class="dispersao-titulo">{{ TEXTO_DISPERSAO_ITENS.titulo }}</h3>
-      <InfoIcon warning :tooltip="tooltipDispersao" :largura="380" />
+      <InfoIcon warning :tooltip="tooltipDispersao" :largura="520" />
       <div class="filter-wrapper">
         <button type="button" class="filter-btn" @click="alternarMenuFiltro">
           <FilterIcon />
@@ -63,7 +63,12 @@
         </div>
       </div>
     </div>
-    <p class="dispersao-subtitulo">{{ TEXTO_DISPERSAO_ITENS.subtitulo(ano) }}</p>
+    <p class="dispersao-subtitulo">
+      <template v-for="(parte, i) in dividirComLinks(TEXTO_DISPERSAO_ITENS.subtitulo(ano))" :key="i">
+        <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link">{{ parte.texto }}</a>
+        <template v-else>{{ parte.texto }}</template>
+      </template>
+    </p>
 
     <div v-if="carregando" class="dispersao-status">Carregando dispersão por item...</div>
     <div v-else-if="erro" class="dispersao-status dispersao-erro">{{ erro }}</div>
@@ -119,13 +124,16 @@
         <li v-for="nivel in NIVEIS" :key="nivel.chave">
           <span class="cor-nivel" :style="{ background: nivel.cor }"></span>{{ nivel.rotulo }}
         </li>
-        <li><span class="linha-reta"></span>Reta e faixa de Intervalo de Confiança (IC) 95%</li>
+        <li>
+          <span class="linha-reta"></span>
+          Curva logística e faixa de <a :href="URL_INTERVALO_CONFIANCA" target="_blank" rel="noopener noreferrer" class="correlacoes-link">Intervalo de Confiança</a> (IC) 95%
+        </li>
       </ul>
-      <p v-if="resumoReta" class="dispersao-resumo">{{ resumoReta }}</p>
       <ul class="dispersao-notas">
-        <li v-for="(texto, indice) in TEXTO_DISPERSAO_ITENS.notas" :key="indice">
-          <template v-for="(parte, i) in dividirComLinks(texto)" :key="i">
-            <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link">{{ parte.texto }}</a>
+        <li v-for="(texto, indice) in notasDoFiltro" :key="indice">
+      <template v-for="(parte, i) in partesDaNota(texto)" :key="i">
+            <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link" :style="parte.negrito ? { fontWeight: 'bold' } : null">{{ parte.texto }}</a>
+            <strong v-else-if="parte.negrito">{{ parte.texto }}</strong>
             <template v-else>{{ parte.texto }}</template>
           </template>
         </li>
@@ -140,7 +148,11 @@ import { ref, computed, watch } from 'vue'
 import http from '../services/http.js'
 import InfoIcon from './icons/InfoIcon.vue'
 import FilterIcon from './icons/FilterIcon.vue'
-import { TEXTO_DISPERSAO_ITENS, LINKS_TERMOS } from '../config/textosAnalises.js'
+import { TEXTO_DISPERSAO_ITENS, LINKS_TERMOS, URL_INTERVALO_CONFIANCA } from '../config/textosAnalises.js'
+import { calcularLogisticaProva } from '../services/logisticaProva.js'
+
+// Link do termo "Modelo logístico" usado nas explicações
+const URL_MODELO_LOGISTICO = 'https://pt.wikipedia.org/wiki/Regressão_logística'
 
 // Separa o texto em partes: trechos comuns e trechos que são link (termo de LINKS_TERMOS)
 function dividirComLinks(texto) {
@@ -154,6 +166,33 @@ function dividirComLinks(texto) {
     }
   })
   return partes.filter((parte) => parte.texto !== '')
+}
+
+// Títulos das notas que ficam em negrito (só estes trechos, o restante da nota fica normal)
+const TITULOS_NEGRITO = ['Curva azul:', 'Faixa azul:', 'Pontos:', 'Razão de chances:', 'Correção de dispersão (φ):', 'Valor de p', 'p baixo:', 'p alto:', 'O n ']
+
+// Marca como negrito apenas o trecho inicial que bate com um título da lista (partes: [{ texto, url }])
+function destacarTitulo(partes) {
+  const texto = partes.map((parte) => parte.texto).join('')
+  const titulo = TITULOS_NEGRITO.find((item) => texto.startsWith(item))
+  if (!titulo) return partes
+  const resultado = []
+  let restante = titulo.length
+  partes.forEach((parte) => {
+    if (restante <= 0) {
+      resultado.push(parte)
+      return
+    }
+    const tamanho = Math.min(restante, parte.texto.length)
+    resultado.push({ ...parte, texto: parte.texto.slice(0, tamanho), negrito: true })
+    if (tamanho < parte.texto.length) resultado.push({ ...parte, texto: parte.texto.slice(tamanho) })
+    restante -= tamanho
+  })
+  return resultado
+}
+
+function partesDaNota(texto) {
+  return destacarTitulo(dividirComLinks(texto))
 }
 
 const props = defineProps({
@@ -276,13 +315,6 @@ const pontosDoFiltro = computed(() =>
   )
 )
 
-// Linhas da reta do filtro (uma por ponto da grade), ordenadas por caracteres
-const linhasReta = computed(() =>
-  dados.value.retas
-    .filter((linha) => linha.dia === chaveFiltro.value.dia && linha.areas === chaveFiltro.value.areas)
-    .sort((a, b) => a.caracteres - b.caracteres)
-)
-
 // Escala x: caracteres em múltiplos de 100 em volta dos itens do filtro
 const xMin = computed(() =>
   Math.floor(Math.min(...pontosDoFiltro.value.map((ponto) => ponto.caracteres)) / 100) * 100
@@ -290,6 +322,25 @@ const xMin = computed(() =>
 const xMax = computed(() =>
   Math.ceil(Math.max(...pontosDoFiltro.value.map((ponto) => ponto.caracteres)) / 100) * 100
 )
+
+// Modelo logístico do filtro: mesmo cálculo da prova (calcularLogisticaProva).
+// Usa os itens do filtro, com acertos e total de respostas de cada item.
+const resultado = computed(() => {
+  const pontos = pontosDoFiltro.value.map((ponto) => ({
+    x: ponto.caracteres,
+    acertos: ponto.acertos,
+    total: ponto.total
+  }))
+  const grade = Array.from({ length: 51 }, (_, indice) => {
+    const inicio = Math.min(...pontos.map((p) => p.x))
+    const fim = Math.max(...pontos.map((p) => p.x))
+    return inicio + ((fim - inicio) / 50) * indice
+  })
+  return pontos.length > 0 ? calcularLogisticaProva(pontos, grade) : null
+})
+
+// Linhas da curva do filtro (uma por ponto da grade), ordenadas por caracteres
+const linhasReta = computed(() => (resultado.value ? resultado.value.linha : []))
 
 // Menor passo que deixa os rótulos com espaço suficiente
 const passoX = computed(() => {
@@ -338,9 +389,9 @@ const pontosSvg = computed(() =>
   })
 )
 
-// Reta de mínimos quadrados (acerto previsto ao longo da grade de caracteres)
+// Curva logística (acerto previsto ao longo da grade de caracteres)
 const pontosReta = computed(() =>
-  linhasReta.value.map((linha) => `${xDe(linha.caracteres)},${yDe(linha.acertoPrevisto)}`).join(' ')
+  linhasReta.value.map((linha) => `${xDe(linha.x)},${yDe(linha.previsto)}`).join(' ')
 )
 
 // Faixa do IC 95%: vai pela borda superior e volta pela inferior
@@ -349,34 +400,34 @@ const faixaIc = computed(() => {
   if (linhas.length === 0) {
     return ''
   }
-  const superior = linhas.map((linha) => `${xDe(linha.caracteres)},${yDe(linha.icSuperior)}`)
-  const inferior = [...linhas].reverse().map((linha) => `${xDe(linha.caracteres)},${yDe(linha.icInferior)}`)
+  const superior = linhas.map((linha) => `${xDe(linha.x)},${yDe(linha.icSuperior)}`)
+  const inferior = [...linhas].reverse().map((linha) => `${xDe(linha.x)},${yDe(linha.icInferior)}`)
   return [...superior, ...inferior].join(' ')
 })
 
 // Formata número com pelo menos `casasMinimas` decimais. Se o valor for menor que essa precisão,
 // usa mais casas (até 2 algarismos significativos, no máximo 6), para não aparecer 0.00 ou -0.00
 function formatarNumero(valor, casasMinimas) {
+  if (valor == null || Number.isNaN(Number(valor))) {
+    return '—'
+  }
   const absoluto = Math.abs(valor)
   let casas = casasMinimas
   if (absoluto > 0 && absoluto < Math.pow(10, -casasMinimas)) {
     casas = Math.min(Math.ceil(-Math.log10(absoluto)) + 1, 6)
   }
   const arredondado = Number(valor.toFixed(casas))
-  return (arredondado === 0 ? 0 : arredondado).toFixed(casas)
+  return (arredondado === 0 ? 0 : arredondado).toFixed(casas).replace('.', ',')
 }
 
-// Resumo da reta do filtro: inclinação em pontos percentuais por 100 caracteres, r e p (teste t)
-const resumoReta = computed(() => {
-  const linha = linhasReta.value[0]
-  if (!linha) {
-    return ''
-  }
-  const p = linha.p < 0.001 ? '< 0.001' : formatarNumero(linha.p, 3)
-  return (
-    `Reta: a cada 100 caracteres a mais, o acerto muda ${formatarNumero(linha.inclinacao * 100, 2)} ` +
-    `pontos percentuais, em média (r de Pearson = ${formatarNumero(linha.r, 2)}, p = ${p}, ` +
-    `n = ${linha.quantidadeItens} itens).`
+// Notas do gráfico com a razão de chances, φ, p e n do filtro escolhido no lugar de {razao}, {phi}, {p} e {n}
+const notasDoFiltro = computed(() => {
+  const razao = resultado.value ? formatarNumero(resultado.value.razaoChancesPor100, 2) : '—'
+  const phi = resultado.value ? formatarNumero(resultado.value.phi, 1) : '—'
+  const p = resultado.value ? (resultado.value.p < 0.001 ? '< 0,001' : formatarNumero(resultado.value.p, 3)) : '—'
+  const n = resultado.value ? String(resultado.value.n) : '—'
+  return TEXTO_DISPERSAO_ITENS.notas.map((texto) =>
+    texto.replaceAll('{razao}', razao).replaceAll('{phi}', phi).replaceAll('{p}', p).replaceAll('{n}', n)
   )
 })
 
@@ -503,13 +554,6 @@ watch(() => props.ano, carregar, { immediate: true })
   background: #0070C0;
 }
 
-.dispersao-resumo {
-  margin: 0.75rem 0 0;
-  color: #333;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
 .dispersao-notas {
   margin: 1rem 0 0;
   padding-left: 1.2rem;
@@ -524,24 +568,7 @@ watch(() => props.ano, carregar, { immediate: true })
   margin-left: auto;
 }
 
-.filter-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  color: #0070C0;
-  border: 2px solid #0070C0;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
 
-.filter-btn:hover {
-  background: #f0f7ff;
-}
 
 .filter-menu {
   position: absolute;
