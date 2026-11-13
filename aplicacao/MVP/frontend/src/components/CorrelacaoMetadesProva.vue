@@ -265,8 +265,14 @@ function xDaBarra(indiceNivel, indiceMetade) {
 }
 
 .metades-status {
-  padding: 1rem 0;
-  color: #666;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-left: 4px solid #ffc107;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #856404;
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 .grafico-metades {

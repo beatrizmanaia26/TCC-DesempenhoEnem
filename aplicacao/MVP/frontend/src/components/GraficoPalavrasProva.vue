@@ -306,15 +306,21 @@ const larguraBarra = (palavras) => {
 }
 
 .filter-lista {
-  /* 2 opções visíveis por seção (cada .filter-option tem 2.25rem); o restante rola */
-  max-height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 12.5rem;
   overflow-y: auto;
+}
+
+.filter-lista > .filter-option {
+  min-height: 2.5rem;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .filter-option {
   display: flex;
   align-items: center;
-  height: 2.25rem;
   padding: 0 0.75rem;
   margin: 0;
   border-radius: 4px;

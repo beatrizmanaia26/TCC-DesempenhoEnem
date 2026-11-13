@@ -263,17 +263,23 @@ const ocultarDica = () => {
 }
 
 .filter-lista {
-  /* 2 opções visíveis por seção (cada .filter-option tem 2.25rem); o restante rola */
-  max-height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 7.5rem;
   overflow-y: auto;
+}
+
+.filter-lista > .filter-option {
+  min-height: 2.5rem;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .filter-option {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  height: 2.25rem;
-  padding: 0 0.25rem;
+  padding: 0.5rem 0.25rem;
   border-radius: 4px;
 }
 

@@ -556,7 +556,8 @@ const goToForm = () => {
   transition: background 0.2s ease;
 }
 .filter-option:hover { background: #f5f5f5; }
-.filter-lista { max-height: none; overflow: visible; }
+.filter-lista { display: flex; flex-direction: column; max-height: 7.5rem; overflow-y: auto; }
+.filter-lista > .filter-option { min-height: 2.5rem; margin: 0; flex-shrink: 0; }
 .filter-option input[type="checkbox"] {
   margin-right: 0.75rem;
   width: 16px;

@@ -70,9 +70,10 @@ describe('MapaCalorSpearmanProva', () => {
     expect(link.attributes('target')).toBe('_blank')
   })
 
-  it('mostra mensagem quando não há acertos informados', () => {
+  it('não mostra mensagem nem legenda quando não há acertos informados', () => {
     const wrapper = mount(MapaCalorSpearmanProva, { props: { questoes: [] } })
     expect(wrapper.find('.mapa-calor').exists()).toBe(false)
-    expect(wrapper.text()).toContain('Informe os acertos')
+    expect(wrapper.find('.correlacoes-legenda').exists()).toBe(false)
+    expect(wrapper.text()).not.toContain('Informe os acertos')
   })
 })

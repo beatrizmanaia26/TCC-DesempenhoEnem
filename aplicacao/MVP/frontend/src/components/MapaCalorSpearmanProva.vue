@@ -9,10 +9,8 @@
       Correlação de <a :href="URL_SPEARMAN" target="_blank" rel="noopener noreferrer" class="correlacoes-link">Spearman</a> entre os caracteres de cada questão desta prova e o percentual de acerto, separada por nível de dificuldade.
     </p>
 
-    <p v-if="!temDados" class="correlacoes-status">{{ mensagemSemDados }}</p>
-
     <svg
-      v-else
+      v-if="temDados"
       class="mapa-calor"
       :viewBox="`0 0 ${largura} ${altura}`"
       role="img"
@@ -102,7 +100,7 @@
       >Correlação de Spearman (r)</text>
     </svg>
 
-    <ul class="correlacoes-legenda">
+    <ul v-if="temDados" class="correlacoes-legenda">
       <li v-for="(texto, indice) in notas" :key="indice">
         <template v-for="(parte, i) in dividirComLinks(texto)" :key="i">
           <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link">{{ parte.texto }}</a>
@@ -183,7 +181,7 @@ const tooltipMapa = [
 ].join('\n')
 
 const notas = [
-  'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm).',
+  'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm). Tanto a correlação quant o Holm tem que ser elvados em consideração para a conclusão do possível impacto do acerto. ',
   'O r mostra a força da relação, de −1 a 1. Quanto mais longe de 0, mais forte.',
   'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
   'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
@@ -205,12 +203,6 @@ const resultados = computed(() => {
 })
 
 const temDados = computed(() => resultados.value.some((celula) => celula.r !== null))
-const temAcertoInformado = computed(() => props.questoes.some(
-  (questao) => questao.taxa_acerto_percentual !== null && questao.taxa_acerto_percentual !== undefined
-))
-const mensagemSemDados = computed(() => (temAcertoInformado.value
-  ? `São necessárias pelo menos ${MINIMO_QUESTOES_SPEARMAN} questões com acerto informado para calcular a correlação.`
-  : 'Informe os acertos por questão (em "Deseja incluir métricas dos estudantes?") para ver esta correlação.'))
 
 // Escala de cor do projeto: azul para r negativo, branco em zero, verde para r positivo
 function interpolar(de, para, t) {
@@ -292,11 +284,6 @@ const celulas = computed(() => linhas.map((linha, j) => {
 .correlacoes-link {
   color: #0070c0;
   text-decoration: underline;
-}
-
-.correlacoes-status {
-  padding: 1rem 0;
-  color: #666;
 }
 
 .mapa-calor {

@@ -34,7 +34,7 @@ export const TEXTO_CORRELACOES_TEMPO = {
   ],
   // Notas exibidas abaixo do mapa. Os termos de LINKS_TERMOS viram links.
   notas: [
-    'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm).',
+    'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm).Tanto a correlação quant o Holm tem que ser elvados em consideração para a conclusão do possível impacto do acerto.',
     'O r mostra a força  da relação, de −1 a 1. Quanto mais longe de 0, mais forte',
     'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
     'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
@@ -91,7 +91,7 @@ export const TEXTO_MAPA_DIFICULDADE = {
     'Holm: correção para os 60 testes (3 níveis × 5 anos × 4 áreas). Ordena os p brutos do menor para o maior e multiplica o 1º por 60, o 2º por 59, e assim por diante, sem passar de 1. Assim, a chance de pelo menos um falso positivo no conjunto fica em 5%.'
   ],
   notas: [
-    'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm).',
+    'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm). Tanto a correlação quant o Holm tem que ser elvados em consideração para a conclusão do possível impacto do acerto.',
     'O r mostra a força  da relação, de −1 a 1. Quanto mais longe de 0, mais forte',
     'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
     'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',

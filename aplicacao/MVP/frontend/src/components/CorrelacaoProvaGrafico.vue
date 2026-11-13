@@ -510,9 +510,16 @@ const tooltip = [
 }
 
 .filter-lista {
-  /* 2 opções visíveis por seção (cada .filter-option tem 2.25rem); o restante rola */
-  max-height: 4.5rem;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: none;
+  overflow: visible;
+}
+
+.filter-lista > .filter-option {
+  min-height: 2.5rem;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .filter-option {
