@@ -1,0 +1,1611 @@
+{
+  "textos_introdutorios": [
+    {
+      "id": 1,
+      "texto": "SIMULADO - FORMATO ENEM\nProva com 50 questões de múltipla escolha (A a E). Assinale apenas uma alternativa por questão.",
+      "quantidade_palavras": 20
+    }
+  ],
+  "questoes": [
+    {
+      "questao": 1,
+      "texto": "QUESTÃO 01\nTabela fictícia elaborada para fins didáticos.\n[Consumo médio diário de água por pessoa, em litros: Cidade A, 120; Cidade B, 165; Cidade C, 140; Cidade\nD, 98.]\nDe acordo com a tabela, a cidade com o menor consumo médio diário é a\nA  Cidade A.\nB  Cidade B.\nC  Cidade C.\nD  Cidade D.\nE  Cidades A e C.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Cidade A."
+        },
+        {
+          "letra": "B",
+          "texto": "Cidade B."
+        },
+        {
+          "letra": "C",
+          "texto": "Cidade C."
+        },
+        {
+          "letra": "D",
+          "texto": "Cidade D."
+        },
+        {
+          "letra": "E",
+          "texto": "Cidades A e C."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 61,
+      "dificuldade": "medio",
+      "acertos": 16,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 53.3
+    },
+    {
+      "questao": 2,
+      "texto": "QUESTÃO 02\nUm terreno retangular tem 12 m de largura e 25 m de comprimento.\nA área desse terreno, em metros quadrados, é\nA  74.\nB  150.\nC  240.\nD  300.\nE  600.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "74."
+        },
+        {
+          "letra": "B",
+          "texto": "150."
+        },
+        {
+          "letra": "C",
+          "texto": "240."
+        },
+        {
+          "letra": "D",
+          "texto": "300."
+        },
+        {
+          "letra": "E",
+          "texto": "600."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 33,
+      "dificuldade": "medio",
+      "acertos": 14,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 46.7
+    },
+    {
+      "questao": 3,
+      "texto": "QUESTÃO 03\nDurante a Era Vargas (1930-1945), o Estado brasileiro ampliou sua intervenção na economia e criou leis\ntrabalhistas, como a Consolidação das Leis do Trabalho (CLT), ao mesmo tempo que restringiu liberdades\npolíticas.\nUma característica do período citado foi\nA  a ausência de intervenção estatal na economia.\nB  a combinação entre direitos trabalhistas e controle político.\nC  o fim de qualquer legislação trabalhista.\nD  a ampla liberdade de imprensa.\nE  o fortalecimento do federalismo oligárquico.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "a ausência de intervenção estatal na economia."
+        },
+        {
+          "letra": "B",
+          "texto": "a combinação entre direitos trabalhistas e controle político."
+        },
+        {
+          "letra": "C",
+          "texto": "o fim de qualquer legislação trabalhista."
+        },
+        {
+          "letra": "D",
+          "texto": "a ampla liberdade de imprensa."
+        },
+        {
+          "letra": "E",
+          "texto": "o fortalecimento do federalismo oligárquico."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 76,
+      "dificuldade": "facil",
+      "acertos": 27,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 90.0
+    },
+    {
+      "questao": 4,
+      "texto": "QUESTÃO 04\nFigura elaborada para fins didáticos.\n[Circuito simples com uma bateria de 12 V ligada a um único resistor de 6 Ω.]\nAplicando a Lei de Ohm, a corrente elétrica que percorre o circuito é de\nA  0,5 A.\nB  1 A.\nC  2 A.\nD  3 A.\nE  6 A.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "0,5 A."
+        },
+        {
+          "letra": "B",
+          "texto": "1 A."
+        },
+        {
+          "letra": "C",
+          "texto": "2 A."
+        },
+        {
+          "letra": "D",
+          "texto": "3 A."
+        },
+        {
+          "letra": "E",
+          "texto": "6 A."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 52,
+      "dificuldade": "facil",
+      "acertos": 27,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 90.0
+    },
+    {
+      "questao": 5,
+      "texto": "QUESTÃO 05\nEm um ecossistema, os produtores, como as plantas, fornecem energia aos consumidores primários, que\nservem de alimento aos consumidores secundários. Os decompositores, por sua vez, degradam a matéria\norgânica e devolvem nutrientes ao solo.\nNo ecossistema descrito, o papel dos decompositores é\nA  produzir energia a partir da luz solar.\nB  alimentar-se exclusivamente de consumidores secundários.\nC  reciclar nutrientes da matéria orgânica para o ambiente.\nD  impedir o crescimento dos produtores.\nE  armazenar energia na forma de gordura.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "produzir energia a partir da luz solar."
+        },
+        {
+          "letra": "B",
+          "texto": "alimentar-se exclusivamente de consumidores secundários."
+        },
+        {
+          "letra": "C",
+          "texto": "reciclar nutrientes da matéria orgânica para o ambiente."
+        },
+        {
+          "letra": "D",
+          "texto": "impedir o crescimento dos produtores."
+        },
+        {
+          "letra": "E",
+          "texto": "armazenar energia na forma de gordura."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 80,
+      "dificuldade": "facil",
+      "acertos": 27,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 90.0
+    },
+    {
+      "questao": 6,
+      "texto": "QUESTÃO 06\nCharge fictícia criada para fins didáticos.\n[Dois personagens de países diferentes disputam o controle de um globo terrestre, enquanto ao fundo há\nmísseis apontados em direções opostas.]\nA charge remete ao contexto da Guerra Fria, marcado por\nA  cooperação plena entre as superpotências.\nB  disputa de influência entre Estados Unidos e União Soviética.\nC  ausência de corrida armamentista.\nD  fim das ideologias políticas.\nE  conflito entre países da América Latina.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "cooperação plena entre as superpotências."
+        },
+        {
+          "letra": "B",
+          "texto": "disputa de influência entre Estados Unidos e União Soviética."
+        },
+        {
+          "letra": "C",
+          "texto": "ausência de corrida armamentista."
+        },
+        {
+          "letra": "D",
+          "texto": "fim das ideologias políticas."
+        },
+        {
+          "letra": "E",
+          "texto": "conflito entre países da América Latina."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 72,
+      "dificuldade": "facil",
+      "acertos": 23,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 76.7
+    },
+    {
+      "questao": 7,
+      "texto": "QUESTÃO 07\nNos experimentos de Mendel com ervilhas, o cruzamento entre plantas de linhagens puras que diferiam em\numa característica gerou descendentes que expressavam apenas uma das variações, chamada de dominante.\nO resultado descrito ilustra o conceito de\nA  mutação cromossômica.\nB  dominância entre alelos.\nC  seleção artificial.\nD  clonagem celular.\nE  mitose.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "mutação cromossômica."
+        },
+        {
+          "letra": "B",
+          "texto": "dominância entre alelos."
+        },
+        {
+          "letra": "C",
+          "texto": "seleção artificial."
+        },
+        {
+          "letra": "D",
+          "texto": "clonagem celular."
+        },
+        {
+          "letra": "E",
+          "texto": "mitose."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 53,
+      "dificuldade": "medio",
+      "acertos": 15,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 50.0
+    },
+    {
+      "questao": 8,
+      "texto": "QUESTÃO 08\nUm ciclista percorreu 150 m em 30 s, em linha reta.\nA velocidade média do ciclista nesse trecho foi de\nA  2 m/s.\nB  3 m/s.\nC  4 m/s.\nD  5 m/s.\nE  6 m/s.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "2 m/s."
+        },
+        {
+          "letra": "B",
+          "texto": "3 m/s."
+        },
+        {
+          "letra": "C",
+          "texto": "4 m/s."
+        },
+        {
+          "letra": "D",
+          "texto": "5 m/s."
+        },
+        {
+          "letra": "E",
+          "texto": "6 m/s."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 37,
+      "dificuldade": "facil",
+      "acertos": 27,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 90.0
+    },
+    {
+      "questao": 9,
+      "texto": "QUESTÃO 09\nUm objeto de 2 kg move-se com velocidade de 3 m/s.\nA energia cinética desse objeto é de\nA  3 J.\nB  6 J.\nC  9 J.\nD  12 J.\nE  18 J.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "3 J."
+        },
+        {
+          "letra": "B",
+          "texto": "6 J."
+        },
+        {
+          "letra": "C",
+          "texto": "9 J."
+        },
+        {
+          "letra": "D",
+          "texto": "12 J."
+        },
+        {
+          "letra": "E",
+          "texto": "18 J."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 35,
+      "dificuldade": "medio",
+      "acertos": 15,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 50.0
+    },
+    {
+      "questao": 10,
+      "texto": "QUESTÃO 10\nAs notas de um aluno em quatro avaliações foram 6,0; 7,5; 8,0 e 8,5.\nA média aritmética das notas desse aluno é\nA  7,00.\nB  7,25.\nC  7,50.\nD  7,75.\nE  8,00.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "7,00."
+        },
+        {
+          "letra": "B",
+          "texto": "7,25."
+        },
+        {
+          "letra": "C",
+          "texto": "7,50."
+        },
+        {
+          "letra": "D",
+          "texto": "7,75."
+        },
+        {
+          "letra": "E",
+          "texto": "8,00."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 34,
+      "dificuldade": "dificil",
+      "acertos": 5,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 16.7
+    },
+    {
+      "questao": 11,
+      "texto": "QUESTÃO 11\nDados fictícios elaborados para fins didáticos.\n[Gráfico cartesiano de uma reta que passa pelos pontos (0, 2) e (3, 8).]\nA função que representa a reta do gráfico é\nA  f(x) = x + 2.\nB  f(x) = 2x + 2.\nC  f(x) = 2x + 3.\nD  f(x) = 3x + 2.\nE  f(x) = 6x + 2.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "f(x) = x + 2."
+        },
+        {
+          "letra": "B",
+          "texto": "f(x) = 2x + 2."
+        },
+        {
+          "letra": "C",
+          "texto": "f(x) = 2x + 3."
+        },
+        {
+          "letra": "D",
+          "texto": "f(x) = 3x + 2."
+        },
+        {
+          "letra": "E",
+          "texto": "f(x) = 6x + 2."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 61,
+      "dificuldade": "medio",
+      "acertos": 20,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 66.7
+    },
+    {
+      "questao": 12,
+      "texto": "QUESTÃO 12\nMapa fictício elaborado para fins didáticos.\n[Mapa do Brasil com regiões coloridas por tipo climático predominante: equatorial, tropical, semiárido e\nsubtropical.]\nA região de clima semiárido representada no mapa localiza-se predominantemente no\nA  Norte.\nB  Nordeste.\nC  Sul.\nD  Centro-Oeste.\nE  Sudeste.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Norte."
+        },
+        {
+          "letra": "B",
+          "texto": "Nordeste."
+        },
+        {
+          "letra": "C",
+          "texto": "Sul."
+        },
+        {
+          "letra": "D",
+          "texto": "Centro-Oeste."
+        },
+        {
+          "letra": "E",
+          "texto": "Sudeste."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 44,
+      "dificuldade": "facil",
+      "acertos": 24,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 80.0
+    },
+    {
+      "questao": 13,
+      "texto": "QUESTÃO 13\nEm um jogo, um dado comum de seis faces, não viciado, é lançado uma vez.\nA probabilidade de que o número obtido seja primo é\nA  1/6.\nB  1/3.\nC  1/2.\nD  2/3.\nE  5/6.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "1/6."
+        },
+        {
+          "letra": "B",
+          "texto": "1/3."
+        },
+        {
+          "letra": "C",
+          "texto": "1/2."
+        },
+        {
+          "letra": "D",
+          "texto": "2/3."
+        },
+        {
+          "letra": "E",
+          "texto": "5/6."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 37,
+      "dificuldade": "facil",
+      "acertos": 29,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 96.7
+    },
+    {
+      "questao": 14,
+      "texto": "QUESTÃO 14\nDados fictícios elaborados para fins didáticos.\n[Gráfico de barras com a taxa de desemprego, em %, de 2019 a 2023: 11,9; 13,5; 13,2; 9,6; 7,8.]\nCom base no gráfico, a taxa de desemprego foi maior no ano de\nA  2019.\nB  2020.\nC  2021.\nD  2022.\nE  2023.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "2019."
+        },
+        {
+          "letra": "B",
+          "texto": "2020."
+        },
+        {
+          "letra": "C",
+          "texto": "2021."
+        },
+        {
+          "letra": "D",
+          "texto": "2022."
+        },
+        {
+          "letra": "E",
+          "texto": "2023."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 50,
+      "dificuldade": "facil",
+      "acertos": 26,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 86.7
+    },
+    {
+      "questao": 15,
+      "texto": "QUESTÃO 15\nO som é uma onda mecânica e, por isso, precisa de um meio material para se propagar. Em geral, sua\nvelocidade é maior em sólidos do que em líquidos e gases.\nSegundo o texto, o som\nA  propaga-se no vácuo.\nB  independe de meio material.\nC  propaga-se mais rápido em sólidos.\nD  é uma onda eletromagnética.\nE  é mais veloz em gases do que em sólidos.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "propaga-se no vácuo."
+        },
+        {
+          "letra": "B",
+          "texto": "independe de meio material."
+        },
+        {
+          "letra": "C",
+          "texto": "propaga-se mais rápido em sólidos."
+        },
+        {
+          "letra": "D",
+          "texto": "é uma onda eletromagnética."
+        },
+        {
+          "letra": "E",
+          "texto": "é mais veloz em gases do que em sólidos."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 68,
+      "dificuldade": "facil",
+      "acertos": 23,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 76.7
+    },
+    {
+      "questao": 16,
+      "texto": "QUESTÃO 16\nA língua varia conforme a região, a idade, a situação de comunicação e o grupo social. Reconhecer essa\nvariação evita o preconceito linguístico e amplia a compreensão de que não existe uma única forma\n\"correta\" de falar em todas as situações.\nO texto defende que a variação linguística deve ser\nA  combatida nas escolas.\nB  reconhecida como parte natural da língua.\nC  restringida aos textos informais.\nD  entendida como erro de falantes.\nE  extinta com o tempo.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "combatida nas escolas."
+        },
+        {
+          "letra": "B",
+          "texto": "reconhecida como parte natural da língua."
+        },
+        {
+          "letra": "C",
+          "texto": "restringida aos textos informais."
+        },
+        {
+          "letra": "D",
+          "texto": "entendida como erro de falantes."
+        },
+        {
+          "letra": "E",
+          "texto": "extinta com o tempo."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 79,
+      "dificuldade": "medio",
+      "acertos": 22,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 73.3
+    },
+    {
+      "questao": 17,
+      "texto": "QUESTÃO 17\nLer é um exercício de paciência: cada página pede ao leitor que desacelere, retome o que passou e\nestabeleça relações entre ideias. Em tempos de pressa, quem se dispõe a esse ritmo descobre que\ncompreender é mais do que decodificar palavras.\nSegundo o texto, compreender um texto exige\nA  leitura veloz e superficial.\nB  atenção, retomada e relação entre ideias.\nC  memorização de todas as palavras.\nD  uso exclusivo de livros impressos.\nE  contato apenas com textos curtos.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "leitura veloz e superficial."
+        },
+        {
+          "letra": "B",
+          "texto": "atenção, retomada e relação entre ideias."
+        },
+        {
+          "letra": "C",
+          "texto": "memorização de todas as palavras."
+        },
+        {
+          "letra": "D",
+          "texto": "uso exclusivo de livros impressos."
+        },
+        {
+          "letra": "E",
+          "texto": "contato apenas com textos curtos."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 80,
+      "dificuldade": "dificil",
+      "acertos": 7,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 23.3
+    },
+    {
+      "questao": 18,
+      "texto": "QUESTÃO 18\nEm muitas cidades, a impermeabilização do solo por asfalto e concreto dificulta a absorção da água da\nchuva. Como consequência, a água escoa rapidamente pelas ruas, favorecendo alagamentos e enchentes.\nO texto relaciona as enchentes urbanas à\nA  abundância de áreas verdes.\nB  redução do volume de chuvas.\nC  impermeabilização do solo.\nD  ausência de ocupação urbana.\nE  construção de reservatórios naturais.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "abundância de áreas verdes."
+        },
+        {
+          "letra": "B",
+          "texto": "redução do volume de chuvas."
+        },
+        {
+          "letra": "C",
+          "texto": "impermeabilização do solo."
+        },
+        {
+          "letra": "D",
+          "texto": "ausência de ocupação urbana."
+        },
+        {
+          "letra": "E",
+          "texto": "construção de reservatórios naturais."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 64,
+      "dificuldade": "facil",
+      "acertos": 27,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 90.0
+    },
+    {
+      "questao": 19,
+      "texto": "QUESTÃO 19\nUma sequência numérica forma uma progressão aritmética de primeiro termo igual a 5 e razão igual a 3.\nO décimo termo dessa progressão é\nA  29.\nB  30.\nC  32.\nD  35.\nE  38.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "29."
+        },
+        {
+          "letra": "B",
+          "texto": "30."
+        },
+        {
+          "letra": "C",
+          "texto": "32."
+        },
+        {
+          "letra": "D",
+          "texto": "35."
+        },
+        {
+          "letra": "E",
+          "texto": "38."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 36,
+      "dificuldade": "medio",
+      "acertos": 19,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 63.3
+    },
+    {
+      "questao": 20,
+      "texto": "QUESTÃO 20\nNas redes sociais, informações circulam em segundos e, muitas vezes, sem qualquer verificação. A\ndisseminação de notícias falsas aproveita-se da pressa do leitor, que compartilha conteúdos apenas com\nbase no título. Por isso, especialistas recomendam checar a fonte, a data e a autoria antes de repassar\numa informação.\nO texto defende que, para combater as notícias falsas, o leitor deve\nA  compartilhar rapidamente qualquer conteúdo recebido.\nB  confiar apenas em títulos chamativos.\nC  verificar fonte, data e autoria das informações.\nD  abandonar o uso das redes sociais.\nE  aceitar como verdadeiro o que é muito divulgado.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "compartilhar rapidamente qualquer conteúdo recebido."
+        },
+        {
+          "letra": "B",
+          "texto": "confiar apenas em títulos chamativos."
+        },
+        {
+          "letra": "C",
+          "texto": "verificar fonte, data e autoria das informações."
+        },
+        {
+          "letra": "D",
+          "texto": "abandonar o uso das redes sociais."
+        },
+        {
+          "letra": "E",
+          "texto": "aceitar como verdadeiro o que é muito divulgado."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 98,
+      "dificuldade": "facil",
+      "acertos": 28,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 93.3
+    },
+    {
+      "questao": 21,
+      "texto": "QUESTÃO 21\nEm um laboratório, um estudante precisa separar a areia da água do mar sem perder o sal dissolvido. Ele\ndispõe de funil, papel de filtro e um recipiente.\nPara separar a areia da mistura, o método mais adequado é a\nA  destilação.\nB  filtração.\nC  decantação do sal.\nD  evaporação.\nE  centrifugação do sal.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "destilação."
+        },
+        {
+          "letra": "B",
+          "texto": "filtração."
+        },
+        {
+          "letra": "C",
+          "texto": "decantação do sal."
+        },
+        {
+          "letra": "D",
+          "texto": "evaporação."
+        },
+        {
+          "letra": "E",
+          "texto": "centrifugação do sal."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 56,
+      "dificuldade": "facil",
+      "acertos": 23,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 76.7
+    },
+    {
+      "questao": 22,
+      "texto": "QUESTÃO 22\n\"O tempo é um rio que leva as horas sem pedir licença.\"\nTrecho de texto autoral elaborado para fins didáticos.\nA figura de linguagem predominante no trecho é\nA  metáfora.\nB  pleonasmo.\nC  ironia.\nD  hipérbole.\nE  antítese.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "metáfora."
+        },
+        {
+          "letra": "B",
+          "texto": "pleonasmo."
+        },
+        {
+          "letra": "C",
+          "texto": "ironia."
+        },
+        {
+          "letra": "D",
+          "texto": "hipérbole."
+        },
+        {
+          "letra": "E",
+          "texto": "antítese."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 40,
+      "dificuldade": "medio",
+      "acertos": 21,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 70.0
+    },
+    {
+      "questao": 23,
+      "texto": "QUESTÃO 23\nA Lei Áurea, assinada em 1888, extinguiu formalmente a escravidão no Brasil. Contudo, não foi acompanhada\nde políticas de inclusão para a população recém-liberta, o que contribuiu para a persistência de\ndesigualdades sociais.\nUma consequência da abolição sem políticas de inclusão foi\nA  a igualdade imediata de oportunidades.\nB  a manutenção de desigualdades sociais e econômicas.\nC  a distribuição de terras aos libertos.\nD  o fim do preconceito racial.\nE  a garantia de moradia a toda a população.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "a igualdade imediata de oportunidades."
+        },
+        {
+          "letra": "B",
+          "texto": "a manutenção de desigualdades sociais e econômicas."
+        },
+        {
+          "letra": "C",
+          "texto": "a distribuição de terras aos libertos."
+        },
+        {
+          "letra": "D",
+          "texto": "o fim do preconceito racial."
+        },
+        {
+          "letra": "E",
+          "texto": "a garantia de moradia a toda a população."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 80,
+      "dificuldade": "medio",
+      "acertos": 20,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 66.7
+    },
+    {
+      "questao": 24,
+      "texto": "QUESTÃO 24\nFotografia elaborada para fins didáticos.\n[Imagem de uma encosta sem vegetação, com sulcos profundos causados pela passagem da água da chuva.]\nO processo observado na imagem está relacionado à\nA  erosão do solo agravada pela retirada da vegetação.\nB  formação de dunas costeiras.\nC  sedimentação em rios navegáveis.\nD  atividade vulcânica recente.\nE  recuperação natural da mata ciliar.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "erosão do solo agravada pela retirada da vegetação."
+        },
+        {
+          "letra": "B",
+          "texto": "formação de dunas costeiras."
+        },
+        {
+          "letra": "C",
+          "texto": "sedimentação em rios navegáveis."
+        },
+        {
+          "letra": "D",
+          "texto": "atividade vulcânica recente."
+        },
+        {
+          "letra": "E",
+          "texto": "recuperação natural da mata ciliar."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 60,
+      "dificuldade": "dificil",
+      "acertos": 12,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 40.0
+    },
+    {
+      "questao": 25,
+      "texto": "QUESTÃO 25\nA globalização intensificou o fluxo de capitais, mercadorias, informações e pessoas entre países. Ao\nmesmo tempo, ampliou a interdependência econômica, de modo que crises em um mercado podem repercutir em\ndiversas economias.\nUma característica da globalização apresentada no texto é\nA  o isolamento econômico entre países.\nB  a interdependência entre economias.\nC  a eliminação do comércio internacional.\nD  a redução do fluxo de informações.\nE  o fim das crises financeiras.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o isolamento econômico entre países."
+        },
+        {
+          "letra": "B",
+          "texto": "a interdependência entre economias."
+        },
+        {
+          "letra": "C",
+          "texto": "a eliminação do comércio internacional."
+        },
+        {
+          "letra": "D",
+          "texto": "a redução do fluxo de informações."
+        },
+        {
+          "letra": "E",
+          "texto": "o fim das crises financeiras."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 72,
+      "dificuldade": "medio",
+      "acertos": 21,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 70.0
+    },
+    {
+      "questao": 26,
+      "texto": "QUESTÃO 26\nNa combustão completa de um hidrocarboneto, o combustível reage com o gás oxigênio e produz gás carbônico\ne água, liberando energia na forma de calor.\nEntre os produtos da combustão completa citada estão\nA  gás carbônico e água.\nB  monóxido de carbono e fuligem.\nC  apenas gás oxigênio.\nD  hidrogênio e nitrogênio.\nE  metano e etanol.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "gás carbônico e água."
+        },
+        {
+          "letra": "B",
+          "texto": "monóxido de carbono e fuligem."
+        },
+        {
+          "letra": "C",
+          "texto": "apenas gás oxigênio."
+        },
+        {
+          "letra": "D",
+          "texto": "hidrogênio e nitrogênio."
+        },
+        {
+          "letra": "E",
+          "texto": "metano e etanol."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 58,
+      "dificuldade": "medio",
+      "acertos": 17,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 56.7
+    },
+    {
+      "questao": 27,
+      "texto": "QUESTÃO 27\nTirinha fictícia criada para fins didáticos.\n[Personagem diz: \"Vou começar o trabalho amanhã\" e, no quadro seguinte, repete a mesma frase diante de um\ncalendário com vários dias riscados.]\nO humor da tirinha decorre\nA  da pressa do personagem em concluir tarefas.\nB  do hábito de adiar compromissos indefinidamente.\nC  da falta de calendários disponíveis.\nD  da dificuldade de entender o prazo.\nE  do excesso de tarefas concluídas.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "da pressa do personagem em concluir tarefas."
+        },
+        {
+          "letra": "B",
+          "texto": "do hábito de adiar compromissos indefinidamente."
+        },
+        {
+          "letra": "C",
+          "texto": "da falta de calendários disponíveis."
+        },
+        {
+          "letra": "D",
+          "texto": "da dificuldade de entender o prazo."
+        },
+        {
+          "letra": "E",
+          "texto": "do excesso de tarefas concluídas."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 70,
+      "dificuldade": "dificil",
+      "acertos": 8,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 26.7
+    },
+    {
+      "questao": 28,
+      "texto": "QUESTÃO 28\nCartaz de campanha elaborado para fins didáticos.\n[Cartaz mostra operários sorridentes e o slogan \"O trabalho constrói a nação\".]\nO cartaz tem como objetivo principal\nA  criticar a exploração do trabalho.\nB  valorizar o trabalho como elemento de identidade nacional.\nC  anunciar a extinção das fábricas.\nD  convocar greves gerais.\nE  divulgar produtos importados.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "criticar a exploração do trabalho."
+        },
+        {
+          "letra": "B",
+          "texto": "valorizar o trabalho como elemento de identidade nacional."
+        },
+        {
+          "letra": "C",
+          "texto": "anunciar a extinção das fábricas."
+        },
+        {
+          "letra": "D",
+          "texto": "convocar greves gerais."
+        },
+        {
+          "letra": "E",
+          "texto": "divulgar produtos importados."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 56,
+      "dificuldade": "facil",
+      "acertos": 25,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 83.3
+    },
+    {
+      "questao": 29,
+      "texto": "QUESTÃO 29\nA energia solar pode ser convertida em eletricidade por meio de painéis fotovoltaicos. Por ser renovável\ne emitir poucos poluentes durante a operação, ela tem ganhado espaço na matriz energética de vários\npaíses.\nUma vantagem da energia solar fotovoltaica é\nA  a emissão elevada de gases poluentes.\nB  o uso de combustíveis fósseis na geração.\nC  a utilização de uma fonte renovável.\nD  a dependência de reservas finitas.\nE  a impossibilidade de uso residencial.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "a emissão elevada de gases poluentes."
+        },
+        {
+          "letra": "B",
+          "texto": "o uso de combustíveis fósseis na geração."
+        },
+        {
+          "letra": "C",
+          "texto": "a utilização de uma fonte renovável."
+        },
+        {
+          "letra": "D",
+          "texto": "a dependência de reservas finitas."
+        },
+        {
+          "letra": "E",
+          "texto": "a impossibilidade de uso residencial."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 76,
+      "dificuldade": "medio",
+      "acertos": 19,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 63.3
+    },
+    {
+      "questao": 30,
+      "texto": "QUESTÃO 30\nCartaz de campanha elaborado para fins didáticos.\n[Cartaz com a frase \"Doe sangue: um gesto simples pode salvar até quatro vidas\" e a imagem de uma gota.]\nA função social do cartaz é\nA  vender produtos hospitalares.\nB  estimular a doação voluntária de sangue.\nC  alertar sobre riscos de transfusões.\nD  divulgar um evento esportivo.\nE  criticar o sistema de saúde.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "vender produtos hospitalares."
+        },
+        {
+          "letra": "B",
+          "texto": "estimular a doação voluntária de sangue."
+        },
+        {
+          "letra": "C",
+          "texto": "alertar sobre riscos de transfusões."
+        },
+        {
+          "letra": "D",
+          "texto": "divulgar um evento esportivo."
+        },
+        {
+          "letra": "E",
+          "texto": "criticar o sistema de saúde."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 63,
+      "dificuldade": "dificil",
+      "acertos": 9,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 30.0
+    },
+    {
+      "questao": 31,
+      "texto": "QUESTÃO 31\nO aumento da frota de veículos individuais agrava congestionamentos e a poluição do ar nos grandes\ncentros. Políticas de mobilidade urbana incluem investimento em transporte coletivo, ciclovias e calçadas\nseguras.\nUma medida coerente com o texto para melhorar a mobilidade urbana é\nA  incentivar o uso exclusivo de carros particulares.\nB  ampliar o transporte coletivo e a infraestrutura para pedestres.\nC  reduzir as vias para ciclistas.\nD  eliminar o transporte público.\nE  aumentar o número de estacionamentos centrais.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "incentivar o uso exclusivo de carros particulares."
+        },
+        {
+          "letra": "B",
+          "texto": "ampliar o transporte coletivo e a infraestrutura para pedestres."
+        },
+        {
+          "letra": "C",
+          "texto": "reduzir as vias para ciclistas."
+        },
+        {
+          "letra": "D",
+          "texto": "eliminar o transporte público."
+        },
+        {
+          "letra": "E",
+          "texto": "aumentar o número de estacionamentos centrais."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 80,
+      "dificuldade": "medio",
+      "acertos": 15,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 50.0
+    },
+    {
+      "questao": 32,
+      "texto": "QUESTÃO 32\nNo ciclo do carbono, as plantas absorvem gás carbônico na fotossíntese e o devolvem à atmosfera pela\nrespiração. A queima de combustíveis fósseis libera carbono armazenado por milhões de anos,\nintensificando o efeito estufa.\nA intensificação do efeito estufa, segundo o texto, está associada à\nA  fotossíntese realizada pelas plantas.\nB  liberação de carbono pela queima de combustíveis fósseis.\nC  respiração celular das plantas.\nD  absorção de gás carbônico pelos oceanos.\nE  diminuição do uso de combustíveis.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "fotossíntese realizada pelas plantas."
+        },
+        {
+          "letra": "B",
+          "texto": "liberação de carbono pela queima de combustíveis fósseis."
+        },
+        {
+          "letra": "C",
+          "texto": "respiração celular das plantas."
+        },
+        {
+          "letra": "D",
+          "texto": "absorção de gás carbônico pelos oceanos."
+        },
+        {
+          "letra": "E",
+          "texto": "diminuição do uso de combustíveis."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 79,
+      "dificuldade": "facil",
+      "acertos": 26,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 86.7
+    },
+    {
+      "questao": 33,
+      "texto": "QUESTÃO 33\nO patrimônio cultural de um povo abrange não apenas monumentos e edificações, mas também saberes,\ncelebrações, músicas e modos de fazer transmitidos entre gerações.\nDe acordo com o texto, o patrimônio cultural inclui\nA  somente prédios históricos.\nB  apenas objetos de museus.\nC  bens materiais e manifestações imateriais.\nD  exclusivamente tradições religiosas.\nE  somente documentos oficiais.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "somente prédios históricos."
+        },
+        {
+          "letra": "B",
+          "texto": "apenas objetos de museus."
+        },
+        {
+          "letra": "C",
+          "texto": "bens materiais e manifestações imateriais."
+        },
+        {
+          "letra": "D",
+          "texto": "exclusivamente tradições religiosas."
+        },
+        {
+          "letra": "E",
+          "texto": "somente documentos oficiais."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 58,
+      "dificuldade": "facil",
+      "acertos": 25,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 83.3
+    },
+    {
+      "questao": 34,
+      "texto": "QUESTÃO 34\nO mapa de uma cidade foi desenhado na escala 1:50.000. Em um trajeto, a distância medida no mapa foi de 4\ncm.\nA distância real correspondente é de\nA  0,5 km.\nB  1 km.\nC  2 km.\nD  4 km.\nE  20 km.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "0,5 km."
+        },
+        {
+          "letra": "B",
+          "texto": "1 km."
+        },
+        {
+          "letra": "C",
+          "texto": "2 km."
+        },
+        {
+          "letra": "D",
+          "texto": "4 km."
+        },
+        {
+          "letra": "E",
+          "texto": "20 km."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 45,
+      "dificuldade": "facil",
+      "acertos": 26,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 86.7
+    },
+    {
+      "questao": 35,
+      "texto": "QUESTÃO 35\nA cidadania não se resume ao direito de votar. Ela envolve participar de decisões coletivas, cumprir\ndeveres e reivindicar direitos, inclusive por meio de associações, conselhos e debates públicos.\nDe acordo com o texto, a cidadania pressupõe\nA  participação ativa na vida coletiva.\nB  afastamento das discussões políticas.\nC  exercício exclusivo do voto.\nD  obediência sem questionamento.\nE  ausência de deveres para o indivíduo.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "participação ativa na vida coletiva."
+        },
+        {
+          "letra": "B",
+          "texto": "afastamento das discussões políticas."
+        },
+        {
+          "letra": "C",
+          "texto": "exercício exclusivo do voto."
+        },
+        {
+          "letra": "D",
+          "texto": "obediência sem questionamento."
+        },
+        {
+          "letra": "E",
+          "texto": "ausência de deveres para o indivíduo."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 66,
+      "dificuldade": "medio",
+      "acertos": 15,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 50.0
+    },
+    {
+      "questao": 36,
+      "texto": "QUESTÃO 36\nA falta de saneamento básico favorece a proliferação de doenças, como diarreias e hepatite A,\ntransmitidas pela água contaminada. Investimentos em tratamento de água e esgoto reduzem internações e\nmelhoram a qualidade de vida.\nDe acordo com o texto, o saneamento básico contribui para\nA  o aumento de doenças transmitidas pela água.\nB  a redução de doenças e internações.\nC  a contaminação dos reservatórios.\nD  o aumento do uso de medicamentos.\nE  a diminuição da qualidade de vida.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o aumento de doenças transmitidas pela água."
+        },
+        {
+          "letra": "B",
+          "texto": "a redução de doenças e internações."
+        },
+        {
+          "letra": "C",
+          "texto": "a contaminação dos reservatórios."
+        },
+        {
+          "letra": "D",
+          "texto": "o aumento do uso de medicamentos."
+        },
+        {
+          "letra": "E",
+          "texto": "a diminuição da qualidade de vida."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 80,
+      "dificuldade": "dificil",
+      "acertos": 10,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 33.3
+    },
+    {
+      "questao": 37,
+      "texto": "QUESTÃO 37\nUma pessoa possui 5 camisetas e 4 bermudas diferentes e deseja montar conjuntos usando uma peça de cada.\nO número de conjuntos distintos que ela pode formar é\nA  9.\nB  16.\nC  20.\nD  24.\nE  120.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "9."
+        },
+        {
+          "letra": "B",
+          "texto": "16."
+        },
+        {
+          "letra": "C",
+          "texto": "20."
+        },
+        {
+          "letra": "D",
+          "texto": "24."
+        },
+        {
+          "letra": "E",
+          "texto": "120."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 40,
+      "dificuldade": "medio",
+      "acertos": 19,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 63.3
+    },
+    {
+      "questao": 38,
+      "texto": "QUESTÃO 38\nUma loja anunciou um produto que custava R$ 250,00 com 20% de desconto. Na hora do pagamento, o cliente\nganhou um desconto adicional de 10% sobre o valor já reduzido.\nO preço final pago pelo cliente foi de\nA  R$ 170,00.\nB  R$ 175,00.\nC  R$ 180,00.\nD  R$ 185,00.\nE  R$ 200,00.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "R$ 170,00."
+        },
+        {
+          "letra": "B",
+          "texto": "R$ 175,00."
+        },
+        {
+          "letra": "C",
+          "texto": "R$ 180,00."
+        },
+        {
+          "letra": "D",
+          "texto": "R$ 185,00."
+        },
+        {
+          "letra": "E",
+          "texto": "R$ 200,00."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 55,
+      "dificuldade": "medio",
+      "acertos": 21,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 70.0
+    },
+    {
+      "questao": 39,
+      "texto": "QUESTÃO 39\nUm capital de R$ 2.000,00 foi aplicado a juros simples, à taxa de 2% ao mês, durante 5 meses.\nO montante ao final do período foi de\nA  R$ 2.100,00.\nB  R$ 2.150,00.\nC  R$ 2.200,00.\nD  R$ 2.400,00.\nE  R$ 2.500,00.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "R$ 2.100,00."
+        },
+        {
+          "letra": "B",
+          "texto": "R$ 2.150,00."
+        },
+        {
+          "letra": "C",
+          "texto": "R$ 2.200,00."
+        },
+        {
+          "letra": "D",
+          "texto": "R$ 2.400,00."
+        },
+        {
+          "letra": "E",
+          "texto": "R$ 2.500,00."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 44,
+      "dificuldade": "facil",
+      "acertos": 23,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 76.7
+    },
+    {
+      "questao": 40,
+      "texto": "QUESTÃO 40\nDados fictícios elaborados para fins didáticos.\n[Gráfico de linhas da população de uma cidade, em milhares, de 2000 a 2020: 80, 95, 120, 150, 185.]\nO gráfico indica que a população da cidade, no período,\nA  diminuiu de forma contínua.\nB  permaneceu estável.\nC  cresceu a cada intervalo.\nD  oscilou sem tendência.\nE  dobrou entre 2000 e 2010.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "diminuiu de forma contínua."
+        },
+        {
+          "letra": "B",
+          "texto": "permaneceu estável."
+        },
+        {
+          "letra": "C",
+          "texto": "cresceu a cada intervalo."
+        },
+        {
+          "letra": "D",
+          "texto": "oscilou sem tendência."
+        },
+        {
+          "letra": "E",
+          "texto": "dobrou entre 2000 e 2010."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 60,
+      "dificuldade": "dificil",
+      "acertos": 12,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 40.0
+    },
+    {
+      "questao": 41,
+      "texto": "QUESTÃO 41\nA densidade de uma substância é a razão entre sua massa e seu volume. O gelo flutua na água líquida\nporque, ao se solidificar, a água aumenta de volume sem alterar a massa.\nO gelo flutua na água líquida porque ele\nA  possui densidade menor que a da água líquida.\nB  possui massa maior que a da água líquida.\nC  é composto por substâncias mais leves.\nD  perde massa ao se solidificar.\nE  tem volume menor que a água líquida.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "possui densidade menor que a da água líquida."
+        },
+        {
+          "letra": "B",
+          "texto": "possui massa maior que a da água líquida."
+        },
+        {
+          "letra": "C",
+          "texto": "é composto por substâncias mais leves."
+        },
+        {
+          "letra": "D",
+          "texto": "perde massa ao se solidificar."
+        },
+        {
+          "letra": "E",
+          "texto": "tem volume menor que a água líquida."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 82,
+      "dificuldade": "medio",
+      "acertos": 15,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 50.0
+    },
+    {
+      "questao": 42,
+      "texto": "QUESTÃO 42\nAs desigualdades sociais manifestam-se no acesso desigual a educação, saúde, moradia e renda. Para\nsociólogos, elas não decorrem apenas de esforço individual, mas também de estruturas históricas e\neconômicas.\nA perspectiva sociológica apresentada no texto compreende as desigualdades como\nA  resultado exclusivo do esforço pessoal.\nB  fenômeno ligado a estruturas históricas e econômicas.\nC  algo natural e imutável.\nD  consequência de fatores biológicos.\nE  problema restrito às zonas rurais.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "resultado exclusivo do esforço pessoal."
+        },
+        {
+          "letra": "B",
+          "texto": "fenômeno ligado a estruturas históricas e econômicas."
+        },
+        {
+          "letra": "C",
+          "texto": "algo natural e imutável."
+        },
+        {
+          "letra": "D",
+          "texto": "consequência de fatores biológicos."
+        },
+        {
+          "letra": "E",
+          "texto": "problema restrito às zonas rurais."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 71,
+      "dificuldade": "facil",
+      "acertos": 28,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 93.3
+    },
+    {
+      "questao": 43,
+      "texto": "QUESTÃO 43\nA Revolução Industrial, iniciada na Inglaterra no século XVIII, substituiu em grande parte o trabalho\nartesanal pela produção mecanizada. Nas fábricas, jornadas longas e condições insalubres marcaram a vida\ndos operários, o que impulsionou o surgimento dos primeiros sindicatos.\nUma consequência social da Revolução Industrial foi\nA  o desaparecimento das cidades industriais.\nB  a organização dos trabalhadores em defesa de direitos.\nC  a redução da produção de mercadorias.\nD  o fim do trabalho assalariado.\nE  a melhoria imediata das condições de trabalho.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o desaparecimento das cidades industriais."
+        },
+        {
+          "letra": "B",
+          "texto": "a organização dos trabalhadores em defesa de direitos."
+        },
+        {
+          "letra": "C",
+          "texto": "a redução da produção de mercadorias."
+        },
+        {
+          "letra": "D",
+          "texto": "o fim do trabalho assalariado."
+        },
+        {
+          "letra": "E",
+          "texto": "a melhoria imediata das condições de trabalho."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 84,
+      "dificuldade": "medio",
+      "acertos": 21,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 70.0
+    },
+    {
+      "questao": 44,
+      "texto": "QUESTÃO 44\nUm carro percorre 360 km em 4 horas, mantendo velocidade constante.\nMantida essa velocidade, a distância percorrida em 6 horas será de\nA  450 km.\nB  480 km.\nC  500 km.\nD  540 km.\nE  600 km.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "450 km."
+        },
+        {
+          "letra": "B",
+          "texto": "480 km."
+        },
+        {
+          "letra": "C",
+          "texto": "500 km."
+        },
+        {
+          "letra": "D",
+          "texto": "540 km."
+        },
+        {
+          "letra": "E",
+          "texto": "600 km."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 39,
+      "dificuldade": "facil",
+      "acertos": 26,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 86.7
+    },
+    {
+      "questao": 45,
+      "texto": "QUESTÃO 45\nDados fictícios elaborados para fins didáticos.\n[Gráfico de setores da matriz elétrica: hidrelétrica 60%, eólica 12%, biomassa 9%, solar 7%, outras 12%.]\nSegundo o gráfico, a principal fonte da matriz elétrica é a\nA  eólica.\nB  biomassa.\nC  solar.\nD  hidrelétrica.\nE  térmica.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "eólica."
+        },
+        {
+          "letra": "B",
+          "texto": "biomassa."
+        },
+        {
+          "letra": "C",
+          "texto": "solar."
+        },
+        {
+          "letra": "D",
+          "texto": "hidrelétrica."
+        },
+        {
+          "letra": "E",
+          "texto": "térmica."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 45,
+      "dificuldade": "dificil",
+      "acertos": 10,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 33.3
+    },
+    {
+      "questao": 46,
+      "texto": "QUESTÃO 46\nAs vacinas estimulam o sistema imunológico a produzir anticorpos sem causar a doença. Quando grande parte\nda população está imunizada, reduz-se a circulação do agente infeccioso, protegendo inclusive quem não\npôde se vacinar.\nA vacinação em larga escala é importante porque\nA  elimina a necessidade de higiene pessoal.\nB  protege indivíduos e reduz a circulação do agente infeccioso.\nC  provoca a doença de forma controlada em todos.\nD  substitui o tratamento de qualquer enfermidade.\nE  atua apenas sobre quem foi vacinado.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "elimina a necessidade de higiene pessoal."
+        },
+        {
+          "letra": "B",
+          "texto": "protege indivíduos e reduz a circulação do agente infeccioso."
+        },
+        {
+          "letra": "C",
+          "texto": "provoca a doença de forma controlada em todos."
+        },
+        {
+          "letra": "D",
+          "texto": "substitui o tratamento de qualquer enfermidade."
+        },
+        {
+          "letra": "E",
+          "texto": "atua apenas sobre quem foi vacinado."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 83,
+      "dificuldade": "facil",
+      "acertos": 26,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 86.7
+    },
+    {
+      "questao": 47,
+      "texto": "QUESTÃO 47\nUma solução aquosa apresentou pH igual a 3 ao ser medida com um peagômetro.\nCom base nesse valor, a solução é classificada como\nA  ácida.\nB  neutra.\nC  básica.\nD  alcalina.\nE  salina.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "ácida."
+        },
+        {
+          "letra": "B",
+          "texto": "neutra."
+        },
+        {
+          "letra": "C",
+          "texto": "básica."
+        },
+        {
+          "letra": "D",
+          "texto": "alcalina."
+        },
+        {
+          "letra": "E",
+          "texto": "salina."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 35,
+      "dificuldade": "medio",
+      "acertos": 15,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 50.0
+    },
+    {
+      "questao": 48,
+      "texto": "QUESTÃO 48\nTirinha fictícia criada para fins didáticos.\n[Uma personagem sai de uma loja com várias sacolas e comenta: \"Não precisava de nada, mas estava em\npromoção!\"]\nA tirinha utiliza o humor para criticar\nA  a falta de opções de compra no comércio.\nB  o consumo por impulso estimulado por promoções.\nC  o preço elevado dos produtos de primeira necessidade.\nD  a ausência de planejamento nas empresas.\nE  o desinteresse das pessoas por ofertas.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "a falta de opções de compra no comércio."
+        },
+        {
+          "letra": "B",
+          "texto": "o consumo por impulso estimulado por promoções."
+        },
+        {
+          "letra": "C",
+          "texto": "o preço elevado dos produtos de primeira necessidade."
+        },
+        {
+          "letra": "D",
+          "texto": "a ausência de planejamento nas empresas."
+        },
+        {
+          "letra": "E",
+          "texto": "o desinteresse das pessoas por ofertas."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 74,
+      "dificuldade": "medio",
+      "acertos": 17,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 56.7
+    },
+    {
+      "questao": 49,
+      "texto": "QUESTÃO 49\nImagem de satélite fictícia, elaborada para fins didáticos.\n[Imagem mostra uma área de floresta com manchas de solo exposto em formato de espinha de peixe ao longo\nde estradas.]\nO padrão de ocupação observado na imagem está associado a\nA  práticas de reflorestamento planejado.\nB  avanço do desmatamento a partir de vias de acesso.\nC  criação de reservas ecológicas.\nD  expansão de áreas alagadas naturais.\nE  atividade vulcânica na região.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "práticas de reflorestamento planejado."
+        },
+        {
+          "letra": "B",
+          "texto": "avanço do desmatamento a partir de vias de acesso."
+        },
+        {
+          "letra": "C",
+          "texto": "criação de reservas ecológicas."
+        },
+        {
+          "letra": "D",
+          "texto": "expansão de áreas alagadas naturais."
+        },
+        {
+          "letra": "E",
+          "texto": "atividade vulcânica na região."
+        }
+      ],
+      "tem_imagem": true,
+      "quantidade_palavras": 72,
+      "dificuldade": "dificil",
+      "acertos": 7,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 23.3
+    },
+    {
+      "questao": 50,
+      "texto": "QUESTÃO 50\nUma caixa-d'água tem formato cilíndrico, com raio de 3 m e altura de 5 m. Use π = 3.\nO volume dessa caixa-d'água, em metros cúbicos, é\nA  45.\nB  90.\nC  135.\nD  180.\nE  270.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "45."
+        },
+        {
+          "letra": "B",
+          "texto": "90."
+        },
+        {
+          "letra": "C",
+          "texto": "135."
+        },
+        {
+          "letra": "D",
+          "texto": "180."
+        },
+        {
+          "letra": "E",
+          "texto": "270."
+        }
+      ],
+      "tem_imagem": false,
+      "quantidade_palavras": 39,
+      "dificuldade": "dificil",
+      "acertos": 11,
+      "total_estudantes": 30,
+      "taxa_acerto_percentual": 36.7
+    }
+  ]
+}

@@ -7,10 +7,14 @@
 
     <main class="main-content">
       <!-- SEÇÃO 1: UPLOAD -->
-      <section class="section upload-section" v-if="!isAnalyzing && !hasResults">
+      
+      <section class="section upload-section" v-if="!USAR_JSON_TESTE && !isAnalyzing && !hasResults">
         <FileUpload ref="fileUploadRef" :key="uploadKey" @file-selected="handleFileSelected" />
 
         <p v-if="isExtracting" class="extraction-status">Lendo o PDF para preparar os dados da análise...</p>
+      </section>
+      <section v-if="USAR_JSON_TESTE && isExtracting" class="section upload-section">
+        <p class="extraction-status">Carregando JSON de teste...</p>
       </section>
 
       <!-- SEÇÃO 2: FORMULÁRIO DE ANÁLISE -->
@@ -66,6 +70,10 @@ import AnalysisForm from '@/components/AnalysisForm.vue'
 import ResultsDisplay from '@/components/ResultsDisplay.vue'
 import { extractExamPdf } from '@/services/analysisApi'
 
+// Ative para carregar os dados de public/json_teste/prova_teste.json sem enviar um PDF.
+const USAR_JSON_TESTE = false
+const CAMINHO_JSON_TESTE = '/json_teste/prova_teste.json'
+
 // Store
 const store = useAnalysisStore()
 const router = useRouter()
@@ -92,7 +100,9 @@ onMounted(() => {
     router.replace({ name: 'analysis-results' })
     return
   }
-  if (store.selectedFile) {
+  if (USAR_JSON_TESTE) {
+    iniciarModoTeste()
+  } else if (store.selectedFile) {
     prepareExtraction(store.selectedFile)
   }
 })
@@ -108,6 +118,12 @@ const totalQuestions = computed(() => store.totalQuestions)
 const hasResults = computed(() => store.results !== null)
 const analysisResults = computed(() => store.results)
 const isFormLoading = computed(() => isExtracting.value || isAnalyzing.value)
+
+const iniciarModoTeste = () => {
+  const arquivoTeste = new File([], 'prova_teste.json', { type: 'application/json' })
+  localSelectedFile.value = arquivoTeste
+  prepareExtraction(arquivoTeste)
+}
 
 // Handlers
 const handleFileSelected = (file) => {
@@ -131,25 +147,44 @@ const prepareExtraction = async (file) => {
   errorIsNetwork.value = false
 
   try {
-    const extracted = await extractExamPdf(file)
+    const extracted = USAR_JSON_TESTE
+      ? await carregarJsonTeste()
+      : await extractExamPdf(file)
     if (requestId !== extractionRequestId) return
     // O idioma é omitido no JSON do site, que trabalha com uma única prova.
-    const questions = (extracted.questions ?? []).map(({ idioma, ...question }) => question)
+    const questoesExtraidas = extracted.questions ?? extracted.questoes ?? []
+    const questions = questoesExtraidas.map(({ idioma, ...question }) => question)
     if (questions.length === 0) {
-      throw new Error('Nenhuma questão foi encontrada neste PDF. Envie a prova do ENEM em PDF (não o relatório de análises).')
+      throw new Error(USAR_JSON_TESTE
+        ? `Nenhuma questão foi encontrada em ${CAMINHO_JSON_TESTE}. Confira se o arquivo contém uma lista questions ou questoes.`
+        : 'Nenhuma questão foi encontrada neste PDF. Envie a prova do ENEM em PDF (não o relatório de análises).')
     }
     extractionResults.value = {
-      fileName: extracted.fileName,
+      fileName: extracted.fileName ?? file?.name ?? 'prova_teste.json',
       questions,
       textos_introdutorios: extracted.textos_introdutorios ?? []
     }
     store.setTotalQuestions(questions.length)
   } catch (error) {
     if (requestId !== extractionRequestId) return
-    errorMessage.value = error.message || 'Erro ao ler o PDF.'
+
+    errorMessage.value = error.message || (USAR_JSON_TESTE ? 'Erro ao ler o JSON de teste.' : 'Erro ao ler o PDF.')
     errorIsNetwork.value = Boolean(error.semResposta)
+
   } finally {
     if (requestId === extractionRequestId) isExtracting.value = false
+  }
+}
+
+const carregarJsonTeste = async () => {
+  const response = await fetch(CAMINHO_JSON_TESTE)
+  if (!response.ok) {
+    throw new Error(`Não foi possível carregar ${CAMINHO_JSON_TESTE}. Coloque o JSON de teste nesse caminho.`)
+  }
+  try {
+    return await response.json()
+  } catch {
+    throw new Error(`O arquivo ${CAMINHO_JSON_TESTE} não contém um JSON válido.`)
   }
 }
 
@@ -223,6 +258,7 @@ const handleCancel = () => {
   extractionResults.value = null
   errorMessage.value = ''
   uploadKey.value += 1
+  if (USAR_JSON_TESTE) iniciarModoTeste()
 }
 
 const handleReset = () => {
@@ -231,6 +267,7 @@ const handleReset = () => {
   extractionResults.value = null
   errorMessage.value = ''
   uploadKey.value += 1
+  if (USAR_JSON_TESTE) iniciarModoTeste()
 }
 
 const retryExtraction = () => {
