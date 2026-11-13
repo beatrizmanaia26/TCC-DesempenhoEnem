@@ -22,6 +22,8 @@ no terminal, instale as bibliotecas
 
 4 - Sentence Transformer (pip3 install U- sentence_transformer ou pip install git+https://github.com/huggingface/sentence-transformers.git), necessário para poder utilizar o SBERT para comparação de similaridade semântica entre distratores
 
+5 - Node tem que estar na versão 24+
+
 
 
 RODAR MVP:
