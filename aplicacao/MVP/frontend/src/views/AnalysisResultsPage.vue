@@ -13,6 +13,7 @@
         </button>
         <h1>Resultados da análise</h1>
         <div class="topo-acoes">
+        <!-- EXPORTAR DESATIVADO TEMPORARIAMENTE (botão e menu PDF/Excel/CSV escondidos; código mantido)
           <button
             type="button"
             class="btn-exportar"
@@ -36,6 +37,39 @@
               </button>
             </li>
           </ul>
+        -->
+        </div>
+        <div v-if="payload" class="filter-wrapper filtro-topo">
+          <button class="filter-btn" @click="alternarMenuFiltro">
+            <FilterIcon />
+            Filtro
+          </button>
+          <div v-if="showFilterMenu" class="filter-menu">
+            <div class="filter-option filter-todos">
+              <input
+                type="checkbox"
+                id="filter-selecionar-tudo"
+                :checked="todasMarcadas"
+                :indeterminate.prop="algumaMarcada"
+                @change="alternarTodosFiltros"
+              />
+              <label for="filter-selecionar-tudo">Selecionar tudo</label>
+            </div>
+            <div class="filter-lista">
+              <div class="filter-option" v-for="option in opcoesFiltro" :key="option.id">
+                <input
+                  type="checkbox"
+                  :id="option.id"
+                  :checked="isFilterSelected(option.id)"
+                  @change="toggleFilter(option.id)"
+                />
+                <label :for="option.id">{{ option.label }}</label>
+              </div>
+            </div>
+            <div class="filter-rodape">
+              <button type="button" class="filter-aplicar" @click="aplicarFiltros">Aplicar</button>
+            </div>
+          </div>
         </div>
       </div>
       <p v-if="payload">Dados extraídos de {{ payload.fileName }}</p>
@@ -47,43 +81,9 @@
 
     <template v-else>
       <section class="panel prova-info-panel">
-        <div class="duracao-linha">
-          <div class="info-item">
-            <div class="info-label">Duração total da prova:</div>
-            <div class="info-value">{{ formatMinutes(examDurationMinutes) }}</div>
-          </div>
-          <div class="filter-wrapper">
-            <button class="filter-btn" @click="alternarMenuFiltro">
-              <FilterIcon />
-              Filtro
-            </button>
-            <div v-if="showFilterMenu" class="filter-menu">
-              <div class="filter-option filter-todos">
-                <input
-                  type="checkbox"
-                  id="filter-selecionar-tudo"
-                  :checked="todasMarcadas"
-                  :indeterminate.prop="algumaMarcada"
-                  @change="alternarTodosFiltros"
-                />
-                <label for="filter-selecionar-tudo">Selecionar tudo</label>
-              </div>
-              <div class="filter-lista">
-                <div class="filter-option" v-for="option in opcoesFiltro" :key="option.id">
-                  <input
-                    type="checkbox"
-                    :id="option.id"
-                    :checked="isFilterSelected(option.id)"
-                    @change="toggleFilter(option.id)"
-                  />
-                  <label :for="option.id">{{ option.label }}</label>
-                </div>
-              </div>
-              <div class="filter-rodape">
-                <button type="button" class="filter-aplicar" @click="aplicarFiltros">Aplicar</button>
-              </div>
-            </div>
-          </div>
+        <div class="info-item">
+          <div class="info-label">Duração total da prova:</div>
+          <div class="info-value">{{ formatMinutes(examDurationMinutes) }}</div>
         </div>
         <div class="info-item">
           <div class="info-label">Quantidade total de questões:</div>
@@ -98,10 +98,14 @@
         </div>
       </section>
 
-      <section v-if="temAnaliseTempo" class="panel prova-tempo-panel">
-        <div class="analise-tempo-bloco">
-          <h2>Análise do Tempo de Prova</h2>
-          <div class="tempo-bloco">
+      <!-- Um gráfico por passo, com x/y ao lado do título (mesma navegação da tela do ENEM) -->
+      <section v-if="passoProvaAtual" class="panel passos-prova">
+        <div class="cabecalho-analise">
+          <h2 class="titulo-bloco-analise">{{ passoProvaAtual.rotulo }}</h2>
+          <span v-if="passoProvaAtual.total" class="contador-grafico">{{ passoProvaAtual.indice }}/{{ passoProvaAtual.total }}</span>
+        </div>
+
+        <div v-if="passoProvaAtual.grafico === 'distribuicao-tempo'" class="tempo-bloco">
           <div class="tempo-cabecalho">
             <h2>Distribuição do Tempo de Prova</h2>
             <InfoIcon warning :tooltip="tooltipTempo" />
@@ -121,59 +125,31 @@
             </ul>
           </div>
           <p v-else>Informe a duração da prova para ver a distribuição do tempo.</p>
-          <div v-if="questions.length > 0" class="tempo-grafico-leitura">
-            <GraficoLeituraQuestoes
-              :itens="leituraPorQuestao"
-              :tempo-medio="tempoMedioPorQuestao"
-              :total-questoes="questions.length"
-              :tooltip="tooltipLeitura"
-            />
-          </div>
-          </div>
         </div>
-      </section>
 
-      <section v-if="temAnaliseTamanho" class="panel prova-palavras-panel">
-        <h2>Análise do Tamanho das Questões</h2>
-        <GraficoPalavrasProva :questoes="questoesPalavras" />
-        <MapaCalorSpearmanProva :questoes="questoesCorrelacao" />
-        <CorrelacaoMetadesProva :questoes="questoesCorrelacao" />
-        <CorrelacaoProvaGrafico :questoes="questoesCorrelacao" />
-      </section>
-
-      <section v-for="analise in analisesAplicadas" :key="analise.id" class="panel">
-        <template v-if="analise.id === 'image'">
-          <AnaliseImagensProva
-            :titulo="analise.label"
-            :questoes="questions"
+        <div v-else-if="passoProvaAtual.grafico === 'tempo-leitura'" class="tempo-bloco">
+          <GraficoLeituraQuestoes
+            v-if="questions.length > 0"
+            :itens="leituraPorQuestao"
+            :tempo-medio="tempoMedioPorQuestao"
+            :total-questoes="questions.length"
+            :tooltip="tooltipLeitura"
           />
-        </template>
-        <h2 v-else>{{ analise.label }}</h2>
-      </section>
-
-      <section v-if="config.useDifficultyAnalysis" class="panel">
-        <h2>Distribuição de dificuldade</h2>
-        <div class="metrics-grid">
-          <article v-for="level in difficultyLevels" :key="level.key" class="metric-card">
-            <span>{{ level.label }}</span>
-            <strong>{{ difficultyCounts[level.key] }}</strong>
-          </article>
         </div>
-      </section>
+        <GraficoPalavrasProva v-else-if="passoProvaAtual.grafico === 'palavras'" :questoes="questoesPalavras" />
+        <MapaCalorSpearmanProva v-else-if="passoProvaAtual.grafico === 'mapa-correlacoes'" :questoes="questoesCorrelacao" />
+        <CorrelacaoMetadesProva v-else-if="passoProvaAtual.grafico === 'metades-caracteres'" :questoes="questoesCorrelacao" />
+        <CorrelacaoProvaGrafico v-else-if="passoProvaAtual.grafico === 'dispersao-itens'" :questoes="questoesCorrelacao" />
+        <AnaliseImagensProva v-else-if="passoProvaAtual.grafico?.startsWith('imagem-')" :secao="passoProvaAtual.grafico.replace('imagem-', '')" titulo="" :questoes="questions" />
 
-      <section v-if="config.includeStudentMetrics" class="panel">
-        <h2>Desempenho informado dos estudantes</h2>
-        <p>{{ studentCorrectCount }} acertos registrados de {{ studentPossibleCount }} possíveis ({{ studentAccuracyPercent }}%).</p>
-      </section>
+        <p v-if="!passoProvaAtual.total" class="etapa-sem-grafico">
+          O gráfico desta análise ainda não está disponível para a prova enviada.
+        </p>
 
-      <section class="panel json-panel">
-        <div class="json-heading">
-          <div>
-            <h2>JSON da prova</h2>
-            <p>Inclui as dificuldades e, quando habilitado, os acertos informados por questão.</p>
-          </div>
+        <div v-if="totalPassosProva > 1" class="step-nav">
+          <button v-if="etapaProva > 0" type="button" class="btn-navegacao" @click="etapaProva--">← Voltar</button>
+          <button v-if="etapaProva < totalPassosProva - 1" type="button" class="btn-navegacao btn-avancar" @click="etapaProva++">Avançar →</button>
         </div>
-        <pre>{{ JSON.stringify(examJson, null, 2) }}</pre>
       </section>
     </template>
   </main>
@@ -225,7 +201,7 @@ const config = computed(() => payload.value?.config ?? {})
 const totalWords = computed(() => questions.value.reduce((sum, question) => sum + (Number(question.quantidade_palavras) || 0), 0))
 const questionsWithFiveAlternatives = computed(() => questions.value.filter((question) => question.alternativas?.length === 5).length)
 const averageWords = computed(() => questions.value.length ? Math.round(totalWords.value / questions.value.length) : 0)
-// O tempo de leitura usa a velocidade escolhida; 
+// O tempo de leitura usa a velocidade escolhida;
 const readingSpeed = computed(() => config.value.readingSpeedMode === 'custom'
   ? Number(config.value.customReadingSpeed) || DEFAULT_READING_SPEED
   : DEFAULT_READING_SPEED)
@@ -326,10 +302,24 @@ const selectedFilters = ref(new Set(analisesEscolhidas.value))
 const rascunhoFiltros = ref(new Set(analisesEscolhidas.value))
 const showFilterMenu = ref(false)
 
-const analisesAplicadas = computed(() => filterOptions.filter((option) => selectedFilters.value.has(option.id)))
-// Pizza e gráfico de leitura só aparecem quando 'Análise do Tempo de Prova' está aplicada no filtro
-const temAnaliseTempo = computed(() => selectedFilters.value.has('reading-time'))
-const temAnaliseTamanho = computed(() => selectedFilters.value.has('word-count'))
+// Gráficos de cada análise da prova enviada, na ordem em que aparecem (mesma regra da tela do ENEM)
+const GRAFICOS_PROVA = {
+  'reading-time': ['distribuicao-tempo', 'tempo-leitura'],
+  'word-count': ['palavras', 'mapa-correlacoes', 'metades-caracteres', 'dispersao-itens'],
+  image: ['imagem-presenca', 'imagem-acertos', 'imagem-tabela']
+}
+// Cada passo é um gráfico; análise sem gráfico vira um passo só, com aviso e sem contador
+const passosProva = computed(() => filterOptions
+  .filter((option) => selectedFilters.value.has(option.id))
+  .flatMap((option) => {
+    const graficos = GRAFICOS_PROVA[option.id] ?? []
+    if (!graficos.length) return [{ rotulo: option.label, grafico: null, indice: 0, total: 0 }]
+    return graficos.map((grafico, i) => ({ rotulo: option.label, grafico, indice: i + 1, total: graficos.length }))
+  }))
+// Índice do passo atual dentro de passosProva (começa no primeiro gráfico)
+const etapaProva = ref(0)
+const totalPassosProva = computed(() => passosProva.value.length)
+const passoProvaAtual = computed(() => passosProva.value[etapaProva.value] ?? null)
 // Palavras por questão: quantidade_palavras é o total da questão; o enunciado é o total menos as alternativas.
 // Cada alternativa conta a palavra da letra mais as palavras do texto, com a mesma regra da extração (WORD_RE), igual ao backend do ENEM.
 const WORD_RE = /\d+(?:[.,]\d+)*(?:%|[ºª])?|[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'][A-Za-zÀ-ÖØ-öø-ÿ]+)?/g
@@ -381,6 +371,8 @@ const isFilterSelected = (filterId) => rascunhoFiltros.value.has(filterId)
 const aplicarFiltros = () => {
   selectedFilters.value = new Set(rascunhoFiltros.value)
   showFilterMenu.value = false
+  // A lista de passos mudou: volta para o primeiro gráfico
+  etapaProva.value = 0
 }
 
 // Texto do tooltip da prova enviada: duração e velocidade vêm do formulário
@@ -396,8 +388,8 @@ const tooltipTempo = computed(() => [
 // Fatias da pizza: mesma montagem do componente ResumoTempoProva (setores em SVG)
 const CORES_TEMPO = {
   questoes: '#0070C0',
-  textos: '#10B981',
-  restante: '#CBD5E1'
+  textos: '#93C5FD',
+  restante: '#10B981'
 }
 
 function caminhoSetor(inicioGraus, fimGraus) {
@@ -428,9 +420,9 @@ function caminhoSetor(inicioGraus, fimGraus) {
 const fatiasTempo = computed(() => {
   const { total, questoes, textos, restante } = timeDistribution.value
   const itens = [
-    { chave: 'questoes', rotulo: 'Leitura das questões', valor: questoes, cor: CORES_TEMPO.questoes },
-    { chave: 'textos', rotulo: 'Leitura dos textos introdutórios', valor: textos, cor: CORES_TEMPO.textos, dica: DICA_TEXTOS_INTRO_PROVA_ENVIADA },
-    { chave: 'restante', rotulo: 'Restante', valor: restante, cor: CORES_TEMPO.restante }
+    { chave: 'questoes', rotulo: 'Tempo gasto para leitura das questões', valor: questoes, cor: CORES_TEMPO.questoes },
+    { chave: 'textos', rotulo: 'Tempo gasto para leitura dos textos introdutórios', valor: textos, cor: CORES_TEMPO.textos, dica: DICA_TEXTOS_INTRO_PROVA_ENVIADA },
+    { chave: 'restante', rotulo: 'Tempo disponível para análise e resolução das questões', valor: restante, cor: CORES_TEMPO.restante }
   ]
 
   let anguloAtual = 0
@@ -471,7 +463,11 @@ const fecharMenuAoClicarFora = (evento) => {
   }
 }
 
-onMounted(() => document.addEventListener('click', fecharMenuAoClicarFora))
+onMounted(() => {
+  // Ao abrir os resultados, mostra o título no topo da tela (sem herdar a rolagem da página anterior)
+  window.scrollTo({ top: 0, behavior: 'instant' })
+  document.addEventListener('click', fecharMenuAoClicarFora)
+})
 onBeforeUnmount(() => document.removeEventListener('click', fecharMenuAoClicarFora))
 
 const escolherExportacao = () => {
@@ -491,12 +487,14 @@ const goToForm = () => {
   padding: 2rem;
   background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
 }
-.page-header, .panel { max-width: 1000px; margin-left: auto; margin-right: auto; }
+.page-header, .panel { max-width: 1400px; margin-left: auto; margin-right: auto; }
 .page-header { text-align: center; color: #0070C0; margin-bottom: 2rem; }
-.page-header h1 { margin-bottom: .5rem; }
+.page-header h1 { margin-bottom: .5rem; font-size: 3rem; }
+.page-header > p { font-size: 1.3rem; }
 .cabecalho-linha { position: relative; }
 .topo-acoes { position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; }
-.btn-voltar-topo { position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: linear-gradient(135deg, #0070C0, #10B981); color: white; border: none; padding: .6rem 1rem; border-radius: 6px; font-size: 1.25rem; font-weight: 600; line-height: 1; cursor: pointer; transition: opacity .3s ease; }
+.cabecalho-linha .filtro-topo { position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 100; }
+.btn-voltar-topo { position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: transparent; color: #0070C0; border: none; padding: .4rem .6rem; border-radius: 6px; font-size: 2rem; font-weight: 700; line-height: 1; cursor: pointer; transition: opacity .3s ease; }
 .btn-voltar-topo:hover { opacity: .9; }
 .menu-exportar { position: absolute; top: calc(100% + .5rem); right: 0; z-index: 10; list-style: none; margin: 0; padding: .5rem; min-width: 240px; background: white; border: 2px solid #0070C0; border-radius: 8px; box-shadow: 0 8px 25px rgba(0, 0, 0, .15); text-align: left; }
 .item-exportar { display: flex; align-items: center; gap: .75rem; width: 100%; padding: .6rem .75rem; background: none; border: none; border-radius: 6px; color: #0070C0; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; }
@@ -505,17 +503,16 @@ const goToForm = () => {
 .icone-exportar { width: 18px; height: 18px; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .panel { padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 12px; background: white; box-shadow: 0 8px 28px #00000012; }
 .panel h2 { margin: 0 0 1rem; color: #263238; font-size: 1.25rem; }
-.tempo-cabecalho h2 { margin: 0; }
+.tempo-cabecalho h2 { margin: 0; font-size: 1.6rem; }
 .tempo-cabecalho { display: flex; align-items: center; gap: .5rem; margin-bottom: .25rem; }
-.tempo-subtitulo { margin: 0 0 1rem; color: #666; font-size: .9rem; }
+.tempo-subtitulo { margin: 0 0 1rem; color: #666; font-size: 1.1rem; }
 .tempo-conteudo { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-.pizza { width: 200px; height: 200px; }
-.legenda { list-style: none; margin: 0; padding: 0; font-size: .85rem; }
+.pizza { width: 380px; height: 380px; max-width: 100%; }
+.legenda { list-style: none; margin: 0; padding: 0; font-size: 1.1rem; }
 .legenda li { display: flex; align-items: center; gap: .5rem; margin-bottom: .5rem; }
 .legenda-cor { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
 .legenda-rotulo { color: #333; }
 .legenda-valor { color: #666; margin-left: .5rem; }
-.duracao-linha { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
 .filter-wrapper { position: relative; display: inline-block; margin-left: auto; }
 .filter-menu {
   position: absolute;
@@ -529,8 +526,7 @@ const goToForm = () => {
   margin-top: 0.5rem;
   min-width: 280px;
   z-index: 100;
-  max-height: 400px;
-  overflow-y: auto;
+  text-align: left;
 }
 .filter-option {
   display: flex;
@@ -541,7 +537,7 @@ const goToForm = () => {
   transition: background 0.2s ease;
 }
 .filter-option:hover { background: #f5f5f5; }
-.filter-lista { display: flex; flex-direction: column; max-height: 7.5rem; overflow-y: auto; }
+.filter-lista { display: flex; flex-direction: column; }
 .filter-lista > .filter-option { min-height: 2.5rem; margin: 0; flex-shrink: 0; }
 .filter-option input[type="checkbox"] {
   margin-right: 0.75rem;
@@ -583,16 +579,17 @@ const goToForm = () => {
   transition: background 0.3s ease;
 }
 .filter-aplicar:hover { background: #005a9e; }
-.prova-info-panel { padding: 1.5rem 1.5rem 1.5rem; }
+.prova-info-panel { padding: 2rem 2rem 2rem; }
 .analise-tempo-bloco { margin: 0; }
 .analise-tempo-bloco > h2 { margin: 0 0 1rem; color: #263238; font-size: 1.25rem; }
 .tempo-bloco { padding: 1.5rem; background: white; border-radius: 8px; margin: 1.5rem 0 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
 .tempo-grafico-leitura { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0; }
-.info-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; margin-bottom: 1rem; }
+.info-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1rem; margin-bottom: 1.25rem; }
 .info-item:last-child { margin-bottom: 0; }
-.info-label { color: #333; font-size: .95rem; font-weight: 600; }
-.info-value { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem; color: #0070C0; font-size: .95rem; font-weight: 600; }
-.info-reference { color: #666; font-size: .85rem; font-weight: 400; }
+.info-label { color: #333; font-size: 1.1rem; font-weight: 600; }
+.info-value { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem; color: #0070C0; font-size: 1.1rem; font-weight: 600; }
+.info-day-info { color: #666; font-size: .95rem; font-weight: 400; }
+.info-reference { color: #666; font-size: .95rem; font-weight: 400; }
 a.info-reference { text-decoration: underline; }
 a.info-reference:hover { color: #0070C0; }
 .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; }
@@ -610,6 +607,15 @@ dd { margin: 0; color: #263238; font-weight: 600; }
 .button { padding: .75rem 1.25rem; border: 0; border-radius: 6px; cursor: pointer; font-weight: 600; }
 .primary { color: white; background: linear-gradient(135deg, #0070C0, #10B981); }
 .secondary { color: #333; background: #f0f0f0; border: 1px solid #ddd; }
+
+.cabecalho-analise { display: flex; align-items: baseline; gap: .75rem; margin: 0 0 1rem; }
+.cabecalho-analise .titulo-bloco-analise { margin: 0; color: #263238; font-size: 1.25rem; }
+.contador-grafico { color: #0070C0; font-size: 1rem; font-weight: 600; }
+.etapa-sem-grafico { margin: 1.5rem 0; color: #666; text-align: center; }
+.step-nav { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+.btn-navegacao { background: white; color: #0070C0; border: 2px solid #0070C0; border-radius: 6px; padding: .6rem 1.25rem; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color .3s ease; }
+.btn-navegacao:hover { background: #f0f2ff; }
+.btn-avancar { margin-left: auto; }
 
 .empty-state { text-align: center; }
 @media (max-width: 600px) {

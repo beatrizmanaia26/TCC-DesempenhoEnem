@@ -1,8 +1,8 @@
 <template>
   <!-- Sessão das imagens -->
   <div>
-    <h2 class="titulo-analise">{{ titulo }}</h2>
-    <div class="tempo-bloco">
+    <h2 v-if="titulo" class="titulo-analise">{{ titulo }}</h2>
+    <div v-if="mostrarSecao('presenca')" class="tempo-bloco">
       <div class="tempo-cabecalho">
         <h2>Presença de imagens na prova</h2>
         <InfoIcon tooltip="Mostra a proporção de questões com e sem imagens na prova." />
@@ -42,8 +42,9 @@
           </li>
         </ul>
       </div>
+    </div>
 
-      <div class="grafico-acertos">
+    <div v-if="mostrarSecao('acertos')" class="tempo-bloco grafico-acertos">
         <div class="grafico-cabecalho">
           <h3>Percentual médio de acertos por presença de imagem</h3>
           <InfoIcon tooltip="Cada barra mostra a média dos percentuais de acerto das questões daquele grupo. A comparação usa apenas questões com percentual de acerto informado." />
@@ -85,9 +86,12 @@
             </div>
           </div>
         </div>
-        <p class="grafico-subtitulo">Média simples dos percentuais de acerto das questões em cada grupo.</p>
+        <p v-if="temAcertos" class="grafico-subtitulo">Média simples dos percentuais de acerto das questões em cada grupo.</p>
+        <p v-if="temAcertos && colunasFaltando" class="grafico-subtitulo" role="note">
+          Quando alguma coluna não aparece, o gráfico não tem questões com percentual de acerto informado suficientes naquele nível para calcular a média de cada coluna colorida.
+        </p>
         <p v-if="!temAcertos" class="grafico-aviso" role="note">
-          Informe os acertos por questão (em "Deseja incluir métricas reais dos estudantes?") para ver a correlação desta prova.
+          Na página anterior, informe os acertos por questão no campo "Deseja incluir métricas reais dos estudantes?" e a dificuldade de cada questão para ver a correlação desta prova.
         </p>
         <template v-else>
           <p v-if="!temDificuldade" class="grafico-aviso" role="note">
@@ -97,7 +101,11 @@
             Algumas questões não têm dificuldade informada; elas aparecem no grupo “Sem nível”.
           </p>
           <div v-if="barrasAcertos.length" class="grafico-barras-conteudo">
-            <svg class="grafico-barras" :width="larguraGrafico" height="320" :viewBox="`0 0 ${larguraGrafico} 320`" role="img" :aria-label="descricaoGrafico">
+            <div class="legenda-barras">
+              <span v-if="mostrarComImagem"><i class="cor-com-imagem"></i>Com imagem</span>
+              <span v-if="mostrarSemImagem"><i class="cor-sem-imagem"></i>Sem imagem</span>
+            </div>
+            <svg class="grafico-barras" :width="larguraGrafico" height="380" :viewBox="`0 0 ${larguraGrafico} 380`" role="img" :aria-label="descricaoGrafico">
               <g v-for="marca in marcasEixo" :key="`eixo-${marca.valor}`">
                 <line x1="52" :y1="marca.y" :x2="larguraGrafico - 12" :y2="marca.y" class="linha-grade" />
                 <text x="44" :y="marca.y + 4" text-anchor="end" class="texto-eixo">{{ marca.valor }}%</text>
@@ -108,18 +116,14 @@
                 </rect>
                 <text :x="barra.x + barra.largura / 2" :y="barra.y - 6" text-anchor="middle" class="texto-valor">{{ formatarPercentual(barra.valor) }}%</text>
               </g>
-              <text v-for="grupo in gruposGrafico" :key="`rotulo-${grupo.key}`" :x="grupo.x" y="286" text-anchor="middle" class="texto-categoria">{{ grupo.label }}</text>
+              <text v-for="grupo in gruposGrafico" :key="`rotulo-${grupo.key}`" :x="grupo.x" y="358" text-anchor="middle" class="texto-categoria">{{ grupo.label }}</text>
             </svg>
-            <div class="legenda-barras">
-              <span v-if="mostrarComImagem"><i class="cor-com-imagem"></i>Com imagem</span>
-              <span v-if="mostrarSemImagem"><i class="cor-sem-imagem"></i>Sem imagem</span>
-            </div>
           </div>
           <p v-else class="grafico-aviso">Não há questões com acertos informados para os filtros selecionados.</p>
         </template>
       </div>
 
-      <div class="tabela-questoes">
+      <div v-if="mostrarSecao('tabela')" class="tempo-bloco tabela-questoes">
         <div class="grafico-cabecalho">
           <h3>Detalhamento por questão</h3>
           <InfoIcon tooltip="Mostra a presença de imagem e o percentual de acertos de cada questão. A tabela pode ser filtrada e ordenada pelo mesmo padrão dos demais gráficos." />
@@ -205,7 +209,6 @@
           <button type="button" class="sem-resultado-limpar" @click="limparFiltrosTabela">Limpar filtros</button>
         </div>
       </div>
-    </div>
   </div>
   <!--Fim das imagens-->
 </template>
@@ -219,8 +222,12 @@ import { aplicarMetrica } from '@/services/filtrosAnalise.js'
 
 const props = defineProps({
   titulo: { type: String, required: true },
-  questoes: { type: Array, required: true }
+  questoes: { type: Array, required: true },
+  // 'todas' mostra os três blocos; 'presenca', 'acertos' ou 'tabela' mostra só um deles
+  secao: { type: String, default: 'todas' }
 })
+
+const mostrarSecao = (nome) => props.secao === 'todas' || props.secao === nome
 
 const taxaDeAcerto = (questao) => {
   const taxa = questao.taxa_acerto_percentual
@@ -392,10 +399,10 @@ const gruposGrafico = computed(() => {
     x: 52 + espacamento * (indice + 0.5)
   }))
 })
-const larguraGrafico = computed(() => Math.max(460, gruposFiltrados.value.length * 180 + 64))
+const larguraGrafico = computed(() => Math.max(760, gruposFiltrados.value.length * 180 + 64))
 const barrasAcertos = computed(() => {
   const barras = []
-  const escalaY = (valor) => 250 - (valor / 100) * 210
+  const escalaY = (valor) => 340 - (valor / 100) * 280
   gruposGrafico.value.forEach((grupo) => {
     const itensGrupo = questoesValidasAcerto.value.filter((questao) => {
       if (grupo.key === 'prova') return true
@@ -420,7 +427,7 @@ const barrasAcertos = computed(() => {
         x: inicioX + indice * (larguraBarra + gap),
         y,
         largura: larguraBarra,
-        altura: 250 - y,
+        altura: 340 - y,
         valor,
         cor: item.cor,
         titulo: `${grupo.label} · ${item.rotulo}: ${formatarPercentual(valor)}% (${questoesSerie.length} questões)`
@@ -429,7 +436,12 @@ const barrasAcertos = computed(() => {
   })
   return barras
 })
-const marcasEixo = [0, 25, 50, 75, 100].map((valor) => ({ valor, y: 250 - (valor / 100) * 210 }))
+const marcasEixo = [0, 25, 50, 75, 100].map((valor) => ({ valor, y: 340 - (valor / 100) * 280 }))
+// Compara as colunas desenhadas com as esperadas (um grupo × cada série visível)
+const colunasFaltando = computed(() => {
+  const seriesVisiveis = [mostrarComImagem.value, mostrarSemImagem.value].filter(Boolean).length
+  return barrasAcertos.value.length < gruposGrafico.value.length * seriesVisiveis
+})
 const descricaoGrafico = computed(() => `Percentual médio de acertos das questões, separado por dificuldade e presença de imagem${temDificuldade.value ? '' : ', para toda a prova'}`)
 
 // Converte um intervalo de graus em um caminho SVG de setor de círculo
@@ -475,29 +487,29 @@ const fatiasImagem = computed(() => {
 .tempo-cabecalho h2 { margin: 0; color: #263238; font-size: 1.25rem; }
 .tempo-subtitulo { margin: 0 0 1rem; color: #666; font-size: .9rem; }
 .tempo-conteudo { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-.pizza { width: 200px; height: 200px; }
+.pizza { width: 380px; height: 380px; max-width: 100%; flex-shrink: 0; }
 .legenda { list-style: none; margin: 0; padding: 0; font-size: .85rem; }
 .legenda li { display: flex; align-items: center; gap: .5rem; margin-bottom: .5rem; }
 .legenda-cor { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
 .legenda-rotulo { color: #333; }
 .legenda-valor { color: #666; margin-left: .5rem; }
-.grafico-acertos { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; }
+.grafico-acertos { margin: 0; }
 .grafico-cabecalho { display: flex; align-items: center; gap: .5rem; }
 .grafico-cabecalho h3 { margin: 0; color: #263238; font-size: 1.25rem; }
 .grafico-subtitulo { margin: .5rem 0 1rem; color: #666; font-size: .9rem; }
 .grafico-aviso { background: #fff3cd; border: 1px solid #ffeaa7; border-left: 4px solid #ffc107; padding: .75rem 1rem; border-radius: 6px; color: #856404; font-size: .9rem; line-height: 1.4; margin: .75rem 0 0; }
 .grafico-barras-conteudo { overflow-x: auto; }
-.grafico-barras { display: block; width: auto; height: 320px; max-width: none; margin: 0 auto; }
+.grafico-barras { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto; }
 .linha-grade { stroke: #e4e7ec; stroke-width: 1; }
-.texto-eixo { fill: #667085; font-size: 11px; }
-.texto-valor { fill: #344054; font-size: 10px; font-weight: 600; }
-.texto-categoria { fill: #344054; font-size: 12px; }
-.legenda-barras { display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; color: #475467; font-size: .85rem; }
-.legenda-barras span { display: inline-flex; align-items: center; gap: .4rem; }
-.legenda-barras i { width: 12px; height: 12px; border-radius: 2px; }
+.texto-eixo { fill: #333; font-size: 13px; }
+.texto-valor { fill: #333; font-size: 13px; font-weight: 600; }
+.texto-categoria { fill: #333; font-size: 13px; }
+.legenda-barras { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: #333; font-size: 16px; margin: 0 0 .25rem; }
+.legenda-barras span { display: inline-flex; align-items: center; gap: .5rem; }
+.legenda-barras i { width: 16px; height: 16px; border-radius: 3px; }
 .cor-com-imagem { background: #0070C0; }
 .cor-sem-imagem { background: #10B981; }
-.tabela-questoes { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; }
+.tabela-questoes { margin: 0; }
 .tabela-questoes .grafico-cabecalho { margin-bottom: .5rem; }
 .tabela-rolagem { max-height: 520px; overflow: auto; border: 1px solid #e0e0e0; border-radius: 8px; }
 .questoes-tabela { width: 100%; border-collapse: collapse; text-align: left; font-size: .9rem; }

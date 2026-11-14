@@ -60,7 +60,7 @@ const provaInfo = computed(() => {
 .info-item {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   padding: 0;
 }
 
@@ -71,7 +71,7 @@ const provaInfo = computed(() => {
 .info-label {
   min-width: auto;
   color: #333;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -83,19 +83,19 @@ const provaInfo = computed(() => {
   gap: 0.3rem;
   color: #0070C0;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .info-day-info {
   color: #666;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 400;
   margin: 0;
 }
 
 .info-reference {
   color: #666;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 400;
 }
 

@@ -104,6 +104,11 @@
     <p class="grafico-subtitulo">
       {{ TEXTO_TEMPO_LEITURA.subtitulo }}
     </p>
+    <div class="legenda-grafico">
+      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-azul"></span>Tempo de leitura individual de cada questão</span>
+      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-cinza"></span>Tempo médio de resolução por item<template v-if="textoTempoIgualLegenda">: {{ textoTempoIgualLegenda }}</template></span>
+      <InfoIcon warning :tooltip="textoCalculoMedia" />
+    </div>
 
 
     <div v-if="dica" class="dica-flutuante" :style="{ left: `${dica.x}px`, top: `${dica.y}px` }">{{ dica.texto }}</div>
@@ -120,6 +125,9 @@
         <div v-for="grupo in grupos" :key="grupo.dia" class="grafico-dia">
           <h4 class="grafico-dia-titulo">Dia {{ grupo.dia }} ({{ grupo.questoes.length }} {{ grupo.questoes.length === 1 ? 'questão' : 'questões' }})</h4>
 
+          <div class="barras-cabecalho">
+            <span class="barras-cabecalho-texto">Questões</span>
+          </div>
           <div class="barras">
             <div
               v-for="questao in grupo.questoes"
@@ -141,7 +149,7 @@
                 ></div>
                 <div class="barra-marca" :style="{ left: larguraBarra(tempoIgualDia(grupo.dia)) }"></div>
               </div>
-              <span class="barra-valor">{{ questao.tempo_leitura_minutos.toFixed(2) }}</span>
+              <span class="barra-valor">{{ questao.tempo_leitura_minutos.toFixed(2) }} min</span>
             </div>
           </div>
 
@@ -322,6 +330,15 @@ const tempoIgualDia = (dia) => {
 }
 
 const restantePorQuestao = (questao) => Math.max(0, tempoIgualDia(questao.dia) - questao.tempo_leitura_minutos)
+
+// Texto ao lado da legenda: tempo médio por item de cada dia visível no filtro
+const textoTempoIgualLegenda = computed(() =>
+  grupos.value.map((grupo) => `Dia ${grupo.dia}: ${tempoIgualDia(grupo.dia).toFixed(2)} min`).join(' · ')
+)
+
+// Texto do ! ao lado da legenda: o tempo restante de cada dia é dividido igualmente entre as questões do dia
+const textoCalculoMedia =
+  'Tempo médio por questão: tempo restante do dia ÷ número de questões do dia.\nO tempo total do dia, descontado o tempo de leitura do caderno (no Dia 1, também os 75 min da redação), é dividido igualmente entre as questões daquele dia.'
 
 const textoDicaTempoIgual = (dia) => {
   const duplicadas = duplicadasDoDia(dia)
@@ -577,6 +594,53 @@ const larguraBarra = (tempo) => {
   font-size: 0.75rem;
 }
 
+.legenda-grafico {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.legenda-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legenda-quadrado {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legenda-quadrado-azul {
+  background: #0070C0;
+}
+
+.legenda-quadrado-cinza {
+  background: #CBD5E1;
+}
+
+.barras-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+}
+
+.barras-cabecalho-texto {
+  min-width: 105px;
+  text-align: right;
+  white-space: nowrap;
+  color: #6b7280;
+  font-weight: 600;
+}
+
 .barra-rotulo {
   min-width: 105px;
   white-space: nowrap;
@@ -599,7 +663,7 @@ const larguraBarra = (tempo) => {
   left: 0;
   z-index: 1;
   height: 100%;
-  background: linear-gradient(90deg, #0070C0 0%, #10B981 100%);
+  background: #0070C0;
   border-radius: 3px;
   transition: width 0.3s ease;
 }

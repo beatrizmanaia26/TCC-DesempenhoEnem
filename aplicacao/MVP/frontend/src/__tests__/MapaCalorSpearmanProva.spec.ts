@@ -63,17 +63,18 @@ describe('MapaCalorSpearmanProva', () => {
   })
 
   it('linka a palavra Spearman do subtítulo para a explicação em nova aba', () => {
-    const wrapper = mount(MapaCalorSpearmanProva, { props: { questoes: [] } })
+    const wrapper = mount(MapaCalorSpearmanProva, { props: { questoes } })
     const link = wrapper.find('.correlacoes-link')
     expect(link.text()).toBe('Spearman')
     expect(link.attributes('href')).toContain('wikipedia.org')
     expect(link.attributes('target')).toBe('_blank')
   })
 
-  it('não mostra mensagem nem legenda quando não há acertos informados', () => {
+  it('não mostra subtítulo nem gráfico quando não há acertos informados, só a mensagem', () => {
     const wrapper = mount(MapaCalorSpearmanProva, { props: { questoes: [] } })
+    expect(wrapper.find('.correlacoes-subtitulo').exists()).toBe(false)
     expect(wrapper.find('.mapa-calor').exists()).toBe(false)
     expect(wrapper.find('.correlacoes-legenda').exists()).toBe(false)
-    expect(wrapper.text()).not.toContain('Informe os acertos')
+    expect(wrapper.find('.correlacoes-status').text()).toContain('informe os acertos por questão')
   })
 })

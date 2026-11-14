@@ -65,7 +65,7 @@ export const LINKS_TERMOS = [
 ]
 
 export const TEXTO_TEMPO_LEITURA = {
-  titulo: 'Tempo de Leitura e Média Disponível por Questão',
+  titulo: 'Tempo de Leitura e Média de Tempo Disponível para Resolver Cada Questão',
   subtitulo:
     'Comparativo do tempo de leitura individual de cada questão frente ao tempo médio de resolução por item.',
   explicacao: [
@@ -131,9 +131,9 @@ export const TEXTO_METADES_CARACTERES = {
   titulo: 'Acerto por Quantidade de Caracteres e Nível de Dificuldade',
   // Recebe o ano da aba selecionada (ex.: 2025)
   subtitulo: (ano) =>
-    `Em cada nível, as questões são divididas pela mediana de caracteres. Cada barra mostra o percentual médio de acerto de uma dessas metades no ano de ${ano}.`,
+    `Em cada nível, as questões são divididas pela mediana da quantidade de caracteres. Cada barra colorida é a média simples das taxas de acerto das questões daquela coluna colorida no ano de ${ano}.`,
   explicacao: [
-    'Para cada nível, as questões são divididas pela mediana de caracteres do próprio nível e do recorte escolhido.',
+    'Para cada nível, as questões são divididas pela mediana da quantidade de caracteres do próprio nível e do recorte escolhido.',
     '',
     'Cada barra é a média de acerto das questões daquela metade.',
     '',
@@ -147,7 +147,7 @@ export const TEXTO_METADES_CARACTERES = {
 
 // ====grafico dispersao itens - textos da dispersão caracteres × acerto por item
 export const TEXTO_DISPERSAO_ITENS = {
-  titulo: 'Dispersão: Caracteres da Questão × Acerto',
+  titulo: 'Dispersão: Número de Caracteres da Questão × Quantidade de Acertos',
   // Recebe o ano da aba selecionada (ex.: 2025)
   subtitulo: (ano) =>
     `Cada ponto é uma questão, colorido pelo nível de dificuldade. A curva mostra a probabilidade de acerto prevista pelo modelo logístico para cada tamanho de questão, no ano de ${ano}. A faixa em volta da curva é o intervalo de confiança de 95%, calculado na escala logística e sempre entre 0% e 100%.`,
@@ -185,9 +185,9 @@ export const TEXTO_DISPERSAO_ITENS = {
 export const TEXTO_PALAVRAS = {
   titulo: 'Quantidade de Palavras por Questão',
   subtitulo:
-    'Mostra quantas palavras tem o enunciado de cada questão. Ajuda a ver se a distribuição dos tamanhos ao longo da prova está equilibrada.',
+    'Mostra quantas palavras tem no enunciado e nas alternativas de cada questão. Ajuda a ver se a distribuição dos tamanhos ao longo da prova está equilibrada.',
   explicacao: [
-    'Cada barra é uma questão. A parte em degradê azul-verde mostra as palavras do enunciado e a parte azul claro mostra as palavras das alternativas.',
+    'Cada barra é uma questão. A parte verde escura mostra as palavras do enunciado e a parte verde clara mostra as palavras das alternativas.',
     '',
     'Valor: enunciado - alternativas (ex.: 128 - 45).',
     '',

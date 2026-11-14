@@ -1,7 +1,7 @@
 <template>
   <div class="grafico-tempo">
     <div class="grafico-cabecalho">
-      <h3 class="grafico-titulo">Tempo de Leitura e Média Disponível por Questão</h3>
+      <h3 class="grafico-titulo">Tempo de Leitura e Média de Tempo Disponível para Resolver Cada Questão</h3>
       <InfoIcon warning :tooltip="tooltip" />
       <div class="filter-wrapper">
         <button type="button" class="filter-btn" @click="alternarMenuFiltro">
@@ -51,6 +51,11 @@
     <p class="grafico-subtitulo">
       Comparativo do tempo de leitura individual de cada questão frente ao tempo médio de resolução por item.
     </p>
+    <div class="legenda-grafico">
+      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-azul"></span>Tempo de leitura individual de cada questão</span>
+      <span class="legenda-item legenda-media-texto">Tempo médio por questão: {{ tempoMedio.toFixed(2) }} min</span>
+      <InfoIcon warning :tooltip="textoCalculoMedia" />
+    </div>
     <div v-if="itensFiltrados.length === 0" class="sem-resultado">
       <div class="sem-resultado-icone">
         <FilterIcon />
@@ -59,33 +64,32 @@
       <p class="sem-resultado-texto">{{ descricaoFiltro }}</p>
       <button type="button" class="sem-resultado-limpar" @click="limparFiltro">Limpar filtro</button>
     </div>
-    <div v-else class="barras">
-      <div v-for="item in itensFiltrados" :key="item.rotulo" class="barra-linha">
-        <span class="barra-rotulo">{{ item.rotulo }}</span>
-        <div
-          class="barra-trilho"
-          @mouseenter="mostrarDica($event)"
-          @mousemove="moverDica"
-          @mouseleave="ocultarDica"
-        >
-          <div
-            class="barra"
-            :title="`${item.rotulo}: ${item.caracteres} caracteres, ${item.minutos.toFixed(2)} min`"
-            :style="{ width: percentual(item.minutos) + '%' }"
-          ></div>
-          <div
-            class="barra-restante"
-            :style="{
-              left: percentual(item.minutos) + '%',
-              width: percentual(Math.max(0, tempoMedio - item.minutos)) + '%'
-            }"
-          ></div>
-          <div class="barra-marca" :style="{ left: percentual(tempoMedio) + '%' }"></div>
+    <div v-else class="grafico-corpo">
+      <div class="bloco-grafico">
+        <p class="bloco-titulo">Tempo de leitura das questões em minutos</p>
+        <div class="barras-cabecalho">
+          <span class="barras-cabecalho-texto">Questões</span>
         </div>
-        <span class="barra-valor">{{ item.minutos.toFixed(2) }}</span>
+        <div class="barras">
+          <div v-for="item in itensFiltrados" :key="item.rotulo" class="barra-linha">
+            <span class="barra-rotulo">{{ item.rotulo }}</span>
+            <div
+              class="barra-trilho"
+              @mouseenter="mostrarDica($event)"
+              @mousemove="moverDica"
+              @mouseleave="ocultarDica"
+            >
+              <div
+                class="barra barra-leitura"
+                :title="`${item.rotulo}: ${item.caracteres} caracteres, ${item.minutos.toFixed(2)} min`"
+                :style="{ width: percentualLeitura(item.minutos) + '%' }"
+              ></div>
+            </div>
+            <span class="barra-valor">{{ item.minutos.toFixed(2) }} min</span>
+          </div>
+        </div>
       </div>
     </div>
-    <p v-if="itensFiltrados.length > 0" class="eixo-x">Tempo de leitura das questões em minutos</p>
     <div v-if="dica" class="dica-flutuante" :style="{ left: `${dica.x}px`, top: `${dica.y}px` }">{{ dica.texto }}</div>
   </div>
 </template>
@@ -176,14 +180,18 @@ const itensFiltrados = computed(() => {
   return aplicarMetrica(porDificuldade, filtroTempo.value, (item) => item.minutos)
 })
 
-// Escala comum: a maior barra (leitura ou linha preta) ocupa 100% do trilho.
-// Usa todas as questões, para que a escala não mude ao filtrar.
-const escala = computed(() => {
-  const maiores = [props.tempoMedio, ...props.itens.map((item) => item.minutos)]
+// Escala do bloco de leitura: a maior leitura ocupa 100% do trilho (não usa o tempo médio)
+const escalaLeitura = computed(() => {
+  const maiores = props.itens.map((item) => item.minutos)
   return Math.max(...maiores, 0) || 1
 })
 
-const percentual = (minutos) => (minutos / escala.value) * 100
+const percentualLeitura = (minutos) => (minutos / escalaLeitura.value) * 100
+
+// Texto do ! ao lado da legenda: explica de onde vem a linha do tempo médio por questão
+const textoCalculoMedia = computed(() =>
+  `Tempo médio por questão: ${props.tempoMedio.toFixed(2)} min.\nO tempo total da prova, descontado o tempo de leitura das questões e dos textos introdutórios, é dividido igualmente entre as ${props.totalQuestoes} questões.`
+)
 
 // Dica flutuante ao passar o mouse sobre o trilho (mesmo comportamento do gráfico do ENEM)
 const dica = ref(null)
@@ -397,6 +405,53 @@ const ocultarDica = () => {
   font-weight: 600;
 }
 
+.legenda-grafico {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.legenda-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legenda-quadrado {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legenda-quadrado-azul {
+  background: #0070C0;
+}
+
+.legenda-media-texto {
+  color: #374151;
+}
+
+.barras-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+}
+
+.barras-cabecalho-texto {
+  min-width: 60px;
+  text-align: right;
+  white-space: nowrap;
+  color: #6b7280;
+  font-weight: 600;
+}
+
 .barra-trilho {
   position: relative;
   flex: 1;
@@ -411,27 +466,8 @@ const ocultarDica = () => {
   left: 0;
   z-index: 1;
   height: 100%;
-  background: linear-gradient(90deg, #0070C0 0%, #10B981 100%);
+  background: #0070C0;
   border-radius: 3px;
-}
-
-/* Parte cinza: o tempo que sobra até a linha preta, começando onde a barra termina */
-.barra-restante {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  background: #CBD5E1;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Linha vertical escura no tempo médio por questão */
-.barra-marca {
-  position: absolute;
-  top: -3px;
-  bottom: -3px;
-  width: 2px;
-  z-index: 2;
-  background: #333;
 }
 
 .barra-valor {
@@ -439,8 +475,8 @@ const ocultarDica = () => {
   color: #666;
 }
 
-.eixo-x {
-  margin: 0.75rem 0 0;
+.bloco-titulo {
+  margin: 0 0 0.5rem;
   color: #666;
   font-size: 0.8rem;
   text-align: center;

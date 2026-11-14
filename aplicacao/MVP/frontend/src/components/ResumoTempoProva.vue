@@ -73,8 +73,8 @@ const props = defineProps({
 
 const CORES = {
   questoes: '#0070C0',
-  textos: '#10B981',
-  restante: '#CBD5E1'
+  textos: '#93C5FD',
+  restante: '#10B981'
 }
 
 const tooltipTempo = TEXTO_RESUMO_TEMPO.explicacao.join('\n')
@@ -139,9 +139,9 @@ const fatias = computed(() => {
   const { total, questoes, textos, restante } = dadosFiltrados.value
 
   const itens = [
-    { chave: 'questoes', rotulo: 'Leitura das questões', valor: questoes, cor: CORES.questoes },
-    { chave: 'textos', rotulo: 'Leitura dos textos introdutórios', valor: textos, cor: CORES.textos, dica: DICA_TEXTOS_INTRO_ENEM },
-    { chave: 'restante', rotulo: 'Restante', valor: restante, cor: CORES.restante }
+    { chave: 'questoes', rotulo: 'Tempo gasto para leitura das questões', valor: questoes, cor: CORES.questoes },
+    { chave: 'textos', rotulo: 'Tempo gasto para leitura dos textos introdutórios', valor: textos, cor: CORES.textos, dica: DICA_TEXTOS_INTRO_ENEM },
+    { chave: 'restante', rotulo: 'Tempo disponível para análise e resolução das questões', valor: restante, cor: CORES.restante }
   ]
 
   let anguloAtual = 0
@@ -217,12 +217,13 @@ function aplicarFiltro() {
 .resumo-titulo {
   margin: 0;
   color: #333;
+  font-size: 1.6rem;
 }
 
 .resumo-subtitulo {
   margin: 0 0 1rem;
   color: #666;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .resumo-status {
@@ -243,8 +244,9 @@ function aplicarFiltro() {
 }
 
 .pizza {
-  width: 220px;
-  height: 220px;
+  width: 380px;
+  height: 380px;
+  max-width: 100%;
   flex-shrink: 0;
 }
 
@@ -260,7 +262,7 @@ function aplicarFiltro() {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .legenda-cor {

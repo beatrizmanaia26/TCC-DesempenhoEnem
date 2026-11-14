@@ -129,7 +129,10 @@
           Curva logística e faixa de <a :href="URL_INTERVALO_CONFIANCA" target="_blank" rel="noopener noreferrer" class="correlacoes-link">Intervalo de Confiança</a> (IC) 95%
         </li>
       </ul>
-      <ul class="dispersao-notas">
+      <button type="button" class="filter-btn botao-mais-info" @click="mostrarMais = !mostrarMais">
+        {{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
+      </button>
+      <ul v-if="mostrarMais" class="dispersao-notas">
         <li v-for="(texto, indice) in notasDoFiltro" :key="indice">
       <template v-for="(parte, i) in partesDaNota(texto)" :key="i">
             <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link" :style="parte.negrito ? { fontWeight: 'bold' } : null">{{ parte.texto }}</a>
@@ -304,6 +307,7 @@ const tooltipDispersao = TEXTO_DISPERSAO_ITENS.explicacao.join('\n')
 
 const dados = ref({ pontos: [], retas: [] })
 const carregando = ref(false)
+const mostrarMais = ref(false)
 const erro = ref('')
 
 // Pontos do filtro: itens das áreas escolhidas e da dificuldade escolhida (o dia já define quais áreas existem)
@@ -454,6 +458,10 @@ watch(() => props.ano, carregar, { immediate: true })
 </script>
 
 <style scoped>
+.botao-mais-info {
+  margin: 1rem 0 0;
+}
+
 /* ====grafico dispersao itens - estilos */
 .dispersao-itens {
   padding: 1.5rem;

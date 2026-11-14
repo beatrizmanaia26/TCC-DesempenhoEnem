@@ -2,7 +2,7 @@
 <template>
   <div class="correlacao-prova">
     <div class="correlacao-cabecalho">
-      <h3 class="correlacao-titulo">Dispersão: Caracteres da Questão × Acerto</h3>
+      <h3 class="correlacao-titulo">Dispersão: Número de Caracteres da Questão × Quantidade de Acertos</h3>
       <InfoIcon warning :tooltip="tooltip" :largura="520" />
       <div class="filter-wrapper">
         <button type="button" class="filter-btn" @click="alternarMenuFiltro">
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <p class="correlacao-subtitulo">
+    <p v-if="resultado" class="correlacao-subtitulo">
       Cada ponto é uma questão, colorido pelo nível de dificuldade (questões sem nível informado aparecem em cinza). A curva mostra a probabilidade de acerto prevista pelo <a :href="URL_MODELO_LOGISTICO" target="_blank" rel="noopener noreferrer" class="link-modelo">modelo logístico</a> para cada tamanho de questão, da mais curta à mais longa desta prova. A faixa em volta da curva é o <a :href="URL_INTERVALO_CONFIANCA" target="_blank" rel="noopener noreferrer" class="link-conceito">intervalo de confiança</a> de 95%, calculado na escala logística e sempre entre 0% e 100%.
     </p>
 
@@ -112,7 +112,10 @@
         <li><span class="linha-reta"></span>Curva logística e faixa de <a :href="URL_INTERVALO_CONFIANCA" target="_blank" rel="noopener noreferrer" class="link-conceito">Intervalo de Confiança</a> (IC) 95%</li>
       </ul>
 
-      <ul class="correlacao-notas">
+      <button type="button" class="filter-btn botao-mais-info" @click="mostrarMais = !mostrarMais">
+        {{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
+      </button>
+      <ul v-if="mostrarMais" class="correlacao-notas">
         <li v-for="(partes, indice) in notasProva" :key="indice"><template v-for="(parte, sub) in partes" :key="`nota-${indice}-${sub}`"><a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="link-conceito" :style="parte.negrito ? { fontWeight: 'bold' } : null">{{ parte.texto }}</a><strong v-else-if="parte.negrito">{{ parte.texto }}</strong><template v-else>{{ parte.texto }}</template></template></li>
       </ul>
     </template>
@@ -167,6 +170,7 @@ const opcoesDificuldade = [
   ...NIVEIS.map((nivel) => ({ valor: nivel.chave, rotulo: nivel.rotulo }))
 ]
 const mostrarFiltro = ref(false)
+const mostrarMais = ref(false)
 const filtroDificuldade = ref('todas')
 const rascunhoDificuldade = ref('todas')
 
@@ -208,7 +212,7 @@ const temPontoSemDificuldade = computed(() =>
 
 const mensagemSemResultado = computed(() => {
   if (pontosInformados.value.length === 0) {
-    return 'Informe os acertos por questão (em "Deseja incluir métricas dos estudantes?") para ver a correlação desta prova.'
+    return 'Na página anterior, em "Deseja incluir métricas dos estudantes?" informe os acertos por questão para ver a correlação desta prova'
   }
   if (pontos.value.length < MINIMO_QUESTOES) {
     const escopo = filtroDificuldade.value === 'todas' ? '' : ' neste filtro'
@@ -417,6 +421,10 @@ const tooltip = [
 .ponto {
   opacity: 0.85;
 }
+.botao-mais-info {
+  margin: 1rem 0 0;
+}
+
 .correlacao-legenda {
   display: flex;
   flex-wrap: wrap;

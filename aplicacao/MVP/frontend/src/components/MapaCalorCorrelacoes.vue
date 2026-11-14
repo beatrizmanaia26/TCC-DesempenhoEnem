@@ -121,7 +121,10 @@
       </div>
     </template>
 
-    <ul v-if="!carregando && !erro" class="correlacoes-legenda">
+    <button v-if="!carregando && !erro" type="button" class="filter-btn botao-mais-info" @click="mostrarMais = !mostrarMais">
+      {{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
+    </button>
+    <ul v-if="!carregando && !erro && mostrarMais" class="correlacoes-legenda">
       <li v-for="(texto, indice) in notas" :key="indice">
         <template v-for="(parte, i) in dividirComLinks(texto)" :key="i">
           <a
@@ -187,6 +190,7 @@ function dividirComLinks(texto) {
 
 const dados = ref([])
 const carregando = ref(false)
+const mostrarMais = ref(false)
 const erro = ref('')
 
 function interpolar(de, para, t) {
@@ -286,6 +290,10 @@ onMounted(carregar)
 </script>
 
 <style scoped>
+.botao-mais-info {
+  margin: 1rem 0 0;
+}
+
 .correlacoes-tempo {
   padding: 1.5rem;
   background: white;

@@ -6,8 +6,11 @@
       <InfoIcon warning :tooltip="tooltip" :largura="380" />
 
     </div>
-    <p class="metades-subtitulo">
-      Em cada nível, as questões são divididas pela mediana de caracteres. Cada barra mostra o percentual médio de acerto de uma dessas metades nesta prova.
+    <p v-if="grupos.length > 0" class="metades-subtitulo">
+      Em cada nível, as questões são divididas pela mediana da quantidade de caracteres. Cada barra é a média simples das taxas de acerto das questões daquela coluna colorida.
+    </p>
+    <p v-if="grupos.length < niveisEsperados" class="metades-subtitulo" role="note">
+      Quando alguma coluna não aparece, o gráfico não tem questões com percentual de acerto informado suficientes naquele nível para calcular a média de cada coluna colorida.
     </p>
 
     <p v-if="grupos.length === 0" class="metades-status">{{ mensagemSemResultado }}</p>
@@ -19,6 +22,15 @@
       role="img"
       aria-label="Gráfico de barras agrupadas da porcentagem de acerto por quantidade de caracteres, em cada nível de dificuldade, nesta prova"
     >
+      <line
+        v-for="marca in MARCAS_EIXO.filter((m) => m > 0)"
+        :key="`grade-${marca}`"
+        :x1="MARGEM_ESQ"
+        :y1="yDe(marca)"
+        :x2="LARGURA - MARGEM_DIR"
+        :y2="yDe(marca)"
+        class="linha-grade"
+      />
       <line :x1="MARGEM_ESQ" :y1="yDe(0)" :x2="LARGURA - MARGEM_DIR" :y2="yDe(0)" class="eixo" />
 
       <text
@@ -70,7 +82,7 @@
     </svg>
 
     <ul v-if="grupos.length > 0" class="metades-legenda">
-      <li>O nível de dificuldade é o informado no formulário. As questões são divididas pela mediana de caracteres dentro de cada nível.</li>
+      <li>O nível de dificuldade é o informado no formulário. As questões são divididas pela mediana da quantidade de caracteres dentro de cada nível.</li>
       <li>Com poucas questões por nível, a média de acerto de cada metade varia bastante. Compare as barras dentro do mesmo gráfico.</li>
     </ul>
   </div>
@@ -136,7 +148,7 @@ const COR_MENOS = '#0070C0'
 const COR_MAIS = '#10B981'
 
 const tooltip = [
-  'Para cada nível, as questões são divididas pela mediana de caracteres do próprio nível.',
+  'Para cada nível, as questões são divididas pela mediana da quantidade de caracteres do próprio nível.',
   '',
   'Cada barra é a média de acerto (taxa informada por questão) das questões daquela metade.',
   '',
@@ -144,7 +156,7 @@ const tooltip = [
 ].join('\n')
 
 const mensagemSemResultado = computed(() =>
-  'Informe os acertos por questão (em "Deseja incluir métricas dos estudantes?") e a dificuldade de cada questão para ver este gráfico.'
+  'Na página anterior, informe os acertos por questão no campo "Deseja incluir métricas dos estudantes?" e a dificuldade de cada questão para ver este gráfico.'
 )
 
 // Questões com acerto informado e nível definido
@@ -219,6 +231,9 @@ const grupos = computed(() => NIVEIS
   })
   .filter(Boolean))
 
+// Quantos níveis deveriam aparecer: todos, ou só o escolhido no filtro
+const niveisEsperados = computed(() => (filtroDificuldade.value === 'todas' ? NIVEIS.length : 1))
+
 // Converte porcentagem de acerto (0 a 100) em coordenada y
 function yDe(valor) {
   const alturaUtil = ALTURA - MARGEM_TOPO - MARGEM_BASE
@@ -278,13 +293,18 @@ function xDaBarra(indiceNivel, indiceMetade) {
 .grafico-metades {
   display: block;
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
 .eixo {
   stroke: #999999;
+  stroke-width: 1;
+}
+
+.linha-grade {
+  stroke: #e4e7ec;
   stroke-width: 1;
 }
 

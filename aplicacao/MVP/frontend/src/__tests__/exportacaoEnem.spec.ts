@@ -61,7 +61,7 @@ describe('exportacaoEnem', () => {
   it('gera o PDF com os cartões de correlação capturados da tela, como imagem', () => {
     // PNG 1x1 válido, só para o jsPDF desenhar a imagem
     const png = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
-    const cartoes = [{ titulo: 'Dispersão: Caracteres da Questão × Acerto', dataUrl: png, larguraTela: 960, alturaTela: 400, larguraCartao: 960 }]
+    const cartoes = [{ titulo: 'Dispersão: Número de Caracteres da Questão × Quantidade de Acertos', dataUrl: png, larguraTela: 960, alturaTela: 400, larguraCartao: 960 }]
     const bytes = new Uint8Array(gerarPdf(dados, 2025, undefined, cartoes).output('arraybuffer'))
     const conteudo = new TextDecoder('latin1').decode(bytes)
     expect(conteudo).toContain('/Subtype /Image')
@@ -80,9 +80,9 @@ describe('exportacaoEnem', () => {
     const soma = fatias.reduce((total, fatia) => total + fatia.percentual, 0)
     expect(soma).toBeCloseTo(100, 6)
     expect(fatias.map((fatia) => fatia.rotulo)).toEqual([
-      'Leitura das questões',
-      'Leitura dos textos introdutórios',
-      'Restante'
+      'Tempo gasto para leitura das questões',
+      'Tempo gasto para leitura dos textos introdutórios',
+      'Tempo disponível para análise e resolução das questões'
     ])
     expect(fatias[0]?.valor).toBe(120)
   })

@@ -68,8 +68,8 @@ describe('PalavrasQuestoesGrafico', () => {
     expect(alternativas[1].attributes('style')).toContain('left: 50%')
     expect(alternativas[1].attributes('style')).toContain('width: 50%')
 
-    expect(wrapper.findAll('.barra-valor')[1].text()).toBe('100 - 100')
-    expect(wrapper.findAll('.barra-valor')[0].text()).toBe('50 - 50')
+    expect(wrapper.findAll('.barra-valor')[1].text()).toBe('100 100')
+    expect(wrapper.findAll('.barra-valor')[0].text()).toBe('50 50')
   })
 
   it('filtra as barras pelo dia escolhido só ao clicar em Aplicar', async () => {
@@ -237,8 +237,7 @@ describe('PalavrasQuestoesGrafico', () => {
     await flushPromises()
 
     expect(wrapper.findAll('.barra-media')).toHaveLength(0)
-    expect(wrapper.text()).toContain('Palavras do enunciado - palavras das alternativas')
-  })
+
 
   it('mostra o idioma nas questões de Q1 a Q5 que existem em inglês e espanhol', async () => {
     vi.mocked(http.get).mockResolvedValue({

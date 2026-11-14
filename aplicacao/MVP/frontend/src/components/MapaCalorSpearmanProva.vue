@@ -5,8 +5,11 @@
       <h3 class="correlacoes-titulo">Correlação entre Tamanho da Questão e Percentual de Acertos por Dificuldade</h3>
       <InfoIcon warning :tooltip="tooltipMapa" class="tooltip-largo" />
     </div>
-    <p class="correlacoes-subtitulo">
+    <p v-if="temDados" class="correlacoes-subtitulo">
       Correlação de <a :href="URL_SPEARMAN" target="_blank" rel="noopener noreferrer" class="correlacoes-link">Spearman</a> entre os caracteres de cada questão desta prova e o percentual de acerto, separada por nível de dificuldade.
+    </p>
+    <p v-if="temDados" class="correlacoes-subtitulo">
+      Com poucas questões por nível, o resultado é instável. Cada célula precisa de pelo menos 3 questões com acerto informado; as demais aparecem como —.
     </p>
 
     <svg
@@ -16,16 +19,15 @@
       role="img"
       aria-label="Mapa de calor da correlação de Spearman entre caracteres da questão e percentual de acerto desta prova, por nível de dificuldade"
     >
-      <text :x="MARGEM_ESQ + (TAM - GAP) / 2" :y="MARGEM_TOPO - 12" class="rotulo-eixo" text-anchor="middle">Prova</text>
+      <text :x="MARGEM_ESQ - 12" :y="MARGEM_TOPO + (ALTURA_CELULA - GAP) / 2" class="rotulo-eixo" text-anchor="end" dominant-baseline="middle">Prova</text>
 
       <text
-        v-for="(linha, j) in linhas"
-        :key="`lin-${linha.chave}`"
-        :x="MARGEM_ESQ - 12"
-        :y="MARGEM_TOPO + j * TAM + (TAM - GAP) / 2"
+        v-for="(linha, i) in linhas"
+        :key="`col-${linha.chave}`"
+        :x="MARGEM_ESQ + i * LARGURA_CELULA + (LARGURA_CELULA - GAP) / 2"
+        :y="MARGEM_TOPO - 12"
         class="rotulo-eixo"
-        text-anchor="end"
-        dominant-baseline="middle"
+        text-anchor="middle"
       >{{ linha.rotulo }}</text>
 
       <g v-for="celula in celulas" :key="celula.chave">
@@ -33,30 +35,30 @@
           class="celula-rect"
           :x="celula.x"
           :y="celula.y"
-          :width="TAM - GAP"
-          :height="TAM - GAP"
+          :width="LARGURA_CELULA - GAP"
+          :height="ALTURA_CELULA - GAP"
           :fill="celula.cor"
         />
         <template v-if="!celula.vazia">
           <text
-            :x="celula.x + (TAM - GAP) / 2"
-            :y="celula.y + (TAM - GAP) / 2 - 8"
+            :x="celula.x + (LARGURA_CELULA - GAP) / 2"
+            :y="celula.y + (ALTURA_CELULA - GAP) / 2 - 8"
             class="valor-celula"
             :fill="celula.corTexto"
             text-anchor="middle"
             dominant-baseline="middle"
           >{{ celula.r.toFixed(2) }}</text>
           <text
-            :x="celula.x + (TAM - GAP) / 2"
-            :y="celula.y + (TAM - GAP) / 2 + 14"
+            :x="celula.x + (LARGURA_CELULA - GAP) / 2"
+            :y="celula.y + (ALTURA_CELULA - GAP) / 2 + 14"
             class="p-celula"
             :fill="celula.corTexto"
             text-anchor="middle"
             dominant-baseline="middle"
           >p bruto = {{ formatarP(celula.pBruto) }}</text>
           <text
-            :x="celula.x + (TAM - GAP) / 2"
-            :y="celula.y + (TAM - GAP) / 2 + 32"
+            :x="celula.x + (LARGURA_CELULA - GAP) / 2"
+            :y="celula.y + (ALTURA_CELULA - GAP) / 2 + 32"
             class="p-celula"
             :fill="celula.corTexto"
             text-anchor="middle"
@@ -65,8 +67,8 @@
         </template>
         <text
           v-else
-          :x="celula.x + (TAM - GAP) / 2"
-          :y="celula.y + (TAM - GAP) / 2"
+          :x="celula.x + (LARGURA_CELULA - GAP) / 2"
+          :y="celula.y + (ALTURA_CELULA - GAP) / 2"
           class="valor-celula"
           fill="#666666"
           text-anchor="middle"
@@ -75,32 +77,38 @@
       </g>
 
       <defs>
-        <linearGradient id="gradiente-prova-spearman" x1="0" y1="1" x2="0" y2="0">
+        <linearGradient id="gradiente-prova-spearman" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stop-color="#0070C0" />
           <stop offset="50%" stop-color="#FFFFFF" />
           <stop offset="100%" stop-color="#10B981" />
         </linearGradient>
       </defs>
-      <rect :x="barraX" :y="MARGEM_TOPO" :width="22" :height="alturaGrade" fill="url(#gradiente-prova-spearman)" />
+      <rect :x="MARGEM_ESQ" :y="barraY" :width="larguraGrade" :height="22" fill="url(#gradiente-prova-spearman)" />
       <text
         v-for="marca in MARCAS_BARRA"
         :key="`marca-${marca.valor}`"
-        :x="barraX + 30"
-        :y="MARGEM_TOPO + ((1 - marca.valor) / 2) * alturaGrade"
-        class="rotulo-barra"
-        dominant-baseline="middle"
-      >{{ marca.texto }}</text>
-      <text
-        :x="barraX + 70"
-        :y="MARGEM_TOPO + alturaGrade / 2"
+        :x="MARGEM_ESQ + ((marca.valor + 1) / 2) * larguraGrade"
+        :y="barraY + 36"
         class="rotulo-barra"
         text-anchor="middle"
         dominant-baseline="middle"
-        :transform="`rotate(90 ${barraX + 70} ${MARGEM_TOPO + alturaGrade / 2})`"
+      >{{ marca.texto }}</text>
+      <text
+        :x="MARGEM_ESQ + larguraGrade / 2"
+        :y="barraY + 64"
+        class="rotulo-barra"
+        text-anchor="middle"
+        dominant-baseline="middle"
       >Correlação de Spearman (r)</text>
     </svg>
+    <p v-else class="correlacoes-status">
+      Na página anterior, informe os acertos por questão no campo "Deseja incluir métricas dos estudantes?" e a dificuldade de cada questão para ver este gráfico.
+    </p>
 
-    <ul v-if="temDados" class="correlacoes-legenda">
+    <button v-if="temDados" type="button" class="filter-btn" @click="mostrarMais = !mostrarMais">
+      {{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
+    </button>
+    <ul v-if="temDados && mostrarMais" class="correlacoes-legenda">
       <li v-for="(texto, indice) in notas" :key="indice">
         <template v-for="(parte, i) in dividirComLinks(texto)" :key="i">
           <a v-if="parte.url" :href="parte.url" target="_blank" rel="noopener noreferrer" class="correlacoes-link">{{ parte.texto }}</a>
@@ -112,7 +120,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import { calcularSpearmanPorNivel, MINIMO_QUESTOES_SPEARMAN } from '@/services/spearmanProva.js'
 import { LINKS_TERMOS } from '@/config/textosAnalises.js'
@@ -151,9 +159,10 @@ const NIVEIS = [
 const linhas = [{ chave: 'todas', rotulo: 'Todas' }, ...NIVEIS]
 
 // Layout do SVG (unidades do viewBox), igual ao MapaCalorCorrelacoes do ENEM
-const TAM = 110
+const ALTURA_CELULA = 90
+const LARGURA_CELULA = 220
 const GAP = 4
-const MARGEM_ESQ = 150
+const MARGEM_ESQ = 70
 const MARGEM_TOPO = 45
 const COR_AZUL = [0, 112, 192]
 const COR_BRANCO = [255, 255, 255]
@@ -165,10 +174,10 @@ const MARCAS_BARRA = [
   { valor: -0.5, texto: '-0.5' },
   { valor: -1, texto: '-1' }
 ]
-const alturaGrade = linhas.length * TAM - GAP
-const barraX = MARGEM_ESQ + TAM + 30
-const largura = barraX + 100
-const altura = MARGEM_TOPO + alturaGrade + 10
+const larguraGrade = linhas.length * LARGURA_CELULA - GAP
+const barraY = MARGEM_TOPO + (ALTURA_CELULA - GAP) + 50
+const largura = MARGEM_ESQ + larguraGrade + 20
+const altura = barraY + 22 + 70
 
 const tooltipMapa = [
   'Cada célula é a correlação de Spearman entre os caracteres (enunciado + alternativas) das questões desta prova e o percentual de acerto, dentro de um nível de dificuldade. A linha "Todas" usa todas as questões com acerto informado.',
@@ -186,11 +195,10 @@ const notas = [
   'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
   'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
   'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
-  'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto. Aqui é uma aproximação t de Student.',
+  'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
   'p baixo: um r seria raro sem relação, há indício de relação.',
   'p alto: um r seria comum sem relação. O resultado é compatível com ausência de relação.',
   'p (Holm) ajusta o p bruto considerando as 4 linhas (Todas, Fácil, Média e Difícil), para que o risco de pelo menos um falso positivo fique em 5%. Só é tratado como significativo abaixo de 0,05.',
-  `Com poucas questões por nível, o resultado é instável. Cada célula precisa de pelo menos ${MINIMO_QUESTOES_SPEARMAN} questões com acerto informado; as demais aparecem como —.`
 ]
 
 // Resultado por linha: "Todas" usa todas as questões; cada nível usa só as questões dele
@@ -203,6 +211,7 @@ const resultados = computed(() => {
 })
 
 const temDados = computed(() => resultados.value.some((celula) => celula.r !== null))
+const mostrarMais = ref(false)
 
 // Escala de cor do projeto: azul para r negativo, branco em zero, verde para r positivo
 function interpolar(de, para, t) {
@@ -231,10 +240,10 @@ function formatarP(p) {
   return p < 0.001 ? '< 0.001' : p.toFixed(3)
 }
 
-// Uma célula por linha: a coluna é única (a prova inteira)
+// Uma célula por coluna (nível de dificuldade): a prova inteira ocupa a linha
 const celulas = computed(() => linhas.map((linha, j) => {
-  const x = MARGEM_ESQ
-  const y = MARGEM_TOPO + j * TAM
+  const x = MARGEM_ESQ + j * LARGURA_CELULA
+  const y = MARGEM_TOPO
   const resultado = resultados.value.find((item) => item.nivel === linha.chave)
   if (!resultado || resultado.r === null) {
     return { chave: linha.chave, x, y, vazia: true, cor: '#F3F4F6' }
@@ -255,6 +264,10 @@ const celulas = computed(() => linhas.map((linha, j) => {
 </script>
 
 <style scoped>
+.botao-mais-info {
+  margin: 1rem 0 0;
+}
+
 .correlacao-prova-mapa {
   padding: 1.5rem;
   background: white;
@@ -281,6 +294,17 @@ const celulas = computed(() => linhas.map((linha, j) => {
   font-size: 0.9rem;
 }
 
+.correlacoes-status {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-left: 4px solid #ffc107;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #856404;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
 .correlacoes-link {
   color: #0070c0;
   text-decoration: underline;
@@ -289,7 +313,7 @@ const celulas = computed(() => linhas.map((linha, j) => {
 .mapa-calor {
   display: block;
   width: 100%;
-  max-width: 420px;
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;

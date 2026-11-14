@@ -76,10 +76,11 @@ describe('CorrelacaoProvaGrafico (logística)', () => {
     dificuldade
   })
 
-  it('mostra o aviso de amostra pequena e o resultado do modelo logístico', () => {
+  it('mostra o aviso de amostra pequena e o resultado do modelo logístico', async () => {
     const wrapper = mount(CorrelacaoProvaGrafico, {
       props: { questoes: [questao('Q1', 100, 90), questao('Q2', 200, 70), questao('Q3', 300, 50), questao('Q4', 400, 30)] }
     })
+    await wrapper.find('.botao-mais-info').trigger('click')
     expect(wrapper.text()).toContain('Atenção:')
     expect(wrapper.text()).toContain('Razão de chances')
     expect(wrapper.findAll('strong').map((s) => s.text())).toContain('Curva azul:')
@@ -93,7 +94,7 @@ describe('CorrelacaoProvaGrafico (logística)', () => {
       props: { questoes: [{ rotulo: 'Q1', caracteres: 100, taxa_acerto_percentual: null }, { rotulo: 'Q2', caracteres: 200, taxa_acerto_percentual: null }] }
     })
     expect(wrapper.find('.grafico-correlacao').exists()).toBe(false)
-    expect(wrapper.text()).toContain('Informe os acertos por questão')
+    expect(wrapper.text()).toContain('informe os acertos por questão')
   })
 
   it('desenha a curva e a faixa dentro da área do gráfico (0% a 100%)', () => {

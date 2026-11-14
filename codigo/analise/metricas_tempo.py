@@ -816,7 +816,7 @@ def gerar_metades_caracteres_filtros(df_questoes: pd.DataFrame) -> pd.DataFrame:
     """SAÍDA 6: média de acerto das metades de caracteres por nível, para cada ano e combinação de dia × áreas.
 
     Mesma unidade (item = ano, área, co_item) e mesma regra de acerto das SAÍDAS 4 e 5.
-    Para cada ano, filtro e nível: a mediana de caracteres é calculada dentro do recorte
+    Para cada ano, filtro e nível: a mediana da quantidade de caracteres é calculada dentro do recorte
     e os itens são divididos em 'menos' (<= mediana) e 'mais' (> mediana).
     Alimenta o gráfico de comparação da porcentagem de acerto por quantidade de caracteres.
     """

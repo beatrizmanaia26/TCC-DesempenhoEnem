@@ -1,10 +1,13 @@
 <template>
   <div class="analysis-form">
-    <h2>Informe os dados de sua prova</h2>
+    <div class="cabecalho-etapa">
+      <h2>Informe os dados de sua prova</h2>
+      <span class="contador-etapa">{{ etapaAtual }}/{{ ETAPAS_TOTAL }} questões</span>
+    </div>
 
     <form @submit.prevent="submitForm">
-      <!-- PRIMEIRA LINHA: TIPO E DURAÇÃO -->
-      <div class="form-row">
+      <!-- ETAPA 1: TIPO DE ANÁLISE -->
+      <div v-if="etapaAtual === 1" class="form-step">
         <div class="form-group">
           <label for="analysisType">
             Escolha qual tipo de análise deseja realizar
@@ -17,7 +20,7 @@
               class="analysis-type-trigger"
               aria-haspopup="true"
               :aria-expanded="menuTiposAberto ? 'true' : 'false'"
-              @click="menuTiposAberto = !menuTiposAberto"
+              @click="alternarMenuTipos"
             >
               {{ resumoTiposAnalise }}
             </button>
@@ -26,9 +29,9 @@
                 <input
                   type="checkbox"
                   id="analysis-type-selecionar-tudo"
-                  :checked="todosTiposSelecionados"
-                  :indeterminate.prop="algunsTiposSelecionados"
-                  @change="alternarTodosTipos"
+                  :checked="todosTiposRascunho"
+                  :indeterminate.prop="algunsTiposRascunho"
+                  @change="alternarTodosTiposRascunho"
                 />
                 <label for="analysis-type-selecionar-tudo">Selecionar tudo</label>
               </div>
@@ -37,14 +40,20 @@
                   type="checkbox"
                   :id="'analysis-type-' + opcao.value"
                   :value="opcao.value"
-                  v-model="formData.analysisTypes"
+                  v-model="rascunhoTipos"
                 />
                 <label :for="'analysis-type-' + opcao.value">{{ opcao.label }}</label>
+              </div>
+              <div class="analysis-type-rodape">
+                <button type="button" class="analysis-type-aplicar" @click="aplicarTiposAnalise">Aplicar</button>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
+      <!-- ETAPA 2: DURAÇÃO TOTAL DA PROVA -->
+      <div v-if="etapaAtual === 2" class="form-step">
         <div class="form-group">
           <label for="duration">
             Informe a duração total da prova
@@ -53,7 +62,7 @@
           <div class="time-input-container">
             <div class="time-group">
               <label for="hours">Horas</label>
-              <input v-model.number="formData.hours" id="hours" type="number" min="0" :max="MAX_EXAM_DURATION_HOURS" placeholder="00" />
+              <input v-model.number="formData.hours" id="hours" type="number" min="0" max="23" placeholder="00" />
             </div>
             <span class="time-separator">:</span>
             <div class="time-group">
@@ -65,15 +74,15 @@
         </div>
       </div>
 
-      <!-- SEGUNDA LINHA: TEMPO DE LEITURA + DIFICULDADE -->
-      <div class="form-row">
+      <!-- ETAPA 3: TEMPO DE LEITURA -->
+      <div v-if="etapaAtual === 3" class="form-step">
         <div class="form-group reading-time-column">
           <label for="reading-time-group">
             Tempo de Leitura
             <span class="required">*</span>
             <div class="tooltip-wrapper">
               <InfoIcon fill="#0070C0" class="info-icon" />
-              <span class="tooltip-text">Informe o tempo de leitura específico de seus alunos caso tenha essa informação. Caso contrário, utilize o tempo padrão de 1.100 caracteres por minuto, obtido em pesquisa com indivíduos jovens de 19 a 35 anos (<a :href="REFERENCIA_VELOCIDADE_URL" target="_blank" rel="noopener noreferrer" class="tooltip-link">Messias et al., 2008</a>)</span>
+              <span class="tooltip-text">Informe o tempo de leitura específico de seus alunos caso tenha essa informação. Caso contrário, utilize o tempo padrão de 1.100 caracteres por minuto, obtido em pesquisa com indivíduos jovens de 19 a 35 anos (Messias et al., 2008)</span>
             </div>
           </label>
           <div class="reading-speed-container" id="reading-time-group">
@@ -100,10 +109,13 @@
             />
           </div>
         </div>
+      </div>
 
+      <!-- ETAPA 4: DIFICULDADE DAS QUESTÕES -->
+      <div v-if="etapaAtual === 4" class="form-step">
         <div class="form-group difficulty-column">
           <label for="difficulty-group">
-            Deseja usar a dificuldade das questões para a análise?
+            Deseja usar a dificuldade das questões para realizar as análises?
             <span class="required">*</span>
             <div class="tooltip-wrapper">
               <InfoIcon fill="#ffc107" class="warning-icon" />
@@ -121,21 +133,21 @@
             </div>
           </div>
         </div>
+
+        <!-- Seletor de dificuldade para cada questão - FULLWIDTH -->
+        <QuestionDifficultySelector
+          v-if="useDifficultyAnalysis && totalQuestions > 0"
+          :total-questions="totalQuestions"
+          :model-value="formData.questionDifficulties"
+          @update:model-value="formData.questionDifficulties = { ...formData.questionDifficulties, ...$event }"
+        />
       </div>
 
-      <!-- Seletor de dificuldade para cada questão - FULLWIDTH -->
-      <QuestionDifficultySelector
-        v-if="useDifficultyAnalysis && totalQuestions > 0"
-        :total-questions="totalQuestions"
-        :model-value="formData.questionDifficulties"
-        @update:model-value="formData.questionDifficulties = { ...formData.questionDifficulties, ...$event }"
-      />
-
-      <!-- TERCEIRA LINHA: MÉTRICAS REAIS DOS ESTUDANTES -->
-      <div class="form-row">
+      <!-- ETAPA 5: MÉTRICAS DOS ESTUDANTES -->
+      <div v-if="etapaAtual === 5" class="form-step">
         <div class="form-group difficulty-column">
           <label for="metrics-group">
-            Deseja incluir métricas dos estudantes?
+            Deseja incluir métricas dos estudantes sobre a prova?
             <InfoIcon
             :tooltip="'As métricas dos estudantes ajudam a correlacionar a dificuldade da questão com o desempenho real. Fornece a quantidade de participantes e os acertos por questão, quando essas informações estiverem disponíveis.'"
             :warning="true"
@@ -168,7 +180,6 @@
 
           </div>
         </div>
-      </div>
 
       <!-- Seletor de acertos por questão - FULLWIDTH (para métricas dos estudantes) -->
       <QuestionAccuracySelector
@@ -178,6 +189,20 @@
         :model-value="formData.studentMetricsAccuracy"
         @update:model-value="formData.studentMetricsAccuracy = { ...formData.studentMetricsAccuracy, ...$event }"
       />
+      </div>
+
+      <!-- AVISO (apenas na etapa da duração) -->
+      <div v-if="etapaAtual === 2 && showDurationWarning" class="warning-section">
+        <div class="warning-box">
+          <strong>Aviso:</strong> A duração da prova ({{ formattedDuration }}) excede {{ MAX_EXAM_DURATION_HOURS }}h.
+          Recomendamos revisar o valor inserido.
+        </div>
+      </div>
+
+      <div class="step-nav">
+        <button v-if="etapaAtual > 1" type="button" class="btn-navegacao" @click="etapaAnterior">← Voltar</button>
+        <button v-if="etapaAtual < ETAPAS_TOTAL" type="button" class="btn-navegacao btn-avancar" @click="proximaEtapa">Avançar →</button>
+      </div>
 
       <div class="form-actions" style="display: flex; justify-content: center; margin-top: 2rem;">
         <button type="submit" class="btn btn-primary" :disabled="isLoading || !isFormValid" style="padding: 1rem 3rem; font-size: 1.1rem; min-width: 300px;">
@@ -199,7 +224,6 @@ import { useAnalysisStore } from '@/stores/analysisStore'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import QuestionDifficultySelector from '@/components/QuestionDifficultySelector.vue'
 import QuestionAccuracySelector from '@/components/QuestionAccuracySelector.vue'
-import { REFERENCIA_VELOCIDADE_URL } from '@/config/textosAnalises.js'
 import {
   ANALYSIS_TYPE_OPTIONS,
   DEFAULT_READING_SPEED,
@@ -219,12 +243,24 @@ const emit = defineEmits(['analyze', 'cancel'])
 
 const useDifficultyAnalysis = ref(false)
 
-// Dropdown de tipos de análise (seleção múltipla, no mesmo padrão do filtro da página do ENEM)
+// Formulário em etapas: uma pergunta por vez
+const ETAPAS_TOTAL = 5
+const etapaAtual = ref(1)
+const etapaAnterior = () => {
+  if (etapaAtual.value > 1) etapaAtual.value -= 1
+}
+const proximaEtapa = () => {
+  if (etapaAtual.value < ETAPAS_TOTAL) etapaAtual.value += 1
+}
+
+// Dropdown de tipos de análise: o menu trabalha num rascunho; só vale após "Aplicar"
 const menuTiposAberto = ref(false)
 const dropdownTiposRef = ref(null)
+const rascunhoTipos = ref([])
 
 const todosTiposSelecionados = computed(() => formData.value.analysisTypes.length === TODOS_TIPOS_ANALISE.length)
-const algunsTiposSelecionados = computed(() => formData.value.analysisTypes.length > 0 && !todosTiposSelecionados.value)
+const todosTiposRascunho = computed(() => rascunhoTipos.value.length === TODOS_TIPOS_ANALISE.length)
+const algunsTiposRascunho = computed(() => rascunhoTipos.value.length > 0 && !todosTiposRascunho.value)
 
 const resumoTiposAnalise = computed(() => {
   const quantidade = formData.value.analysisTypes.length
@@ -236,11 +272,24 @@ const resumoTiposAnalise = computed(() => {
   return `${quantidade} tipos de análise selecionados`
 })
 
-const alternarTodosTipos = () => {
-  formData.value.analysisTypes = todosTiposSelecionados.value ? [] : [...TODOS_TIPOS_ANALISE]
+const alternarTodosTiposRascunho = () => {
+  rascunhoTipos.value = todosTiposRascunho.value ? [] : [...TODOS_TIPOS_ANALISE]
 }
 
-// Fecha o menu ao clicar fora dele
+// Abrir o menu copia o aplicado para o rascunho
+const alternarMenuTipos = () => {
+  if (!menuTiposAberto.value) {
+    rascunhoTipos.value = [...formData.value.analysisTypes]
+  }
+  menuTiposAberto.value = !menuTiposAberto.value
+}
+
+const aplicarTiposAnalise = () => {
+  formData.value.analysisTypes = [...rascunhoTipos.value]
+  menuTiposAberto.value = false
+}
+
+// Fecha o menu ao clicar fora dele; as mudanças não aplicadas são descartadas
 const fecharMenuTiposAoClicarFora = (event) => {
   if (dropdownTiposRef.value && !dropdownTiposRef.value.contains(event.target)) {
     menuTiposAberto.value = false
@@ -249,6 +298,11 @@ const fecharMenuTiposAoClicarFora = (event) => {
 
 onMounted(() => document.addEventListener('click', fecharMenuTiposAoClicarFora))
 onUnmounted(() => document.removeEventListener('click', fecharMenuTiposAoClicarFora))
+
+const showDurationWarning = computed(() => {
+  const totalMinutes = (formData.value.hours || 0) * 60 + (formData.value.minutes || 0)
+  return totalMinutes > MAX_EXAM_DURATION_HOURS * 60
+})
 
 const formData = ref({
   analysisTypes: [...TODOS_TIPOS_ANALISE],
@@ -330,20 +384,6 @@ watch(() => useDifficultyAnalysis.value, () => {
   autoSaveToStore()
 })
 
-// Limita a duração total da prova a MAX_EXAM_DURATION_HOURS.
-// Se ultrapassar, ajusta para o máximo (ex.: 6h 0min)
-const limitarDuracaoMaxima = () => {
-  const totalMinutos = (formData.value.hours || 0) * 60 + (formData.value.minutes || 0)
-  if (totalMinutos <= MAX_EXAM_DURATION_HOURS * 60) return
-  formData.value.hours = MAX_EXAM_DURATION_HOURS
-  formData.value.minutes = 0
-}
-
-watch(
-  () => [formData.value.hours, formData.value.minutes],
-  limitarDuracaoMaxima
-)
-
 
 const formattedDuration = computed(() => {
   const h = formData.value.hours || 0
@@ -378,6 +418,7 @@ const isFormValid = computed(() => {
     formData.value.minutes !== null &&
     formData.value.minutes >= 0 &&
     (formData.value.hours > 0 || formData.value.minutes > 0) &&
+    !showDurationWarning.value &&
     // Com "Personalizado", a velocidade precisa ser preenchida com um valor válido
     (formData.value.readingSpeedMode !== 'custom' || customReadingSpeedValida.value)
 
@@ -443,10 +484,57 @@ const submitForm = () => {
   font-weight: 700;
 }
 
+.cabecalho-etapa {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contador-etapa {
+  color: #888;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-navegacao {
+  background: white;
+  color: #0070C0;
+  border: 2px solid #0070C0;
+  border-radius: 6px;
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-navegacao:hover {
+  background: #f0f2ff;
+}
+
+.btn-avancar {
+  margin-left: auto;
 }
 
 .form-row {
@@ -531,18 +619,18 @@ form {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  padding: 1rem;
-  margin-top: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 0.4rem;
   z-index: 100;
-  max-height: 400px;
+  max-height: 240px;
   overflow-y: auto;
 }
 
 .analysis-type-option {
   display: flex;
   align-items: center;
-  padding: 0.75rem;
-  margin: 0.25rem 0;
+  padding: 0.4rem 0.6rem;
+  margin: 0.1rem 0;
   border-radius: 4px;
   transition: background 0.2s ease;
 }
@@ -562,7 +650,7 @@ form {
 .analysis-type-option label {
   cursor: pointer;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #333;
   flex: 1;
@@ -572,6 +660,30 @@ form {
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.analysis-type-rodape {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.analysis-type-aplicar {
+  background: #0070C0;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.analysis-type-aplicar:hover {
+  background: #005a9e;
 }
 
 .info-icon {
@@ -792,21 +904,6 @@ form {
 .tooltip-wrapper:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
-}
-
-/* Ponte invisível entre o ícone e o balão, para o mouse conseguir chegar ao link */
-.tooltip-text::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 12px;
-}
-
-.tooltip-link {
-  color: #9fd3ff;
-  text-decoration: underline;
 }
 
 .difficulty-column,

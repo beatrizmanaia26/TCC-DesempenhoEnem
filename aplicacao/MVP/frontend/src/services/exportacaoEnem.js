@@ -116,7 +116,8 @@ const COR_AZUL = [0, 112, 192]
 const COR_VERDE = [16, 185, 129]
 const COR_TRILHO = [240, 240, 240]
 const COR_RESTANTE = [203, 213, 225]
-const COR_ALTERNATIVAS = [147, 197, 253]
+const COR_ALTERNATIVAS = [167, 243, 208]
+const COR_VERDE_ESCURO = [16, 185, 129]
 const COR_TEXTO = [51, 51, 51]
 const COR_VALOR = [102, 102, 102]
 
@@ -275,9 +276,9 @@ export function fatiasDaPizza(resumo) {
   const soma = (campo) => dias.reduce((acumulado, dia) => acumulado + dia[campo], 0)
   const total = soma('tempo_total_min')
   const itens = [
-    { rotulo: 'Leitura das questões', valor: soma('tempo_questoes_min'), cor: [0, 112, 192] },
-    { rotulo: 'Leitura dos textos introdutórios', valor: soma('tempo_textos_min'), cor: [16, 185, 129] },
-    { rotulo: 'Restante', valor: soma('tempo_restante_min'), cor: [203, 213, 225] }
+    { rotulo: 'Tempo gasto para leitura das questões', valor: soma('tempo_questoes_min'), cor: [0, 112, 192] },
+    { rotulo: 'Tempo gasto para leitura dos textos introdutórios', valor: soma('tempo_textos_min'), cor: [147, 197, 253] },
+    { rotulo: 'Tempo disponível para análise e resolução das questões', valor: soma('tempo_restante_min'), cor: [16, 185, 129] }
   ]
   return itens.map((item) => ({ ...item, percentual: total ? (item.valor / total) * 100 : 0 }))
 }
@@ -293,7 +294,7 @@ function desenharGraficoTempo(doc, questoes, restantePorDia, y) {
   const topo = garantirEspaco(doc, y, 40)
   let cursor = desenharCabecalhoGrafico(
     doc,
-    'Tempo de leitura e média disponível por questão',
+    'Tempo de Leitura e Média de Tempo Disponível para Resolver Cada Questão',
     'Compara o tempo de leitura de cada questão com o tempo médio de resolução por item. A linha preta marca essa média diária e a faixa cinza mostra o tempo restante até ela.',
     topo + 6
   )
@@ -335,7 +336,7 @@ function desenharGraficoTempo(doc, questoes, restantePorDia, y) {
   return cursor
 }
 
-// Gráfico de palavras: enunciado em degradê e alternativas em azul claro logo depois
+// Gráfico de palavras: enunciado em verde escuro e alternativas em verde claro logo depois
 function desenharGraficoPalavras(doc, questoes, y) {
   const maiorPalavras = Math.max(0, ...questoes.map((q) => q.palavras + q.palavrasAlternativas))
   const largura = (valor) => (maiorPalavras === 0 ? 0 : (valor / maiorPalavras) * PDF_TRILHO_LARGURA)
@@ -350,8 +351,8 @@ function desenharGraficoPalavras(doc, questoes, y) {
   cursor = desenharLegenda(
     doc,
     [
-      { degrade: true, rotulo: 'Enunciado' },
-      { cor: COR_ALTERNATIVAS, rotulo: 'Alternativas' }
+      { cor: COR_VERDE_ESCURO, rotulo: 'Quantidade de palavras do enunciado' },
+      { cor: COR_ALTERNATIVAS, rotulo: 'Quantidade de palavras das alternativas' }
     ],
     cursor
   )
@@ -362,7 +363,7 @@ function desenharGraficoPalavras(doc, questoes, y) {
 
     desenharRotulo(doc, questao, linhaY)
     desenharRetangulo(doc, PDF_TRILHO_X, barraY, PDF_TRILHO_LARGURA, PDF_ALTURA_BARRA, COR_TRILHO)
-    desenharBarraDegrade(doc, PDF_TRILHO_X, barraY, larguraEnunciado, PDF_ALTURA_BARRA)
+    desenharRetangulo(doc, PDF_TRILHO_X, barraY, larguraEnunciado, PDF_ALTURA_BARRA, COR_VERDE_ESCURO)
     desenharRetangulo(
       doc,
       PDF_TRILHO_X + larguraEnunciado,

@@ -1,7 +1,6 @@
 <template>
   <div class="about-container">
     <header class="about-header">
-      <button @click="goHome" class="btn-back">← Voltar</button>
       <h1>Sobre o Sistema RESUMO TCC</h1>
     </header>
 
@@ -60,9 +59,6 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
-const router = useRouter()
-const goHome = () => router.push('/')
 </script>
 
 <style scoped>
@@ -77,34 +73,12 @@ const goHome = () => router.push('/')
   margin: 0 auto 3rem;
 }
 
-.btn-back {
-  background: linear-gradient(135deg, #0070C0 0%, #047857 100%);
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-}
-
-.btn-back:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 112, 192, 0.4);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .btn-back {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-}
-
 .about-header h1 {
   color: #0070C0;
   font-size: 2.5rem;
   margin: 0;
   font-weight: 700;
+  text-align: center;
 }
 
 .about-content {

@@ -124,7 +124,10 @@
       </div>
     </div>
 
-    <ul v-if="!carregando && !erro" class="correlacoes-legenda">
+    <button v-if="!carregando && !erro" type="button" class="filter-btn botao-mais-info" @click="mostrarMais = !mostrarMais">
+      {{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
+    </button>
+    <ul v-if="!carregando && !erro && mostrarMais" class="correlacoes-legenda">
       <li v-for="(texto, indice) in notas" :key="indice">
         <template v-for="(parte, i) in dividirComLinks(texto)" :key="i">
           <a
@@ -206,6 +209,7 @@ const MARCAS_BARRA = [
 const tooltipMapa = TEXTO_MAPA_DIFICULDADE.explicacao.join('\n')
 
 const notas = TEXTO_MAPA_DIFICULDADE.notas
+const mostrarMais = ref(false)
 
 // Separa o texto em partes: trechos comuns e trechos que são link (termo de LINKS_TERMOS)
 function dividirComLinks(texto) {
@@ -343,6 +347,10 @@ onMounted(carregar)
 
 
 <style scoped>
+.botao-mais-info {
+  margin: 1rem 0 0;
+}
+
 .correlacao-dificuldade-mapa {
   padding: 1.5rem;
   background: white;

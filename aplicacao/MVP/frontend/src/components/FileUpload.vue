@@ -22,8 +22,8 @@
         <h3>Selecione ou arraste um arquivo</h3>
         <p>Formato aceito: PDF de até 10 MB</p>
         <div class="upload-guidance">
-          <p>Envie uma prova com questões numeradas (ex.: “Questão 1”) e alternativas de A a E.</p>
-          <p>PDFs escaneados como imagem não são reconhecidos.</p>
+          <p>Envie a prova original elaborada pelo professor, sem respostas, marcações ou anotações de alunos. O documento deve conter questões numeradas (ex.: “Questão 1”) e alternativas identificadas de A a E.</p>
+          <p>Atenção: PDFs digitalizados como imagem não são reconhecidos. Envie um PDF com texto selecionável.</p>
         </div>
         <button @click="triggerFileInput" class="btn btn-upload">Escolher arquivo</button>
       </div>
@@ -170,7 +170,11 @@ const removeFile = () => {
 .upload-area {
   border: 2px dashed #0070C0;
   border-radius: 12px;
-  padding: 3rem 2rem;
+  padding: 5rem 3rem;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -189,40 +193,43 @@ const removeFile = () => {
 }
 
 .upload-icon {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   color: #0070C0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .upload-content h3 {
   color: #333;
   margin: 0.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 
 .upload-content p {
   color: #666;
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
+  font-size: 1.1rem;
 }
 
 .upload-guidance {
-  max-width: 680px;
-  margin: 1rem auto;
+  max-width: 760px;
+  margin: 1.5rem auto;
   color: #555;
+  font-size: 1.1rem;
   text-align: center;
 }
 
 .btn-upload {
   background: linear-gradient(135deg, #0070C0 0%, #10B981 100%);
   color: white;
-  padding: 0.75rem 2rem;
+  padding: 1.25rem 3.75rem;
+  min-width: 320px;
   border: none;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   cursor: pointer;
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   transition: all 0.3s ease;
 }
 

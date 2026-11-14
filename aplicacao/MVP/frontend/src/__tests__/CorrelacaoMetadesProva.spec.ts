@@ -47,7 +47,7 @@ describe('CorrelacaoMetadesProva', () => {
       props: { questoes: [questao('Q1', 100, 80, 'medio')] }
     })
     expect(wrapper.find('.grafico-metades').exists()).toBe(false)
-    expect(wrapper.text()).toContain('Informe os acertos por questão')
+    expect(wrapper.text()).toContain('informe os acertos por questão')
   })
 
   it('ignora questões sem acerto informado ou sem dificuldade', () => {

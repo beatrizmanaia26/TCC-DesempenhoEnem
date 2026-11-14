@@ -32,7 +32,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
+  /* Acima de todos os menus de filtro (z-index 100), para que eles apareçam por baixo da navbar */
+  z-index: 1000;
 }
 
 .header-content {

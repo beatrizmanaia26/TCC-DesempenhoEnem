@@ -32,6 +32,13 @@
       </div>
     </div>
     <p class="grafico-subtitulo">{{ TEXTO_PALAVRAS.subtitulo }}</p>
+    <div class="legenda-grafico">
+      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-verde-escuro"></span>Quantidade de palavras do enunciado</span>
+      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-verde-claro"></span>Quantidade de palavras das alternativas</span>
+    </div>
+    <div v-if="questoesFiltradas.length > 0" class="barras-cabecalho">
+      <span class="barras-cabecalho-texto">Questões</span>
+    </div>
 
     <div v-if="dica" class="dica-flutuante" :style="{ left: `${dica.x}px`, top: `${dica.y}px` }">{{ dica.texto }}</div>
 
@@ -61,9 +68,8 @@
             @mouseleave="ocultarDica"
           ></div>
         </div>
-        <span class="barra-valor">{{ questao.palavras }} - {{ questao.palavrasAlternativas }}</span>
+        <span class="barra-valor"><span class="valor-item"><span class="legenda-quadrado legenda-quadrado-verde-escuro"></span>{{ questao.palavras }}</span> <span class="valor-item"><span class="legenda-quadrado legenda-quadrado-verde-claro"></span>{{ questao.palavrasAlternativas }}</span></span>
       </div>
-      <p class="eixo-x">Palavras do enunciado - palavras das alternativas</p>
     </div>
   </div>
 </template>
@@ -131,7 +137,7 @@ const mediaPalavras = computed(() => {
 })
 
 const tooltip = computed(() => [
-  'Cada barra é uma questão. A parte em degradê azul-verde mostra as palavras do enunciado e a parte azul claro mostra as palavras das alternativas.',
+  'Cada barra é uma questão. A parte verde escura mostra as palavras do enunciado e a parte verde clara mostra as palavras das alternativas.',
   '',
   'Valor: enunciado - alternativas (ex.: 128 - 45).',
   '',
@@ -232,17 +238,74 @@ const larguraBarra = (palavras) => {
   left: 0;
   z-index: 1;
   height: 100%;
-  background: linear-gradient(90deg, #0070C0 0%, #10B981 100%);
+  background: #10B981;
   border-radius: 3px;
   transition: width 0.3s ease;
 }
 
 .barra-alternativas {
-  background: #93c5fd;
+  background: #A7F3D0;
+}
+
+.legenda-grafico {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.legenda-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legenda-quadrado {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legenda-quadrado-verde-escuro {
+  background: #10B981;
+}
+
+.legenda-quadrado-verde-claro {
+  background: #A7F3D0;
+}
+
+.valor-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.barras-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+}
+
+.barras-cabecalho-texto {
+  min-width: 60px;
+  text-align: right;
+  white-space: nowrap;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.legenda-quadrado-verde-claro {
+  background: #A7F3D0;
 }
 
 .barra-valor {
-  width: 5.5rem;
+  width: 8.5rem;
   flex-shrink: 0;
   white-space: nowrap;
   color: #666;

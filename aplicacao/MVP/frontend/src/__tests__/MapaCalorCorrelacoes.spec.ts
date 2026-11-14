@@ -113,6 +113,7 @@ describe('MapaCalorCorrelacoes', () => {
 
     const wrapper = mount(MapaCalorCorrelacoes)
     await flushPromises()
+    await wrapper.find('.botao-mais-info').trigger('click')
 
     const link = wrapper.find('.correlacoes-link')
     expect(link.text()).toBe('correlação de Spearman')
@@ -126,6 +127,7 @@ describe('MapaCalorCorrelacoes', () => {
 
     const wrapper = mount(MapaCalorCorrelacoes)
     await flushPromises()
+    await wrapper.find('.botao-mais-info').trigger('click')
 
     const links = wrapper.findAll('.correlacoes-link')
     const linkP = links.find((l) => l.text() === 'valor de p')

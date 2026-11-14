@@ -2,6 +2,7 @@
   <div class="enem-container">
     <div class="container">
       <div class="cabecalho-pagina">
+        <!-- EXPORTAR DESATIVADO TEMPORARIAMENTE (botão e menu PDF/Excel/CSV escondidos; código mantido)
         <div class="topo-acoes" ref="menuExportarRef">
           <button
             type="button"
@@ -28,6 +29,7 @@
             </li>
           </ul>
         </div>
+        -->
         <h1 class="page-title">
 
           Análises do ENEM
@@ -80,8 +82,8 @@
                 <label for="filter-selecionar-tudo">Selecionar tudo</label>
               </div>
               <div class="filter-option" v-for="option in filterOptions" :key="option.id">
-                <input 
-                  type="checkbox" 
+                <input
+                  type="checkbox"
                   :id="option.id"
                   :checked="isFilterSelected(option.id)"
                   @change="toggleFilter(option.id)"
@@ -94,20 +96,34 @@
             </div>
           </div>
         </div>
+        <!-- Informações da prova: fixas, aparecem em todas as etapas -->
         <ProvaInfoDisplay :ano="selectedYear" />
-        <template v-if="selectedFilters.has('reading-time')">
-          <ResumoTempoProva ref="resumoRef" :ano="selectedYear" />
-          <GraficoTempoLeitura ref="graficoTempoRef" :ano="selectedYear" />
+
+        <!-- Um gráfico por passo, na ordem de passosEnem (análise e gráfico atuais) -->
+        <template v-if="passoAtual">
+          <div class="cabecalho-analise">
+            <h2 class="titulo-bloco-analise">{{ rotuloAnaliseDaEtapa }}</h2>
+            <span v-if="passoAtual.total" class="contador-grafico">{{ passoAtual.indice }}/{{ passoAtual.total }}</span>
+          </div>
+
+          <ResumoTempoProva v-if="passoAtual.grafico === 'resumo-tempo'" ref="resumoRef" :ano="selectedYear" />
+          <GraficoTempoLeitura v-else-if="passoAtual.grafico === 'tempo-leitura'" ref="graficoTempoRef" :ano="selectedYear" />
+          <PalavrasQuestoesGrafico v-else-if="passoAtual.grafico === 'palavras'" ref="graficoPalavrasRef" :ano="selectedYear" />
+          <MapaCalorCorrelacoes v-else-if="passoAtual.grafico === 'mapa-correlacoes'" />
+          <CorrelacaoDificuldadeMapa v-else-if="passoAtual.grafico === 'mapa-dificuldade'" />
+          <CorrelacaoMetadesCaracteres v-else-if="passoAtual.grafico === 'metades-caracteres'" :ano="selectedYear" />
+          <CorrelacaoDispersaoItens v-else-if="passoAtual.grafico === 'dispersao-itens'" :ano="selectedYear" />
+
+          <p v-if="!passoAtual.total" class="etapa-sem-grafico">
+            O gráfico desta análise ainda não está disponível no ENEM.
+          </p>
         </template>
-        <template v-if="selectedFilters.has('word-count')">
-          <PalavrasQuestoesGrafico ref="graficoPalavrasRef" :ano="selectedYear" />
-          <MapaCalorCorrelacoes />
-          <CorrelacaoDificuldadeMapa />
-          <CorrelacaoMetadesCaracteres :ano="selectedYear" />
-          <!-- ========GRAFICO DISPERSAO_ITENS - uso na página -->
-          <CorrelacaoDispersaoItens :ano="selectedYear" />
-          <!-- =======grafico DISPERSAO_ITENS -->
-        </template>
+
+        <!-- Navegação entre os gráficos (mesmo estilo do formulário) -->
+        <div v-if="totalPassosEnem > 1" class="step-nav">
+          <button v-if="etapaEnem > 0" type="button" class="btn-navegacao" @click="etapaEnem--">← Voltar</button>
+          <button v-if="etapaEnem < totalPassosEnem - 1" type="button" class="btn-navegacao btn-avancar" @click="etapaEnem++">Avançar →</button>
+        </div>
       </div>
 
       <!-- PLACEHOLDER SE NENHUM ANO SELECIONADO -->
@@ -143,14 +159,14 @@ import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
 import http from '@/services/http.js'
 
 const availableYears = [2025, 2024, 2023, 2022, 2020]
-const selectedYear = ref(null)
+const selectedYear = ref(availableYears[0])
 const showFilterMenu = ref(false)
 
 const filterOptions = [
-  { id: 'image', label: 'Análise da Presença de Imagens' },
-  { id: 'formality', label: 'Análise do Formalismo' },
   { id: 'reading-time', label: 'Análise do Tempo de Prova' },
   { id: 'word-count', label: 'Análise do Tamanho das Questões' },
+  { id: 'image', label: 'Análise da Presença de Imagens' },
+  { id: 'formality', label: 'Análise do Formalismo' },
   { id: 'distractors', label: 'Análise de Distratores' },
   { id: 'position', label: 'Posição das Questões' }
 ]
@@ -162,12 +178,34 @@ const selectedFilters = ref(new Set(todasAnalises))
 // Rascunho: muda enquanto o usuário marca as opções
 const rascunhoFiltros = ref(new Set(todasAnalises))
 
+// Ordem das etapas de análise (a etapa 0 são as informações da prova)
+const ORDEM_ETAPAS_ENEM = ['reading-time', 'word-count', 'image', 'formality', 'distractors', 'position']
+// Gráficos de cada análise do ENEM, na ordem em que aparecem (análises sem gráfico não entram aqui)
+const GRAFICOS_ENEM = {
+  'reading-time': ['resumo-tempo', 'tempo-leitura'],
+  'word-count': ['palavras', 'mapa-correlacoes', 'mapa-dificuldade', 'metades-caracteres', 'dispersao-itens']
+}
+// Só entram as análises marcadas no filtro aplicado, na ordem de ORDEM_ETAPAS_ENEM
+const analisesEtapas = computed(() => ORDEM_ETAPAS_ENEM.filter((id) => selectedFilters.value.has(id)))
+// Cada passo é um gráfico; análise sem gráfico vira um passo só, com aviso e sem contador
+const passosEnem = computed(() => analisesEtapas.value.flatMap((analise) => {
+  const graficos = GRAFICOS_ENEM[analise] ?? []
+  if (!graficos.length) return [{ analise, grafico: null, indice: 0, total: 0 }]
+  return graficos.map((grafico, i) => ({ analise, grafico, indice: i + 1, total: graficos.length }))
+}))
+// Índice do passo atual dentro de passosEnem (começa no primeiro gráfico)
+const etapaEnem = ref(0)
+const totalPassosEnem = computed(() => passosEnem.value.length)
+const passoAtual = computed(() => passosEnem.value[etapaEnem.value] ?? null)
+const rotuloAnaliseDaEtapa = computed(() => filterOptions.find((option) => option.id === passoAtual.value?.analise)?.label ?? '')
+
 // Ao escolher um ano, todas as análises ficam selecionadas e aplicadas
 const selectYear = (year) => {
   selectedYear.value = year
   selectedFilters.value = new Set(todasAnalises)
   rascunhoFiltros.value = new Set(todasAnalises)
   showFilterMenu.value = false
+  etapaEnem.value = 0
 }
 
 // Abrir o menu copia o aplicado para o rascunho; fechar sem aplicar descarta as mudanças
@@ -181,6 +219,8 @@ const alternarMenuFiltro = () => {
 const aplicarFiltros = () => {
   selectedFilters.value = new Set(rascunhoFiltros.value)
   showFilterMenu.value = false
+  // Volta para as informações da prova, pois a lista de etapas mudou
+  etapaEnem.value = 0
 }
 
 // Estado do "Selecionar tudo" no rascunho: marcado, parcial (traço) ou desmarcado
@@ -307,7 +347,7 @@ const uploadNewEnem = () => {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -390,7 +430,7 @@ const uploadNewEnem = () => {
 
 .page-title {
   color: #0070C0;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0 0 0.5rem 0;
   font-weight: 700;
   text-align: center;
@@ -398,7 +438,7 @@ const uploadNewEnem = () => {
 
 .page-subtitle {
   color: #0070C0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -453,6 +493,59 @@ const uploadNewEnem = () => {
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.analyses-section .cabecalho-analise {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.analyses-section .titulo-bloco-analise {
+  margin: 0;
+  color: #263238;
+  font-size: 1.25rem;
+}
+
+.analyses-section .contador-grafico {
+  color: #0070C0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.analyses-section .etapa-sem-grafico {
+  margin: 1.5rem 0;
+  color: #666;
+  text-align: center;
+}
+
+.analyses-section .step-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.analyses-section .btn-navegacao {
+  background: white;
+  color: #0070C0;
+  border: 2px solid #0070C0;
+  border-radius: 6px;
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.analyses-section .btn-navegacao:hover {
+  background: #f0f2ff;
+}
+
+.analyses-section .btn-avancar {
+  margin-left: auto;
 }
 
 .analyses-section h2 {
@@ -724,8 +817,7 @@ const uploadNewEnem = () => {
   margin-top: 0.5rem;
   min-width: 280px;
   z-index: 100;
-  max-height: 400px;
-  overflow-y: auto;
+  text-align: left;
 }
 
 .filter-option {
@@ -808,11 +900,11 @@ const uploadNewEnem = () => {
   }
 
   .page-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   .page-subtitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .years-grid {
