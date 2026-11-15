@@ -2,7 +2,6 @@ import html2canvas from 'html2canvas'
 
 // Raízes dos cartões de correlação, na ordem em que aparecem na página
 const SELETORES_CARTOES = [
-  '.correlacoes-tempo',
   '.correlacao-dificuldade-mapa',
   '.metades-caracteres',
   '.dispersao-itens'

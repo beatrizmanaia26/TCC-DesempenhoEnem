@@ -8,7 +8,6 @@ vi.mock('../services/http.js', () => ({
 
 vi.mock('../components/GraficoTempoLeitura.vue', () => ({ default: { template: '<div class="grafico-tempo-stub" />' } }))
 vi.mock('../components/ResumoTempoProva.vue', () => ({ default: { template: '<div class="resumo-stub" />' } }))
-vi.mock('../components/MapaCalorCorrelacoes.vue', () => ({ default: { template: '<div class="mapa-stub" />' } }))
 vi.mock('../components/CorrelacaoDificuldadeMapa.vue', () => ({ default: { template: '<div class="correlacao-mapa-stub" />' } }))
 // ========GRAFICO DISPERSAO_ITENS - mock
 vi.mock('../components/CorrelacaoDispersaoItens.vue', () => ({ default: { template: '<div class="dispersao-stub" />' } }))
@@ -88,7 +87,7 @@ describe('EnemPage', () => {
     expect(contador()).toBe('2/2')
     await wrapper.find('.btn-avancar').trigger('click')
     expect(titulo()).toBe('Análise do Tamanho das Questões')
-    expect(contador()).toBe('1/5')
+    expect(contador()).toBe('1/4')
     await botaoVoltar()!.trigger('click')
     expect(contador()).toBe('2/2')
     expect(wrapper.find('.prova-stub').exists()).toBe(true)

@@ -1,6 +1,14 @@
 // Textos explicativos das análises. Usados na tela (tooltips e subtítulos) e na exportação CSV/Excel,
 // para que os dois sempre digam a mesma coisa.
 
+// Nome exibido de cada área do ENEM (a chave continua a sigla usada nos dados)
+export const ROTULOS_AREA = {
+  CH: 'Ciências Humanas',
+  LC: 'Linguagens e Códigos',
+  CN: 'Ciências da Natureza',
+  MT: 'Matemática'
+}
+
 export const TEXTO_RESUMO_TEMPO = {
   titulo: 'Distribuição do Tempo de Prova (ENEM 2025)',
   subtitulo: 'Distribuição do tempo entre leitura e resolução das questões objetivas (por dia ou total).',
@@ -93,9 +101,6 @@ export const TEXTO_MAPA_DIFICULDADE = {
   notas: [
     'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm). Tanto a correlação quant o Holm tem que ser elvados em consideração para a conclusão do possível impacto do acerto.',
     'O r mostra a força  da relação, de −1 a 1. Quanto mais longe de 0, mais forte',
-    'Violeta = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
-    'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
-    'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
     'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
     'p baixo: um r seria raro sem relação, há indício de relação.',
     'p alto: um r seria comum sem relação. O resultado é compatível com ausência de relação.',
@@ -103,6 +108,14 @@ export const TEXTO_MAPA_DIFICULDADE = {
     'p (Holm) alto, como 1.000, mostra que não há evidência suficiente de relação nessa célula. Isso não prova que a relação não existe.',
   ]
 }
+
+// Legenda de cores do mapa de dificuldade: fica visível logo abaixo do subtítulo
+export const CORES_MAPA_DIFICULDADE = [
+  'Violeta = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
+  'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
+  'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
+  'Círculo escuro com ★ = p (Holm) < 0,05.'
+]
 
 // Conclusão geral dos três níveis, sempre visível acima do mapa
 export const FRASE_GERAL_DIFICULDADE =
@@ -120,12 +133,6 @@ export const TEXTO_MAPA_DIFICULDADE_GRADE = [
 
 const FRASE_INCERTEZA_HOLM = 'Com 13 a 17 itens por célula, cada r tem muita incerteza. Nenhuma das 60 células é significativa após a correção de Holm (menor p ajustado = 0,74).'
 
-// Resultado de cada tabela (um por nível TRI), mostrado abaixo do título da grade
-export const TEXTO_RESULTADO_DIFICULDADE = {
-  facil: `Nas questões fáceis, a maioria dos quadrados (14 de 20) tem r negativo, ou seja, questões mais longas tendem a acertar menos. Mas o sinal muda entre anos e áreas, e nenhum quadrado se sustenta na correção de Holm. Então o gráfico não mostra uma relação consistente nesse nível.`,
-  media: `Nas questões médias, o quadrado com a relação positiva mais forte é 2020 (MT). Ele não se sustenta quando todas as células são corrigidas juntas. Como nos outros níveis, o sinal varia entre anos e áreas, então não há uma relação consistente.`,
-  dificil: `Nas questões difíceis, o quadrado com a relação negativa mais forte é 2022 (CN). Ele também não se sustenta na correção. O sinal varia entre anos e áreas, então o gráfico não mostra uma relação consistente nesse nível.`
-}
 
 export const TEXTO_METADES_CARACTERES = {
   titulo: 'Acerto por Quantidade de Caracteres e Nível de Dificuldade',

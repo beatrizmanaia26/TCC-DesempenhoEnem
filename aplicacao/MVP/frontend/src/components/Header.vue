@@ -13,7 +13,6 @@
       <nav class="nav">
         <router-link to="/" class="nav-link" active-class="active">Análise</router-link>
         <router-link to="/enem" class="nav-link" active-class="active">ENEM</router-link>
-        <router-link to="/about" class="nav-link" active-class="active">Sobre</router-link>
       </nav>
     </div>
   </header>

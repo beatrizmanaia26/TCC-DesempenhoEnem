@@ -7,7 +7,7 @@
 
     <main class="main-content">
       <!-- SEÇÃO 1: UPLOAD -->
-      
+
       <section class="section upload-section" v-if="!USAR_JSON_TESTE && !isAnalyzing && !hasResults">
         <FileUpload ref="fileUploadRef" :key="uploadKey" @file-selected="handleFileSelected" />
 
@@ -71,7 +71,7 @@ import ResultsDisplay from '@/components/ResultsDisplay.vue'
 import { extractExamPdf } from '@/services/analysisApi'
 
 // Ative para carregar os dados de public/json_teste/prova_teste.json sem enviar um PDF.
-const USAR_JSON_TESTE = true
+const USAR_JSON_TESTE = false
 const CAMINHO_JSON_TESTE = '/json_teste/prova_teste.json'
 
 // Store

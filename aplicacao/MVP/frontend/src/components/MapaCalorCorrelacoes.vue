@@ -22,7 +22,7 @@
           <text
             v-for="(coluna, i) in grade.colunas"
             :key="`col-${coluna.chave}`"
-            :x="MARGEM_ESQ + i * TAM + (TAM - GAP) / 2"
+            :x="MARGEM_ESQ + i * LARGURA_COL + (LARGURA_COL - GAP) / 2"
             :y="MARGEM_TOPO - 12"
             class="rotulo-eixo"
             text-anchor="middle"
@@ -45,13 +45,13 @@
               class="celula-rect"
               :x="celula.x"
               :y="celula.y"
-              :width="TAM - GAP"
+              :width="LARGURA_COL - GAP"
               :height="TAM - GAP"
               :fill="celula.cor"
             />
             <template v-if="!celula.vazia">
               <text
-                :x="celula.x + (TAM - GAP) / 2"
+                :x="celula.x + (LARGURA_COL - GAP) / 2"
                 :y="celula.y + (TAM - GAP) / 2 - 8"
                 class="valor-celula"
                 :fill="celula.corTexto"
@@ -59,7 +59,7 @@
                 dominant-baseline="middle"
               >{{ celula.r.toFixed(2) }}</text>
               <text
-                :x="celula.x + (TAM - GAP) / 2"
+                :x="celula.x + (LARGURA_COL - GAP) / 2"
                 :y="celula.y + (TAM - GAP) / 2 + 14"
                 class="p-celula"
                 :fill="celula.corTexto"
@@ -67,7 +67,7 @@
                 dominant-baseline="middle"
               >p bruto = {{ formatarP(celula.pBruto) }}</text>
               <text
-                :x="celula.x + (TAM - GAP) / 2"
+                :x="celula.x + (LARGURA_COL - GAP) / 2"
                 :y="celula.y + (TAM - GAP) / 2 + 32"
                 class="p-celula"
                 :fill="celula.corTexto"
@@ -77,7 +77,7 @@
             </template>
             <text
               v-else
-              :x="celula.x + (TAM - GAP) / 2"
+              :x="celula.x + (LARGURA_COL - GAP) / 2"
               :y="celula.y + (TAM - GAP) / 2"
               class="valor-celula"
               fill="#666666"
@@ -146,7 +146,7 @@
 import { computed, ref, onMounted } from 'vue'
 import http from '../services/http.js'
 import InfoIcon from './icons/InfoIcon.vue'
-import { TEXTO_CORRELACOES_TEMPO, LINKS_TERMOS } from '../config/textosAnalises.js'
+import { TEXTO_CORRELACOES_TEMPO, LINKS_TERMOS, ROTULOS_AREA } from '../config/textosAnalises.js'
 
 // Anos e áreas da análise de caracteres (2021 fica de fora)
 const ANOS = [2020, 2022, 2023, 2024, 2025]
@@ -154,6 +154,7 @@ const AREAS = ['CH', 'LC', 'CN', 'MT']
 
 // Layout do SVG (unidades do viewBox)
 const TAM = 110
+const LARGURA_COL = 180 // largura das colunas de área, para o nome caber sem sobrepor
 const GAP = 4
 const MARGEM_ESQ = 200
 const MARGEM_TOPO = 45
@@ -229,13 +230,13 @@ function formatarP(p) {
 // Se faltar dado, a célula fica vazia (—).
 function montarGrade(config) {
   const alturaGrade = config.linhas.length * TAM - GAP
-  const barraX = MARGEM_ESQ + config.colunas.length * TAM + 30
+  const barraX = MARGEM_ESQ + config.colunas.length * LARGURA_COL + 30
   const largura = barraX + 100
   const altura = MARGEM_TOPO + alturaGrade + 10
 
   const celulas = config.linhas.flatMap((linha, j) =>
     config.colunas.map((coluna, i) => {
-      const x = MARGEM_ESQ + i * TAM
+      const x = MARGEM_ESQ + i * LARGURA_COL
       const y = MARGEM_TOPO + j * TAM
       const chave = `${linha.chave}-${coluna.chave}`
       const registro = dados.value.find((item) => config.casa(item, linha, coluna))
@@ -265,7 +266,7 @@ const grades = computed(() => [
     id: 'caracteres',
     titulo: '',
     ariaLabel: 'Mapa de calor da correlação de Spearman entre caracteres da questão e acerto, por ano e área',
-    colunas: AREAS.map((area) => ({ chave: area, rotulo: area })),
+    colunas: AREAS.map((area) => ({ chave: area, rotulo: ROTULOS_AREA[area] })),
     linhas: ANOS.map((ano) => ({ chave: ano, rotulo: String(ano) })),
     casa: (item, linha, coluna) => item.area === coluna.chave && item.ano === linha.chave
   })

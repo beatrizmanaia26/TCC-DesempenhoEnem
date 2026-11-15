@@ -109,8 +109,7 @@
           <ResumoTempoProva v-if="passoAtual.grafico === 'resumo-tempo'" ref="resumoRef" :ano="selectedYear" />
           <GraficoTempoLeitura v-else-if="passoAtual.grafico === 'tempo-leitura'" ref="graficoTempoRef" :ano="selectedYear" />
           <PalavrasQuestoesGrafico v-else-if="passoAtual.grafico === 'palavras'" ref="graficoPalavrasRef" :ano="selectedYear" />
-          <MapaCalorCorrelacoes v-else-if="passoAtual.grafico === 'mapa-correlacoes'" />
-          <CorrelacaoDificuldadeMapa v-else-if="passoAtual.grafico === 'mapa-dificuldade'" />
+          <CorrelacaoDificuldadeMapa v-else-if="passoAtual.grafico === 'mapa-dificuldade'" :ano="selectedYear" />
           <CorrelacaoMetadesCaracteres v-else-if="passoAtual.grafico === 'metades-caracteres'" :ano="selectedYear" />
           <CorrelacaoDispersaoItens v-else-if="passoAtual.grafico === 'dispersao-itens'" :ano="selectedYear" />
           <AnaliseImagensEnem v-else-if="passoAtual.grafico?.startsWith('imagem-')" :ano="selectedYear" :secao="passoAtual.grafico.replace('imagem-', '')" />
@@ -149,7 +148,6 @@ import FilterIcon from '@/components/icons/FilterIcon.vue'
 import ProvaInfoDisplay from '@/components/ProvaInfoDisplay.vue'
 import GraficoTempoLeitura from '@/components/GraficoTempoLeitura.vue'
 import ResumoTempoProva from '@/components/ResumoTempoProva.vue'
-import MapaCalorCorrelacoes from '@/components/MapaCalorCorrelacoes.vue'
 import CorrelacaoDificuldadeMapa from '@/components/CorrelacaoDificuldadeMapa.vue'
 import CorrelacaoMetadesCaracteres from '@/components/CorrelacaoMetadesCaracteres.vue'
 // ========GRAFICO DISPERSAO_ITENS - import
@@ -187,7 +185,7 @@ const ORDEM_ETAPAS_ENEM = ['reading-time', 'word-count', 'image', 'formality', '
 // Gráficos de cada análise do ENEM, na ordem em que aparecem (análises sem gráfico não entram aqui)
 const GRAFICOS_ENEM = {
   'reading-time': ['resumo-tempo', 'tempo-leitura'],
-  'word-count': ['palavras', 'mapa-correlacoes', 'mapa-dificuldade', 'metades-caracteres', 'dispersao-itens'],
+  'word-count': ['palavras', 'mapa-dificuldade', 'metades-caracteres', 'dispersao-itens'],
   image: ['imagem-presenca', 'imagem-caracteres', 'imagem-acertos', 'imagem-correlacao', 'imagem-tabela'],
   position: ['posicao-acertos', 'posicao-parametroB', 'posicao-dificuldade', 'posicao-dispersao', 'posicao-variacao']
 }

@@ -503,7 +503,7 @@ const goToForm = () => {
 .icone-exportar { width: 18px; height: 18px; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .panel { padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 12px; background: white; box-shadow: 0 8px 28px #00000012; }
 .panel h2 { margin: 0 0 1rem; color: #263238; font-size: 1.25rem; }
-.tempo-cabecalho h2 { margin: 0; font-size: 1.6rem; }
+.tempo-cabecalho h2 { margin: 0; font-size: 1.25rem; }
 .tempo-cabecalho { display: flex; align-items: center; gap: .5rem; margin-bottom: .25rem; }
 .tempo-subtitulo { margin: 0 0 1rem; color: #666; font-size: 1.1rem; }
 .tempo-conteudo { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }

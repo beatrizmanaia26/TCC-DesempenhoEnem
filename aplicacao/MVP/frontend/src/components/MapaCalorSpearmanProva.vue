@@ -9,7 +9,7 @@
       Correlação de <a :href="URL_SPEARMAN" target="_blank" rel="noopener noreferrer" class="correlacoes-link">Spearman</a> entre os caracteres de cada questão desta prova e o percentual de acerto, separada por nível de dificuldade.
     </p>
     <p v-if="temDados" class="correlacoes-subtitulo">
-      Com poucas questões por nível, o resultado é instável. Cada célula precisa de pelo menos 3 questões com acerto informado; as demais aparecem como —.
+      Com poucas questões por nível, o resultado é instável. Cada célula precisa de pelo menos 3 questões com acerto informado; as demais aparecem como —. Círculo escuro com ★ = p (Holm) &lt; 0,05.
     </p>
 
     <svg
@@ -74,6 +74,11 @@
           text-anchor="middle"
           dominant-baseline="middle"
         >—</text>
+        <g v-if="celula.significativa" class="significancia-celula" aria-label="Resultado significativo após ajuste de Holm">
+          <circle :cx="celula.x + LARGURA_CELULA - GAP - 17" :cy="celula.y + 17" r="12" />
+          <text :x="celula.x + LARGURA_CELULA - GAP - 17" :y="celula.y + 17" text-anchor="middle" dominant-baseline="middle">★</text>
+          <title>p (Holm) abaixo de 0,05</title>
+        </g>
       </g>
 
       <defs>
@@ -104,6 +109,8 @@
     <p v-else class="correlacoes-status">
       Na página anterior, informe os acertos por questão no campo "Deseja incluir métricas dos estudantes?" e a dificuldade de cada questão para ver este gráfico.
     </p>
+
+    <p v-if="temDados && quantidadeValidas" class="correlacao-leitura"><strong>Resultado:</strong> {{ quantidadeSignificativas }} de {{ quantidadeValidas }} correlações válidas têm p (Holm) abaixo de 0,05. {{ quantidadeSignificativas ? 'Mesmo uma associação estatisticamente significativa não prova que o tamanho da questão causou mudança no desempenho.' : 'Nesta prova, não encontramos evidência estatística clara de associação após o ajuste; isso não prova que a relação não exista.' }}</p>
 
     <button v-if="temDados" type="button" class="filter-btn" @click="mostrarMais = !mostrarMais">
       {{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
@@ -195,6 +202,7 @@ const notas = [
   'Violeta = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
   'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
   'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
+  'Círculo escuro com ★ = p (Holm) < 0,05.',
   'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
   'p baixo: um r seria raro sem relação, há indício de relação.',
   'p alto: um r seria comum sem relação. O resultado é compatível com ausência de relação.',
@@ -254,6 +262,7 @@ const celulas = computed(() => linhas.map((linha, j) => {
     x,
     y,
     vazia: false,
+    significativa: resultado.p !== null && resultado.p < 0.05,
     r: resultado.r,
     pBruto: resultado.pBruto,
     p: resultado.p,
@@ -261,6 +270,12 @@ const celulas = computed(() => linhas.map((linha, j) => {
     corTexto: corTextoPara(rgb)
   }
 }))
+
+// Contagem do resultado: só células com correlação válida entram
+const quantidadeValidas = computed(() => celulas.value.filter((celula) => !celula.vazia).length)
+const quantidadeSignificativas = computed(() =>
+  celulas.value.filter((celula) => !celula.vazia && celula.significativa).length
+)
 </script>
 
 <style scoped>
@@ -317,6 +332,25 @@ const celulas = computed(() => linhas.map((linha, j) => {
   height: auto;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.correlacao-leitura {
+  margin: 0.65rem 0;
+  color: #475467;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.significancia-celula circle {
+  fill: #263238;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.significancia-celula text {
+  fill: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .rotulo-eixo {

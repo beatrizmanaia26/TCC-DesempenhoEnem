@@ -5,16 +5,15 @@
       <InfoIcon warning :tooltip="tooltipMapa" class="tooltip-largo" />
     </div>
     <p class="correlacoes-subtitulo">{{ TEXTO_MAPA_DIFICULDADE.subtitulo }}</p>
+    <ul class="correlacoes-legenda correlacoes-cores">
+      <li v-for="(texto, indice) in CORES_MAPA_DIFICULDADE" :key="indice">{{ texto }}</li>
+    </ul>
 
     <div v-if="carregando" class="correlacoes-status">Carregando correlações...</div>
     <div v-else-if="erro" class="correlacoes-status correlacoes-erro">{{ erro }}</div>
 
     <div v-else>
       <div v-for="grade in grades" :key="grade.id" class="grade-correlacao">
-        <h4 class="grade-titulo">
-          {{ grade.titulo }}
-        </h4>
-        <p class="grade-resultado">{{ grade.resultado }}</p>
         <svg
           class="mapa-calor"
           :viewBox="`0 0 ${grade.largura} ${grade.altura}`"
@@ -25,7 +24,7 @@
           <text
             v-for="(coluna, i) in grade.colunas"
             :key="`col-${coluna.chave}`"
-            :x="MARGEM_ESQ + i * TAM + (TAM - GAP) / 2"
+            :x="MARGEM_ESQ + i * LARGURA_COL + (LARGURA_COL - GAP) / 2"
             :y="MARGEM_TOPO - 12"
             class="rotulo-eixo"
             text-anchor="middle"
@@ -48,13 +47,15 @@
               class="celula-rect"
               :x="celula.x"
               :y="celula.y"
-              :width="TAM - GAP"
+              :width="LARGURA_COL - GAP"
               :height="TAM - GAP"
               :fill="celula.cor"
+              :stroke="celula.significativa ? '#263238' : 'none'"
+              :stroke-width="celula.significativa ? 3 : 0"
             />
             <template v-if="!celula.vazia">
               <text
-                :x="celula.x + (TAM - GAP) / 2"
+                :x="celula.x + (LARGURA_COL - GAP) / 2"
                 :y="celula.y + (TAM - GAP) / 2 - 8"
                 class="valor-celula"
                 :fill="celula.corTexto"
@@ -62,7 +63,7 @@
                 dominant-baseline="middle"
               >{{ celula.r.toFixed(2) }}</text>
               <text
-                :x="celula.x + (TAM - GAP) / 2"
+                :x="celula.x + (LARGURA_COL - GAP) / 2"
                 :y="celula.y + (TAM - GAP) / 2 + 14"
                 class="p-celula"
                 :fill="celula.corTexto"
@@ -70,7 +71,7 @@
                 dominant-baseline="middle"
               >p bruto = {{ formatarP(celula.pBruto) }}</text>
               <text
-                :x="celula.x + (TAM - GAP) / 2"
+                :x="celula.x + (LARGURA_COL - GAP) / 2"
                 :y="celula.y + (TAM - GAP) / 2 + 32"
                 class="p-celula"
                 :fill="celula.corTexto"
@@ -80,13 +81,18 @@
             </template>
             <text
               v-else
-              :x="celula.x + (TAM - GAP) / 2"
+              :x="celula.x + (LARGURA_COL - GAP) / 2"
               :y="celula.y + (TAM - GAP) / 2"
               class="valor-celula"
               fill="#666666"
               text-anchor="middle"
               dominant-baseline="middle"
             >—</text>
+            <g v-if="celula.significativa" class="significancia-celula" aria-label="Resultado significativo após ajuste de Holm">
+              <circle :cx="celula.x + LARGURA_COL - GAP - 17" :cy="celula.y + 17" r="12" />
+              <text :x="celula.x + LARGURA_COL - GAP - 17" :y="celula.y + 17" text-anchor="middle" dominant-baseline="middle">★</text>
+              <title>p (Holm) abaixo de 0,05</title>
+            </g>
           </g>
 
           <!-- Barra de cor (-1 a +1), mesma escala do mapa geral -->
@@ -124,6 +130,9 @@
       </div>
     </div>
 
+    <p v-if="!carregando && !erro && quantidadeValidas" class="correlacao-leitura"><strong>Resultado:</strong> {{ quantidadeSignificativas }} de {{ quantidadeValidas }} correlações válidas têm p (Holm) abaixo de 0,05. {{ quantidadeSignificativas ? 'Mesmo uma associação estatisticamente significativa não prova que a quantidade de caracteres causou mudança no desempenho.' : 'Neste ano, não encontramos evidência estatística clara de associação após o ajuste; isso não prova que a relação não exista.' }}</p>
+    <p v-else-if="!carregando && !erro" class="correlacao-leitura"><strong>Resultado:</strong> Não há correlações com dados suficientes para este ano.</p>
+
     <button v-if="!carregando && !erro" type="button" class="filter-btn botao-mais-info" @click="mostrarMais = !mostrarMais">
       {{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
     </button>
@@ -143,27 +152,6 @@
       </li>
     </ul>
 
-    <div v-if="!carregando && !erro" class="navigation">
-      <button
-        type="button"
-        class="btn-nav"
-        :disabled="indiceNivel === 0"
-        aria-label="Nível anterior"
-        @click="nivelAnterior"
-      >
-        ←
-      </button>
-      <span class="group-indicator">{{ indiceNivel + 1 }} / {{ NIVEIS.length }}</span>
-      <button
-        type="button"
-        class="btn-nav"
-        :disabled="indiceNivel === NIVEIS.length - 1"
-        aria-label="Próximo nível"
-        @click="proximoNivel"
-      >
-        →
-      </button>
-    </div>
   </div>
 </template>
 
@@ -173,15 +161,18 @@ import { computed, ref, onMounted } from 'vue'
 import http from '../services/http.js'
 import {
   TEXTO_MAPA_DIFICULDADE,
-  TEXTO_RESULTADO_DIFICULDADE,
-  LINKS_TERMOS
+  CORES_MAPA_DIFICULDADE,
+  LINKS_TERMOS,
+  ROTULOS_AREA
 } from '../config/textosAnalises.js'
 import InfoIcon from './icons/InfoIcon.vue'
 
 
-// Anos, áreas e níveis da análise (2021 fica de fora)
-const ANOS = [2020, 2022, 2023, 2024, 2025]
+// O ano vem da aba do ENEM: o mapa mostra só esse ano, com os três níveis de dificuldade.
+// Áreas da análise (2021 fica de fora)
+const props = defineProps({ ano: { type: Number, default: null } })
 const AREAS = ['CH', 'LC', 'CN', 'MT']
+// Níveis de dificuldade: uma linha do mapa cada
 const NIVEIS = [
   { chave: 'facil', rotulo: 'Fácil' },
   { chave: 'media', rotulo: 'Médio' },
@@ -190,6 +181,7 @@ const NIVEIS = [
 
 // Layout do SVG (unidades do viewBox), igual ao MapaCalorCorrelacoes
 const TAM = 110
+const LARGURA_COL = 180 // largura das colunas de área, para o nome caber sem sobrepor
 const GAP = 4
 const MARGEM_ESQ = 200
 const MARGEM_TOPO = 45
@@ -262,25 +254,26 @@ function formatarP(p) {
   return p < 0.001 ? '< 0.001' : p.toFixed(3)
 }
 
-// Monta a grade de um nível: linhas = anos, colunas = áreas. Célula sem dado fica vazia (—).
-function montarGrade(nivel) {
-  const linhas = ANOS.map((ano) => ({ chave: ano, rotulo: String(ano) }))
-  const colunas = AREAS.map((area) => ({ chave: area, rotulo: area }))
+// Monta a grade do ano selecionado: linhas = níveis (fácil, médio, difícil), colunas = áreas.
+// Célula sem dado fica vazia (—).
+function montarGrade() {
+  const linhas = NIVEIS
+  const colunas = AREAS.map((area) => ({ chave: area, rotulo: ROTULOS_AREA[area] }))
   const alturaGrade = linhas.length * TAM - GAP
-  const barraX = MARGEM_ESQ + colunas.length * TAM + 30
+  const barraX = MARGEM_ESQ + colunas.length * LARGURA_COL + 30
   const largura = barraX + 100
   const altura = MARGEM_TOPO + alturaGrade + 10
 
   const celulas = linhas.flatMap((linha, j) =>
     colunas.map((coluna, i) => {
-      const x = MARGEM_ESQ + i * TAM
+      const x = MARGEM_ESQ + i * LARGURA_COL
       const y = MARGEM_TOPO + j * TAM
       const chave = `${linha.chave}-${coluna.chave}`
       const registro = dados.value.find(
-        (item) => item.dificuldade === nivel.chave && item.area === coluna.chave && item.ano === linha.chave
+        (item) => item.ano === props.ano && item.dificuldade === linha.chave && item.area === coluna.chave
       )
       if (!registro) {
-        return { chave, x, y, vazia: true, cor: '#F3F4F6' }
+        return { chave, x, y, vazia: true, significativa: false, cor: '#F3F4F6' }
       }
       const rgb = rgbPorR(registro.r)
       return {
@@ -288,6 +281,7 @@ function montarGrade(nivel) {
         x,
         y,
         vazia: false,
+        significativa: registro.p < 0.05,
         r: registro.r,
         p: registro.p,
         pBruto: registro.pBruto,
@@ -298,11 +292,8 @@ function montarGrade(nivel) {
   )
 
   return {
-    id: nivel.chave,
-    titulo: `Nível de dificuldade: ${nivel.rotulo.toLowerCase()}`,
-    resultado: TEXTO_RESULTADO_DIFICULDADE[nivel.chave],
-
-    ariaLabel: `Mapa de calor da correlação de Spearman entre caracteres da questão e acerto, nível ${nivel.rotulo.toLowerCase()}, por ano e área`,
+    id: 'dificuldade',
+    ariaLabel: `Mapa de calor da correlação de Spearman entre caracteres da questão e acerto, por nível de dificuldade e área, em ${props.ano}`,
     colunas,
     linhas,
     alturaGrade,
@@ -313,19 +304,13 @@ function montarGrade(nivel) {
   }
 }
 
-// Nível exibido, navegado com as setas (Fácil por padrão). A troca é imediata.
-const indiceNivel = ref(0)
+const grades = computed(() => [montarGrade()])
 
-const nivelAnterior = () => {
-  if (indiceNivel.value > 0) indiceNivel.value--
-}
-
-const proximoNivel = () => {
-  if (indiceNivel.value < NIVEIS.length - 1) indiceNivel.value++
-}
-
-// Um único mapa: o do nível atual
-const grades = computed(() => [montarGrade(NIVEIS[indiceNivel.value])])
+// Contagem do resultado: só células com dado (correlação válida) entram
+const quantidadeValidas = computed(() => grades.value[0].celulas.filter((celula) => !celula.vazia).length)
+const quantidadeSignificativas = computed(() =>
+  grades.value[0].celulas.filter((celula) => !celula.vazia && celula.significativa).length
+)
 
 async function carregar() {
   carregando.value = true
@@ -377,21 +362,8 @@ onMounted(carregar)
   font-size: 0.9rem;
 }
 
-.grade-resultado {
-  margin: 0 0 0.75rem;
-  color: #444;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
 .grade-correlacao {
   margin-bottom: 1.5rem;
-}
-
-.grade-titulo {
-  margin: 0 0 0.5rem;
-  color: #333;
-  font-size: 1rem;
 }
 
 .correlacoes-status {
@@ -410,6 +382,26 @@ onMounted(carregar)
   height: auto;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Marcador de p (Holm) < 0,05: mesmo estilo do gráfico de presença de imagem */
+.significancia-celula circle {
+  fill: #263238;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.significancia-celula text {
+  fill: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.correlacao-leitura {
+  margin: 0.65rem 0;
+  color: #475467;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .rotulo-eixo {
@@ -454,40 +446,4 @@ onMounted(carregar)
   font-size: 0.85rem;
 }
 
-/* Navegação entre níveis: mesmo estilo das setas de QuestionDifficultySelector.vue */
-.navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1.5rem 0 0.5rem;
-}
-
-.btn-nav {
-  padding: 0.75rem 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background: white;
-  color: #333;
-  font-weight: 500;
-  cursor: pointer;
-  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
-}
-
-.btn-nav:hover:not(:disabled) {
-  border-color: #0070C0;
-  color: #0070C0;
-  background: #f9f9f9;
-}
-
-.btn-nav:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.group-indicator {
-  color: #666;
-  font-weight: 600;
-  font-size: 1rem;
-}
 </style>

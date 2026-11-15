@@ -77,4 +77,38 @@ describe('MapaCalorSpearmanProva', () => {
     expect(wrapper.find('.correlacoes-legenda').exists()).toBe(false)
     expect(wrapper.find('.correlacoes-status').text()).toContain('informe os acertos por questão')
   })
+
+  it('não marca célula nem mostra ★ quando nenhum p (Holm) fica abaixo de 0,05', () => {
+    // Postos de y (2,4,1,3) em relação a x (1,2,3,4): Σd² = 10, ρ = 0, p = 1
+    const semRelacao = [
+      { caracteres: 100, taxa_acerto_percentual: 60, dificuldade: 'facil' },
+      { caracteres: 200, taxa_acerto_percentual: 90, dificuldade: 'facil' },
+      { caracteres: 300, taxa_acerto_percentual: 50, dificuldade: 'facil' },
+      { caracteres: 400, taxa_acerto_percentual: 80, dificuldade: 'facil' }
+    ]
+    const wrapper = mount(MapaCalorSpearmanProva, { props: { questoes: semRelacao } })
+    expect(wrapper.findAll('.significancia-celula')).toHaveLength(0)
+    expect(wrapper.find('.correlacao-leitura').text()).toContain('Resultado: 0 de 2 correlações válidas têm p (Holm) abaixo de 0,05')
+  })
+
+  it('marca com ★ e borda escura as células com p (Holm) < 0,05 e conta no resultado', () => {
+    // 10 questões em ordem perfeitamente inversa: r = -1 e p bruto pequeno em Todas e Fácil
+    const forte = Array.from({ length: 10 }, (_, i) => ({
+      caracteres: (i + 1) * 100,
+      taxa_acerto_percentual: 95 - i * 5,
+      dificuldade: 'facil'
+    }))
+    const wrapper = mount(MapaCalorSpearmanProva, { props: { questoes: forte } })
+    expect(wrapper.findAll('.significancia-celula').length).toBeGreaterThan(0)
+    expect(wrapper.find('.significancia-celula text').text()).toBe('★')
+    expect(wrapper.find('.correlacao-leitura').text()).toContain('de 2 correlações válidas têm p (Holm) abaixo de 0,05')
+    expect(wrapper.find('.correlacao-leitura').text()).toContain('não prova que o tamanho da questão causou mudança')
+  })
+
+  it('mostra a legenda do círculo escuro com ★ logo abaixo do título, junto ao aviso de poucas questões', () => {
+    const wrapper = mount(MapaCalorSpearmanProva, { props: { questoes } })
+    const subtitulos = wrapper.findAll('.correlacoes-subtitulo').map((p) => p.text())
+    expect(subtitulos[1]).toContain('Cada célula precisa de pelo menos 3 questões')
+    expect(subtitulos[1]).toContain('Círculo escuro com ★ = p (Holm) < 0,05.')
+  })
 })

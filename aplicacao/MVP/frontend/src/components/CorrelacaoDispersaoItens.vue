@@ -151,7 +151,7 @@ import { ref, computed, watch } from 'vue'
 import http from '../services/http.js'
 import InfoIcon from './icons/InfoIcon.vue'
 import FilterIcon from './icons/FilterIcon.vue'
-import { TEXTO_DISPERSAO_ITENS, LINKS_TERMOS, URL_INTERVALO_CONFIANCA } from '../config/textosAnalises.js'
+import { TEXTO_DISPERSAO_ITENS, LINKS_TERMOS, URL_INTERVALO_CONFIANCA, ROTULOS_AREA } from '../config/textosAnalises.js'
 import { calcularLogisticaProva } from '../services/logisticaProva.js'
 
 // Link do termo "Modelo logístico" usado nas explicações
@@ -386,7 +386,7 @@ const pontosSvg = computed(() =>
       cy: yDe(ponto.acerto),
       cor: nivel ? nivel.cor : '#666666',
       tooltip:
-        `Item ${ponto.coItem} · ${ponto.area} · ${nivel ? nivel.rotulo : 'sem nível'}\n` +
+        `Item ${ponto.coItem} · ${ROTULOS_AREA[ponto.area] ?? ponto.area} · ${nivel ? nivel.rotulo : 'sem nível'}\n` +
         `Caracteres: ${Math.round(ponto.caracteres)}\n` +
         `Acerto: ${ponto.acerto.toFixed(1)}%`
     }

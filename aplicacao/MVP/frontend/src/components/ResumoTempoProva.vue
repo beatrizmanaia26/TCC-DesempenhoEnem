@@ -217,7 +217,7 @@ function aplicarFiltro() {
 .resumo-titulo {
   margin: 0;
   color: #333;
-  font-size: 1.6rem;
+  font-size: 1.25rem;
 }
 
 .resumo-subtitulo {
