@@ -768,13 +768,218 @@ let dispersaoItensCache = null
 
 // Lê um CSV com cabeçalho e devolve um objeto por linha (valores como texto)
 function lerCsvComCabecalho(caminho) {
-  const linhas = fs.readFileSync(caminho, 'utf-8').trim().split(/\r?\n/)
+  const linhas = fs.readFileSync(caminho, 'utf-8').replace(/^\uFEFF/, '').trim().split(/\r?\n/)
   const cabecalho = separarLinhaCsv(linhas.shift())
   return linhas.map((linha) => {
     const colunas = separarLinhaCsv(linha)
     return Object.fromEntries(cabecalho.map((nome, i) => [nome, colunas[i]]))
   })
 }
+
+// Presença de imagens do JSON Azul combinada com acertos dos microdados por questão.
+const DESEMPENHO_IMAGENS_CSV = path.join(__dirname, '../../../outputs/qtde_acertos/desempenho_questoes.csv')
+const ESTATISTICAS_IMAGENS_CSV = path.join(__dirname, '../../../outputs/imagens/estatisticas_por_grupo.csv')
+const COMPARACOES_IMAGENS_CSV = path.join(__dirname, '../../../outputs/imagens/comparacoes_por_ano_area.csv')
+const ANOS_IMAGENS_ENEM = new Set([2020, 2022, 2023, 2024, 2025])
+let analiseImagensEnemCache = null
+
+function normalizarIdiomaImagem(valor) {
+  const idioma = String(valor ?? '').trim().toLowerCase()
+  if (!idioma || idioma === 'nan' || idioma === 'geral') return ''
+  if (idioma.startsWith('ingl')) return 'ingles'
+  if (idioma.startsWith('espan')) return 'espanhol'
+  return idioma
+}
+
+function chaveQuestaoImagem(ano, area, posicao, idioma) {
+  return `${ano}-${area}-${posicao}-${normalizarIdiomaImagem(idioma)}`
+}
+
+function carregarAnaliseImagensEnem() {
+  if (analiseImagensEnemCache) return analiseImagensEnemCache
+
+  const imagens = new Map()
+  ANOS_IMAGENS_ENEM.forEach((ano) => {
+    ;[1, 2].forEach((dia) => {
+      const nomePasta = `enem${ano}Dia${dia}RegularAzul`
+      const arquivo = path.join(PASTA_JSON_PROVAS, nomePasta, `${nomePasta}.json`)
+      if (!fs.existsSync(arquivo)) return
+
+      const prova = JSON.parse(fs.readFileSync(arquivo, 'utf-8'))
+      ;(prova.questoes ?? []).forEach((questao) => {
+        const posicao = Number(questao.questao)
+        imagens.set(chaveQuestaoImagem(ano, areaDaPosicao(posicao), posicao, questao.idioma), {
+          temImagem: Boolean(questao.tem_imagem),
+          caracteres: (questao.texto ?? '').replace(/[ \t\n\r\u00a0]/g, '').length
+        })
+      })
+    })
+  })
+
+  const dificuldades = carregarDificuldadesAzul()
+  const questoes = lerCsvComCabecalho(DESEMPENHO_IMAGENS_CSV)
+    .filter((linha) => ANOS_IMAGENS_ENEM.has(Number(linha.ano)))
+    .map((linha) => {
+      const ano = Number(linha.ano)
+      const posicao = Number(linha.posicao_prova_azul)
+      const area = linha.area
+      const imagem = imagens.get(chaveQuestaoImagem(ano, area, posicao, linha.lingua_estrangeira))
+      if (!imagem) {
+        throw new Error(`Não foi possível relacionar imagem e acertos: ${ano}, ${area}, questão ${posicao}, idioma ${linha.lingua_estrangeira || 'geral'}`)
+      }
+      return {
+        ano,
+        dia: posicao <= 90 ? 1 : 2,
+        area,
+        posicao,
+        idioma: linha.lingua_estrangeira || 'geral',
+        rotulo: `Q${posicao}`,
+        temImagem: imagem.temImagem,
+        caracteres: imagem.caracteres,
+        dificuldade: dificuldades.get(`${ano}-${posicao}`) ?? null,
+        percentualAcertos: numeroOuNulo(linha.percentual_acertos),
+        acertos: numeroOuNulo(linha.n_acertos),
+        totalRespostas: numeroOuNulo(linha.n_respostas)
+      }
+    })
+
+  const estatisticas = lerCsvComCabecalho(ESTATISTICAS_IMAGENS_CSV).map((linha) => ({
+    ano: Number(linha.ano),
+    area: linha.area,
+    grupo: linha.grupo,
+    nQuestoes: Number(linha.n_questoes),
+    media: numeroOuNulo(linha.media),
+    mediana: numeroOuNulo(linha.mediana),
+    desvioPadrao: numeroOuNulo(linha.desvio_padrao),
+    q1: numeroOuNulo(linha.q1),
+    q3: numeroOuNulo(linha.q3),
+    iqr: numeroOuNulo(linha.iqr)
+  }))
+  const comparacoes = lerCsvComCabecalho(COMPARACOES_IMAGENS_CSV).map((linha) => ({
+    ano: Number(linha.ano),
+    area: linha.area,
+    nComImagem: Number(linha.n_com_imagem),
+    nSemImagem: Number(linha.n_sem_imagem),
+    diferencaMedias: numeroOuNulo(linha.diferenca_medias_com_menos_sem),
+    diferencaMedianas: numeroOuNulo(linha.diferenca_medianas_com_menos_sem),
+    correlacaoPontoBisserial: numeroOuNulo(linha.correlacao_ponto_bisserial_r),
+    pontoBisserialP: numeroOuNulo(linha.ponto_bisserial_p_value),
+    pontoBisserialPHolm: numeroOuNulo(linha.ponto_bisserial_p_holm)
+  }))
+
+  analiseImagensEnemCache = { questoes, estatisticas, comparacoes }
+  return analiseImagensEnemCache
+}
+
+// Retorna indicadores de imagem, acertos por item e os resumos estatísticos do ENEM.
+app.get('/api/metricas/imagens-enem', (req, res) => {
+  const ano = Number(req.query.ano)
+  if (!ANOS_IMAGENS_ENEM.has(ano)) {
+    return res.status(400).json({ error: 'Informe um ano disponível: 2020, 2022, 2023, 2024 ou 2025' })
+  }
+
+  try {
+    const dados = carregarAnaliseImagensEnem()
+    res.json({
+      ano,
+      questoes: dados.questoes.filter((questao) => questao.ano === ano),
+      estatisticas: dados.estatisticas.filter((linha) => linha.ano === ano),
+      comparacoes: dados.comparacoes.filter((linha) => linha.ano === ano)
+    })
+  } catch (error) {
+    console.error('Erro ao carregar análise de imagens do ENEM:', error)
+    res.status(500).json({ error: error.message })
+  }
+})
+
+// Métricas de posição das questões, correlações e variação entre cadernos.
+const DESEMPENHO_POSICAO_CSV = path.join(__dirname, '../../../outputs/ordem/desempenho_questoes_por_prova.csv')
+const CORRELACAO_POSICAO_ACERTOS_CSV = path.join(__dirname, '../../../outputs/ordem/correlacoes_posicao_acertos.csv')
+const CORRELACAO_POSICAO_TRI_CSV = path.join(__dirname, '../../../outputs/ordem/correlacoes_posicao_parametro_b.csv')
+const CORRELACAO_POSICAO_DIFICULDADE_CSV = path.join(__dirname, '../../../outputs/ordem/correlacoes_posicao_por_dificuldade.csv')
+const ARQUIVOS_POSICAO_CSV = [
+  DESEMPENHO_POSICAO_CSV,
+  CORRELACAO_POSICAO_ACERTOS_CSV,
+  CORRELACAO_POSICAO_TRI_CSV,
+  CORRELACAO_POSICAO_DIFICULDADE_CSV
+]
+let analisePosicaoEnemCache = null
+
+function carregarAnalisePosicaoEnem() {
+  const versaoArquivos = ARQUIVOS_POSICAO_CSV.map((arquivo) => fs.statSync(arquivo).mtimeMs).join(':')
+  if (analisePosicaoEnemCache?.versao === versaoArquivos) return analisePosicaoEnemCache.dados
+
+  const questoes = lerCsvComCabecalho(DESEMPENHO_POSICAO_CSV).map((linha) => {
+    const ano = Number(linha.ano)
+    const area = linha.area
+    const coProva = Number(linha.co_prova)
+    const indiceCaderno = coProva - (CODIGO_AZUL_POR_ANO[ano]?.[area] ?? coProva)
+    return {
+      ano,
+      area,
+      coProva,
+      coItem: Number(linha.co_item),
+      posicao: Number(linha.posicao_prova),
+      parametroB: numeroOuNulo(linha.parametro_b_tri),
+      dificuldade: linha.dificuldade_tri || null,
+      percentualAcertos: numeroOuNulo(linha.percentual_acertos),
+      caderno: CORES_POR_ANO[ano]?.[indiceCaderno] ?? `Caderno ${indiceCaderno + 1}`
+    }
+  })
+  const correlacoesAcertos = lerCsvComCabecalho(CORRELACAO_POSICAO_ACERTOS_CSV).map((linha) => ({
+    ano: Number(linha.ano), area: linha.area,
+    correlacao: numeroOuNulo(linha.correlacao), p: numeroOuNulo(linha.p_valor)
+  }))
+  const correlacoesParametroB = lerCsvComCabecalho(CORRELACAO_POSICAO_TRI_CSV).map((linha) => ({
+    ano: Number(linha.ano), area: linha.area,
+    correlacao: numeroOuNulo(linha.correlacao), p: numeroOuNulo(linha.p_valor)
+  }))
+  const correlacoesDificuldade = lerCsvComCabecalho(CORRELACAO_POSICAO_DIFICULDADE_CSV).map((linha) => ({
+    ano: Number(linha.ano), area: linha.area,
+    dificuldade: linha.dificuldade_normalizada || null,
+    correlacao: numeroOuNulo(linha.correlacao), p: numeroOuNulo(linha.p_valor)
+  }))
+
+  const dados = { questoes, correlacoesAcertos, correlacoesParametroB, correlacoesDificuldade }
+  analisePosicaoEnemCache = { versao: versaoArquivos, dados }
+  return dados
+}
+
+app.get('/api/metricas/posicao-enem', (req, res) => {
+  const ano = Number(req.query.ano)
+  if (!ANOS_IMAGENS_ENEM.has(ano)) {
+    return res.status(400).json({ error: 'Informe um ano disponível: 2020, 2022, 2023, 2024 ou 2025' })
+  }
+
+  try {
+    const dados = carregarAnalisePosicaoEnem()
+    const questoes = dados.questoes.filter((questao) => questao.ano === ano)
+    const itensPorQuestao = new Map()
+    questoes.forEach((questao) => {
+      const chave = `${questao.area}-${questao.coItem}`
+      if (!itensPorQuestao.has(chave)) itensPorQuestao.set(chave, [])
+      itensPorQuestao.get(chave).push(questao)
+    })
+    const variacoes = [...itensPorQuestao.entries()].flatMap(([chave, itens]) => {
+      const cadernos = new Set(itens.map((item) => item.coProva))
+      const percentuais = itens.map((item) => item.percentualAcertos).filter(Number.isFinite)
+      if (cadernos.size !== 4 || !percentuais.length) return []
+      return [{ area: itens[0].area, coItem: itens[0].coItem, variacao: Math.max(...percentuais) - Math.min(...percentuais) }]
+    })
+
+    res.json({
+      ano,
+      questoes,
+      variacoes,
+      correlacoesAcertos: dados.correlacoesAcertos.filter((linha) => linha.ano === ano),
+      correlacoesParametroB: dados.correlacoesParametroB.filter((linha) => linha.ano === ano),
+      correlacoesDificuldade: dados.correlacoesDificuldade.filter((linha) => linha.ano === ano)
+    })
+  } catch (error) {
+    console.error('Erro ao carregar análise de posição do ENEM:', error)
+    res.status(500).json({ error: error.message })
+  }
+})
 
 function carregarDispersaoItens() {
   if (dispersaoItensCache) {

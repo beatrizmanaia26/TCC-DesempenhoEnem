@@ -113,6 +113,8 @@
           <CorrelacaoDificuldadeMapa v-else-if="passoAtual.grafico === 'mapa-dificuldade'" />
           <CorrelacaoMetadesCaracteres v-else-if="passoAtual.grafico === 'metades-caracteres'" :ano="selectedYear" />
           <CorrelacaoDispersaoItens v-else-if="passoAtual.grafico === 'dispersao-itens'" :ano="selectedYear" />
+          <AnaliseImagensEnem v-else-if="passoAtual.grafico?.startsWith('imagem-')" :ano="selectedYear" :secao="passoAtual.grafico.replace('imagem-', '')" />
+          <AnalisePosicaoEnem v-else-if="passoAtual.grafico?.startsWith('posicao-')" :ano="selectedYear" :secao="passoAtual.grafico.replace('posicao-', '')" />
 
           <p v-if="!passoAtual.total" class="etapa-sem-grafico">
             O gráfico desta análise ainda não está disponível no ENEM.
@@ -154,6 +156,8 @@ import CorrelacaoMetadesCaracteres from '@/components/CorrelacaoMetadesCaractere
 import CorrelacaoDispersaoItens from '@/components/CorrelacaoDispersaoItens.vue'
 // =======grafico DISPERSAO_ITENS
 import PalavrasQuestoesGrafico from '@/components/PalavrasQuestoesGrafico.vue'
+import AnaliseImagensEnem from '@/components/AnaliseImagensEnem.vue'
+import AnalisePosicaoEnem from '@/components/AnalisePosicaoEnem.vue'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
 import http from '@/services/http.js'
@@ -183,7 +187,9 @@ const ORDEM_ETAPAS_ENEM = ['reading-time', 'word-count', 'image', 'formality', '
 // Gráficos de cada análise do ENEM, na ordem em que aparecem (análises sem gráfico não entram aqui)
 const GRAFICOS_ENEM = {
   'reading-time': ['resumo-tempo', 'tempo-leitura'],
-  'word-count': ['palavras', 'mapa-correlacoes', 'mapa-dificuldade', 'metades-caracteres', 'dispersao-itens']
+  'word-count': ['palavras', 'mapa-correlacoes', 'mapa-dificuldade', 'metades-caracteres', 'dispersao-itens'],
+  image: ['imagem-presenca', 'imagem-caracteres', 'imagem-acertos', 'imagem-correlacao', 'imagem-tabela'],
+  position: ['posicao-acertos', 'posicao-parametroB', 'posicao-dificuldade', 'posicao-dispersao', 'posicao-variacao']
 }
 // Só entram as análises marcadas no filtro aplicado, na ordem de ORDEM_ETAPAS_ENEM
 const analisesEtapas = computed(() => ORDEM_ETAPAS_ENEM.filter((id) => selectedFilters.value.has(id)))
@@ -912,4 +918,3 @@ const uploadNewEnem = () => {
   }
 }
 </style>
-

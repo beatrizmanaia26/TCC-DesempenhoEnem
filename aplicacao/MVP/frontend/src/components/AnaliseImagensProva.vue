@@ -44,6 +44,69 @@
       </div>
     </div>
 
+    <div v-if="mostrarSecao('caracteres')" class="tempo-bloco">
+      <div class="grafico-cabecalho">
+        <h3>Quantidade de caracteres por presença de imagem</h3>
+        <InfoIcon tooltip="Cada ponto representa uma questão. A caixa mostra a mediana e o intervalo entre o 1º e o 3º quartil; as hastes vão até os valores que não são outliers. A contagem considera o texto da questão e as alternativas, sem espaços." />
+        <div v-if="temDificuldade" class="filter-wrapper">
+          <button type="button" class="filter-btn" @click="alternarFiltroCaracteres">
+            <FilterIcon />
+            Filtro
+          </button>
+          <div v-if="mostrarFiltroCaracteres" class="filter-menu">
+            <p class="filter-titulo">DIFICULDADE</p>
+            <div class="filter-option" v-for="opcao in opcoesDificuldade" :key="`caracteres-dificuldade-${opcao.valor}`">
+              <input
+                type="radio"
+                name="filtro-dificuldade-caracteres-imagens"
+                :id="`caracteres-dificuldade-imagens-${opcao.valor}`"
+                :checked="rascunhoDificuldadeCaracteres === opcao.valor"
+                @change="rascunhoDificuldadeCaracteres = opcao.valor"
+              />
+              <label :for="`caracteres-dificuldade-imagens-${opcao.valor}`">{{ opcao.rotulo }}</label>
+            </div>
+            <div class="filter-rodape">
+              <button type="button" class="filter-aplicar" @click="aplicarFiltroCaracteres">Aplicar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="grafico-subtitulo">Distribuição dos caracteres em {{ questoesCaracteresFiltradas.length }} de {{ questoesCaracteres.length }} questões com texto extraído. Passe o cursor sobre um ponto para ver a questão e o valor.</p>
+      <svg v-if="questoesCaracteresFiltradas.length" class="grafico-caracteres" viewBox="0 0 760 400" role="img" aria-label="Distribuição da quantidade de caracteres por presença de imagem, com pontos por questão e caixas mostrando a mediana e os quartis">
+        <text x="410" y="20" text-anchor="middle" class="texto-eixo">Caracteres (sem espaços)</text>
+        <g v-for="marca in marcasCaracteres" :key="`caracteres-eixo-${marca.proporcao}`">
+          <line x1="80" :y1="marca.y" x2="740" :y2="marca.y" class="linha-grade" />
+          <text x="70" :y="marca.y + 4" text-anchor="end" class="texto-eixo">{{ formatarCaracteres(marca.valor) }}</text>
+        </g>
+        <g v-for="grupo in gruposCaracteres" :key="grupo.key">
+          <template v-if="grupo.resumo">
+            <line :x1="grupo.centro" :y1="escalaYCaracteres(grupo.resumo.maxHaste)" :x2="grupo.centro" :y2="escalaYCaracteres(grupo.resumo.minHaste)" :stroke="grupo.cor" stroke-width="2" />
+            <line :x1="grupo.centro - 16" :y1="escalaYCaracteres(grupo.resumo.maxHaste)" :x2="grupo.centro + 16" :y2="escalaYCaracteres(grupo.resumo.maxHaste)" :stroke="grupo.cor" stroke-width="2" />
+            <line :x1="grupo.centro - 16" :y1="escalaYCaracteres(grupo.resumo.minHaste)" :x2="grupo.centro + 16" :y2="escalaYCaracteres(grupo.resumo.minHaste)" :stroke="grupo.cor" stroke-width="2" />
+            <rect :x="grupo.centro - 30" :y="escalaYCaracteres(grupo.resumo.q3)" width="60" :height="Math.max(1, escalaYCaracteres(grupo.resumo.q1) - escalaYCaracteres(grupo.resumo.q3))" :fill="grupo.cor" fill-opacity=".2" :stroke="grupo.cor" stroke-width="2" />
+            <line :x1="grupo.centro - 30" :y1="escalaYCaracteres(grupo.resumo.mediana)" :x2="grupo.centro + 30" :y2="escalaYCaracteres(grupo.resumo.mediana)" :stroke="grupo.cor" stroke-width="3" />
+          </template>
+          <circle v-for="ponto in grupo.pontos" :key="ponto.id" :cx="grupo.centro + ponto.deslocamento" :cy="escalaYCaracteres(ponto.caracteres)" r="4" :fill="grupo.cor" fill-opacity=".7">
+            <title>{{ ponto.rotulo }} · {{ formatarCaracteres(ponto.caracteres) }} caracteres</title>
+          </circle>
+          <text :x="grupo.centro" y="350" text-anchor="middle" class="texto-categoria">{{ grupo.rotulo }}</text>
+          <text :x="grupo.centro" y="372" text-anchor="middle" class="texto-eixo">n = {{ grupo.pontos.length }} questões</text>
+        </g>
+      </svg>
+      <button v-if="questoesCaracteresFiltradas.length" type="button" class="filter-btn botao-mais-info" @click="mostrarMaisCaracteres = !mostrarMaisCaracteres">
+        {{ mostrarMaisCaracteres ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
+      </button>
+      <ul v-if="mostrarMaisCaracteres && questoesCaracteresFiltradas.length" class="notas-grafico-caracteres">
+        <li><strong>Pontos:</strong> cada ponto representa uma questão. A cor indica apenas se o extrator identificou imagem naquela questão; ela não entra no cálculo da quantidade de caracteres.</li>
+        <li><strong>Contagem:</strong> considera o texto extraído da questão e suas alternativas, sem espaços, tabulações ou quebras de linha. Questões sem texto extraído não entram no gráfico.</li>
+        <li><strong>Linha dentro da caixa:</strong> é a mediana, o valor central quando as questões do grupo são ordenadas por quantidade de caracteres.</li>
+        <li><strong>Caixa:</strong> vai do 1º ao 3º quartil e reúne os 50% centrais das questões. Uma caixa mais alta indica maior variação nos tamanhos desse grupo.</li>
+        <li><strong>Hastes e pontos extremos:</strong> as hastes chegam aos menores e maiores valores dentro de 1,5 intervalo interquartil. Valores além das hastes são considerados outliers, mas continuam visíveis como pontos.</li>
+        <li><strong>n:</strong> indica quantas questões com texto extraído há em cada grupo. O filtro de dificuldade atualiza os pontos, as caixas e esses totais; grupos pequenos tornam a distribuição menos representativa.</li>
+      </ul>
+      <p v-if="!questoesCaracteresFiltradas.length" class="grafico-aviso">Não há questões com texto extraído para os filtros selecionados.</p>
+    </div>
+
     <div v-if="mostrarSecao('acertos')" class="tempo-bloco grafico-acertos">
         <div class="grafico-cabecalho">
           <h3>Percentual médio de acertos por presença de imagem</h3>
@@ -135,42 +198,48 @@
             <div v-if="mostrarFiltroTabela" class="filter-menu">
               <div v-if="temAcertos" class="filter-secao">
                 <p class="filter-titulo">MÉTRICA DE ACERTOS</p>
-                <div class="filter-option" v-for="opcao in opcoesMetricaAcertos" :key="`tabela-metrica-${opcao.valor}`">
-                  <input
-                    type="radio"
-                    name="filtro-metrica-imagens-tabela"
-                    :id="`tabela-metrica-imagens-${opcao.valor}`"
-                    :checked="rascunhoMetricaTabela === opcao.valor"
-                    @change="rascunhoMetricaTabela = opcao.valor"
-                  />
-                  <label :for="`tabela-metrica-imagens-${opcao.valor}`">{{ opcao.rotulo }}</label>
-                  <InfoIcon v-if="opcao.dica" warning :tooltip="opcao.dica" />
+                <div class="filter-lista">
+                  <div class="filter-option" v-for="opcao in opcoesMetricaAcertos" :key="`tabela-metrica-${opcao.valor}`">
+                    <input
+                      type="radio"
+                      name="filtro-metrica-imagens-tabela"
+                      :id="`tabela-metrica-imagens-${opcao.valor}`"
+                      :checked="rascunhoMetricaTabela === opcao.valor"
+                      @change="rascunhoMetricaTabela = opcao.valor"
+                    />
+                    <label :for="`tabela-metrica-imagens-${opcao.valor}`">{{ opcao.rotulo }}</label>
+                    <InfoIcon v-if="opcao.dica" warning :tooltip="opcao.dica" />
+                  </div>
                 </div>
               </div>
               <div v-if="temDificuldade" class="filter-secao">
                 <p class="filter-titulo">DIFICULDADE</p>
-                <div class="filter-option" v-for="opcao in opcoesDificuldade" :key="`tabela-dificuldade-${opcao.valor}`">
-                  <input
-                    type="radio"
-                    name="filtro-dificuldade-imagens-tabela"
-                    :id="`tabela-dificuldade-imagens-${opcao.valor}`"
-                    :checked="rascunhoDificuldadeTabela === opcao.valor"
-                    @change="rascunhoDificuldadeTabela = opcao.valor"
-                  />
-                  <label :for="`tabela-dificuldade-imagens-${opcao.valor}`">{{ opcao.rotulo }}</label>
+                <div class="filter-lista">
+                  <div class="filter-option" v-for="opcao in opcoesDificuldade" :key="`tabela-dificuldade-${opcao.valor}`">
+                    <input
+                      type="radio"
+                      name="filtro-dificuldade-imagens-tabela"
+                      :id="`tabela-dificuldade-imagens-${opcao.valor}`"
+                      :checked="rascunhoDificuldadeTabela === opcao.valor"
+                      @change="rascunhoDificuldadeTabela = opcao.valor"
+                    />
+                    <label :for="`tabela-dificuldade-imagens-${opcao.valor}`">{{ opcao.rotulo }}</label>
+                  </div>
                 </div>
               </div>
               <div class="filter-secao">
                 <p class="filter-titulo">PRESENÇA DE IMAGEM</p>
-                <div class="filter-option" v-for="opcao in opcoesImagem" :key="`tabela-imagem-${opcao.valor}`">
-                  <input
-                    type="radio"
-                    name="filtro-presenca-imagem-tabela"
-                    :id="`tabela-presenca-imagem-${opcao.valor}`"
-                    :checked="rascunhoImagemTabela === opcao.valor"
-                    @change="rascunhoImagemTabela = opcao.valor"
-                  />
-                  <label :for="`tabela-presenca-imagem-${opcao.valor}`">{{ opcao.rotulo }}</label>
+                <div class="filter-lista">
+                  <div class="filter-option" v-for="opcao in opcoesImagem" :key="`tabela-imagem-${opcao.valor}`">
+                    <input
+                      type="radio"
+                      name="filtro-presenca-imagem-tabela"
+                      :id="`tabela-presenca-imagem-${opcao.valor}`"
+                      :checked="rascunhoImagemTabela === opcao.valor"
+                      @change="rascunhoImagemTabela = opcao.valor"
+                    />
+                    <label :for="`tabela-presenca-imagem-${opcao.valor}`">{{ opcao.rotulo }}</label>
+                  </div>
                 </div>
               </div>
               <div class="filter-rodape">
@@ -223,7 +292,7 @@ import { aplicarMetrica } from '@/services/filtrosAnalise.js'
 const props = defineProps({
   titulo: { type: String, required: true },
   questoes: { type: Array, required: true },
-  // 'todas' mostra os três blocos; 'presenca', 'acertos' ou 'tabela' mostra só um deles
+  // 'todas' mostra os quatro blocos; cada outra opção mostra só o bloco correspondente
   secao: { type: String, default: 'todas' }
 })
 
@@ -242,6 +311,10 @@ const temQuestoesSemDificuldade = computed(() => props.questoes.some((questao) =
 const filtroDificuldadePizza = ref('todas')
 const rascunhoDificuldadePizza = ref('todas')
 const mostrarFiltroPizza = ref(false)
+const filtroDificuldadeCaracteres = ref('todas')
+const rascunhoDificuldadeCaracteres = ref('todas')
+const mostrarFiltroCaracteres = ref(false)
+const mostrarMaisCaracteres = ref(false)
 const mostrarComImagem = computed(() => filtroImagem.value !== 'sem')
 const mostrarSemImagem = computed(() => filtroImagem.value !== 'com')
 const filtroDificuldade = ref('todas')
@@ -310,6 +383,16 @@ const aplicarFiltroPizza = () => {
   mostrarFiltroPizza.value = false
 }
 
+const alternarFiltroCaracteres = () => {
+  if (!mostrarFiltroCaracteres.value) rascunhoDificuldadeCaracteres.value = filtroDificuldadeCaracteres.value
+  mostrarFiltroCaracteres.value = !mostrarFiltroCaracteres.value
+}
+
+const aplicarFiltroCaracteres = () => {
+  filtroDificuldadeCaracteres.value = rascunhoDificuldadeCaracteres.value
+  mostrarFiltroCaracteres.value = false
+}
+
 const alternarFiltroTabela = () => {
   if (!mostrarFiltroTabela.value) {
     rascunhoMetricaTabela.value = filtroMetricaTabela.value
@@ -351,6 +434,62 @@ const difficultyLevels = [
   { key: 'medio', label: 'Médio' },
   { key: 'dificil', label: 'Difícil' }
 ]
+// Mantém a mesma regra do tempo de leitura: conta o texto da questão sem espaços.
+const contarCaracteres = (texto) => (texto ?? '').replace(/[ \t\n\r\u00a0]/g, '').length
+const questoesCaracteres = computed(() => props.questoes
+  .map((questao, indice) => ({
+    id: questao.questao ?? indice + 1,
+    rotulo: `Q${questao.questao ?? indice + 1}`,
+    caracteres: contarCaracteres(questao.texto),
+    temImagem: Boolean(questao.tem_imagem),
+    dificuldade: questao.dificuldade ?? null,
+    indice
+  }))
+  .filter((questao) => questao.caracteres > 0))
+const questoesCaracteresFiltradas = computed(() => questoesCaracteres.value.filter((questao) => {
+  if (filtroDificuldadeCaracteres.value === 'todas') return true
+  if (filtroDificuldadeCaracteres.value === 'sem_dificuldade') {
+    return !difficultyLevels.some((nivel) => nivel.key === questao.dificuldade)
+  }
+  return questao.dificuldade === filtroDificuldadeCaracteres.value
+}))
+const formatarCaracteres = (valor) => Math.round(valor).toLocaleString('pt-BR')
+const maiorQuantidadeCaracteres = computed(() => Math.max(1, ...questoesCaracteresFiltradas.value.map((questao) => questao.caracteres)))
+const escalaYCaracteres = (valor) => 310 - (valor / maiorQuantidadeCaracteres.value) * 270
+const marcasCaracteres = computed(() => [0, 0.25, 0.5, 0.75, 1].map((proporcao) => {
+  const valor = maiorQuantidadeCaracteres.value * proporcao
+  return { proporcao, valor, y: escalaYCaracteres(valor) }
+}))
+const quantilCaracteres = (valores, proporcao) => {
+  const posicao = (valores.length - 1) * proporcao
+  const inferior = Math.floor(posicao)
+  const superior = Math.ceil(posicao)
+  return valores[inferior] + (valores[superior] - valores[inferior]) * (posicao - inferior)
+}
+const gruposCaracteres = computed(() => [
+  { key: 'com', rotulo: 'Com imagem', cor: '#0070C0', temImagem: true, centro: 260 },
+  { key: 'sem', rotulo: 'Sem imagem', cor: '#C4458A', temImagem: false, centro: 560 }
+].map((grupo) => {
+  const questoesGrupo = questoesCaracteresFiltradas.value.filter((questao) => questao.temImagem === grupo.temImagem)
+  const valores = questoesGrupo.map((questao) => questao.caracteres).sort((a, b) => a - b)
+  let resumo = null
+  if (valores.length) {
+    const q1 = quantilCaracteres(valores, 0.25)
+    const mediana = quantilCaracteres(valores, 0.5)
+    const q3 = quantilCaracteres(valores, 0.75)
+    const intervalo = q3 - q1
+    const dentroDasHastes = valores.filter((valor) => valor >= q1 - 1.5 * intervalo && valor <= q3 + 1.5 * intervalo)
+    resumo = { q1, mediana, q3, minHaste: dentroDasHastes[0], maxHaste: dentroDasHastes[dentroDasHastes.length - 1] }
+  }
+  return {
+    ...grupo,
+    resumo,
+    pontos: questoesGrupo.map((questao, indice) => ({
+      ...questao,
+      deslocamento: ((indice * 7) % 17 - 8) * 5
+    }))
+  }
+}))
 const questoesValidasAcerto = computed(() => props.questoes
   .map((questao) => ({ ...questao, taxa_acerto_percentual: taxaDeAcerto(questao) }))
   .filter((questao) => questao.taxa_acerto_percentual !== null))
@@ -411,7 +550,7 @@ const barrasAcertos = computed(() => {
     })
     const series = [
       { key: 'com', rotulo: 'Com imagem', cor: '#0070C0', imagem: true },
-      { key: 'sem', rotulo: 'Sem imagem', cor: '#10B981', imagem: false }
+      { key: 'sem', rotulo: 'Sem imagem', cor: '#C4458A', imagem: false }
     ].filter((item) => item.imagem ? mostrarComImagem.value : mostrarSemImagem.value)
     const larguraBarra = series.length === 1 ? 48 : 40
     const gap = 8
@@ -468,7 +607,7 @@ function caminhoSetor(inicioGraus, fimGraus) {
 const fatiasImagem = computed(() => {
   const itens = [
     { chave: 'com', rotulo: 'Com imagem', valor: questoesComImagemPizza.value.length, cor: '#0070C0' },
-    { chave: 'sem', rotulo: 'Sem imagem', valor: questoesSemImagemPizza.value, cor: '#CBD5E1' }
+    { chave: 'sem', rotulo: 'Sem imagem', valor: questoesSemImagemPizza.value, cor: '#C4458A' }
   ]
   let anguloAtual = 0
   return itens.map((item) => {
@@ -500,6 +639,10 @@ const fatiasImagem = computed(() => {
 .grafico-aviso { background: #fff3cd; border: 1px solid #ffeaa7; border-left: 4px solid #ffc107; padding: .75rem 1rem; border-radius: 6px; color: #856404; font-size: .9rem; line-height: 1.4; margin: .75rem 0 0; }
 .grafico-barras-conteudo { overflow-x: auto; }
 .grafico-barras { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto; }
+.grafico-caracteres { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto; }
+.botao-mais-info { margin: 1rem 0 0; }
+.notas-grafico-caracteres { margin: 1rem 0 0; padding-left: 1.2rem; color: #555; font-size: .85rem; }
+.notas-grafico-caracteres li + li { margin-top: .4rem; }
 .linha-grade { stroke: #e4e7ec; stroke-width: 1; }
 .texto-eixo { fill: #333; font-size: 13px; }
 .texto-valor { fill: #333; font-size: 13px; font-weight: 600; }
@@ -508,7 +651,7 @@ const fatiasImagem = computed(() => {
 .legenda-barras span { display: inline-flex; align-items: center; gap: .5rem; }
 .legenda-barras i { width: 16px; height: 16px; border-radius: 3px; }
 .cor-com-imagem { background: #0070C0; }
-.cor-sem-imagem { background: #10B981; }
+.cor-sem-imagem { background: #C4458A; }
 .tabela-questoes { margin: 0; }
 .tabela-questoes .grafico-cabecalho { margin-bottom: .5rem; }
 .tabela-rolagem { max-height: 520px; overflow: auto; border: 1px solid #e0e0e0; border-radius: 8px; }
@@ -519,7 +662,7 @@ const fatiasImagem = computed(() => {
 .questoes-tabela tbody tr:hover { background: #f8fafc; }
 .tabela-selo { display: inline-flex; padding: .25rem .55rem; border-radius: 999px; font-size: .8rem; font-weight: 600; white-space: nowrap; }
 .selo-com-imagem { background: #e6f0fa; color: #0065a8; }
-.selo-sem-imagem { background: #ecfdf3; color: #027a48; }
+.selo-sem-imagem { background: #FCE7F3; color: #9D174D; }
 .tabela-sem-resultado { padding: 1.5rem; border: 1px dashed #cbd5e1; border-radius: 8px; background: #f8fafc; text-align: center; }
 .tabela-sem-resultado p { margin: 0; color: #475467; }
 .sem-resultado-limpar { margin-top: .75rem; padding: .4rem 1rem; border: 2px solid #0070C0; border-radius: 6px; background: white; color: #0070C0; cursor: pointer; font-weight: 600; }
@@ -527,6 +670,8 @@ const fatiasImagem = computed(() => {
 .filter-btn { display: flex; align-items: center; gap: .5rem; padding: .45rem .8rem; border: 2px solid #0070C0; border-radius: 6px; background: white; color: #0070C0; cursor: pointer; font-weight: 600; white-space: nowrap; }
 .filter-menu { position: absolute; top: calc(100% + .5rem); right: 0; z-index: 10; min-width: 230px; padding: .75rem; border: 1px solid #e0e0e0; border-radius: 8px; background: white; box-shadow: 0 10px 30px rgba(0, 0, 0, .15); }
 .filter-secao + .filter-secao { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid #e0e0e0; }
+.filter-lista { max-height: 4.5rem; overflow-y: auto; }
+.filter-lista > .filter-option { box-sizing: border-box; height: 2.25rem; padding: 0 .5rem; }
 .filter-titulo { margin: .25rem .5rem; color: #667085; font-size: .75rem; font-weight: 700; }
 .filter-option { display: flex; align-items: center; padding: .55rem .5rem; border-radius: 4px; }
 .filter-option:hover { background: #f5f5f5; }

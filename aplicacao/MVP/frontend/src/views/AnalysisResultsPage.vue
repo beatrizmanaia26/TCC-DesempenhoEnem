@@ -306,7 +306,7 @@ const showFilterMenu = ref(false)
 const GRAFICOS_PROVA = {
   'reading-time': ['distribuicao-tempo', 'tempo-leitura'],
   'word-count': ['palavras', 'mapa-correlacoes', 'metades-caracteres', 'dispersao-itens'],
-  image: ['imagem-presenca', 'imagem-acertos', 'imagem-tabela']
+  image: ['imagem-presenca', 'imagem-caracteres', 'imagem-acertos', 'imagem-tabela']
 }
 // Cada passo é um gráfico; análise sem gráfico vira um passo só, com aviso e sem contador
 const passosProva = computed(() => filterOptions
