@@ -95,36 +95,36 @@
             </g>
           </g>
 
-          <!-- Barra de cor (-1 a +1), mesma escala do mapa geral -->
+          <!-- Barra de cor (-1 a +1), horizontal abaixo da grade, mesma escala do mapa geral -->
           <defs>
-            <linearGradient :id="`gradiente-${grade.id}`" x1="0" y1="1" x2="0" y2="0">
+            <linearGradient :id="`gradiente-${grade.id}`" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stop-color="#0070C0" />
               <stop offset="50%" stop-color="#FFFFFF" />
               <stop offset="100%" stop-color="#A78BFA" />
             </linearGradient>
           </defs>
           <rect
-            :x="grade.barraX"
-            :y="MARGEM_TOPO"
-            :width="22"
-            :height="grade.alturaGrade"
+            :x="MARGEM_ESQ"
+            :y="grade.barraY"
+            :width="grade.larguraGrade"
+            :height="22"
             :fill="`url(#gradiente-${grade.id})`"
           />
           <text
             v-for="marca in MARCAS_BARRA"
             :key="`marca-${grade.id}-${marca.valor}`"
-            :x="grade.barraX + 30"
-            :y="MARGEM_TOPO + ((1 - marca.valor) / 2) * grade.alturaGrade"
-            class="rotulo-barra"
-            dominant-baseline="middle"
-          >{{ marca.texto }}</text>
-          <text
-            :x="grade.barraX + 70"
-            :y="MARGEM_TOPO + grade.alturaGrade / 2"
+            :x="MARGEM_ESQ + ((marca.valor + 1) / 2) * grade.larguraGrade"
+            :y="grade.barraY + 36"
             class="rotulo-barra"
             text-anchor="middle"
             dominant-baseline="middle"
-            :transform="`rotate(90 ${grade.barraX + 70} ${MARGEM_TOPO + grade.alturaGrade / 2})`"
+          >{{ marca.texto }}</text>
+          <text
+            :x="MARGEM_ESQ + grade.larguraGrade / 2"
+            :y="grade.barraY + 64"
+            class="rotulo-barra"
+            text-anchor="middle"
+            dominant-baseline="middle"
           >Correlação de Spearman (r)</text>
         </svg>
       </div>
@@ -260,9 +260,10 @@ function montarGrade() {
   const linhas = NIVEIS
   const colunas = AREAS.map((area) => ({ chave: area, rotulo: ROTULOS_AREA[area] }))
   const alturaGrade = linhas.length * TAM - GAP
-  const barraX = MARGEM_ESQ + colunas.length * LARGURA_COL + 30
-  const largura = barraX + 100
-  const altura = MARGEM_TOPO + alturaGrade + 10
+  const larguraGrade = colunas.length * LARGURA_COL - GAP
+  const barraY = MARGEM_TOPO + alturaGrade + 50
+  const largura = MARGEM_ESQ + larguraGrade + 20
+  const altura = barraY + 22 + 70
 
   const celulas = linhas.flatMap((linha, j) =>
     colunas.map((coluna, i) => {
@@ -297,7 +298,8 @@ function montarGrade() {
     colunas,
     linhas,
     alturaGrade,
-    barraX,
+    barraY,
+    larguraGrade,
     largura,
     altura,
     celulas
