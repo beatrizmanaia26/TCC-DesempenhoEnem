@@ -218,7 +218,7 @@
           <InfoIcon :largura="420" tooltip="Cada célula representa uma dificuldade e uma área do ENEM selecionado. A cor indica a direção e a intensidade da correlação ponto-bisserial entre ter imagem e o percentual de acertos. O p bruto é ajustado pelo método de Holm entre as combinações válidas de área e dificuldade deste ano (até 12 testes)." />
         </div>
         <p class="imagem-subtitulo">Cada célula reúne as questões de uma dificuldade e de uma área. O mapa mostra se a associação entre imagem e percentual de acertos varia entre questões fáceis, médias e difíceis.</p>
-        <p class="imagem-correlacao-mini-legenda"><strong>Legenda:</strong> azul = associação negativa · branco = próxima de zero · verde = positiva · círculo escuro com ★ = p (Holm) &lt; 0,05.</p>
+        <p class="imagem-correlacao-mini-legenda"><strong>Legenda:</strong> azul = associação negativa · branco = próxima de zero · violeta = positiva · círculo escuro com ★ = p (Holm) &lt; 0,05.</p>
         <div v-if="celulasMapaCorrelacao.length" class="imagem-correlacao-mapa-scroll">
           <svg :viewBox="`0 0 ${larguraMapaCorrelacao} ${alturaMapaCorrelacao}`" class="imagem-mapa-correlacao" role="img" :aria-label="`Mapa de calor da correlação ponto-bisserial entre presença de imagem e percentual de acertos no ENEM ${ano}, por área e dificuldade`">
             <text v-for="(area, indice) in areasMapaCorrelacao" :key="`imagem-correlacao-coluna-${area.valor}`" :x="margemMapaEsquerda + indice * tamanhoCelulaMapa + (tamanhoCelulaMapa - espacamentoCelulaMapa) / 2" :y="margemMapaTopo - 12" text-anchor="middle" class="imagem-heatmap-eixo">{{ area.rotulo }}</text>
@@ -243,7 +243,7 @@
               <linearGradient id="imagem-correlacao-gradiente" x1="0" y1="1" x2="0" y2="0">
                 <stop offset="0%" stop-color="#0070C0" />
                 <stop offset="50%" stop-color="#FFFFFF" />
-                <stop offset="100%" stop-color="#10B981" />
+                <stop offset="100%" stop-color="#A78BFA" />
               </linearGradient>
             </defs>
             <rect :x="barraMapaX" :y="margemMapaTopo" width="22" :height="alturaGradeMapa" fill="url(#imagem-correlacao-gradiente)" />
@@ -355,7 +355,7 @@ const props = defineProps({
   secao: { type: String, required: true }
 })
 
-const CORES = { com: '#0070C0', sem: '#C4458A' }
+const CORES = { com: '#0070C0', sem: '#A78BFA' }
 const opcoesArea = [
   { valor: 'todas', rotulo: 'Todas as áreas' },
   { valor: 'LC', rotulo: 'Linguagens e Códigos' },
@@ -754,7 +754,7 @@ const interpolarCor = (inicio, fim, proporcao) => inicio.map((valor, indice) => 
 const rgbPorCorrelacao = (valor) => {
   const limitado = Math.max(-1, Math.min(1, Number(valor)))
   return limitado >= 0
-    ? interpolarCor([255, 255, 255], [16, 185, 129], limitado)
+    ? interpolarCor([255, 255, 255], [167, 139, 250], limitado)
     : interpolarCor([255, 255, 255], [0, 112, 192], -limitado)
 }
 const corTextoHeatmap = (rgb) => {
@@ -850,7 +850,7 @@ const questoesTabela = computed(() => questoes.value
 .imagem-legenda li { display: flex; align-items: center; gap: .5rem; margin: .6rem 0; }
 .imagem-legenda i, .imagem-legenda-barras i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
 .imagem-cor-com { background: #0070C0; }
-.imagem-cor-sem { background: #C4458A; }
+.imagem-cor-sem { background: #A78BFA; }
 .imagem-legenda-barras { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: .5rem 0 0; color: #333; }
 .imagem-legenda-barras span { display: inline-flex; align-items: center; gap: .5rem; }
 .imagem-grafico-caracteres, .imagem-grafico-acertos { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto; }
@@ -874,7 +874,7 @@ const questoesTabela = computed(() => questoes.value
 .imagem-tabela tbody th { color: #263238; font-weight: 600; }
 .imagem-selo { display: inline-flex; padding: .25rem .55rem; border-radius: 999px; font-size: .8rem; font-weight: 600; }
 .selo-com-imagem { background: #e6f0fa; color: #0065a8; }
-.selo-sem-imagem { background: #FCE7F3; color: #9D174D; }
+.selo-sem-imagem { background: #F5F0FF; color: #5B3A9E; }
 .imagem-vazio, .imagem-status { padding: 1rem; border-radius: 6px; background: #f8fafc; color: #475467; }
 .imagem-erro { border-left: 4px solid #EF4444; background: #fff1f0; color: #912018; }
 .imagem-notas { margin-top: 1rem; color: #555; font-size: .88rem; line-height: 1.5; }

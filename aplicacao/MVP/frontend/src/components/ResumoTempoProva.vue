@@ -74,7 +74,7 @@ const props = defineProps({
 const CORES = {
   questoes: '#0070C0',
   textos: '#93C5FD',
-  restante: '#10B981'
+  restante: '#A78BFA'
 }
 
 const tooltipTempo = TEXTO_RESUMO_TEMPO.explicacao.join('\n')

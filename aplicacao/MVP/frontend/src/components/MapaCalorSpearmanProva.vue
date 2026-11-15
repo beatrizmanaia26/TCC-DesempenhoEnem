@@ -80,7 +80,7 @@
         <linearGradient id="gradiente-prova-spearman" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stop-color="#0070C0" />
           <stop offset="50%" stop-color="#FFFFFF" />
-          <stop offset="100%" stop-color="#10B981" />
+          <stop offset="100%" stop-color="#A78BFA" />
         </linearGradient>
       </defs>
       <rect :x="MARGEM_ESQ" :y="barraY" :width="larguraGrade" :height="22" fill="url(#gradiente-prova-spearman)" />
@@ -166,7 +166,7 @@ const MARGEM_ESQ = 70
 const MARGEM_TOPO = 45
 const COR_AZUL = [0, 112, 192]
 const COR_BRANCO = [255, 255, 255]
-const COR_VERDE = [16, 185, 129]
+const COR_VIOLETA = [167, 139, 250]
 const MARCAS_BARRA = [
   { valor: 1, texto: '1' },
   { valor: 0.5, texto: '0.5' },
@@ -192,7 +192,7 @@ const tooltipMapa = [
 const notas = [
   'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm). Tanto a correlação quant o Holm tem que ser elvados em consideração para a conclusão do possível impacto do acerto. ',
   'O r mostra a força da relação, de −1 a 1. Quanto mais longe de 0, mais forte.',
-  'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
+  'Violeta = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
   'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
   'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
   'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
@@ -213,14 +213,14 @@ const resultados = computed(() => {
 const temDados = computed(() => resultados.value.some((celula) => celula.r !== null))
 const mostrarMais = ref(false)
 
-// Escala de cor do projeto: azul para r negativo, branco em zero, verde para r positivo
+// Escala de cor do projeto: azul para r negativo, branco em zero, violeta para r positivo
 function interpolar(de, para, t) {
   return de.map((valor, i) => Math.round(valor + (para[i] - valor) * t))
 }
 function rgbPorR(r) {
   const valor = Math.max(-1, Math.min(1, r))
   return valor >= 0
-    ? interpolar(COR_BRANCO, COR_VERDE, valor)
+    ? interpolar(COR_BRANCO, COR_VIOLETA, valor)
     : interpolar(COR_BRANCO, COR_AZUL, -valor)
 }
 function luminancia([r, g, b]) {
@@ -355,4 +355,3 @@ const celulas = computed(() => linhas.map((linha, j) => {
   font-size: 0.85rem;
 }
 </style>
-

@@ -9,7 +9,7 @@
           <InfoIcon :largura="440" :tooltip="configuracaoMapa.tooltip" />
         </div>
         <p class="posicao-subtitulo">{{ configuracaoMapa.subtitulo }}</p>
-        <p class="posicao-mini-legenda"><strong>Legenda:</strong> azul = associação negativa · branco = próxima de zero · verde = positiva · círculo escuro com ★ = p (Holm) &lt; 0,05.</p>
+        <p class="posicao-mini-legenda"><strong>Legenda:</strong> azul = associação negativa · branco = próxima de zero · violeta = positiva · círculo escuro com ★ = p (Holm) &lt; 0,05.</p>
         <div class="posicao-mapa-scroll">
           <svg :viewBox="`0 0 ${mapa.largura} ${mapa.altura}`" class="posicao-mapa" role="img" :aria-label="mapa.ariaLabel">
             <text v-for="(area, indice) in areas" :key="`posicao-coluna-${area.valor}`" :x="MARGEM_ESQ + indice * TAM + (TAM - GAP) / 2" :y="MARGEM_TOPO - 12" text-anchor="middle" class="posicao-eixo">{{ area.rotulo }}</text>
@@ -36,7 +36,7 @@
               <linearGradient :id="`posicao-gradiente-${tipoMapa}`" x1="0" y1="1" x2="0" y2="0">
                 <stop offset="0%" stop-color="#0070C0" />
                 <stop offset="50%" stop-color="#FFFFFF" />
-                <stop offset="100%" stop-color="#10B981" />
+                <stop offset="100%" stop-color="#A78BFA" />
               </linearGradient>
             </defs>
             <rect :x="mapa.barraX" :y="MARGEM_TOPO" width="22" :height="mapa.alturaGrade" :fill="`url(#posicao-gradiente-${tipoMapa})`" />
@@ -275,7 +275,7 @@ function interpolarCor(inicio, fim, proporcao) {
 function rgbPorRho(valor) {
   const limitado = Math.max(-1, Math.min(1, Number(valor)))
   return limitado >= 0
-    ? interpolarCor([255, 255, 255], [16, 185, 129], limitado)
+    ? interpolarCor([255, 255, 255], [167, 139, 250], limitado)
     : interpolarCor([255, 255, 255], [0, 112, 192], -limitado)
 }
 function corTextoPara(rgb) {

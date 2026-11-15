@@ -145,7 +145,7 @@ const MARCAS_EIXO = [0, 20, 40, 60, 80, 100]
 
 // Azul para menos caracteres, verde para mais caracteres (mesmas cores do gráfico do ENEM)
 const COR_MENOS = '#0070C0'
-const COR_MAIS = '#10B981'
+const COR_MAIS = '#A78BFA'
 
 const tooltip = [
   'Para cada nível, as questões são divididas pela mediana da quantidade de caracteres do próprio nível.',

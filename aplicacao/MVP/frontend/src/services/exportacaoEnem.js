@@ -113,11 +113,11 @@ const PDF_ALTURA_LINHA = 3.6
 const PDF_ALTURA_BARRA = 2.4
 const PDF_PASSOS_DEGRADE = 30
 const COR_AZUL = [0, 112, 192]
-const COR_VERDE = [16, 185, 129]
+const COR_VIOLETA_ESCURO = [167, 139, 250]
 const COR_TRILHO = [240, 240, 240]
 const COR_RESTANTE = [203, 213, 225]
-const COR_ALTERNATIVAS = [167, 243, 208]
-const COR_VERDE_ESCURO = [16, 185, 129]
+const COR_ALTERNATIVAS = [221, 214, 254]
+const COR_VIOLETA = [167, 139, 250]
 const COR_TEXTO = [51, 51, 51]
 const COR_VALOR = [102, 102, 102]
 
@@ -130,13 +130,13 @@ function garantirEspaco(doc, y, altura) {
   return y
 }
 
-// jsPDF não tem degradê: a barra é desenhada com faixas finas do azul ao verde
+// jsPDF não tem degradê: a barra é desenhada com faixas finas do azul ao violeta
 function desenharBarraDegrade(doc, x, y, largura, altura) {
   if (largura <= 0) return
   const faixa = largura / PDF_PASSOS_DEGRADE
   for (let i = 0; i < PDF_PASSOS_DEGRADE; i++) {
     const t = i / (PDF_PASSOS_DEGRADE - 1)
-    doc.setFillColor(...COR_AZUL.map((cor, k) => Math.round(cor + (COR_VERDE[k] - cor) * t)))
+    doc.setFillColor(...COR_AZUL.map((cor, k) => Math.round(cor + (COR_VIOLETA_ESCURO[k] - cor) * t)))
     doc.rect(x + i * faixa, y, faixa + 0.05, altura, 'F')
   }
 }
@@ -336,7 +336,7 @@ function desenharGraficoTempo(doc, questoes, restantePorDia, y) {
   return cursor
 }
 
-// Gráfico de palavras: enunciado em verde escuro e alternativas em verde claro logo depois
+// Gráfico de palavras: enunciado em violeta e alternativas em violeta claro logo depois
 function desenharGraficoPalavras(doc, questoes, y) {
   const maiorPalavras = Math.max(0, ...questoes.map((q) => q.palavras + q.palavrasAlternativas))
   const largura = (valor) => (maiorPalavras === 0 ? 0 : (valor / maiorPalavras) * PDF_TRILHO_LARGURA)
@@ -351,7 +351,7 @@ function desenharGraficoPalavras(doc, questoes, y) {
   cursor = desenharLegenda(
     doc,
     [
-      { cor: COR_VERDE_ESCURO, rotulo: 'Quantidade de palavras do enunciado' },
+      { cor: COR_VIOLETA, rotulo: 'Quantidade de palavras do enunciado' },
       { cor: COR_ALTERNATIVAS, rotulo: 'Quantidade de palavras das alternativas' }
     ],
     cursor
@@ -363,7 +363,7 @@ function desenharGraficoPalavras(doc, questoes, y) {
 
     desenharRotulo(doc, questao, linhaY)
     desenharRetangulo(doc, PDF_TRILHO_X, barraY, PDF_TRILHO_LARGURA, PDF_ALTURA_BARRA, COR_TRILHO)
-    desenharRetangulo(doc, PDF_TRILHO_X, barraY, larguraEnunciado, PDF_ALTURA_BARRA, COR_VERDE_ESCURO)
+    desenharRetangulo(doc, PDF_TRILHO_X, barraY, larguraEnunciado, PDF_ALTURA_BARRA, COR_VIOLETA)
     desenharRetangulo(
       doc,
       PDF_TRILHO_X + larguraEnunciado,

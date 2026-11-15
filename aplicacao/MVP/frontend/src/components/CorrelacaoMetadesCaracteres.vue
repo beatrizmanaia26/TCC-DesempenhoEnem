@@ -219,7 +219,7 @@ const MARCAS_EIXO = [0, 20, 40, 60, 80, 100]
 
 // Azul para menos caracteres, verde para mais caracteres
 const COR_MENOS = '#0070C0'
-const COR_MAIS = '#10B981'
+const COR_MAIS = '#A78BFA'
 
 const tooltipMetades = TEXTO_METADES_CARACTERES.explicacao.join('\n')
 

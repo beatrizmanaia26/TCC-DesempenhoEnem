@@ -468,7 +468,7 @@ const quantilCaracteres = (valores, proporcao) => {
 }
 const gruposCaracteres = computed(() => [
   { key: 'com', rotulo: 'Com imagem', cor: '#0070C0', temImagem: true, centro: 260 },
-  { key: 'sem', rotulo: 'Sem imagem', cor: '#C4458A', temImagem: false, centro: 560 }
+  { key: 'sem', rotulo: 'Sem imagem', cor: '#A78BFA', temImagem: false, centro: 560 }
 ].map((grupo) => {
   const questoesGrupo = questoesCaracteresFiltradas.value.filter((questao) => questao.temImagem === grupo.temImagem)
   const valores = questoesGrupo.map((questao) => questao.caracteres).sort((a, b) => a - b)
@@ -550,7 +550,7 @@ const barrasAcertos = computed(() => {
     })
     const series = [
       { key: 'com', rotulo: 'Com imagem', cor: '#0070C0', imagem: true },
-      { key: 'sem', rotulo: 'Sem imagem', cor: '#C4458A', imagem: false }
+      { key: 'sem', rotulo: 'Sem imagem', cor: '#A78BFA', imagem: false }
     ].filter((item) => item.imagem ? mostrarComImagem.value : mostrarSemImagem.value)
     const larguraBarra = series.length === 1 ? 48 : 40
     const gap = 8
@@ -607,7 +607,7 @@ function caminhoSetor(inicioGraus, fimGraus) {
 const fatiasImagem = computed(() => {
   const itens = [
     { chave: 'com', rotulo: 'Com imagem', valor: questoesComImagemPizza.value.length, cor: '#0070C0' },
-    { chave: 'sem', rotulo: 'Sem imagem', valor: questoesSemImagemPizza.value, cor: '#C4458A' }
+    { chave: 'sem', rotulo: 'Sem imagem', valor: questoesSemImagemPizza.value, cor: '#A78BFA' }
   ]
   let anguloAtual = 0
   return itens.map((item) => {
@@ -651,7 +651,7 @@ const fatiasImagem = computed(() => {
 .legenda-barras span { display: inline-flex; align-items: center; gap: .5rem; }
 .legenda-barras i { width: 16px; height: 16px; border-radius: 3px; }
 .cor-com-imagem { background: #0070C0; }
-.cor-sem-imagem { background: #C4458A; }
+.cor-sem-imagem { background: #A78BFA; }
 .tabela-questoes { margin: 0; }
 .tabela-questoes .grafico-cabecalho { margin-bottom: .5rem; }
 .tabela-rolagem { max-height: 520px; overflow: auto; border: 1px solid #e0e0e0; border-radius: 8px; }
@@ -662,7 +662,7 @@ const fatiasImagem = computed(() => {
 .questoes-tabela tbody tr:hover { background: #f8fafc; }
 .tabela-selo { display: inline-flex; padding: .25rem .55rem; border-radius: 999px; font-size: .8rem; font-weight: 600; white-space: nowrap; }
 .selo-com-imagem { background: #e6f0fa; color: #0065a8; }
-.selo-sem-imagem { background: #FCE7F3; color: #9D174D; }
+.selo-sem-imagem { background: #F5F0FF; color: #5B3A9E; }
 .tabela-sem-resultado { padding: 1.5rem; border: 1px dashed #cbd5e1; border-radius: 8px; background: #f8fafc; text-align: center; }
 .tabela-sem-resultado p { margin: 0; color: #475467; }
 .sem-resultado-limpar { margin-top: .75rem; padding: .4rem 1rem; border: 2px solid #0070C0; border-radius: 6px; background: white; color: #0070C0; cursor: pointer; font-weight: 600; }

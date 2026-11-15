@@ -2,7 +2,7 @@
 // para que os dois sempre digam a mesma coisa.
 
 export const TEXTO_RESUMO_TEMPO = {
-  titulo: 'Distribuição do Tempo de Prova',
+  titulo: 'Distribuição do Tempo de Prova (ENEM 2025)',
   subtitulo: 'Distribuição do tempo entre leitura e resolução das questões objetivas (por dia ou total).',
   explicacao: [
     'Apresenta a distribuição dos 555 min totais do ENEM (Dia 1: 255 min descontando os 75 min de redação; Dia 2: 300 min) entre tempo de leitura e margem para resolução.',
@@ -36,7 +36,7 @@ export const TEXTO_CORRELACOES_TEMPO = {
   notas: [
     'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm).Tanto a correlação quant o Holm tem que ser elvados em consideração para a conclusão do possível impacto do acerto.',
     'O r mostra a força  da relação, de −1 a 1. Quanto mais longe de 0, mais forte',
-    'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
+    'Violeta = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
     'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
     'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
     'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
@@ -93,7 +93,7 @@ export const TEXTO_MAPA_DIFICULDADE = {
   notas: [
     'Cada célula mostra a correlação de Spearman (r), o valor de p bruto e ajustado (Holm). Tanto a correlação quant o Holm tem que ser elvados em consideração para a conclusão do possível impacto do acerto.',
     'O r mostra a força  da relação, de −1 a 1. Quanto mais longe de 0, mais forte',
-    'Verde = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
+    'Violeta = correlação positiva: quando o número de caracteres sobe, o acerto tende a subir junto.',
     'Azul = correlação negativa: quando o número de caracteres sobe, o acerto tende a cair.',
     'Branco = quase nenhuma relação entre o número de caracteres e o acerto.',
     'p bruto: mede quão raro seria um r tão forte quanto o observado se não houvesse relação nenhuma entre tamanho e acerto.',
@@ -187,7 +187,7 @@ export const TEXTO_PALAVRAS = {
   subtitulo:
     'Mostra quantas palavras tem no enunciado e nas alternativas de cada questão. Ajuda a ver se a distribuição dos tamanhos ao longo da prova está equilibrada.',
   explicacao: [
-    'Cada barra é uma questão. A parte verde escura mostra as palavras do enunciado e a parte verde clara mostra as palavras das alternativas.',
+    'Cada barra é uma questão. A parte violeta mostra as palavras do enunciado e a parte violeta clara mostra as palavras das alternativas.',
     '',
     'Valor: enunciado - alternativas (ex.: 128 - 45).',
     '',

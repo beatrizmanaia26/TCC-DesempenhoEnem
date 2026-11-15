@@ -389,7 +389,7 @@ const tooltipTempo = computed(() => [
 const CORES_TEMPO = {
   questoes: '#0070C0',
   textos: '#93C5FD',
-  restante: '#10B981'
+  restante: '#A78BFA'
 }
 
 function caminhoSetor(inicioGraus, fimGraus) {

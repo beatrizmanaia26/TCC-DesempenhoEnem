@@ -94,7 +94,7 @@
             <linearGradient :id="`gradiente-${grade.id}`" x1="0" y1="1" x2="0" y2="0">
               <stop offset="0%" stop-color="#0070C0" />
               <stop offset="50%" stop-color="#FFFFFF" />
-              <stop offset="100%" stop-color="#10B981" />
+              <stop offset="100%" stop-color="#A78BFA" />
             </linearGradient>
           </defs>
           <rect
@@ -194,10 +194,10 @@ const GAP = 4
 const MARGEM_ESQ = 200
 const MARGEM_TOPO = 45
 
-// Escala de cor do projeto (colors.css): azul FEI para r negativo, verde menta para r positivo, branco em zero
+// Escala de cor do projeto (colors.css): azul FEI para r negativo, violeta claro para r positivo, branco em zero
 const COR_AZUL = [0, 112, 192]
 const COR_BRANCO = [255, 255, 255]
-const COR_VERDE = [16, 185, 129]
+const COR_VIOLETA = [167, 139, 250]
 const MARCAS_BARRA = [
   { valor: 1, texto: '1' },
   { valor: 0.5, texto: '0.5' },
@@ -234,11 +234,11 @@ function interpolar(de, para, t) {
   return de.map((valor, i) => Math.round(valor + (para[i] - valor) * t))
 }
 
-// Converte r (-1 a +1) em cor: azul para negativo, branco em zero, verde para positivo
+// Converte r (-1 a +1) em cor: azul para negativo, branco em zero, violeta para positivo
 function rgbPorR(r) {
   const valor = Math.max(-1, Math.min(1, r))
   return valor >= 0
-    ? interpolar(COR_BRANCO, COR_VERDE, valor)
+    ? interpolar(COR_BRANCO, COR_VIOLETA, valor)
     : interpolar(COR_BRANCO, COR_AZUL, -valor)
 }
 
@@ -491,4 +491,3 @@ onMounted(carregar)
   font-size: 1rem;
 }
 </style>
-

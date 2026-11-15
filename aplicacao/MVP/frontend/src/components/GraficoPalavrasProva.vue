@@ -33,8 +33,8 @@
     </div>
     <p class="grafico-subtitulo">{{ TEXTO_PALAVRAS.subtitulo }}</p>
     <div class="legenda-grafico">
-      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-verde-escuro"></span>Quantidade de palavras do enunciado</span>
-      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-verde-claro"></span>Quantidade de palavras das alternativas</span>
+      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-violeta"></span>Quantidade de palavras do enunciado</span>
+      <span class="legenda-item"><span class="legenda-quadrado legenda-quadrado-violeta-claro"></span>Quantidade de palavras das alternativas</span>
     </div>
     <div v-if="questoesFiltradas.length > 0" class="barras-cabecalho">
       <span class="barras-cabecalho-texto">Questões</span>
@@ -68,7 +68,7 @@
             @mouseleave="ocultarDica"
           ></div>
         </div>
-        <span class="barra-valor"><span class="valor-item"><span class="legenda-quadrado legenda-quadrado-verde-escuro"></span>{{ questao.palavras }}</span> <span class="valor-item"><span class="legenda-quadrado legenda-quadrado-verde-claro"></span>{{ questao.palavrasAlternativas }}</span></span>
+        <span class="barra-valor"><span class="valor-item"><span class="legenda-quadrado legenda-quadrado-violeta"></span>{{ questao.palavras }}</span> <span class="valor-item"><span class="legenda-quadrado legenda-quadrado-violeta-claro"></span>{{ questao.palavrasAlternativas }}</span></span>
       </div>
     </div>
   </div>
@@ -238,13 +238,13 @@ const larguraBarra = (palavras) => {
   left: 0;
   z-index: 1;
   height: 100%;
-  background: #10B981;
+  background: #A78BFA;
   border-radius: 3px;
   transition: width 0.3s ease;
 }
 
 .barra-alternativas {
-  background: #A7F3D0;
+  background: #DDD6FE;
 }
 
 .legenda-grafico {
@@ -270,12 +270,12 @@ const larguraBarra = (palavras) => {
   border-radius: 3px;
 }
 
-.legenda-quadrado-verde-escuro {
-  background: #10B981;
+.legenda-quadrado-violeta {
+  background: #A78BFA;
 }
 
-.legenda-quadrado-verde-claro {
-  background: #A7F3D0;
+.legenda-quadrado-violeta-claro {
+  background: #DDD6FE;
 }
 
 .valor-item {
@@ -300,8 +300,8 @@ const larguraBarra = (palavras) => {
   font-weight: 600;
 }
 
-.legenda-quadrado-verde-claro {
-  background: #A7F3D0;
+.legenda-quadrado-violeta-claro {
+  background: #DDD6FE;
 }
 
 .barra-valor {
