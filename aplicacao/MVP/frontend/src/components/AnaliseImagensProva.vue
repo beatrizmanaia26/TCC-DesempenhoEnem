@@ -4,7 +4,7 @@
     <h2 v-if="titulo" class="titulo-analise">{{ titulo }}</h2>
     <div v-if="mostrarSecao('presenca')" class="tempo-bloco">
       <div class="tempo-cabecalho">
-        <h2>Presença de imagens na prova</h2>
+        <h2>Presença de Imagens na Prova</h2>
         <InfoIcon tooltip="Mostra a proporção de questões com e sem imagens na prova." />
         <div v-if="temDificuldade" class="filter-wrapper">
           <button type="button" class="filter-btn" @click="alternarFiltroPizza">
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-      <p class="tempo-subtitulo">{{ questoesComImagemPizza.length }} de {{ questoesFiltradasPizza.length }} questões têm imagem ({{ formatarPercentual(percentualComImagemPizza) }}%).</p>
+      <p class="tempo-subtitulo">Distribuição das questões da prova entre as que têm imagem e as que não têm.</p>
       <div v-if="questoesFiltradasPizza.length" class="tempo-conteudo">
         <svg viewBox="0 0 200 200" class="pizza" role="img" aria-label="Proporção de questões com e sem imagem">
           <path v-for="fatia in fatiasImagem" :key="fatia.chave" :d="fatia.caminho" :fill="fatia.cor" />
@@ -38,7 +38,7 @@
           <li v-for="fatia in fatiasImagem" :key="fatia.chave">
             <span class="legenda-cor" :style="{ background: fatia.cor }"></span>
             <span class="legenda-rotulo">{{ fatia.rotulo }}</span>
-            <span class="legenda-valor">{{ fatia.valor }} ({{ formatarPercentual(fatia.percentual) }}%)</span>
+            <span class="legenda-valor">{{ fatia.valor }} questões ({{ formatarPercentual(fatia.percentual) }}%)</span>
           </li>
         </ul>
       </div>
@@ -46,8 +46,8 @@
 
     <div v-if="mostrarSecao('caracteres')" class="tempo-bloco">
       <div class="grafico-cabecalho">
-        <h3>Quantidade de caracteres por presença de imagem</h3>
-        <InfoIcon tooltip="Cada ponto representa uma questão. A caixa mostra a mediana e o intervalo entre o 1º e o 3º quartil; as hastes vão até os valores que não são outliers. A contagem considera o texto da questão e as alternativas, sem espaços." />
+          <h3>Quantidade de Caracteres por Presença de Imagem</h3>
+        <InfoIcon tooltip="Cada ponto representa uma questão. A caixa mostra a mediana e o intervalo entre o 1º e o 3º quartil; as hastes vão até os valores que não são outliers. A contagem considera o texto da questão e as alternativas, desconsiderando espaços, tabulações e quebras de linha." />
         <div v-if="temDificuldade" class="filter-wrapper">
           <button type="button" class="filter-btn" @click="alternarFiltroCaracteres">
             <FilterIcon />
@@ -72,8 +72,12 @@
         </div>
       </div>
       <p class="grafico-subtitulo">Distribuição dos caracteres em {{ questoesCaracteresFiltradas.length }} de {{ questoesCaracteres.length }} questões com texto extraído. Passe o cursor sobre um ponto para ver a questão e o valor.</p>
+      <div v-if="questoesCaracteresFiltradas.length" class="legenda-barras legenda-caracteres">
+        <span><i class="cor-com-imagem"></i>Com imagem</span>
+        <span><i class="cor-sem-imagem"></i>Sem imagem</span>
+      </div>
       <svg v-if="questoesCaracteresFiltradas.length" class="grafico-caracteres" viewBox="0 0 760 400" role="img" aria-label="Distribuição da quantidade de caracteres por presença de imagem, com pontos por questão e caixas mostrando a mediana e os quartis">
-        <text x="410" y="20" text-anchor="middle" class="texto-eixo">Caracteres (sem espaços)</text>
+        <text x="20" y="175" text-anchor="middle" class="texto-eixo" transform="rotate(-90 20 175)">Caracteres</text>
         <g v-for="marca in marcasCaracteres" :key="`caracteres-eixo-${marca.proporcao}`">
           <line x1="80" :y1="marca.y" x2="740" :y2="marca.y" class="linha-grade" />
           <text x="70" :y="marca.y + 4" text-anchor="end" class="texto-eixo">{{ formatarCaracteres(marca.valor) }}</text>
@@ -89,8 +93,7 @@
           <circle v-for="ponto in grupo.pontos" :key="ponto.id" :cx="grupo.centro + ponto.deslocamento" :cy="escalaYCaracteres(ponto.caracteres)" r="4" :fill="grupo.cor" fill-opacity=".7">
             <title>{{ ponto.rotulo }} · {{ formatarCaracteres(ponto.caracteres) }} caracteres</title>
           </circle>
-          <text :x="grupo.centro" y="350" text-anchor="middle" class="texto-categoria">{{ grupo.rotulo }}</text>
-          <text :x="grupo.centro" y="372" text-anchor="middle" class="texto-eixo">n = {{ grupo.pontos.length }} questões</text>
+          <text :x="grupo.centro" y="350" text-anchor="middle" class="texto-eixo">n = {{ grupo.pontos.length }} questões</text>
         </g>
       </svg>
       <button v-if="questoesCaracteresFiltradas.length" type="button" class="filter-btn botao-mais-info" @click="mostrarMaisCaracteres = !mostrarMaisCaracteres">
@@ -98,7 +101,7 @@
       </button>
       <ul v-if="mostrarMaisCaracteres && questoesCaracteresFiltradas.length" class="notas-grafico-caracteres">
         <li><strong>Pontos:</strong> cada ponto representa uma questão. A cor indica apenas se o extrator identificou imagem naquela questão; ela não entra no cálculo da quantidade de caracteres.</li>
-        <li><strong>Contagem:</strong> considera o texto extraído da questão e suas alternativas, sem espaços, tabulações ou quebras de linha. Questões sem texto extraído não entram no gráfico.</li>
+        <li><strong>Contagem:</strong> considera o texto extraído da questão e suas alternativas, desconsiderando espaços, tabulações e quebras de linha. Questões sem texto extraído não entram no gráfico.</li>
         <li><strong>Linha dentro da caixa:</strong> é a mediana, o valor central quando as questões do grupo são ordenadas por quantidade de caracteres.</li>
         <li><strong>Caixa:</strong> vai do 1º ao 3º quartil e reúne os 50% centrais das questões. Uma caixa mais alta indica maior variação nos tamanhos desse grupo.</li>
         <li><strong>Hastes e pontos extremos:</strong> as hastes chegam aos menores e maiores valores dentro de 1,5 intervalo interquartil. Valores além das hastes são considerados outliers, mas continuam visíveis como pontos.</li>
@@ -109,8 +112,8 @@
 
     <div v-if="mostrarSecao('acertos')" class="tempo-bloco grafico-acertos">
         <div class="grafico-cabecalho">
-          <h3>Percentual médio de acertos por presença de imagem</h3>
-          <InfoIcon tooltip="Cada barra mostra a média dos percentuais de acerto das questões daquele grupo. A comparação usa apenas questões com percentual de acerto informado." />
+          <h3>Percentual Médio de Acertos por Presença de Imagem</h3>
+          <InfoIcon tooltip="Cada barra mostra a média simples dos percentuais de acerto das questões daquele grupo. O n abaixo da barra indica quantas questões entraram no cálculo. Só entram questões com percentual de acerto informado." />
           <div v-if="temAcertos" class="filter-wrapper">
             <button type="button" class="filter-btn" @click="alternarMenuFiltro">
               <FilterIcon />
@@ -149,7 +152,7 @@
             </div>
           </div>
         </div>
-        <p v-if="temAcertos" class="grafico-subtitulo">Média simples dos percentuais de acerto das questões em cada grupo.</p>
+        <p v-if="temAcertos" class="grafico-subtitulo">Cada barra mostra a média simples das taxas de acerto das questões com ou sem imagem em cada nível de dificuldade. O número sob cada barra indica quantas questões entraram no cálculo.</p>
         <p v-if="temAcertos && colunasFaltando" class="grafico-subtitulo" role="note">
           Quando alguma coluna não aparece, o gráfico não tem questões com percentual de acerto informado suficientes naquele nível para calcular a média de cada coluna colorida.
         </p>
@@ -164,23 +167,31 @@
             Algumas questões não têm dificuldade informada; elas aparecem no grupo “Sem nível”.
           </p>
           <div v-if="barrasAcertos.length" class="grafico-barras-conteudo">
-            <div class="legenda-barras">
-              <span v-if="mostrarComImagem"><i class="cor-com-imagem"></i>Com imagem</span>
-              <span v-if="mostrarSemImagem"><i class="cor-sem-imagem"></i>Sem imagem</span>
-            </div>
-            <svg class="grafico-barras" :width="larguraGrafico" height="380" :viewBox="`0 0 ${larguraGrafico} 380`" role="img" :aria-label="descricaoGrafico">
+            <svg class="grafico-barras" viewBox="0 0 760 380" role="img" :aria-label="descricaoGrafico">
+              <g class="legenda-barras-svg">
+                <template v-if="mostrarComImagem">
+                  <rect x="190" y="8" width="12" height="12" fill="#0070C0" />
+                  <text x="206" y="18" class="texto-legenda">Com imagem</text>
+                </template>
+                <template v-if="mostrarSemImagem">
+                  <rect x="390" y="8" width="12" height="12" fill="#A78BFA" />
+                  <text x="406" y="18" class="texto-legenda">Sem imagem</text>
+                </template>
+              </g>
               <g v-for="marca in marcasEixo" :key="`eixo-${marca.valor}`">
-                <line x1="52" :y1="marca.y" :x2="larguraGrafico - 12" :y2="marca.y" class="linha-grade" />
-                <text x="44" :y="marca.y + 4" text-anchor="end" class="texto-eixo">{{ marca.valor }}%</text>
+                <line x1="60" :y1="marca.y" x2="740" :y2="marca.y" class="linha-grade" />
+                <text x="50" :y="marca.y + 4" text-anchor="end" class="texto-eixo">{{ marca.valor }}%</text>
               </g>
               <g v-for="barra in barrasAcertos" :key="barra.id">
                 <rect :x="barra.x" :y="barra.y" :width="barra.largura" :height="barra.altura" :fill="barra.cor" rx="3">
                   <title>{{ barra.titulo }}</title>
                 </rect>
                 <text :x="barra.x + barra.largura / 2" :y="barra.y - 6" text-anchor="middle" class="texto-valor">{{ formatarPercentual(barra.valor) }}%</text>
+                <text :x="barra.x + barra.largura / 2" y="356" text-anchor="middle" class="texto-contagem">n = {{ barra.n }}</text>
               </g>
-              <text v-for="grupo in gruposGrafico" :key="`rotulo-${grupo.key}`" :x="grupo.x" y="358" text-anchor="middle" class="texto-categoria">{{ grupo.label }}</text>
+              <text v-for="grupo in gruposGrafico" :key="`rotulo-${grupo.key}`" :x="grupo.x" y="368" text-anchor="middle" class="texto-categoria">{{ grupo.label }}</text>
             </svg>
+            <p class="explicacao-contagem"><span aria-hidden="true"></span><strong>n</strong> indica o número de questões de cada grupo (com imagem ou sem imagem) que entrou no cálculo da média.</p>
           </div>
           <p v-else class="grafico-aviso">Não há questões com acertos informados para os filtros selecionados.</p>
         </template>
@@ -188,7 +199,7 @@
 
       <div v-if="mostrarSecao('tabela')" class="tempo-bloco tabela-questoes">
         <div class="grafico-cabecalho">
-          <h3>Detalhamento por questão</h3>
+          <h3>Detalhamento por Questão</h3>
           <InfoIcon tooltip="Mostra a presença de imagem e o percentual de acertos de cada questão. A tabela pode ser filtrada e ordenada pelo mesmo padrão dos demais gráficos." />
           <div class="filter-wrapper">
             <button type="button" class="filter-btn" @click="alternarFiltroTabela">
@@ -434,7 +445,7 @@ const difficultyLevels = [
   { key: 'medio', label: 'Médio' },
   { key: 'dificil', label: 'Difícil' }
 ]
-// Mantém a mesma regra do tempo de leitura: conta o texto da questão sem espaços.
+// Mantém a mesma regra do tempo de leitura: conta o texto da questão desconsiderando espaços.
 const contarCaracteres = (texto) => (texto ?? '').replace(/[ \t\n\r\u00a0]/g, '').length
 const questoesCaracteres = computed(() => props.questoes
   .map((questao, indice) => ({
@@ -530,15 +541,14 @@ const gruposFiltrados = computed(() => gruposBase.value.filter((grupo) =>
   filtroDificuldade.value === 'todas' || grupo.key === filtroDificuldade.value
 ))
 const gruposGrafico = computed(() => {
-  const larguraPlot = larguraGrafico.value - 64
+  const larguraPlot = 680
   const espacamento = larguraPlot / gruposFiltrados.value.length
   return gruposFiltrados.value.map((grupo, indice) => ({
     ...grupo,
-    centro: 52 + espacamento * (indice + 0.5),
-    x: 52 + espacamento * (indice + 0.5)
+    centro: 60 + espacamento * (indice + 0.5),
+    x: 60 + espacamento * (indice + 0.5)
   }))
 })
-const larguraGrafico = computed(() => Math.max(760, gruposFiltrados.value.length * 180 + 64))
 const barrasAcertos = computed(() => {
   const barras = []
   const escalaY = (valor) => 340 - (valor / 100) * 280
@@ -552,7 +562,7 @@ const barrasAcertos = computed(() => {
       { key: 'com', rotulo: 'Com imagem', cor: '#0070C0', imagem: true },
       { key: 'sem', rotulo: 'Sem imagem', cor: '#A78BFA', imagem: false }
     ].filter((item) => item.imagem ? mostrarComImagem.value : mostrarSemImagem.value)
-    const larguraBarra = series.length === 1 ? 48 : 40
+    const larguraBarra = 70
     const gap = 8
     const inicioX = grupo.centro - (series.length * larguraBarra + (series.length - 1) * gap) / 2
     series.forEach((item, indice) => {
@@ -568,6 +578,7 @@ const barrasAcertos = computed(() => {
         largura: larguraBarra,
         altura: 340 - y,
         valor,
+        n: questoesSerie.length,
         cor: item.cor,
         titulo: `${grupo.label} · ${item.rotulo}: ${formatarPercentual(valor)}% (${questoesSerie.length} questões)`
       })
@@ -624,12 +635,12 @@ const fatiasImagem = computed(() => {
 .tempo-bloco { padding: 1.5rem; background: white; border-radius: 8px; margin: 1.5rem 0 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
 .tempo-cabecalho { display: flex; align-items: center; gap: .5rem; margin-bottom: .25rem; }
 .tempo-cabecalho h2 { margin: 0; color: #263238; font-size: 1.25rem; }
-.tempo-subtitulo { margin: 0 0 1rem; color: #666; font-size: .9rem; }
+.tempo-subtitulo { margin: 0 0 1rem; color: #666; font-size: 1.1rem; }
 .tempo-conteudo { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
 .pizza { width: 380px; height: 380px; max-width: 100%; flex-shrink: 0; }
-.legenda { list-style: none; margin: 0; padding: 0; font-size: .85rem; }
-.legenda li { display: flex; align-items: center; gap: .5rem; margin-bottom: .5rem; }
-.legenda-cor { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+.legenda { list-style: none; margin: 0; padding: 0; min-width: 260px; }
+.legenda li { display: flex; align-items: center; gap: .5rem; margin-bottom: .6rem; font-size: 1.1rem; }
+.legenda-cor { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
 .legenda-rotulo { color: #333; }
 .legenda-valor { color: #666; margin-left: .5rem; }
 .grafico-acertos { margin: 0; }
@@ -647,7 +658,12 @@ const fatiasImagem = computed(() => {
 .texto-eixo { fill: #333; font-size: 13px; }
 .texto-valor { fill: #333; font-size: 13px; font-weight: 600; }
 .texto-categoria { fill: #333; font-size: 13px; }
+.texto-contagem { fill: #666; font-size: 11px; }
+.texto-legenda { fill: #333; font-size: 12px; }
+.explicacao-contagem { display: flex; align-items: center; gap: .45rem; margin: .5rem 0 0; color: #666; font-size: .85rem; }
+.explicacao-contagem span { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: #666; }
 .legenda-barras { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: #333; font-size: 16px; margin: 0 0 .25rem; }
+.legenda-caracteres { margin: 0 0 .5rem; }
 .legenda-barras span { display: inline-flex; align-items: center; gap: .5rem; }
 .legenda-barras i { width: 16px; height: 16px; border-radius: 3px; }
 .cor-com-imagem { background: #0070C0; }

@@ -5,7 +5,7 @@
     <template v-else>
       <section v-if="secao === 'presenca'" class="imagem-bloco">
         <div class="imagem-cabecalho">
-          <h3>Presença de imagens na prova</h3>
+          <h3>Presença de Imagens na Prova</h3>
           <InfoIcon :largura="360" tooltip="Consideramos imagem qualquer elemento visual da questão, incluindo gráficos e tabelas. A contagem usa o indicador tem_imagem dos JSONs do caderno Azul. Inglês e Espanhol nas questões 1 a 5 são itens separados; por isso, a base contém 185 itens, embora cada participante responda a 180 questões." />
           <div class="filter-wrapper">
             <button type="button" class="filter-btn" @click="alternarFiltroPresenca"><FilterIcon />Filtro</button>
@@ -27,7 +27,6 @@
                     <label :for="`imagem-presenca-area-${opcao.valor}`">{{ opcao.rotulo }}</label>
                   </div>
                 </div>
-                <small class="filter-ajuda">Nenhuma área marcada equivale a todas as áreas do dia.</small>
               </div>
               <div class="filter-secao">
                 <p class="filter-titulo">DIFICULDADE</p>
@@ -42,13 +41,17 @@
             </div>
           </div>
         </div>
-        <p class="imagem-subtitulo">{{ itensComImagem.length }} de {{ questoesFiltradas.length }} itens têm imagem ({{ formatarPercentual(percentualComImagem) }}%).</p>
+        <p class="imagem-subtitulo imagem-pizza-subtitulo">Distribuição dos itens do ENEM entre os que têm imagem e os que não têm.</p>
         <div v-if="questoesFiltradas.length" class="imagem-pizza-conteudo">
           <svg viewBox="0 0 200 200" class="imagem-pizza" role="img" aria-label="Proporção de itens com e sem imagem">
             <path v-for="fatia in fatias" :key="fatia.chave" :d="fatia.caminho" :fill="fatia.cor" />
           </svg>
           <ul class="imagem-legenda">
-            <li v-for="fatia in fatias" :key="fatia.chave"><i :style="{ background: fatia.cor }"></i>{{ fatia.rotulo }}: {{ fatia.valor }} ({{ formatarPercentual(fatia.percentual) }}%)</li>
+            <li v-for="fatia in fatias" :key="fatia.chave">
+              <span class="imagem-legenda-cor" :style="{ background: fatia.cor }"></span>
+              <span class="imagem-legenda-rotulo">{{ fatia.rotulo }}</span>
+              <span class="imagem-legenda-valor">{{ fatia.valor }} itens ({{ formatarPercentual(fatia.percentual) }}%)</span>
+            </li>
           </ul>
         </div>
         <p v-else class="imagem-vazio">Não há itens para a área selecionada.</p>
@@ -56,7 +59,7 @@
 
       <section v-else-if="secao === 'caracteres'" class="imagem-bloco">
         <div class="imagem-cabecalho">
-          <h3>Quantidade de caracteres por presença de imagem</h3>
+          <h3>Quantidade de Caracteres por Presença de Imagem</h3>
           <InfoIcon :largura="360" tooltip="Cada ponto representa uma questão do caderno Azul. A contagem considera o texto extraído da questão e das alternativas, sem espaços, tabulações ou quebras de linha; questões sem texto extraído não aparecem. Inglês e Espanhol nas questões 1 a 5 são itens separados, totalizando 185 itens, embora cada participante responda a 180 questões." />
           <div class="filter-wrapper">
             <button type="button" class="filter-btn" @click="alternarFiltroCaracteres"><FilterIcon />Filtro</button>
@@ -78,7 +81,6 @@
                     <label :for="`imagem-caracteres-area-${opcao.valor}`">{{ opcao.rotulo }}</label>
                   </div>
                 </div>
-                <small class="filter-ajuda">Nenhuma área marcada equivale a todas as áreas do dia.</small>
               </div>
               <div class="filter-secao">
                 <p class="filter-titulo">DIFICULDADE</p>
@@ -103,8 +105,9 @@
           </div>
         </div>
         <p class="imagem-subtitulo">Distribuição dos caracteres em {{ questoesCaracteresFiltradas.length }} questões com texto extraído. Passe o cursor sobre um ponto para ver a questão e o valor.</p>
+        <div v-if="questoesCaracteresFiltradas.length" class="imagem-legenda-barras imagem-legenda-caracteres"><span><i class="imagem-cor-com"></i>Com imagem</span><span><i class="imagem-cor-sem"></i>Sem imagem</span></div>
         <svg v-if="questoesCaracteresFiltradas.length" class="imagem-grafico-caracteres" viewBox="0 0 760 400" role="img" aria-label="Distribuição de caracteres dos itens com e sem imagem">
-          <text x="410" y="20" text-anchor="middle" class="imagem-eixo">Caracteres (sem espaços)</text>
+          <text x="20" y="175" text-anchor="middle" class="imagem-eixo" transform="rotate(-90 20 175)">Caracteres</text>
           <g v-for="marca in marcasCaracteres" :key="`caracteres-eixo-${marca.proporcao}`">
             <line x1="80" :y1="marca.y" x2="740" :y2="marca.y" class="imagem-grade" />
             <text x="70" :y="marca.y + 4" text-anchor="end" class="imagem-eixo">{{ formatarNumero(marca.valor) }}</text>
@@ -120,8 +123,7 @@
             <circle v-for="ponto in grupo.pontos" :key="ponto.chave" :cx="grupo.centro + ponto.deslocamento" :cy="escalaYCaracteres(ponto.caracteres)" r="4" :fill="grupo.cor" fill-opacity=".7">
               <title>{{ rotuloQuestao(ponto) }} · {{ formatarNumero(ponto.caracteres) }} caracteres</title>
             </circle>
-            <text :x="grupo.centro" y="350" text-anchor="middle" class="imagem-categoria">{{ grupo.rotulo }}</text>
-            <text :x="grupo.centro" y="372" text-anchor="middle" class="imagem-eixo">n = {{ grupo.pontos.length }} questões</text>
+            <text :x="grupo.centro" y="350" text-anchor="middle" class="imagem-eixo">n = {{ grupo.pontos.length }} questões</text>
           </g>
         </svg>
         <button v-if="questoesCaracteresFiltradas.length" type="button" class="filter-btn botao-mais-info" @click="mostrarMaisCaracteres = !mostrarMaisCaracteres">
@@ -129,7 +131,7 @@
         </button>
         <ul v-if="mostrarMaisCaracteres && questoesCaracteresFiltradas.length" class="imagem-notas">
           <li><strong>Pontos:</strong> cada ponto representa uma questão. A cor indica se o extrator identificou imagem naquela questão; ela não entra no cálculo da quantidade de caracteres.</li>
-          <li><strong>Contagem:</strong> considera o texto extraído da questão e suas alternativas, sem espaços, tabulações ou quebras de linha. Questões sem texto extraído não entram no gráfico.</li>
+          <li><strong>Contagem:</strong> considera o texto extraído da questão e suas alternativas, desconsiderando espaços, tabulações e quebras de linha. Questões sem texto extraído não entram no gráfico.</li>
           <li><strong>Linha dentro da caixa:</strong> representa a mediana, o valor central quando as questões do grupo são ordenadas por quantidade de caracteres.</li>
           <li><strong>Caixa:</strong> vai do 1º ao 3º quartil e reúne os 50% centrais das questões. Uma caixa mais alta indica maior variação nos tamanhos desse grupo.</li>
           <li><strong>Hastes e pontos extremos:</strong> as hastes chegam aos menores e maiores valores dentro de 1,5 intervalo interquartil. Valores além das hastes são considerados outliers, mas continuam visíveis como pontos.</li>
@@ -140,8 +142,8 @@
 
       <section v-else-if="secao === 'acertos'" class="imagem-bloco">
         <div class="imagem-cabecalho">
-          <h3>Percentual médio de acertos por presença de imagem</h3>
-          <InfoIcon :largura="360" tooltip="Cada barra mostra a média simples dos percentuais de acerto das questões com imagem ou sem imagem na área selecionada. Cada questão tem o mesmo peso na média; questões anuladas não entram no cálculo. Os dados são dos microdados do ENEM relacionados ao caderno Azul. Inglês e Espanhol nas questões 1 a 5 são itens separados, totalizando 185 itens, embora cada participante responda a 180 questões." />
+          <h3>Percentual Médio de Acertos por Presença de Imagem</h3>
+          <InfoIcon :largura="360" tooltip="Cada barra mostra a média simples dos percentuais de acerto das questões com imagem ou sem imagem na área selecionada. Os percentuais são calculados com os microdados de todos os cadernos; questões anuladas não entram. A presença de imagem é classificada a partir dos JSONs do caderno Azul. Inglês e Espanhol nas questões 1 a 5 são itens separados, totalizando 185 itens, embora cada participante responda a 180 questões." />
           <div class="filter-wrapper">
             <button type="button" class="filter-btn" @click="alternarFiltroAcertos"><FilterIcon />Filtro</button>
             <div v-if="mostrarFiltroAcertos" class="filter-menu">
@@ -162,7 +164,6 @@
                     <label :for="`imagem-acertos-area-${opcao.valor}`">{{ opcao.rotulo }}</label>
                   </div>
                 </div>
-                <small class="filter-ajuda">Nenhuma área marcada equivale a todas as áreas do dia.</small>
               </div>
               <div class="filter-secao">
                 <p class="filter-titulo">DIFICULDADE</p>
@@ -186,51 +187,56 @@
             </div>
           </div>
         </div>
-        <p class="imagem-subtitulo">Média simples dos percentuais de acerto dos itens por área e presença de imagem.</p>
-        <div class="imagem-legenda-barras"><span><i class="imagem-cor-com"></i>Com imagem</span><span><i class="imagem-cor-sem"></i>Sem imagem</span></div>
-        <svg v-if="gruposAcertos.length" class="imagem-grafico-acertos" :viewBox="`0 0 ${larguraGrafico} 400`" role="img" aria-label="Percentual médio de acertos por área e presença de imagem">
+        <p class="imagem-subtitulo">Cada barra mostra a média simples dos percentuais de acerto dos itens por área e presença de imagem; o n abaixo indica quantos itens entraram no cálculo.</p>
+        <div v-if="gruposAcertos.length" class="imagem-legenda-barras"><span><i class="imagem-cor-com"></i>Com imagem</span><span><i class="imagem-cor-sem"></i>Sem imagem</span></div>
+        <svg v-if="gruposAcertos.length" class="imagem-grafico-acertos" :viewBox="`0 0 ${larguraGrafico} 430`" role="img" aria-label="Percentual médio de acertos por área e presença de imagem">
           <g v-for="marca in marcasAcerto" :key="`acertos-eixo-${marca.valor}`">
             <line x1="70" :y1="marca.y" :x2="larguraGrafico - 18" :y2="marca.y" class="imagem-grade" />
             <text x="60" :y="marca.y + 4" text-anchor="end" class="imagem-eixo">{{ marca.valor }}%</text>
           </g>
           <g v-for="grupo in gruposAcertos" :key="grupo.area">
             <g v-for="barra in grupo.barras" :key="barra.key">
-              <rect :x="barra.x" :y="escalaYAcerto(barra.valor)" :width="barra.largura" :height="340 - escalaYAcerto(barra.valor)" :fill="barra.cor" rx="3">
+              <rect :x="barra.x" :y="escalaYAcerto(barra.valor)" :width="barra.largura" :height="350 - escalaYAcerto(barra.valor)" :fill="barra.cor" rx="3">
                 <title>{{ grupo.rotulo }} · {{ barra.rotulo }}: {{ formatarPercentual(barra.valor) }}% ({{ barra.n }} itens)</title>
               </rect>
               <text :x="barra.x + barra.largura / 2" :y="escalaYAcerto(barra.valor) - 6" text-anchor="middle" class="imagem-valor">{{ formatarPercentual(barra.valor) }}%</text>
+              <text :x="barra.x + barra.largura / 2" y="370" text-anchor="middle" class="imagem-contagem">n = {{ barra.n }}</text>
             </g>
-            <text :x="grupo.centro" y="368" text-anchor="middle" class="imagem-categoria">{{ grupo.rotulo }}</text>
+            <text :x="grupo.centro" y="410" text-anchor="middle" class="imagem-categoria">{{ grupo.rotulo }}</text>
           </g>
         </svg>
         <p v-else class="imagem-vazio">Não há percentuais de acerto para os filtros selecionados.</p>
         <button v-if="gruposAcertos.length" type="button" class="filter-btn botao-mais-info" @click="mostrarMaisAcertos = !mostrarMaisAcertos">
           {{ mostrarMaisAcertos ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
         </button>
-        <div v-if="mostrarMaisAcertos && gruposAcertos.length" class="imagem-notas">
-          <p>Cada questão com percentual de acertos informado contribui igualmente para a média da sua área e do grupo com ou sem imagem. Portanto, a barra resume as questões do grupo e não representa uma média ponderada pelo número de participantes que responderam a cada questão. Questões anuladas não entram nesse cálculo.</p>
-        </div>
+        <ul v-if="mostrarMaisAcertos && gruposAcertos.length" class="imagem-notas">
+          <li><strong>Barras:</strong> cada barra representa a média simples dos percentuais de acerto dos itens de uma área e de um grupo (com imagem ou sem imagem). Cada item tem o mesmo peso na média.</li>
+          <li><strong>n:</strong> indica quantos itens entraram no cálculo daquela barra. Itens anulados ou sem percentual de acerto não entram.</li>
+          <li><strong>Dados:</strong> os percentuais vêm dos microdados do ENEM e consideram todos os cadernos. A presença de imagem é classificada a partir dos JSONs do caderno Azul; elementos visuais como gráficos e tabelas também contam como imagem.</li>
+          <li><strong>Itens de Linguagens e Códigos:</strong> Inglês e Espanhol nas questões 1 a 5 são contados separadamente; por isso, há 185 itens na base, embora cada participante responda a 180 questões.</li>
+        </ul>
       </section>
 
       <section v-else-if="secao === 'correlacao'" class="imagem-bloco">
         <div class="imagem-cabecalho">
-          <h3>Relação entre presença de imagem e percentual de acertos por dificuldade</h3>
+          <h3>Relação entre Presença de Imagem e Percentual de Acertos por Dificuldade</h3>
           <InfoIcon :largura="420" tooltip="Cada célula representa uma dificuldade e uma área do ENEM selecionado. A cor indica a direção e a intensidade da correlação ponto-bisserial entre ter imagem e o percentual de acertos. O p bruto é ajustado pelo método de Holm entre as combinações válidas de área e dificuldade deste ano (até 12 testes)." />
         </div>
-        <p class="imagem-subtitulo">Cada célula reúne as questões de uma dificuldade e de uma área. O mapa mostra se a associação entre imagem e percentual de acertos varia entre questões fáceis, médias e difíceis.</p>
-        <p class="imagem-correlacao-mini-legenda"><strong>Legenda:</strong> azul = associação negativa · branco = próxima de zero · violeta = positiva · círculo escuro com ★ = p (Holm) &lt; 0,05.</p>
+        <p class="imagem-subtitulo">Correlação ponto-bisserial entre a presença de imagem e o percentual de acertos, separada por área e nível de dificuldade.</p>
+        <p class="imagem-correlacao-mini-legenda"><strong>Legenda:</strong> azul = associação negativa · branco = próxima de zero · violeta = positiva · círculo escuro com ★ = p (Holm) &lt; 0,05 e |r<sub>pb</sub>| &gt; 0,7.</p>
+        <p class="imagem-correlacao-mini-legenda">O traço (—) indica que não foi possível calcular a correlação naquele grupo. Passe o cursor sobre a célula para ver o motivo e a quantidade de questões válidas.</p>
         <div v-if="celulasMapaCorrelacao.length" class="imagem-correlacao-mapa-scroll">
           <svg :viewBox="`0 0 ${larguraMapaCorrelacao} ${alturaMapaCorrelacao}`" class="imagem-mapa-correlacao" role="img" :aria-label="`Mapa de calor da correlação ponto-bisserial entre presença de imagem e percentual de acertos no ENEM ${ano}, por área e dificuldade`">
             <text v-for="(area, indice) in areasMapaCorrelacao" :key="`imagem-correlacao-coluna-${area.valor}`" :x="margemMapaEsquerda + indice * tamanhoCelulaMapa + (tamanhoCelulaMapa - espacamentoCelulaMapa) / 2" :y="margemMapaTopo - 12" text-anchor="middle" class="imagem-heatmap-eixo">{{ area.rotulo }}</text>
             <text v-for="(dificuldade, indice) in dificuldadesMapaCorrelacao" :key="`imagem-correlacao-linha-${dificuldade.valor}`" :x="margemMapaEsquerda - 12" :y="margemMapaTopo + indice * tamanhoCelulaMapa + (tamanhoCelulaMapa - espacamentoCelulaMapa) / 2" text-anchor="end" dominant-baseline="middle" class="imagem-heatmap-eixo">{{ dificuldade.rotulo }}</text>
             <g v-for="celula in celulasMapaCorrelacao" :key="celula.chave">
-              <rect class="imagem-heatmap-celula" :x="celula.x" :y="celula.y" :width="tamanhoCelulaMapa - espacamentoCelulaMapa" :height="tamanhoCelulaMapa - espacamentoCelulaMapa" :fill="celula.cor" :stroke="celula.pHolm !== null && celula.pHolm < 0.05 ? '#263238' : '#ffffff'" :stroke-width="celula.pHolm !== null && celula.pHolm < 0.05 ? 3 : 1">
-                <title>{{ celula.rotuloDificuldade }} · {{ celula.rotuloArea }}</title>
+              <rect class="imagem-heatmap-celula" :x="celula.x" :y="celula.y" :width="tamanhoCelulaMapa - espacamentoCelulaMapa" :height="tamanhoCelulaMapa - espacamentoCelulaMapa" :fill="celula.cor" :stroke="celula.destacada ? '#263238' : '#ffffff'" :stroke-width="celula.destacada ? 3 : 1">
+                <title>{{ celula.rotuloDificuldade }} · {{ celula.rotuloArea }} · {{ celula.correlacao === null ? `Correlação não calculável: ${celula.motivo} (n = ${celula.n}).` : `r ponto-bisserial = ${formatarCorrelacaoMapa(celula.correlacao)}; p bruto = ${formatarPMapa(celula.p)}; p (Holm) = ${formatarPMapa(celula.pHolm)}.` }}</title>
               </rect>
-              <g v-if="celula.pHolm !== null && celula.pHolm < 0.05" class="imagem-heatmap-significancia" aria-label="Resultado significativo após ajuste de Holm">
+              <g v-if="celula.destacada" class="imagem-heatmap-significancia" aria-label="Correlação forte e significativa após ajuste de Holm">
                 <circle :cx="celula.x + tamanhoCelulaMapa - espacamentoCelulaMapa - 17" :cy="celula.y + 17" r="12" />
                 <text :x="celula.x + tamanhoCelulaMapa - espacamentoCelulaMapa - 17" :y="celula.y + 17" text-anchor="middle" dominant-baseline="middle">★</text>
-                <title>p (Holm) abaixo de 0,05</title>
+                <title>p (Holm) abaixo de 0,05 e |r pb| maior que 0,7</title>
               </g>
               <template v-if="celula.correlacao !== null">
                 <text :x="celula.x + (tamanhoCelulaMapa - espacamentoCelulaMapa) / 2" :y="celula.y + (tamanhoCelulaMapa - espacamentoCelulaMapa) / 2 - 8" text-anchor="middle" dominant-baseline="middle" :fill="celula.corTexto" class="imagem-heatmap-valor">{{ formatarCorrelacaoMapa(celula.correlacao) }}</text>
@@ -257,17 +263,22 @@
         <button v-if="celulasMapaCorrelacao.length" type="button" class="filter-btn botao-mais-info" @click="mostrarMaisCorrelacao = !mostrarMaisCorrelacao">
           {{ mostrarMaisCorrelacao ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}
         </button>
-        <div v-if="mostrarMaisCorrelacao && celulasMapaCorrelacao.length" class="imagem-notas">
-          <p><strong>O que cada célula representa:</strong> uma combinação de nível de dificuldade e área no ano selecionado. Questões anuladas, sem percentual de acertos ou sem classificação de dificuldade não entram na análise. Cada questão tem o mesmo peso na correlação.</p>
-          <p><strong>Correlação ponto-bisserial (r<sub>pb</sub>):</strong> relaciona a presença ou ausência de imagem ao percentual de acertos e varia de −1 a +1. Um valor positivo indica que, nesse grupo, as questões com imagem tendem a ter percentual de acertos maior do que as sem imagem; um valor negativo indica que tendem a ter percentual menor. Valores próximos de zero indicam pouca associação linear. Quanto mais distante de zero, mais forte é a associação observada. A cor representa esse valor.</p>
-          <p><strong>p bruto e p (Holm):</strong> o p bruto corresponde ao teste de uma combinação de área e dificuldade. O p (Holm) ajusta em conjunto os testes válidos do ano selecionado (até 12 combinações), reduzindo o risco de encontrar uma associação por acaso ao analisar várias células. Consideramos evidência estatística quando p (Holm) &lt; 0,05; um valor maior não prova que a hipótese nula seja verdadeira.</p>
-          <p><strong>Limite da análise:</strong> correlação mostra associação, não causa. Dificuldade, conteúdo, texto e outros fatores podem estar relacionados ao percentual de acertos; por isso, este mapa não permite concluir que imagens aumentem ou reduzam o desempenho.</p>
-        </div>
+        <ul v-if="mostrarMaisCorrelacao && celulasMapaCorrelacao.length" class="imagem-notas">
+          <li><strong>Traço (—):</strong> significa que a correlação não pôde ser calculada. Isso ocorre quando há menos de três questões válidas, quando todas têm a mesma classificação de imagem (todas com ou todas sem imagem) ou quando todas têm o mesmo percentual de acertos. Passe o cursor sobre a célula para ver qual condição ocorreu e quantas questões entraram.</li>
+          <li><strong>Célula:</strong> cada célula calculável mostra a correlação ponto-bisserial (r<sub>pb</sub>), o p bruto e o p ajustado (Holm) para uma área e uma faixa de dificuldade. Questões anuladas, sem percentual de acertos ou sem classificação de dificuldade não entram na análise.</li>
+          <li><strong>r<sub>pb</sub>:</strong> mede a força e a direção da relação entre presença de imagem e percentual de acertos. Varia de −1 a +1; quanto mais distante de zero, mais forte a associação. Valores positivos indicam maior percentual de acertos entre questões com imagem; valores negativos indicam menor percentual.</li>
+          <li><strong>p bruto:</strong> indica quão raro seria observar uma correlação desse tamanho se não houvesse associação entre presença de imagem e percentual de acertos.</li>
+          <li><strong>p baixo:</strong> uma correlação como a observada seria rara se não houvesse associação; há indício estatístico de relação.</li>
+          <li><strong>p alto:</strong> o resultado é compatível com ausência de associação, mas não prova que a relação não exista.</li>
+          <li><strong>p (Holm):</strong> ajusta os p brutos de todas as combinações válidas de área e dificuldade deste ano, controlando em 5% o risco de pelo menos um falso positivo. Valores abaixo de 0,05 são considerados estatisticamente significativos.</li>
+          <li><strong>Leitura conjunta:</strong> considere a força e a direção de r<sub>pb</sub> junto com p (Holm) para avaliar a evidência de associação.</li>
+          <li><strong>Estrela:</strong> aparece somente quando p (Holm) &lt; 0,05 e |r<sub>pb</sub>| &gt; 0,7. Uma correlação pode ser significativa sem atingir esse limite de magnitude.</li>
+        </ul>
       </section>
 
       <section v-else-if="secao === 'tabela'" class="imagem-bloco">
         <div class="imagem-cabecalho">
-          <h3>Detalhamento dos itens por imagem</h3>
+          <h3>Detalhamento dos Itens por Imagem</h3>
           <InfoIcon :largura="360" tooltip="Os dados são do caderno Azul. Inglês e Espanhol nas questões 1 a 5 são itens separados; por isso, a base contém 185 itens, embora cada participante responda a 180 questões. A dificuldade considera o parâmetro b do TRI: em cada área, as questões foram classificadas em três grupos (fácil, média e difícil). Questões sem classificação não têm parâmetro b calculado pelo Inep ou foram anuladas." />
           <div class="filter-wrapper">
             <button type="button" class="filter-btn" @click="alternarFiltroTabela"><FilterIcon />Filtro</button>
@@ -289,7 +300,6 @@
                     <label :for="`imagem-tabela-area-${opcao.valor}`">{{ opcao.rotulo }}</label>
                   </div>
                 </div>
-                <small class="filter-ajuda">Nenhuma área marcada equivale a todas as áreas do dia.</small>
               </div>
               <div class="filter-secao">
                 <p class="filter-titulo">DIFICULDADE</p>
@@ -419,6 +429,7 @@ const rascunhoDificuldadeAcertos = ref('todas')
 const filtroImagemAcertos = ref('ambas')
 const rascunhoImagemAcertos = ref('ambas')
 const mostrarFiltroAcertos = ref(false)
+const mostrarMaisAcertos = ref(false)
 const mostrarMaisCorrelacao = ref(false)
 const filtroDiaTabela = ref('todos')
 const rascunhoDiaTabela = ref('todos')
@@ -431,7 +442,6 @@ const rascunhoAnuladasTabela = ref('todas')
 const filtroDificuldadeTabela = ref('todas')
 const rascunhoDificuldadeTabela = ref('todas')
 const mostrarFiltroTabela = ref(false)
-const mostrarMaisAcertos = ref(false)
 
 const carregarDados = async (ano) => {
   carregando.value = true
@@ -645,7 +655,7 @@ const questoesAcertosFiltradas = computed(() => questoes.value
   .filter((questao) => filtroImagemAcertos.value === 'ambas'
     || (filtroImagemAcertos.value === 'com' ? questao.temImagem : !questao.temImagem)))
 const larguraGrafico = computed(() => Math.max(700, areasAcertosSelecionadas.value.length * 250 + 100))
-const escalaYAcerto = (valor) => 340 - (valor / 100) * 270
+const escalaYAcerto = (valor) => 350 - (valor / 100) * 280
 const marcasAcerto = [0, 25, 50, 75, 100].map((valor) => ({ valor, y: escalaYAcerto(valor) }))
 const gruposAcertos = computed(() => {
   const espacamento = (larguraGrafico.value - 100) / areasAcertosSelecionadas.value.length
@@ -660,8 +670,8 @@ const gruposAcertos = computed(() => {
         questao.area === area && questao.temImagem === item.temImagem && questao.percentualAcertos !== null)
       if (!itens.length) return []
       const media = itens.reduce((soma, questao) => soma + Number(questao.percentualAcertos), 0) / itens.length
-      const largura = 44
-      const gap = 10
+      const largura = 52
+      const gap = 12
       return [{
         key: `${area}-${item.chave}`,
         rotulo: item.rotulo,
@@ -769,9 +779,11 @@ const corTextoHeatmap = (rgb) => {
 }
 const calcularCorrelacaoPorImagem = (itens) => {
   const n = itens.length
-  const temImagem = itens.some((questao) => questao.temImagem)
-  const semImagem = itens.some((questao) => !questao.temImagem)
-  if (n < 3 || !temImagem || !semImagem) return { n, correlacao: null, p: null }
+  const nComImagem = itens.filter((questao) => questao.temImagem).length
+  const nSemImagem = n - nComImagem
+  if (n < 3) return { n, correlacao: null, p: null, motivo: 'há menos de 3 questões válidas' }
+  if (!nComImagem) return { n, correlacao: null, p: null, motivo: `nenhuma questão tem imagem (${nSemImagem} sem imagem)` }
+  if (!nSemImagem) return { n, correlacao: null, p: null, motivo: `nenhuma questão está sem imagem (${nComImagem} com imagem)` }
 
   const mediaImagem = itens.filter((questao) => questao.temImagem).length / n
   const mediaAcertos = itens.reduce((soma, questao) => soma + questao.percentualAcertos, 0) / n
@@ -786,9 +798,9 @@ const calcularCorrelacaoPorImagem = (itens) => {
     varianciaImagem += diferencaImagem ** 2
     varianciaAcertos += diferencaAcertos ** 2
   })
-  if (!varianciaAcertos) return { n, correlacao: null, p: null }
+  if (!varianciaAcertos) return { n, correlacao: null, p: null, motivo: 'todas as questões têm o mesmo percentual de acertos' }
   const correlacao = covariancia / Math.sqrt(varianciaImagem * varianciaAcertos)
-  return { n, correlacao, p: pValorT(correlacao, n) }
+  return { n, correlacao, p: pValorT(correlacao, n), motivo: null }
 }
 const celulasMapaCorrelacao = computed(() => {
   const celulas = dificuldadesMapaCorrelacao.flatMap((dificuldade, indiceDificuldade) =>
@@ -818,7 +830,11 @@ const celulasMapaCorrelacao = computed(() => {
     maiorAjustadoAnterior = Math.max(maiorAjustadoAnterior, Math.min(1, celula.p * (validas.length - indice)))
     celula.pHolm = maiorAjustadoAnterior
   })
-  return celulas
+  return celulas.map((celula) => ({
+    ...celula,
+    destacada: celula.pHolm !== null && celula.pHolm < 0.05
+      && celula.correlacao !== null && Math.abs(celula.correlacao) > 0.7
+  }))
 })
 const quantidadeCorrelacoesValidas = computed(() => celulasMapaCorrelacao.value
   .filter((celula) => celula.p !== null).length)
@@ -844,14 +860,18 @@ const questoesTabela = computed(() => questoes.value
 .imagem-cabecalho { display: flex; align-items: center; gap: .5rem; }
 .imagem-cabecalho h3 { margin: 0; color: #263238; font-size: 1.25rem; }
 .imagem-subtitulo { margin: .5rem 0 1rem; color: #666; font-size: .9rem; }
+.imagem-pizza-subtitulo { margin: 0 0 1rem; font-size: 1.1rem; }
 .imagem-pizza-conteudo { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
 .imagem-pizza { width: 340px; height: 340px; max-width: 100%; flex-shrink: 0; }
-.imagem-legenda { list-style: none; margin: 0; padding: 0; color: #333; font-size: .9rem; }
-.imagem-legenda li { display: flex; align-items: center; gap: .5rem; margin: .6rem 0; }
-.imagem-legenda i, .imagem-legenda-barras i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+.imagem-legenda { list-style: none; margin: 0; padding: 0; min-width: 260px; }
+.imagem-legenda li { display: flex; align-items: center; gap: .5rem; margin-bottom: .6rem; font-size: 1.1rem; }
+.imagem-legenda-cor, .imagem-legenda-barras i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+.imagem-legenda-rotulo { flex: 1; color: #333; }
+.imagem-legenda-valor { color: #666; white-space: nowrap; }
 .imagem-cor-com { background: #0070C0; }
 .imagem-cor-sem { background: #A78BFA; }
 .imagem-legenda-barras { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: .5rem 0 0; color: #333; }
+.imagem-legenda-caracteres { margin: 0 0 .5rem; }
 .imagem-legenda-barras span { display: inline-flex; align-items: center; gap: .5rem; }
 .imagem-grafico-caracteres, .imagem-grafico-acertos { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto; }
 .imagem-correlacao-mapa-scroll { overflow-x: auto; }
@@ -866,6 +886,7 @@ const questoesTabela = computed(() => questoes.value
 .imagem-correlacao-leitura { margin: .65rem 0; color: #475467; font-size: .9rem; line-height: 1.5; }
 .imagem-grade { stroke: #e4e7ec; stroke-width: 1; }
 .imagem-eixo, .imagem-categoria { fill: #333; font-size: 13px; }
+.imagem-contagem { fill: #666; font-size: 11px; }
 .imagem-valor { fill: #333; font-size: 12px; font-weight: 600; }
 .imagem-tabela-scroll { max-height: 520px; overflow: auto; border: 1px solid #e0e0e0; border-radius: 8px; }
 .imagem-tabela { width: 100%; border-collapse: collapse; text-align: left; font-size: .9rem; }

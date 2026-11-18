@@ -9,21 +9,21 @@
           <InfoIcon :largura="440" :tooltip="configuracaoMapa.tooltip" />
         </div>
         <p class="posicao-subtitulo">{{ configuracaoMapa.subtitulo }}</p>
-        <p class="posicao-mini-legenda"><strong>Legenda:</strong> azul = associação negativa · branco = próxima de zero · violeta = positiva · círculo escuro com ★ = p (Holm) &lt; 0,05.</p>
+        <p class="posicao-mini-legenda"><strong>Legenda:</strong> azul = associação negativa · branco = próxima de zero · violeta = positiva · círculo escuro com ★ = p (Holm) &lt; 0,05 e |ρ| &gt; 0,7.</p>
         <div class="posicao-mapa-scroll">
           <svg :viewBox="`0 0 ${mapa.largura} ${mapa.altura}`" class="posicao-mapa" role="img" :aria-label="mapa.ariaLabel">
-            <text v-for="(area, indice) in areas" :key="`posicao-coluna-${area.valor}`" :x="MARGEM_ESQ + indice * TAM + (TAM - GAP) / 2" :y="MARGEM_TOPO - 12" text-anchor="middle" class="posicao-eixo">{{ area.rotulo }}</text>
+            <text v-for="(area, indice) in areas" :key="`posicao-coluna-${area.valor}`" :x="mapa.margemEsquerda + indice * TAM + (TAM - GAP) / 2" :y="MARGEM_TOPO - 12" text-anchor="middle" class="posicao-eixo">{{ area.rotulo }}</text>
             <template v-if="tipoMapa === 'dificuldade'">
               <text v-for="(dificuldade, indice) in dificuldades" :key="`posicao-dificuldade-${dificuldade.valor}`" :x="MARGEM_ESQ - 12" :y="MARGEM_TOPO + indice * TAM + (TAM - GAP) / 2" text-anchor="end" dominant-baseline="middle" class="posicao-eixo">{{ dificuldade.rotulo }}</text>
             </template>
             <g v-for="celula in mapa.celulas" :key="celula.chave">
-              <rect :x="celula.x" :y="celula.y" :width="TAM - GAP" :height="TAM - GAP" :fill="celula.cor" :stroke="celula.significativa ? '#263238' : '#ffffff'" :stroke-width="celula.significativa ? 3 : 1" class="posicao-celula">
+              <rect :x="celula.x" :y="celula.y" :width="TAM - GAP" :height="TAM - GAP" :fill="celula.cor" :stroke="celula.destacada ? '#263238' : '#ffffff'" :stroke-width="celula.destacada ? 3 : 1" class="posicao-celula">
                 <title>{{ celula.rotulo }} · {{ celula.vazia ? 'sem dados suficientes' : `rho = ${formatarCorrelacao(celula.rho)}; p bruto = ${formatarP(celula.p)}; p (Holm) = ${formatarP(celula.pHolm)}` }}</title>
               </rect>
-              <g v-if="celula.significativa" class="posicao-significancia" aria-label="Resultado significativo após ajuste de Holm">
+              <g v-if="celula.destacada" class="posicao-significancia" aria-label="Correlação forte e significativa após ajuste de Holm">
                 <circle :cx="celula.x + TAM - GAP - 17" :cy="celula.y + 17" r="12" />
                 <text :x="celula.x + TAM - GAP - 17" :y="celula.y + 17" text-anchor="middle" dominant-baseline="middle">★</text>
-                <title>p (Holm) abaixo de 0,05</title>
+                <title>p (Holm) abaixo de 0,05 e |rho| maior que 0,7</title>
               </g>
               <template v-if="!celula.vazia">
                 <text :x="celula.x + (TAM - GAP) / 2" :y="celula.y + (TAM - GAP) / 2 - 8" text-anchor="middle" dominant-baseline="middle" :fill="celula.corTexto" class="posicao-valor">{{ formatarCorrelacao(celula.rho) }}</text>
@@ -38,29 +38,46 @@
                 <stop offset="50%" stop-color="#FFFFFF" />
                 <stop offset="100%" stop-color="#A78BFA" />
               </linearGradient>
+              <linearGradient :id="`posicao-gradiente-horizontal-${tipoMapa}`" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#0070C0" />
+                <stop offset="50%" stop-color="#FFFFFF" />
+                <stop offset="100%" stop-color="#A78BFA" />
+              </linearGradient>
             </defs>
-            <rect :x="mapa.barraX" :y="MARGEM_TOPO" width="22" :height="mapa.alturaGrade" :fill="`url(#posicao-gradiente-${tipoMapa})`" />
-            <text v-for="marca in MARCAS" :key="`posicao-marca-${marca.valor}`" :x="mapa.barraX + 30" :y="MARGEM_TOPO + ((1 - marca.valor) / 2) * mapa.alturaGrade" class="posicao-barra" dominant-baseline="middle">{{ marca.rotulo }}</text>
-            <text :x="mapa.barraX + 70" :y="MARGEM_TOPO + mapa.alturaGrade / 2" text-anchor="middle" dominant-baseline="middle" class="posicao-barra" :transform="`rotate(90 ${mapa.barraX + 70} ${MARGEM_TOPO + mapa.alturaGrade / 2})`">Correlação de Spearman (ρ)</text>
+            <template v-if="tipoMapa === 'dificuldade'">
+              <rect :x="mapa.barraX" :y="MARGEM_TOPO" width="22" :height="mapa.alturaGrade" :fill="`url(#posicao-gradiente-${tipoMapa})`" />
+              <text v-for="marca in MARCAS" :key="`posicao-marca-${marca.valor}`" :x="mapa.barraX + 30" :y="MARGEM_TOPO + ((1 - marca.valor) / 2) * mapa.alturaGrade" class="posicao-barra" dominant-baseline="middle">{{ marca.rotulo }}</text>
+              <text :x="mapa.barraX + 70" :y="MARGEM_TOPO + mapa.alturaGrade / 2" text-anchor="middle" dominant-baseline="middle" class="posicao-barra" :transform="`rotate(90 ${mapa.barraX + 70} ${MARGEM_TOPO + mapa.alturaGrade / 2})`">Correlação de Spearman (ρ)</text>
+            </template>
+            <template v-else>
+              <rect :x="mapa.legendaX" :y="mapa.legendaY" :width="mapa.legendaLargura" height="22" :fill="`url(#posicao-gradiente-horizontal-${tipoMapa})`" />
+              <text v-for="marca in MARCAS" :key="`posicao-marca-horizontal-${marca.valor}`" :x="mapa.legendaX + ((marca.valor + 1) / 2) * mapa.legendaLargura" :y="mapa.legendaY + 36" text-anchor="middle" dominant-baseline="middle" class="posicao-barra">{{ marca.rotulo }}</text>
+              <text :x="mapa.legendaX + mapa.legendaLargura / 2" :y="mapa.legendaY + 64" text-anchor="middle" dominant-baseline="middle" class="posicao-barra">Correlação de Spearman (ρ)</text>
+            </template>
           </svg>
         </div>
         <p v-if="mapa.quantidadeValidas" class="posicao-leitura"><strong>Resultado:</strong> {{ mapa.quantidadeSignificativas }} de {{ mapa.quantidadeValidas }} combinações válidas têm p (Holm) abaixo de 0,05. {{ mapa.quantidadeSignificativas ? 'Isso indica uma associação estatística no recorte, mas não demonstra que a posição causou a diferença.' : 'Não encontramos evidência estatística clara de associação após o ajuste; isso não prova que não exista uma relação.' }}</p>
         <p v-else class="posicao-leitura"><strong>Resultado:</strong> Não há combinações com dados suficientes para calcular as correlações neste ENEM.</p>
         <button type="button" class="filter-btn posicao-mais-info" @click="mostrarMais = !mostrarMais">{{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}</button>
-        <div v-if="mostrarMais" class="posicao-notas">
-          <p><strong>Como ler a correlação:</strong> o coeficiente de Spearman (ρ) varia de −1 a +1 e indica se a relação é crescente ou decrescente. {{ configuracaoMapa.interpretacao }} Valores próximos de zero indicam pouca relação monotônica; quanto mais distante de zero, mais forte é a associação observada.</p>
-          <p><strong>p bruto e p (Holm):</strong> o p bruto testa uma combinação de área e, quando aplicável, dificuldade. O p (Holm) ajusta os testes mostrados neste mapa para reduzir a chance de destacar uma associação por acaso. Consideramos evidência estatística quando p (Holm) &lt; 0,05.</p>
-          <p>A análise usa os itens dos quatro cadernos. Em Linguagens e Códigos, as versões em Inglês e Espanhol das questões 1 a 5 são consideradas itens distintos, conforme a base de desempenho.</p>
-          <p><strong>Limite da análise:</strong> uma correlação descreve associação, não causa. O conteúdo, a dificuldade e outras características dos itens também podem estar relacionados ao percentual de acertos.</p>
-        </div>
+        <ul v-if="mostrarMais" class="posicao-notas">
+          <li><strong>Célula:</strong> cada uma mostra a correlação de Spearman (ρ), o p bruto e o p ajustado (Holm) para uma área e, no mapa por dificuldade, para uma faixa de dificuldade.</li>
+          <li><strong>ρ (Spearman):</strong> mede a força e a direção da relação entre a posição da questão e {{ configuracaoMapa.variavel }}. Varia de −1 a +1; quanto mais distante de zero, mais forte a associação. {{ configuracaoMapa.interpretacao }}</li>
+          <li><strong>p bruto:</strong> indica quão raro seria observar uma correlação desse tamanho se não houvesse associação entre as variáveis.</li>
+          <li><strong>p baixo:</strong> uma correlação como a observada seria rara se não houvesse associação; há indício estatístico de relação.</li>
+          <li><strong>p alto:</strong> o resultado é compatível com ausência de associação, mas não prova que a relação não exista.</li>
+          <li><strong>p (Holm):</strong> ajusta os p brutos de todas as combinações válidas exibidas neste mapa e neste ano, controlando em 5% o risco de pelo menos um falso positivo. Valores abaixo de 0,05 são considerados estatisticamente significativos.</li>
+          <li><strong>Leitura conjunta:</strong> considere a força e a direção de ρ junto com p (Holm) para avaliar a evidência de associação.</li>
+          <li><strong>Estrela:</strong> aparece somente quando p (Holm) &lt; 0,05 e |ρ| &gt; 0,7. Uma correlação pode ser significativa sem atingir esse limite de magnitude.</li>
+          <li><strong>Dados:</strong> a análise usa os itens dos quatro cadernos. Em Linguagens e Códigos, as versões em Inglês e Espanhol das questões 1 a 5 são itens distintos na base.</li>
+        </ul>
       </section>
 
       <section v-else-if="secao === 'dispersao'" class="posicao-bloco">
         <div class="posicao-cabecalho">
-          <h3>Posição e percentual de acertos</h3>
+          <h3>Distribuição do Percentual de Acertos por Posição da Questão</h3>
           <InfoIcon :largura="420" tooltip="Cada ponto representa uma questão em uma das quatro cores de caderno. A posição é mostrada dentro da área selecionada. A linha liga o percentual médio de acertos observado em cada posição, somando os cadernos." />
         </div>
-        <p class="posicao-subtitulo">ENEM {{ ano }} · Acompanhe como os percentuais de acerto se distribuem ao longo da posição das questões.</p>
+        <p class="posicao-subtitulo">Distribuição do percentual de acertos por posição de cada questão na área selecionada, com pontos por caderno e média em cada posição.</p>
         <label class="posicao-seletor-area">Área
           <select v-model="areaSelecionada">
             <option v-for="area in areas" :key="area.valor" :value="area.valor">{{ area.rotulo }}</option>
@@ -91,21 +108,29 @@
         </div>
         <p v-else class="posicao-vazio">Não há itens com percentual de acertos para esta área.</p>
         <button type="button" class="filter-btn posicao-mais-info" @click="mostrarMais = !mostrarMais">{{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}</button>
-        <div v-if="mostrarMais" class="posicao-notas">
-          <p>Os pontos incluem as quatro cores de caderno, em que as mesmas questões podem aparecer em posições diferentes. Em Linguagens e Códigos, as versões em Inglês e Espanhol das questões 1 a 5 são itens distintos na base. A linha é a média dos percentuais dos itens que ocupam cada posição nos cadernos. Ela resume o padrão observado e não isola o efeito da posição: as questões em cada posição têm conteúdos e dificuldades diferentes.</p>
-        </div>
+        <ul v-if="mostrarMais" class="posicao-notas">
+          <li><strong>Pontos:</strong> cada ponto representa uma questão em um dos quatro cadernos. A posição horizontal indica onde ela aparece na área selecionada; a posição vertical mostra seu percentual de acertos.</li>
+          <li><strong>Cores:</strong> identificam os cadernos Azul, Amarelo, Branco e Rosa ou Verde, conforme o ano.</li>
+          <li><strong>Linha:</strong> mostra a média dos percentuais de acerto das questões que aparecem em cada posição, reunindo os quatro cadernos.</li>
+          <li><strong>Leitura:</strong> o gráfico descreve o padrão observado. Ele não isola o efeito da posição, pois as questões também diferem em conteúdo e dificuldade.</li>
+          <li><strong>Dados:</strong> a análise usa os quatro cadernos. Em Linguagens e Códigos, as versões em Inglês e Espanhol das questões 1 a 5 são consideradas itens distintos na base.</li>
+        </ul>
       </section>
 
       <section v-else-if="secao === 'variacao'" class="posicao-bloco">
         <div class="posicao-cabecalho">
-          <h3>Variação do percentual de acertos entre cadernos</h3>
+          <h3>Variação do Percentual de Acertos entre Cadernos</h3>
           <InfoIcon :largura="420" tooltip="Para cada item presente nas quatro cores de caderno, calculamos a diferença entre o maior e o menor percentual de acertos. Cada ponto representa um item; o losango indica a média da área." />
         </div>
-        <p class="posicao-subtitulo">ENEM {{ ano }} · Cada ponto representa a amplitude observada para um mesmo item entre os cadernos.</p>
-        <p class="posicao-mini-legenda"><strong>Legenda:</strong> ponto = variação de um item · losango = média dos itens da área.</p>
+        <p class="posicao-subtitulo">Variação do percentual de acertos de cada questão entre os quatro cadernos, separada por área.</p>
+        <p class="posicao-explicacao">Cada ponto representa uma questão. Sua altura mostra a diferença entre o maior e o menor percentual de acertos dessa questão nos quatro cadernos: quanto mais alto, maior a variação. O losango mostra a média das variações na área.</p>
+        <div class="posicao-legenda-variacao" aria-label="Legenda do gráfico">
+          <span><i class="posicao-simbolo-ponto"></i>Cada ponto: variação de uma questão</span>
+          <span><i class="posicao-simbolo-losango"></i>Losango: média da área</span>
+        </div>
         <div v-if="variacoes.length" class="posicao-grafico-scroll">
           <svg viewBox="0 0 1000 470" class="posicao-variacao" role="img" :aria-label="`Variação do percentual de acertos entre cadernos no ENEM ${ano}, por área`">
-            <text x="500" y="20" text-anchor="middle" class="posicao-eixo">Variação entre o maior e o menor percentual de acertos (pontos percentuais)</text>
+            <text x="24" y="200" text-anchor="middle" class="posicao-eixo" transform="rotate(-90 24 200)">Variação do percentual de acertos (pontos percentuais)</text>
             <g v-for="marca in marcasVariacao" :key="`variacao-y-${marca}`">
               <line x1="100" :y1="escalaYVariacao(marca)" x2="950" :y2="escalaYVariacao(marca)" class="posicao-grade" />
               <text x="88" :y="escalaYVariacao(marca) + 4" text-anchor="end" class="posicao-tick">{{ formatarPercentual(marca) }}</text>
@@ -125,9 +150,13 @@
         </div>
         <p v-else class="posicao-vazio">Não há itens correspondentes nas quatro cores de caderno para calcular a variação.</p>
         <button type="button" class="filter-btn posicao-mais-info" @click="mostrarMais = !mostrarMais">{{ mostrarMais ? 'Ocultar informações sobre este gráfico' : 'Mais informações sobre este gráfico' }}</button>
-        <div v-if="mostrarMais" class="posicao-notas">
-          <p>Para cada item, calculamos o maior percentual de acertos menos o menor entre as quatro cores de caderno. O ponto mostra essa amplitude; o losango mostra a média das amplitudes dos itens da área. Entram somente itens identificados nos quatro cadernos. Essa comparação é descritiva e, sozinha, não prova que a mudança de posição tenha causado a variação.</p>
-        </div>
+        <ul v-if="mostrarMais" class="posicao-notas">
+          <li><strong>Variação de cada questão:</strong> maior percentual de acertos entre os quatro cadernos − menor percentual de acertos entre os quatro cadernos. Cada ponto mostra esse resultado, em pontos percentuais.</li>
+          <li><strong>Média da área:</strong> soma das variações de todas as questões incluídas na área ÷ número de questões incluídas. O losango mostra esse resultado.</li>
+          <li><strong>Itens incluídos:</strong> entram somente questões identificadas nos quatro cadernos, para que a comparação seja feita entre versões do mesmo item.</li>
+          <li><strong>Leitura:</strong> uma amplitude maior indica mais diferença entre os percentuais observados nos cadernos. A análise é descritiva e, sozinha, não demonstra que a posição da questão causou essa diferença.</li>
+          <li><strong>Dados:</strong> a análise usa os quatro cadernos. Em Linguagens e Códigos, as versões em Inglês e Espanhol das questões 1 a 5 são consideradas itens distintos na base.</li>
+        </ul>
       </section>
     </template>
   </div>
@@ -178,21 +207,24 @@ const areaSelecionada = ref('LC')
 
 const configuracoes = {
   acertos: {
-    titulo: 'Relação entre posição e percentual de acertos',
-    subtitulo: 'A correlação mostra se questões mais adiante tendem a ter percentuais de acerto maiores ou menores.',
+    titulo: 'Relação entre Posição e Percentual de Acertos',
+    subtitulo: 'Correlação de Spearman entre a posição de cada questão e o percentual de acertos, separada por área.',
     tooltip: 'Cada célula representa uma área do ano selecionado. A correlação de Spearman relaciona a posição da questão ao percentual de acertos. Valores positivos indicam percentuais maiores em posições posteriores; valores negativos indicam percentuais menores. O p bruto é ajustado por Holm entre as áreas deste ano.',
+    variavel: 'o percentual de acertos',
     interpretacao: 'Para este mapa, uma correlação positiva indica que questões mais adiante na área tendem a ter percentuais de acerto maiores; uma negativa indica percentuais menores.'
   },
   parametroB: {
-    titulo: 'Relação entre posição e dificuldade da questão',
-    subtitulo: 'O parâmetro b da TRI indica a dificuldade do item: valores maiores correspondem a questões mais difíceis.',
+    titulo: 'Relação entre Posição e Dificuldade da Questão',
+    subtitulo: 'Correlação de Spearman entre a posição de cada questão e o parâmetro b da Teoria de Resposta ao Item (TRI), separada por área.',
     tooltip: 'Cada célula representa uma área do ano selecionado. A correlação de Spearman relaciona a posição da questão ao parâmetro b da TRI. Valores positivos indicam que itens posteriores tendem a ser mais difíceis; valores negativos indicam que tendem a ser mais fáceis. O p bruto é ajustado por Holm entre as áreas deste ano.',
+    variavel: 'o parâmetro b da TRI',
     interpretacao: 'O parâmetro b da TRI aumenta com a dificuldade: uma correlação positiva indica que questões mais adiante tendem a ser mais difíceis; uma negativa indica que tendem a ser mais fáceis.'
   },
   dificuldade: {
-    titulo: 'Relação entre posição e acertos por dificuldade',
-    subtitulo: 'A comparação é feita dentro de cada faixa de dificuldade, para observar se o padrão também aparece entre itens classificados de forma semelhante.',
+    titulo: 'Relação entre Posição e Acertos por Dificuldade',
+    subtitulo: 'Correlação de Spearman entre a posição de cada questão e o percentual de acertos, separada por área e nível de dificuldade.',
     tooltip: 'Cada célula representa uma combinação de dificuldade e área do ENEM selecionado. A correlação de Spearman relaciona a posição da questão ao percentual de acertos dentro de cada faixa. O p bruto é ajustado por Holm entre as combinações válidas deste ano (até 12 testes).',
+    variavel: 'o percentual de acertos',
     interpretacao: 'A correlação é calculada somente entre questões da mesma faixa de dificuldade. Positiva indica percentuais de acerto maiores em posições posteriores; negativa indica percentuais menores.'
   }
 }
@@ -228,6 +260,11 @@ const mapa = computed(() => {
   const linhas = tipoMapa.value === 'dificuldade' ? dificuldades : [{ valor: 'geral', rotulo: '' }]
   const alturaGrade = linhas.length * TAM - GAP
   const barraX = MARGEM_ESQ + areas.length * TAM + 30
+  const mapaUmaLinha = tipoMapa.value !== 'dificuldade'
+  const margemEsquerda = mapaUmaLinha ? 40 : MARGEM_ESQ
+  const legendaLargura = areas.length * TAM - GAP
+  const legendaX = margemEsquerda
+  const legendaY = MARGEM_TOPO + alturaGrade + 25
   const registros = registrosCorrelacao.value
   const validos = registros.filter((registro) => registro.p !== null && registro.p !== undefined
     && registro.correlacao !== null && registro.correlacao !== undefined
@@ -249,13 +286,14 @@ const mapa = computed(() => {
     return {
       chave: `${linha.valor}-${area.valor}`,
       rotulo: tipoMapa.value === 'dificuldade' ? `${linha.rotulo} · ${area.rotulo}` : area.rotulo,
-      x: MARGEM_ESQ + indiceArea * TAM,
+      x: margemEsquerda + indiceArea * TAM,
       y: MARGEM_TOPO + indiceLinha * TAM,
       vazia: vazio,
       rho,
       p: vazio ? null : Number(registro.p),
       pHolm,
       significativa: pHolm !== null && pHolm < 0.05,
+      destacada: pHolm !== null && pHolm < 0.05 && rho !== null && Math.abs(rho) > 0.7,
       cor: `rgb(${rgb.join(', ')})`,
       corTexto: corTextoPara(rgb)
     }
@@ -263,7 +301,9 @@ const mapa = computed(() => {
   const quantidadeValidas = celulas.filter((celula) => !celula.vazia).length
   const quantidadeSignificativas = celulas.filter((celula) => celula.significativa).length
   return {
-    celulas, alturaGrade, barraX, largura: barraX + 115, altura: MARGEM_TOPO + alturaGrade + 15,
+    celulas, alturaGrade, barraX, margemEsquerda, legendaX, legendaY, legendaLargura,
+    largura: mapaUmaLinha ? margemEsquerda + areas.length * TAM : barraX + 115,
+    altura: MARGEM_TOPO + alturaGrade + (mapaUmaLinha ? 75 : 15),
     quantidadeValidas, quantidadeSignificativas,
     ariaLabel: `Mapa de calor da correlação de Spearman para ${configuracaoMapa.value.titulo}, ENEM ${props.ano}`
   }
@@ -357,6 +397,11 @@ function losangoMedia(indice, media) {
 .posicao-cabecalho h3 { margin: 0; color: #263238; font-size: 1.25rem; }
 .posicao-subtitulo { margin: .5rem 0 1rem; color: #666; font-size: .9rem; }
 .posicao-mini-legenda { margin: 0 0 .75rem; color: #475467; font-size: .85rem; line-height: 1.45; }
+.posicao-explicacao { margin: -.35rem 0 .75rem; color: #475467; font-size: .9rem; line-height: 1.5; }
+.posicao-legenda-variacao { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: .25rem 0 .5rem; color: #344054; font-size: .85rem; }
+.posicao-legenda-variacao span { display: inline-flex; align-items: center; gap: .5rem; }
+.posicao-simbolo-ponto { width: 10px; height: 10px; border-radius: 50%; background: #0070C0; }
+.posicao-simbolo-losango { width: 10px; height: 10px; background: #C4458A; transform: rotate(45deg); }
 .posicao-mapa-scroll, .posicao-grafico-scroll { overflow-x: auto; }
 .posicao-mapa { display: block; width: 100%; min-width: 1000px; max-width: 1020px; height: auto; margin: 0 auto; font-family: Arial, Helvetica, sans-serif; }
 .posicao-eixo, .posicao-barra { font-size: 15px; fill: #000; }
@@ -368,6 +413,8 @@ function losangoMedia(indice, media) {
 .posicao-sem-dados { fill: #666; }
 .posicao-leitura { margin: .65rem 0; color: #475467; font-size: .9rem; line-height: 1.5; }
 .posicao-notas { margin-top: 1rem; color: #555; font-size: .88rem; line-height: 1.5; }
+.posicao-notas li + li { margin-top: .35rem; }
+ul.posicao-notas { padding-left: 1.2rem; }
 .posicao-notas p + p { margin-top: .65rem; }
 .posicao-mais-info { margin: 1rem 0 0; }
 .posicao-status, .posicao-vazio { padding: 1rem; border-radius: 6px; background: #f8fafc; color: #475467; }

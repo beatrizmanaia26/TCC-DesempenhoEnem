@@ -187,7 +187,7 @@ const GRAFICOS_ENEM = {
   'reading-time': ['resumo-tempo', 'tempo-leitura'],
   'word-count': ['palavras', 'mapa-dificuldade', 'metades-caracteres', 'dispersao-itens'],
   image: ['imagem-presenca', 'imagem-caracteres', 'imagem-acertos', 'imagem-correlacao', 'imagem-tabela'],
-  position: ['posicao-acertos', 'posicao-parametroB', 'posicao-dificuldade', 'posicao-dispersao', 'posicao-variacao']
+  position: ['posicao-parametroB', 'posicao-acertos', 'posicao-dificuldade', 'posicao-dispersao', 'posicao-variacao']
 }
 // Só entram as análises marcadas no filtro aplicado, na ordem de ORDEM_ETAPAS_ENEM
 const analisesEtapas = computed(() => ORDEM_ETAPAS_ENEM.filter((id) => selectedFilters.value.has(id)))
