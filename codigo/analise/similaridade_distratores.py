@@ -5,6 +5,7 @@ from itertools import combinations
 
 import pandas as pd
 from sentence_transformers import SentenceTransformer
+from modelo_similaridade_distratores import calcular_matriz, carregar_modelo
 
 
 # ============================================================
@@ -16,9 +17,7 @@ RAIZ = Path(
 )
 
 PASTA_DADOS = RAIZ / "dados"
-PASTA_RESULTADOS = RAIZ / "outputs" / "similaridade_distratores"
-
-MODELO = "iara-project/e5-large-matryoshka-sts-pt"
+PASTA_RESULTADOS = RAIZ / "outputs" / "similaridade_distratores_corrigido"
 
 LETRAS = ["A", "B", "C", "D", "E"]
 PARES = list(combinations(LETRAS, 2))
@@ -146,7 +145,7 @@ def processar_ano(
 
     pasta_json = (
         PASTA_DADOS /
-        f"enems_json_md_{ano}"
+        f"dados_corrigidos_{ano}"
     )
 
     if not pasta_json.exists():
@@ -412,15 +411,7 @@ def processar_ano(
 
         textos = item["textos"]
 
-        embeddings = modelo.encode(
-            textos,
-            show_progress_bar=False
-        )
-
-        sim_matrix = modelo.similarity(
-            embeddings,
-            embeddings
-        )
+        sim_matrix = calcular_matriz(modelo, textos)
 
         resultado = {
             "arquivo": item["arquivo"],
@@ -584,8 +575,7 @@ def main():
     # --------------------------------------------------------
 
     print("Carregando modelo...")
-    acesso = "token_hugging_face"
-    modelo = SentenceTransformer(MODELO, token=acesso)
+    modelo = carregar_modelo()
 
     print("Modelo carregado.")
     print()

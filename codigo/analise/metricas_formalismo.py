@@ -1,11 +1,13 @@
 """ENEM: análise completa de formalidade, acertos e dificuldade TRI.
 
-Uso: python analisar_enem_completo.py --projeto "CAMINHO/TCC-DesempenhoEnem"
+Uso: python codigo/analise/metricas_formalismo.py
+Opcional: --projeto "CAMINHO/TCC-DesempenhoEnem"
 Opcional: --saida "CAMINHO/RESULTADOS"
-Saídas: base_completa.csv e correlacoes.csv.
+Saídas em outputs/correlacao_formalidade: base_completa.csv e correlacoes.csv.
 A base contém scores, acertos, b e status de disponibilidade.
 Correlações por ano e área, com acertos em todos os itens e na amostra com b.
-Análise exploratória, sem valores-p, IC ou ajuste por confundidores.
+Análise exploratória com valores-p bilaterais brutos e ajustados por Holm.
+Uma família inclui todos os testes calculáveis de Spearman.
 Faixas ilustrativas de score: baixo <0,40; intermediário 0,50 a 0,60; alto >0,90.
 Os coeficientes agregados entre áreas e anos são apenas descritivos.
 Scores concentrados perto de 1 e empates limitam a interpretação.
@@ -13,15 +15,17 @@ Uma execução substitui os dois CSVs; arquivos antigos de outras versões
 na pasta de destino não são apagados automaticamente.
 """
 # Bibliotecas padrão: argumentos de terminal, arquivos CSV/JSON, validação
-# numérica, estatística, normalização de textos e manipulação de caminhos.
+# numérica, normalização de textos e manipulação de caminhos.
 import argparse
 import csv
 import json
 import math
-import statistics as st
 import unicodedata
 from collections import defaultdict
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
+
+from scipy.stats import spearmanr
 
 # Recorte do projeto: 2021 foi excluído por falhas na extração.
 ANOS = (2020, 2022, 2023, 2024, 2025)
@@ -48,36 +52,27 @@ def area(posicao):
     raise ValueError(f'Posição inválida: {posicao}')
 
 
-# Constrói os rankings usados em Spearman, preservando a ordem original
-# dos registros para que cada score continue pareado com seu desfecho.
-def postos(valores):
-    # Empates recebem a média das posições, como exige Spearman.
-    # Ordena índices, e não a lista original de valores.
-    ordem = sorted(range(len(valores)), key=valores.__getitem__)
-    resultado = [0.0] * len(valores)
-    i = 0
-    while i < len(ordem):
-        # Percorre um bloco de valores iguais na lista ordenada.
-        fim = i + 1
-        while fim < len(ordem) and valores[ordem[fim]] == valores[ordem[i]]:
-            fim += 1
-        # Os postos começam em 1. O bloco ocupa de i+1 até fim (inclusive).
-        # Sua média é atribuída a todos os valores empatados.
-        # Exemplo: [10, 10, 30] recebe postos [1.5, 1.5, 3].
-        for k in ordem[i:fim]:
-            resultado[k] = (i + 1 + fim) / 2
-        i = fim
-    return resultado
-
-
-# Pearson é calculado nos valores originais; para obter Spearman,
-# a mesma função será aplicada aos postos de x e y.
-def correlacao(x, y):
-    # Uma série constante não permite calcular correlação. O script também
-    # adota um mínimo de 3 pares. Vazio significa indisponível, não zero.
+def correlacao_spearman(x, y):
+    # Preserva o mínimo de três pares e deixa séries constantes em branco.
     if len(x) < 3 or len(set(x)) < 2 or len(set(y)) < 2:
-        return ''
-    return st.correlation(x, y)
+        return '', ''
+    return spearmanr(x, y)
+
+
+def ajustar_holm(resultados):
+    """Ajusta em conjunto os valores-p calculáveis de todas as linhas."""
+    testes = []
+    for linha in resultados:
+        linha['spearman_p_holm'] = ''
+        p = linha['spearman_p']
+        if p != '' and math.isfinite(p):
+            testes.append((p, linha))
+
+    testes.sort(key=lambda teste: teste[0])
+    maior_ajustado = 0.0
+    for indice, (p, linha) in enumerate(testes):
+        maior_ajustado = max(maior_ajustado, min(1.0, (len(testes) - indice) * p))
+        linha['spearman_p_holm'] = maior_ajustado
 
 
 # Exporta uma lista de dicionários: as chaves viram o cabeçalho do CSV.
@@ -94,7 +89,7 @@ def salvar_csv(caminho, linhas):
         w.writerows(linhas)
 
 
-def analisar_tri(projeto, base):
+def analisar_tri(projeto, base, itens_sem_respostas=()):
     """Consolida b por item e analisa a base em memória, sem CSV intermediário."""
     # Copia os registros para acrescentar TRI sem alterar a lista recebida.
     base = [dict(r) for r in base]
@@ -147,9 +142,9 @@ def analisar_tri(projeto, base):
         r.update(parametro_b_tri=next(iter(valores)) if status=='ok' else '',status_tri=status,
                  dificuldade_tri=';'.join(categorias),n_linhas_tri=len(registros),
                  n_cadernos_tri=len({t['co_prova'] for t in registros}),n_b_ausentes=ausentes,n_b_invalidos=invalidos)
-    # Interrompe se houver itens da tabela TRI que não pertencem à base
-    # cruzada; essa situação exige revisar a cobertura dos arquivos.
-    extras=set(itens)-vistos
+    # Itens com zero respostas já foram excluídos da base de formalidade.
+    # Qualquer outra diferença de cobertura continua exigindo revisão.
+    extras=set(itens)-vistos-set(itens_sem_respostas)
     if extras: raise ValueError(f'Itens TRI fora da base: {sorted(extras)}')
     # Produz quatro recortes: conjunto, cada ano, cada área e ano/área.
     # "todos" identifica as dimensões agregadas.
@@ -177,26 +172,28 @@ def analisar_tri(projeto, base):
                 # n_base: total do recorte; n_questoes: pares usados;
                 # n_excluidos: diferença entre esses tamanhos.
                 # n_scores_distintos ajuda a identificar muitos empates.
-                # Spearman é Pearson aplicado aos rankings.
+                rho, p_spearman = correlacao_spearman(x, y)
                 resultados.append(dict(ano=ano,area=area,score=score,variavel_alvo=alvo,
                     amostra=amostra,n_questoes=len(registros),n_base=len(todos),
-                    n_excluidos=len(todos)-len(registros),pearson_r=correlacao(x,y),
-                    spearman_rho=correlacao(postos(x),postos(y)),
-                    n_scores_distintos=len(set(x)),n_alvo_distintos=len(set(y)),))
+                    n_excluidos=len(todos)-len(registros),
+                    spearman_rho=rho,n_scores_distintos=len(set(x)),
+                    n_alvo_distintos=len(set(y)),spearman_p=p_spearman))
+    ajustar_holm(resultados)
     return base, resultados
 
 
 # Executa a leitura dos arquivos originais, as duas junções e a exportação.
 # Não utiliza bases intermediárias nem importa outros scripts do projeto.
 def main():
-    # --projeto aponta para a raiz TCC-DesempenhoEnem.
-    # --saida é opcional e, por padrão, fica ao lado deste script.
+    # Por padrão, a raiz é determinada a partir do local deste script.
+    # --saida é opcional e, por padrão, fica sob a raiz do projeto.
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--projeto', type=Path, required=True)
-    parser.add_argument('--saida', type=Path, default=Path(__file__).parent / 'resultados')
+    parser.add_argument('--projeto', type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument('--saida', type=Path)
     args = parser.parse_args()
     # Cria a pasta de resultados e seus pais, se necessário.
-    args.saida.mkdir(parents=True, exist_ok=True)
+    saida = args.saida or args.projeto / 'outputs' / 'correlacao_formalidade'
+    saida.mkdir(parents=True, exist_ok=True)
     # itens indexa as questões dos JSONs; problemas acumula avisos
     # que serão exibidos no terminal, sem criar um arquivo de auditoria.
     itens, problemas = {}, []
@@ -228,10 +225,11 @@ def main():
 
     # Esta tabela fornece a posição de referência e o co_item que será
     # usado posteriormente para buscar a dificuldade na tabela TRI.
-    csv_origem = args.projeto / 'outputs/qtde_acertos/tabela_qtde_de_acertos/desempenho_questoes.csv'
+    csv_origem = args.projeto / 'outputs/qtde_acertos/desempenho_questoes.csv'
     # vistos detecta chaves repetidas no CSV; usados registra JSONs que
     # encontraram correspondência, mesmo que seus valores sejam inválidos.
     base, vistos, usados = [], set(), set()
+    itens_sem_respostas = set()
     with csv_origem.open(encoding='utf-8-sig', newline='') as f:
         for r in csv.DictReader(f):
             ano = int(r['ano'])
@@ -254,12 +252,19 @@ def main():
             # positivo e a quantidade de acertos deve estar entre 0 e n.
             try:
                 formal, informal = float(q['formal_score']), float(q['informal_score'])
-                n, acertos = int(r['n_respostas']), int(r['n_acertos'])
+                n, acertos = Decimal(r['n_respostas']), Decimal(r['n_acertos'])
+                if n == acertos == 0:
+                    itens_sem_respostas.add((str(ano), r['area'], r['co_item'], idioma))
+                    problemas.append(dict(origem='par', chave=str(chave), motivo='item sem respostas'))
+                    continue
                 if not (math.isfinite(formal) and math.isfinite(informal)
                         and 0 <= formal <= 1 and 0 <= informal <= 1
+                        and n.is_finite() and acertos.is_finite()
+                        and n == n.to_integral_value() and acertos == acertos.to_integral_value()
                         and n > 0 and 0 <= acertos <= n):
                     raise ValueError('Score ou contagem fora do domínio')
-            except (KeyError, TypeError, ValueError, AssertionError):
+                n, acertos = int(n), int(acertos)
+            except (KeyError, TypeError, ValueError, InvalidOperation, AssertionError):
                 problemas.append(dict(origem='par', chave=str(chave), motivo='score ou contagem ausente/inválido'))
                 continue
             # Regra efetivamente executada: baixo < 0,40; intermediário
@@ -285,17 +290,17 @@ def main():
         raise ValueError('Nenhuma questão válida foi cruzada.')
 
     # A segunda junção e os cálculos recebem a base diretamente em memória.
-    base_completa, resultados = analisar_tri(args.projeto, base)
+    base_completa, resultados = analisar_tri(args.projeto, base, itens_sem_respostas)
     # Únicos arquivos de saída: base com TRI e tabela de correlações.
     # O status de disponibilidade de b permanece na própria base.
-    salvar_csv(args.saida / 'base_completa.csv', base_completa)
-    salvar_csv(args.saida / 'correlacoes.csv', resultados)
+    salvar_csv(saida / 'base_completa.csv', base_completa)
+    salvar_csv(saida / 'correlacoes.csv', resultados)
     print(f"Base completa: {len(base_completa)} itens")
     print(f"Com b válido: {sum(r['status_tri'] == 'ok' for r in base_completa)}")
     print(f"Correlações: {len(resultados)} linhas")
     for problema in problemas:
         print(f"AVISO: {problema['origem']} {problema['chave']}: {problema['motivo']}")
-    print(f"Resultados salvos em: {args.saida.resolve()}")
+    print(f"Resultados salvos em: {saida.resolve()}")
 
 
 # Executa main() ao chamar o arquivo pelo terminal. Importar o módulo

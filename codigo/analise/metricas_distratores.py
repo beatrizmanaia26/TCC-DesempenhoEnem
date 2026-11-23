@@ -1,5 +1,6 @@
+import math
 from pathlib import Path
-
+import numpy as np
 import pandas as pd
 from scipy.stats import pearsonr, spearmanr
 
@@ -11,13 +12,13 @@ from scipy.stats import pearsonr, spearmanr
 RAIZ = Path("TCC-DesempenhoEnem")
 
 PASTA_ENTRADA = RAIZ / "outputs" / "similaridade_distratores"
-PASTA_SAIDA = RAIZ / "outputs" / "metricas" / "distratores"
+PASTA_SAIDA = RAIZ / "outputs" / "metricas" / "distratores" / "CorrigidosComAgrupamentPorQuestao"
 
 # Cria a pasta caso ela ainda não exista
 PASTA_SAIDA.mkdir(parents=True, exist_ok=True)
 
 # Entrada
-ARQUIVO_ENTRADA = PASTA_ENTRADA / "base_distratores.csv"
+ARQUIVO_ENTRADA = Path("C:/Users/Nuno/Downloads/TCCDistratores/base_distratores_corrigido.csv")
 
 # Saídas
 ARQUIVO_CORRELACOES = (
@@ -155,7 +156,55 @@ N_DISTRATORES = len(df)
 
 print(f"Questões encontradas: {N_QUESTOES}")
 
+#Pegando código dos items 
+if "co_item" not in df.columns:
+    mapa_itens = pd.read_csv(
+        "desempenho_questoes_por_prova.csv",
+        encoding="utf-8-sig",
+        usecols=[
+            "ano", "area", "co_prova", "posicao_prova",
+            "lingua_estrangeira", "co_item",
+        ],
+        dtype={"co_item": "string"},
+    ).rename(columns={
+        "co_prova": "codigo_prova",
+        "posicao_prova": "questao",
+        "lingua_estrangeira": "idioma",
+    })
 
+    chaves_item = ["ano", "area", "codigo_prova", "questao", "idioma"]
+    for tabela in (df, mapa_itens):
+        for coluna in ("ano", "codigo_prova", "questao"):
+            tabela[coluna] = pd.to_numeric(tabela[coluna], errors="raise").astype("Int64")
+        tabela["area"] = tabela["area"].astype("string").str.strip().str.upper()
+
+    # Normalize o idioma na chave da junção e preserve o rótulo original da base.
+    for tabela in (df, mapa_itens):
+        tabela["_idioma_item"] = (
+            tabela["idioma"].astype("string").fillna("").str.strip().str.lower()
+            .str.normalize("NFKD").str.replace(r"[\u0300-\u036f]", "", regex=True)
+            .replace("geral", "")
+        )
+
+    chaves_item[-1] = "_idioma_item"
+    mapa_itens = mapa_itens[chaves_item + ["co_item"]].dropna(subset=["co_item"])
+    mapa_itens = mapa_itens.drop_duplicates()
+
+    df = df.merge(
+        mapa_itens,
+        on=chaves_item,
+        how="left",
+        validate="many_to_one",
+    ).drop(columns="_idioma_item")
+
+df["co_item"] = df["co_item"].astype("string").str.strip()
+
+sem_item = df["co_item"].isna() | df["co_item"].eq("")
+if sem_item.any():
+    raise ValueError(
+        f"{sem_item.sum()} linhas sem ID oficial do item. "
+        "Confira o cruzamento por ano, área, prova, posição e idioma."
+    )
 # ============================================================
 # PARTE 1
 # CORRELAÇÕES
@@ -164,36 +213,58 @@ print(f"Questões encontradas: {N_QUESTOES}")
 print("\nCalculando correlações...")
 
 
-def calcular_correlacao(
-    dados,
-    variavel,
-    nivel,
-    ano=None,
-    area=None,
-):
-    x = dados[variavel]
-    y = dados[DESFECHO]
+def spearman_por_item(dados, variavel, rng, n_sorteios=19_999):
+    x = dados[variavel].rank(method="average").to_numpy(dtype=float)
+    y = dados[DESFECHO].rank(method="average").to_numpy(dtype=float)
+    x = x - x.mean()
+    y = y - y.mean()
 
-    pearson_r, pearson_p = pearsonr(x, y)
+    grupos, itens = pd.factorize(dados["co_item"], sort=False)
+    n_itens = len(itens)
+    escala = np.linalg.norm(x) * np.linalg.norm(y)
 
-    spearman_rho, spearman_p = spearmanr(
-        x,
-        y,
+    if escala == 0:
+        return np.nan, np.nan, n_itens
+
+    rho = float(np.clip(np.dot(x, y) / escala, -1, 1))
+    if n_itens < 2:
+        return rho, np.nan, n_itens
+
+    contribuicoes = np.bincount(grupos, weights=x * y, minlength=n_itens)
+    observado = abs(contribuicoes.sum())
+    tolerancia = 1e-12 * np.abs(contribuicoes).sum()
+
+    # Cada coluna representa um item, com o mesmo sinal em todos os cadernos.
+    extremos = 0
+    for inicio in range(0, n_sorteios, 512):
+        tamanho = min(512, n_sorteios - inicio)
+        sinais = 2 * rng.integers(0, 2, size=(tamanho, n_itens)) - 1
+        simulados = np.abs(sinais @ contribuicoes)
+        extremos += np.count_nonzero(simulados >= observado - tolerancia)
+
+    p = (1 + extremos) / (1 + n_sorteios)
+    return rho, p, n_itens
+
+
+rng_spearman = np.random.default_rng(2026)
+
+
+def calcular_correlacao(dados, variavel, nivel, ano=None, area=None):
+    pearson_r, pearson_p = pearsonr(dados[variavel], dados[DESFECHO])
+    spearman_rho, spearman_p, n_itens = spearman_por_item(
+        dados, variavel, rng_spearman
     )
 
     return {
         "nivel": nivel,
         "ano": ano,
         "area": area,
-
         "variavel": variavel,
         "descricao": VARIAVEIS[variavel],
-
         "n": len(dados),
-
+        "n_itens": n_itens,
         "pearson_r": pearson_r,
         "pearson_p": pearson_p,
-
         "spearman_rho": spearman_rho,
         "spearman_p": spearman_p,
     }
@@ -257,6 +328,17 @@ correlacoes = pd.DataFrame(
     resultados_correlacao
 )
 
+# O heatmap usa uma família por ano, com até 12 testes (três medidas × quatro áreas).
+# Os demais níveis do CSV ficam com o p ajustado em branco.
+correlacoes["spearman_p_holm"] = np.nan
+por_ano_area = correlacoes.loc[correlacoes["nivel"].eq("ano_area")]
+
+for _, grupo in por_ano_area.groupby("ano"):
+    valores_p = grupo["spearman_p"].dropna().sort_values()
+    m = len(valores_p)
+    fatores = np.arange(m, 0, -1)
+    ajustados = np.minimum(1.0, np.maximum.accumulate(valores_p.to_numpy() * fatores))
+    correlacoes.loc[valores_p.index, "spearman_p_holm"] = ajustados
 
 # ============================================================
 # PARTE 2

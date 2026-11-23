@@ -10,7 +10,7 @@ export const ROTULOS_AREA = {
 }
 
 export const TEXTO_RESUMO_TEMPO = {
-  titulo: 'Distribuição do Tempo de Prova (ENEM 2025)',
+  titulo: 'Distribuição do Tempo de Prova',
   subtitulo: 'Distribuição do tempo entre leitura e resolução das questões objetivas (por dia ou total).',
   explicacao: [
     'Apresenta a distribuição dos 555 min totais do ENEM (Dia 1: 255 min descontando os 75 min de redação; Dia 2: 300 min) entre tempo de leitura e margem para resolução.',

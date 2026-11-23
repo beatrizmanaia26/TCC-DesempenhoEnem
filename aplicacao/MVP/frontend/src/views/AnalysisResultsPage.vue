@@ -141,6 +141,7 @@
         <CorrelacaoMetadesProva v-else-if="passoProvaAtual.grafico === 'metades-caracteres'" :questoes="questoesCorrelacao" />
         <CorrelacaoProvaGrafico v-else-if="passoProvaAtual.grafico === 'dispersao-itens'" :questoes="questoesCorrelacao" />
         <AnaliseImagensProva v-else-if="passoProvaAtual.grafico?.startsWith('imagem-')" :secao="passoProvaAtual.grafico.replace('imagem-', '')" titulo="" :questoes="questions" />
+        <AnaliseDistratoresProva v-else-if="passoProvaAtual.grafico === 'matriz-alternativas'" :questoes="questions" />
 
         <p v-if="!passoProvaAtual.total" class="etapa-sem-grafico">
           O gráfico desta análise ainda não está disponível para a prova enviada.
@@ -156,18 +157,20 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import FilterIcon from '@/components/icons/FilterIcon.vue'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
 import GraficoLeituraQuestoes from '@/components/GraficoLeituraQuestoes.vue'
 import GraficoPalavrasProva from '@/components/GraficoPalavrasProva.vue'
 import AnaliseImagensProva from '@/components/AnaliseImagensProva.vue'
+import AnaliseDistratoresProva from '@/components/AnaliseDistratoresProva.vue'
 import CorrelacaoProvaGrafico from '@/components/CorrelacaoProvaGrafico.vue'
 import CorrelacaoMetadesProva from '@/components/CorrelacaoMetadesProva.vue'
 import MapaCalorSpearmanProva from '@/components/MapaCalorSpearmanProva.vue'
 import { useRouter } from 'vue-router'
 import { useAnalysisStore } from '@/stores/analysisStore'
+import { precalcularSimilaridadesProva } from '@/services/analysisApi.js'
 import { DEFAULT_READING_SPEED, TODOS_TIPOS_ANALISE, ANALYSIS_TYPE_OPTIONS, formatarPercentual } from '@/constants/analysisConfig'
 import { REFERENCIA_VELOCIDADE_URL, DICA_TEXTOS_INTRO_PROVA_ENVIADA } from '@/config/textosAnalises.js'
 
@@ -296,6 +299,17 @@ const analisesEscolhidas = computed(() => {
 // Lista exibida no filtro: só as análises escolhidas no formulário
 const opcoesFiltro = computed(() => filterOptions.filter((option) => analisesEscolhidas.value.includes(option.id)))
 
+watch([questions, analisesEscolhidas], ([questoes, analises], _anterior, onCleanup) => {
+  if (!questoes.length || !analises.includes('distractors')) return
+  const preparacao = new AbortController()
+  // A visualização atual pode solicitar sua matriz antes do trabalho de fundo.
+  const inicio = setTimeout(() => precalcularSimilaridadesProva(questoes, preparacao.signal), 0)
+  onCleanup(() => {
+    clearTimeout(inicio)
+    preparacao.abort()
+  })
+}, { immediate: true })
+
 // Filtros aplicados (valem só depois de clicar em Aplicar)
 const selectedFilters = ref(new Set(analisesEscolhidas.value))
 // Rascunho: muda enquanto o usuário marca as opções
@@ -306,7 +320,8 @@ const showFilterMenu = ref(false)
 const GRAFICOS_PROVA = {
   'reading-time': ['distribuicao-tempo', 'tempo-leitura'],
   'word-count': ['palavras', 'mapa-correlacoes', 'metades-caracteres', 'dispersao-itens'],
-  image: ['imagem-presenca', 'imagem-caracteres', 'imagem-acertos', 'imagem-tabela']
+  image: ['imagem-presenca', 'imagem-caracteres', 'imagem-acertos', 'imagem-tabela'],
+  distractors: ['matriz-alternativas']
 }
 // Cada passo é um gráfico; análise sem gráfico vira um passo só, com aviso e sem contador
 const passosProva = computed(() => filterOptions

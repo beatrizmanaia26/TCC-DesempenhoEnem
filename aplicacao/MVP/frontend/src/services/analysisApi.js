@@ -27,6 +27,78 @@ export const extractExamPdf = async (file) => {
   }
 }
 
+const similaridadesPorQuestao = new WeakMap()
+const filaSimilaridades = []
+let calculoEmAndamento = false
+// A primeira questão pode precisar carregar o modelo.
+const TIMEOUT_SIMILARIDADE_MS = 15 * 60_000 + 15_000
+
+async function processarProximaSimilaridade() {
+  if (calculoEmAndamento || !filaSimilaridades.length) return
+  const { questao, resolver, rejeitar, signal } = filaSimilaridades.shift()
+  if (signal?.aborted) {
+    similaridadesPorQuestao.delete(questao)
+    resolver()
+    return processarProximaSimilaridade()
+  }
+  calculoEmAndamento = true
+  try {
+    const { alternativas = [], alternativas_graficas, texto } = questao
+    const { data } = await apiClient.post('/similaridade-prova', {
+      alternativas: alternativas.map(({ texto, tem_imagem }) => ({ texto: texto ?? '', tem_imagem })),
+      alternativas_graficas,
+      texto
+    }, { timeout: TIMEOUT_SIMILARIDADE_MS })
+    resolver(data)
+  } catch (erro) {
+    similaridadesPorQuestao.delete(questao)
+    rejeitar(new Error(erro.response?.data?.error || 'Não foi possível calcular a similaridade da questão.'))
+  } finally {
+    calculoEmAndamento = false
+    processarProximaSimilaridade()
+  }
+}
+
+function enfileirarSimilaridade(questao, prioritaria, signal) {
+  const existente = similaridadesPorQuestao.get(questao)
+  if (existente) {
+    if (prioritaria) {
+      existente.signal = undefined
+      const posicao = filaSimilaridades.indexOf(existente)
+      if (posicao > 0) filaSimilaridades.unshift(...filaSimilaridades.splice(posicao, 1))
+    }
+    return existente.resultado
+  }
+
+  const tarefa = { questao, signal }
+  tarefa.resultado = new Promise((resolver, rejeitar) => {
+    Object.assign(tarefa, { resolver, rejeitar })
+  })
+  similaridadesPorQuestao.set(questao, tarefa)
+  if (prioritaria) filaSimilaridades.unshift(tarefa)
+  else filaSimilaridades.push(tarefa)
+  processarProximaSimilaridade()
+  return tarefa.resultado
+}
+
+export async function calcularSimilaridadesProva(questao, signal) {
+  signal?.throwIfAborted()
+  return enfileirarSimilaridade(questao, true)
+}
+
+export async function precalcularSimilaridadesProva(questoes, signal) {
+  for (const questao of questoes) {
+    if (signal.aborted) return
+    try {
+      await enfileirarSimilaridade(questao, false, signal)
+    } catch {
+      // Uma falha do modelo deve ser tratada pela questão aberta, sem repetir
+      // automaticamente a mesma falha em todas as questões da prova.
+      return
+    }
+  }
+}
+
 /**
  * Faz upload de arquivo e inicia análise
  */

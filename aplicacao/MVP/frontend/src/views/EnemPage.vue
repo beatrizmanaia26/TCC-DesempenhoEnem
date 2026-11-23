@@ -114,6 +114,8 @@
           <CorrelacaoDispersaoItens v-else-if="passoAtual.grafico === 'dispersao-itens'" :ano="selectedYear" />
           <AnaliseImagensEnem v-else-if="passoAtual.grafico?.startsWith('imagem-')" :ano="selectedYear" :secao="passoAtual.grafico.replace('imagem-', '')" />
           <AnalisePosicaoEnem v-else-if="passoAtual.grafico?.startsWith('posicao-')" :ano="selectedYear" :secao="passoAtual.grafico.replace('posicao-', '')" />
+          <GraficoFormalidade v-else-if="passoAtual.analise === 'formality'" :ano="selectedYear" :grafico="passoAtual.grafico" />
+          <AnaliseDistratores v-else-if="passoAtual.analise === 'distractors'" :ano="selectedYear" :grafico="passoAtual.grafico" @abrir-detalhe-distrator="abrirDetalheDistrator" />
 
           <p v-if="!passoAtual.total" class="etapa-sem-grafico">
             O gráfico desta análise ainda não está disponível no ENEM.
@@ -156,9 +158,12 @@ import CorrelacaoDispersaoItens from '@/components/CorrelacaoDispersaoItens.vue'
 import PalavrasQuestoesGrafico from '@/components/PalavrasQuestoesGrafico.vue'
 import AnaliseImagensEnem from '@/components/AnaliseImagensEnem.vue'
 import AnalisePosicaoEnem from '@/components/AnalisePosicaoEnem.vue'
+import GraficoFormalidade from '@/components/GraficoFormalidade.vue'
+import AnaliseDistratores from '@/components/AnaliseDistratores.vue'
 import InfoIcon from '@/components/icons/InfoIcon.vue'
 import ArquivoIcon from '@/components/icons/ArquivoIcon.vue'
 import http from '@/services/http.js'
+
 
 const availableYears = [2025, 2024, 2023, 2022, 2020]
 const selectedYear = ref(availableYears[0])
@@ -181,13 +186,15 @@ const selectedFilters = ref(new Set(todasAnalises))
 const rascunhoFiltros = ref(new Set(todasAnalises))
 
 // Ordem das etapas de análise (a etapa 0 são as informações da prova)
-const ORDEM_ETAPAS_ENEM = ['reading-time', 'word-count', 'image', 'formality', 'distractors', 'position']
+const ORDEM_ETAPAS_ENEM = ['reading-time', 'word-count', 'image', 'position','formality', 'distractors' ]
 // Gráficos de cada análise do ENEM, na ordem em que aparecem (análises sem gráfico não entram aqui)
 const GRAFICOS_ENEM = {
   'reading-time': ['resumo-tempo', 'tempo-leitura'],
   'word-count': ['palavras', 'mapa-dificuldade', 'metades-caracteres', 'dispersao-itens'],
   image: ['imagem-presenca', 'imagem-caracteres', 'imagem-acertos', 'imagem-correlacao', 'imagem-tabela'],
-  position: ['posicao-parametroB', 'posicao-acertos', 'posicao-dificuldade', 'posicao-dispersao', 'posicao-variacao']
+  position: ['posicao-parametroB', 'posicao-acertos', 'posicao-dificuldade', 'posicao-dispersao', 'posicao-variacao'],
+  formality: ['desempenho', 'dificuldade-tri', 'correlacoes'],
+  distractors: ['dispersao', 'barras', 'matriz', 'correlacoes']
 }
 // Só entram as análises marcadas no filtro aplicado, na ordem de ORDEM_ETAPAS_ENEM
 const analisesEtapas = computed(() => ORDEM_ETAPAS_ENEM.filter((id) => selectedFilters.value.has(id)))
@@ -202,6 +209,10 @@ const etapaEnem = ref(0)
 const totalPassosEnem = computed(() => passosEnem.value.length)
 const passoAtual = computed(() => passosEnem.value[etapaEnem.value] ?? null)
 const rotuloAnaliseDaEtapa = computed(() => filterOptions.find((option) => option.id === passoAtual.value?.analise)?.label ?? '')
+function abrirDetalheDistrator() {
+  const indice = passosEnem.value.findIndex(passo => passo.analise === 'distractors' && passo.grafico === 'barras')
+  if (indice !== -1) etapaEnem.value = indice
+}
 
 // Ao escolher um ano, todas as análises ficam selecionadas e aplicadas
 const selectYear = (year) => {

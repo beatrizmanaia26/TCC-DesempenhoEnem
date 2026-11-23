@@ -7,6 +7,7 @@ const path = require('node:path')
 const fs = require('node:fs')
 const { spawn } = require('node:child_process')
 const { v4: uuidv4 } = require('uuid')
+const { aquecerModeloSimilaridade, registrarDistratores, registrarSimilaridadeProva } = require('./distratores.cjs')
 
 // Framework Express para criar servidor HTTP
 const app = express()
@@ -46,6 +47,7 @@ const upload = multer({
   fileFilter: (req, file, cb) => {
     const allowedTypes = ['application/pdf', 'application/json']
     if (allowedTypes.includes(file.mimetype)) {
+      if (path.extname(file.originalname).toLowerCase() === '.pdf') aquecerModeloSimilaridade()
       cb(null, true)
     } else {
       cb(new Error('Apenas arquivos PDF e JSON sao permitidos'))
@@ -60,6 +62,8 @@ app.use(cors({
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }))
+registrarSimilaridadeProva(app, express.json({ limit: '2mb' }))
+
 app.use(express.json())
 
 // Rota de teste
@@ -78,14 +82,14 @@ app.post('/api/extract', upload.single('file'), (req, res) => {
     return res.status(400).json({ error: 'Envie um arquivo PDF' })
   }
 
-  const pythonPath = process.env.PYTHON_PATH || 'python3'
+  const pythonPath = process.env.PYTHON_PATH || (process.platform === 'win32' ? 'python' : 'python3')
   const pythonScript = path.join(__dirname, '../../../codigo/extract/extracao_enem.py')
-  const pythonProcess = spawn(pythonPath, [pythonScript, req.file.path, '--stdout-json'])
+  const pythonProcess = spawn(pythonPath, ['-X', 'utf8', '-B', pythonScript, req.file.path, '--stdout-json'])
   let output = ''
   let errorOutput = ''
 
-  pythonProcess.stdout.on('data', (data) => { output += data.toString() })
-  pythonProcess.stderr.on('data', (data) => { errorOutput += data.toString() })
+  pythonProcess.stdout.setEncoding('utf8').on('data', (data) => { output += data })
+  pythonProcess.stderr.setEncoding('utf8').on('data', (data) => { errorOutput += data })
   pythonProcess.on('error', (error) => {
     fs.unlink(req.file.path, () => {})
     res.status(500).json({ error: `Não foi possível iniciar o Python: ${error.message}` })
@@ -1038,6 +1042,8 @@ app.get('/api/metricas/dispersao-itens', (req, res) => {
 // ====fim grafico dispersao itens
 
 // Tratamento de erro 404
+require('./formalidade.cjs').registrarFormalidade(app)
+registrarDistratores(app)
 app.use((req, res) => {
   res.status(404).json({ error: 'Rota não encontrada' })
 })

@@ -20,10 +20,9 @@ no terminal, instale as bibliotecas
 
 3 - tabulate(pip3 install tabulate), necessário para print de resultados dos distratores em tabelas de Markdown
 
-4 - Sentence Transformer (pip3 install U- sentence_transformer ou pip install git+https://github.com/huggingface/sentence-transformers.git), necessário para poder utilizar o SBERT para comparação de similaridade semântica entre distratores
+4 - Sentence Transformer (pip3 install U- sentence_transformer ou pip install git+https://github.com/huggingface/sentence-transformers.git), necessário para poder utilizar o SBERT para comparação de similaridade semântica entre distratores com o modelo e5-large-matryoshka-sts-pt
 
 5 - Node tem que estar na versão 24+
-
 
 
 RODAR MVP:
